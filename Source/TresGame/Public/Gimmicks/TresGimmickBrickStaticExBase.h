@@ -10,7 +10,7 @@ class ATresGimmickBrickStaticExBase : public ATresGimmickBrickStaticBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess="true"))
     UTresStaticMeshComponent* MyBreak;
     
 public:

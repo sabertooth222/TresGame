@@ -11,10 +11,10 @@ class ATresGumiShipPlayerRailSlideActorWithCamera : public ATresGumiShipPlayerRa
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess="true"))
     USpringArmComponent* m_pSplingArm;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess="true"))
     UTresGumiShipDirectSpeedCompo* m_pDirect;
     
 public:

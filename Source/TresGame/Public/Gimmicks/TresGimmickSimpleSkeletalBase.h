@@ -20,7 +20,7 @@ public:
     FOnMontageEndedMCDelegate OnAnimationEnded;
     
 private:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess="true"))
     UTresSkeletalMeshComponent* MyMesh;
     
 public:

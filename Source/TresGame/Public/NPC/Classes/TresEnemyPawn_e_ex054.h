@@ -44,7 +44,7 @@ protected:
     UCurveFloat* m_pro_BreathSmcLightCurve;
     
 private:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess="true"))
     UTresSkeletalMeshComponent* MyCollMesh;
     
 protected:

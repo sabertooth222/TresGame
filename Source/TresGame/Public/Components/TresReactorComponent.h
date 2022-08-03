@@ -25,20 +25,20 @@ protected:
     UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere)
     FColor m_BBoxColor;
     
-    UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess="true"))
     TArray<FTresCollShapeAssetUnit> m_CollisionShapesSrc;
     
 public:
-    UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess="true"))
     uint32 m_bLimitRotRange: 1;
     
-    UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess="true"))
     float m_RotRangeProp;
     
-    UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess="true"))
     uint32 m_bNeedRayCheck: 1;
     
-    UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess="true"))
     ETresReactorCommandID m_Command;
     
     UPROPERTY(BlueprintReadWrite, EditInstanceOnly)

@@ -11,7 +11,7 @@ class ATresGimmick_BT_PrizeGimmickStaticBase : public ATresGimmickPrizeGimmickSt
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess="true"))
     UTresStaticMeshComponent* ShadowMesh;
     
 public:

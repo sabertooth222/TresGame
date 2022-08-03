@@ -13,7 +13,7 @@ class ATresEnemyPawn_e_ex703 : public ATresEnemyPawnBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess="true"))
     USceneComponent* ProjectileSpawnComponent;
     
     UPROPERTY(EditDefaultsOnly)

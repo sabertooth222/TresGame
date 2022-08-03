@@ -8,7 +8,7 @@ class UTresGumiShipGiveInfomationLockonPrimitive : public UTresGumiShipTrackingP
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, meta=(AllowPrivateAccess="true"))
     uint8 m_bHpGaugeVisibility: 1;
     
 public:
