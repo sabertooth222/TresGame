@@ -10,7 +10,7 @@ class UTresGumiShipSoundSetComponent : public UTresGumiShipActorCompoBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess="true"))
     TArray<USoundBase*> m_SoundAssets;
     
 public:

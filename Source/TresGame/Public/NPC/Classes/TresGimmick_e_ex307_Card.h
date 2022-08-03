@@ -14,10 +14,10 @@ class ATresGimmick_e_ex307_Card : public ATresPawnBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess="true"))
     USceneComponent* MyTransformControl;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess="true"))
     UTresSkeletalMeshComponent* MyMesh;
     
     UPROPERTY(EditDefaultsOnly)

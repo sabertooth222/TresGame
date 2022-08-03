@@ -8,7 +8,7 @@ class ATresGumiShipParts719Pawn : public ATresGumiShipEnemyPartsBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess="true"))
     float m_fTakeDamage;
     
 public:

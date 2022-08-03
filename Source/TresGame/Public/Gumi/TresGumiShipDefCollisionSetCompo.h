@@ -12,7 +12,7 @@ public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FTresGumiShipBrokenBarrier, const int32, dIndex);
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, meta=(AllowPrivateAccess="true"))
     TArray<FTresGumiShipDefCollisionParam> m_pDefParams;
     
 public:

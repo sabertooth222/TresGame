@@ -10,7 +10,7 @@ class ATresGenerateNavMesh : public AActor {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess="true"))
     UBoxComponent* m_BoxComponent;
     
 public:

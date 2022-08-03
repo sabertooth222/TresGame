@@ -13,7 +13,7 @@ class ATresProjectile_e_ex356_HideAndSeekBase : public ATresProjectile_e_ex356_B
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess="true"))
     UTresSceneComponent_e_ex356_HideAndSeekSpawn* MyHideAndSeekSpawnComponent;
     
 protected:

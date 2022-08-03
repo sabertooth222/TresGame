@@ -16,7 +16,7 @@ class ATresEnemyPawn_e_he001a : public ATresEnemyPawnBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess="true"))
     UTresSkeletalMeshComponent* MyCollMesh;
     
 protected:

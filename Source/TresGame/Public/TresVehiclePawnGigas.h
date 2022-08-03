@@ -156,7 +156,7 @@ private:
     UPROPERTY(Export)
     UParticleSystemComponent* m_EffectDash;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess="true"))
     UCapsuleComponent* m_BlockCollision;
     
     UPROPERTY(Export)

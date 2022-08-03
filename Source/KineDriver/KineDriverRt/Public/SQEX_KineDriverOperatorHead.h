@@ -7,16 +7,16 @@ USTRUCT(BlueprintType)
 struct FSQEX_KineDriverOperatorHead {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess="true"))
     int32 Owner;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess="true"))
     int32 WorkIndex;
     
     UPROPERTY(EditAnywhere)
     TEnumAsByte<ESQEX_KD_OperatorType> OpType;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess="true"))
     int32 OperatorBody;
     
     KINEDRIVERRT_API FSQEX_KineDriverOperatorHead();

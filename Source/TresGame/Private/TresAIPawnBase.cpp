@@ -1,5 +1,6 @@
 #include "TresAIPawnBase.h"
 #include "MercunaObstacleComponent.h"
+#include "TresAICharMovementComponent.h"
 
 class UTresLocomotionDefinitionBase;
 
@@ -172,5 +173,6 @@ ATresAIPawnBase::ATresAIPawnBase() {
     this->m_Navigation3DComponent = NULL;
     this->m_bManualEditingObstacleComponent = false;
     this->ObstacleComponent = CreateDefaultSubobject<UMercunaObstacleComponent>(TEXT("MercunaObstacleComponent"));
+    this->MyMovement = CreateDefaultSubobject<UTresAICharMovementComponent>(TEXT("TresCharMovement0"));
 }
 

@@ -8,7 +8,7 @@ class UTresGumiShipStrikeShockWaveWeaponBase : public UTresGumiShipShootWeaponBa
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, meta=(AllowPrivateAccess="true"))
     float m_fMaxOfWidth;
     
 public:

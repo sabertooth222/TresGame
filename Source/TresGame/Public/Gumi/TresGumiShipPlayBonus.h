@@ -14,7 +14,7 @@ public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FTresGumiShipCompletedBonus, const FTresGumiShipBonusParameterDataTable&, rInfo);
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, meta=(AllowPrivateAccess="true"))
     UTresGumiShipBonusParameterDataTableSet* m_pBonusDataTable;
     
 public:

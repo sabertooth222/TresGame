@@ -86,10 +86,10 @@ protected:
     float m_fLimitedAreaRadius;
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess="true"))
     UTresGumiShipPlayerParameterDataTableSet* m_pParam;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess="true"))
     FName m_UseBaseParamRowName;
     
 public:

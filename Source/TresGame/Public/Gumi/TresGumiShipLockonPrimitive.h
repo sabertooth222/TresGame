@@ -10,7 +10,7 @@ class UTresGumiShipLockonPrimitive : public UTresGumiShipPrimitiveComponentBase 
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere, meta=(AllowPrivateAccess="true"))
     bool m_bAutoEnableWhenBegin;
     
     UPROPERTY(DuplicateTransient, Transient)

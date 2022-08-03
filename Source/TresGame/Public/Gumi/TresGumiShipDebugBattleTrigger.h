@@ -14,10 +14,10 @@ class ATresGumiShipDebugBattleTrigger : public ATresGumiShipActorBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess="true"))
     USphereComponent* m_pArea;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, EditAnywhere, meta=(AllowPrivateAccess="true"))
     ATresGumiShipActualRailSlideArrangement* m_pArrangement;
     
 public:

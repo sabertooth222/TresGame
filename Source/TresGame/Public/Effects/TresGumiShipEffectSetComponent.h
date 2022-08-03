@@ -16,7 +16,7 @@ class UTresGumiShipEffectSetComponent : public UTresGumiShipActorCompoBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess="true"))
     TArray<UParticleSystem*> m_ParticleSystems;
     
     UPROPERTY(Export)

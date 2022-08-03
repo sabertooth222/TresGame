@@ -58,7 +58,7 @@ public:
     float m_Param_DodgeInputRate;
     
 private:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess="true"))
     UTresReactorComponent* m_Reactor;
     
     UPROPERTY()

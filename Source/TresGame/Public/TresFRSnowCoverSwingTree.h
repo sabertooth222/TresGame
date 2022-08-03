@@ -18,7 +18,7 @@ public:
     ANavModifierVolume* m_NavModifierVolumeBP;
     
 private:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess="true"))
     UTresAtkCollComponent* MyAtkColl;
     
 public:
