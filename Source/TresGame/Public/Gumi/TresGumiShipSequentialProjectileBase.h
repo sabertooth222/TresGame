@@ -9,7 +9,7 @@ class ATresGumiShipSequentialProjectileBase : public ATresGumiShipActualProjecti
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, meta=(AllowPrivateAccess="true"))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, meta=(AllowPrivateAccess=true))
     TArray<FTresGumiShipProjectileSequenceData> m_Sequences;
     
 public:

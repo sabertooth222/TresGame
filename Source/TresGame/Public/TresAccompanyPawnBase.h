@@ -24,10 +24,10 @@ private:
     UPROPERTY(EditDefaultsOnly)
     UTresUIDataAsset* m_UIDataAccompany;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess="true"))
+    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
     UTresSkeletalMeshComponent* MyPenetrationEffectMesh;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess="true"))
+    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* MyPenetrationParticleEffect;
     
     UPROPERTY(EditDefaultsOnly)
@@ -58,7 +58,7 @@ protected:
     USoundBase* m_BGMAsset;
     
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess="true"))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_Param_MaxTime;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
@@ -80,7 +80,7 @@ public:
     float m_Param_LandSpawnHeight;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess="true"))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<ATresCharPawnBase*> m_SlavePawnList;
     
 public:

@@ -14,7 +14,7 @@ private:
     UPROPERTY(Export)
     USceneComponent* SceneComponent;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess="true"))
+    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
     USplineMeshComponent* SplineMeshComponent;
     
 public:

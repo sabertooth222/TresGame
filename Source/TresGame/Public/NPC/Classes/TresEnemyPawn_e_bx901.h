@@ -67,7 +67,7 @@ protected:
     ATresCharPawnBase* m_RailSlideLeadPawn;
     
 private:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess="true"))
+    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
     USceneComponent* MyRot;
     
 public:

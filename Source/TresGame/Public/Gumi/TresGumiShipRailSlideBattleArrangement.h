@@ -8,7 +8,7 @@ class ATresGumiShipRailSlideBattleArrangement : public ATresGumiShipRailSlideArr
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess="true"))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_MissionParamName;
     
 public:

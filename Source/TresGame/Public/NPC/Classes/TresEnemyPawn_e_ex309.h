@@ -11,7 +11,7 @@ class ATresEnemyPawn_e_ex309 : public ATresEnemyXIIIBCoopPawnBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess="true"))
+    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
     UTresProjectileManagerComponent_e_ex309_Jinrai* MyProjectileManager;
     
     UPROPERTY(EditDefaultsOnly)

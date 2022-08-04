@@ -12,7 +12,7 @@ class ATresSignProjectile_e_ex357_Base : public ATresProjectileBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess="true"))
+    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* MyParticle2;
     
     UPROPERTY(EditDefaultsOnly)

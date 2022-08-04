@@ -138,7 +138,7 @@ public:
     UParticleSystem* m_DangerParticleData;
     
 private:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess="true"))
+    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
     USphereComponent* MyAspirComponent;
     
     UPROPERTY()

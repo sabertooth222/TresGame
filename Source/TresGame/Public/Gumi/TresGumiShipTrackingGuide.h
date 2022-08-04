@@ -10,10 +10,10 @@ class ATresGumiShipTrackingGuide : public ATresGumiShipGimmickActorBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, meta=(AllowPrivateAccess="true"))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, meta=(AllowPrivateAccess=true))
     float m_fTimeOfAddRailSlideActor;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, meta=(AllowPrivateAccess="true"))
+    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, meta=(AllowPrivateAccess=true))
     float m_fSpeedOfDefaultMove;
     
     UPROPERTY(Export)

@@ -15,7 +15,7 @@ class ATresFieldProjectile_e_ex357 : public ATresProjectileBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess="true"))
+    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
     UTresBodyCollComponent* MyBodyColl;
     
     UPROPERTY(EditDefaultsOnly)
