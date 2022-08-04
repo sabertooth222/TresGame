@@ -12,7 +12,7 @@ class ATresGimmick_e_ex781_StealPrizeBase : public AActor {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess="true"))
+    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
     USceneComponent* MyRoot;
     
 protected:

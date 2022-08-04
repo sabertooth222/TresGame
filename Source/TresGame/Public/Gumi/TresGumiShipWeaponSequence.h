@@ -11,7 +11,7 @@ public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FTresGumiShipRequestAttack, const TEnumAsByte<ETresGumiShipWeaponSequencePort>, ePort, bool&, rbCanAttack);
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, meta=(AllowPrivateAccess="true"))
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, meta=(AllowPrivateAccess=true))
     bool m_bInheritOwnerCoord;
     
 public:

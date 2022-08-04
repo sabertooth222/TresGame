@@ -11,7 +11,7 @@ class TRESGAME_API ATresCoverActionVolume : public ATresVolume {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess="true"))
+    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
     UTresDebugArrowComponent* MyDirArrow;
     
 protected:

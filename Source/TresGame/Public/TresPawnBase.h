@@ -34,7 +34,7 @@ class TRESGAME_API ATresPawnBase : public APawn, public ITresAnimInterface, publ
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess="true"))
+    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
     UTresRootComponent* MyRoot;
     
 protected:

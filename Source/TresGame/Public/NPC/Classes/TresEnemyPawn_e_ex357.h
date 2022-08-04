@@ -20,7 +20,7 @@ class ATresEnemyPawn_e_ex357 : public ATresEnemyXIIILBCoopPawnBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess="true"))
+    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
     USphereComponent* MyPullCollisionComponent;
     
     UPROPERTY(EditDefaultsOnly)

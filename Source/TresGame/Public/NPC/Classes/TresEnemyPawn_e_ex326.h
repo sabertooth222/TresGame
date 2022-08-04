@@ -30,7 +30,7 @@ private:
     UPROPERTY(EditDefaultsOnly)
     UParticleSystem* m_ArielComboFloorParticle;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess="true"))
+    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
     USphereComponent* MySuctionWindComponent;
     
     UPROPERTY(EditDefaultsOnly)

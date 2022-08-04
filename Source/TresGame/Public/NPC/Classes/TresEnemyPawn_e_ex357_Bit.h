@@ -13,7 +13,7 @@ class ATresEnemyPawn_e_ex357_Bit : public ATresEnemyPawnBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess="true"))
+    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
     USceneComponent* MyMzlLocationComponent;
     
     UPROPERTY(EditDefaultsOnly)

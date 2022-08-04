@@ -9,7 +9,7 @@ class ATresGumiShipSpWeapon160Actor : public ATresGumiShipSpecialWeaponBaseActor
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess="true"))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresGumiShipElementResistance ElementResistance;
     
 public:

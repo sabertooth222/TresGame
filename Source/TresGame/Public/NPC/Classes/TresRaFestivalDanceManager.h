@@ -431,7 +431,7 @@ public:
     FTresOnWaveClearPerformEnd OnWaveClearPerformEnd;
     
 private:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess="true"))
+    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
     UTresRaFestivalDanceSplineComponent* MySplineMover;
     
     UPROPERTY()

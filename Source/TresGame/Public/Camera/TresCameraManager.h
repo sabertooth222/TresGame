@@ -21,65 +21,65 @@ class ATresCameraManager : public APlayerCameraManager {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess="true"))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<AActor*> m_CameraArray;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess="true"))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<AActor*> m_AddArray;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess="true"))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<AActor*> m_DelArray;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess="true"))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FViewTargetTransitionParamsEx m_AddTransitionParams;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess="true"))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FViewTargetTransitionParamsEx m_DelTransitionParams;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess="true"))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<AActor*> m_SpawnArray;
     
-    UPROPERTY(Transient, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess="true"))
+    UPROPERTY(Transient, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     APlayerController* m_PlayerController;
     
-    UPROPERTY(Transient, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess="true"))
+    UPROPERTY(Transient, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresCameraBase* m_LockonCamera;
     
-    UPROPERTY(Export, Transient, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess="true"))
+    UPROPERTY(Export, Transient, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresLockonTargetComponent* m_LockonTarget;
     
-    UPROPERTY(DuplicateTransient, Export, Transient, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess="true"))
+    UPROPERTY(DuplicateTransient, Export, Transient, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresLockonTargetComponent* m_DummyLockonTargetComp;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess="true"))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresCameraConfig* m_CameraConfig;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess="true"))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresCameraNormal* m_CameraNormal1st;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess="true"))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresCameraNormal* m_CameraNormal2nd;
     
-    UPROPERTY(Export, Transient, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess="true"))
+    UPROPERTY(Export, Transient, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UParticleSystemComponent*> m_CameraPositionEffects;
     
-    UPROPERTY(Transient, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess="true"))
+    UPROPERTY(Transient, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AActor* m_DebugCameraTarget;
     
-    UPROPERTY(Transient, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess="true"))
+    UPROPERTY(Transient, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AActor* m_DebugOrgCameraTarget;
     
-    UPROPERTY(Transient, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess="true"))
+    UPROPERTY(Transient, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresCameraNormal* m_DebugPatrolCamera;
     
 public:
-    UPROPERTY(Transient, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess="true"))
+    UPROPERTY(Transient, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTCPATH_SPLINEGROUP> m_SplinePathRoute;
     
-    UPROPERTY(Transient, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess="true"))
+    UPROPERTY(Transient, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTCPATH_SPLINEGROUP> m_SplinePathLocation;
     
-    UPROPERTY(Transient, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess="true"))
+    UPROPERTY(Transient, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTCPATH_SPLINEGROUP> m_SplinePathRSLocation;
     
     ATresCameraManager();

@@ -17,7 +17,7 @@ class ATresNpcPawn_n_ra201 : public ATresNpcPawnBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess="true"))
+    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
     UTresReactorComponent* HairActionReactor;
     
 public:

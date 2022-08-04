@@ -12,10 +12,10 @@ protected:
     UPROPERTY(EditDefaultsOnly)
     FTresWearformSetUnit m_Forms[11];
     
-    UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, meta=(AllowPrivateAccess="true"))
+    UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
     uint32 m_bEnableColorChange: 1;
     
-    UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, meta=(AllowPrivateAccess="true"))
+    UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
     TArray<FName> m_ColorChangeMaterials;
     
 public:
