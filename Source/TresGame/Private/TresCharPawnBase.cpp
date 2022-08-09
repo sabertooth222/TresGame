@@ -1,4 +1,6 @@
 #include "TresCharPawnBase.h"
+
+#include "TresAICharMovementComponent.h"
 #include "TresCharMovementComponent.h"
 #include "TresSkeletalMeshComponent.h"
 #include "TresAtkCollComponent.h"
@@ -444,7 +446,7 @@ void ATresCharPawnBase::ApplyKBD(USQEX_DynamicBindAssetUserData* KBDAssetUserDat
 }
 
 ATresCharPawnBase::ATresCharPawnBase() {
-    this->MyMovement = CreateDefaultSubobject<UTresCharMovementComponent>(TEXT("TresCharMovement0"));
+    this->MyMovement = CreateDefaultSubobject<UTresAICharMovementComponent>(TEXT("TresCharMovement0"));
     this->MyMesh = CreateDefaultSubobject<UTresSkeletalMeshComponent>(TEXT("TresCharMesh0"));
     this->MyAtkColl = CreateDefaultSubobject<UTresAtkCollComponent>(TEXT("TresAtkColl0"));
     this->MyBodyColl = CreateDefaultSubobject<UTresBodyCollComponent>(TEXT("TresBodyColl0"));
