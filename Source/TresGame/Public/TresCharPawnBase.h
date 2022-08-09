@@ -61,25 +61,25 @@ public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FTresAnimNotifyEndBpEvent, FName, AnimSeqName, TEnumAsByte<ETresAnimNotifyBpEventID>, EventID, int32, Param);
     
 private:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere, meta=(AllowPrivateAccess=true))
     UTresCharMovementComponent* MyMovement;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere, meta=(AllowPrivateAccess=true))
     UTresSkeletalMeshComponent* MyMesh;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere, meta=(AllowPrivateAccess=true))
     UTresAtkCollComponent* MyAtkColl;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere, meta=(AllowPrivateAccess=true))
     UTresBodyCollComponent* MyBodyColl;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere, meta=(AllowPrivateAccess=true))
     UTresEquipmentComponent* MyEquipment;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere, meta=(AllowPrivateAccess=true))
     UTresStateQueueComponent* MyStateComp;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere, meta=(AllowPrivateAccess=true))
     UTresEffectAttachComponent* MyEffectAtt;
     
 protected:
@@ -195,10 +195,10 @@ protected:
     UPROPERTY(EditDefaultsOnly)
     uint32 m_bEquipmentAutoSpawn: 1;
     
-    UPROPERTY(Export, Transient)
+    UPROPERTY(Instanced, Transient)
     UTresPoleComponent* m_LastHitPoleComponent;
     
-    UPROPERTY(Export, Transient)
+    UPROPERTY(Instanced, Transient)
     UTresHopComponent* m_LastHitHopComponent;
     
     UPROPERTY(BlueprintReadOnly, Transient, VisibleInstanceOnly)
@@ -239,13 +239,13 @@ public:
     FTresCharTakeDamageSignature OnTresTakeDamage;
     
 protected:
-    UPROPERTY(DuplicateTransient, Export, Transient)
+    UPROPERTY(DuplicateTransient, Instanced, Transient)
     UTresLockonTargetComponent* m_FlowTarget;
     
-    UPROPERTY(DuplicateTransient, Export, Transient)
+    UPROPERTY(DuplicateTransient, Instanced, Transient)
     UTresAttractionFlowMarkerComponent* m_AttractionFlowMarker;
     
-    UPROPERTY(DuplicateTransient, Export, Transient)
+    UPROPERTY(DuplicateTransient, Instanced, Transient)
     UTresSwimRingComponent* m_pSwimRing;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
@@ -295,7 +295,7 @@ public:
     USQEXSEADSoundReferenceEnumSet* m_AutoSeAssets;
     
 protected:
-    UPROPERTY(Export, Transient)
+    UPROPERTY(Instanced, Transient)
     USQEXSEADAutoSeComponent* MyAutoSe;
     
     UPROPERTY(Transient)
