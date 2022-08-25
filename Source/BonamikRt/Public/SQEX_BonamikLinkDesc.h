@@ -7,103 +7,103 @@ USTRUCT(BlueprintType)
 struct FSQEX_BonamikLinkDesc {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FString m_ParentBodyName;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FString m_ChildBodyName;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     uint32 m_ParentId;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     uint32 m_ChildId;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TEnumAsByte<ESQEX_Bonamik_LinkType> m_LinkType;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool m_IsSelfCollision;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool m_EnableJointTwist;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool m_EnableCone;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool m_EnableConeAnimation;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float m_LinkStr;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float m_LinkParentStr;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float m_ConeInnerStr;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float m_ConeOuterStr;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float m_ConeParentStr;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float m_LimitY;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float m_LimitZ;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float m_ConeOffsetY;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float m_ConeOffsetZ;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float m_LimitOffsetY;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float m_LimitOffsetZ;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool m_IsCollisionReceiver;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool m_IsCollisionRepulsor;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool m_IsLRA;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float m_LRAstr;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float m_LRAdamping;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     uint32 m_LinkBatchNo;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     uint32 m_ConeBatchNo;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     uint32 m_CollisionBatchNo;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float m_PinRadius;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float m_PinStr;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float m_KdiTrans;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float m_KdiRot;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float m_ConcaveRatio;
     
     BONAMIKRT_API FSQEX_BonamikLinkDesc();

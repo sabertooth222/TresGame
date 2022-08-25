@@ -6,16 +6,16 @@ USTRUCT(BlueprintType)
 struct BONAMIKRT_API FSQEX_BonamikGroupLOD {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FName> Groups;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float MinSize;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float BlendTime;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float PrerollTime;
     
     FSQEX_BonamikGroupLOD();

@@ -6,43 +6,43 @@ USTRUCT(BlueprintType)
 struct FSQEX_BonamikPlaneDesc {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     uint32 m_GroupID;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FString m_ParticleAName;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FString m_ParticleBName;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FString m_ParticleCName;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 m_ParticleA;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 m_ParticleB;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 m_ParticleC;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     uint32 m_Index;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float m_Thickness;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float m_Offset;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool m_IsCollision;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 m_CollisionBatchNo;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     int32 m_ColId[8];
     
     BONAMIKRT_API FSQEX_BonamikPlaneDesc();

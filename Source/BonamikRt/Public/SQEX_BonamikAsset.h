@@ -12,14 +12,14 @@
 
 class USkeletalMesh;
 
-UCLASS()
+UCLASS(BlueprintType)
 class BONAMIKRT_API USQEX_BonamikAsset : public UDataAsset {
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USkeletalMesh* m_SkeletalMesh;
     
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(EditAnywhere)
     uint32 m_VersionNo;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -73,7 +73,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FName> m_IgnoreEffectors;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float m_TeleportDistance;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

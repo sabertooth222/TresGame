@@ -14,10 +14,10 @@ class KBDRT_API USQEX_KBD_Component : public USceneComponent {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(Export, Transient)
+    UPROPERTY(Instanced, Transient, EditAnywhere)
     USkeletalMeshComponent* SkeletalMeshComponent;
     
-    UPROPERTY(Export, Transient)
+    UPROPERTY(Instanced, Transient, EditAnywhere)
     UCharacterMovementComponent* CharacterMovementComponent;
     
 public:
