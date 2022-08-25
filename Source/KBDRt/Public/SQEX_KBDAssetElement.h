@@ -11,7 +11,7 @@ public:
     UPROPERTY(EditAnywhere)
     FName ElementName;
     
-    UPROPERTY(EditAnywhere, Instanced, Export)
+    UPROPERTY(EditAnywhere, Instanced)
     TArray<UAssetUserData*> AssetUserDatas;
     
     FSQEX_KBDAssetElement();
