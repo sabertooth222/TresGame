@@ -1,12 +1,13 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-#include "KineDriver/KineDriverEd/Public/SQEX_KineDriverData_Factory.h"
+#include "ScaleformUI/ScaleformUIEd/Public/ScaleformUI_Factory.h"
 
 #include "AssetTypeCategories.h"
+#include "FileManager.h"
 #include "Package.h"
 #include "PackageName.h"
 #include "Paths.h"
-#include "SQEX_KineDriverData.h"
+#include "SwfMovie.h"
 
 UScaleformUI_Factory::UScaleformUI_Factory()
 {
@@ -20,7 +21,7 @@ UObject* UScaleformUI_Factory::FactoryCreateBinary(UClass* Class, UObject* InPar
 {
 	USwfMovie* ImportedAsset = NewObject<USwfMovie>(InParent, Name, Flags);
 	ImportedAsset->bSetSRGBOnImportedTextures = false;
-	ImportedAsset->TextureRescale = EFlashTextureRescale::FlashTextureScale_High;
+	ImportedAsset->TextureRescale = FlashTextureRescale::FlashTextureScale_High;
 	ImportedAsset->bPackTextures = false;
 	ImportedAsset->PackTextureSize = 1024;
 	ImportedAsset->TextureFormat = "TGA";
