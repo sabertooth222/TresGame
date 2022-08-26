@@ -10,88 +10,88 @@ USTRUCT(BlueprintType)
 struct FSQEX_BonamikSceneManagerDesc {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool m_IsEnable;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool m_IsUseGPU;
     
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(EditAnywhere)
     uint32 m_SubStep;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float m_Dt;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     uint32 m_TotalGroup;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     FString m_GroupName[48];
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool m_IsEnableLSS;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float m_LSScoeff_tran;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float m_LSScoeff_rot;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FString m_RootName;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool m_IsEnableLocalForce;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FVector m_Gravity;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FVector m_WindForce;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FVector m_DirRange;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FVector m_ForceRange;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     uint32 m_TotalLinkBatches;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     uint32 m_TotalLinksInBatch[15];
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     uint32 m_TotalConeBatches;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     uint32 m_TotalConesInBatch[15];
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     uint32 m_TotalCollisionBatches;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     uint32 m_TotalCollisionsInBatch[15];
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     uint32 m_TotalSelfCollisionBatches;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     uint32 m_TotalSelfCollisionsInBatch[15];
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TEnumAsByte<ESQEX_Bonamik_JointLinkSimulationMode> m_JointLinkSimulationMode;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TEnumAsByte<ESQEX_Bonamik_FastMotionHandling> m_FastMotionHandlingMode;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool m_EnableGroundCollision;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     uint32 m_RefUpVec;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FSQEX_BonamikFpsCorrectionDesc> m_FpsCorrection;
     
     BONAMIKRT_API FSQEX_BonamikSceneManagerDesc();

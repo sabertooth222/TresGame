@@ -6,16 +6,16 @@ USTRUCT(BlueprintType)
 struct FSQEX_BonamikShapeMatchingDesc {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 m_TotalParticle;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 m_RegionSize;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float m_Stiffness;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     uint32 m_ParticleIds[50];
     
     BONAMIKRT_API FSQEX_BonamikShapeMatchingDesc();
