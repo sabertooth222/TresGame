@@ -34,23 +34,23 @@ class TRESGAME_API ATresPawnBase : public APawn, public ITresAnimInterface, publ
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
     UTresRootComponent* MyRoot;
     
 protected:
     UPROPERTY(DuplicateTransient, Export, Transient)
     TArray<UTresBodyCollComponent*> m_BodyComponentsList;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FBasedMovementInfo BasedMovement;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FName MyLockOnSetBoneName;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FName MyLookAtTargetBoneName;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UTresChrDataTableSet* m_pDataTableSet;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
@@ -59,20 +59,20 @@ protected:
     UPROPERTY(DuplicateTransient, Export, Transient)
     UTresChrBaseParam* m_pBaseParam;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 m_TeamNo;
     
 public:
-    UPROPERTY(BlueprintReadOnly, Transient, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, Transient, VisibleAnywhere)
     TWeakObjectPtr<UObject> m_LevelEntitySpawner;
     
-    UPROPERTY(BlueprintReadOnly, Transient, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, Transient, VisibleAnywhere)
     ATresLevelEntity* m_LevelEntity;
     
-    UPROPERTY(Transient)
+    UPROPERTY(Transient, BlueprintReadWrite, EditAnywhere)
     TArray<UTresInterpGroup*> m_InterpGroup;
     
-    UPROPERTY(Transient)
+    UPROPERTY(Transient, BlueprintReadWrite, EditAnywhere)
     TArray<UTresInterpGroupInst*> m_InterpGroupInst;
     
     ATresPawnBase();
