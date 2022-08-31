@@ -25,13 +25,13 @@ class UTresStateBase : public UObject, public ITresAnimInterface, public ITresNo
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FName MyStateName;
     
-    UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TEnumAsByte<ETresStateID> MyStateID;
     
-    UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     uint32 m_bEnableRecycle: 1;
     
 public:

@@ -7,102 +7,102 @@
 
 class UEnvQuery;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class UTresAttackDefinitionBase : public UTresActionDefinitionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(VisibleDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TEnumAsByte<ETresAttackDefinition::Type> m_AttackType;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FName m_AttackName;
     
 protected:
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     uint8 m_bMinDistance: 1;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float m_MinDistance;
     
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     uint8 m_bMaxDistance: 1;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float m_MaxDistance;
     
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     uint8 m_bMinHeight: 1;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float m_MinHeight;
     
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     uint8 m_bMaxHeight: 1;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float m_MaxHeight;
     
-    UPROPERTY(AdvancedDisplay, EditDefaultsOnly)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere)
     float m_EQSRangeRefinement;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     uint8 m_bDirectPathRequired: 1;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     uint8 m_bLineOfSightRequired: 1;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UEnvQuery* m_ActionEQSQuery;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     uint8 m_bTargetRequired: 1;
     
-    UPROPERTY(AdvancedDisplay, EditDefaultsOnly)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere)
     uint8 m_bSelfInViewport: 1;
     
     UPROPERTY(EditDefaultsOnly)
     uint8 m_bValidateYaw: 1;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float m_YawOffset;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float m_YawTolerance;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     uint8 m_bValidatePitch: 1;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float m_PitchOffset;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float m_PitchTolerance;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool m_bEditNpcAIInfo;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FTresFNpcAIAttackDefInfo m_NpcAIInfo;
     
-    UPROPERTY(AdvancedDisplay, EditDefaultsOnly)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere)
     bool m_bIndirectAttack;
     
-    UPROPERTY(AdvancedDisplay, EditDefaultsOnly)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere)
     FName m_AttackerDataID;
     
-    UPROPERTY(AdvancedDisplay, EditDefaultsOnly)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere)
     TArray<FName> m_AttackedDataID;
     
-    UPROPERTY(AdvancedDisplay, EditDefaultsOnly)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere)
     float m_AttackDuration;
     
-    UPROPERTY(AdvancedDisplay, EditDefaultsOnly)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere)
     bool m_bCanMultiHit;
     
-    UPROPERTY(AdvancedDisplay, EditDefaultsOnly)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere)
     float m_SuspendTime;
     
-    UPROPERTY(AdvancedDisplay, EditDefaultsOnly)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere)
     float m_MissScore;
     
 public:
