@@ -44,10 +44,10 @@ private:
     float WalkableFloorZ;
     
 public:
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TEnumAsByte<EMovementMode> MovementMode;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     uint8 CustomMovementMode;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
@@ -80,8 +80,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float BrakingFriction;
     
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
-    uint8 bUseSeparateBrakingFriction: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    uint32 bUseSeparateBrakingFriction: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float BrakingDecelerationWalking;

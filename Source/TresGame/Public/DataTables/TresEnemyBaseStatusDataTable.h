@@ -3,20 +3,20 @@
 #include "Engine/DataTable.h"
 #include "TresEnemyBaseStatusDataTable.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresEnemyBaseStatusDataTable : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 m_BaseHP;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 m_BaseExp;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 m_BaseAttackPower;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 m_BaseDefensePower;
     
     TRESGAME_API FTresEnemyBaseStatusDataTable();
