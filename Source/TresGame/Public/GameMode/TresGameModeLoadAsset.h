@@ -22,191 +22,191 @@ class ATresKHShaderController;
 class ATresAdhereObjBase;
 class UTresDamageType;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresGameModeLoadAsset : public UTresLoadAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<ATresPrize> m_HpPrizeS;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<ATresPrize> m_HpPrizeL;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<ATresPrize> m_MpPrizeS;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<ATresPrize> m_MpPrizeL;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<ATresPrize> m_MunnyPrizeS;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<ATresPrize> m_MunnyPrizeM;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<ATresPrize> m_MunnyPrizeL;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<ATresPrize> m_FocusPrizeS;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<ATresPrize> m_FocusPrizeL;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<ATresPrize> m_CrabPrize;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<ATresPrize> m_MovableCrabPrize;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<ATresPrize> m_LightPrizeS;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<ATresPrize> m_LightPrizeL;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<ATresPrizeBox> m_HealPrizeBox;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<ATresPrizeBox> m_MatePrizeBox;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<ATresPrizeBox> m_FstfPrizeBox;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<ATresPrizeBox> m_RarePrizeBox;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<UTresEnemyCommonParam> EnemyCommonParam;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UDataTable* m_EnemyBaseStatusListData;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UDataTable* m_EnemyShipBaseStatusListData;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<UTresDamageCommonParam> m_FriendDamageCommonParam;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UTresFriendData* m_FriendData;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<UTresDamageCommonParam> m_PlayerDamageCommonParam;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<ATresItemMognetMedal> m_MognetMedalClass;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UParticleSystem* m_CmnCriticalHitEffect;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UParticleSystem* m_CmnGuardReflectEffect;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UParticleSystem* m_CmnStaggerReflectEffect;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UParticleSystem* m_CmnInvincibleHitEffect;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UParticleSystem* m_CmnArmorHitEffect;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UParticleSystem* m_CmnIgnoreGuardHitEffect;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     USQEX_ParticleAttachDataAsset* m_CmnPlayerDeadEffectEad;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UParticleSystem* m_CmnGameOverHeartEffect;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FVector m_CmnGameOverHeartLocation;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UParticleSystem* m_CmnGameOverLightEffect;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FVector m_CmnGameOverLightLocation;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UParticleSystem* m_CmnMissionFailedLightEffect;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FVector m_CmnMissionFailedLightLocation;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<USQEX_ParticleAttachDataAsset*> m_CmnParticleAttachDataAsset;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UBlueprint* m_GameOverKHSBP;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<ATresKHShaderController> m_GameOverKHS;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UTresPhysMatEffectAsset* m_CmnPhysMatEffect;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UParticleSystem* m_CmnSnowTailAsset;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<ATresAICoordinator> m_AICoordinatorClass_Beginner;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<ATresAICoordinator> m_AICoordinatorClass_Standard;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<ATresAICoordinator> m_AICoordinatorClass_Proud;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<ATresAICoordinator> m_AICoordinatorClass_Critical;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<ATresAdhereObjBase> m_BadStatCloudClass;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<ATresAdhereObjBase> m_BadStatDischargeClass;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<ATresAdhereObjBase> m_BadStatSneezeClass;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<ATresAdhereObjBase> m_BadStatHoneyClass;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TSubclassOf<UTresDamageType> m_PhysDamageTypeClass[4];
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FName m_remyMapName;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FName m_remyPlayerStartTag;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UDataTable* m_remyRecipeData;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FName m_remyTwilightTownMapName;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FName m_remyTwilightTownPlayerStartTag;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FName m_remyWorldMapName;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FName m_remyWorldMapAreaMapName;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FName m_remyWorldMapPlayerStartTag;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FName m_remyTwilightTownFinalMilestoneRewardPlayerStartTag;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     ETresItemDefWeapon m_finalMilestoneReward;
     
     UTresGameModeLoadAsset();
