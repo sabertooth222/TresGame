@@ -10,19 +10,19 @@ class UTresNpcAttackDefinitionMelee : public UTresNpcAttackDefinitionBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UAnimSequenceBase* m_AttackAnimData;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    uint8 m_bHitTractionXYStop: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    uint32 m_bHitTractionXYStop: 1;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    uint8 m_bHitTractionZUpStop: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    uint32 m_bHitTractionZUpStop: 1;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    uint8 m_bHitTractionZDownStop: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    uint32 m_bHitTractionZDownStop: 1;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 m_EffectGroup;
     
 public:

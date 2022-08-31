@@ -5,24 +5,24 @@
 
 class UAnimSequenceBase;
 
-UCLASS(HideDropdown)
+UCLASS(HideDropdown, BlueprintType)
 class UTresNpcAttackDefinitionCombo : public UTresNpcAttackDefinitionBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UAnimSequenceBase* m_Attack1AnimData;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UAnimSequenceBase* m_Attack2AnimData;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UAnimSequenceBase* m_Attack3AnimData;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool m_bEnableRootMove;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool m_bEnableRootMoveAndTraction;
     
 public:

@@ -7,27 +7,27 @@
 
 class UTresPlayerAttackStateDataSet;
 
-UCLASS(Abstract)
+UCLASS(Abstract, BlueprintType)
 class ATresPlayerPawnTemplate : public ATresPlayerPawnBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = "true"))
     UTresPlayerAttackStateDataSet* m_pAttackStateDataSet;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = "true"))
     TArray<FVoiceAndLipParameter> m_VoiceAndLipParams;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = "true"))
     FName m_StrongAddMotionNameForFront;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = "true"))
     FName m_StrongAddMotionNameForBack;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = "true"))
     FName m_StrongAddMotionSlotName;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = "true"))
     float m_fAddReactionCoolDownTime;
     
 public:

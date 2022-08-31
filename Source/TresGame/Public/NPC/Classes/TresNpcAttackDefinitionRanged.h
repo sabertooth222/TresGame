@@ -3,27 +3,27 @@
 #include "TresNpcAttackDefinitionBase.h"
 #include "TresNpcAttackDefinitionRanged.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(HideDropdown, BlueprintType)
 class UTresNpcAttackDefinitionRanged : public UTresNpcAttackDefinitionBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     uint8 m_bPitch: 1;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float m_PitchToleranceUp;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float m_PitchToleranceDown;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float m_ShotPitchMax;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float m_ShotPitchMin;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float m_ShotYawMinMax;
     
 public:

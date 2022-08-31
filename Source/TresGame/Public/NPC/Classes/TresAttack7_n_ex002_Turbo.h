@@ -3,35 +3,35 @@
 #include "TresNpcAttackDefinitionBase.h"
 #include "TresAttack7_n_ex002_Turbo.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(HideDropdown, Blueprintable)
 class UTresAttack7_n_ex002_Turbo : public UTresNpcAttackDefinitionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float m_fMoveTime;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float m_fMoveSpeed;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float m_fAccelSpeed;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float m_fRangeMin;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float m_fTurnAngle;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float m_fTurnRate;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float m_fSlalomTime;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float m_fTargetHeight;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float m_FallHeight;
     
     UTresAttack7_n_ex002_Turbo();

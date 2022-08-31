@@ -5,12 +5,12 @@
 
 class UDataTable;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerAttackStateDataSet : public UDataAsset {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = "true"))
     UDataTable* m_pAttackStateParameter;
     
 public:
