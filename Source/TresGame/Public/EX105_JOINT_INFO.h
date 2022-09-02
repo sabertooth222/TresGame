@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FEX105_JOINT_INFO {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresProjectileBase* pCube;
     
     TRESGAME_API FEX105_JOINT_INFO();

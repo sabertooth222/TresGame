@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FEX359_LaserRainTriangleGuardInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresProjectileBase* m_Proj;
     
     TRESGAME_API FEX359_LaserRainTriangleGuardInfo();

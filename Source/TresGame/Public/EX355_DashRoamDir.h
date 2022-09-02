@@ -8,16 +8,16 @@ USTRUCT(BlueprintType)
 struct FEX355_DashRoamDir {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<EEX355_DashRoamDir> m_DashRoamDir;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<EEX355_DashRoamDir> m_DashAttackDir;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<EEX355_DashMiddleAction> m_DashMiddleAction;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fDashMiddleActionTime;
     
     TRESGAME_API FEX355_DashRoamDir();

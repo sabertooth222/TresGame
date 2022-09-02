@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FEx053SpawnGroup {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<int32> SpawnDataIndexArray;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bCluster;
     
     TRESGAME_API FEx053SpawnGroup();

@@ -6,7 +6,7 @@ USTRUCT(BlueprintType)
 struct FEX359_LaserRainShotEffectTimeSet {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fTime;
     
     TRESGAME_API FEX359_LaserRainShotEffectTimeSet();

@@ -6,7 +6,7 @@ USTRUCT(BlueprintType)
 struct FEX901_ActionKey {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FName> m_ActionKeyArray;
     
     TRESGAME_API FEX901_ActionKey();

@@ -9,13 +9,13 @@ USTRUCT(BlueprintType)
 struct FEX355_ThrowInfoSet {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FEX355_ThrowRoamMoveInfo m_RoamMoveInfo;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FEX355_ThrowFirstMoveInfo m_FirstMoveInfo;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FEX355_ThrowHomingInfo m_HomingInfo;
     
     TRESGAME_API FEX355_ThrowInfoSet();

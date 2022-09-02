@@ -9,7 +9,7 @@ UCLASS(Blueprintable, CollapseCategories)
 class TRESGAME_API UTresExternalActorInterpGroup : public UInterpGroup {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     TLazyObjectPtr<AActor> m_Actor;
     
     UTresExternalActorInterpGroup();

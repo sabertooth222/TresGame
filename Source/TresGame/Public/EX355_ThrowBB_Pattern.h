@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FEX355_ThrowBB_Pattern {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FEX355_ThrowBB_Info> m_ThrowInfoArray;
     
     TRESGAME_API FEX355_ThrowBB_Pattern();

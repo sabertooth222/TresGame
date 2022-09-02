@@ -10,13 +10,13 @@ USTRUCT(BlueprintType)
 struct FEX354_ArtemaWarpShotSequence_ProjectileInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FEX354_ArtemaWarpShotSet m_ShotSet;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector m_vSpawnLocOffset;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresProjectileBase* m_Spawner;
     
     TRESGAME_API FEX354_ArtemaWarpShotSequence_ProjectileInfo();

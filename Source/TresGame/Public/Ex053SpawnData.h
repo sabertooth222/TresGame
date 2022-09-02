@@ -9,13 +9,13 @@ USTRUCT(BlueprintType)
 struct FEx053SpawnData {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     TWeakObjectPtr<ATresEnemyPawn_e_ex053> wpActor;
     
     UPROPERTY(EditAnywhere)
     TWeakObjectPtr<AActor> wpSpawn;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Wait;
     
     TRESGAME_API FEx053SpawnData();

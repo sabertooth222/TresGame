@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct FEX359_BeamOnSplineInfoSet {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FEX359_BeamOnSplineInfo> m_BeamOnSplineInfoArray;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<EEX359_SpawnDirType> m_DirType;
     
     TRESGAME_API FEX359_BeamOnSplineInfoSet();

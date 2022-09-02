@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FEX354_ClusterShotMoveInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresProjectileBase* m_Proj;
     
     TRESGAME_API FEX354_ClusterShotMoveInfo();

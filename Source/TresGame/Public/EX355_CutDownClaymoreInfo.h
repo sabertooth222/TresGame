@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FEX355_CutDownClaymoreInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector m_AimLocOffset;
     
     TRESGAME_API FEX355_CutDownClaymoreInfo();
