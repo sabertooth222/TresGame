@@ -1,5 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "ESQEX_ChangeFaceAnimBlendParamFunction.h"
 #include "UObject/NoExportTypes.h"
 #include "Animation/AnimNotifies/AnimNotify.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ESQEX_ChangeFaceAnimBlendParamFunction -FallbackName=ESQEX_ChangeFaceAnimBlendParamFunction

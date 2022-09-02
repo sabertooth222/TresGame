@@ -1,6 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=NavArea -FallbackName=NavArea
+#include "AI/Navigation/NavAreas/NavArea.h"
+#include "AI/Navigation/NavAreas/NavArea.h"
 #include "TresNavArea_PowerWildOnlyTreeBranch.generated.h"
 
 UCLASS(Blueprintable)

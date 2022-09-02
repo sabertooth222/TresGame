@@ -5,6 +5,7 @@
 #include "TresEnemyRetryVoiceData.h"
 #include "ETresEnemyUniqueID.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ESQEX_FreeFlowKind -FallbackName=ESQEX_FreeFlowKind
+#include "ESQEX_FreeFlowKind.h"
 #include "RevengeAttacks.h"
 #include "ETresEnemyMajorUseID.h"
 #include "TresEnemyPawnBase.generated.h"

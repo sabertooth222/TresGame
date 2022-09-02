@@ -1,5 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "TresDecoPartsComponent.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ETresAreaCustonEffectsType -FallbackName=ETresAreaCustonEffectsType
 #include "TresAreaEffectData.generated.h"
 
@@ -10,7 +11,7 @@ struct FTresAreaEffectData {
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 bNoUseDefaultAttachEffect: 1;
+    uint32 bNoUseDefaultAttachEffect: 1;
     
     UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresAreaCustonEffectsType> EffectsType;

@@ -1,13 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=SQEX_SplineActor -FallbackName=SQEX_SplineActor
+#include "SQEX_SplineActor.h"
 #include "ETresFNPC_AI_LeadMode.h"
 #include "ETresFNPC_AI_LeadMoveType.h"
 #include "ETresFNPC_AI_LeadFinish.h"
 #include "ETresFNPC_AI_LeadGoalAction.h"
 #include "ETresFNPC_AI_LeadGoalWaitRelease.h"
 #include "ETresChrUniqueID.h"
+#include "SQEX_SplineActor.h"
 #include "UObject/NoExportTypes.h"
 #include "TresNpcAILeadFinishBySplineActorDelegate.h"
 #include "TresNpcAILeadSplineActor.generated.h"

@@ -1,5 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "ESQEX_Enums.h"
 #include "TresEnemyXIIIDPawnBase.h"
 #include "TresFRThinkOfYouInterface.h"
 #include "ETresObjTypeProcChannel.h"

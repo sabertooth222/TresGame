@@ -3,6 +3,7 @@
 #include "BehaviorTree/BTDecorator.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=AIModule -ObjectName=EInterruptAbortBehavior -FallbackName=EInterruptAbortBehavior
 #include "EInterruptableEvent.h"
+#include "SQEX_AI_Enums.h"
 #include "TresBTDecorator_Interrupt.generated.h"
 
 UCLASS(Blueprintable)

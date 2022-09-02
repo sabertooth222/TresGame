@@ -11,6 +11,11 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=TresRadialBlurParams -FallbackName=TresRadialBlurParams
 #include "ESqexCPPKHSWorldType.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=TresBloomRadialBlurParams -FallbackName=TresBloomRadialBlurParams
+#include "TresBloomRadialBlurParams.h"
+#include "TresDecoPartsComponent.h"
+#include "TresRadialBlurParams.h"
+#include "TresScreenBlurParams.h"
+#include "TresVFXBlurParams.h"
 #include "UObject/NoExportTypes.h"
 #include "TresSceneManager.generated.h"
 
