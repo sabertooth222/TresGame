@@ -830,19 +830,19 @@ protected:
 public:
     ATresPlayerPawnBase();
     UFUNCTION(BlueprintCallable)
-    void RequestEndCommandKind(TEnumAsByte<ETresCommandKind> inCommand, int32 InParam0);
+    void RequestEndCommandKind(ETresCommandKind inCommand, int32 InParam0);
     
     UFUNCTION(BlueprintCallable)
     bool RemotePlayerStateEvent(FName EventName, AActor* inActor);
     
     UFUNCTION(BlueprintImplementableEvent)
-    void ReceivePlayerSpecificAction(TEnumAsByte<ETresPlayerSpecificActionID> ActionID, int32 SubID);
+    void ReceivePlayerSpecificAction(ETresPlayerSpecificActionID ActionID, int32 SubID);
     
     UFUNCTION(BlueprintImplementableEvent)
-    void ReceivePlayerEndCommandAction(TEnumAsByte<ETresCommandKind> CommandKind);
+    void ReceivePlayerEndCommandAction(ETresCommandKind CommandKind);
     
     UFUNCTION(BlueprintImplementableEvent)
-    void ReceivePlayerBeginCommandAction(TEnumAsByte<ETresCommandKind> CommandKind);
+    void ReceivePlayerBeginCommandAction(ETresCommandKind CommandKind);
     
     UFUNCTION(BlueprintCallable)
     void NotifySpecificActionAccompanyPawn(int32 ID, int32 Param0, int32 Param1, int32 Param2);

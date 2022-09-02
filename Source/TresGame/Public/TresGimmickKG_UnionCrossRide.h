@@ -61,7 +61,7 @@ public:
     void OnSplineMoveArrival();
     
     UFUNCTION(BlueprintNativeEvent)
-    void OnCommand(TEnumAsByte<ETresCommandKind> inCommand);
+    void OnCommand(ETresCommandKind inCommand);
     
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void NotifyTimingFromPawn(int32 InParam);

@@ -55,8 +55,8 @@ UCLASS(Abstract, Blueprintable)
 class TRESGAME_API ATresCharPawnBase : public ATresPawnBase, public IGenericTeamAgentInterface, public IAISightTargetInterface {
     GENERATED_BODY()
 public:
-    DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FTresDtorState, TEnumAsByte<ETresStateID>, StateID);
-    DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FTresCtorState, TEnumAsByte<ETresStateID>, StateID);
+    DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FTresDtorState, ETresStateID, StateID);
+    DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FTresCtorState, ETresStateID, StateID);
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FTresAnimNotifyStartBpEvent, FName, AnimSeqName, TEnumAsByte<ETresAnimNotifyBpEventID>, EventID, int32, Param);
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FTresAnimNotifyEndBpEvent, FName, AnimSeqName, TEnumAsByte<ETresAnimNotifyBpEventID>, EventID, int32, Param);
     
@@ -394,16 +394,16 @@ public:
     void ReceiveTresTakeDamage(float DamagePoint, AController* InstigatedBy, const FHitResult& HitInfo, const FTresDamageInfo& DamageInfo, FVector ShotFromDirection, AActor* DamageCauser);
     
     UFUNCTION(BlueprintImplementableEvent)
-    void ReceiveDtorState(TEnumAsByte<ETresStateID> StateID);
+    void ReceiveDtorState(ETresStateID StateID);
     
     UFUNCTION(BlueprintImplementableEvent)
-    void ReceiveCtorState(TEnumAsByte<ETresStateID> StateID);
+    void ReceiveCtorState(ETresStateID StateID);
     
     UFUNCTION(BlueprintImplementableEvent)
-    void ReceiveAnimNotifyStartBpEvent(FName AnimSeqName, TEnumAsByte<ETresAnimNotifyBpEventID> EventID, int32 Param);
+    void ReceiveAnimNotifyStartBpEvent(FName AnimSeqName, ETresAnimNotifyBpEventID EventID, int32 Param);
     
     UFUNCTION(BlueprintImplementableEvent)
-    void ReceiveAnimNotifyEndBpEvent(FName AnimSeqName, TEnumAsByte<ETresAnimNotifyBpEventID> EventID, int32 Param);
+    void ReceiveAnimNotifyEndBpEvent(FName AnimSeqName, ETresAnimNotifyBpEventID EventID, int32 Param);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnLaunchedCharPawn(float Height);
@@ -415,7 +415,7 @@ public:
     void OnJumped();
     
     UFUNCTION(BlueprintCallable)
-    bool LaunchCharPawn(float Height, bool bForce, TEnumAsByte<ETresPlayerJumpModes> InJumpMode);
+    bool LaunchCharPawn(float Height, bool bForce, ETresPlayerJumpModes InJumpMode);
     
     UFUNCTION(BlueprintCallable)
     void LaunchCharacter(FVector LaunchVelocity, bool bXYOverride, bool bZOverride);
@@ -424,7 +424,7 @@ public:
     void K2_UpdateCustomMovement(float DeltaTime);
     
     UFUNCTION(BlueprintImplementableEvent)
-    void K2_OnMovementModeChanged(TEnumAsByte<EMovementMode> PrevMovementMode, TEnumAsByte<EMovementMode> NewMovementMode, uint8 PrevCustomMode, uint8 NewCustomMode);
+    void K2_OnMovementModeChanged(EMovementMode PrevMovementMode, EMovementMode NewMovementMode, uint8 PrevCustomMode, uint8 NewCustomMode);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsStopAI() const;

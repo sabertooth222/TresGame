@@ -1,0 +1,8 @@
+{
+	"Changelist" : 0,
+	"BuildId" : "1b165674-62d3-4f0a-9ae1-dd3ca7506660",
+	"Modules" : 
+	{
+		"SQEX_SplineEditor" : "UE4Editor-SQEX_SplineEditor.dll"
+	}
+}

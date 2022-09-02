@@ -24,7 +24,7 @@ public:
     float m_AnimTime;
     
     UPROPERTY(EditAnywhere)
-    ESQEX_BreakBlendMode m_Mode;
+    TEnumAsByte<ESQEX_BreakBlendMode> m_Mode;
     
     TRESGAME_API FTresEnemy_e_ex771_CrushingParam();
 };
