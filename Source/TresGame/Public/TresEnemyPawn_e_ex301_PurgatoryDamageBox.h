@@ -29,7 +29,7 @@ public:
     UParticleSystem* m_GrandParticleData;
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UBoxComponent* MyDamageComponent;
     
 public:

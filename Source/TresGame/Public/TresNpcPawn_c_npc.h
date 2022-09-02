@@ -139,7 +139,7 @@ public:
     uint8 m_bDispDebugInfo: 1;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UTresReactorComponent* MyReactor;
     
 public:

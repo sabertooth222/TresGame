@@ -99,13 +99,13 @@ protected:
     TWeakObjectPtr<UTresNpcSmartphoneCameraComponent> m_SmartphoneCameraComponentRef;
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UMercunaNavigationComponent* m_Navigation3DComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bManualEditingObstacleComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UMercunaObstacleComponent* ObstacleComponent;
     
 public:

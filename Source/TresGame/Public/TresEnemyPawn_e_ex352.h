@@ -20,7 +20,7 @@ class ATresEnemyPawn_e_ex352 : public ATresEnemyXIIILPawnBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USphereComponent* MyPullCollisionComponent;
     
     UPROPERTY(EditAnywhere)
@@ -41,7 +41,7 @@ protected:
     UPROPERTY(EditAnywhere, Transient)
     ATresProjectile_e_ex352_DarkMatter* m_DarkMatter[2];
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* m_EnvironmentalChangeEffectCmp;
     
 public:

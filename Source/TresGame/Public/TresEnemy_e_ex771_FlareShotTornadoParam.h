@@ -9,7 +9,7 @@ USTRUCT(BlueprintType)
 struct FTresEnemy_e_ex771_FlareShotTornadoParam {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* m_FireOmenEff;
     
     UPROPERTY(EditAnywhere)

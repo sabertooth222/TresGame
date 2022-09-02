@@ -14,7 +14,7 @@ private:
     UPROPERTY(EditAnywhere)
     TWeakObjectPtr<ATresLinkActor_e_ex202_Exit> m_ExitActor;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USplineComponent* SplineComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

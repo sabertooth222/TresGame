@@ -12,7 +12,7 @@ UCLASS(Abstract, Blueprintable)
 class ATresShapeLayoutObjectBase : public ATresGimmickGeneratorBase, public ITresGeneratorInterface {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTresSpawnActorManagerComponent* SpawnActorManager;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))

@@ -14,7 +14,7 @@ private:
     float m_PermitAngle;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTresDebugArrowComponent* DebugArrowComponent;
     
 public:

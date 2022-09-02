@@ -14,7 +14,7 @@ class ATresGumiShipSpWeapon020Projectile : public ATresGumiShipActualProjectile 
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTresGumiShipDefCollisionSetCompo* m_pDefCollision;
     
 public:

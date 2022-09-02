@@ -19,7 +19,7 @@ class ATresRaSpecialPerformActor : public ATresGimmickSkeletalBase {
 public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FTresOnSpecialPerform, FName, InActorName, ATresRaSpecialPerformActor*, inActor);
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTresStaticMeshComponent* MyStaticMesh;
     
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -63,7 +63,7 @@ private:
     UPROPERTY(EditAnywhere)
     TWeakObjectPtr<ATresRaFestivalDanceManager> m_pDanceMng;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTresReactorComponent* m_pReactor;
     
 public:

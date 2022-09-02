@@ -30,7 +30,7 @@ protected:
     uint8 m_bIsWet: 1;
     
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USceneComponent* m_OwnerMeth;
     
     UTresFootStepComponent();

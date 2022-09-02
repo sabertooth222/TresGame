@@ -9,7 +9,7 @@ UCLASS(Blueprintable)
 class TRESGAME_API UTresInterpTrackInstComponentAnimation : public UTresInterpTrackInstSlotAnimation {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UTresSkeletalMeshComponent* m_SkelComp;
     
     UTresInterpTrackInstComponentAnimation();

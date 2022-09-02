@@ -84,7 +84,7 @@ protected:
     TArray<FVector> m_CheckPointList;
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     TArray<UActorComponent*> m_ValidAreaBox;
     
     UPROPERTY(EditAnywhere)

@@ -9,7 +9,7 @@ UCLASS(Blueprintable)
 class ATresGimmickBxSingouki01 : public ATresGimmickBxSingouki {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USpotLightComponent* SpotLightComp;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

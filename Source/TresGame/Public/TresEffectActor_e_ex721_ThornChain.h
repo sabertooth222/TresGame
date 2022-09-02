@@ -14,7 +14,7 @@ public:
     UParticleSystem* m_ThornChainEffectAsset;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* m_ThornChainEffectCmp;
     
 public:

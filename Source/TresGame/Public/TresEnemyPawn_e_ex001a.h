@@ -38,7 +38,7 @@ protected:
     UParticleSystem* m_KairiPieceEffect_ShadowMove;
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* m_KairiPieceEffectComp;
     
 public:

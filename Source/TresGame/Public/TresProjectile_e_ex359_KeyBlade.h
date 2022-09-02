@@ -9,7 +9,7 @@ UCLASS(Abstract, Blueprintable)
 class ATresProjectile_e_ex359_KeyBlade : public ATresProjectileBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTresProjectileMeshComponent_e_ex359* m_ProjSkeletalMeshComp;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

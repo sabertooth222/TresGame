@@ -11,7 +11,7 @@ class UTresAttack3_e_ex004_WaterUpper : public UTresAttackDefinitionBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTresDecalComponent* m_pSpawnDecal;
     
 protected:

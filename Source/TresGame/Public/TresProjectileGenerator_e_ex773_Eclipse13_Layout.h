@@ -9,7 +9,7 @@ UCLASS(Abstract, Blueprintable)
 class ATresProjectileGenerator_e_ex773_Eclipse13_Layout : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USceneComponent* MyRoot;
     
     ATresProjectileGenerator_e_ex773_Eclipse13_Layout();

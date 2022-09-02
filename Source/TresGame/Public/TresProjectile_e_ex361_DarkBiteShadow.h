@@ -11,7 +11,7 @@ UCLASS(Blueprintable, HideDropdown)
 class ATresProjectile_e_ex361_DarkBiteShadow : public AActor, public ITresNotifyInterface {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* m_ShadowEff;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

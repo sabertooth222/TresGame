@@ -18,7 +18,7 @@ protected:
     int32 m_PointNo;
     
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USceneComponent* MyRoot;
     
     ATresActor_e_ex773_Point();

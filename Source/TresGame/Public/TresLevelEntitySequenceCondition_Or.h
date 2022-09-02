@@ -7,7 +7,7 @@ UCLASS(Blueprintable, EditInlineNew)
 class TRESGAME_API UTresLevelEntitySequenceCondition_Or : public UTresLevelEntitySequenceCondition {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     TArray<UTresLevelEntitySequenceCondition*> m_Conditions;
     
     UTresLevelEntitySequenceCondition_Or();

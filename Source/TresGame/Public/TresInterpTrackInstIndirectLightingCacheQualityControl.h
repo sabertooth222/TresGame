@@ -10,7 +10,7 @@ UCLASS(Blueprintable)
 class TRESGAME_API UTresInterpTrackInstIndirectLightingCacheQualityControl : public UInterpTrackInst {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     TArray<UPrimitiveComponent*> m_Components;
     
     UPROPERTY(EditAnywhere)

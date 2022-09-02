@@ -11,7 +11,7 @@ UCLASS(Abstract, Blueprintable)
 class ATresStaticActorGeneratorFromSplineSimple : public ATresGimmickGeneratorBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTresSpawnActorManagerComponent* SpawnActorManager;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

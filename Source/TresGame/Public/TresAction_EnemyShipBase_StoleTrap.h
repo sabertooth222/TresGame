@@ -10,7 +10,7 @@ class UTresAction_EnemyShipBase_StoleTrap : public UTresAction_EnemyShipBase_Sto
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* m_PointEffectComp;
     
 public:

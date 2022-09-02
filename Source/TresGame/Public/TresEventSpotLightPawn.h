@@ -9,7 +9,7 @@ UCLASS(Abstract, Blueprintable)
 class TRESGAME_API ATresEventSpotLightPawn : public ATresEventPawnBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USpotLightComponent* MySpotLight;
     
     ATresEventSpotLightPawn();
