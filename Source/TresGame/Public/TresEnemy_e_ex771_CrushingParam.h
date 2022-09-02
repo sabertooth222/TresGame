@@ -1,5 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "ESQEX_BreakBlendMode.h"
 #include "UObject/NoExportTypes.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Renderer -ObjectName=ESQEX_BreakBlendMode -FallbackName=ESQEX_BreakBlendMode
 #include "TresEnemy_e_ex771_CrushingParam.generated.h"
@@ -23,7 +24,7 @@ public:
     float m_AnimTime;
     
     UPROPERTY(EditAnywhere)
-    TEnumAsByte<ESQEX_BreakBlendMode> m_Mode;
+    ESQEX_BreakBlendMode m_Mode;
     
     TRESGAME_API FTresEnemy_e_ex771_CrushingParam();
 };
