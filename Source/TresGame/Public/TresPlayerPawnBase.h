@@ -9,7 +9,7 @@
 #include "TresAttractionFlowAssetInfo.h"
 #include "ETresActorSpecificActionID.h"
 #include "UObject/NoExportTypes.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ESQEX_AI_ThinkType -FallbackName=ESQEX_AI_ThinkType
+#include "ESQEX_AI_ThinkType.h"
 #include "ETresPlayerUniqueID.h"
 #include "TresPlayerPawnBase.generated.h"
 
@@ -30,7 +30,7 @@ class UTresSpawnPointAvoidActorFilter;
 class ATresCharPawnBase;
 class UTresPlayerStateEvent;
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Abstract, Blueprintable, DefaultConfig, config = Engine)
 class ATresPlayerPawnBase : public ATresAIPawnBase {
     GENERATED_BODY()
 public:
@@ -69,7 +69,7 @@ public:
     float MyPoleEffectRange;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bEnableClimbing: 1;
+    uint32 m_bEnableClimbing: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fClimbingRadius;
@@ -90,7 +90,7 @@ public:
     float m_fClimbingFinalSpace;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bEnableWallRun: 1;
+    uint32 m_bEnableWallRun: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MyWallRunSpeedScaleUp;
@@ -150,7 +150,7 @@ public:
     float MyAttackFirstAirMoveRate;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bEnableDiveFall: 1;
+    uint32 m_bEnableDiveFall: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MyDiveFallStartHeight;
@@ -492,91 +492,91 @@ public:
     TEnumAsByte<ETresPlayerJumpModes> MyJumpMotion;
     
     UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 bDispDebugInfo: 1;
+    uint32 bDispDebugInfo: 1;
     
     UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 bDispNetDebugInfo: 1;
+    uint32 bDispNetDebugInfo: 1;
     
     UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 bDebugDisableGameOver: 1;
+    uint32 bDebugDisableGameOver: 1;
     
     UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bAlwaysEnableWallRun: 1;
+    uint32 m_bAlwaysEnableWallRun: 1;
     
     UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bDebugWallRunStartOff: 1;
+    uint32 m_bDebugWallRunStartOff: 1;
     
     UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bDebugDisableFriend: 1;
+    uint32 m_bDebugDisableFriend: 1;
     
     UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bDebugShooterModeInputType: 1;
+    uint32 m_bDebugShooterModeInputType: 1;
     
     UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bWallTurnWithoutAnim: 1;
+    uint32 m_bWallTurnWithoutAnim: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_bDebugHighJump;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bDebug2ndJump: 1;
+    uint32 m_bDebug2ndJump: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bDebugDodge: 1;
+    uint32 m_bDebugDodge: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bDebugAirDodge: 1;
+    uint32 m_bDebugAirDodge: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bDebugRiskDodge: 1;
+    uint32 m_bDebugRiskDodge: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bDebugSuperJump: 1;
+    uint32 m_bDebugSuperJump: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_bDebugSuperSlideLv;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bDebugPoleSpin: 1;
+    uint32 m_bDebugPoleSpin: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bDebugPoleSwing: 1;
+    uint32 m_bDebugPoleSwing: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bDebugWallKick: 1;
+    uint32 m_bDebugWallKick: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bDebugEnemyTurn: 1;
+    uint32 m_bDebugEnemyTurn: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bDebugAirRecovery: 1;
+    uint32 m_bDebugAirRecovery: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bDebugBlowCounter: 1;
+    uint32 m_bDebugBlowCounter: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bDebugAirRecoveryInputChange: 1;
+    uint32 m_bDebugAirRecoveryInputChange: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bDebugGuard: 1;
+    uint32 m_bDebugGuard: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bDebugGuardCounter: 1;
+    uint32 m_bDebugGuardCounter: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bDebugRevengeImpact: 1;
+    uint32 m_bDebugRevengeImpact: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bDebugRevengeDive: 1;
+    uint32 m_bDebugRevengeDive: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bDebugRevengeEx: 1;
+    uint32 m_bDebugRevengeEx: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bDebugDodgeCounter: 1;
+    uint32 m_bDebugDodgeCounter: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bDebugComboMaster: 1;
+    uint32 m_bDebugComboMaster: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_bDebugComboPlus;
@@ -585,100 +585,100 @@ public:
     int32 m_bDebugAirComboPlus;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bDebugFinTriple: 1;
+    uint32 m_bDebugFinTriple: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bDebugFinThrust: 1;
+    uint32 m_bDebugFinThrust: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bDebugFinFlash: 1;
+    uint32 m_bDebugFinFlash: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bDebugFinDown: 1;
+    uint32 m_bDebugFinDown: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bDebugLaunchSpin: 1;
+    uint32 m_bDebugLaunchSpin: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bDebugAirRollBeat: 1;
+    uint32 m_bDebugAirRollBeat: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bDebugFinDonald1: 1;
+    uint32 m_bDebugFinDonald1: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bDebugFinDonald2: 1;
+    uint32 m_bDebugFinDonald2: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bDebugFinDonald3: 1;
+    uint32 m_bDebugFinDonald3: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bDebugFinGoofy1: 1;
+    uint32 m_bDebugFinGoofy1: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bDebugFinGoofy2: 1;
+    uint32 m_bDebugFinGoofy2: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bDebugSonicSlash: 1;
+    uint32 m_bDebugSonicSlash: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bDebugSonicJump: 1;
+    uint32 m_bDebugSonicJump: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bDebugSonicTurn: 1;
+    uint32 m_bDebugSonicTurn: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bDebugSonicWheel: 1;
+    uint32 m_bDebugSonicWheel: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bDebugAttractionVS: 1;
+    uint32 m_bDebugAttractionVS: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bDebugAttractionBM: 1;
+    uint32 m_bDebugAttractionBM: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bDebugAttractionSM: 1;
+    uint32 m_bDebugAttractionSM: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bDebugAttractionSC: 1;
+    uint32 m_bDebugAttractionSC: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bDebugAttractionMG: 1;
+    uint32 m_bDebugAttractionMG: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bDebugAttractionTC: 1;
+    uint32 m_bDebugAttractionTC: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bDebugAttractionAS: 1;
+    uint32 m_bDebugAttractionAS: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bDebugAttractionWS: 1;
+    uint32 m_bDebugAttractionWS: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bDebugAttractionFF: 1;
+    uint32 m_bDebugAttractionFF: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bDebugShieldAutoGrowUp: 1;
+    uint32 m_bDebugShieldAutoGrowUp: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bDebugMpCharge: 1;
+    uint32 m_bDebugMpCharge: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bDebugFpCharge: 1;
+    uint32 m_bDebugFpCharge: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bDebugChargeBerserkTest: 1;
+    uint32 m_bDebugChargeBerserkTest: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bDebugCuragan: 1;
+    uint32 m_bDebugCuragan: 1;
     
     UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fDebugAttackMoveLimit;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bDebugForceUseSpawnPointVolume: 1;
+    uint32 m_bDebugForceUseSpawnPointVolume: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bDebugDispNearSpawnPoint: 1;
+    uint32 m_bDebugDispNearSpawnPoint: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_nDebugTestMode;
@@ -697,7 +697,7 @@ public:
     
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bFriendDisableAutoCreate: 1;
+    uint32 m_bFriendDisableAutoCreate: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ESQEX_AI_ThinkType m_FriendAIThinkType;
@@ -716,7 +716,7 @@ protected:
     
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bEnableWeaponChangeEquip: 1;
+    uint32 m_bEnableWeaponChangeEquip: 1;
     
     UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresAnimSet* m_RestrictWeaponModeAnimSet;
@@ -804,7 +804,7 @@ public:
     
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bDebugHitStop: 1;
+    uint32 m_bDebugHitStop: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MyHitStopTimeSmall;
