@@ -8,21 +8,21 @@
 
 class ATresProjectileManager_e_ex358_Naruikazuchi;
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAttack4_e_ex358_Naruikazuchi : public UTresAttack_e_ex358_Base {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresEnemyNaruikazuchi_e_ex358::Type> m_NaruikazuchiType;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresProjectileManager_e_ex358_Naruikazuchi> m_ProjectileManagerClass;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_ProjectileGenerateStartDistance;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresNaruikazuchiProjectileGenerateParam m_ProjectileGenerateParam;
     
 public:

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "TresEnemy_e_ex771_FlareShotHvnEntryParam.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresEnemy_e_ex771_FlareShotHvnEntryParam {
     GENERATED_BODY()
 public:

@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FTresEnemy_e_Gigas_BulletParam {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_HomingInterval;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_HomingEndDist;
     
     TRESGAME_API FTresEnemy_e_Gigas_BulletParam();

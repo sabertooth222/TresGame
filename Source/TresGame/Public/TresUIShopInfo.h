@@ -1,6 +1,5 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "TresUIShopVoice.h"
 #include "TresUIShopInfo.generated.h"
 
@@ -10,16 +9,16 @@ USTRUCT(BlueprintType)
 struct FTresUIShopInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString NameTextID;
     
-    UPROPERTY(EditDefaultsOnly)
-    TSubclassOf<ATresUIActor> Staff;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TAssetSubclassOf<ATresUIActor> Staff;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresUIShopVoice> TalkWelcome;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresUIShopVoice> TalkNewArrival;
     
     TRESGAME_API FTresUIShopInfo();

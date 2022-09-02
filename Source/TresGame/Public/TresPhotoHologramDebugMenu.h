@@ -9,7 +9,7 @@ struct FTresPhotoHologramDebugMenu {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresUIP_MobileAlbum* m_pAlbum;
     
 public:

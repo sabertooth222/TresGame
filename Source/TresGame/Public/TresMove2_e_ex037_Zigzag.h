@@ -3,12 +3,12 @@
 #include "TresLocomotionDefinitionFlyCodeDriven.h"
 #include "TresMove2_e_ex037_Zigzag.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresMove2_e_ex037_Zigzag : public UTresLocomotionDefinitionFlyCodeDriven {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_FlightLoopPlayRate;
     
 public:

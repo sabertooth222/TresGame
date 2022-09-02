@@ -5,17 +5,17 @@
 
 class UForceFeedbackEffect;
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API UTresForceFeedbackSet : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UForceFeedbackEffect* m_AssetSmall;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UForceFeedbackEffect* m_AssetMiddle;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UForceFeedbackEffect* m_AssetLarge;
     
     UTresForceFeedbackSet();

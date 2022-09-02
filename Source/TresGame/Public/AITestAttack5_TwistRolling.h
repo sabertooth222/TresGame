@@ -3,18 +3,18 @@
 #include "AITestAttack_Jump.h"
 #include "AITestAttack5_TwistRolling.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UAITestAttack5_TwistRolling : public UAITestAttack_Jump {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_SlashPitchMax;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_SlashPitchMin;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_SlashYawMinMax;
     
 public:

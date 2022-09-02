@@ -3,7 +3,7 @@
 #include "EnvironmentQuery/EnvQueryContext.h"
 #include "TresEnvQueryContext_UpVector.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UTresEnvQueryContext_UpVector : public UEnvQueryContext {
     GENERATED_BODY()
 public:

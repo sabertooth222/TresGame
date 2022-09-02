@@ -6,17 +6,17 @@
 
 class UTresDebugMenuScene;
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class UTresGameViewportClient : public UGameViewportClient {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UTresDebugMenuScene*> m_DebugMenuStack;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresDebugMenuScene* m_FocusDebugMenu;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresDebugMenuInfo> m_DebugMenuInfo;
     
     UTresGameViewportClient();

@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FTresEnemyShipCoreSpawnData {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_SocketName;
     
     UPROPERTY(EditAnywhere)

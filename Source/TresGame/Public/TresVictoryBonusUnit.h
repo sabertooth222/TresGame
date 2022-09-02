@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ETresAbilityKind.h"
 #include "ETresVictoryBonusKind.h"
+#include "ETresAbilityKind.h"
 #include "TresVictoryBonusUnit.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresVictoryBonusUnit {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresVictoryBonusKind m_Bonus;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresAbilityKind m_Ability;
     
     TRESGAME_API FTresVictoryBonusUnit();

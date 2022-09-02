@@ -3,7 +3,7 @@
 #include "BehaviorTree/BTDecorator.h"
 #include "TresBTDecorator_GetFirstAttackPermission.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTDecorator_GetFirstAttackPermission : public UBTDecorator {
     GENERATED_BODY()
 public:

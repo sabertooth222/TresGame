@@ -8,13 +8,13 @@ USTRUCT(BlueprintType)
 struct FTresUIShopVoice {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
-    USoundBase* VoiceSound;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TAssetPtr<USoundBase> VoiceSound;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString SubtitleTextID;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float FixedSubtitleDisplayTime;
     
     TRESGAME_API FTresUIShopVoice();

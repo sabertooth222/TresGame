@@ -3,45 +3,45 @@
 #include "TresCharState_AFRollerCoaster.h"
 #include "TresPlayerState_AFRollerCoaster.generated.h"
 
+class ATresCameraBase;
 class ATresCharPawnBase;
 class ATresRailSlideActor;
 class ATresAttractionPawnRollerCoaster;
-class ATresAttractionPawnBase;
-class ATresCameraBase;
 class ATresPawnBase;
+class ATresAttractionPawnBase;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_AFRollerCoaster : public UTresCharState_AFRollerCoaster {
     GENERATED_BODY()
 public:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresCharPawnBase* m_TargetPawn;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresRailSlideActor* m_StartRailActor;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresAttractionPawnRollerCoaster* m_pLeadCar;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresAttractionPawnBase* m_pTailCar;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresAttractionPawnBase* m_pRideCar;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresCharPawnBase* m_pRailEffect;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresCharPawnBase* m_pMarker;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresPawnBase* m_pGateEffect;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<ATresAttractionPawnBase*> m_Cars;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresCameraBase* m_Camera;
     
     UTresPlayerState_AFRollerCoaster();

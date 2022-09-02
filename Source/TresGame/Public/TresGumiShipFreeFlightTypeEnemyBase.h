@@ -4,14 +4,14 @@
 #include "UObject/NoExportTypes.h"
 #include "TresGumiShipFreeFlightTypeEnemyBase.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresGumiShipFreeFlightTypeEnemyBase : public ATresGumiShipSplinePathMoveTypeEnemyBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRotator LimitRotator;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool TurnAdvanced;
     
     ATresGumiShipFreeFlightTypeEnemyBase();

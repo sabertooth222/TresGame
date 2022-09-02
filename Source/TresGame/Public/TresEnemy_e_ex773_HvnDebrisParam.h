@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FTresEnemy_e_ex773_HvnDebrisParam {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresProjectile_e_ex773_DebrisAttract* m_DebrisAttract;
     
     TRESGAME_API FTresEnemy_e_ex773_HvnDebrisParam();

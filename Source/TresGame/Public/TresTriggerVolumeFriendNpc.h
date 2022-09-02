@@ -6,14 +6,14 @@
 
 class AActor;
 
-UCLASS(Config=Game)
+UCLASS(Blueprintable, Config=Game)
 class ATresTriggerVolumeFriendNpc : public ATriggerVolume {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresNotifyFriendNpc::Type> m_NotifyType;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AActor* m_ActionPoint;
     
     ATresTriggerVolumeFriendNpc();

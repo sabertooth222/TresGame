@@ -5,11 +5,11 @@
 
 class UTexture2D;
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresGummiStickerTextureDataTable : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTexture2D* m_nTexture;
     
     TRESGAME_API FTresGummiStickerTextureDataTable();

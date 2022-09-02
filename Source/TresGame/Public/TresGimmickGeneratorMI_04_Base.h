@@ -7,18 +7,18 @@
 class UTresInstancedStaticMeshComponent;
 class ASQEX_SplineActor;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresGimmickGeneratorMI_04_Base : public ATresGimmickGeneratorBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ASQEX_SplineActor* m_pSplineActor;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresInstancedStaticMeshComponent* InstancedStaticMeshComp;
     
-    UPROPERTY(BlueprintReadOnly, EditInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresMI_04_DoorGeneratorMoveType MoveType;
     
 public:

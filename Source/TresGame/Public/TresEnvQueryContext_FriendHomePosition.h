@@ -3,7 +3,7 @@
 #include "EnvironmentQuery/EnvQueryContext.h"
 #include "TresEnvQueryContext_FriendHomePosition.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UTresEnvQueryContext_FriendHomePosition : public UEnvQueryContext {
     GENERATED_BODY()
 public:

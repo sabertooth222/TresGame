@@ -6,15 +6,15 @@
 class UParticleSystemComponent;
 class UParticleSystem;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresProjectile_e_ex711_Missile : public ATresProjectileStaticMeshBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* m_FireEff;
     
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_FireEffData;
     
 public:

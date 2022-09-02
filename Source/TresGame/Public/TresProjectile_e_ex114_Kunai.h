@@ -3,7 +3,7 @@
 #include "TresProjectileBase.h"
 #include "TresProjectile_e_ex114_Kunai.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class ATresProjectile_e_ex114_Kunai : public ATresProjectileBase {
     GENERATED_BODY()
 public:

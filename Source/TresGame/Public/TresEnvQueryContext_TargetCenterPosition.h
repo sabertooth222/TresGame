@@ -3,7 +3,7 @@
 #include "EnvironmentQuery/EnvQueryContext.h"
 #include "TresEnvQueryContext_TargetCenterPosition.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UTresEnvQueryContext_TargetCenterPosition : public UEnvQueryContext {
     GENERATED_BODY()
 public:

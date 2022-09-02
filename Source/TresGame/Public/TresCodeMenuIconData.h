@@ -9,10 +9,10 @@ USTRUCT(BlueprintType)
 struct FTresCodeMenuIconData {
     GENERATED_BODY()
 public:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UGFxObject* m_pIconAnm;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresASProxyTresControlsIcon* m_pIcon;
     
     TRESGAME_API FTresCodeMenuIconData();

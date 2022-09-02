@@ -5,21 +5,21 @@
 
 class UGFxObject;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresUIP_HudKeyHole : public UTresUIParts {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UGFxObject* m_pKeyMissionGage;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UGFxObject* m_pKeyMissionKey;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UGFxObject* m_pMissionGageAnms;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UGFxObject* m_pMissionKasanAnm;
     
 public:

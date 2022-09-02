@@ -3,7 +3,7 @@
 #include "TresCharState_Catch.h"
 #include "TresPlayerState_Catch.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_Catch : public UTresCharState_Catch {
     GENERATED_BODY()
 public:

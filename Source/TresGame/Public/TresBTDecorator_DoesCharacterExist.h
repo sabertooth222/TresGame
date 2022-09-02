@@ -5,14 +5,14 @@
 #include "ETresEnemyUniqueID.h"
 #include "TresBTDecorator_DoesCharacterExist.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTDecorator_DoesCharacterExist : public UBTDecorator {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<ETresChrUniqueID> m_FriendsUID;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<ETresEnemyUniqueID> m_EnemiesUID;
     
     UTresBTDecorator_DoesCharacterExist();

@@ -7,12 +7,12 @@
 
 class UCanvas;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class UTresDebugDisplayCanvasBaseTask : public UTresDebugDisplayTask {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UCanvas* Canvas;
     
 public:
@@ -21,7 +21,7 @@ protected:
     UFUNCTION(BlueprintCallable)
     void SetCanvasDrawColor(FLinearColor Color);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnDraw();
     
     UFUNCTION(BlueprintCallable)

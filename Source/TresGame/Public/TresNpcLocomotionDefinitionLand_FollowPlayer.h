@@ -3,24 +3,24 @@
 #include "TresNpcLocomotionDefinitionLand.h"
 #include "TresNpcLocomotionDefinitionLand_FollowPlayer.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcLocomotionDefinitionLand_FollowPlayer : public UTresNpcLocomotionDefinitionLand {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_InViewportSpeedRate;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_OutViewportSpeedRate;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_WarpStartDistance;
     
-    UPROPERTY(AdvancedDisplay, EditDefaultsOnly)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_DecelerationTime;
     
-    UPROPERTY(AdvancedDisplay, EditDefaultsOnly)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_RangeSamePlayerSpeed;
     
 public:

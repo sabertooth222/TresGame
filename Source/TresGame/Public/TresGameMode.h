@@ -4,68 +4,68 @@
 #include "TresGameMode.generated.h"
 
 class UTresGameModeLoadAsset;
+class ATresPlayerStart;
 class ATresGameState;
 class ATresAtkCollManager;
 class ATresProjectileManager;
 class ATresAICoordinator;
-class ATresPlayerStart;
 class UTresNavMapShowManager;
 class UObject;
 
-UCLASS(MinimalAPI, NonTransient)
+UCLASS(Blueprintable, MinimalAPI, NonTransient)
 class ATresGameMode : public ATresGameModeBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(DuplicateTransient, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresGameState* m_pTresGameState;
     
-    UPROPERTY(DuplicateTransient, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresAtkCollManager* m_AtkCollManager;
     
-    UPROPERTY(DuplicateTransient, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresProjectileManager* m_ProjectileManager;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresGameModeLoadAsset* m_LoadAsset;
     
-    UPROPERTY(DuplicateTransient, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresAICoordinator* m_AICoordinator;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresPlayerStart* m_AutoSavePoint;
     
 private:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     bool m_IsShowMapName;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     bool m_IsWakeupShowMapName;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     bool m_StopShowMapNameSystem;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresNavMapShowManager* m_pNavMapShowManager;
     
 public:
     ATresGameMode();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ATresAICoordinator* GetAICoordinator() const;
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void DebugShowTresCollManagerInfo(bool bDispEnable);
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void DebugShowProjectileManagerInfo(bool bDispEnable);
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void DebugShowAtkCollManagerInfo(bool bDispEnable);
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void DebugEnableHitStop(bool bEnable);
     
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void BPE_OverrideMapJumpPath(UObject* From, int32 InFadeKind, const FName& InMapName, const FName& InPlayerStartTag, FName& OutMapName, FName& OutPlayerStartTag);
     
 };

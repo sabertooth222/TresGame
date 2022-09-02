@@ -3,11 +3,11 @@
 #include "Engine/DataTable.h"
 #include "TresPhotoHologramMapSetDef.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresPhotoHologramMapSetDef : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FName> ValidMapList;
     
     TRESGAME_API FTresPhotoHologramMapSetDef();

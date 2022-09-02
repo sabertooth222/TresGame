@@ -3,17 +3,17 @@
 #include "TresFieldGenerateParamBase_e_ex357.h"
 #include "TresFieldGenerateTargetParam_e_ex357.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UTresFieldGenerateTargetParam_e_ex357 : public UTresFieldGenerateParamBase_e_ex357 {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 Num;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float IntervalTime;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float OffsetVelocityTime;
     
     UTresFieldGenerateTargetParam_e_ex357();

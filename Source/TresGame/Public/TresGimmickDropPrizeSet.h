@@ -4,12 +4,12 @@
 #include "TresGimmickDropPrizeTable.h"
 #include "TresGimmickDropPrizeSet.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API UTresGimmickDropPrizeSet : public UDataAsset {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresGimmickDropPrizeTable> m_PrizeDatas;
     
 public:

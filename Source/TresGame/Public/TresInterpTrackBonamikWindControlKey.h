@@ -6,7 +6,7 @@ USTRUCT(BlueprintType)
 struct FTresInterpTrackBonamikWindControlKey {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_Time;
     
     TRESGAME_API FTresInterpTrackBonamikWindControlKey();

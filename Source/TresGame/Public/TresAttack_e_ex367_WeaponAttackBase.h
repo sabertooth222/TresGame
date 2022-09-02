@@ -6,11 +6,11 @@
 
 class UTresStateBase;
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAttack_e_ex367_WeaponAttackBase : public UTresAttackDefinitionWeaponBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UTresStateBase> m_AttackState;
     
     UTresAttack_e_ex367_WeaponAttackBase();

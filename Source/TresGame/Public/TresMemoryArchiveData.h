@@ -5,18 +5,18 @@
 
 class UTexture;
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresMemoryArchiveData : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName MapName;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString EpisodeNameTextID;
     
-    UPROPERTY(EditDefaultsOnly)
-    UTexture* IconAsset;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TAssetPtr<UTexture> IconAsset;
     
     TRESGAME_API FTresMemoryArchiveData();
 };

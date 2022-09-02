@@ -3,7 +3,7 @@
 #include "EnvironmentQuery/EnvQueryContext.h"
 #include "TresEnvQueryContext_QuerierRotationZ.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UTresEnvQueryContext_QuerierRotationZ : public UEnvQueryContext {
     GENERATED_BODY()
 public:

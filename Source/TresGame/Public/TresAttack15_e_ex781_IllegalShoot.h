@@ -7,14 +7,14 @@
 class ATresProjectileBase;
 class ATresProjectileGenerator_e_ex781_SlashWave;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresAttack15_e_ex781_IllegalShoot : public UTresAttackDefinitionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresProjectileBase> m_BulletProjectile;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresProjectileGenerator_e_ex781_SlashWave> m_PatternSwordAttackState;
     
     UTresAttack15_e_ex781_IllegalShoot();

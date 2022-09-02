@@ -6,16 +6,16 @@
 class UParticleSystem;
 class UParticleSystemComponent;
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresMove2_e_ex001_ShadowMove : public UTresLocomotionDefinitionLandCodeDriven {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_DecalEffectData;
     
 private:
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* m_DecalEffectComponent;
     
 public:

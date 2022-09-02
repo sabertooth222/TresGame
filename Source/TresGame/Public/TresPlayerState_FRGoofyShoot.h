@@ -5,11 +5,11 @@
 
 class ATresFriendLinkPawnGoofyShoot;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_FRGoofyShoot : public UTresCharState_FRGoofyShoot {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresFriendLinkPawnGoofyShoot* m_pObj;
     
     UTresPlayerState_FRGoofyShoot();

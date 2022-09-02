@@ -6,14 +6,14 @@
 class ATresKHShaderController;
 class UTresObjectDataBuffer;
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API UTresKHSInterpGroupInst : public UInterpGroupInst {
     GENERATED_BODY()
 public:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresKHShaderController* m_GroupActor;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresObjectDataBuffer* m_KHSBuffer;
     
     UTresKHSInterpGroupInst();

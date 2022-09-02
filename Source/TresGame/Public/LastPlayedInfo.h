@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FLastPlayedInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UAnimationAsset* m_pAsset;
     
     TRESGAME_API FLastPlayedInfo();

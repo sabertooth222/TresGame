@@ -6,24 +6,24 @@
 #include "TresAttractionFlowDrawingEntry.h"
 #include "TresBattleVolume.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API ATresBattleVolume : public ATresLevelEntityControlVolume, public ITresAttractionFlowDrawingInterface {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGuid m_GUID;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_NotifyMovedOutOfBattleArea;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresAttractionFlowDrawingEntry> m_DrawingTable;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_EnableDrawing;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     bool m_BattleStarted;
     
 public:

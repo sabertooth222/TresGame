@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TresAction_XIIILB_Interface.h"
 #include "TresAttackDefinitionBase.h"
+#include "TresAction_XIIILB_Interface.h"
 #include "TresAttack_XIIILB_Base.generated.h"
 
-UCLASS(Abstract, HideDropdown)
+UCLASS(Abstract, Blueprintable, HideDropdown)
 class UTresAttack_XIIILB_Base : public UTresAttackDefinitionBase, public ITresAction_XIIILB_Interface {
     GENERATED_BODY()
 public:

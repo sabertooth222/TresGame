@@ -3,7 +3,7 @@
 #include "TresActionDefinitionBase.h"
 #include "TresAction5_e_ex761_ReverseMode.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAction5_e_ex761_ReverseMode : public UTresActionDefinitionBase {
     GENERATED_BODY()
 public:

@@ -5,55 +5,55 @@
 #include "UObject/NoExportTypes.h"
 #include "TresTreasureBox.generated.h"
 
-class ATresTreasureBox;
 class UTresReactorComponent;
 class UParticleSystem;
 class ATresCharPawnBase;
+class ATresTreasureBox;
 
-UCLASS(Config=Game)
+UCLASS(Blueprintable, Config=Game)
 class ATresTreasureBox : public ATresGimmickSkeletalBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresReactorComponent* MyReactor;
     
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_TreasureID;
     
 protected:
-    UPROPERTY(EditAnywhere)
-    uint32 m_bIsLargeBox: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bIsLargeBox: 1;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector m_OpenerRelativeLocation;
     
-    UPROPERTY(EditAnywhere)
-    uint32 m_bUseKeyitemInfoWnd: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bUseKeyitemInfoWnd: 1;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_PreOpenEffect;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector m_PreOpenEffLocation;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRotator m_PreOpenEffRotation;
     
-    UPROPERTY(EditAnywhere)
-    uint32 m_bIsFakeBox: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bIsFakeBox: 1;
     
-    UPROPERTY(EditAnywhere)
-    uint32 m_bIsOptionalOpenedBox: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bIsOptionalOpenedBox: 1;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_DisappearEffect;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresCharPawnBase* m_pOpenner;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresTreasureBox* m_pTrueTreasureBox;
     
 public:

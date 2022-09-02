@@ -6,7 +6,7 @@
 
 class UTresRemunerationAsset;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class TRESGAME_API UTresRemunerationStatics : public UObject {
     GENERATED_BODY()
 public:

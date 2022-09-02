@@ -5,14 +5,14 @@
 
 class UDirectionalLightComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API UTresInterpTrackInstDynamicShadowDistance : public UInterpTrackInst {
     GENERATED_BODY()
 public:
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     TArray<UDirectionalLightComponent*> m_LightComponents;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<float> m_OriginalValues;
     
     UTresInterpTrackInstDynamicShadowDistance();

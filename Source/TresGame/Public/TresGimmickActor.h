@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "ETresGimmickInstanceManagerInstanceState.h"
+#include "TresGimmickOnEndActorRideDelegate.h"
 #include "ETresEnemyUniqueID.h"
-#include "TresActorInterface.h"
 #include "TresReactorComponentInterface.h"
 #include "TresAnimInterface.h"
-#include "UObject/NoExportTypes.h"
 #include "TresNotifyInterface.h"
-#include "TresGimmickKilledCharSignatureDelegate.h"
+#include "TresActorInterface.h"
 #include "TresGimmickTakeDamageSignatureDelegate.h"
 #include "TresGimmickDoCommandSignatureDelegate.h"
 #include "TresGimmickActivateSignatureDelegate.h"
@@ -19,180 +19,180 @@
 #include "TresGimmickOnGimmickInstanceInitializeSignatureDelegate.h"
 #include "TresReactorDoCommandSignatureDelegate.h"
 #include "TresGimmickOnBeginActorRideDelegate.h"
-#include "ETresGimmickInstanceManagerInstanceState.h"
-#include "TresGimmickOnEndActorRideDelegate.h"
 #include "TresGimmickOnChangeActorRideBoneDelegate.h"
+#include "TresGimmickKilledCharSignatureDelegate.h"
 #include "Engine/EngineTypes.h"
 #include "Engine/EngineTypes.h"
 #include "TresDamageInfo.h"
+#include "UObject/NoExportTypes.h"
 #include "Engine/EngineTypes.h"
 #include "ETresCommandKind.h"
 #include "ETresGimmickDistanceBetweenPlayer.h"
 #include "TresGimmickActor.generated.h"
 
 class UTresChrBaseParam;
-class ATresPawnBase;
-class UTresChrDataTableSet;
 class UParticleSystem;
+class UTresChrDataTableSet;
+class UPrimitiveComponent;
 class UObject;
 class AController;
-class UPrimitiveComponent;
 class ATresGimmickActor;
+class ATresPawnBase;
 class ATresCharPawnBase;
 class UMeshComponent;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresGimmickActor : public AActor, public ITresReactorComponentInterface, public ITresAnimInterface, public ITresNotifyInterface, public ITresActorInterface {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 m_bAutoActivate: 1;
     
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 m_bGimmickComponentAutoLinkActivate: 1;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 m_bIsActive: 1;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 m_bChangeAtkCollisionChannelWhenHidden: 1;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 m_bUseBlueprintEventByChangeAtkCollisionChannel: 1;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresChrDataTableSet* m_pDataTableSet;
     
-    UPROPERTY(DuplicateTransient, Export, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UTresChrBaseParam* m_BaseParam;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresEnemyUniqueID m_FakeEnemyUniqueID;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_TeamNo;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_UseChangeGimmickActionNotify;
     
 public:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bEnableGimmickControl;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bAutoStartGimmick;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bAutoStartShowGimmick;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bDefaultShowGimmick;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bWithoutMyMeshShowGimmick;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bAutoStartEnableCollisionGimmick;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bDefaultEnableCollisionGimmick;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bWithoutMyMeshCollisionGimmick;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_DefaultCollisionGimmickProfile;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bAutoDestoryGimmick;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_AutoDestoryDelayTime;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bAutoDestoryHideGimmick;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_AutoDestoryHideDelayTime;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bAutoDestoryDisableCollisionGimmick;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bEnableDestroyedReaction;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bEnableDestroyedReflection;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bAutoStartActiveGimmick;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bBeginPlayDisableTickRegister;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bUseGimmickPause;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bUseGimmickPauseDisableTick;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bUseGimmickInstanceManage;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bAttackGimmick;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_Effect_GimmickDestroy;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_Effect_GimmickDestroyAttachPoint;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresGimmickTakeDamageSignature OnTresTakeDamage;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresGimmickDoCommandSignature OnGimmickDoCommand;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresGimmickActivateSignature OnGimmickActivate;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresGimmickOnStartGimmickForPlanSignature OnStartGimmickForPlan;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresGimmickOnStopGimmickForPlanSignature OnStopGimmickForPlan;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresGimmickOnDestroyedGimmickForPlanSignature OnDestroyedGimmickForPlan;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresGimmickOnBeginPauseSpecialSignature OnBeginPauseSpecialForPlan;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresGimmickOnEndPauseSpecialSignature OnEndPauseSpecialForPlan;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresGimmickOnGimmickInstanceInitializeSignature OnGimmickInstanceInitialize;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresReactorDoCommandSignature OnReactorDoCommand;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresGimmickOnBeginActorRide OnGimmickBeginActorRide;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresGimmickOnEndActorRide OnGimmickEndActorRide;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresGimmickOnChangeActorRideBone OnGimmickChangeActorRideBone;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresGimmickKilledCharSignature OnGimmickKilledChar;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_FoodstuffKeyName;
     
 public:
@@ -233,80 +233,80 @@ public:
     UFUNCTION(BlueprintCallable)
     void RequestDestroyGimmickForPlan(bool PlayAnimation);
     
-    UFUNCTION(BlueprintAuthorityOnly, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveTresTakeDamage(float DamagePoint, AController* InstigatedBy, const FHitResult& HitInfo, const FTresDamageInfo& DamageInfo, FVector ShotFromDirection, AActor* DamageCauser);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveGimmickKilledCharSignature(ATresGimmickActor* AttackCauser, ATresPawnBase* KilledPawn, const FTresDamageInfo& DamageInfo);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveGimmickEndActorRide(AActor* RideActor, UPrimitiveComponent* Component, const FName BoneName);
     
     UFUNCTION(BlueprintAuthorityOnly, BlueprintImplementableEvent)
-    void ReceiveGimmickDoCommand(ATresCharPawnBase* InCommandCauser, ETresCommandKind InCommandID);
+    void ReceiveGimmickDoCommand(ATresCharPawnBase* InCommandCauser, TEnumAsByte<ETresCommandKind> InCommandID);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveGimmickChangeActorRideBone(AActor* RideActor, UPrimitiveComponent* Component, const FName BoneName);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveGimmickBeginActorRide(AActor* RideActor, UPrimitiveComponent* Component, const FName BoneName);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveGimmickActivate(bool bEnable);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnChangeGimmickPauseCallBack(bool bPause);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void NotifyChangeGimmickActionImpl(bool bShow);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsPowerSavingMode();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UMeshComponent* GetMeshComponentForPlan();
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BPEV_OnStopGimmickForPlan(bool PlayAnimation);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BPEV_OnStartGimmickForPlan(bool PlayAnimation);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BPEV_OnShowGimmickForPlan();
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BPEV_OnResetGimmickForPlan();
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BPEV_OnHideGimmickForPlan();
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BPEV_OnGimmickInstanceInitialize(ETresGimmickInstanceManagerInstanceState State, ETresGimmickInstanceManagerInstanceState OldState);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BPEV_OnFlashGimmickForPlan();
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BPEV_OnEndPauseSpecialForPlan();
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BPEV_OnEnableCollisionGimmickForPlan();
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BPEV_OnDisableCollisionGimmickForPlan();
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BPEV_OnDestroyedGimmickForPlan(bool PlayAnimation);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BPEV_OnBeginPauseSpecialForPlan();
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BPEV_ChangePowerSavingMode(bool isSaving, UObject* who);
     
     UFUNCTION(BlueprintImplementableEvent)
-    void BPE_ChangeCollisionResponseToChannel(ECollisionChannel Channel, ECollisionResponse Response);
+    void BPE_ChangeCollisionResponseToChannel(TEnumAsByte<ECollisionChannel> Channel, TEnumAsByte<ECollisionResponse> Response);
     
     UFUNCTION(BlueprintCallable)
     void BP_SetTeamNo(int32 InTeamNo);
@@ -314,40 +314,40 @@ public:
     UFUNCTION(BlueprintCallable)
     void BP_SetEnableFocusPointForPlan(bool Enable);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BP_ManagedTick(float DeltaSeconds);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool BP_IsStartGimmickForPlan() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool BP_IsShowedGimmickForPlan() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool BP_IsGimmickActive() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool BP_IsEnabledCollisionGimmickForPlan() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool BP_IsDestroyedGimmickForPlan() const;
     
     UFUNCTION(BlueprintCallable)
     void BP_IgnoreActorWhenMovingAll(AActor* Actor, bool bShouldIgnore);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 BP_GetTeamNo() const;
     
     UFUNCTION(BlueprintCallable)
     void BP_GetFoodstuffPrizeToTeam();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FName BP_GetFoodstuffDropDataKeyName() const;
     
     UFUNCTION(BlueprintCallable)
     void BP_EnableGimmickAttackCollision(const FName InGroupName, float InAttackInterval);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BP_DistanceBetweenPlayer(ETresGimmickDistanceBetweenPlayer Type);
     
     UFUNCTION(BlueprintCallable)

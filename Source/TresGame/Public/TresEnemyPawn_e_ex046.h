@@ -2,9 +2,9 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "TresEnemyPawnBase.h"
+#include "UObject/NoExportTypes.h"
 #include "RegionParam_e_ex046.h"
 #include "SaveInfo_e_ex046.h"
-#include "UObject/NoExportTypes.h"
 #include "TresEnemyPawn_e_ex046.generated.h"
 
 class ATresEnemyRegionPawn_e_ex046;
@@ -12,39 +12,39 @@ class UParticleSystem;
 class UTresStateBase;
 class USQEX_ParticleAttachDataAsset;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemyPawn_e_ex046 : public ATresEnemyPawnBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_AppearRiseSpeed;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_AppearRiseEndHeight;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USQEX_ParticleAttachDataAsset* m_MoveEffectAttachDataAsset;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_RegionBreakEffect;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 m_bEnableMissionTick: 1;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresEnemyRegionPawn_e_ex046> m_RegionPawnClass;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     FRegionParam_e_ex046 m_RegionParams[3];
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UTresStateBase> m_ModeChangeClass;
     
-    UPROPERTY(SaveGame)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
     FSaveInfo_e_ex046 m_SaveInfo;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FString> m_DebugBlizzardBreathClassFilePathList;
     
 public:
@@ -58,40 +58,40 @@ public:
     UFUNCTION(BlueprintCallable)
     bool IsMissionFinishMode();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsLandMode() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsFlyMode() const;
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool IsAllRegionBreaked() const;
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     int32 GetNumRegionBreak() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FRotator GetMissionAimOffsetValue() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetMissionAimOffsetRate() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FRotator GetLookAtRotation() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetLookAtBoneRate() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetLastAttackElapsedTime() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UClass* GetBlizzardBreathAttackDefinitionClass() const;
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void DebugSetMissionDrawDisplay(int32 bEnable);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void DebugSetBlizzardBreathSplineNo(int32 NO);
     
     UFUNCTION(BlueprintCallable)
@@ -100,7 +100,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void DebugResetAlwaysRegionBreak();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool CanAttack() const;
     
     UFUNCTION(BlueprintCallable)

@@ -6,12 +6,12 @@
 #include "InputCoreTypes.h"
 #include "TresInputComponent.generated.h"
 
-UCLASS(Abstract, BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTresInputComponent : public UActorComponent {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresInputStruct Input;
     
 public:
@@ -22,25 +22,25 @@ public:
     UFUNCTION(BlueprintPure)
     bool IsRepeatGameKey(TEnumAsByte<ETresGameKey::Type> Key, bool enableRepeat);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsRepeat(FKey Key, bool enableRepeat);
     
     UFUNCTION(BlueprintPure)
     bool IsReleaseGameKey(TEnumAsByte<ETresGameKey::Type> Key);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsRelease(FKey Key);
     
     UFUNCTION(BlueprintPure)
     bool IsPressGameKey(TEnumAsByte<ETresGameKey::Type> Key);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsPress(FKey Key);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsKeyDown(FKey Key);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsInputNone();
     
 };

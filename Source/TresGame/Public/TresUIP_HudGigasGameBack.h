@@ -5,17 +5,17 @@
 
 class UGFxObject;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresUIP_HudGigasGameBack : public UTresCockpitParts {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UGFxObject* m_TargetObject;
     
 public:
     UTresUIP_HudGigasGameBack();
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     int32 OnCallback(int32 ID, int32 Param);
     
 };

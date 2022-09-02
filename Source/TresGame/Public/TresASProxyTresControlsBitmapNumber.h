@@ -3,7 +3,7 @@
 #include "TresASProxy.h"
 #include "TresASProxyTresControlsBitmapNumber.generated.h"
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class UTresASProxyTresControlsBitmapNumber : public UTresASProxy {
     GENERATED_BODY()
 public:

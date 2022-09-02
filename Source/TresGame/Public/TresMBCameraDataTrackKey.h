@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct FTresMBCameraDataTrackKey {
     GENERATED_BODY()
 public:
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_Time;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresMBCameraData* m_CameraData;
     
     TRESGAME_API FTresMBCameraDataTrackKey();

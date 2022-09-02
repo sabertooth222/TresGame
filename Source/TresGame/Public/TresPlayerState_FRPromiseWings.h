@@ -5,12 +5,12 @@
 
 class ATresFriendLinkPawnPromiseWings;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_FRPromiseWings : public UTresCharState_FRPromiseWings {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresFriendLinkPawnPromiseWings* m_pObj;
     
 public:

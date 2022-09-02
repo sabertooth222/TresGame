@@ -1,23 +1,23 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TresSpawnActorDataForGenerator.h"
 #include "TresGimmickGeneratorBase.h"
+#include "TresSpawnActorDataForGenerator.h"
 #include "TresStaticActorGeneratorFromSplineSimple.generated.h"
 
 class UTresSpawnActorManagerComponent;
 class ASQEX_SplineActor;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresStaticActorGeneratorFromSplineSimple : public ATresGimmickGeneratorBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresSpawnActorManagerComponent* SpawnActorManager;
     
-    UPROPERTY(BlueprintReadOnly, VisibleInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresSpawnActorDataForGenerator> BuildTransformArray;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bDestroyAfterBeginPlay;
     
     ATresStaticActorGeneratorFromSplineSimple();
@@ -30,13 +30,13 @@ public:
     UFUNCTION(BlueprintCallable)
     void RequestRebuild();
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BPEV_Reconvert();
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     bool BPEV_Rebuild();
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BPE_PostInitializeComponentsInGameWorld();
     
 };

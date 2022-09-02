@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FTresGumiShipCinematicModeEventData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_eEventFlags;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_EventName;
     
     TRESGAME_API FTresGumiShipCinematicModeEventData();

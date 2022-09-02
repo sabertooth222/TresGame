@@ -3,7 +3,7 @@
 #include "UObject/Object.h"
 #include "TresGumiShipBGM_Helper.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresGumiShipBGM_Helper : public UObject {
     GENERATED_BODY()
 public:

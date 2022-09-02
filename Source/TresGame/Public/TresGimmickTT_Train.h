@@ -1,42 +1,42 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/EngineTypes.h"
 #include "TresGimmickStaticBase.h"
+#include "Engine/EngineTypes.h"
 #include "TresGimmickTT_Train.generated.h"
 
-class AActor;
-class UTresSplineMoverComponent;
 class UBoxComponent;
-class ASQEX_SplineActor;
 class UPrimitiveComponent;
+class UTresSplineMoverComponent;
+class ASQEX_SplineActor;
+class AActor;
 
-UCLASS(Abstract, Config=Game)
+UCLASS(Abstract, Blueprintable, Config=Game)
 class ATresGimmickTT_Train : public ATresGimmickStaticBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UBoxComponent* BoxComp;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresSplineMoverComponent* SplineComp;
     
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_MoveSpeed;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ASQEX_SplineActor* m_SplineActor;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_MoveInterpSpeed;
     
     ATresGimmickTT_Train();
 protected:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnComponentEndOverlapCallback(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnComponentBeginOverlapCallback(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
     
 };

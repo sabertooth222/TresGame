@@ -12,30 +12,30 @@ class USkeletalMesh;
 class USkeletalMeshComponent;
 class ASQEX_SplineActor;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresGimmickExtraDoorGenerator : public ATresGimmickGeneratorBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresInstancedStaticMeshComponent* InstancedStaticMeshComponent;
     
-    UPROPERTY(Export, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     USplineComponent* m_SplineComponent;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UStaticMesh* m_StaticMesh;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MoveSpeed;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USkeletalMesh* AnotherMesh;
     
-    UPROPERTY(BlueprintReadOnly, Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USkeletalMeshComponent* AnotherMeshComponent;
     
-    UPROPERTY(BlueprintReadOnly, EditInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresMI_04_DoorGeneratorMoveType MoveType;
     
 public:
@@ -46,13 +46,13 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetMoveType(ETresMI_04_DoorGeneratorMoveType Type);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector GetAnotherMeshLocation();
     
     UFUNCTION(BlueprintCallable)
     void ChangeDoor(FVector pos, bool Enable);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     ASQEX_SplineActor* BPIE_GetSplineActor();
     
 };

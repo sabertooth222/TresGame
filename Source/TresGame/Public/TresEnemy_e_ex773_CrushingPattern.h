@@ -7,13 +7,13 @@ USTRUCT(BlueprintType)
 struct FTresEnemy_e_ex773_CrushingPattern {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_Comment;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FKey m_Keys;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<int32> m_pro_CrushingParamNoArray;
     
     TRESGAME_API FTresEnemy_e_ex773_CrushingPattern();

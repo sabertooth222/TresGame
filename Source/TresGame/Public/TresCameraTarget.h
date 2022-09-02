@@ -1,28 +1,28 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TresCameraTargetInfo.h"
 #include "TresCameraBase.h"
 #include "ETresCameraTargetWallCheckType.h"
 #include "UObject/NoExportTypes.h"
+#include "TresCameraTargetInfo.h"
 #include "UObject/NoExportTypes.h"
 #include "TresCameraTarget.generated.h"
 
-class ATresAccompanyPawnBase;
 class AActor;
+class ATresAccompanyPawnBase;
 class UTresLockonTargetComponent;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresCameraTarget : public ATresCameraBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector m_LookPosition;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector m_CameraLocalOffset;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresCameraTargetInfo m_TargetInfo;
     
 public:
@@ -45,25 +45,25 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetOutsideWallCheckType(TEnumAsByte<ETresCameraTargetWallCheckType> WallCheckType, FVector TargetPos, FName TargetBoneName, ATresAccompanyPawnBase* TargetAccompanyPawn);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector GetTargetOffset() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector GetTargetLocalOffset() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FName GetTargetBoneName() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector GetDefaultTargetOffset() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector GetDefaultTargetLocalOffset() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector GetDefaultCameraLocalOffset() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector GetCameraLocalOffset() const;
     
     UFUNCTION(BlueprintCallable)
@@ -84,7 +84,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void BP_RemoveCollisionIgnoredActor(AActor* Actor);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool BP_IsAttachTresCameraTarget() const;
     
     UFUNCTION(BlueprintCallable)

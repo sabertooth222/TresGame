@@ -6,11 +6,11 @@
 
 class UEnvQueryContext;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresEnvQueryTest_LineOfSightCheck : public UEnvQueryTest {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UEnvQueryContext> TargetActorContext;
     
     UTresEnvQueryTest_LineOfSightCheck();

@@ -5,14 +5,14 @@
 #include "ETresEnemyUniqueID.h"
 #include "TresNpcBTDecorator_IsEnemy.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcBTDecorator_IsEnemy : public UTresNpcBTDecoratorBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlackboardKeySelector m_Source;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<ETresEnemyUniqueID> m_EnemiesUID;
     
     UTresNpcBTDecorator_IsEnemy();

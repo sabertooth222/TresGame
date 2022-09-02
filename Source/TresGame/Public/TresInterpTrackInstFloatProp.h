@@ -3,7 +3,7 @@
 #include "Matinee/InterpTrackInstFloatProp.h"
 #include "TresInterpTrackInstFloatProp.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API UTresInterpTrackInstFloatProp : public UInterpTrackInstFloatProp {
     GENERATED_BODY()
 public:

@@ -5,36 +5,36 @@
 #include "UObject/NoExportTypes.h"
 #include "TresEventGameOverPawnBase.generated.h"
 
-class ATresCameraAnim;
-class UParticleSystem;
-class UCameraAnim;
-class ATresKHShaderController;
 class UParticleSystemComponent;
+class ATresCameraAnim;
+class UCameraAnim;
+class UParticleSystem;
+class ATresKHShaderController;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class TRESGAME_API ATresEventGameOverPawnBase : public ATresEventPawnBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UCameraAnim* m_CameraAnimAsset;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_LightEffect;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector m_LightLocation;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresKHShaderController> m_GameOverKHS;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresCameraAnim* m_Camera;
     
-    UPROPERTY(Export, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* m_pEffect;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresKHShaderController* m_pKHS;
     
 public:

@@ -3,7 +3,7 @@
 #include "TresPlacePrizeMovementBase.h"
 #include "TresPlaceChildBonusPrizeMovementBase.generated.h"
 
-UCLASS(Abstract, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTresPlaceChildBonusPrizeMovementBase : public UTresPlacePrizeMovementBase {
     GENERATED_BODY()
 public:

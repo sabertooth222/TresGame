@@ -6,21 +6,21 @@
 
 class UNavModifierComponent;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresEnemyToyActor : public AStaticMeshActor {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UNavModifierComponent* MyNavModifierComponent;
     
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresEnemyToyKind> m_ToyKind;
     
 public:
     ATresEnemyToyActor();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool CanUse() const;
     
 };

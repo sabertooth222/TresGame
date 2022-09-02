@@ -3,7 +3,7 @@
 #include "TresLocomotionDefinitionBase.h"
 #include "TresMove1_e_dw405_Warp.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresMove1_e_dw405_Warp : public UTresLocomotionDefinitionBase {
     GENERATED_BODY()
 public:

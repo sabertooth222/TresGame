@@ -4,11 +4,11 @@
 #include "WinniePuzzleBucketType.h"
 #include "TresWinniePuzzleBucket.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresWinniePuzzleBucket : public ASkeletalMeshActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     WinniePuzzleBucketType BucketType;
     
     ATresWinniePuzzleBucket();

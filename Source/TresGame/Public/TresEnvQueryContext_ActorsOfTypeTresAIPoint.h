@@ -3,7 +3,7 @@
 #include "EnvironmentQuery/EnvQueryContext.h"
 #include "TresEnvQueryContext_ActorsOfTypeTresAIPoint.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UTresEnvQueryContext_ActorsOfTypeTresAIPoint : public UEnvQueryContext {
     GENERATED_BODY()
 public:

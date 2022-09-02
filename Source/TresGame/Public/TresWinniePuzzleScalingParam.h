@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "TresWinniePuzzleScalingParam.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresWinniePuzzleScalingParam {
     GENERATED_BODY()
 public:

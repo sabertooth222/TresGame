@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FTresTextureReference {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FStringAssetReference m_TexturePath;
     
     TRESGAME_API FTresTextureReference();

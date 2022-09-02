@@ -3,7 +3,7 @@
 #include "TresGumiShipEnemyGenerator.h"
 #include "TresGumiShipFieldBattleEnemyGenerator.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresGumiShipFieldBattleEnemyGenerator : public ATresGumiShipEnemyGenerator {
     GENERATED_BODY()
 public:

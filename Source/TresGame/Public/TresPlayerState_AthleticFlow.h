@@ -3,32 +3,32 @@
 #include "TresCharState_SuperSlide.h"
 #include "TresPlayerState_AthleticFlow.generated.h"
 
-class UPrimitiveComponent;
+class UTresPoleComponent;
 class AActor;
+class UPrimitiveComponent;
 class UTresLockonTargetComponent;
 class ATresCharPawnBase;
-class UTresPoleComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_AthleticFlow : public UTresCharState_SuperSlide {
     GENERATED_BODY()
 public:
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresLockonTargetComponent* m_pTargetComponent;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AActor* m_pHitActor;
     
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UPrimitiveComponent* m_pHitComponent;
     
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresPoleComponent* m_pPoleComponent;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresCharPawnBase* m_pTargetEnemy;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresCharPawnBase* m_pEnemyTurn;
     
     UTresPlayerState_AthleticFlow();

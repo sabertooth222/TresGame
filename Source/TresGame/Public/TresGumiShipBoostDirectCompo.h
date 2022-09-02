@@ -3,10 +3,10 @@
 #include "TresGumiShipActorCompoBase.h"
 #include "TresGumiShipBoostDirectCompo.generated.h"
 
-class UCurveFloat;
 class UCurveVector;
+class UCurveFloat;
 
-UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTresGumiShipBoostDirectCompo : public UTresGumiShipActorCompoBase {
     GENERATED_BODY()
 public:

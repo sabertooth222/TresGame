@@ -3,7 +3,7 @@
 #include "TresCoopDefinitionBase.h"
 #include "TresCoopDefinitionTest_e_ex044.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresCoopDefinitionTest_e_ex044 : public UTresCoopDefinitionBase {
     GENERATED_BODY()
 public:

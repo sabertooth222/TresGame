@@ -6,11 +6,11 @@
 
 class UEnvQueryContext;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresEnvQueryTest_IsContextActor : public UEnvQueryTest {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UEnvQueryContext> Context;
     
     UTresEnvQueryTest_IsContextActor();

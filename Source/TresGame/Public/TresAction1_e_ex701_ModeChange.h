@@ -5,12 +5,12 @@
 
 class UAnimSequenceBase;
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAction1_e_ex701_ModeChange : public UTresActionDefinitionBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UAnimSequenceBase* m_AnimData;
     
 public:

@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FTresUIGameFlagText {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString TextId;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresUIGameFlagData GameFlag;
     
     TRESGAME_API FTresUIGameFlagText();

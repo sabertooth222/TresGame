@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FTresGumiShipEnemyUsableAttackMethodData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresGumiShipEnemyStateID m_eAttackStateID;
     
     TRESGAME_API FTresGumiShipEnemyUsableAttackMethodData();

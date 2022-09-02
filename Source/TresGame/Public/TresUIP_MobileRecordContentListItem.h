@@ -5,18 +5,18 @@
 
 class UGFxObject;
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class UTresUIP_MobileRecordContentListItem : public UTresASProxyTresControlsListItem {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UGFxObject* m_CategoryText;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UGFxObject* m_Text;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UGFxObject* m_CompleteMark;
     
 public:

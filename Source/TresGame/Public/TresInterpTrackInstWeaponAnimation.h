@@ -5,11 +5,11 @@
 
 class ATresWeaponBase;
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API UTresInterpTrackInstWeaponAnimation : public UTresInterpTrackInstSlotAnimation {
     GENERATED_BODY()
 public:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresWeaponBase* Weapon;
     
     UTresInterpTrackInstWeaponAnimation();

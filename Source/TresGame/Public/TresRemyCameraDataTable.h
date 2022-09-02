@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RemyCameraWorkTiming.h"
 #include "Engine/DataTable.h"
+#include "RemyCameraWorkTiming.h"
 #include "TresRemyCameraDataTable.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresRemyCameraDataTable : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     RemyCameraWorkTiming CameraWorkTiming;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName CameraWorkEventName;
     
     TRESGAME_API FTresRemyCameraDataTable();

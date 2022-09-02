@@ -6,17 +6,17 @@
 
 class UTexture;
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresTheaterChapterData : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString ChapterNameNamespaceKey;
     
-    UPROPERTY(EditDefaultsOnly)
-    UTexture* IconAsset;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TAssetPtr<UTexture> IconAsset;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresUIDataVersion Version;
     
     TRESGAME_API FTresTheaterChapterData();

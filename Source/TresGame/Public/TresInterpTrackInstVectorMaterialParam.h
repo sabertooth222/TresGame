@@ -3,7 +3,7 @@
 #include "Matinee/InterpTrackInstVectorMaterialParam.h"
 #include "TresInterpTrackInstVectorMaterialParam.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API UTresInterpTrackInstVectorMaterialParam : public UInterpTrackInstVectorMaterialParam {
     GENERATED_BODY()
 public:

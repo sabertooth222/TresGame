@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct FTresTeamDebugColor {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresTeam::Type> TeamID;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FLinearColor Color;
     
     TRESGAME_API FTresTeamDebugColor();

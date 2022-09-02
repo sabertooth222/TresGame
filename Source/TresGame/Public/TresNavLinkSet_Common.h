@@ -9,10 +9,10 @@ USTRUCT(BlueprintType)
 struct FTresNavLinkSet_Common {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ANavLinkProxy* NavLinkProxy;
     
-    UPROPERTY(EditInstanceOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresNavLinkSegment_Common> NavLinkSegment;
     
     TRESGAME_API FTresNavLinkSet_Common();

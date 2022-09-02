@@ -5,7 +5,7 @@
 
 class AActor;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresGumiShipFSMPlayerMovementState : public UTresGumiShipFSMPlayerMovementStateBase {
     GENERATED_BODY()
 public:
@@ -14,16 +14,16 @@ protected:
     UFUNCTION(BlueprintCallable)
     void RequestRailSlideInterpoletion();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsRailSliding() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     AActor* GetRailSlideActor() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool _IsTrackingRailSliding() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool _IsRouteRailSliding() const;
     
 };

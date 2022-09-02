@@ -3,7 +3,7 @@
 #include "BehaviorTree/BTTaskNode.h"
 #include "TresBTTask_CloseCoopRecruitment.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTTask_CloseCoopRecruitment : public UBTTaskNode {
     GENERATED_BODY()
 public:

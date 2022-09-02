@@ -3,7 +3,7 @@
 #include "TresLevelEntityControlVolume.h"
 #include "TresBattleStartVolume.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API ATresBattleStartVolume : public ATresLevelEntityControlVolume {
     GENERATED_BODY()
 public:

@@ -10,7 +10,7 @@ class UTresPlayerAttackStateDataSet : public UDataAsset {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = "true"))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UDataTable* m_pAttackStateParameter;
     
 public:

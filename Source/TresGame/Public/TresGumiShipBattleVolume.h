@@ -1,18 +1,18 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "TresGumiShipGimmickActorBase.h"
+#include "ETresGumiShipBattleAreaState.h"
 #include "TresGumiShipEnemyGroupWipeOutData.h"
 #include "UObject/NoExportTypes.h"
-#include "ETresGumiShipBattleAreaState.h"
 #include "Engine/EngineTypes.h"
 #include "TresGumiShipBattleVolume.generated.h"
 
-class UPrimitiveComponent;
 class USphereComponent;
 class ATresGumiShipEnemyGenerator;
+class UPrimitiveComponent;
 class AActor;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresGumiShipBattleVolume : public ATresGumiShipGimmickActorBase {
     GENERATED_BODY()
 public:
@@ -21,75 +21,75 @@ public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE(FAllEnemyGroupWipeOutSignature);
     
 private:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBattleVolumeCollisionSignature _OnBattleAreaBeginOverlap;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBattleVolumeCollisionSignature _OnBattleAreaEndOverlap;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBattleVolumeCollisionSignature _OnEnemySpawnAreaBeginOverlap;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBattleVolumeCollisionSignature _OnEnemySpawnAreaEndOverlap;
     
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FEnemyGroupWipeOutSignature OnEnemyGroupWipeOutInBattleArea;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAllEnemyGroupWipeOutSignature OnAllEnemyGroupWipeOutInBattleArea;
     
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fEnemySpawnAreaRadius;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fEnemyDisappearTriggerRadiusRate;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fNeedEnemyDisappearTime;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<ATresGumiShipEnemyGenerator*> m_EnemyGeneratorList;
     
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USphereComponent* m_pEnemySpawnAreaCollision;
     
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USphereComponent* m_pBattleAreaCollision;
     
 public:
     ATresGumiShipBattleVolume();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsAttachedMercunaNavVolume() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetEnemySpawnAreaRadius() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ETresGumiShipBattleAreaState GetBattleAreaState() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetBattleAreaRadius() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector GetBattleAreaCenterPosition() const;
     
 private:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnLeaveEnemySpawnArea(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnLeaveBattleArea(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnEnterEnemySpawnArea(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnEnterBattleArea(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnEnemyGroupWipeOut(const FTresGumiShipEnemyGroupWipeOutData& rEnemyGroupWipeOutData);
     
 };

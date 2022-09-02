@@ -3,7 +3,7 @@
 #include "TresGumiShipRailSlideActor.h"
 #include "TresGumiShipPlayerRailSlideActor.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresGumiShipPlayerRailSlideActor : public ATresGumiShipRailSlideActor {
     GENERATED_BODY()
 public:

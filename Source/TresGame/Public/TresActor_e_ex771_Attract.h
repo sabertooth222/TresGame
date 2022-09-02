@@ -4,18 +4,18 @@
 #include "GameFramework/Actor.h"
 #include "TresActor_e_ex771_Attract.generated.h"
 
-class ATresWaterCurrentSplineActor;
 class UCapsuleComponent;
+class ATresWaterCurrentSplineActor;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresActor_e_ex771_Attract : public AActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UCapsuleComponent* MyAttractComponent;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresWaterCurrentSplineActor> m_AttractSplineClass;
     
 public:

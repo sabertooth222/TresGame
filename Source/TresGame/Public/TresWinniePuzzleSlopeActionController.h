@@ -1,33 +1,33 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TresWinniePuzzleComponentBase.h"
 #include "WinniePuzzleSlopeActionRemoveFindingTarget.h"
+#include "TresWinniePuzzleComponentBase.h"
 #include "TresWinniePuzzleSlopeActionController.generated.h"
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTresWinniePuzzleSlopeActionController : public UTresWinniePuzzleComponentBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float StickSlopingValidValue;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float UnitMovingSpeed;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     WinniePuzzleSlopeActionRemoveFindingTarget SlopeActionRemoveFindingTarget;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool InvokeSlopeActionUntilNoMovableUnit;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float SlopePowerMax;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float IncreasingPowerPerUnit;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 InvokeSlopeActionStoreTimesMax;
     
 public:

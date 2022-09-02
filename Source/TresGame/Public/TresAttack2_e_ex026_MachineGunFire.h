@@ -3,23 +3,23 @@
 #include "TresAttack_e_ex026_WeaponAttackBase.h"
 #include "TresAttack2_e_ex026_MachineGunFire.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAttack2_e_ex026_MachineGunFire : public UTresAttack_e_ex026_WeaponAttackBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_IntervalTimer;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     uint8 m_ShotMaxCount;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 m_ModifyPitch: 1;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_MinShotAnglePitch;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_MaxShotAnglePitch;
     
     UTresAttack2_e_ex026_MachineGunFire();

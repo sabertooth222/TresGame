@@ -9,13 +9,13 @@ USTRUCT(BlueprintType)
 struct FTresUIWindowSetting {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresUIWindowWaitType> WaitType;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresUIWindowPositionType> PositionType;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector2D Position;
     
     TRESGAME_API FTresUIWindowSetting();

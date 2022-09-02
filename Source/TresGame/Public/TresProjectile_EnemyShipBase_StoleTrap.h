@@ -3,7 +3,7 @@
 #include "TresProjectile_EnemyShipBase.h"
 #include "TresProjectile_EnemyShipBase_StoleTrap.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresProjectile_EnemyShipBase_StoleTrap : public ATresProjectile_EnemyShipBase {
     GENERATED_BODY()
 public:

@@ -3,7 +3,7 @@
 #include "Animation/AnimNotifies/AnimNotify.h"
 #include "TresAnimNotify_FaceAt.generated.h"
 
-UCLASS(CollapseCategories, MinimalAPI)
+UCLASS(Blueprintable, CollapseCategories, MinimalAPI)
 class UTresAnimNotify_FaceAt : public UAnimNotify {
     GENERATED_BODY()
 public:

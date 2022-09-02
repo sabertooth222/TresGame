@@ -3,7 +3,7 @@
 #include "EnvironmentQuery/EnvQueryTest.h"
 #include "TresEnvQueryTest_TimeSinceLastAttack.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresEnvQueryTest_TimeSinceLastAttack : public UEnvQueryTest {
     GENERATED_BODY()
 public:

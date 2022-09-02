@@ -3,7 +3,7 @@
 #include "TresEnemyState_Disappear.h"
 #include "TresEnemyState_EnemyShipBase_Disappear.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresEnemyState_EnemyShipBase_Disappear : public UTresEnemyState_Disappear {
     GENERATED_BODY()
 public:

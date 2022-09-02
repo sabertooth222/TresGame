@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct FTresTornadoDebrisUnit {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresTornadoDebrisStateName> StateName;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresTornadoDebrisTransformInfo> DebrisArray;
     
     TRESGAME_API FTresTornadoDebrisUnit();

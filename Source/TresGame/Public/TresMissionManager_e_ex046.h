@@ -3,7 +3,7 @@
 #include "UObject/Object.h"
 #include "TresMissionManager_e_ex046.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresMissionManager_e_ex046 : public UObject {
     GENERATED_BODY()
 public:

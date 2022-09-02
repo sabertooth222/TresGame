@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FTresMBCurveElement {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresMBCurveKeyElement> m_Keys;
     
     TRESGAME_API FTresMBCurveElement();

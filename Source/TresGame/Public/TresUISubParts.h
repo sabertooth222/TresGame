@@ -5,12 +5,12 @@
 
 class UTresUIParts;
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class UTresUISubParts : public UTresASProxy {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresUIParts* m_Owner;
     
 public:

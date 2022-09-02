@@ -3,7 +3,7 @@
 #include "GameFramework/DamageType.h"
 #include "TresDamageType.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresDamageType : public UDamageType {
     GENERATED_BODY()
 public:

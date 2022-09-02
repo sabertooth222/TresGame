@@ -3,7 +3,7 @@
 #include "TresAttackDefinitionBase.h"
 #include "TresAttack_e_ex801_Base.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class UTresAttack_e_ex801_Base : public UTresAttackDefinitionBase {
     GENERATED_BODY()
 public:

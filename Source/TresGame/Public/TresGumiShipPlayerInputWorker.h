@@ -5,12 +5,12 @@
 
 class UTresGumiShipPlayerInputWorkBase;
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTresGumiShipPlayerInputWorker : public UTresGumiShipActorCompoBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UTresGumiShipPlayerInputWorkBase*> m_pInputWorks;
     
 public:

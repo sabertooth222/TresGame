@@ -6,12 +6,12 @@
 class UParticleSystemComponent;
 class UTresEwOpacityListAsset;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresEwCharacterManageTask : public UTresTaskBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresEwOpacityListAsset* m_OpacityListAsset;
     
 public:
@@ -25,19 +25,19 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetAttachPlayerParticle(UParticleSystemComponent* Particle);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetExistNum();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetCreateNum();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetCashRate();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetCashNum();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UParticleSystemComponent* GetAttachPlayerParticle();
     
     UFUNCTION(BlueprintCallable)

@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TresLocomotionDefinitionFlyCodeDriven.h"
 #include "Tres_LocomotionDefinition_SnowChaseParam.h"
+#include "TresLocomotionDefinitionFlyCodeDriven.h"
 #include "Tres_e_ex046_LocomotionDefinition_SnowChase.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class UTres_e_ex046_LocomotionDefinition_SnowChase : public UTresLocomotionDefinitionFlyCodeDriven {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTres_LocomotionDefinition_SnowChaseParam m_SnowChaseParam;
     
 public:

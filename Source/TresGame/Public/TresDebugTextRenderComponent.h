@@ -3,11 +3,11 @@
 #include "Components/TextRenderComponent.h"
 #include "TresDebugTextRenderComponent.generated.h"
 
-UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTresDebugTextRenderComponent : public UTextRenderComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float SphereMoveSize;
     
     UTresDebugTextRenderComponent();

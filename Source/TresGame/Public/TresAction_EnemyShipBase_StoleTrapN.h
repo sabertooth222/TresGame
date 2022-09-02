@@ -6,30 +6,30 @@
 #include "StoleTrapWorkData.h"
 #include "TresAction_EnemyShipBase_StoleTrapN.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAction_EnemyShipBase_StoleTrapN : public UTresAction_EnemyShipBase_StoleTrapBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_StoleTrapNum;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     FFloatInterval m_RadiusRange;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     FFloatInterval m_SpawnRandamTimeRange;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     FFloatInterval m_InvalidRadiusRangeFromBattleCenter;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_CircleDistortionRate;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<EStoleTrapN::Type> m_CenterType;
     
 protected:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<FStoleTrapWorkData> m_ProjList;
     
 public:

@@ -6,15 +6,15 @@
 
 class UEnvQuery;
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAction6_e_ex356_Warp : public UTresAction_XIIILB_Base {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UEnvQuery* m_EnvQuery;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<EEnvQueryRunMode::Type> m_EnvQueryRunMode;
     
 public:

@@ -6,14 +6,14 @@
 class UTresDebugMenuScene;
 class UTresDebugMenuContainer;
 
-UCLASS(Transient)
+UCLASS(Blueprintable, Transient)
 class UTresDebugMenuObject : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresDebugMenuScene* m_MenuScene;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresDebugMenuContainer* m_Parent;
     
     UTresDebugMenuObject();

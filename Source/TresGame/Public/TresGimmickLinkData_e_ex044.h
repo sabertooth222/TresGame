@@ -5,14 +5,14 @@
 
 class AActor;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresGimmickLinkData_e_ex044 : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<AActor*> m_GimmickArray;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<AActor*> m_GimmickArray2;
     
     UTresGimmickLinkData_e_ex044();

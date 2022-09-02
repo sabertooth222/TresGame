@@ -3,12 +3,12 @@
 #include "TresLocomotionDefinitionMercunaBase.h"
 #include "TresLocomotionDefinitionSwim.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresLocomotionDefinitionSwim : public UTresLocomotionDefinitionMercunaBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bWaterSurfaceMovement;
     
 public:

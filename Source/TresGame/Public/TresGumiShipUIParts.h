@@ -3,7 +3,7 @@
 #include "TresUIParts.h"
 #include "TresGumiShipUIParts.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresGumiShipUIParts : public UTresUIParts {
     GENERATED_BODY()
 public:

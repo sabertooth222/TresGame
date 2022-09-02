@@ -3,18 +3,18 @@
 #include "TresGumiShipPlayerRailSlideActor.h"
 #include "TresGumiShipPlayerRailSlideActorWithCamera.generated.h"
 
-class UTresGumiShipDirectSpeedCompo;
 class USpringArmComponent;
+class UTresGumiShipDirectSpeedCompo;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresGumiShipPlayerRailSlideActorWithCamera : public ATresGumiShipPlayerRailSlideActor {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USpringArmComponent* m_pSplingArm;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresGumiShipDirectSpeedCompo* m_pDirect;
     
 public:

@@ -4,12 +4,12 @@
 #include "Engine/DataTable.h"
 #include "TresBTTask_SequentialExec.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTTask_SequentialExec : public UTresBTTask_SequentialExecProcess {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FDataTableRowHandle> m_CommonDataTableRowHandle;
     
 public:

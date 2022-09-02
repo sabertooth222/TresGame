@@ -3,15 +3,15 @@
 #include "TresGumiShipGimmickObjectBase.h"
 #include "TresGumiShipGimmickTurnCannon.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresGumiShipGimmickTurnCannon : public ATresGumiShipGimmickObjectBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_PrizeCount;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_DataTableName;
     
 public:

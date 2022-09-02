@@ -3,14 +3,14 @@
 #include "TresLocomotionDefinitionAirCodeDriven.h"
 #include "TresMove2_e_ex114_GlideMove.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresMove2_e_ex114_GlideMove : public UTresLocomotionDefinitionAirCodeDriven {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_JumpTime;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_MoveTime;
     
     UTresMove2_e_ex114_GlideMove();

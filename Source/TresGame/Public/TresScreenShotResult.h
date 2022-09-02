@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "TresScreenShotResult.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresScreenShotResult {
     GENERATED_BODY()
 public:

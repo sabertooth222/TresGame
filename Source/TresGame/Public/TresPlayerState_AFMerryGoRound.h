@@ -5,14 +5,15 @@
 
 class ATresAttractionPawnMerryGoRound;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_AFMerryGoRound : public UTresCharState_AFMerryGoRound {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresAttractionPawnMerryGoRound* m_pObj;
     
 public:
     UTresPlayerState_AFMerryGoRound();
 };
+

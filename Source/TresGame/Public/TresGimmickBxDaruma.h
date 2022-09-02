@@ -5,24 +5,24 @@
 #include "TresGimmickDitherFadeInterface.h"
 #include "TresGimmickBxDaruma.generated.h"
 
-class AActor;
 class ATresCameraNormal;
+class AActor;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresGimmickBxDaruma : public ATresGimmickBalanceBall, public ITresGimmickDitherFadeInterface {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_TakeOverCamera;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresCameraNormal> BalanceBallCamera;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UClass*> BreakClasses;
     
     ATresGimmickBxDaruma();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool CheckBreakClass(AActor* Actor) const;
     
     UFUNCTION(BlueprintCallable)

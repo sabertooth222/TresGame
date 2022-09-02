@@ -4,11 +4,11 @@
 #include "FieldGenerateMapParam_e_ex357.h"
 #include "TresFieldGenerateMapParam_e_ex357.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UTresFieldGenerateMapParam_e_ex357 : public UTresFieldGenerateParamBase_e_ex357 {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FFieldGenerateMapParam_e_ex357> ParamList;
     
     UTresFieldGenerateMapParam_e_ex357();

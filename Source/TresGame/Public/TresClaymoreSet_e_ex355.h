@@ -4,12 +4,12 @@
 
 class ATresProjectile_e_ex355_Claymore_Idle;
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresClaymoreSet_e_ex355 {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     TWeakObjectPtr<ATresProjectile_e_ex355_Claymore_Idle> pClaymore;
     
 public:

@@ -5,23 +5,23 @@
 
 class UTresGumiShipFSM;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresGumiShipTrackingGuide : public ATresGumiShipGimmickActorBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fTimeOfAddRailSlideActor;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fSpeedOfDefaultMove;
     
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresGumiShipFSM* m_pFSM;
     
 public:
     ATresGumiShipTrackingGuide();
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void GenerateRailSlideActor();
     
 };

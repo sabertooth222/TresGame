@@ -5,12 +5,12 @@
 
 class ATresLgRxManager;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_ReMindLgRx : public UTresCharState_ReMindLgRx {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresLgRxManager* m_pMan;
     
 public:

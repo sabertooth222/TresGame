@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TresLSIScoreEntryMusicalFarmer.h"
 #include "GameFramework/Actor.h"
 #include "TresLSIScoreEntryScores.h"
 #include "TresLSIScoreEntryStages.h"
+#include "TresLSIScoreEntryMusicalFarmer.h"
 #include "TresLSIScoreEntryWins.h"
 #include "TresLSIScoreEntryHowtoPlayGolf.h"
 #include "TresLSIScoreBarnyardSports.h"
 #include "TresLSIScoreEntryHowtoPlayBaseball.h"
 #include "TresLSIGameActor.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresLSIGameActor : public AActor {
     GENERATED_BODY()
 public:
@@ -90,10 +90,10 @@ public:
     UFUNCTION(BlueprintCallable)
     void OnExecutedDebugCommand(const FString& Command);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool NeedToExchangeActionButton();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetGameUnpausedTimeSinceCreation();
     
 };

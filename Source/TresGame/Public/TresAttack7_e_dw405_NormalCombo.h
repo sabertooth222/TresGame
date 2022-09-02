@@ -4,12 +4,12 @@
 #include "TresE_dw405NormalComboParam.h"
 #include "TresAttack7_e_dw405_NormalCombo.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAttack7_e_dw405_NormalCombo : public UTresAttack_e_dw405_ComboBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresE_dw405NormalComboParam> m_ComboParams;
     
 public:

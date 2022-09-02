@@ -6,7 +6,7 @@
 
 class UTresGumiShipBonusParameterDataTableSet;
 
-UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTresGumiShipPlayBonus : public UTresGumiShipPlayRecorder {
     GENERATED_BODY()
 public:
@@ -14,7 +14,7 @@ public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FTresGumiShipCompletedBonus, const FTresGumiShipBonusParameterDataTable&, rInfo);
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresGumiShipBonusParameterDataTableSet* m_pBonusDataTable;
     
 public:

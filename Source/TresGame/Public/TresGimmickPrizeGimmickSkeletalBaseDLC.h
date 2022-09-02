@@ -3,44 +3,44 @@
 #include "TresGimmickPrizeGimmickSkeletalBase.h"
 #include "TresGimmickPrizeGimmickSkeletalBaseDLC.generated.h"
 
+class UTresLockonTargetComponent;
 class AActor;
+class UTresBodyCollPrimitive;
 class UTresGimmickHitCountComponent;
 class UTresPrizeGenComponent;
-class UTresLockonTargetComponent;
-class UTresBodyCollPrimitive;
 class UTresNavModifierComponent;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresGimmickPrizeGimmickSkeletalBaseDLC : public ATresGimmickPrizeGimmickSkeletalBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresLockonTargetComponent* TresLockonTarget;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresBodyCollPrimitive* TresBodyCollPrimitive;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresPrizeGenComponent* TresPrizeGen;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresGimmickHitCountComponent* TresGimmickHitCount;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresNavModifierComponent* TresNavModifier;
     
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_DropPrize;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_PrizeIndex;
     
-    UPROPERTY(BlueprintReadWrite, EditInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<AActor*> m_DestroyGimmickGroup;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bDestroyDisableBodyCollition;
     
     ATresGimmickPrizeGimmickSkeletalBaseDLC();

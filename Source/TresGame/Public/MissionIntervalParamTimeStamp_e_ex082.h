@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FMissionIntervalParamTimeStamp_e_ex082 {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ElapsedTime;
     
-    UPROPERTY(EditInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float IntervalTime;
     
     TRESGAME_API FMissionIntervalParamTimeStamp_e_ex082();

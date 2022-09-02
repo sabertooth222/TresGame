@@ -3,7 +3,7 @@
 #include "TresGumiShipActorCompoBase.h"
 #include "TresGumiShipRaderEntityManager.generated.h"
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTresGumiShipRaderEntityManager : public UTresGumiShipActorCompoBase {
     GENERATED_BODY()
 public:

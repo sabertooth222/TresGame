@@ -8,13 +8,13 @@ USTRUCT(BlueprintType)
 struct FTresCockpitTargetInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UGFxObject* TargetCursor;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UGFxObject* Gauge;
     
-    UPROPERTY(Transient)
+    UPROPERTY(EditAnywhere, Transient)
     UGFxObject* GaugeParts[3];
     
     TRESGAME_API FTresCockpitTargetInfo();

@@ -4,29 +4,29 @@
 #include "UObject/NoExportTypes.h"
 #include "TresInterpTrackVectorMaterialParameterCollectionParam.generated.h"
 
-class UMaterialParameterCollection;
 class UMaterialParameterCollectionInstance;
+class UMaterialParameterCollection;
 
-UCLASS(CollapseCategories)
+UCLASS(Blueprintable, CollapseCategories)
 class TRESGAME_API UTresInterpTrackVectorMaterialParameterCollectionParam : public UInterpTrackLinearColorBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UMaterialParameterCollection* m_Collection;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_ParameterName;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_RestoreWhenTerminated;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UMaterialParameterCollectionInstance*> m_CollectionInstances;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FLinearColor m_DefaultValue;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<FLinearColor> m_InstanceBackupValues;
     
     UTresInterpTrackVectorMaterialParameterCollectionParam();

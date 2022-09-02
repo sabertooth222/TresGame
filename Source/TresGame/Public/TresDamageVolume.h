@@ -4,7 +4,7 @@
 #include "TresNotifyInterface.h"
 #include "TresDamageVolume.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresDamageVolume : public APainCausingVolume, public ITresNotifyInterface {
     GENERATED_BODY()
 public:

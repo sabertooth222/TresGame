@@ -7,42 +7,42 @@
 class UGFxObject;
 class UTresASProxyTresControlsButton;
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class UTresUIP_CampMenuCuisineFavorite : public UTresUISubParts {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UGFxObject* m_Window;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UGFxObject* m_Title;
     
-    UPROPERTY(Transient)
+    UPROPERTY(EditAnywhere, Transient)
     UTresASProxyTresControlsButton* m_Buttons[8];
     
-    UPROPERTY(Transient)
+    UPROPERTY(EditAnywhere, Transient)
     FTresUICampMenuCuisineFavoriteItem m_Items[5];
     
-    UPROPERTY(Transient)
+    UPROPERTY(EditAnywhere, Transient)
     UGFxObject* m_ParametersText[5];
     
-    UPROPERTY(Transient)
+    UPROPERTY(EditAnywhere, Transient)
     UGFxObject* m_BonusParameters[5];
     
-    UPROPERTY(Transient)
+    UPROPERTY(EditAnywhere, Transient)
     UGFxObject* m_BonusParameterTexts[5];
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UGFxObject* m_Ability;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UGFxObject* m_AbilityIconText;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UGFxObject* m_AbilityNameText;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UGFxObject* m_AbilityHelpText;
     
 public:

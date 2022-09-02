@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "BehaviorTree/BTTaskNode.h"
 #include "ETresEnemyEx006ScrumState.h"
+#include "BehaviorTree/BTTaskNode.h"
 #include "TresBTTask_e_ex006_CoopScrumManagerChangeStatus.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTTask_e_ex006_CoopScrumManagerChangeStatus : public UBTTaskNode {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresEnemyEx006ScrumState m_CoopStatus;
     
     UTresBTTask_e_ex006_CoopScrumManagerChangeStatus();

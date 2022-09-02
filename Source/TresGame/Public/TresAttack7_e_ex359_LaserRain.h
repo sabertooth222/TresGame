@@ -5,14 +5,14 @@
 #include "EX359_LaserRainShotEffectTimeSet.h"
 #include "TresAttack7_e_ex359_LaserRain.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAttack7_e_ex359_LaserRain : public UTresAttackDefinitionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FEX359_LaserOnTimeInfoSet m_LaserOnTimeInfoSet;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FEX359_LaserRainShotEffectTimeSet> m_fShotEffectTimeSetArray;
     
     UTresAttack7_e_ex359_LaserRain();

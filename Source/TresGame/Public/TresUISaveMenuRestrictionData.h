@@ -5,23 +5,23 @@
 #include "ETresUIDataVersion.h"
 #include "TresUISaveMenuRestrictionData.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresUISaveMenuRestrictionData : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName SavePointName;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresUIGameProgressSection RestrictionAreaSelectSection;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresUIGameProgressSection RestrictionWorldMapSection;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresUIGameProgressSection RestrictionRestaurantSection;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresUIDataVersion Version;
     
     TRESGAME_API FTresUISaveMenuRestrictionData();

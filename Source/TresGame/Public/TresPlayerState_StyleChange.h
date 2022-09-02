@@ -5,11 +5,11 @@
 
 class ATresCharPawnBase;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_StyleChange : public UTresCharState_StyleChange {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresCharPawnBase* m_pTargetPawn;
     
     UTresPlayerState_StyleChange();

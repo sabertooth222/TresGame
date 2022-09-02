@@ -3,11 +3,11 @@
 #include "Matinee/InterpTrackFloatAnimBPParam.h"
 #include "TresInterpTrackFloatAnimBPParam.generated.h"
 
-UCLASS(CollapseCategories)
+UCLASS(Blueprintable, CollapseCategories)
 class TRESGAME_API UTresInterpTrackFloatAnimBPParam : public UInterpTrackFloatAnimBPParam {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bRestoreWhenTerminate;
     
     UTresInterpTrackFloatAnimBPParam();

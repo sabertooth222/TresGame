@@ -5,11 +5,11 @@
 
 class UAnimSequenceBase;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresAction_e_ex002_Think : public UTresActionDefinitionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UAnimSequenceBase* m_Anim;
     
     UTresAction_e_ex002_Think();

@@ -3,7 +3,7 @@
 #include "GameFramework/Actor.h"
 #include "TresGimmickCA_FishBase.generated.h"
 
-UCLASS(Config=Game)
+UCLASS(Blueprintable, Config=Game)
 class ATresGimmickCA_FishBase : public AActor {
     GENERATED_BODY()
 public:

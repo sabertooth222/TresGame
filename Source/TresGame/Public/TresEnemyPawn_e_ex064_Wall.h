@@ -7,15 +7,15 @@
 
 class UTresSkeletalMeshComponent;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresEnemyPawn_e_ex064_Wall : public AActor, public ITresNotifyInterface {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresSkeletalMeshComponent* MyMesh;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     Fe_ex064_WallParam m_Param;
     
 public:

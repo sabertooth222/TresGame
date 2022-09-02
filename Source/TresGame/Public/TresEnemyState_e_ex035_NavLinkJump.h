@@ -5,12 +5,12 @@
 
 class ATresReserveActor_e_ex035;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresEnemyState_e_ex035_NavLinkJump : public UTresAICharState_NavLinkJumpCodeDriven {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresReserveActor_e_ex035* ReserveActor;
     
 public:

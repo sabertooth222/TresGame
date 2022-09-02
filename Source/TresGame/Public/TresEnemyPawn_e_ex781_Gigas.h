@@ -6,17 +6,17 @@
 
 class USQEX_ParticleAttachDataAsset;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemyPawn_e_ex781_Gigas : public ATresEnemyPawnBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ColorTypes_e_ex781Gigas> m_ColorType;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USQEX_ParticleAttachDataAsset* m_UniqueEffectDataAsset;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_DestroyDist;
     
     ATresEnemyPawn_e_ex781_Gigas();

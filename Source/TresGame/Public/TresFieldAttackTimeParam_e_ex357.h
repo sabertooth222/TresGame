@@ -3,14 +3,14 @@
 #include "TresFieldAttackParamBase_e_ex357.h"
 #include "TresFieldAttackTimeParam_e_ex357.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UTresFieldAttackTimeParam_e_ex357 : public UTresFieldAttackParamBase_e_ex357 {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float StartTime;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float IntervalTime;
     
     UTresFieldAttackTimeParam_e_ex357();

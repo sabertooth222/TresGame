@@ -3,7 +3,7 @@
 #include "TresLocomotionDefinitionLandCodeDrivenForAnimSet.h"
 #include "TresNpcLocomotionDefinitionLand.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcLocomotionDefinitionLand : public UTresLocomotionDefinitionLandCodeDrivenForAnimSet {
     GENERATED_BODY()
 public:

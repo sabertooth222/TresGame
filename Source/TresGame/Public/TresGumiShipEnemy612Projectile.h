@@ -3,7 +3,7 @@
 #include "TresGumiShipActualProjectile.h"
 #include "TresGumiShipEnemy612Projectile.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresGumiShipEnemy612Projectile : public ATresGumiShipActualProjectile {
     GENERATED_BODY()
 public:

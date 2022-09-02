@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FTresEnemyEx353RootMotionScaleParam {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Distance;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float RootMotionScale;
     
     TRESGAME_API FTresEnemyEx353RootMotionScaleParam();

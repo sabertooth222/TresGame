@@ -1,27 +1,27 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TresVolume.h"
-#include "ETresMapJumpFadeKind.h"
 #include "TresMapJumpVolumeSignatureDelegate.h"
+#include "ETresMapJumpFadeKind.h"
+#include "TresVolume.h"
 #include "TresMapJumpVolume.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresMapJumpVolume : public ATresVolume {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_MapName;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_TargetTag;
     
     UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresMapJumpFadeKind> m_FadeType;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_BlueprintMapJump;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresMapJumpVolumeSignature OnMapJump;
     
     ATresMapJumpVolume();

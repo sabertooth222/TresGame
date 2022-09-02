@@ -4,12 +4,12 @@
 #include "TresTsAwardData.h"
 #include "TresTsAwardTask.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class UTresTsAwardTask : public UTresTaskBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<FTresTsAwardData> m_Awards;
     
 public:

@@ -1,56 +1,56 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ETresGumiShipPlayerMovementType.h"
 #include "TresGumiShipCharaPawnBase.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
+#include "ETresGumiShipPlayerMovementType.h"
 #include "ETresGumiShipPlayerAccelerationType.h"
 #include "TresGumiShipPlayerPawnBase.generated.h"
 
-class UTresGumiShipPlayerSpringArmCompo;
 class UTresGumiShipPlayerAccelerationBase;
 class UTresGumiShipPlayerMovementCompoBase;
-class UTresGumiShipSoundSetComponent;
-class AActor;
 class UTresGumiShipFSM;
+class UTresGumiShipSoundSetComponent;
+class UTresGumiShipPlayerSpringArmCompo;
 class UTresGumiShipEffectSetComponent;
 class UTresPlayerStateEventComponent;
+class AActor;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresGumiShipPlayerPawnBase : public ATresGumiShipCharaPawnBase {
     GENERATED_BODY()
 public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FTresGumiShipChangeSpeed, const float, fOldSeed, const float, fNewSpeed, const float, fRatio);
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FTresGumiShipChangeAccelCompo, UTresGumiShipPlayerAccelerationBase*, pCompo);
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresGumiShipChangeAccelCompo m_OnChangeAccelCompoDispather;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresGumiShipChangeSpeed m_OnChangeSpeedDispather;
     
 protected:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresGumiShipFSM* m_pFSM;
     
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresGumiShipSoundSetComponent* m_pSoundSet;
     
 private:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresGumiShipPlayerMovementCompoBase* m_pMovementCompo;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresGumiShipPlayerAccelerationBase* m_pAcceleration;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresGumiShipPlayerSpringArmCompo* m_pCameraSpringArm;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresGumiShipEffectSetComponent* m_pEffectSet;
     
 protected:
-    UPROPERTY(Export, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UTresPlayerStateEventComponent* m_pStateEvent;
     
 public:
@@ -87,16 +87,16 @@ protected:
     bool RemoteGumiShipPlayerStateEvent(FName EventName, AActor* inActor);
     
 public:
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsEventMode() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsAvoiding() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ETresGumiShipPlayerMovementType GetPrevMovementType() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ETresGumiShipPlayerMovementType GetMovementType() const;
     
 protected:
@@ -115,7 +115,7 @@ protected:
     UFUNCTION(BlueprintCallable)
     void _RequestCameraReset(const bool bImmediate);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnChnageSpeed(const float fOldSeed, const float fNewSpeed, const float fRatio);
     
     UFUNCTION(BlueprintCallable)

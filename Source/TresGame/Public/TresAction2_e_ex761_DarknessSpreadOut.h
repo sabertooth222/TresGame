@@ -3,15 +3,15 @@
 #include "TresAction_e_ex761_DarknessSpreadOutBase.h"
 #include "TresAction2_e_ex761_DarknessSpreadOut.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAction2_e_ex761_DarknessSpreadOut : public UTresAction_e_ex761_DarknessSpreadOutBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_AppearBlockDistance;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_AppearBlockOtherPawnDistance;
     
 public:

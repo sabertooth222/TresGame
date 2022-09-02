@@ -1,22 +1,22 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TresAnimNotifyState_AttachEffect.h"
 #include "Components/StaticMeshComponent.h"
-#include "TresRailSlideActor.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ETresKHSMaterialParameterIDScalarType -FallbackName=ETresKHSMaterialParameterIDScalarType
 #include "UObject/NoExportTypes.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ETresKHSMaterialParameterIDVectorType -FallbackName=ETresKHSMaterialParameterIDVectorType
 #include "TresStaticMeshComponent.generated.h"
 
 class UMaterialInstanceDynamic;
 
-UCLASS(EditInlineNew, ClassGroup=Custom, Config=Game, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, Config=Game, meta=(BlueprintSpawnableComponent))
 class UTresStaticMeshComponent : public UStaticMeshComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditDefaultsOnly)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 m_bDisableAutoMaterialInstanceDynamics: 1;
     
 protected:
-    UPROPERTY(DuplicateTransient, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UMaterialInstanceDynamic*> m_MaterialInstanceDynamics;
     
 public:

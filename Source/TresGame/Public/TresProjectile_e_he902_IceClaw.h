@@ -5,11 +5,11 @@
 
 class UParticleSystem;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresProjectile_e_he902_IceClaw : public ATresProjectileBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_PredictionParticleClass;
     
     ATresProjectile_e_he902_IceClaw();

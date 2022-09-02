@@ -3,7 +3,7 @@
 #include "TresDebugMenuFilter.h"
 #include "TresDebugMenuFilter_PassCode.generated.h"
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class UTresDebugMenuFilter_PassCode : public UTresDebugMenuFilter {
     GENERATED_BODY()
 public:

@@ -10,29 +10,29 @@ class ATresProjectile_e_ex353_ThornBeam;
 class UParticleSystem;
 class UParticleSystemComponent;
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class ATresProjectile_e_ex353_ThornBeamSpace : public ATresProjectile_e_ex353_Base {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresProjectile_e_ex353_ThornBeam> m_ThornBeamClass;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresProjectile_e_ex353_ThornBeam> m_ThornBeamThornWildDanceClass;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_ThornBeamSpaceAsset;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<int32> m_AlreadyFireIndexList;
     
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* m_ThornBeamSpaceCmp;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresEnemyEx353ThornBeamProjectileInfo> m_ThornBeamProjectileInfo;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresEnemyEx353ThornBeamAfterHitInfo m_AfterHitInfo;
     
     ATresProjectile_e_ex353_ThornBeamSpace();

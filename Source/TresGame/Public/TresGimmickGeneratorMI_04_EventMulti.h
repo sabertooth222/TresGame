@@ -4,18 +4,18 @@
 #include "UObject/NoExportTypes.h"
 #include "TresGimmickGeneratorMI_04_EventMulti.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresGimmickGeneratorMI_04_EventMulti : public ATresGimmickGeneratorMI_04_EventBase {
     GENERATED_BODY()
 public:
     ATresGimmickGeneratorMI_04_EventMulti();
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     FVector BPEV_GetDoorStart();
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     float BPEV_GetDoorSpan();
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     FVector BPEV_GetDoorEnd();
     
 };

@@ -3,15 +3,15 @@
 #include "TresAttack_e_ex701_SpawnTarHandBase.h"
 #include "TresAttack6_e_ex701_SpawnTarHandCircle.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAttack6_e_ex701_SpawnTarHandCircle : public UTresAttack_e_ex701_SpawnTarHandBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_NumSpawn;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_Range;
     
 public:

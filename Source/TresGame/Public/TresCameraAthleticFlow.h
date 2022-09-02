@@ -3,7 +3,7 @@
 #include "TresCameraTarget.h"
 #include "TresCameraAthleticFlow.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresCameraAthleticFlow : public ATresCameraTarget {
     GENERATED_BODY()
 public:

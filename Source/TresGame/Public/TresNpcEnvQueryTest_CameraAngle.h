@@ -4,11 +4,11 @@
 #include "DataProviders/AIDataProvider.h"
 #include "TresNpcEnvQueryTest_CameraAngle.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcEnvQueryTest_CameraAngle : public UEnvQueryTest {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAIDataProviderFloatValue m_AngleYaw;
     
     UTresNpcEnvQueryTest_CameraAngle();

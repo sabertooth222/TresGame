@@ -3,7 +3,7 @@
 #include "TresNpcBTDecoratorBase.h"
 #include "TresNpcBTDecorator_CanAttackFlowWait.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcBTDecorator_CanAttackFlowWait : public UTresNpcBTDecoratorBase {
     GENERATED_BODY()
 public:

@@ -3,7 +3,7 @@
 #include "EnvironmentQuery/EnvQueryContext.h"
 #include "TresEnvQueryContext_PlayerCenterPositionInMercunaVolume.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UTresEnvQueryContext_PlayerCenterPositionInMercunaVolume : public UEnvQueryContext {
     GENERATED_BODY()
 public:

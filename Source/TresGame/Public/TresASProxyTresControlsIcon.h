@@ -3,7 +3,7 @@
 #include "TresASProxy.h"
 #include "TresASProxyTresControlsIcon.generated.h"
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class UTresASProxyTresControlsIcon : public UTresASProxy {
     GENERATED_BODY()
 public:

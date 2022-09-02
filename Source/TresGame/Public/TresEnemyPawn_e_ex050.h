@@ -1,114 +1,114 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "TresEx050EffectInfo.h"
 #include "TresEnemyPawnBase.h"
 #include "UObject/NoExportTypes.h"
 #include "ETresEx050PuddingType.h"
-#include "TresEx050EffectInfo.h"
 #include "UObject/NoExportTypes.h"
 #include "TresEnemyPawn_e_ex050.generated.h"
 
 class ATresAttractionPawnTeaCup;
 class UParticleSystem;
-class UTresStaticMeshComponent;
 class ASQEX_SplineActor;
 class UTresSkeletalMeshComponent;
+class UTresStaticMeshComponent;
 class UMaterialInstanceDynamic;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemyPawn_e_ex050 : public ATresEnemyPawnBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresEx050PuddingType m_Type;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(EditAnywhere)
     TWeakObjectPtr<ASQEX_SplineActor> m_wpSplineActor;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresEx050EffectInfo m_PileSuccessfulEffect;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresEx050EffectInfo> m_BallonBreakEffectArray;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_pHitEffect;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresEx050EffectInfo m_StrawberryApperEffect;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_StrawberrySize;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_StrawberryFadeTime;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_BallonFadeTime;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_Score;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bDefaultStopAI;
     
-    UPROPERTY(Export, Transient)
+    UPROPERTY(EditAnywhere, Export, Transient)
     TWeakObjectPtr<UTresSkeletalMeshComponent> m_wpBalloon;
     
-    UPROPERTY(Export, Transient)
+    UPROPERTY(EditAnywhere, Export, Transient)
     TWeakObjectPtr<UTresStaticMeshComponent> m_wpStrawberry;
     
-    UPROPERTY(Transient)
+    UPROPERTY(EditAnywhere, Transient)
     TWeakObjectPtr<ATresAttractionPawnTeaCup> m_wpTeaCup;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FVector m_OldActorLocation;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FRotator m_OldStrawberryRotation;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float m_TeaCupHitTime;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     bool m_bRegistered;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     bool m_bRequestDie;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float m_FadeElapsedTime;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float m_FadeRate;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     bool m_bDoFade;
     
-    UPROPERTY(Transient)
+    UPROPERTY(EditAnywhere, Transient)
     TWeakObjectPtr<UMaterialInstanceDynamic> m_wpStrawberryDM1;
     
-    UPROPERTY(Transient)
+    UPROPERTY(EditAnywhere, Transient)
     TWeakObjectPtr<UMaterialInstanceDynamic> m_wpStrawberryDM2;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     bool m_bNotifyStop;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     bool m_bDisableRailMove;
     
 public:
     ATresEnemyPawn_e_ex050();
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void NotifyDecScore();
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void NotifyAddScore();
     
     UFUNCTION(BlueprintCallable)
     float GetTeaCupHitTime();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ETresEx050PuddingType GetPuddingType() const;
     
 };

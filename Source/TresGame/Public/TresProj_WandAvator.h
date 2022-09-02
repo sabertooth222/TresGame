@@ -5,12 +5,12 @@
 
 class UTresLockonTargetComponent;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresProj_WandAvator : public ATresProjectileBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(Export, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UTresLockonTargetComponent* m_AttackTargetComponent;
     
 public:

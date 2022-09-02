@@ -8,13 +8,13 @@ USTRUCT(BlueprintType)
 struct FTresFNpcAIAttackDefInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_AttackParamKey;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresFNpcAIAttackDefType m_AttackDefType;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresAbilityKind m_AttackAbilityKind;
     
     TRESGAME_API FTresFNpcAIAttackDefInfo();

@@ -4,11 +4,11 @@
 #include "ETresEnemy_e_ex035_AIPointType.h"
 #include "TresAIPoint_e_ex035.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class ATresAIPoint_e_ex035 : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresEnemy_e_ex035_AIPointType> m_AIPointType;
     
     ATresAIPoint_e_ex035();

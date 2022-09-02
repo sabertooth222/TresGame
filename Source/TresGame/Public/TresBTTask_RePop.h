@@ -3,7 +3,7 @@
 #include "BehaviorTree/BTTaskNode.h"
 #include "TresBTTask_RePop.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTTask_RePop : public UBTTaskNode {
     GENERATED_BODY()
 public:

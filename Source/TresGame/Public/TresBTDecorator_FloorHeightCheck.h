@@ -1,37 +1,37 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "BehaviorTree/BehaviorTreeTypes.h"
 #include "BehaviorTree/BTDecorator.h"
+#include "BehaviorTree/BehaviorTreeTypes.h"
 #include "ETresFloorTestMode.h"
 #include "BehaviorTree/Blackboard/BlackboardKeyType.h"
 #include "TresBTDecorator_FloorHeightCheck.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTDecorator_FloorHeightCheck : public UBTDecorator {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlackboardKeySelector Source;
     
     UPROPERTY(EditAnywhere)
     TEnumAsByte<EArithmeticKeyOperation::Type> Operation;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MinRange;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float TestHeight;
     
     UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresFloorTestMode::Type> TestMode;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bUseOverrideKey;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlackboardKeySelector m_OverrideKey;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlackboardKeySelector m_OverrideKeyLocation;
     
     UTresBTDecorator_FloorHeightCheck();

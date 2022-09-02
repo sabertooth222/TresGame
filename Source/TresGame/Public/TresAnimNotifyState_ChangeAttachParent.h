@@ -3,12 +3,12 @@
 #include "Animation/AnimNotifies/AnimNotifyState.h"
 #include "TresAnimNotifyState_ChangeAttachParent.generated.h"
 
-UCLASS(CollapseCategories, EditInlineNew, MinimalAPI)
+UCLASS(Blueprintable, CollapseCategories, EditInlineNew, MinimalAPI)
 class UTresAnimNotifyState_ChangeAttachParent : public UAnimNotifyState {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_SocketName;
     
 public:

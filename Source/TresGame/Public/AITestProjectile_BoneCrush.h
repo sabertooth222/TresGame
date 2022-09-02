@@ -3,15 +3,15 @@
 #include "TresProjectileSkeletalMeshBase.h"
 #include "AITestProjectile_BoneCrush.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class AAITestProjectile_BoneCrush : public ATresProjectileSkeletalMeshBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 m_bFollowsVelocity: 1;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fFollowsVelRate;
     
 public:

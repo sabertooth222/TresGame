@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "BoneContainer.h"
-#include "BoneControllers/AnimNode_ModifyBone.h"
 #include "UObject/NoExportTypes.h"
+#include "BoneControllers/AnimNode_ModifyBone.h"
 #include "TresAnimNode_ModifyBoneCurveParam.generated.h"
 
 class UCurveVector;
@@ -14,13 +14,13 @@ public:
     UPROPERTY(EditAnywhere)
     FBoneReference m_BoneToModify;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<EBoneModificationMode> m_RotationMode;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UCurveVector* m_InterpRotationCurve;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRotator m_InterpRotationOffset;
     
     FTresAnimNode_ModifyBoneCurveParam();

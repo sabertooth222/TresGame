@@ -3,11 +3,11 @@
 #include "TresNpcBTDecoratorBase.h"
 #include "TresNpcBTDecorator_CoverWaitCheck.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcBTDecorator_CoverWaitCheck : public UTresNpcBTDecoratorBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_AdjustLength;
     
     UTresNpcBTDecorator_CoverWaitCheck();

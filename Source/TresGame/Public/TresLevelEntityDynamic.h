@@ -3,7 +3,7 @@
 #include "TresLevelEntity.h"
 #include "TresLevelEntityDynamic.generated.h"
 
-UCLASS(NotPlaceable)
+UCLASS(Blueprintable, NotPlaceable)
 class TRESGAME_API ATresLevelEntityDynamic : public ATresLevelEntity {
     GENERATED_BODY()
 public:

@@ -3,14 +3,14 @@
 #include "TresActionDefinitionBase.h"
 #include "TresAction2_e_ca901_TentacleSummons.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAction2_e_ca901_TentacleSummons : public UTresActionDefinitionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_WaitTime;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_EndTentacleSummonsNum;
     
     UTresAction2_e_ca901_TentacleSummons();

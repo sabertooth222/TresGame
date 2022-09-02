@@ -4,20 +4,20 @@
 #include "ETresDecoratorMercunaRaycast.h"
 #include "TresBTDecorator_MercunaRaycast.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTDecorator_MercunaRaycast : public UBTDecorator {
     GENERATED_BODY()
 public:
     UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresDecoratorMercunaRaycast::Type> m_Dir;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fAngle;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fTestDepth;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bUnuseMercunaProject;
     
     UTresBTDecorator_MercunaRaycast();

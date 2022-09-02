@@ -3,7 +3,7 @@
 #include "GameFramework/Actor.h"
 #include "TresBlowAttachActor_e_he903.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresBlowAttachActor_e_he903 : public AActor {
     GENERATED_BODY()
 public:

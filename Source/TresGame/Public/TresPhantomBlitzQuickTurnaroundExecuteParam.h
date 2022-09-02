@@ -6,7 +6,7 @@ USTRUCT(BlueprintType)
 struct FTresPhantomBlitzQuickTurnaroundExecuteParam {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<int32> QuickTurnaroundExecuteNumList;
     
     TRESGAME_API FTresPhantomBlitzQuickTurnaroundExecuteParam();

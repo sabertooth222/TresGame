@@ -3,7 +3,7 @@
 #include "TresCharState_Catch.h"
 #include "TresNpcState_AnnihilationCatch.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcState_AnnihilationCatch : public UTresCharState_Catch {
     GENERATED_BODY()
 public:

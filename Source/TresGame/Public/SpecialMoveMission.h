@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "SpecialMoveMission.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FSpecialMoveMission {
     GENERATED_BODY()
 public:

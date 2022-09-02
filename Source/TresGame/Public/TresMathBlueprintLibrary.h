@@ -4,18 +4,18 @@
 #include "UObject/NoExportTypes.h"
 #include "TresMathBlueprintLibrary.generated.h"
 
-UCLASS(Abstract, BlueprintType, NotPlaceable)
+UCLASS(Abstract, Blueprintable, NotPlaceable)
 class UTresMathBlueprintLibrary : public UObject {
     GENERATED_BODY()
 public:
     UTresMathBlueprintLibrary();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool TresIsInRangeInt(int32 Value, int32 Min, int32 Max, bool inclusiveMin, bool inclusiveMax);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool TresIsInRangeFloat(float Value, float Min, float Max, bool inclusiveMin, bool inclusiveMax);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static float TresGetRangeFloat(float Range, bool bRangeMinus);
     
     UFUNCTION(BlueprintCallable)
@@ -36,7 +36,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static float TresDecFloat(UPARAM(Ref) float& ref, float dec);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static float TresCalcRateFloat(float Value, float Min, float Max, bool IsReverse);
     
     UFUNCTION(BlueprintCallable)
@@ -57,7 +57,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static float TresAddFloat(UPARAM(Ref) float& ref, float Add);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static FVector GetParabolaLocation(const FVector& StartLocation, const FVector& EndLocation, float Height, float MoveRate, float HeightRate);
     
 };

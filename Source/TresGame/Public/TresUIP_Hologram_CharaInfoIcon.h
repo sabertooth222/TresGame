@@ -9,13 +9,13 @@ USTRUCT(BlueprintType)
 struct FTresUIP_Hologram_CharaInfoIcon {
     GENERATED_BODY()
 public:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UGFxObject* m_IconRoot;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresASProxyTresControlsIcon* m_IconImg;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UGFxObject* m_NewMark;
     
     TRESGAME_API FTresUIP_Hologram_CharaInfoIcon();

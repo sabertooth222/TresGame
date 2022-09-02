@@ -3,12 +3,12 @@
 #include "TresCameraTarget.h"
 #include "TresCameraDistanceTarget.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresCameraDistanceTarget : public ATresCameraTarget {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_Distance;
     
 public:
@@ -16,10 +16,10 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetDistance(float Distance, float Time);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetDistance() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetDefaultDistance() const;
     
 };

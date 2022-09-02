@@ -3,7 +3,7 @@
 #include "TresProjectileBase.h"
 #include "TresProjectile_e_ex352_DarkBarrageBlackSphere.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class ATresProjectile_e_ex352_DarkBarrageBlackSphere : public ATresProjectileBase {
     GENERATED_BODY()
 public:

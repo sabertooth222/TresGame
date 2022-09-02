@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FTresFeatherShotProjectileParam_e_ex081 {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_ProjectileInterval;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_ShootPitchAngle;
     
     TRESGAME_API FTresFeatherShotProjectileParam_e_ex081();

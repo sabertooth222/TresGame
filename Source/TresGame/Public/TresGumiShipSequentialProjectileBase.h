@@ -4,12 +4,12 @@
 #include "TresGumiShipProjectileSequenceData.h"
 #include "TresGumiShipSequentialProjectileBase.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresGumiShipSequentialProjectileBase : public ATresGumiShipActualProjectile {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresGumiShipProjectileSequenceData> m_Sequences;
     
 public:

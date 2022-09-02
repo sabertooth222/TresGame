@@ -4,17 +4,17 @@
 #include "TresTrackSnapToFloorKey.h"
 #include "TresInterpTrackSnapToFloor.generated.h"
 
-UCLASS(CollapseCategories)
+UCLASS(Blueprintable, CollapseCategories)
 class TRESGAME_API UTresInterpTrackSnapToFloor : public UInterpTrack {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere, EditFixedSize)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, EditFixedSize, meta=(AllowPrivateAccess=true))
     TArray<FTresTrackSnapToFloorKey> m_Keys;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_SnapToFloorUpLength;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_SnapToFloorDownLength;
     
     UTresInterpTrackSnapToFloor();

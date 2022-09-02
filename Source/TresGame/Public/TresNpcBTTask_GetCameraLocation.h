@@ -4,11 +4,11 @@
 #include "BehaviorTree/BehaviorTreeTypes.h"
 #include "TresNpcBTTask_GetCameraLocation.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcBTTask_GetCameraLocation : public UBTTaskNode {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlackboardKeySelector m_BlackboardValue;
     
     UTresNpcBTTask_GetCameraLocation();

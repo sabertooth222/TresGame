@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FTresCockpitStyleInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FString> m_strBtnLocKeyAry;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TArray<TEnumAsByte<ETresUIPadButtonType>> m_eBtnTypeAry;
     
     TRESGAME_API FTresCockpitStyleInfo();

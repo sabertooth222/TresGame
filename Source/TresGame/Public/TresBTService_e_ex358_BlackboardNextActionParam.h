@@ -4,17 +4,17 @@
 #include "BehaviorTree/BehaviorTreeTypes.h"
 #include "TresBTService_e_ex358_BlackboardNextActionParam.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTService_e_ex358_BlackboardNextActionParam : public UBTService {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlackboardKeySelector m_NextActionBlackboardKey;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlackboardKeySelector m_bIsAppearAirBlackboardKey;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlackboardKeySelector m_AppearDistanceBlackboardKey;
     
     UTresBTService_e_ex358_BlackboardNextActionParam();

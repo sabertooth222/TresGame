@@ -1,6 +1,5 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "TresUIActorSetting.h"
 #include "TresUIGameFlagData.h"
 #include "TresUIGameFlagActor.generated.h"
@@ -11,13 +10,13 @@ USTRUCT(BlueprintType)
 struct FTresUIGameFlagActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
-    TSubclassOf<ATresUIActor> ActorAsset;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TAssetSubclassOf<ATresUIActor> ActorAsset;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresUIActorSetting ActorSetting;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresUIGameFlagData GameFlag;
     
     TRESGAME_API FTresUIGameFlagActor();

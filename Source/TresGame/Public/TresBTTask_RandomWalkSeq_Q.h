@@ -7,23 +7,23 @@
 
 class UTresLocomotionDefinitionBase;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTTask_RandomWalkSeq_Q : public UTresBTTask_SequentialExecProcess {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     COMMON_RANDOMWALK_MODE_Enum m_TaskModeEnum;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UTresLocomotionDefinitionBase> m_CommonLocomotionDefinition;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_CommonUpdateTime;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_CommonOnRingAngle;
     
-    UPROPERTY(AdvancedDisplay, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_ItemSpace;
     
     UTresBTTask_RandomWalkSeq_Q();

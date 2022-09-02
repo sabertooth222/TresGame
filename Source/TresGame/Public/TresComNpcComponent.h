@@ -5,17 +5,17 @@
 
 class ATresNpcPawn_c_npc;
 
-UCLASS(BlueprintType, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTresComNpcComponent : public UActorComponent {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     TArray<TWeakObjectPtr<ATresNpcPawn_c_npc>> m_pComNpcPawn;
     
 public:
     UTresComNpcComponent();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ATresNpcPawn_c_npc* GetComNpc(FName InName);
     
 };

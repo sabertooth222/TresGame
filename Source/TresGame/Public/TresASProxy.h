@@ -5,12 +5,12 @@
 
 class UGFxObject;
 
-UCLASS(Transient)
+UCLASS(Blueprintable, Transient)
 class UTresASProxy : public UObject {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UGFxObject* m_ASObject;
     
 public:

@@ -3,7 +3,7 @@
 #include "TresStateBase.h"
 #include "TresCharState_FRSnowCurling.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresCharState_FRSnowCurling : public UTresStateBase {
     GENERATED_BODY()
 public:

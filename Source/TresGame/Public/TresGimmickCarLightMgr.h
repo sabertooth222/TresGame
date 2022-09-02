@@ -6,14 +6,14 @@
 class USceneComponent;
 class USpotLightComponent;
 
-UCLASS(Config=Game)
+UCLASS(Blueprintable, Config=Game)
 class ATresGimmickCarLightMgr : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USceneComponent* MyRoot;
     
-    UPROPERTY(BlueprintReadOnly, Export, Transient, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     TArray<USpotLightComponent*> SpotLightComponents;
     
     ATresGimmickCarLightMgr();

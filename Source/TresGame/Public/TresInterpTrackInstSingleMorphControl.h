@@ -3,7 +3,7 @@
 #include "Matinee/InterpTrackInst.h"
 #include "TresInterpTrackInstSingleMorphControl.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API UTresInterpTrackInstSingleMorphControl : public UInterpTrackInst {
     GENERATED_BODY()
 public:

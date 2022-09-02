@@ -3,7 +3,7 @@
 #include "GameFramework/PlayerController.h"
 #include "TresWorldMapPlayerController.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresWorldMapPlayerController : public APlayerController {
     GENERATED_BODY()
 public:

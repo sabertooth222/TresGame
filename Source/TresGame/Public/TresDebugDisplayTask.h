@@ -8,26 +8,26 @@ class UTresInputTask;
 class UTresTaskExecutor;
 class UTresDebugTask;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class UTresDebugDisplayTask : public UTresTaskBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresInputTask* InputManaer;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresTaskExecutor* m_pTaskExecuter;
     
 public:
     UTresDebugDisplayTask();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UTresTaskExecutor* GetTresTaskExecutor();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     TArray<FString> GetArgs();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetAppScale();
     
     UFUNCTION(BlueprintCallable)

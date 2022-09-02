@@ -4,15 +4,15 @@
 #include "BehaviorTree/BehaviorTreeTypes.h"
 #include "TresBTDecorator_SetTagCooldownBB.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTDecorator_SetTagCooldownBB : public UBTDecorator_SetTagCooldown {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bUseBlackboard;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlackboardKeySelector BlackboardKey;
     
 public:

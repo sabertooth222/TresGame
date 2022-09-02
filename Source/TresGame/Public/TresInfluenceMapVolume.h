@@ -4,24 +4,24 @@
 #include "TresInfluenceMapLayer.h"
 #include "TresInfluenceMapVolume.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresInfluenceMapVolume : public AVolume {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_CellSize;
     
     UPROPERTY(EditAnywhere)
     FTresInfluenceMapLayer m_LayerArray[8];
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bUseNavmesh;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     TArray<uint32> m_Connections;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<int32> m_ValidIndices;
     
 public:

@@ -1,34 +1,34 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ESQEX_Bonamik_EmissiveDirection.h"
-#include "Matinee/InterpTrackFloatBase.h"
 #include "TresInterpTrackBonamikCharaWindKey.h"
+#include "Matinee/InterpTrackFloatBase.h"
 #include "UObject/NoExportTypes.h"
+#include "ESQEX_Bonamik_EmissiveDirection.h"
 #include "TresInterpTrackBonamikCharaWind.generated.h"
 
-UCLASS(CollapseCategories)
+UCLASS(Blueprintable, CollapseCategories)
 class TRESGAME_API UTresInterpTrackBonamikCharaWind : public UInterpTrackFloatBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere, EditFixedSize)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, EditFixedSize, meta=(AllowPrivateAccess=true))
     TArray<FTresInterpTrackBonamikCharaWindKey> m_Keys;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FString> m_Groups;
     
     UPROPERTY(EditAnywhere)
     TEnumAsByte<ESQEX_Bonamik_EmissiveDirection> m_DirectionSpace;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector m_DirectionVec;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_BaseStrength;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_WaveAmplitude;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_WavePeriod;
     
     UTresInterpTrackBonamikCharaWind();

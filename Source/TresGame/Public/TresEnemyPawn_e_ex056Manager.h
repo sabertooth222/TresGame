@@ -7,15 +7,15 @@
 class ATresEnemyPawn_e_ex056;
 class ASQEX_SplineActor;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemyPawn_e_ex056Manager : public AActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresEnemyPawn_e_ex056> m_FlyPuddingClass;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresEnemyPawn_e_ex056> m_BonusPuddingClass;
     
     UPROPERTY(EditAnywhere)
@@ -24,17 +24,17 @@ protected:
     UPROPERTY(EditAnywhere)
     TArray<TWeakObjectPtr<ASQEX_SplineActor>> m_BonusPuddingSplines;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_SpawnWaitTimeMax;
     
 private:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<ATresEnemyPawn_e_ex056*> m_pFlyPuddings;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<ATresEnemyPawn_e_ex056*> m_pBonusPuddings;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     bool m_bNotifyStop;
     
 public:
@@ -48,13 +48,13 @@ public:
     UFUNCTION(BlueprintCallable)
     void NotifyStop();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetFlyPuddingRequestNum(const int32 SplineIndex) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetFlyPuddingNum() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetBonusPuddingNum() const;
     
     UFUNCTION(BlueprintCallable)

@@ -4,12 +4,12 @@
 #include "TresAction_e_ex357_ActionInterface.h"
 #include "TresAction_e_ex357_Base.generated.h"
 
-UCLASS(Abstract, HideDropdown)
+UCLASS(Abstract, Blueprintable, HideDropdown)
 class UTresAction_e_ex357_Base : public UTresAction_XIIILB_Base, public ITresAction_e_ex357_ActionInterface {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<float> m_AnimStartTimeList;
     
 public:

@@ -6,14 +6,14 @@
 class AActor;
 class UPrimitiveComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresCharState_Dangle : public UTresStateBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     AActor* m_pAttachActor;
     
-    UPROPERTY(Export, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UPrimitiveComponent* m_pAttachComponent;
     
     UTresCharState_Dangle();

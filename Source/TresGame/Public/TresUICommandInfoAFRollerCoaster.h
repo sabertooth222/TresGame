@@ -5,11 +5,11 @@
 
 class ATresRailSlideActor;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresUICommandInfoAFRollerCoaster : public UTresUICommandInfoBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresRailSlideActor* m_RailActor;
     
     UTresUICommandInfoAFRollerCoaster();

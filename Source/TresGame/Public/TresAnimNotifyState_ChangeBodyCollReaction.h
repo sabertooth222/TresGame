@@ -4,15 +4,15 @@
 #include "ETresBodyCollReactionType.h"
 #include "TresAnimNotifyState_ChangeBodyCollReaction.generated.h"
 
-UCLASS(CollapseCategories, EditInlineNew, MinimalAPI)
+UCLASS(Blueprintable, CollapseCategories, EditInlineNew, MinimalAPI)
 class UTresAnimNotifyState_ChangeBodyCollReaction : public UAnimNotifyState {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_GroupName;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresBodyCollReactionType m_ReactionType;
     
 public:

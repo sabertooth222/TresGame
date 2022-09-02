@@ -5,15 +5,15 @@
 
 class UGFxObject;
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class UTresASProxyTresControlsTabControl : public UTresASProxy {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UGFxObject* m_SwitchL;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UGFxObject* m_SwitchR;
     
 public:

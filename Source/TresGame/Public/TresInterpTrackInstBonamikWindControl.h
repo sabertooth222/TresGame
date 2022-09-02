@@ -3,14 +3,14 @@
 #include "Matinee/InterpTrackInst.h"
 #include "TresInterpTrackInstBonamikWindControl.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API UTresInterpTrackInstBonamikWindControl : public UInterpTrackInst {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_LastKeyIndex;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_BackupWindScale;
     
     UTresInterpTrackInstBonamikWindControl();

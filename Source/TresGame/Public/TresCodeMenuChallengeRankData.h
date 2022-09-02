@@ -1,22 +1,22 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/DataTable.h"
 #include "ETresDlcChallengeRank.h"
+#include "Engine/DataTable.h"
 #include "TresCodeMenuChallengeRankData.generated.h"
 
 class UTexture;
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresCodeMenuChallengeRankData : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresDlcChallengeRank m_Code;
     
-    UPROPERTY(EditDefaultsOnly)
-    UTexture* m_IconAsset;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TAssetPtr<UTexture> m_IconAsset;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString m_RankName;
     
     TRESGAME_API FTresCodeMenuChallengeRankData();

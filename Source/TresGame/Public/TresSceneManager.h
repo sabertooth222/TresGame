@@ -1,31 +1,32 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=TresVFXBlurParams -FallbackName=TresVFXBlurParams
 #include "ETresObjTypeProcChannel.h"
-#include "UObject/NoExportTypes.h"
-#include "ESQEX_Enums.h"
-#include "ESqexCPPKHSWorldType.h"
 #include "ETresGrass.h"
-#include "TresBloomRadialBlurParams.h"
-#include "TresCameraAnim.h"
-#include "TresRadialBlurParams.h"
-#include "TresScreenBlurParams.h"
-#include "TresVFXBlurParams.h"
+#include "UObject/NoExportTypes.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ETresScreenEffectPriority -FallbackName=ETresScreenEffectPriority
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=TresScreenBlurParams -FallbackName=TresScreenBlurParams
+#include "UObject/NoExportTypes.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=TresRadialBlurParams -FallbackName=TresRadialBlurParams
+#include "ESqexCPPKHSWorldType.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=TresBloomRadialBlurParams -FallbackName=TresBloomRadialBlurParams
+#include "UObject/NoExportTypes.h"
 #include "TresSceneManager.generated.h"
 
 class UMaterialParameterCollection;
 class ATresSnowShaderController;
-class ATresOceanShaderController;
 class UPrimitiveComponent;
+class ATresOceanShaderController;
 class ATresKHShaderController;
 class ATresGrassShaderController;
 
-UCLASS(NotPlaceable)
+UCLASS(Blueprintable, NotPlaceable)
 class ATresSceneManager : public AActor {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UMaterialParameterCollection* m_MPCSysCommon;
     
 public:
@@ -135,7 +136,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void ForceResetSceneEffectAll();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void ForceResetSceneEffect(ETresObjTypeProcChannel InChannel);
     
     UFUNCTION(BlueprintCallable)
@@ -159,7 +160,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void EnableCapsuleMaxIndirectOcclusionLongDistance(bool in_bEnable, float inMaxDistance, ETresObjTypeProcChannel InChannel);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void EnableCampRenderMode(bool IsEnable);
     
     UFUNCTION(BlueprintCallable)

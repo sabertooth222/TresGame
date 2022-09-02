@@ -3,7 +3,7 @@
 #include "TresAttackDefinitionBase.h"
 #include "TresCoopAction1_e_ex006_ScrumManagerTurn.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresCoopAction1_e_ex006_ScrumManagerTurn : public UTresAttackDefinitionBase {
     GENERATED_BODY()
 public:

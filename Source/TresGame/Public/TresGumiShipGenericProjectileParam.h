@@ -4,14 +4,14 @@
 
 class UParticleSystem;
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresGumiShipGenericProjectileParam {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_pAttachEffectType;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_ProjectileDataName;
     
     TRESGAME_API FTresGumiShipGenericProjectileParam();

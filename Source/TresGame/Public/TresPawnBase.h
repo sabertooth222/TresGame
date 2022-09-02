@@ -1,78 +1,78 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
+#include "GameFramework/Character.h"
 #include "TresNotifyInterface.h"
 #include "GameFramework/Pawn.h"
 #include "TresAnimInterface.h"
 #include "TresStateQueueInterface.h"
-#include "TresActorInterface.h"
-#include "ETresPlayerUniqueID.h"
 #include "TresReactorComponentInterface.h"
-#include "GameFramework/Character.h"
-#include "ETresChrUniqueID.h"
-#include "ESQEX_AI_ThinkType.h"
+#include "TresActorInterface.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ESQEX_AI_ThinkType -FallbackName=ESQEX_AI_ThinkType
+#include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "Engine/EngineTypes.h"
+#include "ETresPlayerUniqueID.h"
+#include "ETresChrUniqueID.h"
 #include "ETresEnemyUniqueID.h"
 #include "TresPawnBase.generated.h"
 
-class UTresBodyCollComponent;
-class AActor;
 class UTresRootComponent;
-class UTresInterpGroupInst;
+class UTresBodyCollComponent;
 class UTresChrDataTableSet;
 class UTresSoundAliasSet;
 class UTresChrBaseParam;
 class UObject;
 class ATresLevelEntity;
 class UTresInterpGroup;
+class UTresInterpGroupInst;
+class AActor;
 class ATresCharPawnBase;
 class ATresNpcPawnBase;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class TRESGAME_API ATresPawnBase : public APawn, public ITresAnimInterface, public ITresNotifyInterface, public ITresStateQueueInterface, public ITresReactorComponentInterface, public ITresActorInterface {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresRootComponent* MyRoot;
     
 protected:
-    UPROPERTY(DuplicateTransient, Export, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     TArray<UTresBodyCollComponent*> m_BodyComponentsList;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBasedMovementInfo BasedMovement;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName MyLockOnSetBoneName;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName MyLookAtTargetBoneName;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresChrDataTableSet* m_pDataTableSet;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresSoundAliasSet* m_SoundAliasAsset;
     
-    UPROPERTY(DuplicateTransient, Export, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UTresChrBaseParam* m_pBaseParam;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_TeamNo;
     
 public:
-    UPROPERTY(BlueprintReadWrite, Transient, VisibleAnywhere)
+    UPROPERTY(EditAnywhere, Transient)
     TWeakObjectPtr<UObject> m_LevelEntitySpawner;
     
-    UPROPERTY(BlueprintReadWrite, Transient, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresLevelEntity* m_LevelEntity;
     
-    UPROPERTY(Transient, BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UTresInterpGroup*> m_InterpGroup;
     
-    UPROPERTY(Transient, BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UTresInterpGroupInst*> m_InterpGroupInst;
     
     ATresPawnBase();
@@ -97,10 +97,10 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetRootAbsolute(bool bNewAbsoluteLocation, bool bNewAbsoluteRotation, bool bNewAbsoluteScale);
     
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void OnWalkingOffLedge(const FVector& PreviousFloorImpactNormal, const FVector& PreviousFloorContactNormal, const FVector& PreviousLocation, float TimeDelta);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnLanded(const FHitResult& Hit);
     
     UFUNCTION(BlueprintCallable)
@@ -109,49 +109,49 @@ public:
     UFUNCTION(BlueprintCallable)
     void MeshResetRotate(float InRotRate);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsPlayingRootMotion() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsEnableLockOn() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetTimeSinceSpawn() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetTeamNo() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector GetSpawnLocation() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetRotYaw() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector GetRootUpVector() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector GetRootRightVector() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector GetRootFrontVector() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetLocationZ() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UObject* GetLevelEntitySpawner() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ATresLevelEntity* GetLevelEntity() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FRotator GetDirectionToLocation(FVector InLocation) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FRotator GetDirectionTo(const AActor* inOtherActor) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UObject* GetBattleOwner() const;
     
     UFUNCTION(BlueprintCallable)
@@ -163,13 +163,13 @@ public:
     UFUNCTION(BlueprintCallable)
     void CollisionChangeAttackHitResponse(bool bIsEnable, FName InGrpName);
     
-    UFUNCTION(Client, Reliable, BlueprintCallable)
+    UFUNCTION(BlueprintCallable, Client, Reliable)
     void ClientCheatWalk();
     
-    UFUNCTION(Client, Reliable, BlueprintCallable)
+    UFUNCTION(BlueprintCallable, Client, Reliable)
     void ClientCheatGhost();
     
-    UFUNCTION(Client, Reliable, BlueprintCallable)
+    UFUNCTION(BlueprintCallable, Client, Reliable)
     void ClientCheatFly();
     
     UFUNCTION(BlueprintCallable)
@@ -181,28 +181,28 @@ public:
     UFUNCTION(BlueprintCallable)
     void BP_NotifyRegisterEnemyGaugeTarget(ATresCharPawnBase* InTarget);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector BP_GetSelfMovedVelocity() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector BP_GetSelfMovedDelta() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector BP_GetRootMotionVelocity() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ETresPlayerUniqueID BP_GetPlayerUniqueID() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float BP_GetNoActionCounter() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float BP_GetMovedVelocityZ() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float BP_GetMovedVelocityXYSize() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector BP_GetMovedVelocity() const;
     
     UFUNCTION(BlueprintCallable)
@@ -211,13 +211,13 @@ public:
     UFUNCTION(BlueprintCallable)
     ATresNpcPawnBase* BP_GetFriendPawnByIndex(int32 Index);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ESQEX_AI_ThinkType BP_GetFriendAIThinkType() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ETresEnemyUniqueID BP_GetEnemyUniqueID() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ETresChrUniqueID BP_GetChrUniqueID() const;
     
     UFUNCTION(BlueprintCallable)

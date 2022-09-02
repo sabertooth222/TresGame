@@ -4,14 +4,14 @@
 #include "BehaviorTree/BehaviorTreeTypes.h"
 #include "TresBTDecorator_CanActionAbortTimingNumber.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTDecorator_CanActionAbortTimingNumber : public UTresBTDecorator_CanActionAbortTiming {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<int32> m_NumberList;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FBlackboardKeySelector> m_BlackboardKeyNumberList;
     
     UTresBTDecorator_CanActionAbortTimingNumber();

@@ -6,13 +6,13 @@ USTRUCT(BlueprintType)
 struct FTresWinniePuzzleBombInterferedParam {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool IsInterfereUnits;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DistanceWithInterferedUnitOnSimulate;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool IsInterfereUnitsFloat;
     
     TRESGAME_API FTresWinniePuzzleBombInterferedParam();

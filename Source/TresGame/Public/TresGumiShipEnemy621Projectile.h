@@ -4,36 +4,36 @@
 #include "UObject/NoExportTypes.h"
 #include "TresGumiShipEnemy621Projectile.generated.h"
 
-class AActor;
+class UDamageType;
 class UTresGumiShipBodyCollisionSetCompo;
 class UTresGumiShipWeaponSequence;
+class AActor;
 class AController;
-class UDamageType;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresGumiShipEnemy621Projectile : public ATresGumiShipActualProjectile {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresGumiShipBodyCollisionSetCompo* m_pBodyCollision;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresGumiShipWeaponSequence* m_pWeaponSequence;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fToStopDistance;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fEndSpeed;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRotator m_rRotateSpeed;
     
 public:
     ATresGumiShipEnemy621Projectile();
 protected:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnActorTakeAnyDamage(AActor* DamagedActor, float Damage, const UDamageType* DamageType, AController* InstigatedBy, AActor* DamageCauser);
     
 };

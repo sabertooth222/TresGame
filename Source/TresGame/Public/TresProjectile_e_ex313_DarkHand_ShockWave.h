@@ -5,11 +5,11 @@
 
 class UParticleSystem;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresProjectile_e_ex313_DarkHand_ShockWave : public ATresProjectileBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_pro_ShockWaveEffData;
     
     ATresProjectile_e_ex313_DarkHand_ShockWave();

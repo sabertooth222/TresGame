@@ -3,23 +3,23 @@
 #include "UObject/NoExportTypes.h"
 #include "TresCameraTargetInfo.generated.h"
 
-class UTresLockonTargetComponent;
 class AActor;
+class UTresLockonTargetComponent;
 
 USTRUCT(BlueprintType)
 struct FTresCameraTargetInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector m_TargetOffset;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector m_TargetLocalOffset;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     AActor* m_TargetActor;
     
-    UPROPERTY(Export, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UTresLockonTargetComponent* m_TargetComp;
     
     TRESGAME_API FTresCameraTargetInfo();

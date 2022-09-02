@@ -7,24 +7,24 @@ class UGFxObject;
 class UTresASProxyRSLTopMenuCmd;
 class UTresASProxyRSLStageCategory;
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class UTresUIP_ShopSynthesisTop : public UTresUISubParts {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(Transient)
+    UPROPERTY(EditAnywhere, Transient)
     UTresASProxyRSLTopMenuCmd* m_TopButtons[5];
     
-    UPROPERTY(Transient)
+    UPROPERTY(EditAnywhere, Transient)
     UGFxObject* m_CompleteMark[3];
     
-    UPROPERTY(Transient)
+    UPROPERTY(EditAnywhere, Transient)
     UGFxObject* m_CreateLogCount[3];
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UGFxObject* m_PhotoMissionLogText;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresASProxyRSLStageCategory* m_StageCategory;
     
 public:

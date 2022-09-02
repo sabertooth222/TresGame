@@ -10,48 +10,48 @@ class UTresASProxyRSLStageCategory;
 class UTresASProxyTresControlsIcon;
 class UTresASProxyTresControlsButton;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresUIP_MobilePortal : public UTresUIParts {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UGFxObject* m_MobilePortal;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresASProxyRSLStageCategory* m_StageCategory;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresASProxyTresControlsIcon* m_WorldTitleIcon;
     
-    UPROPERTY(Transient)
+    UPROPERTY(EditAnywhere, Transient)
     UTresASProxyTresControlsButton* m_AppButtons[12];
     
-    UPROPERTY(Transient)
+    UPROPERTY(EditAnywhere, Transient)
     UTresASProxyTresControlsImageIcon* m_AppButtonImageIcons[12];
     
-    UPROPERTY(Transient)
+    UPROPERTY(EditAnywhere, Transient)
     UGFxObject* m_AppButtonCompleteMarks[12];
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UGFxObject* m_HelpText;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UGFxObject* m_Jiminy;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresASProxyTresControlsIcon* m_JiminyIcon;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UGFxObject* m_AppScreen;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UGFxObject* m_AppScreenColor;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UGFxObject* m_AppScreenIcon;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresASProxyRSLBtnInfo* m_BtnInfo;
     
 public:

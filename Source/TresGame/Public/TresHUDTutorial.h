@@ -3,22 +3,22 @@
 #include "TresHUD.h"
 #include "TresHUDTutorial.generated.h"
 
-class UTresUIP_Tutorial;
-class UTresUIManager;
 class UTresUIDataAsset;
+class UTresUIManager;
+class UTresUIP_Tutorial;
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class ATresHUDTutorial : public ATresHUD {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresUIDataAsset* m_UIDataAssetTutorial;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresUIManager* m_UIManager;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresUIP_Tutorial* m_Tutorial;
     
 public:

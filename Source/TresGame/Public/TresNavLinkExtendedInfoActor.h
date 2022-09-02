@@ -4,18 +4,18 @@
 #include "TresNavLinkExtendedInfo.h"
 #include "TresNavLinkExtendedInfoActor.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresNavLinkExtendedInfoActor : public AActor {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(AdvancedDisplay, VisibleAnywhere)
+    UPROPERTY(AdvancedDisplay, EditAnywhere)
     uint32 Version;
     
-    UPROPERTY(AdvancedDisplay, VisibleAnywhere)
+    UPROPERTY(AdvancedDisplay, EditAnywhere)
     TMap<FName, uint32> ExtendedInfoList;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresNavLinkExtendedInfo> ExtendedDataArray;
     
 public:

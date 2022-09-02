@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FTresWinniePuzzleFirstPlayReward {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresItemDefFoodstuff FoodStuff;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 EarnNum;
     
     TRESGAME_API FTresWinniePuzzleFirstPlayReward();

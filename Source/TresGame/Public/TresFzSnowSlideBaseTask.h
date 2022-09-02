@@ -5,29 +5,29 @@
 
 class ATresPlacePrizeBase;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class UTresFzSnowSlideBaseTask : public UTresTaskBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ChainBonusSec_;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 ChainBonusCountMax_;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ChainBonusUpRate_;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 ChainBonusCountSpan_;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<int32> TreasureGotIndices_;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<ATresPlacePrizeBase*> m_storeChildren;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bInGameCreate_;
     
     UTresFzSnowSlideBaseTask();
@@ -40,28 +40,28 @@ public:
     UFUNCTION(BlueprintCallable)
     void RequestSnowCurlingResetChain();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsSnowCurlingSavedTreasure(int32 ID);
     
     UFUNCTION(BlueprintCallable)
     ATresPlacePrizeBase* GetStoreChildrenPrize();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetSnowCurlingTime();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetSnowCurlingScore();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetSnowCurlingSavedTreasureCount();
     
     UFUNCTION(BlueprintCallable)
     void DeleteAllPrize();
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void DebugSetDummySec(float sec);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void DebugSetCurrentScore(int32 Score);
     
     UFUNCTION(BlueprintCallable)

@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FTresBodyTakeDamageEffect {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_DamageEffect;
     
     TRESGAME_API FTresBodyTakeDamageEffect();

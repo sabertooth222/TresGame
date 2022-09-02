@@ -6,11 +6,11 @@
 
 class UEnvQueryContext;
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UTresEnvQueryGenerator_OnRingEx : public UTresEnvQueryGenerator_OnRing {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UEnvQueryContext> CircleCenterRadius;
     
     UTresEnvQueryGenerator_OnRingEx();

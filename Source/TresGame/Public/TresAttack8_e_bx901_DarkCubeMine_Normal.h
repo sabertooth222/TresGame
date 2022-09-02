@@ -6,11 +6,11 @@
 
 class ATresProjectileBase;
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAttack8_e_bx901_DarkCubeMine_Normal : public UTresAttackDefinitionWeaponBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresProjectileBase> m_Projectile;
     
     UTresAttack8_e_bx901_DarkCubeMine_Normal();

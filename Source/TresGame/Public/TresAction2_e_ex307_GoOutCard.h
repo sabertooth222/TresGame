@@ -3,21 +3,21 @@
 #include "TresActionDefinitionBase.h"
 #include "TresAction2_e_ex307_GoOutCard.generated.h"
 
-class USoundBase;
 class UAnimSequenceBase;
+class USoundBase;
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAction2_e_ex307_GoOutCard : public UTresActionDefinitionBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UAnimSequenceBase* m_AnimData;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<USoundBase*> m_GoOutCardVoiceDataList;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 m_bEnableGoOutCardVoice2D: 1;
     
 public:

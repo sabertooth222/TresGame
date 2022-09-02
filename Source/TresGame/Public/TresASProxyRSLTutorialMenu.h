@@ -8,21 +8,21 @@ class UTresASProxyTresControlsList;
 class UTresUIParts;
 class UTresUIManager;
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class UTresASProxyRSLTutorialMenu : public UTresASProxy {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresASProxyTresControlsList* m_List;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresASProxyRSLHelpText* m_HelpText;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresUIParts* m_OwnerUIParts;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresUIManager* m_UIManager;
     
 public:

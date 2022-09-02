@@ -9,37 +9,37 @@ class ATresWinniePuzzleBase;
 class ATresWinniePuzzleWallVolume;
 class ATresWinniePlayerController;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresWinniePuzzleManager : public ATresSharedActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresWinnieData* DataRef;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName FieldMapName;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName FieldMapPlayerStartTagName;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName VegetableFieldMapPlayerStartTagName;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName FruitFieldMapPlayerStartTagName;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName FlowerFieldMapPlayerStartTagName;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName SaveDataFlagName;
     
 private:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresWinniePuzzleBase* m_pPuzzle;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<ATresWinniePuzzleWallVolume*> m_wallVolumes;
     
 public:
@@ -47,13 +47,13 @@ public:
     UFUNCTION(BlueprintCallable)
     void StoreWallVolume(TArray<ATresWinniePuzzleWallVolume*> volumes);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     WinniePuzzleType GetPuzzleType() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ATresWinniePuzzleBase* GetPuzzle() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ATresWinniePlayerController* GetController() const;
     
 };

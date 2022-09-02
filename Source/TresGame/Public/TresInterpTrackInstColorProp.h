@@ -3,7 +3,7 @@
 #include "Matinee/InterpTrackInstColorProp.h"
 #include "TresInterpTrackInstColorProp.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API UTresInterpTrackInstColorProp : public UInterpTrackInstColorProp {
     GENERATED_BODY()
 public:

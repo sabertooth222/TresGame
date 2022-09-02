@@ -3,7 +3,7 @@
 #include "GameFramework/Actor.h"
 #include "TresProjectile_e_bx901_DarkCubeNeedleSpawner.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class ATresProjectile_e_bx901_DarkCubeNeedleSpawner : public AActor {
     GENERATED_BODY()
 public:

@@ -1,19 +1,19 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "AIController.h"
+#include "UObject/NoExportTypes.h"
 #include "TresControllerInterface.h"
 #include "ETresCharInputType.h"
-#include "UObject/NoExportTypes.h"
 #include "TresAIController.generated.h"
 
 class AActor;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresAIController : public AAIController, public ITresControllerInterface {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresCharInputType> m_CharInputType;
     
 public:
@@ -24,40 +24,40 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetDestination(const FVector& inNewDestination);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsElapsedTimeFromDamaged(float InTime, const AActor* InTarget) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsActorRightSide(AActor* inOtherActor) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetVerticalDistanceToMyTarget(bool inCollision) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetVerticalDistanceToActor(AActor* inOtherActor, bool inCollision) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     AActor* GetMyTarget() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetHorizontalDistanceToMyTarget(bool inCollision) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetHorizontalDistanceToActor(AActor* inOtherActor, bool inCollision) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetDistanceToMyTarget(bool inCollision) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetDistanceToActor(AActor* inOtherActor, bool inCollision) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector GetDestination() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetCoopTeamMemberID() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetCoopTeamID() const;
     
     UFUNCTION(BlueprintCallable)
@@ -69,10 +69,10 @@ public:
     UFUNCTION(BlueprintCallable)
     void BP_SetHeadFocalPoint(FVector Fp);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     AActor* BP_GetHeadFocusActor() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector BP_GetHeadFocalPoint() const;
     
     UFUNCTION(BlueprintCallable)

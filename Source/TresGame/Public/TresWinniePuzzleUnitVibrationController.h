@@ -3,15 +3,15 @@
 #include "TresWinniePuzzleComponentBase.h"
 #include "TresWinniePuzzleUnitVibrationController.generated.h"
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTresWinniePuzzleUnitVibrationController : public UTresWinniePuzzleComponentBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float VibrationPowerMin;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float VibrationPowerMax;
     
 public:

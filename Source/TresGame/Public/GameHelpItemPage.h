@@ -8,13 +8,13 @@ USTRUCT(BlueprintType)
 struct FGameHelpItemPage {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
-    UTexture* Image;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TAssetPtr<UTexture> Image;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString TextNamespaceKey;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<FName, FString> TextNamespaceKeyPlatform;
     
     TRESGAME_API FGameHelpItemPage();

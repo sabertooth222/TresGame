@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "TornadoVacuumSet.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTornadoVacuumSet {
     GENERATED_BODY()
 public:

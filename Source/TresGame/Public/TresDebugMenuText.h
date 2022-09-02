@@ -5,11 +5,11 @@
 
 class UFont;
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class UTresDebugMenuText : public UTresDebugMenuObject {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UFont* m_Font;
     
     UTresDebugMenuText();

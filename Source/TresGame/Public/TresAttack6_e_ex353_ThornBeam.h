@@ -3,7 +3,7 @@
 #include "TresAttack_e_ex353_Base.h"
 #include "TresAttack6_e_ex353_ThornBeam.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAttack6_e_ex353_ThornBeam : public UTresAttack_e_ex353_Base {
     GENERATED_BODY()
 public:

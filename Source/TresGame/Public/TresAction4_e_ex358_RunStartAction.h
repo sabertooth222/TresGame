@@ -3,7 +3,7 @@
 #include "TresAction_e_ex358_Base.h"
 #include "TresAction4_e_ex358_RunStartAction.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAction4_e_ex358_RunStartAction : public UTresAction_e_ex358_Base {
     GENERATED_BODY()
 public:

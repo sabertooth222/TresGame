@@ -8,16 +8,16 @@ USTRUCT(BlueprintType)
 struct FTresWinniePuzzleUnitScoreParam {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresWinniePuzzleUnitScore> UnitScores;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresWinniePuzzleUnitScore> UnitScoresForCharacterBonus;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     WinniePuzzleUnitScoreSizeJudgementMethod UnitScoreSizeJudgementMethod;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 UnitScoreSizeJudgementNum;
     
     TRESGAME_API FTresWinniePuzzleUnitScoreParam();

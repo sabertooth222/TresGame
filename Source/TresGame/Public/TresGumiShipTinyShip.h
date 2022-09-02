@@ -2,47 +2,47 @@
 #include "CoreMinimal.h"
 #include "TresGumiShipCharaPawnBase.h"
 #include "UObject/NoExportTypes.h"
-#include "TresGMInputResult.h"
 #include "ETresGumiShipTinyShipFormation.h"
+#include "TresGMInputResult.h"
 #include "TresGumiShipTinyShip.generated.h"
 
 class ATresGumiShipPlayerControllerBase;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresGumiShipTinyShip : public ATresGumiShipCharaPawnBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float RollSpeedRate;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector SideOffset;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FVector> OptionOffset;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MaxAccel;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MaxBrake;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MaxNAccel;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MaxNBrake;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float NearRadius;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float NearVelocity;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ResetDistance;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ResetVelocity;
     
     ATresGumiShipTinyShip();
@@ -53,10 +53,10 @@ public:
     void ResetLocation();
     
 private:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnPressLeftRight(const FTresGMInputResult& rResult, const ATresGumiShipPlayerControllerBase* pController);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnInputLStick(const FTresGMInputResult& rResult, const ATresGumiShipPlayerControllerBase* pController);
     
 };

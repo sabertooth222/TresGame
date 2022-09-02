@@ -4,25 +4,25 @@
 #include "TresLotterySpawnActorData.h"
 #include "TresRandomPlaceBase.generated.h"
 
+class AActor;
 class UTresRandomPlaceRuleBase;
 class UTresSpawnActorManagerComponent;
-class AActor;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresRandomPlaceBase : public ATresEditorOnlyGeneratorBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTresRandomPlaceRuleBase* GeneratedRule;
     
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresSpawnActorManagerComponent* SpawnActorManager;
     
     ATresRandomPlaceBase();
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void spawn();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void DestroyAndSpawn();
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)

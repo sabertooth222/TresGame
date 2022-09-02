@@ -7,7 +7,7 @@
 
 class ASQEX_SplineActor;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresRandomPlaceTest : public ATresEditorOnlyGeneratorBase {
     GENERATED_BODY()
 public:

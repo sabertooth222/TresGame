@@ -3,7 +3,7 @@
 #include "Matinee/InterpTrackInst.h"
 #include "TresInterpTrackInstSnapToFloor.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API UTresInterpTrackInstSnapToFloor : public UInterpTrackInst {
     GENERATED_BODY()
 public:

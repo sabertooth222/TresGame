@@ -10,7 +10,7 @@ public:
     UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresCommandKind> m_Command;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_Weight;
     
     TRESGAME_API FTresAttractionFlowDrawingEntry();

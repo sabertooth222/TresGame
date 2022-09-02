@@ -3,7 +3,7 @@
 #include "BehaviorTree/BTTaskNode.h"
 #include "TresNpcBTTask_SelectHairSwingPoint.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcBTTask_SelectHairSwingPoint : public UBTTaskNode {
     GENERATED_BODY()
 public:

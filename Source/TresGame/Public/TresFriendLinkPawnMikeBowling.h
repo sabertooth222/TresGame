@@ -3,14 +3,14 @@
 #include "TresFriendLinkPawnBase.h"
 #include "TresFriendLinkPawnMikeBowling.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresFriendLinkPawnMikeBowling : public ATresFriendLinkPawnBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fTurnSpeed;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fTurnYawMax;
     
     ATresFriendLinkPawnMikeBowling();

@@ -3,7 +3,7 @@
 #include "TresCharState_FRPoppingHoly.h"
 #include "TresNpcState_FRPoppingHoly.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcState_FRPoppingHoly : public UTresCharState_FRPoppingHoly {
     GENERATED_BODY()
 public:

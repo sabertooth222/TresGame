@@ -4,35 +4,35 @@
 #include "TresEnemyDarkSidePawnBase.h"
 #include "TresEnemyPawn_e_dw407b.generated.h"
 
-class ATresPatternActor_e_dw407b_Manager;
 class ATresProjectileBase;
+class ATresPatternActor_e_dw407b_Manager;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemyPawn_e_dw407b : public ATresEnemyDarkSidePawnBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresProjectileBase> m_ProdusedRoarProjectileAsset;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresProjectileBase> m_PillarLightProjectileAsset;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_SameAttackCount;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_EndLaserCountTimingTime;
     
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresPatternActor_e_dw407b_Manager* m_PatternData;
     
     ATresEnemyPawn_e_dw407b();
     UFUNCTION(BlueprintCallable)
     void NotifyBattleStart();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool GetIsBattleStart() const;
     
 };

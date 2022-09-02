@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FTresGumiShipBattleMisisonBonusWithConditionI {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     uint32 m_udBonusPoint;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_dConditionValue;
     
     TRESGAME_API FTresGumiShipBattleMisisonBonusWithConditionI();

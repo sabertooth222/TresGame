@@ -5,18 +5,18 @@
 
 class UDataTable;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresGumiShipBattleDataTableSet : public UDataAsset {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UDataTable* m_pBaseParameterDataTable;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UDataTable* m_pAttackMethodParameterDataTable;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UDataTable* m_pEnemyUniqueParameterDataTable;
     
 public:

@@ -3,12 +3,12 @@
 #include "TresCoopDefinitionBase.h"
 #include "TresCoop1_e_ex325_CombinationAttack.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresCoop1_e_ex325_CombinationAttack : public UTresCoopDefinitionBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_EntryRadius;
     
 public:

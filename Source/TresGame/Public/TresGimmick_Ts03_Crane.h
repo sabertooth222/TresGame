@@ -7,12 +7,12 @@
 class UTresBodyCollComponent;
 class ASQEX_SplineActor;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresGimmick_Ts03_Crane : public ATresGimmickSkeletalBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresBodyCollComponent* BodyCollComponent;
     
 public:
@@ -23,7 +23,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetSpeed(float Speed);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector GetSpeedVec() const;
     
 };

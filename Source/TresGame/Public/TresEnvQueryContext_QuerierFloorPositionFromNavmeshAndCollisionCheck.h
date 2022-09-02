@@ -3,7 +3,7 @@
 #include "EnvironmentQuery/EnvQueryContext.h"
 #include "TresEnvQueryContext_QuerierFloorPositionFromNavmeshAndCollisionCheck.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UTresEnvQueryContext_QuerierFloorPositionFromNavmeshAndCollisionCheck : public UEnvQueryContext {
     GENERATED_BODY()
 public:

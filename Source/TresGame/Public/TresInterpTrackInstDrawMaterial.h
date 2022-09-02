@@ -3,7 +3,7 @@
 #include "Matinee/InterpTrackInst.h"
 #include "TresInterpTrackInstDrawMaterial.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API UTresInterpTrackInstDrawMaterial : public UInterpTrackInst {
     GENERATED_BODY()
 public:

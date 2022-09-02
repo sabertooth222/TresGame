@@ -3,7 +3,7 @@
 #include "TresTaggedActorPropertyValueBase.h"
 #include "TresTaggedActorPropertyValue_OceanWorldMinX.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresTaggedActorPropertyValue_OceanWorldMinX : public FTresTaggedActorPropertyValueBase {
     GENERATED_BODY()
 public:

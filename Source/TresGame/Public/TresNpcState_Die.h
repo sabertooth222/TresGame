@@ -3,7 +3,7 @@
 #include "TresStateBase.h"
 #include "TresNpcState_Die.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcState_Die : public UTresStateBase {
     GENERATED_BODY()
 public:

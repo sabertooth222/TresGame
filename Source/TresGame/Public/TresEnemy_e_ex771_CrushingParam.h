@@ -1,6 +1,5 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ESQEX_BreakBlendMode.h"
 #include "UObject/NoExportTypes.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Renderer -ObjectName=ESQEX_BreakBlendMode -FallbackName=ESQEX_BreakBlendMode
 #include "TresEnemy_e_ex771_CrushingParam.generated.h"
@@ -11,19 +10,19 @@ USTRUCT(BlueprintType)
 struct FTresEnemy_e_ex771_CrushingParam {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_Comment;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UMaterialInterface* m_Material;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector2D m_Size;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_AnimTime;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ESQEX_BreakBlendMode> m_Mode;
     
     TRESGAME_API FTresEnemy_e_ex771_CrushingParam();

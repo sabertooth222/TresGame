@@ -8,24 +8,24 @@ class ATresProjectileBase;
 class AActor;
 class ATresGimmickSkeletalBase;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresFriendLinkPawnSnowCoverSwing : public ATresFriendLinkPawnBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresProjectileBase> m_AirProj;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_FriendLinkEndLength;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_FriendLinkDamageAttackIDName;
     
 private:
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     TWeakObjectPtr<AActor> m_pTargetPawn;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresGimmickSkeletalBase* m_pTree;
     
 public:

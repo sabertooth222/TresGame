@@ -3,7 +3,7 @@
 #include "TresNote.h"
 #include "TresNoteMovable.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresNoteMovable : public ATresNote {
     GENERATED_BODY()
 public:

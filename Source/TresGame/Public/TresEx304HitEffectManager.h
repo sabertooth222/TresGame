@@ -9,10 +9,10 @@ struct FTresEx304HitEffectManager {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* m_LaserEffectCmp;
     
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* m_SparkEffectCmp;
     
 public:

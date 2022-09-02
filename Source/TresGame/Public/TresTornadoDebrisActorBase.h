@@ -6,42 +6,42 @@
 #include "UObject/NoExportTypes.h"
 #include "TresTornadoDebrisActorBase.generated.h"
 
-class ATresPlayerPawnBase;
-class UTresLockonTargetComponent;
 class USceneComponent;
 class UParticleSystem;
+class ATresPlayerPawnBase;
+class UTresLockonTargetComponent;
 class UParticleSystemComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresTornadoDebrisActorBase : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USceneComponent* m_pRotateSceneComp;
     
-    UPROPERTY(BlueprintReadWrite, Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USceneComponent* m_pDebrisMeshComp;
     
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_iPushLevel;
     
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector m_vLocalTranslation;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_DestinationEffectClass;
     
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresLockonTargetComponent* m_LockonComp;
     
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresPlayerPawnBase* m_Player;
     
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bNowEvade;
     
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* m_DestinationEffectComp;
     
 public:

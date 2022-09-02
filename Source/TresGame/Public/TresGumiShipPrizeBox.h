@@ -1,34 +1,34 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TresGumiShipGimmickObjectBase.h"
 #include "TresGumiShipDropPrizeData.h"
+#include "TresGumiShipGimmickObjectBase.h"
 #include "TresGumiShipPrizeBox.generated.h"
 
 class UProjectileMovementComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresGumiShipPrizeBox : public ATresGumiShipGimmickObjectBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresGumiShipDropPrizeData DropPrizeHit;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresGumiShipDropPrizeData DropPrizeCrush;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float RollingDistance;
     
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UProjectileMovementComponent* Movement;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float RespawnTime;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float RespawnDistance;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_DataTableName;
     
     ATresGumiShipPrizeBox();

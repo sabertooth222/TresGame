@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FTresDebugMenuFrameLabel {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_LabelName;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_LabelFrame;
     
     TRESGAME_API FTresDebugMenuFrameLabel();

@@ -4,12 +4,12 @@
 #include "ETresLandAnimPose.h"
 #include "TresAnimNotify_LandAnimPose.generated.h"
 
-UCLASS(CollapseCategories, MinimalAPI)
+UCLASS(Blueprintable, CollapseCategories, MinimalAPI)
 class UTresAnimNotify_LandAnimPose : public UAnimNotify {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresLandAnimPose> m_LandAnimPose;
     
 public:

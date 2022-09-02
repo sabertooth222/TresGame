@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FTresComNpcEntityLinkData {
     GENERATED_BODY()
 public:
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_EntityName;
     
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FName> m_LinkActors;
     
     TRESGAME_API FTresComNpcEntityLinkData();

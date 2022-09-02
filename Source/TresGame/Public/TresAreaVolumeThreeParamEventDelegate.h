@@ -5,5 +5,5 @@
 
 class ATresCharPawnBase;
 
-UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FTresAreaVolumeThreeParamEvent, ATresCharPawnBase*, pTargetActor, FVector, TargetLocation, bool, IsPlayer);
+UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FTresAreaVolumeThreeParamEvent, ATresCharPawnBase*, pTargetActor, FVector, TargetLocation, bool, IsPlayer);
 

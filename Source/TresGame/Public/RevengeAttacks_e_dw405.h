@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FRevengeAttacks_e_dw405 {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRevengeAttacks RevengeAttacks;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 ComboIndex;
     
     TRESGAME_API FRevengeAttacks_e_dw405();

@@ -9,10 +9,10 @@ USTRUCT(BlueprintType)
 struct FTresEnemy_e_ex771_FlareShotTornadoParam {
     GENERATED_BODY()
 public:
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* m_FireOmenEff;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     TArray<TWeakObjectPtr<ATresProjectileBase>> m_FlareShotArray;
     
     TRESGAME_API FTresEnemy_e_ex771_FlareShotTornadoParam();

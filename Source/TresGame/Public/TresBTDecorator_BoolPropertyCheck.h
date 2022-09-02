@@ -3,17 +3,17 @@
 #include "BehaviorTree/BTDecorator.h"
 #include "TresBTDecorator_BoolPropertyCheck.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTDecorator_BoolPropertyCheck : public UBTDecorator {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bUseFunction;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName PropertyName;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bAutomaticallyEnterNodeName: 1;
     
     UTresBTDecorator_BoolPropertyCheck();

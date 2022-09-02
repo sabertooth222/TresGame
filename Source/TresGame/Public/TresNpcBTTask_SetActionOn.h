@@ -4,14 +4,14 @@
 #include "ETresNpcActionOnType.h"
 #include "TresNpcBTTask_SetActionOn.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcBTTask_SetActionOn : public UBTTaskNode {
     GENERATED_BODY()
 public:
     UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresNpcActionOnType> m_ActionOnType;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_ActionTime;
     
     UTresNpcBTTask_SetActionOn();

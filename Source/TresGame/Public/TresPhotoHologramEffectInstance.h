@@ -2,18 +2,18 @@
 #include "CoreMinimal.h"
 #include "TresPhotoHologramEffectInstance.generated.h"
 
-class ATresPhotoHologramActor;
 class UParticleSystemComponent;
+class ATresPhotoHologramActor;
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresPhotoHologramEffectInstance {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     TArray<UParticleSystemComponent*> m_pPSCList;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     TWeakObjectPtr<ATresPhotoHologramActor> m_pOwner;
     
 public:

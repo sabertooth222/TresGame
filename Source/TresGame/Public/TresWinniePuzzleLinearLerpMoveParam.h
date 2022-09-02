@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "TresWinniePuzzleLinearLerpMoveParam.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresWinniePuzzleLinearLerpMoveParam {
     GENERATED_BODY()
 public:

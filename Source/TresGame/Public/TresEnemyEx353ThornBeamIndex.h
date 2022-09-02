@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FTresEnemyEx353ThornBeamIndex {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString Comment;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<int32> ThornBeamIndex;
     
     TRESGAME_API FTresEnemyEx353ThornBeamIndex();

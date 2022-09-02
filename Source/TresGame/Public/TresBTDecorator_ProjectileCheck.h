@@ -3,11 +3,11 @@
 #include "BehaviorTree/BTDecorator.h"
 #include "TresBTDecorator_ProjectileCheck.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTDecorator_ProjectileCheck : public UBTDecorator {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bIsReflected;
     
     UTresBTDecorator_ProjectileCheck();

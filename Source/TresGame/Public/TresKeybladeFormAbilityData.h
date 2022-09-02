@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FTresKeybladeFormAbilityData {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<ETresTextAbilityKind> m_TextAbilitys;
     
     TRESGAME_API FTresKeybladeFormAbilityData();

@@ -6,16 +6,16 @@
 
 class ATresPawnBase;
 
-UCLASS(Abstract, ClassGroup=Custom, Config=Game, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, Blueprintable, ClassGroup=Custom, Config=Game, meta=(BlueprintSpawnableComponent))
 class UTresMovementComponentBase : public UPawnMovementComponent {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresPawnBase* CharacterOwner;
     
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresMovementComponentPostPhysicsTickFunction m_PostPhysicsTickFunction;
     
     UTresMovementComponentBase();

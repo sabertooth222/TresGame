@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FTresDeathSentenceArmorRevengeParam_e_ex357 {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName BaseParamID;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 RevengeStartArmorDamage;
     
     TRESGAME_API FTresDeathSentenceArmorRevengeParam_e_ex357();

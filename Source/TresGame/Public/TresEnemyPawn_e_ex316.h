@@ -1,39 +1,39 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "TresEnemyXIIIEPawnBase.h"
 #include "Engine/EngineTypes.h"
+#include "TresEnemyXIIIEPawnBase.h"
 #include "TresEnemyPawn_e_ex316.generated.h"
 
-class AActor;
-class ATresProjectileGenerator_e_ex313_DarkMine;
 class UPrimitiveComponent;
-class USphereComponent;
 class UTresAction1_e_ex316_Warp;
+class ATresProjectileGenerator_e_ex313_DarkMine;
+class USphereComponent;
+class AActor;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemyPawn_e_ex316 : public ATresEnemyXIIIEPawnBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresProjectileGenerator_e_ex313_DarkMine> m_pro_DarkMineGeneratorClass;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USphereComponent* MyPullCollisionComponent;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UTresAction1_e_ex316_Warp> m_WarpActionData;
     
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresProjectileGenerator_e_ex313_DarkMine* m_DarkMineManager;
     
 public:
     ATresEnemyPawn_e_ex316();
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnPullCollisionEndOverlap(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnPullCollisionBeginOverlap(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
     
 };

@@ -4,11 +4,11 @@
 #include "ETresPropertyTrackTermnation.h"
 #include "TresInterpTrackFloatProp.generated.h"
 
-UCLASS(CollapseCategories)
+UCLASS(Blueprintable, CollapseCategories)
 class TRESGAME_API UTresInterpTrackFloatProp : public UInterpTrackFloatProp {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresPropertyTrackTermnation m_TermnationType;
     
     UTresInterpTrackFloatProp();

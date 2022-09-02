@@ -7,14 +7,14 @@
 
 class UEnvQueryContext;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcEnvQueryTest_EnemyCount : public UEnvQueryTest {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UEnvQueryContext> IgnoreContext;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAIDataProviderFloatValue m_Radius;
     
     UTresNpcEnvQueryTest_EnemyCount();

@@ -1,49 +1,49 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "TresGumiShipEnemyGroupWipeOutData.h"
 #include "TresGumiShipActorCompoBase.h"
 #include "ETresGumiShipRailSlideType.h"
-#include "TresGumiShipEnemyGroupWipeOutData.h"
 #include "TresGMInputResult.h"
 #include "TresGumiShipRailSlideManager.generated.h"
 
 class ATresGumiShipPlayerControllerBase;
 
-UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTresGumiShipRailSlideManager : public UTresGumiShipActorCompoBase {
     GENERATED_BODY()
 public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FTresGumiShipFinishedRailSlide, const ETresGumiShipRailSlideType, eRailSlideType);
     
     UTresGumiShipRailSlideManager();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsTracking() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsSpTracking() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsRouteRailSliding() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsRailSliding() const;
     
 private:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnReraisePlayer();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnFinishedRailSlideSub();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnFinishedRailSlideCoolDown();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnFinishedRailSlideByEnemyGroupWipeOut(const FTresGumiShipEnemyGroupWipeOutData& rEnemyGroupWipeOutData);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnDeadPlayer();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnCheckCancelRailSlide(const FTresGMInputResult& rResult, const ATresGumiShipPlayerControllerBase* pController);
     
 };

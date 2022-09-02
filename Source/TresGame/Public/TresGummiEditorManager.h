@@ -6,132 +6,132 @@
 #include "TresRealGummiShipStruct.h"
 #include "TresGummiEditorManager.generated.h"
 
-class ATresHudGummiMenu;
-class ATresWorldMapCameraActor;
-class USceneComponent;
-class UStaticMeshComponent;
 class ATresGummiEditorActor;
 class ATresCreateGummiShipActor;
+class USceneComponent;
+class UStaticMeshComponent;
+class ATresWorldMapCameraActor;
 class ATresWorldMapPlayerController;
 class UTresUIManager;
+class ATresHudGummiMenu;
 class UTresGummiEditorDataTableSet;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresGummiEditorManager : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere, Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USceneComponent* m_pSceneComponent;
     
-    UPROPERTY(EditAnywhere, Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UStaticMeshComponent* m_pRootComponent;
     
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresCreateGummiShipActor> GummiShipActorRef;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresGummiEditorActor> GummiEditorActorRef;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresWorldMapCameraActor> WorldMapCameraActorRef;
     
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresGummiEditorActor* m_pGummiEditorActor;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresCreateGummiShipActor* m_pGummiShipActor;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     ATresCreateGummiShipActor* m_pDepatureShipActor[3];
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresWorldMapCameraActor* m_pWorldMapCameraActor;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresWorldMapPlayerController* m_pController;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresUIManager* m_pUIManager;
     
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresGummiShipSticker m_OldSticker;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresRealGummiShipStruct> m_BaseGummiData0;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresRealGummiShipStruct> m_BaseGummiData1;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresRealGummiShipStruct> m_BaseGummiData2;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresRealGummiShipStruct> m_BaseGummiData3;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresRealGummiShipStruct> m_BaseGummiData4;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresRealGummiShipStruct> m_BaseGummiData5;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresRealGummiShipStruct> m_BaseGummiData6;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresRealGummiShipStruct> m_BaseGummiData7;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresRealGummiShipStruct> m_BaseGummiData8;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresRealGummiShipStruct> m_BaseGummiData9;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresRealGummiShipStruct> m_DecoGummiData0;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresRealGummiShipStruct> m_DecoGummiData1;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresRealGummiShipStruct> m_DecoGummiData2;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresRealGummiShipStruct> m_DecoGummiData3;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresRealGummiShipStruct> m_DecoGummiData4;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresRealGummiShipStruct> m_DecoGummiData5;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresRealGummiShipStruct> m_DecoGummiData6;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresRealGummiShipStruct> m_DecoGummiData7;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresRealGummiShipStruct> m_DecoGummiData8;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresRealGummiShipStruct> m_DecoGummiData9;
     
 public:
     ATresGummiEditorManager();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ATresHudGummiMenu* GetHUD() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UTresGummiEditorDataTableSet* GetGummiEditorData() const;
     
 private:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void DelegateSpecialWeaponHelpOut(int32 InParam);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void DelegateGummiAbilityHelpOut(int32 InParam);
     
 };

@@ -1,41 +1,41 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TresEx304HitEffectInfo.h"
 #include "TresEnemyXIIIEPawnBase.h"
+#include "TresEx304HitEffectInfo.h"
 #include "TresFRThinkOfYouInterface.h"
 #include "TresEx304HitEffectManager.h"
 #include "TresEnemyPawn_e_ex304.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemyPawn_e_ex304 : public ATresEnemyXIIIEPawnBase, public ITresFRThinkOfYouInterface {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     FTresEx304HitEffectInfo m_HitEffectInfos[2];
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresEx304HitEffectManager> m_HitEffectManager;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_BattleEndHitPointPerAreaD;
     
     ATresEnemyPawn_e_ex304();
     UFUNCTION(BlueprintCallable)
     void SetEnableDebugFnishBlow(bool bEnable);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool IsSaixBodyTypeBlueBurst();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool IsHitAerialComboAttack();
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     bool IsDuringLeaderChangeOrFatalAttackCooldown();
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     bool IsDuringFatalAttackCooldownWithPlayerHeightCheck();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool IsDebugFnishBlow();
     
     UFUNCTION(BlueprintCallable)

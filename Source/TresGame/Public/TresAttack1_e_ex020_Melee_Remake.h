@@ -4,7 +4,7 @@
 #include "TresAttack_e_ex020_ReflectInterface.h"
 #include "TresAttack1_e_ex020_Melee_Remake.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAttack1_e_ex020_Melee_Remake : public UTresAttackDefinitionMelee, public ITresAttack_e_ex020_ReflectInterface {
     GENERATED_BODY()
 public:

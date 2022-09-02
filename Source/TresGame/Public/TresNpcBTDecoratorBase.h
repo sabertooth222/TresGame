@@ -3,7 +3,7 @@
 #include "BehaviorTree/BTDecorator.h"
 #include "TresNpcBTDecoratorBase.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcBTDecoratorBase : public UBTDecorator {
     GENERATED_BODY()
 public:

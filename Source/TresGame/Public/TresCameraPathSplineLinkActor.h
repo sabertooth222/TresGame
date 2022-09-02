@@ -5,11 +5,11 @@
 
 class ASQEX_SplineActor;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresCameraPathSplineLinkActor : public ATresCameraPathSplineActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ASQEX_SplineActor* m_LinkSplineActor;
     
     ATresCameraPathSplineLinkActor();

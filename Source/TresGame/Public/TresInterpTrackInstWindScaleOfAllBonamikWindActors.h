@@ -5,14 +5,14 @@
 
 class USQEX_BonamikWind_Component;
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API UTresInterpTrackInstWindScaleOfAllBonamikWindActors : public UInterpTrackInst {
     GENERATED_BODY()
 public:
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     TArray<USQEX_BonamikWind_Component*> m_WindComponents;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<float> m_OriginalValues;
     
     UTresInterpTrackInstWindScaleOfAllBonamikWindActors();

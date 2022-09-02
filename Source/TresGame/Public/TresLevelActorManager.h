@@ -5,11 +5,11 @@
 
 class USceneComponent;
 
-UCLASS(Config=Game)
+UCLASS(Blueprintable, Config=Game)
 class ATresLevelActorManager : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, Export, Transient, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     USceneComponent* TresRootComponent;
     
     ATresLevelActorManager();

@@ -3,7 +3,7 @@
 #include "TresActionDefinitionBase.h"
 #include "TresAction1_e_ex363_DarkRushModeChange.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAction1_e_ex363_DarkRushModeChange : public UTresActionDefinitionBase {
     GENERATED_BODY()
 public:

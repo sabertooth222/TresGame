@@ -1,21 +1,20 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "Engine/DataAsset.h"
 #include "TresUIActorSettingDataAsset.generated.h"
 
-class UTresUIActorPostProcessSetDataAsset;
 class ATresUIActorLightSet;
+class UTresUIActorPostProcessSetDataAsset;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresUIActorSettingDataAsset : public UDataAsset {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditDefaultsOnly)
-    TArray<TSubclassOf<ATresUIActorLightSet>> LightSets;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<TAssetSubclassOf<ATresUIActorLightSet>> LightSets;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<TAssetPtr<UTresUIActorPostProcessSetDataAsset>> PostProcessSets;
     
 public:

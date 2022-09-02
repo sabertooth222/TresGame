@@ -3,7 +3,7 @@
 #include "TresAttackDefinitionBase.h"
 #include "TresAttack2_e_ex306_Rush.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAttack2_e_ex306_Rush : public UTresAttackDefinitionBase {
     GENERATED_BODY()
 public:

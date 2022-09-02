@@ -5,12 +5,12 @@
 
 class UTresLevelEntityManager;
 
-UCLASS(Transient)
+UCLASS(Blueprintable, Transient)
 class TRESGAME_API UTresLevelEntityGroup : public UObject {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresLevelEntityManager* m_Manager;
     
 public:

@@ -3,7 +3,7 @@
 #include "TresPlayerState_AttackTemplate.h"
 #include "TresPlayerState_ReMindMiRxAttackMI.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_ReMindMiRxAttackMI : public UTresPlayerState_AttackTemplate {
     GENERATED_BODY()
 public:

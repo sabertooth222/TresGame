@@ -5,11 +5,11 @@
 
 class AActor;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcState_AFWaterRide : public UTresCharState_AFWaterRide {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AActor* m_pAttachActor;
     
     UTresNpcState_AFWaterRide();

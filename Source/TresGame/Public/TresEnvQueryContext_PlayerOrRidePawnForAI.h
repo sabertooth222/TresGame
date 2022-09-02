@@ -3,7 +3,7 @@
 #include "EnvironmentQuery/EnvQueryContext.h"
 #include "TresEnvQueryContext_PlayerOrRidePawnForAI.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UTresEnvQueryContext_PlayerOrRidePawnForAI : public UEnvQueryContext {
     GENERATED_BODY()
 public:

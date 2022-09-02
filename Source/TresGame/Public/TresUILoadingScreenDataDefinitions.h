@@ -6,20 +6,20 @@
 
 class UTexture;
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresUILoadingScreenDataDefinitions : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresUICharaID FromChara;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString CharaTextID;
     
-    UPROPERTY(EditDefaultsOnly)
-    UTexture* ImageAsset;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TAssetPtr<UTexture> ImageAsset;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString CommentTextID;
     
     TRESGAME_API FTresUILoadingScreenDataDefinitions();

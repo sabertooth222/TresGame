@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct FTresGumiShipMuzzleParam {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector m_vOffset;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRotator m_Rotate;
     
     TRESGAME_API FTresGumiShipMuzzleParam();

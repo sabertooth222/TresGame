@@ -4,7 +4,7 @@
 #include "TresStaticEQSItemComponentInterface.h"
 #include "TresStaticEQSItemCapsuleComponent.generated.h"
 
-UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTresStaticEQSItemCapsuleComponent : public UCapsuleComponent, public ITresStaticEQSItemComponentInterface {
     GENERATED_BODY()
 public:

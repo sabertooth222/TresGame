@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FTresFieldAddProjectileParam_e_ex357 {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float OffsetAngle;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Distance;
     
     TRESGAME_API FTresFieldAddProjectileParam_e_ex357();

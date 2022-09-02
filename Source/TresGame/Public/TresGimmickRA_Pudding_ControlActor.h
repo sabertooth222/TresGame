@@ -1,85 +1,85 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "ETresCommandKind.h"
 #include "TresGimmickSkeletalBase.h"
 #include "TresRaPuddingEffectRef.h"
 #include "TresRaPuddingPosition.h"
 #include "TresRaPuddingSchedule.h"
-#include "ETresCommandKind.h"
 #include "TresGimmickRA_Pudding_ControlActor.generated.h"
 
+class ATresGimmickRA_PuddingManager;
+class UTresReactorComponent;
 class UTresDebugEditorRaPuddingControllerComponent;
 class ATresPlayerControllerBase;
-class UTresReactorComponent;
-class ATresGimmickRA_PuddingManager;
 class UTresGimmickRA_Pudding_PhotoComponent;
 class ATresRaPuddingSplineActor;
 class UParticleSystem;
 class ATresCharPawnBase;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresGimmickRA_Pudding_ControlActor : public ATresGimmickSkeletalBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 WanderPudding: 1;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float WanderRange;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float WanderReactRange;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 ReactToPlayer: 1;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ReactDistance;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 ResetOnPCLeave: 1;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 IgnoreGravity: 1;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 IgnoreShutter: 1;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresRaPuddingEffectRef> EffectRefList;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresRaPuddingPosition> PositionInfoList;
     
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresRaPuddingSchedule> ScheduleList;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 DebugFlag_DebugDraw: 1;
     
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresDebugEditorRaPuddingControllerComponent* EditorInfoComp;
     
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresPlayerControllerBase* m_pPC;
     
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresReactorComponent* m_pReactor;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresGimmickRA_PuddingManager* m_pPudMng;
     
-    UPROPERTY(Export)
+    UPROPERTY(EditAnywhere, Export)
     TArray<TWeakObjectPtr<UTresGimmickRA_Pudding_PhotoComponent>> m_NormalCompList;
     
-    UPROPERTY(Export)
+    UPROPERTY(EditAnywhere, Export)
     TArray<TWeakObjectPtr<UTresGimmickRA_Pudding_PhotoComponent>> m_ExtraCompList;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     TMap<FName, TWeakObjectPtr<ATresRaPuddingSplineActor>> m_PositionDic;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     TMap<FName, TWeakObjectPtr<UParticleSystem>> m_EffectDic;
     
 public:

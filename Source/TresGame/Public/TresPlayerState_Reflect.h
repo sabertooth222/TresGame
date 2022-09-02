@@ -5,11 +5,11 @@
 
 class AActor;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_Reflect : public UTresCharState_Reflect {
     GENERATED_BODY()
 public:
-    UPROPERTY(DuplicateTransient, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     AActor* m_pTargetActor;
     
     UTresPlayerState_Reflect();

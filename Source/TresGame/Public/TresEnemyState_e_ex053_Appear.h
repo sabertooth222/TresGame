@@ -3,21 +3,21 @@
 #include "TresEnemyState_Appear.h"
 #include "TresEnemyState_e_ex053_Appear.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresEnemyState_e_ex053_Appear : public UTresEnemyState_Appear {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_PreAppearAnimText;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_PreAppearLoopAnimText;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_AppearAnimText;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_WaitTimer;
     
 public:

@@ -3,7 +3,7 @@
 #include "TresProjectileStaticMeshBase.h"
 #include "TresProjectile_e_bx901_RocketPunch.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresProjectile_e_bx901_RocketPunch : public ATresProjectileStaticMeshBase {
     GENERATED_BODY()
 public:

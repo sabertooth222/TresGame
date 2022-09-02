@@ -5,21 +5,21 @@
 #include "Engine/EngineTypes.h"
 #include "TresProjectile_e_ex721_CallBomb.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class ATresProjectile_e_ex721_CallBomb : public ATresProjectileBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector m_AppearEffectOffset;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_StartEmissionTime;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_StartTransitionTime;
     
     ATresProjectile_e_ex721_CallBomb();
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnProjectileBounce(const FHitResult& ImpactResult, const FVector& ImpactVelocity);
     
 };

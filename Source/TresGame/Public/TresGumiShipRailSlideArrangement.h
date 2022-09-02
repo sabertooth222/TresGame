@@ -3,14 +3,12 @@
 #include "TresGumiShipActorBase.h"
 #include "TresGumiShipRailSwitchInfos.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ESQEX_RAIL_SLIDE_DIR -FallbackName=ESQEX_RAIL_SLIDE_DIR
-#include "ESQEX_Enums.h"
-#include "ESQEX_RAIL_SLIDE_DIR.h"
 #include "FTresGumiShipRailSlideRailType.h"
 #include "TresGumiShipRailSlideArrangement.generated.h"
 
 class ATresRailSlideActor;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresGumiShipRailSlideArrangement : public ATresGumiShipActorBase {
     GENERATED_BODY()
 public:
@@ -27,7 +25,7 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresGumiShipRailSwitchInfos> m_RailSwitchInfo;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TWeakObjectPtr<ATresRailSlideActor> m_pBeginRailTarget;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

@@ -6,14 +6,14 @@
 
 class UNavigationQueryFilter;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresEnvQueryTest_WallDistance : public UEnvQueryTest {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MaxDistance;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UNavigationQueryFilter> NavigationFilter;
     
     UTresEnvQueryTest_WallDistance();

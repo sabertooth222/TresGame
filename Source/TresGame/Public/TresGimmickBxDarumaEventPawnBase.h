@@ -3,7 +3,7 @@
 #include "TresEventPawnBase.h"
 #include "TresGimmickBxDarumaEventPawnBase.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresGimmickBxDarumaEventPawnBase : public ATresEventPawnBase {
     GENERATED_BODY()
 public:

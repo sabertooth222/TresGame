@@ -3,7 +3,7 @@
 #include "TresVolume.h"
 #include "TresWinniePuzzleWallVolume.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresWinniePuzzleWallVolume : public ATresVolume {
     GENERATED_BODY()
 public:

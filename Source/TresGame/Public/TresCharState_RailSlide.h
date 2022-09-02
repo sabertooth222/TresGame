@@ -3,29 +3,29 @@
 #include "TresStateBase.h"
 #include "TresCharState_RailSlide.generated.h"
 
-class USQEX_SplineComponent;
 class ASQEX_SplineActor;
+class USQEX_SplineComponent;
 class UStaticMeshComponent;
-class AActor;
 class UTresLockonTargetComponent;
+class AActor;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresCharState_RailSlide : public UTresStateBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ASQEX_SplineActor* m_SplineActor;
     
-    UPROPERTY(Export, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     USQEX_SplineComponent* m_SplineComponent;
     
-    UPROPERTY(Export, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UStaticMeshComponent* m_pDoorComponent;
     
-    UPROPERTY(Export, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UTresLockonTargetComponent* m_pTargetComponent;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     AActor* m_pTargetActor;
     
     UTresCharState_RailSlide();

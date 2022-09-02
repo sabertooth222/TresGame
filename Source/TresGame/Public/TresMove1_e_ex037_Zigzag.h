@@ -3,7 +3,7 @@
 #include "TresLocomotionDefinitionFlyCodeDriven.h"
 #include "TresMove1_e_ex037_Zigzag.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresMove1_e_ex037_Zigzag : public UTresLocomotionDefinitionFlyCodeDriven {
     GENERATED_BODY()
 public:

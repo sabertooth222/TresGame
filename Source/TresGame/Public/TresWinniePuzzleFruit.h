@@ -10,31 +10,31 @@ class ATresWinniePuzzleRabbitPawn;
 class UTresWinniePuzzleUnitVibrationController;
 class UTresWinniePuzzleAutoIncreaseController;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresWinniePuzzleFruit : public ATresWinniePuzzleBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresWinniePuzzleRabbitPawn> RabbitPawn;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresWinniePuzzleLumpyPawn> LumpyPawn;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresWinniePuzzleCharacterBonusDecreaseParam DecreaseParam;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresWinniePuzzleUnitVibrationController* UnitVibrationCtrl;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresWinniePuzzleAutoIncreaseController* AutoIncreaseCtrl;
     
 private:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresWinniePuzzleRabbitPawn* m_pRabbitPawn;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresWinniePuzzleLumpyPawn* m_pLumpyPawn;
     
 public:

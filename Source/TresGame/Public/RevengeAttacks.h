@@ -9,11 +9,11 @@ USTRUCT(BlueprintType)
 struct FRevengeAttacks {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UTresActionDefinitionBase> RevengeAttackDefinition;
     
-    UPROPERTY(EditDefaultsOnly)
-    uint32 bAir: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 bAir: 1;
     
     TRESGAME_API FRevengeAttacks();
 };

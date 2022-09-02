@@ -6,34 +6,34 @@
 #include "TresProjectile_e_ex771_FlarePillarOmen.generated.h"
 
 class UParticleSystem;
+class ATresActor_e_ex771_Attract;
 class ATresProjectile_e_ex771_FlarePillar;
 class UParticleSystemComponent;
-class ATresActor_e_ex771_Attract;
 class AActor;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresProjectile_e_ex771_FlarePillarOmen : public ATresProjectileBase {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresEnemyEx771_FlarePillarAttractParam> m_AttractParamArray;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresProjectile_e_ex771_FlarePillar* m_FlarePillar;
     
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* m_FlarePillarOmenEff;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_pro_FlarePillarOmenEffData;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_pro_OmenTime;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresActor_e_ex771_Attract> m_pro_AttractClass;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AActor* m_pTarget;
     
     ATresProjectile_e_ex771_FlarePillarOmen();

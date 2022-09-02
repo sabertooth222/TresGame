@@ -3,7 +3,7 @@
 #include "TresStateBase.h"
 #include "TresCharState_HoldCamera.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresCharState_HoldCamera : public UTresStateBase {
     GENERATED_BODY()
 public:

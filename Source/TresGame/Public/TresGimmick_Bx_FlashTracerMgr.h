@@ -5,7 +5,7 @@
 #include "ETresUIHudBaymaxResult.h"
 #include "TresGimmick_Bx_FlashTracerMgr.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresGimmick_Bx_FlashTracerMgr : public AActor {
     GENERATED_BODY()
 public:
@@ -19,28 +19,28 @@ public:
     UFUNCTION(BlueprintCallable)
     void OpenResult(float Time, int32 Score, int32 Bonus, ETresUIHudBaymaxResult rankKind, bool RecordTime, bool RecordScore, ETresGimmickBxFlashTracerCourse Course);
     
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void OnClosedResult();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsValidDebugRank() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetHighScore(ETresGimmickBxFlashTracerCourse Course) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ETresUIHudBaymaxResult GetDebugRank() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetClearTime(ETresGimmickBxFlashTracerCourse Course) const;
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void DebugSetSec(float sec);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void DebugSetScore(int32 Score);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void DebugForceFinish();
     
 };

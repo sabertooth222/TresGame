@@ -7,47 +7,47 @@
 #include "UObject/NoExportTypes.h"
 #include "TresStaticEQSItemActor.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresStaticEQSItemActor : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FStringAssetReference QueryTemplate;
     
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float VoxelSize;
     
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ItemOverlapSize;
     
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBox Bounds;
     
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FIntVector VoxelNum;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     TArray<uint32> StaticEQSItemHashData;
     
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FVector> GeneratedItemPos;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     TArray<uint8> StaticEQSItemBits;
     
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(EditAnywhere)
     uint32 StaticEQSItemBitNum;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     TArray<uint32> StaticEQSItemSubBitsIndex;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     TArray<uint16> StaticEQSItemSubSplitPlane;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     TArray<uint8> StaticEQSItemSubBits;
     
-    UPROPERTY(AdvancedDisplay, VisibleAnywhere)
+    UPROPERTY(AdvancedDisplay, EditAnywhere)
     uint32 Version;
     
     ATresStaticEQSItemActor();

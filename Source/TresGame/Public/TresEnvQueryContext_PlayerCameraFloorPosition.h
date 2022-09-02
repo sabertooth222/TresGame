@@ -3,7 +3,7 @@
 #include "EnvironmentQuery/EnvQueryContext.h"
 #include "TresEnvQueryContext_PlayerCameraFloorPosition.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UTresEnvQueryContext_PlayerCameraFloorPosition : public UEnvQueryContext {
     GENERATED_BODY()
 public:

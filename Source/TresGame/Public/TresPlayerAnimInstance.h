@@ -5,12 +5,12 @@
 
 class ATresPlayerPawnBase;
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class UTresPlayerAnimInstance : public UTresCharAnimInstance {
     GENERATED_BODY()
 public:
     UTresPlayerAnimInstance();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ATresPlayerPawnBase* TryGetTresPlayerPawnOwner();
     
 };

@@ -3,11 +3,11 @@
 #include "Animation/AnimSingleNodeInstance.h"
 #include "TresGummiShipAnimInstance.generated.h"
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class UTresGummiShipAnimInstance : public UAnimSingleNodeInstance {
     GENERATED_BODY()
 public:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     int32 MontagePreviewStartSectionIdx;
     
     UTresGummiShipAnimInstance();

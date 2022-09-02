@@ -9,16 +9,16 @@ USTRUCT(BlueprintType)
 struct TRESGAME_API FTresLevelEntitySequenceConditionalAction {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere, Instanced, NoClear)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, NoClear, meta=(AllowPrivateAccess=true))
     UTresLevelEntitySequenceCondition* m_Condition;
     
-    UPROPERTY(EditAnywhere, Instanced, NoClear)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, NoClear, meta=(AllowPrivateAccess=true))
     UTresLevelEntitySequenceAction* m_Action;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_Abandonable;
     
-    UPROPERTY(EditAnywhere, Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTresLevelEntitySequenceCondition* m_AbandonCondition;
     
     FTresLevelEntitySequenceConditionalAction();

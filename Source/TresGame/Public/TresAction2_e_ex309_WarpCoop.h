@@ -3,7 +3,7 @@
 #include "TresAction2_e_ex309_Warp.h"
 #include "TresAction2_e_ex309_WarpCoop.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAction2_e_ex309_WarpCoop : public UTresAction2_e_ex309_Warp {
     GENERATED_BODY()
 public:

@@ -3,22 +3,22 @@
 #include "TresTaskBase.h"
 #include "TresFieldVoiceTask.generated.h"
 
-class UObject;
-class UAudioComponent;
 class UTresFieldVoice;
+class UAudioComponent;
+class UObject;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresFieldVoiceTask : public UTresTaskBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresFieldVoice* m_pAsset;
     
-    UPROPERTY(Export, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UAudioComponent* m_pAudio;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UObject* m_pWho;
     
 public:

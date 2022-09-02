@@ -3,7 +3,7 @@
 #include "TresAction_XIIILB_Base.h"
 #include "TresAction1_e_ex356_GoOutCard.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAction1_e_ex356_GoOutCard : public UTresAction_XIIILB_Base {
     GENERATED_BODY()
 public:

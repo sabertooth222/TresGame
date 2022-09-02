@@ -1,28 +1,28 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TresGimmickComponentBase.h"
-#include "TresGimmickDropPrizeTable.h"
 #include "TresGimmickPrizeVelocityData.h"
+#include "TresGimmickComponentBase.h"
 #include "TresDamageInfo.h"
+#include "TresGimmickDropPrizeTable.h"
 #include "TresPrizeGenComponent.generated.h"
 
 class UTresGimmickDropPrizeSet;
 
-UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTresPrizeGenComponent : public UTresGimmickComponentBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresGimmickDropPrizeSet* m_PrizeDataAsset;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresGimmickDropPrizeTable> m_PrizeDatas;
     
-    UPROPERTY(AdvancedDisplay, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresGimmickPrizeVelocityData m_PrizeVelocityData;
     
-    UPROPERTY(AdvancedDisplay, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_PrizeLivingTime;
     
 public:
@@ -33,10 +33,10 @@ public:
     UFUNCTION(BlueprintCallable)
     void BP_SpawnFoodstuffPrize(FName InKeyName, bool InForMagicDraw);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 BP_GetPrizeDataNum() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool BP_CheckMagicAttack(const FTresDamageInfo& InDamageInfo) const;
     
 };

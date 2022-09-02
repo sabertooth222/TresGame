@@ -5,7 +5,7 @@
 #include "GenericTeamAgentInterface.h"
 #include "TresBTDecorator_TeamMemberCount.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTDecorator_TeamMemberCount : public UBTDecorator {
     GENERATED_BODY()
 public:
@@ -15,7 +15,7 @@ public:
     UPROPERTY(EditAnywhere)
     TEnumAsByte<EArithmeticKeyOperation::Type> ArithmeticOperation;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_memberCount;
     
     UTresBTDecorator_TeamMemberCount();

@@ -3,7 +3,7 @@
 #include "TresGumiShipShootWeaponBase.h"
 #include "TresGumiShipShootWeaponMeteoro.generated.h"
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTresGumiShipShootWeaponMeteoro : public UTresGumiShipShootWeaponBase {
     GENERATED_BODY()
 public:

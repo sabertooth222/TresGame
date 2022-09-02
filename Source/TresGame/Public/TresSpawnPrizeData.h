@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FTresSpawnPrizeData : public FTresSpawnActorData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, VisibleDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float OverrideSphereRadius_;
     
     TRESGAME_API FTresSpawnPrizeData();

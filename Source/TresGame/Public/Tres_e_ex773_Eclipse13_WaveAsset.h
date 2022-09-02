@@ -4,11 +4,11 @@
 #include "Tres_e_ex773_Eclipse13_ShellMoveData.h"
 #include "Tres_e_ex773_Eclipse13_WaveAsset.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTres_e_ex773_Eclipse13_WaveAsset : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTres_e_ex773_Eclipse13_ShellMoveData> DataArray;
     
     UTres_e_ex773_Eclipse13_WaveAsset();

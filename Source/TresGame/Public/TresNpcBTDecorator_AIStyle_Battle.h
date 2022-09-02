@@ -4,11 +4,11 @@
 #include "ETresFNpcAIStyle_Battle.h"
 #include "TresNpcBTDecorator_AIStyle_Battle.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcBTDecorator_AIStyle_Battle : public UTresNpcBTDecoratorBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresFNpcAIStyle_Battle m_BattleStyle;
     
     UTresNpcBTDecorator_AIStyle_Battle();

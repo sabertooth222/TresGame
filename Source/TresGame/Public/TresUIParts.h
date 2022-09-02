@@ -7,68 +7,68 @@
 class UTresMoviePlayer;
 class UTresASProxy;
 class UTresASProxyTresCoreUIComponent;
-class USwfMovie;
 class UTresUIManager;
 class UTresASProxyTresControlsFloatTexture;
+class USwfMovie;
 class UGFxObject;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresUIParts : public UObject {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FString m_strAssetName;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresMoviePlayer* m_pMoviePlayer;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresASProxyTresCoreUIComponent* m_ASProxyUIComponent;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresUIManager* m_pUIManager;
     
 private:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FTresUIPreloadInfo m_PreloadInfo;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UTresASProxyTresControlsFloatTexture*> m_FloatTextures;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UTresASProxy*> m_ManagedASProxy;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     USwfMovie* m_SwfMovie;
     
 public:
     UTresUIParts();
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     int32 OnLoadIcon(const FString& Path);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool OnListRefreshData(UGFxObject* UIComponent, UGFxObject* AnchorComponent, int32 ListIndex, int32 PrevListIndex);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool OnListIndexChange(UGFxObject* UIComponent, UGFxObject* AnchorComponent, int32 ListIndex, int32 PrevListIndex);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool OnFocusOut(UGFxObject* UIComponent, bool MoveNext);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool OnFocusIn(UGFxObject* UIComponent);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnFloatTextureCallback(int32 ID, UGFxObject* FloatTextureMovieClip);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     int32 OnCallback(int32 ID, int32 Param);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool OnAnchorOut(UGFxObject* UIComponent, UGFxObject* AnchorComponent, int32 Index, int32 Dir);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool OnAnchorIn(UGFxObject* UIComponent, UGFxObject* AnchorComponent, int32 Index, int32 Dir);
     
 };

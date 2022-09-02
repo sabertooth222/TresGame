@@ -3,7 +3,7 @@
 #include "TresGumiShipRailSlideMovementCompoBase.h"
 #include "TresGumiShipRailSlideMovementCompo.generated.h"
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTresGumiShipRailSlideMovementCompo : public UTresGumiShipRailSlideMovementCompoBase {
     GENERATED_BODY()
 public:

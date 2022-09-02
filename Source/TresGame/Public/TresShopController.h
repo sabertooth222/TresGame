@@ -3,38 +3,38 @@
 #include "UObject/Object.h"
 #include "TresShopController.generated.h"
 
-class UTresUIManager;
-class UTresUIP_Shop;
 class USoundBase;
-class UTresUIP_Subtitle;
+class UTresUIManager;
 class ATresUIActor;
+class UTresUIP_Shop;
 class UPackage;
+class UTresUIP_Subtitle;
 class UTresUIGumiPartsDataAsset;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresShopController : public UObject {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresUIManager* m_UIManager;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresUIP_Shop* m_Shop;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresUIP_Subtitle* m_Subtitle;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresUIActor* m_UIActor;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     USoundBase* m_VoiceAsset;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UPackage* m_LoadedActorPackage;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresUIGumiPartsDataAsset* m_GumiPartsData;
     
 public:

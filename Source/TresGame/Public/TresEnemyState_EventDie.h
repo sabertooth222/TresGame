@@ -3,7 +3,7 @@
 #include "TresEnemyState_Die.h"
 #include "TresEnemyState_EventDie.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresEnemyState_EventDie : public UTresEnemyState_Die {
     GENERATED_BODY()
 public:

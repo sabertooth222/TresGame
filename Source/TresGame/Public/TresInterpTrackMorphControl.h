@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Matinee/InterpTrackFloatBase.h"
 #include "TresInterpTrackMorphControlKey.h"
+#include "Matinee/InterpTrackFloatBase.h"
 #include "TresInterpTrackMorphControl.generated.h"
 
-UCLASS(CollapseCategories)
+UCLASS(Blueprintable, CollapseCategories)
 class TRESGAME_API UTresInterpTrackMorphControl : public UInterpTrackFloatBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere, EditFixedSize)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, EditFixedSize, meta=(AllowPrivateAccess=true))
     TArray<FTresInterpTrackMorphControlKey> m_Keys;
     
     UTresInterpTrackMorphControl();

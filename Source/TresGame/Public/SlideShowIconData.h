@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct FSlideShowIconData {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
-    UTexture* Texture;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TAssetPtr<UTexture> Texture;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_Code;
     
     TRESGAME_API FSlideShowIconData();

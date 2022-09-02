@@ -3,14 +3,14 @@
 #include "Matinee/InterpTrackMove.h"
 #include "TresInterpTrackRelativeMove.generated.h"
 
-UCLASS(CollapseCategories)
+UCLASS(Blueprintable, CollapseCategories)
 class TRESGAME_API UTresInterpTrackRelativeMove : public UInterpTrackMove {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_ParentGroupName;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_BoneSocketName;
     
     UTresInterpTrackRelativeMove();

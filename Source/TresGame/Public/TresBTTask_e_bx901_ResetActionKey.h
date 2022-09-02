@@ -3,11 +3,11 @@
 #include "TresBTTask_Action.h"
 #include "TresBTTask_e_bx901_ResetActionKey.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTTask_e_bx901_ResetActionKey : public UTresBTTask_Action {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_ActionKeName;
     
     UTresBTTask_e_bx901_ResetActionKey();

@@ -3,7 +3,7 @@
 #include "TresUIParts.h"
 #include "TresCockpitParts.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresCockpitParts : public UTresUIParts {
     GENERATED_BODY()
 public:

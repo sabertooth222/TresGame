@@ -3,11 +3,11 @@
 #include "TresLocomotionDefinitionAirCodeDriven.h"
 #include "TresMove_e_ex354_ProvokeWalkAir.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresMove_e_ex354_ProvokeWalkAir : public UTresLocomotionDefinitionAirCodeDriven {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bInvincible;
     
     UTresMove_e_ex354_ProvokeWalkAir();

@@ -4,20 +4,20 @@
 #include "ETresValueModifierMethod.h"
 #include "TresBTService_Rage.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTService_Rage : public UBTService {
     GENERATED_BODY()
 public:
     UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresValueModifierMethod::Type> m_ValueModifierType;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_Value;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_ValueRandomDeviation;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_Interval;
     
     UTresBTService_Rage();

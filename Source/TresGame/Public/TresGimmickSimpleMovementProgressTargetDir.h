@@ -3,7 +3,7 @@
 #include "TresGimmickSimpleMovementProgressStraight.h"
 #include "TresGimmickSimpleMovementProgressTargetDir.generated.h"
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class UTresGimmickSimpleMovementProgressTargetDir : public UTresGimmickSimpleMovementProgressStraight {
     GENERATED_BODY()
 public:

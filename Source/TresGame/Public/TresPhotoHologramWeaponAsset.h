@@ -7,17 +7,17 @@
 class UDataTable;
 class UTresAnimSet;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPhotoHologramWeaponAsset : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresEquipmentAssetUnit> FixedEquips;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UDataTable* PoseDataTable;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UTresAnimSet*> ReplaceAnimSets;
     
     UTresPhotoHologramWeaponAsset();

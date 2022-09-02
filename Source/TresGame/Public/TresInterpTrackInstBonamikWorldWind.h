@@ -6,17 +6,17 @@
 class USQEX_KBD_Component;
 class USQEX_BonamikWind;
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API UTresInterpTrackInstBonamikWorldWind : public UInterpTrackInst {
     GENERATED_BODY()
 public:
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USQEX_KBD_Component* m_KBDComp;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USQEX_BonamikWind* m_pBonamikWind;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_LastKeyIndex;
     
     UTresInterpTrackInstBonamikWorldWind();

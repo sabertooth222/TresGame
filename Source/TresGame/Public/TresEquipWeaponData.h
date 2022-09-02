@@ -4,12 +4,12 @@
 #include "TresEquipmentAssetUnit.h"
 #include "TresEquipWeaponData.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API UTresEquipWeaponData : public UTresEquipDataBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresEquipmentAssetUnit> m_Equips;
     
 public:

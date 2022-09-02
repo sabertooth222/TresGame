@@ -7,18 +7,18 @@
 
 class USoundBase;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemyXIIILEPawnBase : public ATresEnemyXIIILPawnBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresEnemyXIIILEPlayVoiceKind m_RevengePlayVoiceKind;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<USoundBase*> m_RevengetVoiceList;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_VisibleTime;
     
 public:
@@ -29,7 +29,7 @@ public:
     UFUNCTION()
     void OnCtorStateCallBackXIIIE(TEnumAsByte<ETresStateID> inStateID);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool IsDuringWarp();
     
 };

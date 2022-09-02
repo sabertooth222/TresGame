@@ -3,7 +3,7 @@
 #include "TresEnemyState_Idle.h"
 #include "TresEnemyState_GigasBase_Idle.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresEnemyState_GigasBase_Idle : public UTresEnemyState_Idle {
     GENERATED_BODY()
 public:

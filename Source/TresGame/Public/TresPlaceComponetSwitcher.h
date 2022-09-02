@@ -5,22 +5,22 @@
 #include "TresClippingInterface.h"
 #include "TresPlaceComponetSwitcher.generated.h"
 
+class UObject;
 class UActorComponent;
 class USceneComponent;
-class UObject;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresPlaceComponetSwitcher : public AActor, public ITresClippingInterface {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USceneComponent* MyRoot;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float WorkDistance_;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bRegisterSelf_;
     
 public:

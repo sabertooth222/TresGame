@@ -5,12 +5,12 @@
 
 class ATresFriendLinkPawnMikeBowling;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_FRMikeBowling : public UTresCharState_FRMikeBowling {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresFriendLinkPawnMikeBowling* m_pObj;
     
 public:

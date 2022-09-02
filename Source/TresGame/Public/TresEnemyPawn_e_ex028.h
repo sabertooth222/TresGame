@@ -4,14 +4,14 @@
 #include "ETresEnemy_e_ex028_BodyColor.h"
 #include "TresEnemyPawn_e_ex028.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemyPawn_e_ex028 : public ATresEnemyPawnBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresEnemy_e_ex028_BodyColor> m_pro_DefaultBodyColor;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(EditAnywhere)
     TArray<TEnumAsByte<ETresEnemy_e_ex028_BodyColor>> m_pro_BodyColorArray;
     
     ATresEnemyPawn_e_ex028();

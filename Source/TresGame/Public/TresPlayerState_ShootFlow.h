@@ -3,24 +3,24 @@
 #include "TresCharState_Attack.h"
 #include "TresPlayerState_ShootFlow.generated.h"
 
-class UParticleSystemComponent;
-class UTresLockonTargetComponent;
 class ATresProjectileBase;
+class UTresLockonTargetComponent;
+class UParticleSystemComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_ShootFlow : public UTresCharState_Attack {
     GENERATED_BODY()
 public:
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresLockonTargetComponent* m_pComponent;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresProjectileBase* m_pShotProjectile;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<ATresProjectileBase*> m_ProjectileList;
     
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     TArray<UParticleSystemComponent*> m_EffectList;
     
     UTresPlayerState_ShootFlow();

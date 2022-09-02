@@ -3,7 +3,7 @@
 #include "BehaviorTree/Services/BTService_BlackboardBase.h"
 #include "TresNpcBTService_SetCureTargetBB.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcBTService_SetCureTargetBB : public UBTService_BlackboardBase {
     GENERATED_BODY()
 public:

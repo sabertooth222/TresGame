@@ -5,11 +5,11 @@
 
 class UTresLockonTargetComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcState_n_ex002_FRGoofySora : public UTresStateBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresLockonTargetComponent* m_LockonTarget;
     
     UTresNpcState_n_ex002_FRGoofySora();

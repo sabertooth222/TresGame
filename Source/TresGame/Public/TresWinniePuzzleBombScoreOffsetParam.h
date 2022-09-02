@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FTresWinniePuzzleBombScoreOffsetParam {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 Column;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector Offset;
     
     TRESGAME_API FTresWinniePuzzleBombScoreOffsetParam();

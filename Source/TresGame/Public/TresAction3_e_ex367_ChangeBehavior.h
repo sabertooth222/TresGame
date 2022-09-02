@@ -5,14 +5,14 @@
 
 class UBehaviorTree;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresAction3_e_ex367_ChangeBehavior : public UTresActionDefinitionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UBehaviorTree* m_Behavior;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_ChangeMine;
     
     UTresAction3_e_ex367_ChangeBehavior();

@@ -5,11 +5,11 @@
 
 class ATresCharPawnBase;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresCharState_UseItem : public UTresStateBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresCharPawnBase* m_pTargetPawn;
     
     UTresCharState_UseItem();

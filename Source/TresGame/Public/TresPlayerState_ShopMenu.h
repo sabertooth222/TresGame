@@ -6,14 +6,14 @@
 class AActor;
 class UPrimitiveComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_ShopMenu : public UTresCharState_ShopMenu {
     GENERATED_BODY()
 public:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     AActor* m_pTargetActor;
     
-    UPROPERTY(Export, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UPrimitiveComponent* m_pComponent;
     
     UTresPlayerState_ShopMenu();

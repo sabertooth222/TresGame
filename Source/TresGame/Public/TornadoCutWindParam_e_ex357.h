@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FTornadoCutWindParam_e_ex357 {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Distance;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float WindForce;
     
     TRESGAME_API FTornadoCutWindParam_e_ex357();

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "Tres_e_bx903Shine_Task.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTres_e_bx903Shine_Task {
     GENERATED_BODY()
 public:

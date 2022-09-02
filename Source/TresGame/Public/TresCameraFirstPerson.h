@@ -7,7 +7,7 @@
 class ATresCameraFirstPerson;
 class UObject;
 
-UCLASS(NotPlaceable)
+UCLASS(Blueprintable, NotPlaceable)
 class ATresCameraFirstPerson : public ATresCameraTarget {
     GENERATED_BODY()
 public:

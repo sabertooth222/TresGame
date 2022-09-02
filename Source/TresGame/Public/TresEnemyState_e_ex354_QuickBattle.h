@@ -3,7 +3,7 @@
 #include "TresStateBase.h"
 #include "TresEnemyState_e_ex354_QuickBattle.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresEnemyState_e_ex354_QuickBattle : public UTresStateBase {
     GENERATED_BODY()
 public:

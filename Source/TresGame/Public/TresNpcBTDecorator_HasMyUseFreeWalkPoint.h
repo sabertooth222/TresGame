@@ -3,7 +3,7 @@
 #include "TresNpcBTDecoratorBase.h"
 #include "TresNpcBTDecorator_HasMyUseFreeWalkPoint.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcBTDecorator_HasMyUseFreeWalkPoint : public UTresNpcBTDecoratorBase {
     GENERATED_BODY()
 public:

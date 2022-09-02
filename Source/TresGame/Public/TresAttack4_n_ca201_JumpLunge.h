@@ -3,7 +3,7 @@
 #include "TresNpcAttackDefinitionJumpBase.h"
 #include "TresAttack4_n_ca201_JumpLunge.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAttack4_n_ca201_JumpLunge : public UTresNpcAttackDefinitionJumpBase {
     GENERATED_BODY()
 public:

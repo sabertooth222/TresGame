@@ -4,14 +4,14 @@
 #include "BehaviorTree/BehaviorTreeTypes.h"
 #include "TresBTTask_BlackboardCopyKey.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTTask_BlackboardCopyKey : public UBTTaskNode {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlackboardKeySelector m_BlackboardKey;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlackboardKeySelector m_BlackboardKeyValueB;
     
     UTresBTTask_BlackboardCopyKey();

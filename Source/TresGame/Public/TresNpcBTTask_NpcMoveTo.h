@@ -3,11 +3,11 @@
 #include "TresBTTask_MoveTo.h"
 #include "TresNpcBTTask_NpcMoveTo.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcBTTask_NpcMoveTo : public UTresBTTask_MoveTo {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bWalk;
     
     UTresNpcBTTask_NpcMoveTo();

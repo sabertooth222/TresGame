@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FTresRemunerationData {
     GENERATED_BODY()
 public:
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(EditAnywhere)
     uint32 Crc;
     
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FName> ItemKeyArray;
     
     TRESGAME_API FTresRemunerationData();

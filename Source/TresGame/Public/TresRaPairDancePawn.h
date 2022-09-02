@@ -5,12 +5,12 @@
 
 class ATresRaFestivalDanceManager;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresRaPairDancePawn : public ATresCharPawnBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresRaFestivalDanceManager* m_pDanceMng;
     
 public:

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "TresControlledRandomDistribution_Uniform.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresControlledRandomDistribution_Uniform {
     GENERATED_BODY()
 public:

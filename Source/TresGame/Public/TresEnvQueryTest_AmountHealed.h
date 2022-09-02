@@ -1,18 +1,18 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EnvironmentQuery/EnvQueryTest.h"
 #include "DataProviders/AIDataProvider.h"
+#include "EnvironmentQuery/EnvQueryTest.h"
 #include "DataProviders/AIDataProvider.h"
 #include "TresEnvQueryTest_AmountHealed.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresEnvQueryTest_AmountHealed : public UEnvQueryTest {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAIDataProviderIntValue GetAmountHealed_Seconds;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAIDataProviderBoolValue Percent;
     
     UTresEnvQueryTest_AmountHealed();

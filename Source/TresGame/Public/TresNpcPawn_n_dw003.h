@@ -7,55 +7,55 @@
 class ATresAccompanyPawnBase;
 class UParticleSystem;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresNpcPawn_n_dw003 : public ATresNpcPawnBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_EffDevilWave;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_PawnID;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_AppendCure;
     
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresAccompanyPawnBase> m_FR_PopppingHolyPawnClass;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresAccompanyPawnBase> m_FR_UltimateEndPawnClass;
     
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_IsAquaLinkMode;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_AquaLinkTimer;
     
 public:
     ATresNpcPawn_n_dw003();
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool IsDevilWaveSlowMove() const;
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool IsDevilWaveCycloneMode() const;
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool IsDevilWaveCoreOpen() const;
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool IsDevilEyeColorRed() const;
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool IsAITargetDevilWave() const;
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool IsAITargetDevilTower() const;
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool IsAITargetDarkSide() const;
     
 };

@@ -6,15 +6,15 @@
 class UTresTaskExecuterBase;
 class UTresTsAwardTask;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class UTresTsGameFlowTask : public UTresTaskBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresTaskExecuterBase* m_pTaskExecuter;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresTsAwardTask* m_pAwardTask;
     
 public:

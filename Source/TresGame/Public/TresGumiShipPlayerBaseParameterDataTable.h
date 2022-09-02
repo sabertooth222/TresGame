@@ -6,17 +6,17 @@
 #include "TresGumiShipPlayerBaseTrackingParameter.h"
 #include "TresGumiShipPlayerBaseParameterDataTable.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresGumiShipPlayerBaseParameterDataTable : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresGumiShipPlayerBaseCommonParameter m_Common;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresGumiShipPlayerBaseMovementParameter m_Movement;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresGumiShipPlayerBaseTrackingParameter m_Tracking;
     
     TRESGAME_API FTresGumiShipPlayerBaseParameterDataTable();

@@ -5,12 +5,12 @@
 
 class ATresGimmickRA_Impression_SplashWater;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_WaterPlay : public UTresPlayerState_OneAction {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresGimmickRA_Impression_SplashWater* m_pWaterPlayGimmick;
     
 public:

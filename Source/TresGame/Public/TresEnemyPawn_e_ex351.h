@@ -2,122 +2,122 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "TresEnemyXIIILEPawnBase.h"
-#include "TresEnemyEx351AfterImageVisibleWorker.h"
 #include "TresEnemyEx351AfterImageEffect.h"
+#include "TresEnemyEx351AfterImageVisibleWorker.h"
 #include "ETresStateID.h"
 #include "ETresEnemyEx351TimeRushEvent.h"
 #include "TresEnemyPawn_e_ex351.generated.h"
 
-class ATresEnemyPawn_e_ex351;
-class UParticleSystem;
-class USoundBase;
-class UObject;
 class UCurveFloat;
+class ATresEnemyPawn_e_ex351;
+class UObject;
+class USoundBase;
+class UParticleSystem;
 class UParticleSystemComponent;
 class ATresProjectileBase;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemyPawn_e_ex351 : public ATresEnemyXIIILEPawnBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresEnemyPawn_e_ex351> m_AvatarPawnClass;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 m_bIsAvatarPawn: 1;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     FTresEnemyEx351AfterImageEffect m_AfterImageEffects[5];
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_SlowFadeTime;
     
 private:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_AfterImageStartVisibleTime;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_AfterImageFront;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_AfterImageLeftRight;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresEnemyEx351AfterImageVisibleWorker> m_AfterImageVisibleWorker;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_NegativeReversalEffectData;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TArray<TEnumAsByte<ETresStateID>> m_TimeStopCanSlowStates;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TArray<TEnumAsByte<ETresStateID>> m_TimeRushNotSendRemoteEventStates;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FName> m_TimeRushBaseDataTableIDNameList;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_TimeRushWeatherEffectData;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_TimeRushFloorEffectData;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_TimeRushLongHandEffectData;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_TimeRushShortHandEffectData;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundBase* m_TimeRushAudioData;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_TimeRushAudioFadeOutTime;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UCurveFloat* m_TimeRushLongHandRewindCurveData;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_TimeRushInvisibleAttackNum;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 m_bIsTimeRushShutDownFreezeShot: 1;
     
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* m_NegativeReversalEffectCmp;
     
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* m_TimeRushWeatherEffectCmp;
     
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* m_TimeRushFloorEffectCmp;
     
-    UPROPERTY(Export, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* m_TimeRushLongHandEffectCmp;
     
-    UPROPERTY(Export, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* m_TimeRushShortHandEffectCmp;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresProjectileBase> m_MaliceWhipSmallContinuousProjectileClass;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_MaliceWhipFloorEffectData;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_ChangeLastAttackHitNum;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_SlowRateStartTime;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_SlowRate;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_SmallContinuousStartTime;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<USoundBase*> m_AirMaliceWhipVoiceList;
     
 public:
@@ -125,46 +125,46 @@ public:
     UFUNCTION(BlueprintCallable)
     static void TimeRushSendEvent(UObject* WorldContextObject, ETresEnemyEx351TimeRushEvent EventType);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool IsTimeStopSlow();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool IsTimeRushStartReazonDamageReaction();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool IsTimeRushFinishOneCycle();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool IsTimeRush() const;
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool IsTakaDamageTimeStopCancel();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool IsHitWhipComboAttack();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool IsHitMaliceWhipAttack();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool IsForceWarpIn();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     int32 IsEndTimeRushComboNum();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool IsEndAllTimeRushCombo();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool IsConditionFinalTimeRush() const;
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool IsArmorBreakAfterWarp();
     
     UFUNCTION(BlueprintCallable)
     void DebugStartTimeRushCombo();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void DebugSetTimeRushComboIndex(int32 Index);
     
     UFUNCTION(BlueprintCallable)

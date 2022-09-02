@@ -3,7 +3,7 @@
 #include "TresGimmickSkeletalBase.h"
 #include "TresGimmickGigas.generated.h"
 
-UCLASS(Abstract, Config=Game)
+UCLASS(Abstract, Blueprintable, Config=Game)
 class ATresGimmickGigas : public ATresGimmickSkeletalBase {
     GENERATED_BODY()
 public:

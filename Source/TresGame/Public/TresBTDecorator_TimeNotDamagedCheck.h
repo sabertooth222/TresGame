@@ -3,7 +3,7 @@
 #include "TresBTDecorator_ActorValueCheckBase.h"
 #include "TresBTDecorator_TimeNotDamagedCheck.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTDecorator_TimeNotDamagedCheck : public UTresBTDecorator_ActorValueCheckBase {
     GENERATED_BODY()
 public:

@@ -3,7 +3,7 @@
 #include "TresCharState_UseItem.h"
 #include "TresNpcState_UseItem.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcState_UseItem : public UTresCharState_UseItem {
     GENERATED_BODY()
 public:

@@ -6,14 +6,14 @@
 class AActor;
 class USceneComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresCharState_PoleTurn : public UTresStateBase {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AActor* m_pHitActor;
     
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USceneComponent* m_pHitComponent;
     
     UTresCharState_PoleTurn();

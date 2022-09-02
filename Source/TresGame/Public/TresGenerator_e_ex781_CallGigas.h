@@ -8,21 +8,21 @@
 class UTresStateBase;
 class ATresEnemyPawnBase;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresGenerator_e_ex781_CallGigas : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresE_EX781_CallGigasPatternParam> m_GigasPatternParam;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<TSubclassOf<UTresStateBase>> m_GigasActionList;
     
 private:
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     TWeakObjectPtr<AActor> m_MyTarget;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresEnemyPawnBase* m_EndGigas;
     
 public:

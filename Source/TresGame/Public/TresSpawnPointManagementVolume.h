@@ -6,18 +6,18 @@
 
 class ATresSpawnPointManagementVolume;
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API ATresSpawnPointManagementVolume : public ATresVolume {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_WeldOuterInitial;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresSpawnPointSet> m_PointSet;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<ATresSpawnPointManagementVolume*> m_InnerVolumes;
     
 public:
@@ -25,7 +25,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetWeldOuter(bool WeldOuter);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool GetWeldOuter() const;
     
 };

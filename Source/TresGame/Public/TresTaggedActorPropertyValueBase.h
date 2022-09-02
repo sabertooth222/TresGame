@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "TresTaggedActorPropertyValueBase.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresTaggedActorPropertyValueBase {
     GENERATED_BODY()
 public:

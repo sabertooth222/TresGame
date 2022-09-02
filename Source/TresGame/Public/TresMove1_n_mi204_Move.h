@@ -5,15 +5,15 @@
 
 class UEnvQuery;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresMove1_n_mi204_Move : public UTresNpcLocomotionDefinitionLand {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UEnvQuery* m_WarpEQSQuery;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_WarpStartPathDistance;
     
 public:

@@ -5,11 +5,11 @@
 
 class UInstancedStaticMeshComponent;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresBxCar2TyreActor : public ATresBxCarActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UInstancedStaticMeshComponent* InstancedStaticMeshEx;
     
     ATresBxCar2TyreActor();

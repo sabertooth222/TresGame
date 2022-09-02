@@ -5,12 +5,12 @@
 
 class UParticleSystem;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresProjectile_e_ex046_BlizzardBreath : public ATresProjectileBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_MapHitEffect;
     
 public:

@@ -9,37 +9,37 @@ USTRUCT(BlueprintType)
 struct FTresTrackAttachKey {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_Time;
     
-    UPROPERTY(EditAnywhere)
-    uint32 m_bAttach: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bAttach: 1;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AActor* m_ParentActor;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_BoneSocketName;
     
     UPROPERTY(EditAnywhere)
     TEnumAsByte<EAttachLocation::Type> m_AttachLocationType;
     
-    UPROPERTY(EditAnywhere)
-    uint32 m_bWeldSimulatedBodies: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bWeldSimulatedBodies: 1;
     
-    UPROPERTY(EditAnywhere)
-    uint32 m_bAbsoluteLocation: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bAbsoluteLocation: 1;
     
-    UPROPERTY(EditAnywhere)
-    uint32 m_bAbsoluteRotation: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bAbsoluteRotation: 1;
     
-    UPROPERTY(EditAnywhere)
-    uint32 m_bAbsoluteScale: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bAbsoluteScale: 1;
     
-    UPROPERTY(EditAnywhere)
-    uint32 m_bUseGroupName: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bUseGroupName: 1;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_AttachGroupName;
     
     TRESGAME_API FTresTrackAttachKey();

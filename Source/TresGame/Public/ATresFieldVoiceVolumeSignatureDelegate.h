@@ -4,5 +4,5 @@
 
 class UTresFieldVoiceBluePrint;
 
-UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FATresFieldVoiceVolumeSignature, FName, UserName, UTresFieldVoiceBluePrint*, bp);
+UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FATresFieldVoiceVolumeSignature, FName, UserName, UTresFieldVoiceBluePrint*, bp);
 

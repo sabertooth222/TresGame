@@ -3,7 +3,7 @@
 #include "TresActionDefinitionBase.h"
 #include "TresAction2_GigasBase_Shutdown.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAction2_GigasBase_Shutdown : public UTresActionDefinitionBase {
     GENERATED_BODY()
 public:

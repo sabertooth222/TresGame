@@ -3,11 +3,11 @@
 #include "BehaviorTree/BTTaskNode.h"
 #include "TresNpcBTTask_SetFreeWalkMoveType.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcBTTask_SetFreeWalkMoveType : public UBTTaskNode {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bWalk;
     
     UTresNpcBTTask_SetFreeWalkMoveType();

@@ -3,7 +3,7 @@
 #include "TresASProxy.h"
 #include "TresASProxyTresDataListItemData.generated.h"
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class UTresASProxyTresDataListItemData : public UTresASProxy {
     GENERATED_BODY()
 public:

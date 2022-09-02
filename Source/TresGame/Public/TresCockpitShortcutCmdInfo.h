@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FTresCockpitShortcutCmdInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     FTresCockpitCmd m_cockpitCmdList[4];
     
     TRESGAME_API FTresCockpitShortcutCmdInfo();

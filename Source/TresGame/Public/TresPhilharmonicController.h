@@ -7,18 +7,18 @@ class UTresUIManager;
 class UTresUIP_Philharmonic;
 class UDataTable;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPhilharmonicController : public UObject {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresUIManager* m_UIManager;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresUIP_Philharmonic* m_Philharmonic;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UDataTable* m_PhilharmonicData;
     
 public:

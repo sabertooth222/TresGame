@@ -9,10 +9,10 @@ USTRUCT(BlueprintType)
 struct FTresRaFestivalReplaceMeshData {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USkeletalMesh* m_MeshData;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UMaterialInterface* m_MatData;
     
     TRESGAME_API FTresRaFestivalReplaceMeshData();

@@ -1,97 +1,97 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TresEnemyXIIILDPawnBase.h"
-#include "ETresBodyCollReactionType.h"
-#include "EX359_EffectGroupID.h"
-#include "VoiceSet_e_ex359.h"
 #include "EX359_RemoteEventID.h"
+#include "TresEnemyXIIILDPawnBase.h"
+#include "EX359_EffectGroupID.h"
+#include "ETresBodyCollReactionType.h"
+#include "VoiceSet_e_ex359.h"
 #include "TresEnemyPawn_e_ex359.generated.h"
 
-class UParticleSystemComponent;
 class USplineComponent;
 class UParticleSystem;
+class UParticleSystemComponent;
 class ATresWeaponBase;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemyPawn_e_ex359 : public ATresEnemyXIIILDPawnBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresBodyCollReactionType m_BodyReactionTypeWhileStun;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresBodyCollReactionType m_BodyReactionTypeWhileFinalBrake;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bIgnoreBodyReacyionNotifyWhileFinalBrake;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresBodyCollReactionType m_BodyReactionTypeWhileArmorMode;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     FEX359_EffectGroupID m_GroupID[7];
     
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USplineComponent* m_SplineComp;
     
-    UPROPERTY(AdvancedDisplay, BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bBonamikResetBody;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_WhiteOutParticleClass;
     
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* m_WhiteOutParticleComp;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_FinalBrakeFloorParticleClass;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     FEX359_RemoteEventID m_RemoteEventIDArray[6];
     
-    UPROPERTY(AdvancedDisplay, EditDefaultsOnly)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_ArmorBrakeBlowPower;
     
-    UPROPERTY(AdvancedDisplay, EditDefaultsOnly)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_ArmorBrakeBlowDamageStartBrakeTime;
     
-    UPROPERTY(AdvancedDisplay, EditDefaultsOnly)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_ArmorBrakeBlowDamageVelocityZ;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     FVoiceSet_e_ex359 m_VoiceGroupSetArray[5];
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fMaxAccelVoiceProhibitTime;
     
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresWeaponBase* m_pWeaponKeyBlade;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresWeaponBase* m_pWeaponClaymore;
     
 public:
     ATresEnemyPawn_e_ex359();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsNowFinalBrake() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsNowBerserkCombo() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsNowAirCombo() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsFinalBrakeEnd() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsFinalBrakeArmorBrakeSucceeded() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsFastMoveMode() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsDamageBodyReactionCoroutineFinished() const;
     
 };

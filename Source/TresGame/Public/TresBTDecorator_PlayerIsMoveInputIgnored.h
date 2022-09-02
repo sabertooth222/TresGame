@@ -3,7 +3,7 @@
 #include "BehaviorTree/BTDecorator.h"
 #include "TresBTDecorator_PlayerIsMoveInputIgnored.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTDecorator_PlayerIsMoveInputIgnored : public UBTDecorator {
     GENERATED_BODY()
 public:

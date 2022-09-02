@@ -6,14 +6,14 @@
 
 class ATresProjectileBase;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresAttack16_e_ex781_IllegalMagicWater : public UTresAttackDefinitionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresProjectileBase> m_BulletProjectile;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fThrowAngle;
     
     UTresAttack16_e_ex781_IllegalMagicWater();

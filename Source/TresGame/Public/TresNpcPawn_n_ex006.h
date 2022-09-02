@@ -6,11 +6,11 @@
 
 class ATresAccompanyPawnBase;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresNpcPawn_n_ex006 : public ATresNpcPawnBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresAccompanyPawnBase> m_FRBlizzagaBoardBP;
     
     ATresNpcPawn_n_ex006();

@@ -7,13 +7,13 @@ USTRUCT(BlueprintType)
 struct FTresWinniePuzzleTotalScoreEvalution {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 totalScore;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     WinniePuzzleTotalScoreEvalution Evalution;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<int32> GotItemNumList;
     
     TRESGAME_API FTresWinniePuzzleTotalScoreEvalution();

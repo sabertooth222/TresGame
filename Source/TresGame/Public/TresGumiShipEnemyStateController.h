@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "ETresGumiShipSplineEventType.h"
 #include "Components/ActorComponent.h"
 #include "TresGumiShipEnemyUsableAttackMethodData.h"
-#include "ETresGumiShipSplineEventType.h"
 #include "ETresGumiShipEnemyStateID.h"
 #include "ETresGumiShipEnemyStateResult.h"
 #include "TresGumiShipEnemyStateController.generated.h"
@@ -14,19 +14,19 @@ class UTresGumiShipEnemyStateController : public UActorComponent {
     GENERATED_BODY()
 public:
     UTresGumiShipEnemyStateController();
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void Setup(ATresGumiShipEnemyPawnBase* ControllTargetEnemy);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void NotifyStateFinish(ETresGumiShipEnemyStateID FinishStateID, ETresGumiShipEnemyStateResult Result);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void NotifyResultAttackPermissionRequest(bool Result, const TMap<FName, FTresGumiShipEnemyUsableAttackMethodData>& AttackableMethodList);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void NotifyEnemyGroupMoveRouteSplineEvent(ETresGumiShipSplineEventType EventType);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void NotifyArrivedEnemyGroupMoveRouteSplineEnd(int32 CurrentMoveRouteSplineIndex);
     
 };

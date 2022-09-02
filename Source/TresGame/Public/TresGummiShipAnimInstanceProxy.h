@@ -3,7 +3,7 @@
 #include "Animation/AnimSingleNodeInstanceProxy.h"
 #include "TresGummiShipAnimInstanceProxy.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresGummiShipAnimInstanceProxy : public FAnimSingleNodeInstanceProxy {
     GENERATED_BODY()
 public:

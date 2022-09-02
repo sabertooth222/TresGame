@@ -5,14 +5,14 @@
 #include "TresEnemy_e_ex771_LivelyFlarePillarPoint.h"
 #include "TresProjectileGenerator_e_ex771_LivelyFlarePillar.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresProjectileGenerator_e_ex771_LivelyFlarePillar : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresEnemy_e_ex771_LivelyFlarePillarParam> m_LivelyFlarePillarParamArray;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresEnemy_e_ex771_LivelyFlarePillarPoint> m_LivelyFlarePillarPointArray;
     
     ATresProjectileGenerator_e_ex771_LivelyFlarePillar();

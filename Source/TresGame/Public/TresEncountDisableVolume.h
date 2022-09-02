@@ -4,11 +4,11 @@
 #include "TresVolume.h"
 #include "TresEncountDisableVolume.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEncountDisableVolume : public ATresVolume {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresEncountDisableVolumeType m_ShapeType;
     
     ATresEncountDisableVolume();

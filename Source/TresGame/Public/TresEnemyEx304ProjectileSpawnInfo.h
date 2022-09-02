@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FTresEnemyEx304ProjectileSpawnInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float SpawnAngleYaw;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float SpawnAnglePitch;
     
     TRESGAME_API FTresEnemyEx304ProjectileSpawnInfo();

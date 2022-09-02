@@ -6,19 +6,19 @@ USTRUCT(BlueprintType)
 struct FTresMBCameraElement {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_Index;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_InterestIndex;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_roll;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_FOV;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     int32 m_CurveIndex[2];
     
     TRESGAME_API FTresMBCameraElement();

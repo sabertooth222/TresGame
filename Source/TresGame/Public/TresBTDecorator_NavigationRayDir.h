@@ -7,20 +7,20 @@
 
 class UNavigationQueryFilter;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTDecorator_NavigationRayDir : public UBTDecorator {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UNavigationQueryFilter> FilterClass;
     
     UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresDecoratorNavigationRayDir::Type> m_Dir;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fAngle;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fTestDepth;
     
     UTresBTDecorator_NavigationRayDir();

@@ -6,14 +6,14 @@
 class USceneComponent;
 class UDecalComponent;
 
-UCLASS(Config=Game)
+UCLASS(Blueprintable, Config=Game)
 class ATresLateralProjectionDecalActor : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USceneComponent* SceneComponent;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UDecalComponent* DecalComponent;
     
     ATresLateralProjectionDecalActor();

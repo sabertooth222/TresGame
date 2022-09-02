@@ -4,11 +4,11 @@
 #include "TresBattleLevelAutoData.h"
 #include "TresBattleLevelAutoAsset.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API UTresBattleLevelAutoAsset : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresBattleLevelAutoData> DataArray;
     
     UTresBattleLevelAutoAsset();

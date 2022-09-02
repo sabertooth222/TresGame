@@ -4,25 +4,25 @@
 #include "TresCameraRotTarget.h"
 #include "TresCameraRotTargetCtrl.generated.h"
 
+class AActor;
 class UObject;
 class ATresCameraRotTargetCtrl;
-class AActor;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresCameraRotTargetCtrl : public ATresCameraRotTarget {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_LimitPitchMin;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_LimitPitchMax;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_LimitYawMin;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_LimitYawMax;
     
 public:

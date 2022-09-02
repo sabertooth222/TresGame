@@ -4,122 +4,122 @@
 #include "GameFramework/Actor.h"
 #include "TresGummiMenuManager.generated.h"
 
-class ATresWorldMapCameraActor;
-class ATresHudGummiMenu;
-class ATresGummiEditorManager;
+class USoundBase;
 class UTresUIP_HelpGummiShip;
 class ATresWorldMapObject;
 class UDataTable;
-class USoundBase;
-class ATresGumiShipHUD;
 class UTresFieldVoice;
-class UTresUIManager;
+class ATresGumiShipHUD;
+class ATresHudGummiMenu;
 class ATresWorldMapPlayerController;
+class UTresUIManager;
+class ATresWorldMapCameraActor;
 class ATresGumiShipPlayerControllerDefault;
+class ATresGummiEditorManager;
 class USceneComponent;
 class ULevelStreamingKismet;
 class UTresGummiEditorDataTableSet;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresGummiMenuManager : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresWorldMapObject> m_pShip;
     
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresWorldMapObject> m_pMist;
     
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresWorldMapObject> m_pBlackBG;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_isSpaceUse;
     
     UPROPERTY(EditAnywhere)
     int8 m_nSpaceNo;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UDataTable* m_pPreviewDataTable;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundBase* m_pSE_se00800_035;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundBase* m_pSE_se00800_036;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresFieldVoice* m_pFd_gm_ui_chip_0010;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresFieldVoice* m_pFd_gm_ui_chip_0020;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresFieldVoice* m_pFd_gm_ui_chip_0030;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresFieldVoice* m_pFd_gm_ui_chip_0040;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresFieldVoice* m_pFd_gm_ui_dale_0010;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresFieldVoice* m_pFd_gm_ui_dale_0020;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresFieldVoice* m_pFd_gm_ui_dale_0030;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresFieldVoice* m_pFd_gm_ui_dale_0040;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresFieldVoice* m_pFd_gm_ui_dale_0050;
     
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresHudGummiMenu* m_pGummiHUD;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresGumiShipHUD* m_pGummiSpaceHUD;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresUIP_HelpGummiShip* m_pGummiHelp;
     
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresUIManager* m_pUIManager;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresWorldMapCameraActor* m_pWorldMapCameraActor;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresWorldMapPlayerController* m_pController;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresGumiShipPlayerControllerDefault* m_pSpaceController;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresWorldMapObject* m_pLocalWorldIcon;
     
-    UPROPERTY(Transient)
+    UPROPERTY(EditAnywhere, Transient)
     TWeakObjectPtr<ATresWorldMapObject> m_pLocalWorldSymble;
     
-    UPROPERTY(Transient)
+    UPROPERTY(EditAnywhere, Transient)
     ATresWorldMapObject* m_pMistWorldIcon[10];
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresWorldMapObject* m_pGummiShip;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresWorldMapObject* m_pBlackWall;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresGummiEditorManager* m_pGummiEditorManager;
     
-    UPROPERTY(Export, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     USceneComponent* m_pRootComponent;
     
-    UPROPERTY(Export, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     USceneComponent* m_pHubComponent;
     
     UPROPERTY(EditAnywhere, Export)
@@ -128,25 +128,25 @@ protected:
     UPROPERTY(EditAnywhere, Export)
     USceneComponent* m_pLocalSpaceRootMoveComponent[4];
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<ULevelStreamingKismet*> m_Kismet;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<ULevelStreamingKismet*> m_DepatureKismet;
     
 public:
     ATresGummiMenuManager();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ATresGumiShipHUD* GetSpaceHUD();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ATresHudGummiMenu* GetHUD();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UTresGummiEditorDataTableSet* GetGummiEditorData() const;
     
 protected:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void DelegateGummiMissionHelpOut(int32 InParam);
     
 };

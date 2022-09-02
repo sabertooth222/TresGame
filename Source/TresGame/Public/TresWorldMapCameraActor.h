@@ -3,7 +3,7 @@
 #include "Camera/CameraActor.h"
 #include "TresWorldMapCameraActor.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresWorldMapCameraActor : public ACameraActor {
     GENERATED_BODY()
 public:

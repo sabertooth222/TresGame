@@ -9,10 +9,10 @@ USTRUCT(BlueprintType)
 struct FTresE_dw405CounterAttackParam {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UTresAttackDefinitionBase> AttackDefinitionClass;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 ActionIndex;
     
     TRESGAME_API FTresE_dw405CounterAttackParam();

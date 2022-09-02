@@ -5,17 +5,17 @@
 
 class USpotLightComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresGimmickBxSingouki01 : public ATresGimmickBxSingouki {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USpotLightComponent* SpotLightComp;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName GameFlagName;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FName> NoLightsFlagName;
     
     ATresGimmickBxSingouki01();

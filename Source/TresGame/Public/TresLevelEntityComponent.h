@@ -5,17 +5,17 @@
 
 class ATresLevelEntity;
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class TRESGAME_API UTresLevelEntityComponent : public USceneComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_Version;
     
-    UPROPERTY(DuplicateTransient, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresLevelEntity* m_LevelEntityTemplate;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresLevelEntity* m_LevelEntity;
     
     UTresLevelEntityComponent();

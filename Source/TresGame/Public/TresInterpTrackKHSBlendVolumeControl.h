@@ -5,11 +5,11 @@
 
 class ATresKHSBlendVolume;
 
-UCLASS(CollapseCategories)
+UCLASS(Blueprintable, CollapseCategories)
 class TRESGAME_API UTresInterpTrackKHSBlendVolumeControl : public UInterpTrackFloatBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TLazyObjectPtr<ATresKHSBlendVolume> m_KHSBlendVolume;
     
     UTresInterpTrackKHSBlendVolumeControl();

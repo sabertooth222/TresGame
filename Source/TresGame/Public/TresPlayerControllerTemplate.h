@@ -3,7 +3,7 @@
 #include "TresPlayerControllerBase.h"
 #include "TresPlayerControllerTemplate.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresPlayerControllerTemplate : public ATresPlayerControllerBase {
     GENERATED_BODY()
 public:

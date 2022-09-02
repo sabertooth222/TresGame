@@ -6,14 +6,14 @@
 class ULightComponent;
 class UDirectionalLightComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API UTresInterpTrackInstLightProperties : public UInterpTrackInst {
     GENERATED_BODY()
 public:
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     TArray<ULightComponent*> m_LightComponents;
     
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     TArray<UDirectionalLightComponent*> m_DirectionalLightComponents;
     
     UTresInterpTrackInstLightProperties();

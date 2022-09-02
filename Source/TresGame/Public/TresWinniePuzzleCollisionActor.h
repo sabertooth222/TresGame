@@ -5,12 +5,12 @@
 
 class USphereComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresWinniePuzzleCollisionActor : public AActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USphereComponent* SphereComponent;
     
 public:

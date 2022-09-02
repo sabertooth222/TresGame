@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "TresUIP_Hologram_CharaPageInfo.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresUIP_Hologram_CharaPageInfo {
     GENERATED_BODY()
 public:

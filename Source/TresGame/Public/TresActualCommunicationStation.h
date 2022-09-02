@@ -3,7 +3,7 @@
 #include "TresCommunicationStation.h"
 #include "TresActualCommunicationStation.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresActualCommunicationStation : public ATresCommunicationStation {
     GENERATED_BODY()
 public:

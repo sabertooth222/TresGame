@@ -1,21 +1,21 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ASValue.h"
 #include "TresASProxy.h"
+#include "ASValue.h"
 #include "TresASProxyTresControlsFloatTexture.generated.h"
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class UTresASProxyTresControlsFloatTexture : public UTresASProxy {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FASValue> m_ComponentParameters;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FASValue> m_FloatTextureCanvas;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FASValue> m_FloatTextureBGs;
     
 public:

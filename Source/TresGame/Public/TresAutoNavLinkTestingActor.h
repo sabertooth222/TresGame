@@ -4,11 +4,11 @@
 #include "AI/Navigation/NavLinkDefinition.h"
 #include "TresAutoNavLinkTestingActor.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresAutoNavLinkTestingActor : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FNavigationLink PointLink;
     
     ATresAutoNavLinkTestingActor();

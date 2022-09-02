@@ -1,21 +1,21 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "TresGumiShipActorBase.h"
-#include "TresGumiShipLevelEntityInterface.h"
 #include "ETresGumiShipGimmickID.h"
+#include "TresGumiShipLevelEntityInterface.h"
 #include "TresGumiShipGimmickActorBase.generated.h"
 
 class UTresEffectAttachComponent;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresGumiShipGimmickActorBase : public ATresGumiShipActorBase, public ITresGumiShipLevelEntityInterface {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresEffectAttachComponent* m_pEffectAttach;
     
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresGumiShipGimmickID m_eGimmickID;
     
 public:

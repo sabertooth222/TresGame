@@ -5,7 +5,7 @@
 #include "UObject/NoExportTypes.h"
 #include "TresBTInterface_DecoratorNativeBase.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresBTInterface_DecoratorNativeBase : public AActor, public ITresDecoratorInterface {
     GENERATED_BODY()
 public:

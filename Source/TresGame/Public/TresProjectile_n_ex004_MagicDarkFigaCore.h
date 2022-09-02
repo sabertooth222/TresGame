@@ -3,7 +3,7 @@
 #include "TresProj_MagicDarkFiragaCore.h"
 #include "TresProjectile_n_ex004_MagicDarkFigaCore.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresProjectile_n_ex004_MagicDarkFigaCore : public ATresProj_MagicDarkFiragaCore {
     GENERATED_BODY()
 public:

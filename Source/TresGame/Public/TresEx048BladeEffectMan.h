@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FTresEx048BladeEffectMan {
     GENERATED_BODY()
 public:
-    UPROPERTY(Export)
+    UPROPERTY(EditAnywhere, Export)
     UParticleSystemComponent* m_BladeEffectCmp[2];
     
     TRESGAME_API FTresEx048BladeEffectMan();

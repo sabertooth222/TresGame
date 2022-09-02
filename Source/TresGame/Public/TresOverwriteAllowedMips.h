@@ -10,7 +10,7 @@ public:
     UPROPERTY(EditAnywhere)
     TEnumAsByte<TextureGroup> m_TextureGroup;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_MaxAllowedMips;
     
     TRESGAME_API FTresOverwriteAllowedMips();

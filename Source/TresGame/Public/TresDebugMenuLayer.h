@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FTresDebugMenuLayer {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresDebugMenuFrame> m_Frames;
     
     TRESGAME_API FTresDebugMenuLayer();

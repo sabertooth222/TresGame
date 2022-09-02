@@ -3,7 +3,7 @@
 #include "TresNpcBTDecoratorBase.h"
 #include "TresNpcBTDecorator_CanExecuteNpcAbility.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcBTDecorator_CanExecuteNpcAbility : public UTresNpcBTDecoratorBase {
     GENERATED_BODY()
 public:

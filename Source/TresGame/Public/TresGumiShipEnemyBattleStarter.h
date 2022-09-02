@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "TresGumiShipGimmickActorBase.h"
-#include "TresGumiShipEnemyGroupWipeOutData.h"
 #include "ETresGumiShipBattleMissionRankType.h"
+#include "TresGumiShipEnemyGroupWipeOutData.h"
 #include "ETresGumiShipEnemyBattleFinishType.h"
 #include "TresGumiShipRailShootingBattleSetData.h"
 #include "ETresGumiShipEnemyBattleStartType.h"
@@ -11,19 +11,19 @@
 #include "Engine/EngineTypes.h"
 #include "TresGumiShipEnemyBattleStarter.generated.h"
 
-class UObject;
-class ATresGumiShipEnemyTerritoryPoint;
-class ATresGumiShipBattleArenaMeshActor;
-class ATresGumiShipActualRailSlideArrangement;
 class ATriggerBase;
+class AActor;
+class ATresGumiShipEnemyTerritoryPoint;
+class UObject;
+class ATresGumiShipBattleArenaMeshActor;
 class ATresGumiShipFieldBattleEnemyGenerator;
 class ATresGumiShipExternalEnemyGenerator;
+class ATresGumiShipActualRailSlideArrangement;
 class ATresGumiShipRailShootingBattleStarterGenerator;
 class ATresGumiShipWorldSymbolActor;
 class UPrimitiveComponent;
-class AActor;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresGumiShipEnemyBattleStarter : public ATresGumiShipGimmickActorBase {
     GENERATED_BODY()
 public:
@@ -32,82 +32,82 @@ public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FEnemyBattleFinishSignature, ETresGumiShipEnemyBattleFinishType, BattleFinishType);
     DECLARE_DYNAMIC_MULTICAST_DELEGATE(FAllEnemyGroupWipeOutSignature);
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FEnemyBattleFinishSignature OnEnemyBattleFinished;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FEnemyBattleRankConfirmedSignature OnEnemyBattleRankConfirmed;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FEnemyGroupWipeOutSignature OnOneEnemyGroupWipeOut;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAllEnemyGroupWipeOutSignature OnAllEnemyGroupWipeOut;
     
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresGumiShipEnemyBattleStartType m_eBattleStartType;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresGumiShipEnemyTerritoryID m_eEnemyTerritoryID;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresGumiShipEnemyTerritoryPoint* m_pBoundEnemyTerritoryPoint;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresGumiShipBattleArenaMeshActor* m_pBattleArenaMeshActor;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bDisableStart;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATriggerBase* m_pFieldBattleTriggerVolume;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<ATresGumiShipFieldBattleEnemyGenerator*> m_FieldBattleEnemyGeneratorList;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_BossEnemyAppearRemoteEventName;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fBossEnemyAppearEventFadeOutTime;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bIsHideBossEnemyOnFieldEncounter;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATriggerBase* m_pRevengeMatchBossBattleStartTrigger;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<ATresGumiShipExternalEnemyGenerator*> m_BossEnemyUsingEnemyGeneratorList;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresGumiShipActualRailSlideArrangement* m_pRailShootingRouteSpline;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATriggerBase* m_pRailShootingBattleStartTrigger;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresGumiShipRailShootingBattleStarterGenerator* m_pRailShootingBattleStarterGenerator;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresGumiShipRailShootingBattleSetData> m_RailShootingBattleSetDataList;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATriggerBase* m_pEnemyDisappearTriggerAtSplineEnd;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bHideGuideMarkerFirstBattle;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bForbiddenRetryFirstClear;
     
 public:
     ATresGumiShipEnemyBattleStarter();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsEnabled() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ATresGumiShipActualRailSlideArrangement* GetRailShootingRouteSpline() const;
     
     UFUNCTION(BlueprintCallable)
@@ -129,31 +129,31 @@ private:
     UFUNCTION()
     void _OnRailShootingBattleResultRankConfirmed(const TEnumAsByte<ETresGumiShipBattleMissionRankType> eRank);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnRailShootingBattleResultEnter();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnRailShootingBattleMissionClear(const ETresGumiShipBattleMissionEndFactorType eEndType);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnRailShootingBattleFinalize(const ETresGumiShipBattleMissionEndFactorType eEndType);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnLeaveFieldBattleTriggerVolume(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnLeaveBattleStartTriggerVolume(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnEnterFieldBattleTriggerVolume(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnEnterEnemyDisappearTriggerVolume(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnEnterBattleStartTriggerVolume(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnEnemyGroupWipeOut(const FTresGumiShipEnemyGroupWipeOutData& rEnemyGroupWipeOutData);
     
     UFUNCTION(BlueprintCallable)

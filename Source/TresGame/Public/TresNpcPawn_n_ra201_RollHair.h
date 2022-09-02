@@ -5,12 +5,12 @@
 
 class UTresSkeletalMeshComponent;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresNpcPawn_n_ra201_RollHair : public ATresPawnBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(Export, VisibleDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresSkeletalMeshComponent* MyMesh;
     
 public:

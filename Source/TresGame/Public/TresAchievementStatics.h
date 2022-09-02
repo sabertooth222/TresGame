@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
 #include "ETresAchievement.h"
+#include "UObject/Object.h"
 #include "TresAchievementStatics.generated.h"
 
-UCLASS(Abstract, BlueprintType, NotPlaceable)
+UCLASS(Abstract, Blueprintable, NotPlaceable)
 class UTresAchievementStatics : public UObject {
     GENERATED_BODY()
 public:
@@ -15,7 +15,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static void NoContinueClear();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsBattleCheatCodeOnForAchievement();
     
 };

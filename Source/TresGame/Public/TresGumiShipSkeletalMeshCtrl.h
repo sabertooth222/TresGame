@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "TresGumiShipSkeletalMeshCtrl.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresGumiShipSkeletalMeshCtrl {
     GENERATED_BODY()
 public:

@@ -6,14 +6,14 @@
 #include "TresSpawnActorManagerComponent.generated.h"
 
 class AActor;
-class UTresChildActorComponent;
 class UObject;
+class UTresChildActorComponent;
 
-UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTresSpawnActorManagerComponent : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UObject*> ObjectArray;
     
     UTresSpawnActorManagerComponent();

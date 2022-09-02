@@ -3,7 +3,7 @@
 #include "TresLocomotionDefinitionLand.h"
 #include "TresNpcLocomotionDefinitionLand_SlopeSlide.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcLocomotionDefinitionLand_SlopeSlide : public UTresLocomotionDefinitionLand {
     GENERATED_BODY()
 public:

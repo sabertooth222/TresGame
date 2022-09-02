@@ -3,22 +3,22 @@
 #include "UObject/Object.h"
 #include "TresMemoryArchiveController.generated.h"
 
-class UTresUIP_MemoryArchive;
 class UTresUIManager;
+class UTresUIP_MemoryArchive;
 class UDataTable;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresMemoryArchiveController : public UObject {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresUIManager* m_UIManager;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresUIP_MemoryArchive* m_MemoryArchive;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UDataTable* m_MemoryArchiveData;
     
 public:

@@ -3,18 +3,18 @@
 #include "GameFramework/Actor.h"
 #include "TresReserveActor_e_ex035.generated.h"
 
-class ATresEnemyPawn_e_ex035;
 class ATresAIPoint_e_ex035;
+class ATresEnemyPawn_e_ex035;
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class ATresReserveActor_e_ex035 : public AActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresAIPoint_e_ex035* AIPoint;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresEnemyPawn_e_ex035* OwnerPawn;
     
 public:

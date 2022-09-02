@@ -5,11 +5,11 @@
 
 class USceneComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresAttachActor_e_ex356_PressCard : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USceneComponent* MyRoot;
     
     ATresAttachActor_e_ex356_PressCard();

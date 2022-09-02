@@ -5,12 +5,12 @@
 
 class ATresReserveActor_e_ex035;
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresMove_e_ex035_MoveBase : public UTresLocomotionDefinitionLandCodeDriven {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresReserveActor_e_ex035* ReserveActor;
     
 public:

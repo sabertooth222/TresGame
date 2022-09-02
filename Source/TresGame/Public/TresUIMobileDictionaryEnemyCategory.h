@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FTresUIMobileDictionaryEnemyCategory {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresUIDictionaryEnemyCategory Category;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString TextId;
     
     TRESGAME_API FTresUIMobileDictionaryEnemyCategory();

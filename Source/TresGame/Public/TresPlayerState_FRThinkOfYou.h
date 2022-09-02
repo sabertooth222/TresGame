@@ -5,12 +5,12 @@
 
 class ATresFriendLinkPawnThinkOfYou;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_FRThinkOfYou : public UTresCharState_FRThinkOfYou {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresFriendLinkPawnThinkOfYou* m_pObj;
     
 public:

@@ -3,7 +3,7 @@
 #include "BehaviorTree/BTTaskNode.h"
 #include "TresNpcBTTask_SetPlayerRideGigasBB.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcBTTask_SetPlayerRideGigasBB : public UBTTaskNode {
     GENERATED_BODY()
 public:

@@ -4,27 +4,27 @@
 #include "Engine/EngineTypes.h"
 #include "TresGumiShipMapsetVolume.generated.h"
 
-class UTresMapSet;
 class UPrimitiveComponent;
+class UTresMapSet;
 class AActor;
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API ATresGumiShipMapsetVolume : public AVolume {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresMapSet* MapSet;
     
-    UPROPERTY(EditInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName commandName;
     
-    UPROPERTY(EditInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bBlockLoad;
     
 public:
     ATresGumiShipMapsetVolume();
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnEnterActivateVolume(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
     
 };

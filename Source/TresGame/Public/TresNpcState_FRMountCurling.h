@@ -3,7 +3,7 @@
 #include "TresCharState_FRMountCurling.h"
 #include "TresNpcState_FRMountCurling.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcState_FRMountCurling : public UTresCharState_FRMountCurling {
     GENERATED_BODY()
 public:

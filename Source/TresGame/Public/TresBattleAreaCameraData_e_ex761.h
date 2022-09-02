@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FTresBattleAreaCameraData_e_ex761 {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditInstanceOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresEnemy_e_ex761_BattleAreaB_Camera::Type> CameraTypeAtBattleAreaB;
     
     TRESGAME_API FTresBattleAreaCameraData_e_ex761();

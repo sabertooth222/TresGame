@@ -6,41 +6,41 @@
 
 class UEnvQuery;
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresCoop1_e_ex026_ColorSmoke : public UTresCoopDefinitionBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_EntryRadius;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_ForwardOffset;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_SpaceBetween;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UEnvQuery* m_QueryTemplateWarp;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UEnvQuery* m_QueryShakeOffWarp;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UEnvQuery* m_QueryTemplate;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_QueryIntervalTime;
     
 public:
     UTresCoop1_e_ex026_ColorSmoke();
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void ProgressSpreadStep(const FTresCoopDefinitionParamBP& Param);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool IsStartSpread(const FTresCoopDefinitionParamBP& Param) const;
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void CoopWarpReady(const FTresCoopDefinitionParamBP& Param);
     
 };

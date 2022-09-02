@@ -3,7 +3,7 @@
 #include "TresPrizeBase.h"
 #include "TresPrize.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresPrize : public ATresPrizeBase {
     GENERATED_BODY()
 public:

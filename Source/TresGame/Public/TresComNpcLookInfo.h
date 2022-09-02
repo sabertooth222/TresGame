@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FTresComNpcLookInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FName> m_AnimTypes;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FName> m_LookAtAnims;
     
     TRESGAME_API FTresComNpcLookInfo();

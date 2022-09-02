@@ -1,21 +1,21 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RemyResultAnimationType.h"
 #include "Engine/DataTable.h"
 #include "RemyCookingGameType.h"
+#include "RemyResultAnimationType.h"
 #include "TresRemyResultAnimationDataTable.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresRemyResultAnimationDataTable : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     RemyCookingGameType GameType;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     RemyResultAnimationType AnimationType;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName AnimationName;
     
     TRESGAME_API FTresRemyResultAnimationDataTable();

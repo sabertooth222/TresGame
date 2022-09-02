@@ -3,7 +3,7 @@
 #include "BehaviorTree/BTDecorator.h"
 #include "TresBTDecorator_LockTargetSelection.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTDecorator_LockTargetSelection : public UBTDecorator {
     GENERATED_BODY()
 public:

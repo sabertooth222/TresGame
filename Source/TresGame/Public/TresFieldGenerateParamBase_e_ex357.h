@@ -3,7 +3,7 @@
 #include "UObject/Object.h"
 #include "TresFieldGenerateParamBase_e_ex357.generated.h"
 
-UCLASS(Abstract, EditInlineNew)
+UCLASS(Abstract, Blueprintable, EditInlineNew)
 class UTresFieldGenerateParamBase_e_ex357 : public UObject {
     GENERATED_BODY()
 public:

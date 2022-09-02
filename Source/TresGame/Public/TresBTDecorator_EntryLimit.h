@@ -3,17 +3,17 @@
 #include "BehaviorTree/BTDecorator.h"
 #include "TresBTDecorator_EntryLimit.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTDecorator_EntryLimit : public UBTDecorator {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_MaxEntries;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_IncrementOnlyOnSuccess;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bInitSubtree;
     
     UTresBTDecorator_EntryLimit();

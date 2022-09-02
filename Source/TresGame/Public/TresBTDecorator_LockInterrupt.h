@@ -3,7 +3,7 @@
 #include "BehaviorTree/BTDecorator.h"
 #include "TresBTDecorator_LockInterrupt.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTDecorator_LockInterrupt : public UBTDecorator {
     GENERATED_BODY()
 public:

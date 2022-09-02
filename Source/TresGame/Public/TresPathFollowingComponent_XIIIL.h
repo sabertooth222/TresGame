@@ -3,7 +3,7 @@
 #include "TresPathFollowingComponent.h"
 #include "TresPathFollowingComponent_XIIIL.generated.h"
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTresPathFollowingComponent_XIIIL : public UTresPathFollowingComponent {
     GENERATED_BODY()
 public:

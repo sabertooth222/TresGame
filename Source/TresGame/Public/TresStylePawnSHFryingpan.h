@@ -3,7 +3,7 @@
 #include "TresStylePawnBase.h"
 #include "TresStylePawnSHFryingpan.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresStylePawnSHFryingpan : public ATresStylePawnBase {
     GENERATED_BODY()
 public:

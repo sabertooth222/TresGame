@@ -3,7 +3,7 @@
 #include "UObject/Object.h"
 #include "TresStaticEQSItemManager.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API UTresStaticEQSItemManager : public UObject {
     GENERATED_BODY()
 public:

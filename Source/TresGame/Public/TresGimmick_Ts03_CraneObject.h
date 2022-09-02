@@ -8,12 +8,12 @@
 class ATresGimmick_Ts03_Crane;
 class UTresBodyCollComponent;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresGimmick_Ts03_CraneObject : public ATresGimmickStaticBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresBodyCollComponent* BodyCollComponent;
     
 public:

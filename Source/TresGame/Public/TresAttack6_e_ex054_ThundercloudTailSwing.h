@@ -3,7 +3,7 @@
 #include "TresAttackDefinitionBase.h"
 #include "TresAttack6_e_ex054_ThundercloudTailSwing.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAttack6_e_ex054_ThundercloudTailSwing : public UTresAttackDefinitionBase {
     GENERATED_BODY()
 public:

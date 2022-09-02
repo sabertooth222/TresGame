@@ -4,14 +4,14 @@
 #include "TresInterpTrackActorVoiceKey.h"
 #include "TresInterpTrackActorVoice.generated.h"
 
-UCLASS(CollapseCategories)
+UCLASS(Blueprintable, CollapseCategories)
 class TRESGAME_API UTresInterpTrackActorVoice : public UInterpTrack {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere, EditFixedSize)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, EditFixedSize, meta=(AllowPrivateAccess=true))
     TArray<FTresInterpTrackActorVoiceKey> m_Keys;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_StopActorVoiceWhenTerminate;
     
     UTresInterpTrackActorVoice();

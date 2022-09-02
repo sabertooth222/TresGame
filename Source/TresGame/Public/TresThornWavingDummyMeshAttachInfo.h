@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FTresThornWavingDummyMeshAttachInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresEnemyEx721HandID m_HandID;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_AttachName;
     
     TRESGAME_API FTresThornWavingDummyMeshAttachInfo();

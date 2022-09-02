@@ -4,11 +4,11 @@
 
 class ATresCharPawnBase;
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresEnemy_e_dw401_AirBlowParam {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresCharPawnBase* m_pTgtPawn;
     
     TRESGAME_API FTresEnemy_e_dw401_AirBlowParam();

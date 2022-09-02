@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TresGenerateNavLinkArgs.h"
 #include "GameFramework/Actor.h"
+#include "TresGenerateNavLinkArgs.h"
 #include "TresAutoNavLinkSettingActor.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresAutoNavLinkSettingActor : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresGenerateNavLinkArgs GenerateSetting;
     
-    UPROPERTY(AdvancedDisplay, VisibleAnywhere)
+    UPROPERTY(AdvancedDisplay, EditAnywhere)
     uint32 Version;
     
     ATresAutoNavLinkSettingActor();

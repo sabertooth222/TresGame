@@ -5,18 +5,18 @@
 #include "TresCameraHe05Mountain.generated.h"
 
 class ATresCameraHe05Mountain;
-class UObject;
 class UCurveFloat;
+class UObject;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresCameraHe05Mountain : public ATresCameraNormal {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_TitanDistance;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UCurveFloat* m_DistanceCurve;
     
 public:

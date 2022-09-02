@@ -9,33 +9,33 @@ class ATresWinniePuzzleManager;
 class ATresWinniePuzzleBase;
 class ATresWinniePuzzlePlayerPawn;
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class ATresWinnieGameMode : public ATresGameModeBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresWinniePuzzleManager> PuzzleManagerRef;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresWinniePuzzleBase> PuzzleGameRef;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresWinniePuzzlePlayerPawn> PlayerPawnRef;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector PlayerPawnSpawnLocationRef;
     
 private:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresWinniePuzzleManager* m_pPuzzleManager;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresWinniePuzzlePlayerPawn* m_pPlayerPawn;
     
 public:
     ATresWinnieGameMode();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ATresWinniePuzzleManager* GetPuzzleManager() const;
     
 };

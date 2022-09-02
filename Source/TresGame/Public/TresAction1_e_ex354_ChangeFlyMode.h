@@ -3,11 +3,11 @@
 #include "TresActionDefinitionBase.h"
 #include "TresAction1_e_ex354_ChangeFlyMode.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAction1_e_ex354_ChangeFlyMode : public UTresActionDefinitionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bReversed;
     
     UTresAction1_e_ex354_ChangeFlyMode();

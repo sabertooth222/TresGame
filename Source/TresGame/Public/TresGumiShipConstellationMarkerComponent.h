@@ -1,19 +1,19 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ETresGumiShipConstellationCode.h"
 #include "TresDetectMarkerComponentBase.h"
+#include "ETresGumiShipConstellationCode.h"
 #include "UObject/NoExportTypes.h"
 #include "TresGumiShipConstellationMarkerComponent.generated.h"
 
-UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTresGumiShipConstellationMarkerComponent : public UTresDetectMarkerComponentBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresGumiShipConstellationCode> ConstellationCode;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector2D SizeRectangle;
     
 public:

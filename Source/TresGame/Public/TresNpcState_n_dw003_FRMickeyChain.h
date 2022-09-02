@@ -5,11 +5,11 @@
 
 class ATresEnemyPawn_e_dw401;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcState_n_dw003_FRMickeyChain : public UTresCharState_FRMickeyChain {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresEnemyPawn_e_dw401* m_pDevilWavePawn;
     
     UTresNpcState_n_dw003_FRMickeyChain();

@@ -3,12 +3,12 @@
 #include "Animation/AnimNotifies/AnimNotify.h"
 #include "TresAnimNotify_SetActorVisible.generated.h"
 
-UCLASS(CollapseCategories, MinimalAPI)
+UCLASS(Blueprintable, CollapseCategories, MinimalAPI)
 class UTresAnimNotify_SetActorVisible : public UAnimNotify {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bNewVisible;
     
 public:

@@ -7,27 +7,27 @@
 class AController;
 class AActor;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresNpcPawn_n_ex033 : public ATresNpcPawnBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_Param_FriendPointAdd;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_Param_FriendPointMul;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_AppendCure;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_AttackTime;
     
 public:
     ATresNpcPawn_n_ex033();
 protected:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnDamageForRoxas(float InDamageAmount, const FDamageEvent& InDamageEvent, AController* InEventInstigator, AActor* InDamageCauser);
     
 };

@@ -4,15 +4,15 @@
 #include "TresShotParam_e_ex701.h"
 #include "TresAttack2_e_ex701_FlameBullet.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAttack2_e_ex701_FlameBullet : public UTresAttack_e_ex701_FlameBulletBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresShotParam_e_ex701> m_ShotParams;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_PitchOffsetAngle;
     
 public:

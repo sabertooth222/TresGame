@@ -3,17 +3,17 @@
 #include "TresCharState_Cover.h"
 #include "TresPlayerState_Cover.generated.h"
 
-class UTresLockonTargetComponent;
 class ATresCameraNormal;
+class UTresLockonTargetComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_Cover : public UTresCharState_Cover {
     GENERATED_BODY()
 public:
-    UPROPERTY(Export, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UTresLockonTargetComponent* m_pTargetComponent;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresCameraNormal* m_pCamera;
     
     UTresPlayerState_Cover();

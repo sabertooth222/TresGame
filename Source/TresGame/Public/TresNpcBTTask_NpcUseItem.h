@@ -3,7 +3,7 @@
 #include "BehaviorTree/BTTaskNode.h"
 #include "TresNpcBTTask_NpcUseItem.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcBTTask_NpcUseItem : public UBTTaskNode {
     GENERATED_BODY()
 public:

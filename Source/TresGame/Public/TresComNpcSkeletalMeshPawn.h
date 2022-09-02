@@ -3,11 +3,11 @@
 #include "TresCharPawnBase.h"
 #include "TresComNpcSkeletalMeshPawn.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API ATresComNpcSkeletalMeshPawn : public ATresCharPawnBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fNearCameraRange;
     
     ATresComNpcSkeletalMeshPawn();

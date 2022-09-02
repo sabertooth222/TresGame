@@ -3,7 +3,7 @@
 #include "TresNpcAttackDefinitionDash.h"
 #include "TresAttack1_n_mi202_Roll.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAttack1_n_mi202_Roll : public UTresNpcAttackDefinitionDash {
     GENERATED_BODY()
 public:

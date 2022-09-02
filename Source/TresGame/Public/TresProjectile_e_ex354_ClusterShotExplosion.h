@@ -3,17 +3,17 @@
 #include "TresProjectileBase.h"
 #include "TresProjectile_e_ex354_ClusterShotExplosion.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresProjectile_e_ex354_ClusterShotExplosion : public ATresProjectileBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_AtkCollGrpName_DisableOnMove;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_AtkCollGrpName_EnableOnMove;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_AtkCollAtkIDName_EnableOnMove;
     
     ATresProjectile_e_ex354_ClusterShotExplosion();

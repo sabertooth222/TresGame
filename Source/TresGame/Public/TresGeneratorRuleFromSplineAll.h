@@ -3,7 +3,7 @@
 #include "TresGeneratorRuleFromSplineBase.h"
 #include "TresGeneratorRuleFromSplineAll.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UTresGeneratorRuleFromSplineAll : public UTresGeneratorRuleFromSplineBase {
     GENERATED_BODY()
 public:

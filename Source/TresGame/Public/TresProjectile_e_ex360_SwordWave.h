@@ -3,11 +3,11 @@
 #include "TresProjectileBase.h"
 #include "TresProjectile_e_ex360_SwordWave.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresProjectile_e_ex360_SwordWave : public ATresProjectileBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_RollSpeed;
     
     ATresProjectile_e_ex360_SwordWave();

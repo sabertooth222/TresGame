@@ -7,36 +7,36 @@
 
 class ATresHitActor_e_he90x;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemyPawn_e_he904 : public ATresEnemyPawnBase_e_he90y {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_IceActorBBKeyName;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_TornadoActorBBKeyName;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresHitActor_e_he90x> m_MountCollActorClass;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresHitActor_e_he90x* m_MountCollActor;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresHitActor_e_he90x> m_MountCollActorClass_FR;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresHitActor_e_he90x* m_MountCollActor_FR;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector m_vMountCollLoc;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_iSolidMaterialParamNo;
     
     ATresEnemyPawn_e_he904();
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void DebugSwapMountCollEnabled();
     
 };

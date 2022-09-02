@@ -3,11 +3,11 @@
 #include "BehaviorTree/BTService.h"
 #include "TresBTService_e_ex773_InitHeavenlyFlareShotParam.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTService_e_ex773_InitHeavenlyFlareShotParam : public UBTService {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bStartNotify;
     
     UTresBTService_e_ex773_InitHeavenlyFlareShotParam();

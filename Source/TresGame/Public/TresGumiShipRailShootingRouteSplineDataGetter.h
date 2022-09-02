@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FTresGumiShipRailShootingRouteSplineDataGetter {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fSplineDistanceRate;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 m_bReverseSpline: 1;
     
     TRESGAME_API FTresGumiShipRailShootingRouteSplineDataGetter();

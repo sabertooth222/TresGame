@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FTresComNpcActSelectBranch {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_Id;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_SeqIndex;
     
     TRESGAME_API FTresComNpcActSelectBranch();

@@ -4,7 +4,7 @@
 #include "ETresCustomCompositeReturnCondition.h"
 #include "TresBTComposite_Custom.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTComposite_Custom : public UBTCompositeNode {
     GENERATED_BODY()
 public:

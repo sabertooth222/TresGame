@@ -4,11 +4,11 @@
 #include "ETresFNpcAICombiID.h"
 #include "TresNpcBTDecorator_IsCombiID.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcBTDecorator_IsCombiID : public UTresNpcBTDecoratorBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresFNpcAICombiID m_Id;
     
     UTresNpcBTDecorator_IsCombiID();

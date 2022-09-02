@@ -3,12 +3,12 @@
 #include "TresAttackDefinitionWeaponBase.h"
 #include "TresAttack3_e_ex021_FireBreath.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAttack3_e_ex021_FireBreath : public UTresAttackDefinitionWeaponBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_BreathTime;
     
 public:

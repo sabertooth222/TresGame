@@ -3,7 +3,7 @@
 #include "TresGumiShipCollisionPrimitive.h"
 #include "TresGumiShipAttackCollisionPrimitive.generated.h"
 
-UCLASS(NonTransient, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, NonTransient, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTresGumiShipAttackCollisionPrimitive : public UTresGumiShipCollisionPrimitive {
     GENERATED_BODY()
 public:

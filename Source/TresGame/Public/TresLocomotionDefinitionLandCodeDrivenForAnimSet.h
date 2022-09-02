@@ -3,11 +3,11 @@
 #include "TresLocomotionDefinitionLandCodeDriven.h"
 #include "TresLocomotionDefinitionLandCodeDrivenForAnimSet.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresLocomotionDefinitionLandCodeDrivenForAnimSet : public UTresLocomotionDefinitionLandCodeDriven {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 m_bUseRunStartAnim: 1;
     
     UTresLocomotionDefinitionLandCodeDrivenForAnimSet();

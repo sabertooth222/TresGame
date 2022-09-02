@@ -3,11 +3,11 @@
 #include "BehaviorTree/Decorators/BTDecorator_BlackboardBase.h"
 #include "TresBTDecorator_CheckHeight.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTDecorator_CheckHeight : public UBTDecorator_BlackboardBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_HeightThreshold;
     
     UTresBTDecorator_CheckHeight();

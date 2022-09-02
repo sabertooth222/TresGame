@@ -2,5 +2,5 @@
 #include "CoreMinimal.h"
 #include "TresChangeBattleModeSignatureDelegate.generated.h"
 
-UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FTresChangeBattleModeSignature, bool, bIsBattleMode);
+UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FTresChangeBattleModeSignature, bool, bIsBattleMode);
 

@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/DataTable.h"
 #include "TresNameEntryTextData.h"
+#include "Engine/DataTable.h"
 #include "TresNameEntryTextDataTable.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresNameEntryTextDataTable : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     FTresNameEntryTextData TextList[9];
     
     TRESGAME_API FTresNameEntryTextDataTable();

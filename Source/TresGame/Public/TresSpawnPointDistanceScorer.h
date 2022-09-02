@@ -4,11 +4,11 @@
 #include "UObject/NoExportTypes.h"
 #include "TresSpawnPointDistanceScorer.generated.h"
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class TRESGAME_API UTresSpawnPointDistanceScorer : public UTresSpawnPointScorer {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector m_Position;
     
     UTresSpawnPointDistanceScorer();

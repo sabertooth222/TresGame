@@ -9,10 +9,10 @@ USTRUCT(BlueprintType)
 struct FVoiceSet_e_ex355 {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<USoundBase*> VoiceDataArray;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<EVoiceType_e_ex355> VoiceType;
     
     TRESGAME_API FVoiceSet_e_ex355();

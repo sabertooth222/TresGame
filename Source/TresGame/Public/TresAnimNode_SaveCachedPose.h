@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct TRESGAME_API FTresAnimNode_SaveCachedPose : public FAnimNode_Base {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FPoseLink SourcePose;
     
     FTresAnimNode_SaveCachedPose();

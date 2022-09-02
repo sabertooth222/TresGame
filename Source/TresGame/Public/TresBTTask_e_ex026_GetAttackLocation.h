@@ -7,17 +7,17 @@
 
 class UTresAttack_e_ex026_WeaponAttackBase;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTTask_e_ex026_GetAttackLocation : public UBTTaskNode {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UTresAttack_e_ex026_WeaponAttackBase> m_ActionDefinition;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlackboardKeySelector m_Target;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlackboardKeySelector m_BlackboardKey;
     
     UTresBTTask_e_ex026_GetAttackLocation();

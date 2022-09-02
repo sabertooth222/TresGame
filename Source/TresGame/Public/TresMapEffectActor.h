@@ -3,7 +3,7 @@
 #include "TresEffectActor.h"
 #include "TresMapEffectActor.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresMapEffectActor : public ATresEffectActor {
     GENERATED_BODY()
 public:

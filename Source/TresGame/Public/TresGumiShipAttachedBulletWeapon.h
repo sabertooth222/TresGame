@@ -1,27 +1,27 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "Engine/EngineTypes.h"
 #include "TresGumiShipShootWeaponBase.h"
 #include "UObject/NoExportTypes.h"
-#include "Engine/EngineTypes.h"
 #include "TresGumiShipAttachedBulletWeapon.generated.h"
 
 class UParticleSystem;
 class AActor;
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTresGumiShipAttachedBulletWeapon : public UTresGumiShipShootWeaponBase {
     GENERATED_BODY()
 public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE(FTresGumiShipPostDestroyBullet);
     
 private:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_pChargeEffect;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector m_vChargeEffectScale;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bAutoStopAttackWhenBulletEndPlay;
     
 public:
@@ -30,7 +30,7 @@ private:
     UFUNCTION()
     void _OnBulletEndPlay(AActor* pActor, TEnumAsByte<EEndPlayReason::Type> EEndPlayReason);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnBulletDestroyOverride();
     
 };

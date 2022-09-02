@@ -4,11 +4,11 @@
 #include "BehaviorTree/BehaviorTreeTypes.h"
 #include "TresNpcBTDecorator_IsGimmick.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcBTDecorator_IsGimmick : public UTresNpcBTDecoratorBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlackboardKeySelector m_Source;
     
     UTresNpcBTDecorator_IsGimmick();

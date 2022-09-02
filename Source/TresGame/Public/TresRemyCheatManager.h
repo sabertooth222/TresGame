@@ -3,61 +3,61 @@
 #include "TresSharedCheatManager.h"
 #include "TresRemyCheatManager.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresRemyCheatManager : public UTresSharedCheatManager {
     GENERATED_BODY()
 public:
     UTresRemyCheatManager();
 private:
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void ToggleRemyUMGDebugInfo();
     
 public:
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void RemySetToNextRank();
     
 private:
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void RemyResetUnlockDishLevelPoint();
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void RemyMakeStar5NormalRecipeAllGreatSuccess();
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void RemyMakeStar4NormalRecipeAllGreatSuccess();
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void RemyMakeStar3NormalRecipeAllGreatSuccess();
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void RemyMakeStar2NormalRecipeAllGreatSuccess();
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void RemyMakeStar1NormalRecipeAllGreatSuccess();
     
 public:
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void RemyMakeAllSpecialRecipeGreatSuccess();
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void RemyMakeAllNormalRecipeGreatSuccess();
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void RemyGetAllSpecialRecipeFoodstuff10();
     
 private:
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void RemyGetAllSpecialRecipeFoodstuff1();
     
 public:
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void RemyGetAllNormalRecipeFoodstuff10();
     
 private:
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void RemyGetAllNormalRecipeFoodstuff1();
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void RemyChangeShowFinishOperationUITiming(int32 timing);
     
     UFUNCTION(Exec)

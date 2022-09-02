@@ -2,34 +2,34 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "TresGimmickActor.h"
-#include "ETresCmnCureEffectGrpID.h"
 #include "TresPlaceActorInterface.h"
+#include "ETresCmnCureEffectGrpID.h"
+#include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "TresSpawnActorData.h"
-#include "UObject/NoExportTypes.h"
 #include "TresPlacePrizeBase.generated.h"
 
-class UActorComponent;
 class USceneComponent;
 class UTresPlacePrizeMovementBase;
+class UActorComponent;
 class ATresCharPawnBase;
 class AActor;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresPlacePrizeBase : public ATresGimmickActor, public ITresPlaceActorInterface {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USceneComponent* MyRoot;
     
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UTresPlacePrizeMovementBase> CollectionMovementClass;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float OverrideSphereRadius_;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DisableComponentRadius_;
     
 public:
@@ -46,16 +46,16 @@ public:
     UFUNCTION(BlueprintCallable)
     AActor* PlacePrizeSpawnActor(const FTresSpawnActorData& SpawnData, float overrideRadius);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsHit();
     
     UFUNCTION(BlueprintCallable)
     void HitActor(AActor* Actor, FVector Offset);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetDelta();
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void GenerateDelaySpawn(int32 Num);
     
     UFUNCTION(BlueprintCallable)
@@ -64,19 +64,19 @@ public:
     UFUNCTION(BlueprintCallable)
     void CallUserConstructionScript();
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BPEV_PreDestroy();
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BPEV_OnChangeCompWork(bool Enable);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BPEV_InitializeSpawnActor(AActor* Actor, const FTresSpawnActorData& SpawnData);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BPEV_GetItem();
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     bool BPEV_ExecCollection(AActor* Actor);
     
     

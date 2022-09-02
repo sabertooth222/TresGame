@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FTresWinniePuzzleBonusGaugeIncreaseRateParam {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 BonusUnitsNum;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Rate;
     
     TRESGAME_API FTresWinniePuzzleBonusGaugeIncreaseRateParam();

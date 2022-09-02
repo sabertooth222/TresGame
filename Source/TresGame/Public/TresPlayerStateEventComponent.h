@@ -5,7 +5,7 @@
 
 class UTresPlayerStateEvent;
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTresPlayerStateEventComponent : public UActorComponent {
     GENERATED_BODY()
 public:

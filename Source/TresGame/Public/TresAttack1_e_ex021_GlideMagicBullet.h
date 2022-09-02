@@ -3,15 +3,15 @@
 #include "TresAttackDefinitionWeaponBase.h"
 #include "TresAttack1_e_ex021_GlideMagicBullet.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAttack1_e_ex021_GlideMagicBullet : public UTresAttackDefinitionWeaponBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     uint32 m_ShotNum;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_ProjectileSpeed;
     
 public:

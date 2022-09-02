@@ -3,7 +3,7 @@
 #include "TresAdhereObjBase.h"
 #include "TresAdhereSneeze.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresAdhereSneeze : public ATresAdhereObjBase {
     GENERATED_BODY()
 public:

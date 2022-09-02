@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct TRESGAME_API FTresVoiceGroupUnit {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_GroupNo;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundBase* m_pVoice;
     
     FTresVoiceGroupUnit();

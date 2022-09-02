@@ -3,16 +3,16 @@
 #include "TresGameCheatManager.h"
 #include "TresSharedCheatManager.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class UTresSharedCheatManager : public UTresGameCheatManager {
     GENERATED_BODY()
 public:
     UTresSharedCheatManager();
 protected:
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void ToggleDemoDebugInfo();
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void ToggleDebugInfo();
     
 };

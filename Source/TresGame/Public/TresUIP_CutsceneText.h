@@ -3,12 +3,12 @@
 #include "TresUIParts.h"
 #include "TresUIP_CutsceneText.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresUIP_CutsceneText : public UTresUIParts {
     GENERATED_BODY()
 public:
     UTresUIP_CutsceneText();
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     int32 OnCallback(int32 ID, int32 Param);
     
 };

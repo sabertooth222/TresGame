@@ -3,7 +3,7 @@
 #include "TresEnemyState_Bind.h"
 #include "TresEnemyState_XIII_Bind.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresEnemyState_XIII_Bind : public UTresEnemyState_Bind {
     GENERATED_BODY()
 public:

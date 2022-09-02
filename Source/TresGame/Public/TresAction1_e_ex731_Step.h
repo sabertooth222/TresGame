@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ETresEnemy_e_ex731_StepType.h"
 #include "TresActionDefinitionBase.h"
+#include "ETresEnemy_e_ex731_StepType.h"
 #include "TresAction1_e_ex731_Step.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAction1_e_ex731_Step : public UTresActionDefinitionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresEnemy_e_ex731_StepType> m_StepType;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fRootMotionScale;
     
     UTresAction1_e_ex731_Step();

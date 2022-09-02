@@ -7,18 +7,18 @@
 class ANavModifierVolume;
 class UTresAtkCollComponent;
 
-UCLASS(Config=Game)
+UCLASS(Blueprintable, Config=Game)
 class ATresFRSnowCoverSwingTree : public ATresGimmickSkeletalBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector m_ActionPoint;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ANavModifierVolume* m_NavModifierVolumeBP;
     
 private:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresAtkCollComponent* MyAtkColl;
     
 public:

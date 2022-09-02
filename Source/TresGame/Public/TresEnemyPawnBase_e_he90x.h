@@ -1,31 +1,31 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "TresEnemyPawnBase.h"
-#include "UObject/NoExportTypes.h"
 #include "Engine/EngineTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "TresEnemyPawnBase_e_he90x.generated.h"
 
-class ATresPlayerPawnBase;
 class UTresSkeletalMeshComponent;
+class ATresPlayerPawnBase;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresEnemyPawnBase_e_he90x : public ATresEnemyPawnBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bDebugDispCollMesh;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bForceStrongBodyDamage;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fMaxTargetMountOffTime;
     
 protected:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresSkeletalMeshComponent* MyCollMesh;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresPlayerPawnBase* m_Player;
     
 public:
@@ -33,13 +33,13 @@ public:
     UFUNCTION(BlueprintCallable)
     static void OnReceiveRemoteEvent(FName inEventName);
     
-    UFUNCTION(BlueprintImplementableEvent, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, BlueprintPure)
     bool LineTraceMultiForMap(const FVector Start, const FVector End, TArray<FHitResult>& OutHits) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsTargetOnMountain();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsPlayerOnMountain();
     
 };

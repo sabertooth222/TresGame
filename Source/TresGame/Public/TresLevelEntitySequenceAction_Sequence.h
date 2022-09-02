@@ -5,11 +5,11 @@
 
 class UTresLevelEntitySequence;
 
-UCLASS(BlueprintType, EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class TRESGAME_API UTresLevelEntitySequenceAction_Sequence : public UTresLevelEntitySequenceAction {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTresLevelEntitySequence* m_Sequence;
     
     UTresLevelEntitySequenceAction_Sequence();

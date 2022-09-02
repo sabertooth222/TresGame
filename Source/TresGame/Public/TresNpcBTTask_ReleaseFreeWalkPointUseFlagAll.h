@@ -3,7 +3,7 @@
 #include "BehaviorTree/BTTaskNode.h"
 #include "TresNpcBTTask_ReleaseFreeWalkPointUseFlagAll.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcBTTask_ReleaseFreeWalkPointUseFlagAll : public UBTTaskNode {
     GENERATED_BODY()
 public:

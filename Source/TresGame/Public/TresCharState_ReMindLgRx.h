@@ -3,7 +3,7 @@
 #include "TresStateBase.h"
 #include "TresCharState_ReMindLgRx.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresCharState_ReMindLgRx : public UTresStateBase {
     GENERATED_BODY()
 public:

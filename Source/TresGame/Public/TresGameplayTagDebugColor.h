@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct FTresGameplayTagDebugColor {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayTag GameplayTag;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FLinearColor Color;
     
     TRESGAME_API FTresGameplayTagDebugColor();

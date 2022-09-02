@@ -5,14 +5,14 @@
 
 class UTresMapSet;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class TRESGAME_API ATresMapSetVolumeEx : public ATresMapSetVolume {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresMapSet* EndOverlapMapset;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName EndOverlapCommandName;
     
     ATresMapSetVolumeEx();

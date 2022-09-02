@@ -1,27 +1,27 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "TresEnemyXIIIPawnBase.h"
-#include "EffectControlParam_e_ex304a.h"
 #include "EffectSpawnParam_e_ex304a.h"
+#include "EffectControlParam_e_ex304a.h"
 #include "TresEnemyPawn_e_ex304a.generated.h"
 
 class USQEX_ParticleAttachDataAsset;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemyPawn_e_ex304a : public ATresEnemyXIIIPawnBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_NextPhaseChangeTime;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USQEX_ParticleAttachDataAsset* m_EffectAttachData;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FEffectSpawnParam_e_ex304a> m_EffectSpawnParamList;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FEffectControlParam_e_ex304a> m_EffectControlParamList;
     
 public:
@@ -29,16 +29,16 @@ public:
     UFUNCTION(BlueprintCallable)
     void StartPowerEffect();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void DebugStartPowerEffect();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void DebugSetDisableBattleEnd(int32 bDisable);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void DebugPowerEffectNextStep();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void DebugMovePowerEffectStartLocation();
     
 };

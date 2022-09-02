@@ -3,7 +3,7 @@
 #include "TresASProxy.h"
 #include "TresASProxyTresControlsRadarChart.generated.h"
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class UTresASProxyTresControlsRadarChart : public UTresASProxy {
     GENERATED_BODY()
 public:

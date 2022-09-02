@@ -4,11 +4,11 @@
 #include "GameplayTagContainer.h"
 #include "TresBTDecorator_OverrideAttackGroup.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTDecorator_OverrideAttackGroup : public UBTDecorator {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayTag AttackGroup;
     
     UTresBTDecorator_OverrideAttackGroup();

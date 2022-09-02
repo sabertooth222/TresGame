@@ -5,12 +5,12 @@
 
 class UTresUIManager;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresGameOverHintSelector : public UObject {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresUIManager* m_UIManager;
     
 public:

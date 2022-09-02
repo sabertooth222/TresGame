@@ -3,12 +3,12 @@
 #include "TresLocomotionDefinitionLandCodeDriven.h"
 #include "TresMove1_e_ex050_Run.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresMove1_e_ex050_Run : public UTresLocomotionDefinitionLandCodeDriven {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bDashRun;
     
 public:

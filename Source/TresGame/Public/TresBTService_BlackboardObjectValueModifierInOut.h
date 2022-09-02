@@ -4,15 +4,15 @@
 #include "TresBlackboardObjectValueModifierInOutParam.h"
 #include "TresBTService_BlackboardObjectValueModifierInOut.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTService_BlackboardObjectValueModifierInOut : public UTresBTService_BlackboardValueModifierInOutBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresBlackboardObjectValueModifierInOutParam> m_InParamList;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresBlackboardObjectValueModifierInOutParam> m_OutParamList;
     
 public:

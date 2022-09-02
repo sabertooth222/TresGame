@@ -3,25 +3,25 @@
 #include "TresWinniePuzzleComponentBase.h"
 #include "TresWinniePuzzleGuideLine.generated.h"
 
-class UParticleSystem;
 class UParticleSystemComponent;
+class UParticleSystem;
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTresWinniePuzzleGuideLine : public UTresWinniePuzzleComponentBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* Particle;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float StartDistanceOffset;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float EndDistanceOffset;
     
 private:
-    UPROPERTY(Export, Transient)
+    UPROPERTY(EditAnywhere, Export, Transient)
     TArray<TWeakObjectPtr<UParticleSystemComponent>> m_particles;
     
 public:

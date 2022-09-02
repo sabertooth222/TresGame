@@ -9,10 +9,10 @@ USTRUCT(BlueprintType)
 struct FTresEnemy_e_ex773_LivelyFlarePillarParam {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AActor* m_Target;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresProjectileBase* m_LivelyFlarePillar;
     
     TRESGAME_API FTresEnemy_e_ex773_LivelyFlarePillarParam();

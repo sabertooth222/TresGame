@@ -3,111 +3,111 @@
 #include "GameFramework/GameUserSettings.h"
 #include "TresGameUserSettings.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresGameUserSettings : public UGameUserSettings {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(Config)
+    UPROPERTY(Config, EditAnywhere)
     uint8 VolumetricRenderQuality;
     
-    UPROPERTY(Config)
+    UPROPERTY(Config, EditAnywhere)
     uint8 UICharaRenderQuality;
     
-    UPROPERTY(Config)
+    UPROPERTY(Config, EditAnywhere)
     uint8 SceneCaptureRenderQuality;
     
-    UPROPERTY(Config)
+    UPROPERTY(Config, EditAnywhere)
     uint8 AOQuality;
     
-    UPROPERTY(Config)
+    UPROPERTY(Config, EditAnywhere)
     uint8 AAType;
     
-    UPROPERTY(Config)
+    UPROPERTY(Config, EditAnywhere)
     uint8 ShadowResolutionQuality;
     
-    UPROPERTY(Config)
+    UPROPERTY(Config, EditAnywhere)
     uint8 TextureQuality;
     
-    UPROPERTY(Config)
+    UPROPERTY(Config, EditAnywhere)
     uint8 FoliageQuality;
     
-    UPROPERTY(Config)
+    UPROPERTY(Config, EditAnywhere)
     uint8 SSRQuality;
     
-    UPROPERTY(Config)
+    UPROPERTY(Config, EditAnywhere)
     uint8 CharaLODQuality;
     
-    UPROPERTY(Config)
+    UPROPERTY(Config, EditAnywhere)
     uint8 DisableLOD;
     
-    UPROPERTY(Config)
+    UPROPERTY(Config, EditAnywhere)
     uint8 VolumetricFogQuality;
     
-    UPROPERTY(Config)
+    UPROPERTY(Config, EditAnywhere)
     uint8 CapsuleShadowQuality;
     
-    UPROPERTY(Config)
+    UPROPERTY(Config, EditAnywhere)
     uint8 BloomQuality;
     
-    UPROPERTY(Config)
+    UPROPERTY(Config, EditAnywhere)
     uint8 MotionBlurQuality;
     
-    UPROPERTY(Config)
+    UPROPERTY(Config, EditAnywhere)
     uint8 LensFlareQuality;
     
-    UPROPERTY(Config)
+    UPROPERTY(Config, EditAnywhere)
     uint8 DepthOfFieldQuality;
     
-    UPROPERTY(Config)
+    UPROPERTY(Config, EditAnywhere)
     uint8 DisableFog;
     
-    UPROPERTY(Config)
+    UPROPERTY(Config, EditAnywhere)
     uint8 ResolutionScaleBase;
     
-    UPROPERTY(Config)
+    UPROPERTY(Config, EditAnywhere)
     uint8 ResolutionScale;
     
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 MaxFPS;
     
-    UPROPERTY(Config)
+    UPROPERTY(Config, EditAnywhere)
     uint8 EnableFPSSettingToCutscene;
     
-    UPROPERTY(Config)
+    UPROPERTY(Config, EditAnywhere)
     uint8 EnableShadowSettingToCutscene;
     
-    UPROPERTY(Config)
+    UPROPERTY(Config, EditAnywhere)
     uint8 EnableHDR;
     
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float HDRBloomBoost;
     
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float HDRSceneColorBoost;
     
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float HDRUIBrightness;
     
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float HDRUIGamma;
     
-    UPROPERTY(Config)
+    UPROPERTY(Config, EditAnywhere)
     uint8 ColorVisionDeficiencyType;
     
-    UPROPERTY(Config)
+    UPROPERTY(Config, EditAnywhere)
     uint8 ColorVisionDeficiencySeverity;
     
-    UPROPERTY(Config)
+    UPROPERTY(Config, EditAnywhere)
     uint8 ColorVisionDeficiencyCorrect;
     
-    UPROPERTY(Config)
+    UPROPERTY(Config, EditAnywhere)
     uint8 ColorVisionDeficiencyShowCorrection;
     
-    UPROPERTY(Config)
+    UPROPERTY(Config, EditAnywhere)
     uint8 GraphicsPreset;
     
-    UPROPERTY(Config)
+    UPROPERTY(Config, EditAnywhere)
     int8 HDRBrightness;
     
 public:

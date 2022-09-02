@@ -3,7 +3,7 @@
 #include "TresAttackDefinitionBase.h"
 #include "TresAttack2_e_ex731_DashClaw.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAttack2_e_ex731_DashClaw : public UTresAttackDefinitionBase {
     GENERATED_BODY()
 public:

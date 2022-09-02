@@ -3,12 +3,12 @@
 #include "TresCoopDefinitionBase.h"
 #include "TresCoop1_e_ex202_JumpBite.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresCoop1_e_ex202_JumpBite : public UTresCoopDefinitionBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_EntryRadius;
     
 public:

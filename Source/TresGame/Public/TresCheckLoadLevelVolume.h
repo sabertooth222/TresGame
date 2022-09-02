@@ -3,20 +3,20 @@
 #include "TresVolume.h"
 #include "TresCheckLoadLevelVolume.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresCheckLoadLevelVolume : public ATresVolume {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FString> CheckLevelNameArray;
     
 public:
     ATresCheckLoadLevelVolume();
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void SelectLevelFromList();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void AutoSetFromSelect();
     
 };

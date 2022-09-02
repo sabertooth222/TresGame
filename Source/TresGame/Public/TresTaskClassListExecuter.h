@@ -5,12 +5,12 @@
 
 class UTresTaskExecuterBase;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresTaskClassListExecuter : public UObject {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresTaskExecuterBase* m_pTaskExecuter;
     
 public:

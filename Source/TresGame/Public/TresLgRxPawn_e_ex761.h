@@ -3,7 +3,7 @@
 #include "TresLgRxPawnBase.h"
 #include "TresLgRxPawn_e_ex761.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresLgRxPawn_e_ex761 : public ATresLgRxPawnBase {
     GENERATED_BODY()
 public:

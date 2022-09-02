@@ -5,42 +5,42 @@
 #include "TresUIActorMaterialParamSettingCoefficient.h"
 #include "TresUIActor.generated.h"
 
-class UTresSkeletalMeshComponent;
 class UTresEffectAttachComponent;
+class UTresSkeletalMeshComponent;
 class USceneCaptureComponent2D;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresUIActor : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_BonamikPreRollNum;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresUIActorMaterialParamSettingScalar> m_MaterialParamSettingsScalar;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresUIActorMaterialParamSettingCoefficient> m_MaterialParamSettingsCoefficient;
     
 private:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresSkeletalMeshComponent* MeshComponent;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USceneCaptureComponent2D* SceneCaptureComponent2D;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresEffectAttachComponent* MyEffectAtt;
     
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 effectGroupID;
     
     ATresUIActor();
     UFUNCTION(BlueprintCallable)
     void SetLinkMeshComponent(UTresSkeletalMeshComponent* LinkMeshComponent);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveEventBP(const FName& EventName);
     
     UFUNCTION(BlueprintCallable)

@@ -2,9 +2,9 @@
 #include "CoreMinimal.h"
 #include "TresRaDanceSplineOwner.generated.h"
 
-class ATresCharPawnBase;
 class UTresRaDanceSplineInterface;
 class ITresRaDanceSplineInterface;
+class ATresCharPawnBase;
 
 USTRUCT(BlueprintType)
 struct FTresRaDanceSplineOwner {
@@ -13,22 +13,22 @@ public:
     UPROPERTY(EditAnywhere)
     TWeakObjectPtr<ATresCharPawnBase> m_pOwner;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TScriptInterface<ITresRaDanceSplineInterface> m_pSplineInterface;
     
-    UPROPERTY(VisibleInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_nPrevArea;
     
-    UPROPERTY(VisibleInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_nAreaGroupIndex;
     
-    UPROPERTY(VisibleInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fMoveSpeed;
     
-    UPROPERTY(VisibleInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fTurnSpeed;
     
-    UPROPERTY(VisibleInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bSelect;
     
     TRESGAME_API FTresRaDanceSplineOwner();

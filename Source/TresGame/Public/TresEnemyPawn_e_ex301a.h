@@ -5,35 +5,35 @@
 
 class USoundBase;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemyPawn_e_ex301a : public ATresEnemyXIIIEPawnBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<USoundBase*> m_AnnihilationStartSoundData;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<USoundBase*> m_AnnihilationEndSoundData;
     
 public:
     ATresEnemyPawn_e_ex301a();
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     bool IsRunningAllOtherEnemiesBT() const;
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool IsEndAllAnnihilationAttack();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool IsAllXIIIEDuringWarp();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void DebugSetDisableFirstAnnihilation(int32 bDisable);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void DebugSetDebugAllBlackBoardAnnihilation();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void DebugSendRemoteEventForFirstAnnihilation();
     
     UFUNCTION(BlueprintCallable)

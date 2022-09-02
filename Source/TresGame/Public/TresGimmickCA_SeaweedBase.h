@@ -4,7 +4,7 @@
 #include "TresGimmickDitherFadeInterface.h"
 #include "TresGimmickCA_SeaweedBase.generated.h"
 
-UCLASS(Config=Game)
+UCLASS(Blueprintable, Config=Game)
 class ATresGimmickCA_SeaweedBase : public AActor, public ITresGimmickDitherFadeInterface {
     GENERATED_BODY()
 public:

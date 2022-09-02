@@ -3,7 +3,7 @@
 #include "TresTaskBase.h"
 #include "TresDebugAutoLoadLevel.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresDebugAutoLoadLevel : public UTresTaskBase {
     GENERATED_BODY()
 public:

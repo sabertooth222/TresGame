@@ -3,7 +3,7 @@
 #include "TresAction1_XIIIB_Vanish.h"
 #include "TresAction1_e_ex307_Vanish.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAction1_e_ex307_Vanish : public UTresAction1_XIIIB_Vanish {
     GENERATED_BODY()
 public:

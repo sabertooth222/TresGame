@@ -7,16 +7,16 @@
 
 class ATresCameraFix;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresSharedActor : public AActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FName m_cameraWorkEventName;
     
 private:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresCameraFix* m_pFixedCamera;
     
 public:
@@ -27,10 +27,10 @@ public:
     UFUNCTION(BlueprintCallable)
     ATresCameraFix* SpawnFixedCamera(FName Name, bool bTakeover, float FieldOfView, FVector WorldLocation, FRotator WorldRotation);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ATresCameraFix* GetFixedCamera() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FName GetCameraWorkEventName() const;
     
     UFUNCTION(BlueprintCallable)

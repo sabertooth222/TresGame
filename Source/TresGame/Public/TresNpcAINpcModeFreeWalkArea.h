@@ -5,14 +5,14 @@
 
 class ATresNpcAINpcModeFreeWalkWayPoint;
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API ATresNpcAINpcModeFreeWalkArea : public AActor {
     GENERATED_BODY()
 public:
     UPROPERTY(EditAnywhere)
     TArray<TWeakObjectPtr<ATresNpcAINpcModeFreeWalkWayPoint>> m_FreeWalkWayPoints;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bNotMoveToHeightDifference;
     
     ATresNpcAINpcModeFreeWalkArea();

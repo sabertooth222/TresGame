@@ -6,15 +6,15 @@
 class UParticleSystem;
 class UParticleSystemComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemyPawn_e_dw407a : public ATresEnemyDarkSidePawnBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_DarkHomingChestEffData;
     
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* m_DarkHomingChestEff;
     
 public:

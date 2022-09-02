@@ -5,12 +5,12 @@
 
 class UTresUIDataAsset;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresPlayerPawnKairi : public ATresPlayerPawnBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresUIDataAsset* m_UIDataShootFlow;
     
 public:

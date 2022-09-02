@@ -4,7 +4,7 @@
 #include "RemyCookingGameState.h"
 #include "TresRemyCookingFlambe.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresRemyCookingFlambe : public ATresRemyCookingBase {
     GENERATED_BODY()
 public:
@@ -15,10 +15,10 @@ public:
     UFUNCTION(BlueprintCallable)
     void PopState();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetMaterialMaxAmount() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetGameDuration() const;
     
     UFUNCTION(BlueprintCallable)

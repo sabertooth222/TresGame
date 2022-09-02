@@ -3,7 +3,7 @@
 #include "GameFramework/PawnMovementComponent.h"
 #include "TresGumiShipMovementCompoBase.generated.h"
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTresGumiShipMovementCompoBase : public UPawnMovementComponent {
     GENERATED_BODY()
 public:

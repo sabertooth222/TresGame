@@ -4,7 +4,7 @@
 #include "TresProjectile_e_bx901_DarkCubeMineInterface.h"
 #include "TresProjectile_e_bx901_DarkCubeMine.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresProjectile_e_bx901_DarkCubeMine : public ATresProjectile_e_ex901_RailSlideBase, public ITresProjectile_e_bx901_DarkCubeMineInterface {
     GENERATED_BODY()
 public:

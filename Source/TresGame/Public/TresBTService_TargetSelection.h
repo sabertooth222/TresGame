@@ -3,7 +3,7 @@
 #include "BehaviorTree/Services/BTService_RunEQS.h"
 #include "TresBTService_TargetSelection.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTService_TargetSelection : public UBTService_RunEQS {
     GENERATED_BODY()
 public:

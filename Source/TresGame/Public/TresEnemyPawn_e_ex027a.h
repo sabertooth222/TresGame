@@ -3,14 +3,14 @@
 #include "TresEnemyPawnBase.h"
 #include "TresEnemyPawn_e_ex027a.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemyPawn_e_ex027a : public ATresEnemyPawnBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_KnockUpPower;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_KnockUpAdditionalGravity;
     
     ATresEnemyPawn_e_ex027a();

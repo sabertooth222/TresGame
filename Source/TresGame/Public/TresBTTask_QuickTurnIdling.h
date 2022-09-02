@@ -3,20 +3,20 @@
 #include "BehaviorTree/Tasks/BTTask_BlackboardBase.h"
 #include "TresBTTask_QuickTurnIdling.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTTask_QuickTurnIdling : public UBTTask_BlackboardBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Offset;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float RandomAngleLimit;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float TurnLimit;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float CoolDownTimer;
     
     UTresBTTask_QuickTurnIdling();

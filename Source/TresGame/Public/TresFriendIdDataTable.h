@@ -4,14 +4,14 @@
 #include "ETresChrUniqueID.h"
 #include "TresFriendIdDataTable.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresFriendIdDataTable : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_Name;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresChrUniqueID m_UniqueID;
     
     TRESGAME_API FTresFriendIdDataTable();

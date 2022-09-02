@@ -3,7 +3,7 @@
 #include "TresAICharState_BadStatFreeze.h"
 #include "TresEnemyState_BadStatFreeze.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresEnemyState_BadStatFreeze : public UTresAICharState_BadStatFreeze {
     GENERATED_BODY()
 public:

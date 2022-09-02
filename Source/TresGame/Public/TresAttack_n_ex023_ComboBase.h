@@ -4,18 +4,18 @@
 #include "TresNpc_n_ex023_TractionData.h"
 #include "TresAttack_n_ex023_ComboBase.generated.h"
 
-UCLASS(Abstract, HideDropdown)
+UCLASS(Abstract, Blueprintable, HideDropdown)
 class UTresAttack_n_ex023_ComboBase : public UTresNpcAttackDefinitionBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fAutoTractionOffsetScale;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<FName, FTresNpc_n_ex023_TractionData> m_TractionDataMap;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 m_bDebugComboKeep: 1;
     
 public:

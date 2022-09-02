@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct FTresRandomVoice {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundBase* VOICE;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 RandomWeights;
     
     TRESGAME_API FTresRandomVoice();

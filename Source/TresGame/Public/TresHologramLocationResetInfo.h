@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FTresHologramLocationResetInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresPhotoHologramActor* m_pTargetActor;
     
     TRESGAME_API FTresHologramLocationResetInfo();

@@ -3,7 +3,7 @@
 #include "TresAICharState_Turn.h"
 #include "TresEnemyState_e_dw407_Turn.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresEnemyState_e_dw407_Turn : public UTresAICharState_Turn {
     GENERATED_BODY()
 public:

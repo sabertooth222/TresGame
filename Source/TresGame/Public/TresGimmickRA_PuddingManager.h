@@ -5,24 +5,24 @@
 
 class ATresGimmickRA_Pudding_ControlActor;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresGimmickRA_PuddingManager : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 PhotoCountMax;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float HoldCameraWaitTime;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float GameEndWaitTime;
     
 private:
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     TArray<TWeakObjectPtr<ATresGimmickRA_Pudding_ControlActor>> m_ControlActorList;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     TWeakObjectPtr<ATresGimmickRA_Pudding_ControlActor> m_pShotRaPuddingControlActor;
     
 public:
@@ -36,16 +36,16 @@ public:
     UFUNCTION(BlueprintCallable)
     void RemoveRaPuddingPhotos();
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveTakePhotoSucceed(int32 Score, bool bBestShot);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveMissionCompleted();
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveDebugForceReload();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsAlbumFreeSpaceEnough() const;
     
 };

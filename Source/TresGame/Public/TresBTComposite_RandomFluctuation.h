@@ -4,20 +4,20 @@
 #include "BehaviorTree/BehaviorTreeTypes.h"
 #include "TresBTComposite_RandomFluctuation.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTComposite_RandomFluctuation : public UBTCompositeNode {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
-    uint32 bFailOnAll: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 bFailOnAll: 1;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<float> Weights;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlackboardKeySelector BlackboardKeyIndex;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float FluctuationValue;
     
     UTresBTComposite_RandomFluctuation();

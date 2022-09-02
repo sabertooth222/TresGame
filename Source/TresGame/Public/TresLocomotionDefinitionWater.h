@@ -3,7 +3,7 @@
 #include "TresLocomotionDefinition3DBase.h"
 #include "TresLocomotionDefinitionWater.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresLocomotionDefinitionWater : public UTresLocomotionDefinition3DBase {
     GENERATED_BODY()
 public:

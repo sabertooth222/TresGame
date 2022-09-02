@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "TresTornadoDebrisTransform.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresTornadoDebrisTransform {
     GENERATED_BODY()
 public:

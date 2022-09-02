@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FTresWinniePuzzleComboEvalutionParam {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresWinniePuzzleComboEvalution> ComboEvalution;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 BreakthroughLimitBonusScorePerCombo;
     
     TRESGAME_API FTresWinniePuzzleComboEvalutionParam();

@@ -3,7 +3,7 @@
 #include "TresCharState_BadStatBurn.h"
 #include "TresNpcState_BadStatBurn.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcState_BadStatBurn : public UTresCharState_BadStatBurn {
     GENERATED_BODY()
 public:

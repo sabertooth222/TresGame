@@ -4,12 +4,12 @@
 #include "ETresBodyPushPowerLevel.h"
 #include "TresBodyPushPawn_e_ex356.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresBodyPushPawn_e_ex356 : public ATresCharPawnBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresBodyPushPowerLevel m_BodyPushPowerLevel;
     
 public:

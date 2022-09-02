@@ -3,7 +3,7 @@
 #include "TresLevelEntityControlVolumeData.h"
 #include "TresLevelEntityControlVolumeData_Int.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class TRESGAME_API UTresLevelEntityControlVolumeData_Int : public UTresLevelEntityControlVolumeData {
     GENERATED_BODY()
 public:

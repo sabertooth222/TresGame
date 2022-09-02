@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FTresRemyFlambeDataTable : public FTresRemyCookingGameDataTableBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float LeftStickFlambeValue;
     
     TRESGAME_API FTresRemyFlambeDataTable();

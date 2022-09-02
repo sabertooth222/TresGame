@@ -6,15 +6,15 @@
 
 class UTresStaticMeshComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresPhotoHologramDecoration : public ATresPhotoHologramActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresStaticMeshComponent* MyStaticMesh;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresPhotoHologramEffectData> EffectDataList;
     
 public:

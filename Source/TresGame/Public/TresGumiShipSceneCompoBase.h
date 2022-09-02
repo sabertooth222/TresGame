@@ -4,7 +4,7 @@
 #include "TresGumiShipCompoNotifyInterface.h"
 #include "TresGumiShipSceneCompoBase.generated.h"
 
-UCLASS(Abstract, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTresGumiShipSceneCompoBase : public USceneComponent, public ITresGumiShipCompoNotifyInterface {
     GENERATED_BODY()
 public:

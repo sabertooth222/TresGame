@@ -6,14 +6,14 @@
 
 class ATresProjectileBase;
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAttack14_e_ex354_SpawnArtemaWarpShot : public UTresAttackDefinitionWeaponBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FEX354_ArtemaWarpShotSet m_ShotSet;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresProjectileBase* m_Projectile;
     
     UTresAttack14_e_ex354_SpawnArtemaWarpShot();

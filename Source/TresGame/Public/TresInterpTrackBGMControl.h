@@ -4,7 +4,7 @@
 #include "ETresFadeTrack_TheaterMode.h"
 #include "TresInterpTrackBGMControl.generated.h"
 
-UCLASS(CollapseCategories)
+UCLASS(Blueprintable, CollapseCategories)
 class UTresInterpTrackBGMControl : public USQEXSEADInterpTrackBGMControl {
     GENERATED_BODY()
 public:

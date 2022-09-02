@@ -4,154 +4,154 @@
 #include "TresGameModeBase.h"
 #include "TresGumiShipGameMode.generated.h"
 
-class UTresGumiShipMissionMgr;
 class USoundBase;
-class ATresGumiShipPrizeItem;
-class UTresGameTimerManagerComponent;
 class UTresGummiEditorDataTableSet;
-class ATresGumiShipBattleVolume;
 class ATresGummiMenuManager;
 class UTresGumiShipAtkCollisionMgr;
 class ATresEventGameOverPawnBase;
 class ATresWorldMapCameraActor;
 class UTresGumiShipBodyCollisionMgr;
 class UTresGumiShipDefCollisionMgr;
+class UTresGameTimerManagerComponent;
 class UTresGumiShipWeaponManager;
 class UTresGumiShipProjectileFactory;
 class UTresGumiShipLockonPrimitiveManager;
 class UTresDistanceCalculateManagerComponent;
 class UTresGumiShipGlobalEnemyManager;
 class UTresGumiShipGlobalGameDataSet;
+class ATresGumiShipBattleVolume;
+class ATresGumiShipPrizeItem;
 class ATresGumiShipEnemyBattleStarter;
+class UTresGumiShipMissionMgr;
 class UTresGumiShipGumiMissionManager;
 class UTresGumiShipRaderEntityManager;
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class ATresGumiShipGameMode : public ATresGameModeBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundBase* m_pFieldBGM;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundBase* m_pNormalBattleBGM;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundBase* m_pBossBattleBGM;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundBase* m_pBattleResultBGM;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<USoundBase*> m_pHudSE;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresGummiEditorDataTableSet* m_pEditorDataSet;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DamageMaterialIntensityParameter;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DamageMaterialBlinkSpeedParameter;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DamageMaterialApplyTime;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresGummiMenuManager> GummiMenuManagerRef;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresWorldMapCameraActor> WorldMapCameraActorRef;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresEventGameOverPawnBase> m_GameOverPawn;
     
 private:
-    UPROPERTY(DuplicateTransient, Export, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UTresGumiShipAtkCollisionMgr* m_pAtkCollisionMgr;
     
-    UPROPERTY(DuplicateTransient, Export, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UTresGumiShipBodyCollisionMgr* m_pBodyCollisionMgr;
     
-    UPROPERTY(DuplicateTransient, Export, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UTresGumiShipDefCollisionMgr* m_pDefCollisionMgr;
     
-    UPROPERTY(DuplicateTransient, Export, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UTresGumiShipWeaponManager* m_pWeaponMgr;
     
-    UPROPERTY(DuplicateTransient, Export, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UTresGumiShipProjectileFactory* m_pProjectileMgr;
     
-    UPROPERTY(DuplicateTransient, Export, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UTresGumiShipLockonPrimitiveManager* m_pLockonPrimitiveMgr;
     
-    UPROPERTY(DuplicateTransient, Export, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UTresGameTimerManagerComponent* m_pGenericTimerManager;
     
-    UPROPERTY(DuplicateTransient, Export, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UTresGameTimerManagerComponent* m_pTimerManagerForLevelOnly;
     
-    UPROPERTY(DuplicateTransient, Export, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UTresDistanceCalculateManagerComponent* m_pDistanceCalculateManager;
     
-    UPROPERTY(DuplicateTransient, Export, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UTresGumiShipGlobalEnemyManager* m_pGlobalEnemyManager;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresGumiShipGlobalGameDataSet* m_pGlobalGameDataSet;
     
-    UPROPERTY(DuplicateTransient, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresGumiShipBattleVolume* m_pActiveBattleVolume;
     
-    UPROPERTY(DuplicateTransient, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresGumiShipPrizeItem* m_pGlobalPrizeManager;
     
-    UPROPERTY(DuplicateTransient, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresGumiShipEnemyBattleStarter* m_pCurrentEnemyBattleStarter;
     
-    UPROPERTY(DuplicateTransient, Export, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UTresGumiShipMissionMgr* m_pMissionMgr;
     
-    UPROPERTY(DuplicateTransient, Export, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UTresGumiShipGumiMissionManager* m_pGumiMissionMgr;
     
-    UPROPERTY(DuplicateTransient, Export, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UTresGumiShipRaderEntityManager* m_pRaderEntityMgr;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresGummiMenuManager* m_pGummiMenuManager;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresWorldMapCameraActor* m_pWorldMapCameraActor;
     
 public:
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool LoadComplete;
     
     ATresGumiShipGameMode();
     UFUNCTION(BlueprintCallable)
     void RefleshGuideMarkerArea();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ATresWorldMapCameraActor* GetWorldMapCameraActor() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ATresGummiMenuManager* GetGummiMenuManager() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UTresGumiShipGumiMissionManager* GetGumiMissionMgr() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ATresGumiShipPrizeItem* GetGlobalPrizeManager() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ATresGumiShipEnemyBattleStarter* GetCurrentEnemyBattleStarter() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ATresGumiShipBattleVolume* GetActiveBattleVolume() const;
     
 private:
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void _OnOverlapedGuideVolume();
     
 };

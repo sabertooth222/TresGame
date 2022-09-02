@@ -5,11 +5,11 @@
 
 class ATresVehiclePawnSmallAirplane;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_SmallAirplane : public UTresStateBase {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresVehiclePawnSmallAirplane* m_pObj;
     
     UTresPlayerState_SmallAirplane();

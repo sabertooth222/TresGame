@@ -9,106 +9,106 @@
 #include "ETresRiskDodgeType.h"
 #include "TresAnimInstance.generated.h"
 
+class ATresPawnBase;
 class UTresAnimSet;
 class ATresCharPawnBase;
-class ATresPawnBase;
-class UAnimMontage;
 class ATresGimmickSkeletalBase;
 class UAnimSequenceBase;
+class UAnimMontage;
 class UBlendSpaceBase;
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class TRESGAME_API UTresAnimInstance : public UAnimInstance {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UTresAnimSet*> MyAnimSets;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UTresAnimSet*> m_SubAnimSets;
     
-    UPROPERTY(DuplicateTransient, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UTresAnimSet*> m_ReplaceAnimSets;
     
-    UPROPERTY(DuplicateTransient, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UTresAnimSet*> m_ReplaceAnimSets2;
     
-    UPROPERTY(DuplicateTransient, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UTresAnimSet*> m_AppendAnimSetList;
     
-    UPROPERTY(DuplicateTransient, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UTresAnimSet*> m_WorldAppendAnimSetList;
     
-    UPROPERTY(DuplicateTransient, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UTresAnimSet*> m_ReplaceMatineeAnimSets;
     
-    UPROPERTY(DuplicateTransient, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UTresAnimSet*> m_ReplaceSubAnimSets;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_CacheStartPoseAnimName;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_DefaultAnimName;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 m_bDefaultAnimAlwaysLoopPlay: 1;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 m_bDefaultAnimCheckSame: 1;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 m_bAnimStopIfAnimAssetIsNone: 1;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName AnimPlayUseSlotNodeName;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_FaceAnimSlotName;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_LipAnimSlotName;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 m_bAutoPlayFaceAnim: 1;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresFaceAnimType> m_AutoPlayFaceAnimType;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_AutoPlayFaceAnimInterpTime;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 m_bAutoPlayFaceAnimLoop: 1;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 m_bKeepAnimMorphTargetCurveValue: 1;
     
-    UPROPERTY(DuplicateTransient, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<FName> m_ActiveSlots;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FName m_DefaultSlotGroupName;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FName m_FaceAnimSlotGroupName;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FName m_LipAnimSlotGroupName;
     
-    UPROPERTY(DuplicateTransient, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TMap<FName, FLastPlayedInfo> m_LastPlayedInfo;
     
 public:
     UTresAnimInstance();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ATresPawnBase* TryGetTresPawnOwner();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ATresGimmickSkeletalBase* TryGetTresGimmickSkeletalOwner();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ATresCharPawnBase* TryGetTresCharPawnOwner();
     
     UFUNCTION(BlueprintCallable)
@@ -117,10 +117,10 @@ public:
     UFUNCTION(BlueprintCallable)
     float SQEX_Montage_Play(UAnimMontage* MontageToPlay, float InBlendInTime, float InPlayRate, float InRootMoveScaleXY, float InRootMoveScaleZ);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool SQEX_IsAnimLoop(FName InSlotName) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool SQEX_IsAnimEnd(FName InSlotName) const;
     
     UFUNCTION(BlueprintCallable)
@@ -195,31 +195,31 @@ public:
     UFUNCTION(BlueprintCallable)
     bool SQEX_AnimJumpToSection(FName InSlotName, const FName InSectionName, bool bJumpToSectionEnd);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float SQEX_AnimGetCurrentTime(FName InSlotName) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FName SQEX_AnimGetCurrentSectionName(FName InSlotName) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float SQEX_AnimGetCurrentPlayRate(FName InSlotName) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float SQEX_AnimGetCurrentLength(FName InSlotName) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool SQEX_AnimGetCurrentBlendParamMinMax(FName InSlotName, FVector& OutParamMin, FVector& OutParamMax) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool SQEX_AnimGetBlendParamMinMax(const FName InAnimName, FVector& OutParamMin, FVector& OutParamMax) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float SQEX_AnimGetAnimSequenceLength(const FName InAnimName) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float SQEX_AnimGetAnimLength(const FName InAnimName) const;
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveTresEventSkip();
     
     UFUNCTION(BlueprintCallable)

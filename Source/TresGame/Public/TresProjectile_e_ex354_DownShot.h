@@ -4,11 +4,11 @@
 #include "EX354_DownShotInfo.h"
 #include "TresProjectile_e_ex354_DownShot.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresProjectile_e_ex354_DownShot : public ATresProjectile_e_ex354_NormalShot {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FEX354_DownShotInfo m_DownShotInfo;
     
     ATresProjectile_e_ex354_DownShot();

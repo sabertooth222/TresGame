@@ -6,19 +6,19 @@
 
 class UTresStaticMeshComponent;
 
-UCLASS(Abstract, Config=Game)
+UCLASS(Abstract, Blueprintable, Config=Game)
 class ATresGimmickSimpleStaticBase : public ATresGimmickActor, public ITresGimmickDitherFadeInterface {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresStaticMeshComponent* MyMesh;
     
 public:
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_GimmickClipDitherParamName;
     
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_IsGimmickClipDitherParamInvert;
     
     ATresGimmickSimpleStaticBase();

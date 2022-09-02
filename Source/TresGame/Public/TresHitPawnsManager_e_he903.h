@@ -5,15 +5,15 @@
 
 class UCurveFloat;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresHitPawnsManager_e_he903 : public AActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UCurveFloat* m_SuctionVelCurve;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UCurveFloat* m_EatVelCurve;
     
 public:

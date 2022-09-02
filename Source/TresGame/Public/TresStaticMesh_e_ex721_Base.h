@@ -6,15 +6,15 @@
 class UTresRootComponent;
 class UTresStaticMeshComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresStaticMesh_e_ex721_Base : public AActor {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresRootComponent* MyRoot;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresStaticMeshComponent* MyMesh;
     
 public:

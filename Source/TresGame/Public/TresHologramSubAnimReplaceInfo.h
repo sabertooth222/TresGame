@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FTresHologramSubAnimReplaceInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FName> m_ValidSlotList;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresHologramSubAnimReplaceDef> m_ReplaceDefList;
     
     TRESGAME_API FTresHologramSubAnimReplaceInfo();

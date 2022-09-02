@@ -5,12 +5,12 @@
 
 class UTresUIP_SaveLoadSaveDataDisplayInfo;
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class UTresUIP_SaveLoadAutoSaveButton : public UTresASProxyTresControlsButton {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresUIP_SaveLoadSaveDataDisplayInfo* m_DisplayInfo;
     
 public:

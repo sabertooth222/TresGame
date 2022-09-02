@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FTresE_dw405SoundData {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundBase* Sound;
     
     TRESGAME_API FTresE_dw405SoundData();

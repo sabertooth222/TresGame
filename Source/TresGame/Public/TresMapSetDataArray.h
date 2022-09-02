@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct TRESGAME_API FTresMapSetDataArray {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresMapSetData> DataArray;
     
     FTresMapSetDataArray();

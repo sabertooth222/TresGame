@@ -5,7 +5,7 @@
 #include "SprinklePepperMainState.h"
 #include "TresRemyCookingSprinklePepper.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresRemyCookingSprinklePepper : public ATresRemyCookingBase {
     GENERATED_BODY()
 public:
@@ -16,13 +16,13 @@ public:
     UFUNCTION(BlueprintCallable)
     void PopState();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetMaterialMaxAmount() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     SprinklePepperMainState GetMainCurrentState() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetGameDuration() const;
     
     UFUNCTION(BlueprintCallable)

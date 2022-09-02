@@ -1,43 +1,43 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TresUIGameFlagText.h"
-#include "Engine/DataTable.h"
-#include "ETresWorldCode.h"
-#include "ETresUIDataVersion.h"
-#include "TresUIGameFlagActor.h"
 #include "ESqexCPPKHSWorldType.h"
 #include "ETresItemDefKeyItem.h"
+#include "Engine/DataTable.h"
+#include "ETresWorldCode.h"
+#include "TresUIGameFlagText.h"
+#include "TresUIGameFlagActor.h"
+#include "ETresUIDataVersion.h"
 #include "TresDictionaryCharacterData.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresDictionaryCharacterData : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresWorldCode> WorldCode;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 UIPriority;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresUIGameFlagText> Texts;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresUIGameFlagActor> Actors;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString NameTextID;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString SourceTextID;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresItemDefKeyItem KeyItemID;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ESqexCPPKHSWorldType> KHSWorldType;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresUIDataVersion Version;
     
     TRESGAME_API FTresDictionaryCharacterData();

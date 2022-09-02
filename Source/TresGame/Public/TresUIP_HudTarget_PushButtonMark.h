@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FTresUIP_HudTarget_PushButtonMark {
     GENERATED_BODY()
 public:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UGFxObject* Root;
     
     TRESGAME_API FTresUIP_HudTarget_PushButtonMark();

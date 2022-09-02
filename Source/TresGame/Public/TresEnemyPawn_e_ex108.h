@@ -5,14 +5,14 @@
 
 class UParticleSystem;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemyPawn_e_ex108 : public ATresCharPawnBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_WeaponDisappearParticleSystem;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_HideInterpTime;
     
     ATresEnemyPawn_e_ex108();

@@ -3,7 +3,7 @@
 #include "TresCharState_BadStatStun.h"
 #include "TresPlayerState_BadStatStun.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_BadStatStun : public UTresCharState_BadStatStun {
     GENERATED_BODY()
 public:

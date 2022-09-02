@@ -6,20 +6,20 @@
 
 class UTresLocomotionDefinitionBase;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTTask_CommonAttackDefaultWalk_Q : public UTresBTTask_SequentialAttackProcess {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UTresLocomotionDefinitionBase> m_CommonLocomotionDefinition;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_CommonUpdateTime;
     
-    UPROPERTY(AdvancedDisplay, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_Angle;
     
-    UPROPERTY(AdvancedDisplay, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_ItemSpace;
     
     UTresBTTask_CommonAttackDefaultWalk_Q();

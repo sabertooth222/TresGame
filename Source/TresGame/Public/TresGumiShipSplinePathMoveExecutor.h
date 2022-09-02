@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "TresGumiShipSplinePathMoveExecutor.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresGumiShipSplinePathMoveExecutor {
     GENERATED_BODY()
 public:

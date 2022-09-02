@@ -3,7 +3,7 @@
 #include "Matinee/InterpTrackFloatMaterialParam.h"
 #include "TresInterpTrackFloatMaterialParam.generated.h"
 
-UCLASS(CollapseCategories)
+UCLASS(Blueprintable, CollapseCategories)
 class TRESGAME_API UTresInterpTrackFloatMaterialParam : public UInterpTrackFloatMaterialParam {
     GENERATED_BODY()
 public:

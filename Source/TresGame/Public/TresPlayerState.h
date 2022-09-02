@@ -6,25 +6,25 @@
 class ATresPlayerState;
 class UDamageType;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresPlayerState : public APlayerState {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(Transient, ReplicatedUsing=OnRep_TeamNo)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, ReplicatedUsing=OnRep_TeamNo, meta=(AllowPrivateAccess=true))
     int32 m_TeamNo;
     
 public:
     ATresPlayerState();
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnRep_TeamNo();
     
-    UFUNCTION(Client, Reliable)
+    UFUNCTION(BlueprintCallable, Client, Reliable)
     void InformAboutKill(ATresPlayerState* KillerPlayerState, const UDamageType* KillerDamageType, ATresPlayerState* KilledPlayerState);
     
-    UFUNCTION(NetMulticast, Reliable)
+    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
     void BroadcastDeath(ATresPlayerState* KillerPlayerState, const UDamageType* KillerDamageType, ATresPlayerState* KilledPlayerState);
     
 };

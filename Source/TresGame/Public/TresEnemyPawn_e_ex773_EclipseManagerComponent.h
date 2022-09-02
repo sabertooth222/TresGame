@@ -3,12 +3,12 @@
 #include "Components/ActorComponent.h"
 #include "TresEnemyPawn_e_ex773_EclipseManagerComponent.generated.h"
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTresEnemyPawn_e_ex773_EclipseManagerComponent : public UActorComponent {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float WaveCompleteAfterTime;
     
 public:

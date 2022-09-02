@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FDebrisStatePattern_e_he903 {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float fValidHpPer;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<float> fStateChangeRateArray;
     
     TRESGAME_API FDebrisStatePattern_e_he903();

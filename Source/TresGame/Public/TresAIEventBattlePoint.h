@@ -1,25 +1,25 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TresAI_EBP_PhaseChangeDelegate.h"
 #include "GameFramework/Actor.h"
+#include "TresAI_EBP_PhaseChangeDelegate.h"
 #include "GameplayTagContainer.h"
 #include "TresAIEventBattlePoint.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API ATresAIEventBattlePoint : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresAI_EBP_PhaseChange OnPhaseChange;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_UseBattlePlayerEmotionManager;
     
     ATresAIEventBattlePoint();
     UFUNCTION(BlueprintCallable)
     void SetPhaseTag(const FGameplayTag& InTag);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsPhaseTag(const FGameplayTag& InTag) const;
     
 };

@@ -7,17 +7,17 @@
 
 class UEnvQueryContext;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcEnvQueryTest_DashDirection : public UEnvQueryTest {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UEnvQueryContext> m_TargetContext;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAIDataProviderFloatValue m_Angle;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAIDataProviderFloatValue m_RandomAngleLimit;
     
     UTresNpcEnvQueryTest_DashDirection();

@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FTresPhotoLoadWork {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTexture2D* m_pTexture;
     
     TRESGAME_API FTresPhotoLoadWork();

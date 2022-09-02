@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TresAction_e_ex358_Interface.h"
 #include "TresLocomotionDefinitionLandCodeDriven.h"
+#include "TresAction_e_ex358_Interface.h"
 #include "TresMove1_e_ex358.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresMove1_e_ex358 : public UTresLocomotionDefinitionLandCodeDriven, public ITresAction_e_ex358_Interface {
     GENERATED_BODY()
 public:

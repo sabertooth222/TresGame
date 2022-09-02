@@ -1,109 +1,109 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
 #include "TresCharAnimInstance.h"
 #include "UObject/NoExportTypes.h"
-#include "ETresTurnMode.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "Engine/EngineTypes.h"
+#include "ETresTurnMode.h"
 #include "UObject/NoExportTypes.h"
 #include "TresAIAnimInstance.generated.h"
 
-class UAnimationAsset;
 class UObject;
+class UAnimationAsset;
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class UTresAIAnimInstance : public UTresCharAnimInstance {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    uint32 bUseCodeDrivenAnimation: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 bUseCodeDrivenAnimation: 1;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 LocomotionStateMachineIndex;
     
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRotator CurrentFacingOrientation;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRotator DesiredFacingOrientation;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector DesiredVelocity;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    uint32 bUseOmnidirectionalMovement: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 bUseOmnidirectionalMovement: 1;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    uint32 bUseQuickStop: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 bUseQuickStop: 1;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<EMovementMode> DesiredLocomotionMode;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresTurnMode::Type> DesiredTurnMode;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float StopDistance;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float UseRadius;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float RootMotionForwardRunEnd;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MinSpeed;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MaxSpeed;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    uint32 bIsJumpingOrFalling: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 bIsJumpingOrFalling: 1;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    uint32 bIsPreciseArrival: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 bIsPreciseArrival: 1;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    uint32 bIsAbortMove: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 bIsAbortMove: 1;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    uint32 bIsFastAbort: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 bIsFastAbort: 1;
     
 protected:
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<EMovementMode> CurrentLocomotionMode;
     
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresTurnMode::Type> CurrentTurnMode;
     
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRotator LastFacingOrientation;
     
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRotator LastDesiredMovementDirection;
     
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DeltaFacingYaw;
     
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DeltaMovementYaw;
     
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DesiredFacingYaw;
     
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DesiredVelocityXY;
     
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DesiredVelocityZ;
     
-    UPROPERTY(BlueprintReadWrite)
-    uint32 bIsIdle: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 bIsIdle: 1;
     
 public:
     UTresAIAnimInstance();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static FTransform ExtractRootMotion(UObject* WorldContextObject, UAnimationAsset* InAnimAsset, FVector inInput, FColor DebugColor);
     
 };

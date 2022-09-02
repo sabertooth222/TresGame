@@ -3,7 +3,7 @@
 #include "GameFramework/Actor.h"
 #include "TresNpcBattleAIPoint_XIII.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API ATresNpcBattleAIPoint_XIII : public AActor {
     GENERATED_BODY()
 public:

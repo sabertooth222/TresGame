@@ -4,7 +4,7 @@
 #include "TresAction_XIIILB_Interface.h"
 #include "TresAction_XIIILB_Base.generated.h"
 
-UCLASS(Abstract, HideDropdown)
+UCLASS(Abstract, Blueprintable, HideDropdown)
 class UTresAction_XIIILB_Base : public UTresActionDefinitionBase, public ITresAction_XIIILB_Interface {
     GENERATED_BODY()
 public:

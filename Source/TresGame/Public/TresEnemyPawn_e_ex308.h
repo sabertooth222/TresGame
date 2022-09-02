@@ -4,46 +4,46 @@
 #include "Engine/EngineTypes.h"
 #include "TresEnemyPawn_e_ex308.generated.h"
 
-class UPrimitiveComponent;
-class USphereComponent;
-class USoundBase;
 class AActor;
+class USoundBase;
+class USphereComponent;
+class UPrimitiveComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemyPawn_e_ex308 : public ATresEnemyXIIIBCoopPawnBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_WarpFadeInterpTime;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<USoundBase*> m_RevengeVoiceDataList;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     uint32 m_bEnableRevengeVoice2D;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USphereComponent* MyPullCollisionComponent;
     
 public:
     ATresEnemyPawn_e_ex308();
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnPullCollisionEndOverlap(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnPullCollisionBeginOverlap(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     bool IsDuringWarpCutCooldown_Phase2();
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     bool IsDuringPhantomBlitzCooldown();
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void DebugSetNumWarpCut(int32 Num);
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void DebugSetEnableDrawPullCollision(int32 Enable);
     
 };

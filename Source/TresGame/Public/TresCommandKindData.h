@@ -3,53 +3,53 @@
 #include "Engine/DataTable.h"
 #include "TresCommandKindData.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresCommandKindData : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString Name;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     uint8 Type;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     uint8 Cate;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     uint8 Old;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     uint8 Attr;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     uint8 Local;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     uint8 Flag;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     uint8 Sp;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     uint8 Mp;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     uint8 Fp;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 Param0;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 Param1;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 Param2;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 Param3;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString LocKey;
     
     TRESGAME_API FTresCommandKindData();

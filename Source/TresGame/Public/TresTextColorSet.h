@@ -4,11 +4,11 @@
 #include "TresTextColor.h"
 #include "TresTextColorSet.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresTextColorSet : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresTextColor> Colors;
     
     UTresTextColorSet();

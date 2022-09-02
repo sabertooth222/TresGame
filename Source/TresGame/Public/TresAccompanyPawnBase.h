@@ -1,82 +1,82 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TresCharPawnBase.h"
-#include "TresAccompanyPawnDisappearSignatureDelegate.h"
-#include "TresAccompanyPawnAppearSignatureDelegate.h"
 #include "TresAccompanyPawnDoFinishSignatureDelegate.h"
+#include "TresCharPawnBase.h"
+#include "TresAccompanyPawnAppearSignatureDelegate.h"
+#include "TresAccompanyPawnDisappearSignatureDelegate.h"
 #include "ETresChrUniqueID.h"
 #include "UObject/NoExportTypes.h"
 #include "TresAccompanyPawnBase.generated.h"
 
-class ATresPlayerControllerBase;
 class UTresUIDataAsset;
 class UTresSkeletalMeshComponent;
 class UParticleSystemComponent;
 class UTresVoiceGroupSet;
+class ATresPlayerControllerBase;
 class UTresAnimSet;
 class USoundBase;
 
-UCLASS(Abstract, BlueprintType)
+UCLASS(Abstract, Blueprintable)
 class ATresAccompanyPawnBase : public ATresCharPawnBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresUIDataAsset* m_UIDataAccompany;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresSkeletalMeshComponent* MyPenetrationEffectMesh;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* MyPenetrationParticleEffect;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresVoiceGroupSet* m_VoiceData;
     
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresPlayerControllerBase* m_PlayerController;
     
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    uint32 m_bDispDebugInfo: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bDispDebugInfo: 1;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresAccompanyPawnAppearSignature OnAccompanyPawnAppear;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresAccompanyPawnDisappearSignature OnAccompanyPawnDisappear;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresAccompanyPawnDoFinishSignature OnAccompanyPawnDoFinish;
     
 protected:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<ETresChrUniqueID, UTresAnimSet*> m_AppendAnimSetMap;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundBase* m_BGMAsset;
     
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_Param_MaxTime;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_Param_MoveTurnSpeed;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_Param_JumpRotRate;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_Param_FallCheckHeight;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    uint32 m_Param_bZMoveLand: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_Param_bZMoveLand: 1;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    uint32 m_Param_bLargeSpawn: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_Param_bLargeSpawn: 1;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_Param_LandSpawnHeight;
     
 protected:
@@ -85,16 +85,16 @@ protected:
     
 public:
     ATresAccompanyPawnBase();
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveAccompanyPawnDoFinish();
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveAccompanyPawnDisappear();
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveAccompanyPawnAppear();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector BP_GetSafetyPos() const;
     
 };

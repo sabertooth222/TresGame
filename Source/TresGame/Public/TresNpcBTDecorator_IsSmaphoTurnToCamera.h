@@ -3,7 +3,7 @@
 #include "TresNpcBTDecoratorBase.h"
 #include "TresNpcBTDecorator_IsSmaphoTurnToCamera.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcBTDecorator_IsSmaphoTurnToCamera : public UTresNpcBTDecoratorBase {
     GENERATED_BODY()
 public:

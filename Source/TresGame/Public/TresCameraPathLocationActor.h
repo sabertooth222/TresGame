@@ -3,7 +3,7 @@
 #include "TresCameraPathSplineLinkActor.h"
 #include "TresCameraPathLocationActor.generated.h"
 
-UCLASS(Placeable)
+UCLASS(Blueprintable, Placeable)
 class ATresCameraPathLocationActor : public ATresCameraPathSplineLinkActor {
     GENERATED_BODY()
 public:

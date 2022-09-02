@@ -3,7 +3,7 @@
 #include "EnvironmentQuery/EnvQueryContext.h"
 #include "TresNpcEnvQueryContext_FreeWalkPoints.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UTresNpcEnvQueryContext_FreeWalkPoints : public UEnvQueryContext {
     GENERATED_BODY()
 public:

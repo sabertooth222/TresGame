@@ -3,7 +3,7 @@
 #include "TresProjectileBase.h"
 #include "TresStyleProjSHThunder.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresStyleProjSHThunder : public ATresProjectileBase {
     GENERATED_BODY()
 public:

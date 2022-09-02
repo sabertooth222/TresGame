@@ -3,7 +3,7 @@
 #include "EnvironmentQuery/EnvQueryContext.h"
 #include "TresNpcEnvQueryContext_BattleAIPoint.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UTresNpcEnvQueryContext_BattleAIPoint : public UEnvQueryContext {
     GENERATED_BODY()
 public:

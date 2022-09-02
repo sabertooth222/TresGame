@@ -6,13 +6,13 @@ USTRUCT(BlueprintType)
 struct FTresNavLinkExtendedInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     uint32 ElementSize;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     uint32 Version;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     TArray<uint8> Data;
     
     TRESGAME_API FTresNavLinkExtendedInfo();

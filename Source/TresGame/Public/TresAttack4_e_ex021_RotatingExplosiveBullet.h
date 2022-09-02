@@ -3,7 +3,7 @@
 #include "TresAttackDefinitionWeaponBase.h"
 #include "TresAttack4_e_ex021_RotatingExplosiveBullet.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAttack4_e_ex021_RotatingExplosiveBullet : public UTresAttackDefinitionWeaponBase {
     GENERATED_BODY()
 public:

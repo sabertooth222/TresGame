@@ -5,7 +5,7 @@
 
 class USoundBase;
 
-UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTresGumiShipSoundSetComponent : public UTresGumiShipActorCompoBase {
     GENERATED_BODY()
 public:

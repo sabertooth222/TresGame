@@ -3,7 +3,7 @@
 #include "TresActionDefinitionBase.h"
 #include "TresAction3_e_ex761_WarpInBase.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class UTresAction3_e_ex761_WarpInBase : public UTresActionDefinitionBase {
     GENERATED_BODY()
 public:

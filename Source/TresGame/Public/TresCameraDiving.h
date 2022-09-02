@@ -7,12 +7,12 @@
 class UObject;
 class ATresCameraDiving;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresCameraDiving : public ATresCameraNormal {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_LerpBehindTime;
     
 public:

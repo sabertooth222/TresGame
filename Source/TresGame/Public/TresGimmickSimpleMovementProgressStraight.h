@@ -4,7 +4,7 @@
 #include "TresGimmickSimpleMovementProgressInterface.h"
 #include "TresGimmickSimpleMovementProgressStraight.generated.h"
 
-UCLASS(Transient)
+UCLASS(Blueprintable, Transient)
 class UTresGimmickSimpleMovementProgressStraight : public UObject, public ITresGimmickSimpleMovementProgressInterface {
     GENERATED_BODY()
 public:

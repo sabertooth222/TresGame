@@ -4,20 +4,20 @@
 #include "ETresItemDefWeapon.h"
 #include "TresShortcutWeaponData.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresShortcutWeaponData : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresItemDefWeapon Type1;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresItemDefWeapon Type2;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresItemDefWeapon Type3;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresItemDefWeapon Type4;
     
     TRESGAME_API FTresShortcutWeaponData();

@@ -3,7 +3,7 @@
 #include "EnvironmentQuery/EnvQueryTest.h"
 #include "TresNpcEnvQueryTest_Lead.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcEnvQueryTest_Lead : public UEnvQueryTest {
     GENERATED_BODY()
 public:

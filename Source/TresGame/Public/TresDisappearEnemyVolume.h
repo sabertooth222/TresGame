@@ -3,7 +3,7 @@
 #include "TresVolume.h"
 #include "TresDisappearEnemyVolume.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresDisappearEnemyVolume : public ATresVolume {
     GENERATED_BODY()
 public:

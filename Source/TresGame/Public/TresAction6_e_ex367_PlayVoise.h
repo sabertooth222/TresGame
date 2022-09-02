@@ -6,11 +6,11 @@
 
 class ATresGenerator_e_ex367_PlayVoise;
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAction6_e_ex367_PlayVoise : public UTresActionDefinitionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresGenerator_e_ex367_PlayVoise> m_Generator;
     
     UTresAction6_e_ex367_PlayVoise();

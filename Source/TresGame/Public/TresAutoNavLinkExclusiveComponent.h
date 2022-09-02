@@ -5,12 +5,12 @@
 #include "TresAutoNavLinkExclusiveVolumeInfo.h"
 #include "TresAutoNavLinkExclusiveComponent.generated.h"
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTresAutoNavLinkExclusiveComponent : public UActorComponent, public ITresAutoNavLinkExclusiveInterface {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresAutoNavLinkExclusiveVolumeInfo> ExclusiveInfo;
     
 public:

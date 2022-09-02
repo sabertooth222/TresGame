@@ -5,7 +5,7 @@
 #include "UObject/NoExportTypes.h"
 #include "TresCameraSpecialShip.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresCameraSpecialShip : public ATresCameraRotTarget {
     GENERATED_BODY()
 public:
@@ -28,31 +28,31 @@ protected:
     UPROPERTY(EditAnywhere)
     float m_PluralGuardPitchOffset[4];
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_GuardDistanceInTime;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_GuardDistanceOutTime;
     
     UPROPERTY(EditAnywhere)
     float m_PluralRushDistance[4];
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_RushDistanceInTime;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_RushDistanceOutTime;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_RushPitch;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_LimitPitchMin;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_LimitPitchMax;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 m_bShipAttach: 1;
     
 public:

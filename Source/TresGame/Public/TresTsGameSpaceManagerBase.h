@@ -3,7 +3,7 @@
 #include "GameFramework/Actor.h"
 #include "TresTsGameSpaceManagerBase.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresTsGameSpaceManagerBase : public AActor {
     GENERATED_BODY()
 public:

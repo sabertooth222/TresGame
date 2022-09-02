@@ -5,32 +5,32 @@
 #include "DarkRainInfo_e_ex734.h"
 #include "TresEnemyPawn_e_ex734.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemyPawn_e_ex734 : public ATresEnemyPawn_e_ex731_Base {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FEX734_FallInfo m_FallInfo;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FDarkRainInfo_e_ex734 m_DarkRainInfo;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_iRequiredWolfKillNum;
     
     ATresEnemyPawn_e_ex734();
 protected:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnChangeGimmickPause(bool bPause);
     
 public:
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetMyRequiredWolfKillNum();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetMyMaxFallTime();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void DebugSetDarkRainRate(int32 Rate);
     
 protected:

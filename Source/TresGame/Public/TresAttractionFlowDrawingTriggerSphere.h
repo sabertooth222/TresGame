@@ -5,18 +5,18 @@
 #include "TresAttractionFlowDrawingEntry.h"
 #include "TresAttractionFlowDrawingTriggerSphere.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresAttractionFlowDrawingTriggerSphere : public ATresTriggerSphere, public ITresAttractionFlowDrawingInterface {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresAttractionFlowDrawingEntry> m_DrawingTable;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_Enable;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_ForceDisplay;
     
 public:

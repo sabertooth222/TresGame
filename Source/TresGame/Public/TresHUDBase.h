@@ -3,33 +3,33 @@
 #include "GameFramework/HUD.h"
 #include "TresHUDBase.generated.h"
 
-class AMatineeActor;
 class UMaterialInterface;
+class AMatineeActor;
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class ATresHUDBase : public AHUD {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UMaterialInterface* m_ScreenMaterial;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_ScreenMaterialX;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_ScreenMaterialY;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_ScreenMaterialW;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_ScreenMaterialH;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<AMatineeActor*> m_MatineeActorArray;
     
     ATresHUDBase();
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void ShowAreaRect(int32 X, int32 Y, int32 Width, int32 Height);
     
 };

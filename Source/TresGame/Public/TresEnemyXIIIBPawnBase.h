@@ -6,32 +6,32 @@
 class UEnvQuery;
 class UParticleSystem;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresEnemyXIIIBPawnBase : public ATresEnemyXIIIPawnBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_VanishModeEndTime;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UEnvQuery* m_VanishModeEndQuery;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_SmokeCardParticleSystem;
     
 public:
     ATresEnemyXIIIBPawnBase();
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     bool IsStun_e_ex307() const;
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     bool IsDuringCoopActionCooldown_Phase3();
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     bool IsDuringCoopActionCooldown_Phase2();
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     bool IsCardEscape() const;
     
     UFUNCTION(BlueprintCallable)

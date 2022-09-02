@@ -5,11 +5,11 @@
 
 class ATresGimmickBxStepBanAsset;
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UTresLevelEntityActorData_e_ex044 : public UTresLevelEntityActorData {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<ATresGimmickBxStepBanAsset*> m_GimmickArray;
     
     UTresLevelEntityActorData_e_ex044();

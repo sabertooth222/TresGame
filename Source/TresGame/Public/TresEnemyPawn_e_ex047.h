@@ -6,25 +6,25 @@
 
 class UParticleSystem;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemyPawn_e_ex047 : public ATresEnemyPawnBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETrese_ex047WorldTypes> m_WorldType;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_MasicParticle;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_MasicParticleSocketName;
     
     ATresEnemyPawn_e_ex047();
 protected:
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsShotHit() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsRevengeCoolDownTime() const;
     
     UFUNCTION(BlueprintCallable)

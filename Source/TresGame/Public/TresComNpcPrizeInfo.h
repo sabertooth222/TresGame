@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct FTresComNpcPrizeInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_Num;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresGimmickDropPrizeSet* m_pPrizeDataAsset;
     
     TRESGAME_API FTresComNpcPrizeInfo();

@@ -1,71 +1,71 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
 #include "TresGimmickGeneratorMI_04_Base.h"
 #include "TresGimmickMI_04Status.h"
 #include "TresGimmickMI_04_DoorDamageParam.h"
-#include "UObject/NoExportTypes.h"
 #include "ETresStateID.h"
 #include "ETresPlayerSpecificActionID.h"
 #include "Engine/EngineTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "TresGimmickGeneratorMI_04.generated.h"
 
-class UTresBodyCollPrimitive;
 class UTresBodyCollComponent;
+class UTresBodyCollPrimitive;
 class ASQEX_SplineActor;
-class UStaticMeshComponent;
-class ATriggerBox;
 class UPrimitiveComponent;
+class ATriggerBox;
+class UStaticMeshComponent;
 class AActor;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresGimmickGeneratorMI_04 : public ATresGimmickGeneratorMI_04_Base {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<FTresGimmickMI_04Status> m_Statuses;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresBodyCollPrimitive* BodyCollPrim;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresBodyCollComponent* BodyCollComp;
     
-    UPROPERTY(Transient, VisibleInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float SplineLength;
     
-    UPROPERTY(Transient, VisibleInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     int32 DoorNum;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DoorInterval;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 ObjectLife;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector PositionOffset;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MoveSpeed;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool IsReverse;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ASQEX_SplineActor* ConfluenceSplineActor;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresGimmickMI_04_DoorDamageParam damageParam;
     
-    UPROPERTY(Export, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UStaticMeshComponent* m_pRideMesh;
     
-    UPROPERTY(EditInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<ASQEX_SplineActor*> RaildSlideDisconnect;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<ATriggerBox*> TabooRideVolumeArray;
     
 public:
@@ -82,13 +82,13 @@ public:
     UFUNCTION()
     void OnPlayerSpecificAction(TEnumAsByte<ETresPlayerSpecificActionID> ActionID, int32 SubID);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnBeginOverlapTabooRide(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FTransform GetNearDoorTransformFromIndex(int32 Index);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetNearDoorIndexFromLocation(FVector nearLocation);
     
     UFUNCTION(BlueprintCallable)
@@ -100,13 +100,13 @@ public:
     UFUNCTION(BlueprintCallable)
     void CreateDoor();
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BP_Ride(UStaticMeshComponent* MeshComponent);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     UStaticMeshComponent* BP_GenerateMesh();
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BP_BreakObject(UStaticMeshComponent* MeshComponent, int32 breakIndex);
     
 };

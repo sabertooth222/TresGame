@@ -3,12 +3,12 @@
 #include "GameFramework/Actor.h"
 #include "TresLSIGameActorMain.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresLSIGameActorMain : public AActor {
     GENERATED_BODY()
 public:
     ATresLSIGameActorMain();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsLsiPause();
     
 };

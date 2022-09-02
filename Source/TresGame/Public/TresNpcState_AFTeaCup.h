@@ -5,11 +5,11 @@
 
 class AActor;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcState_AFTeaCup : public UTresCharState_AFTeaCup {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AActor* m_pAttachActor;
     
     UTresNpcState_AFTeaCup();

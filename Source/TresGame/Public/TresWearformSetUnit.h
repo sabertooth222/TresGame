@@ -9,22 +9,22 @@ USTRUCT(BlueprintType)
 struct FTresWearformSetUnit {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_FormName;
     
-    UPROPERTY(EditDefaultsOnly)
-    uint32 m_bTextureReplace: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bTextureReplace: 1;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresWearformTextureReplaceData> m_TextureReplaceData;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UTresAnimSet*> m_ReplaceAnimSets;
     
-    UPROPERTY(EditDefaultsOnly)
-    uint32 m_bPlayFaceAnim: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bPlayFaceAnim: 1;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_PlayFaceAnimName;
     
     TRESGAME_API FTresWearformSetUnit();

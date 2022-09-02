@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct FTresGummiPlanSetData : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresItemDefGumiShipBP m_GummiShipPlan;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     ETresItemDefGumiShipBP m_TinyShipPlan[2];
     
     TRESGAME_API FTresGummiPlanSetData();

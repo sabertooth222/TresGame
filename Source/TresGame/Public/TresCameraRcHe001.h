@@ -3,15 +3,15 @@
 #include "TresCameraRc.h"
 #include "TresCameraRcHe001.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresCameraRcHe001 : public ATresCameraRc {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_TargetEntityTag;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_TargetEntityBoneName;
     
 public:

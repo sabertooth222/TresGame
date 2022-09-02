@@ -3,17 +3,17 @@
 #include "Animation/AnimNotifies/AnimNotifyState.h"
 #include "TresAnimNotifyState_KBD_ChangeHighFpsEvaluationSimulationDefaultDeltaSeconds.generated.h"
 
-UCLASS(CollapseCategories, EditInlineNew, MinimalAPI)
+UCLASS(Blueprintable, CollapseCategories, EditInlineNew, MinimalAPI)
 class UTresAnimNotifyState_KBD_ChangeHighFpsEvaluationSimulationDefaultDeltaSeconds : public UAnimNotifyState {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_BeginSimulationDefaultDeltaSeconds;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_EndSimulationDefaultDeltaSeconds;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bApplyToChildren;
     
     UTresAnimNotifyState_KBD_ChangeHighFpsEvaluationSimulationDefaultDeltaSeconds();

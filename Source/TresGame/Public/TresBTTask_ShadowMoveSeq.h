@@ -7,20 +7,20 @@
 
 class UTresLocomotionDefinitionBase;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTTask_ShadowMoveSeq : public UTresBTTask_SequentialExecProcess {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     COMMON_SHADOWMOVE_MODE_Enum m_TaskModeEnum;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UTresLocomotionDefinitionBase> m_CommonLocomotionDefinition;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_CommonMoveRadius;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_CommonMoveRandomRadius;
     
     UTresBTTask_ShadowMoveSeq();

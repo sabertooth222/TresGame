@@ -3,7 +3,7 @@
 #include "BehaviorTree/Services/BTService_BlackboardBase.h"
 #include "TresBTService_FindBestEnemy.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTService_FindBestEnemy : public UBTService_BlackboardBase {
     GENERATED_BODY()
 public:

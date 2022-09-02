@@ -5,14 +5,14 @@
 
 class UPackage;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresDebugData : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UPackage*> m_UPackage;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UObject*> m_UObject;
     
     UTresDebugData();

@@ -5,48 +5,48 @@
 #include "TresEnemyPawn_e_ca901.generated.h"
 
 class ATresEnemyJointActor_e_ca901;
-class ATresEnemy_e_ex071_ValidateTargetVolume;
 class ASkeletalMeshActor;
+class ATresEnemy_e_ex071_ValidateTargetVolume;
 class USoundBase;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemyPawn_e_ca901 : public ATresEnemyPawnBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresEnemyJointActor_e_ca901> m_JointActorAsset;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresEnemyJointActor_e_ca901* m_pJointActor;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<ATresEnemy_e_ex071_ValidateTargetVolume*> m_pValidateVolumes;
     
 public:
-    UPROPERTY(EditInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ASkeletalMeshActor* m_ShipMeshActor;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<USoundBase*> m_TentacleSummonsSoundData;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_PlayVoiceTime;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundBase* m_RestraintJackSuccessSoundData;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundBase* m_RestraintOtherSuccessSoundData;
     
     ATresEnemyPawn_e_ca901();
     UFUNCTION(BlueprintCallable)
     void KillAllTentacle();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool IsDuringWarp();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     int32 GetExistTentacleNum();
     
     UFUNCTION(BlueprintCallable)

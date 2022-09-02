@@ -4,11 +4,11 @@
 #include "EnvironmentQuery/EnvQueryTest.h"
 #include "TresEnvQueryTest_Influence.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresEnvQueryTest_Influence : public UEnvQueryTest {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresInfluenceMapLayer::Type> Layer;
     
     UTresEnvQueryTest_Influence();

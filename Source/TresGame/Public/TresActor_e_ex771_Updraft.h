@@ -6,24 +6,24 @@
 
 class UCurveFloat;
 class ATresProjectileBase;
-class ATresWaterCurrentSplineActor;
 class UCapsuleComponent;
+class ATresWaterCurrentSplineActor;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresActor_e_ex771_Updraft : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UCurveFloat* m_ForceRateCurve;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresProjectileBase* m_Projectile;
     
 protected:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UCapsuleComponent* MyUpdraftComponent;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresWaterCurrentSplineActor> m_UpdraftSplineClass;
     
 public:

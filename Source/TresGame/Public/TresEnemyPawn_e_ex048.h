@@ -2,37 +2,37 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "TresEnemyPawnBase.h"
-#include "ETresDamageKind.h"
 #include "TresEx048BladeEffectMan.h"
+#include "ETresDamageKind.h"
 #include "TresEnemyPawn_e_ex048.generated.h"
 
 class UParticleSystem;
 class UTresAnimSet;
 class ATresProjectileBase;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemyPawn_e_ex048 : public ATresEnemyPawnBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresAnimSet* m_LandModeAnimSet;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_BladeEffectData;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TArray<TEnumAsByte<ETresDamageKind>> m_ChangeFlyModeReaction;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresProjectileBase> m_MissileProjectileAsset;
     
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresEx048BladeEffectMan m_BladeEffectManager;
     
 public:
     ATresEnemyPawn_e_ex048();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsFlyMode() const;
     
     UFUNCTION(BlueprintCallable)

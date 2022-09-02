@@ -3,7 +3,7 @@
 #include "UObject/Object.h"
 #include "TresSpawnPointScorer.generated.h"
 
-UCLASS(Transient)
+UCLASS(Blueprintable, Transient)
 class TRESGAME_API UTresSpawnPointScorer : public UObject {
     GENERATED_BODY()
 public:

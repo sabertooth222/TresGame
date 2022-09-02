@@ -4,11 +4,11 @@
 #include "ETresPropertyTrackTermnation.h"
 #include "TresInterpTrackColorProp.generated.h"
 
-UCLASS(CollapseCategories)
+UCLASS(Blueprintable, CollapseCategories)
 class TRESGAME_API UTresInterpTrackColorProp : public UInterpTrackColorProp {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresPropertyTrackTermnation m_TermnationType;
     
     UTresInterpTrackColorProp();

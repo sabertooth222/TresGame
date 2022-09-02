@@ -6,14 +6,14 @@
 
 class USoundBase;
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresWinnieSoundEffectDataTable : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     WinniePuzzleSoundEffect SoundEffectType;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundBase* SoundEffect;
     
     TRESGAME_API FTresWinnieSoundEffectDataTable();

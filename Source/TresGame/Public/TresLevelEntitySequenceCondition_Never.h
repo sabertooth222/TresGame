@@ -3,7 +3,7 @@
 #include "TresLevelEntitySequenceCondition.h"
 #include "TresLevelEntitySequenceCondition_Never.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class TRESGAME_API UTresLevelEntitySequenceCondition_Never : public UTresLevelEntitySequenceCondition {
     GENERATED_BODY()
 public:

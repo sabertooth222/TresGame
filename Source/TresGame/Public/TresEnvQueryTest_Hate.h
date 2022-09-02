@@ -1,20 +1,20 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "EnvironmentQuery/EnvQueryTest.h"
 #include "DataProviders/AIDataProvider.h"
+#include "EnvironmentQuery/EnvQueryTest.h"
 #include "TresEnvQueryTest_Hate.generated.h"
 
 class UEnvQueryContext;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresEnvQueryTest_Hate : public UEnvQueryTest {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UEnvQueryContext> HateFrom;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAIDataProviderBoolValue HateFromItems;
     
     UTresEnvQueryTest_Hate();

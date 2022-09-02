@@ -5,17 +5,17 @@
 #include "ETresUIDataVersion.h"
 #include "TresStoryData.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresStoryData : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString WorldNameTextID;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresStoryEpisodeData> EpisodeData;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresUIDataVersion Version;
     
     TRESGAME_API FTresStoryData();

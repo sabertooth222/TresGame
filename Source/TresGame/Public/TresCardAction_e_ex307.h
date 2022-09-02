@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FTresCardAction_e_ex307 {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     int8 ActionType;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     FTresCardActionParam_e_ex307 ActionParam[4];
     
     TRESGAME_API FTresCardAction_e_ex307();

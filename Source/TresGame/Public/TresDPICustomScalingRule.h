@@ -3,7 +3,7 @@
 #include "Engine/DPICustomScalingRule.h"
 #include "TresDPICustomScalingRule.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresDPICustomScalingRule : public UDPICustomScalingRule {
     GENERATED_BODY()
 public:

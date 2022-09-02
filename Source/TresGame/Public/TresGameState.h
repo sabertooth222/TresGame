@@ -3,39 +3,39 @@
 #include "GameFramework/GameStateBase.h"
 #include "TresGameState.generated.h"
 
+class ATresPrizeMan;
 class ATresSceneManager;
 class ATresVFXManager;
-class ATresPhysObjMan;
-class ATresPrizeMan;
 class ATresEmitterPool;
 class UTresPhysMatEffectAsset;
 class ATresCollisionManager;
+class ATresPhysObjMan;
 class ASQEX_VFXManager;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresGameState : public AGameStateBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresSceneManager* m_SceneManager;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresVFXManager* m_VFXManager;
     
-    UPROPERTY(DuplicateTransient, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresEmitterPool* m_EmitterPool;
     
-    UPROPERTY(DuplicateTransient, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresPhysMatEffectAsset* m_PhysMatEffects;
     
-    UPROPERTY(DuplicateTransient, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresPrizeMan* m_PrizeMan;
     
-    UPROPERTY(DuplicateTransient, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresCollisionManager* m_CollisionManager;
     
-    UPROPERTY(DuplicateTransient, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresPhysObjMan* m_PhysObjMan;
     
 public:

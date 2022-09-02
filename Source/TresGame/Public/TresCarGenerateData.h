@@ -9,10 +9,10 @@ USTRUCT(BlueprintType)
 struct FTresCarGenerateData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresCarBodyWithColorDataAsset* CarBodyAsset;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UTresCarDriverDataAsset*> CarDriverAsset;
     
     TRESGAME_API FTresCarGenerateData();

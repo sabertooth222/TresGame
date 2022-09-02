@@ -4,24 +4,24 @@
 #include "TresUIShopInfo.h"
 #include "TresUIShopDataAsset.generated.h"
 
-class UTresUIGumiPartsDataAsset;
 class UTextureRenderTarget2D;
 class USwfMovie;
+class UTresUIGumiPartsDataAsset;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresUIShopDataAsset : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTextureRenderTarget2D* ShopStaffRenderTargetTexture;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     FTresUIShopInfo ShopInfos[4];
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TAssetPtr<USwfMovie> ShopSwfMovieAsset;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TAssetPtr<UTresUIGumiPartsDataAsset> GumiPartsData;
     
     UTresUIShopDataAsset();

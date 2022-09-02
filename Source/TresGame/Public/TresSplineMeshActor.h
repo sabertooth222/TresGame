@@ -6,15 +6,15 @@
 class USceneComponent;
 class USplineMeshComponent;
 
-UCLASS(Config=Game)
+UCLASS(Blueprintable, Config=Game)
 class ATresSplineMeshActor : public AActor {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USceneComponent* SceneComponent;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USplineMeshComponent* SplineMeshComponent;
     
 public:

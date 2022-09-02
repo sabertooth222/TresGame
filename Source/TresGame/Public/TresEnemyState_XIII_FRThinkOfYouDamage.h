@@ -4,7 +4,7 @@
 #include "TresFRThinkOfYouInterface.h"
 #include "TresEnemyState_XIII_FRThinkOfYouDamage.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresEnemyState_XIII_FRThinkOfYouDamage : public UTresStateBase, public ITresFRThinkOfYouInterface {
     GENERATED_BODY()
 public:

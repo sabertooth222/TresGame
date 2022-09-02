@@ -3,7 +3,7 @@
 #include "GameFramework/Actor.h"
 #include "TresFzAvalanche.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresFzAvalanche : public AActor {
     GENERATED_BODY()
 public:

@@ -3,7 +3,7 @@
 #include "TresAttackDefinitionWeaponBase.h"
 #include "TresAttack1_GigasBase_MachineGun.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAttack1_GigasBase_MachineGun : public UTresAttackDefinitionWeaponBase {
     GENERATED_BODY()
 public:

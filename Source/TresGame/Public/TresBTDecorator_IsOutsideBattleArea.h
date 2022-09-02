@@ -3,7 +3,7 @@
 #include "BehaviorTree/BTDecorator.h"
 #include "TresBTDecorator_IsOutsideBattleArea.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTDecorator_IsOutsideBattleArea : public UBTDecorator {
     GENERATED_BODY()
 public:

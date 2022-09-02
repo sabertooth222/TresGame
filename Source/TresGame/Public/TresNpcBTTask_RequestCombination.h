@@ -4,11 +4,11 @@
 #include "ETresFNpcAICombiID.h"
 #include "TresNpcBTTask_RequestCombination.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcBTTask_RequestCombination : public UBTTaskNode {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresFNpcAICombiID m_CombiID;
     
     UTresNpcBTTask_RequestCombination();

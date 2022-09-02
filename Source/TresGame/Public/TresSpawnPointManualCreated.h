@@ -3,20 +3,20 @@
 #include "TresSpawnPointElement.h"
 #include "TresSpawnPointManualCreated.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct TRESGAME_API FTresSpawnPointManualCreated {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_Id;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_Radius;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_Height;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresSpawnPointElement m_Element;
     
     FTresSpawnPointManualCreated();

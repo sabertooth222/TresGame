@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TresAnimInterface.h"
 #include "TresGumiShipPawnBase.h"
-#include "Engine/EngineTypes.h"
-#include "ETresGumiShipReactionType.h"
+#include "TresAnimInterface.h"
 #include "UObject/NoExportTypes.h"
 #include "ETresGumiShipBadStateType.h"
+#include "Engine/EngineTypes.h"
+#include "ETresGumiShipReactionType.h"
 #include "TresGumiShipCharaPawnBase.generated.h"
 
-class UTresSkeletalMeshComponent;
 class AActor;
 class UTresGumiShipAtkCollisionSetCompo;
+class UTresSkeletalMeshComponent;
 class UTresGumiShipBodyCollisionSetCompo;
 class USceneComponent;
 class UTresGumiShipWeaponSequence;
@@ -19,7 +19,7 @@ class UTresInterpGroup;
 class UTresInterpGroupInst;
 class UPrimitiveComponent;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class TRESGAME_API ATresGumiShipCharaPawnBase : public ATresGumiShipPawnBase, public ITresAnimInterface {
     GENERATED_BODY()
 public:
@@ -28,36 +28,36 @@ public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FTresGumiShipChangeHp, const int32, dOldHp, const int32, dNewHp, const float, fRatio);
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FTresGumiShipCauseDamage, const AActor*, pTarget, const float, fDamage);
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresGumiShipChangeHp m_OnChangeHpDispather;
     
 protected:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USceneComponent* m_pCameraBasePoint;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USceneComponent* m_pMeshBasePoint;
     
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresSkeletalMeshComponent* m_pSkeletalMesh;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresGumiShipBodyCollisionSetCompo* m_pBodyCollision;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresGumiShipAtkCollisionSetCompo* m_pAtkComllision;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresGumiShipWeaponSequence* m_pWeaponSequence;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresEffectAttachComponent* m_pEffectAttach;
     
 public:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UTresInterpGroup*> m_InterpGroup;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UTresInterpGroupInst*> m_InterpGroupInst;
     
     ATresGumiShipCharaPawnBase();
@@ -79,31 +79,31 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetBodyCollisionEnable(const bool bIn, const bool bForce);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsInvincible() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsDead() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsCinematicMode() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FHitResult GetLastHitResult() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetHPRatio() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetHPMax() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetHP() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool BP_IsAnimEnd(FName SlotName) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float BP_GetAnimCurrentTime(FName SlotName) const;
     
     UFUNCTION(BlueprintCallable)
@@ -113,32 +113,32 @@ public:
     float BP_AnimPlay(FName AnimName, bool bIsLoop);
     
 protected:
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void _ReceiveTakeReaction(const ETresGumiShipReactionType eReactionType, const FVector& rvImpactNormal);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void _ReceiveTakeDamage(const AActor* pDamageCauser, const UPrimitiveComponent* pHitComponent, const float fDamagePoint);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void _ReceiveTakeBadState(const ETresGumiShipBadStateType eBadStateType);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void _ReceivePreTakeDamage(const AActor* pDamageCauser, const UPrimitiveComponent* pHitComponent, const float fDamagePoint);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void _ReceivePreDead();
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void _ReceiveDead();
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void _ReceiveChangeHp(const int32 dOldHp, const int32 dNewHp, const float fRatio);
     
 private:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnHitComponent(UPrimitiveComponent* pHitComponent, AActor* pOtherActor, UPrimitiveComponent* pOtherComp, FVector vNormalImpulse, const FHitResult& rHit);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnBeginOverlapComponent(UPrimitiveComponent* pOverlappedComponent, AActor* pOtherActor, UPrimitiveComponent* pOtherComp, int32 dOtherBodyIndex, bool bFromSweep, const FHitResult& rSweepResult);
     
     

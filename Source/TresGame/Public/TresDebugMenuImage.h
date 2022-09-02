@@ -5,11 +5,11 @@
 
 class UTexture2D;
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class UTresDebugMenuImage : public UTresDebugMenuObject {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTexture2D* m_Texture;
     
     UTresDebugMenuImage();

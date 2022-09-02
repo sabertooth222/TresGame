@@ -4,11 +4,11 @@
 #include "ETresCharEquipPart.h"
 #include "TresInterpTrackWeaponAnimation.generated.h"
 
-UCLASS(CollapseCategories)
+UCLASS(Blueprintable, CollapseCategories)
 class TRESGAME_API UTresInterpTrackWeaponAnimation : public UTresInterpTrackSlotAnimation {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresCharEquipPart Part;
     
     UTresInterpTrackWeaponAnimation();

@@ -5,12 +5,12 @@
 
 class ATresStylePawnWATower;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_StyleFinishWA : public UTresPlayerState_StyleFinish {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresStylePawnWATower* m_pTower;
     
 public:

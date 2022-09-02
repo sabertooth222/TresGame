@@ -3,7 +3,7 @@
 #include "TresCoopDefinitionBase.h"
 #include "TresCoop1_EnemyShipBase_CoopEscape.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresCoop1_EnemyShipBase_CoopEscape : public UTresCoopDefinitionBase {
     GENERATED_BODY()
 public:

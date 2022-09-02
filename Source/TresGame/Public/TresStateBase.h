@@ -8,89 +8,89 @@
 #include "UObject/NoExportTypes.h"
 #include "TresStateBase.generated.h"
 
-class ATresCharPawnBase;
-class ATresAIController;
 class ATresPlayerControllerBase;
-class ATresPawnBase;
-class ATresSceneManager;
+class ATresCharPawnBase;
 class ATresPlayerPawnBase;
+class ATresSceneManager;
+class ATresPawnBase;
+class ATresAIController;
 class APawn;
 class AController;
 class AActor;
 class USQEX_ParticleAttachDataAsset;
 class UAnimSequenceBase;
 
-UCLASS(Abstract, BlueprintType)
+UCLASS(Abstract, Blueprintable)
 class UTresStateBase : public UObject, public ITresAnimInterface, public ITresNotifyInterface {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName MyStateName;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresStateID> MyStateID;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    uint32 m_bEnableRecycle: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bEnableRecycle: 1;
     
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresCharPawnBase* MyCharPawn;
     
-    UPROPERTY(BlueprintReadWrite, EditInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_nSubStep;
     
-    UPROPERTY(BlueprintReadWrite, EditInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_TurnIndex;
     
-    UPROPERTY(BlueprintReadWrite, EditInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_TurnToTargetSpeed;
     
-    UPROPERTY(BlueprintReadWrite, EditInstanceOnly)
-    uint32 m_bEnableChange: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bEnableChange: 1;
     
-    UPROPERTY(BlueprintReadWrite, EditInstanceOnly)
-    uint32 m_bReverseLeg: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bReverseLeg: 1;
     
-    UPROPERTY(BlueprintReadWrite, EditInstanceOnly)
-    uint32 m_bEnableTraction: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bEnableTraction: 1;
     
-    UPROPERTY(BlueprintReadWrite, EditInstanceOnly)
-    uint32 m_bEnableTurnToTarget: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bEnableTurnToTarget: 1;
     
-    UPROPERTY(BlueprintReadWrite, EditInstanceOnly)
-    uint32 m_bFaceAt: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bFaceAt: 1;
     
-    UPROPERTY(BlueprintReadWrite, EditInstanceOnly)
-    uint32 m_bEnableInput: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bEnableInput: 1;
     
     UTresStateBase();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ATresSceneManager* GetTresSceneManager() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ATresPlayerPawnBase* GetTresPlayerPawnBase() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ATresPlayerControllerBase* GetTresPlayerController() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ATresPawnBase* GetTresPawnBase() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ATresCharPawnBase* GetTresCharPawnBase() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ATresAIController* GetTresAIController() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FName GetStateName() const;
     
     UFUNCTION(BlueprintPure)
     TEnumAsByte<ETresStateID> GetStateID() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     APawn* GetPawn() const;
     
     UFUNCTION(BlueprintPure)
@@ -99,10 +99,10 @@ public:
     UFUNCTION(BlueprintPure)
     TEnumAsByte<ENetRole> GetOwnerRemoteRole() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     AController* GetController() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     AActor* GetActor() const;
     
     UFUNCTION(BlueprintCallable)
@@ -126,7 +126,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void BP_SetEffect(FName InAttachName, USQEX_ParticleAttachDataAsset* InAttachData, int32 InGroupID);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool BP_IsAnimEnd(FName InSlotName) const;
     
     UFUNCTION(BlueprintCallable)
@@ -144,7 +144,7 @@ public:
     UFUNCTION(BlueprintCallable)
     float BP_AnimPlay(FName InAnimName, float InBlendInTime, float InBlendOutTime, bool InLoop, bool InRootTrans, bool InRootRot, float InPlayRate);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FName BP_AnimGetUseSlotName(int32 InIndex) const;
     
     

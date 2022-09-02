@@ -4,18 +4,18 @@
 #include "TresDarkHomingAttackParam_e_dw407.h"
 #include "TresAttack1_e_dw407a_DarkHoming.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAttack1_e_dw407a_DarkHoming : public UTresAttack2_e_dw407_DarkHoming {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_ActionEndDistance;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_ChangeParamDistance;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresDarkHomingAttackParam_e_dw407 m_FarDarkHomingAttackParam;
     
 public:

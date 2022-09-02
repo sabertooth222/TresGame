@@ -4,12 +4,12 @@
 #include "TresPoppingHolyBulletShootParameter.h"
 #include "TresAnimNotify_PoppingHolyShootTiming.generated.h"
 
-UCLASS(CollapseCategories, MinimalAPI)
+UCLASS(Blueprintable, CollapseCategories, MinimalAPI)
 class UTresAnimNotify_PoppingHolyShootTiming : public UTresAnimNotify_GenericTiming {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresPoppingHolyBulletShootParameter m_HolyBulletShootParameter;
     
 public:

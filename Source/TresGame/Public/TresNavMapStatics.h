@@ -3,7 +3,7 @@
 #include "UObject/Object.h"
 #include "TresNavMapStatics.generated.h"
 
-UCLASS(Abstract, BlueprintType, NotPlaceable)
+UCLASS(Abstract, Blueprintable, NotPlaceable)
 class UTresNavMapStatics : public UObject {
     GENERATED_BODY()
 public:

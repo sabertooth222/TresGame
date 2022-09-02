@@ -3,20 +3,20 @@
 #include "BehaviorTree/Tasks/BTTask_BlackboardBase.h"
 #include "TresBTTask_BackFaceIdling.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTTask_BackFaceIdling : public UBTTask_BlackboardBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Offset;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float RandomAngleLimit;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float TurnLimit;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float CoolDownTimer;
     
     UTresBTTask_BackFaceIdling();

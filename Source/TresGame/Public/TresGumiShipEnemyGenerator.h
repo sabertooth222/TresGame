@@ -9,94 +9,94 @@
 #include "Engine/EngineTypes.h"
 #include "TresGumiShipEnemyGenerator.generated.h"
 
-class ATresGumiShipEnemyMoveRouteSpline;
 class UDataTable;
 class ATresGumiShipEnemyGenerator;
-class UTresGumiShipEnemyGroupManager;
 class UPrimitiveComponent;
+class ATresGumiShipEnemyMoveRouteSpline;
+class UTresGumiShipEnemyGroupManager;
 class AActor;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresGumiShipEnemyGenerator : public ATresGumiShipGimmickActorBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UDataTable* m_pUsingEnemyPresetDataTable;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(EditAnywhere)
     uint8 m_uMaxAttackPermissionNum;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresGumiShipEnemyGroupMoveType m_eEnemyGroupMoveType;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresGumiShipEnemySpawnConditionType m_eMainEnemySpawnConditionType;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<ATresGumiShipEnemyGenerator*> m_MainSpawnConditionOtherEnemyGroups;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bEnableSubEnemySpawnCondition;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresGumiShipEnemySpawnConditionType m_eSubEnemySpawnConditionType;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<ATresGumiShipEnemyGenerator*> m_SubSpawnConditionOtherEnemyGroups;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fEnemyGroupSpawnDelayTime;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bSpawnEnemyLookAtGumiShip;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresGumiShipEnemyGroupDisappearType m_eEnemyGroupDisappearType;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_eEnemyGroupDisappearTime;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresGumiShipEnemyGenerator* m_pDisappearTriggerOtherEnemyGroup;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresGumiShipSplinePathMoveParameter m_SplinePathMoveParameter;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<ATresGumiShipEnemyMoveRouteSpline*> m_EnemyMoveRouteSplineList;
     
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresGumiShipEnemyGroupManager* m_pEnemyGroupManager;
     
 public:
     ATresGumiShipEnemyGenerator();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ETresGumiShipEnemySpawnConditionType GetSubEnemySpawnConditionType() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ETresGumiShipEnemySpawnConditionType GetMainEnemySpawnConditionType() const;
     
 protected:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnSubSpawnConditionOtherEnemyGroupWipeOut(const FTresGumiShipEnemyGroupWipeOutData& rEnemyGroupWipeOutData);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnSubSpawnConditionOtherEnemyGroupDisappear();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnMainSpawnConditionOtherEnemyGroupWipeOut(const FTresGumiShipEnemyGroupWipeOutData& rEnemyGroupWipeOutData);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnMainSpawnConditionOtherEnemyGroupDisappear();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnLeaveEnemySpawnTriggerVolume(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnEnterEnemySpawnTriggerVolume(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnDisappearTriggerOtherEnemyGroupAppear();
     
 };

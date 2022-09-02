@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FTresRaFestivalReplaceMesh {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_MeshName;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresRaFestivalReplaceMeshData> m_MeshLists;
     
     TRESGAME_API FTresRaFestivalReplaceMesh();

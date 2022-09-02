@@ -6,18 +6,18 @@
 class UBoxComponent;
 class UPrimitiveComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemyToyActorRespawnBox : public AActor {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UBoxComponent* MyBox;
     
 public:
     ATresEnemyToyActorRespawnBox();
 private:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnBoxEndOverlap(UPrimitiveComponent* OverlappedComponent, AActor* Other, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
     
 };

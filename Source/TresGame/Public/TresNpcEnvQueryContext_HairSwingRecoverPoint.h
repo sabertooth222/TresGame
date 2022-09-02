@@ -3,7 +3,7 @@
 #include "EnvironmentQuery/EnvQueryContext.h"
 #include "TresNpcEnvQueryContext_HairSwingRecoverPoint.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UTresNpcEnvQueryContext_HairSwingRecoverPoint : public UEnvQueryContext {
     GENERATED_BODY()
 public:

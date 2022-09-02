@@ -3,7 +3,7 @@
 #include "TresActionDefinitionBase.h"
 #include "TresAction200_e_ex711_TestPadCtrl.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAction200_e_ex711_TestPadCtrl : public UTresActionDefinitionBase {
     GENERATED_BODY()
 public:

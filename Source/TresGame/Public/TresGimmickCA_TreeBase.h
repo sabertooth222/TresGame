@@ -4,15 +4,15 @@
 #include "TresGimmickDitherFadeInterface.h"
 #include "TresGimmickCA_TreeBase.generated.h"
 
-UCLASS(Abstract, Config=Game)
+UCLASS(Abstract, Blueprintable, Config=Game)
 class ATresGimmickCA_TreeBase : public AActor, public ITresGimmickDitherFadeInterface {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_SpawnPrizeNumOnHit;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_SpawnPrizeIntervalOnHit;
     
 public:
@@ -23,7 +23,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void StartPrizeShower(float InInterval);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsStartingPrizeShower() const;
     
     

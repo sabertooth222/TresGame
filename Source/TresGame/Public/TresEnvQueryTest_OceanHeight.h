@@ -4,11 +4,11 @@
 #include "DataProviders/AIDataProvider.h"
 #include "TresEnvQueryTest_OceanHeight.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresEnvQueryTest_OceanHeight : public UEnvQueryTest {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAIDataProviderFloatValue m_AmplitudeOffset;
     
     UTresEnvQueryTest_OceanHeight();

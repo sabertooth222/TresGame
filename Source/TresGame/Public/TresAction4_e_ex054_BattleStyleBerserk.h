@@ -3,7 +3,7 @@
 #include "TresActionDefinitionBase.h"
 #include "TresAction4_e_ex054_BattleStyleBerserk.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAction4_e_ex054_BattleStyleBerserk : public UTresActionDefinitionBase {
     GENERATED_BODY()
 public:

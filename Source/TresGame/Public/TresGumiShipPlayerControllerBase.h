@@ -7,28 +7,28 @@
 class ATresGumiShipPlayerControllerBase;
 class UTresGumiShipPlayerInputWorker;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresGumiShipPlayerControllerBase : public ATresPlayerControllerLowerBase {
     GENERATED_BODY()
 public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FPControllerInput, const FTresGMInputResult&, rResult, const ATresGumiShipPlayerControllerBase*, pController);
     
 protected:
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresGumiShipPlayerInputWorker* m_pWorker;
     
 public:
     ATresGumiShipPlayerControllerBase();
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void ToggleDebugSpeedInfoDraw();
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void ToggleDebugInputDraw();
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void ToggleDebugGMKeyConfigTest();
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void ToggleDebugChannelInputDraw();
     
 };

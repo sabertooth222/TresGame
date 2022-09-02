@@ -1,53 +1,53 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
 #include "TresRealGummiShipStruct.h"
+#include "GameFramework/Actor.h"
 #include "TresEffectAttachParts.h"
 #include "CreateGummiShipState.h"
 #include "TresCreateGummiShipActor.generated.h"
 
-class UDecalComponent;
 class USceneComponent;
-class USkinnedMeshComponent;
 class UTresGummiEditorDataTableSet;
+class USkinnedMeshComponent;
+class UDecalComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresCreateGummiShipActor : public AActor {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresRealGummiShipStruct> m_BaseGummiData;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresRealGummiShipStruct> m_DecoGummiData;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresRealGummiShipStruct m_SampleGummiData;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresRealGummiShipStruct m_PreviewGummiData;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresEffectAttachParts> m_EffectAttachParts;
     
-    UPROPERTY(EditAnywhere, Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USceneComponent* m_pUseCollisionGummiComponent;
     
 protected:
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USceneComponent* m_pRootComponent;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresGummiEditorDataTableSet* m_pGummiEditorDataTableSet;
     
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USkinnedMeshComponent* m_pTest;
     
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USkinnedMeshComponent* m_pArrowComponent;
     
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     TArray<UDecalComponent*> m_DecalComp;
     
 public:

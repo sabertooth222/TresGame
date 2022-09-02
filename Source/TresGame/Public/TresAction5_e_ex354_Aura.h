@@ -3,7 +3,7 @@
 #include "TresActionDefinitionBase.h"
 #include "TresAction5_e_ex354_Aura.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAction5_e_ex354_Aura : public UTresActionDefinitionBase {
     GENERATED_BODY()
 public:

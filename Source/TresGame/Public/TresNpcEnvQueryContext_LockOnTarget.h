@@ -3,7 +3,7 @@
 #include "EnvironmentQuery/EnvQueryContext.h"
 #include "TresNpcEnvQueryContext_LockOnTarget.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UTresNpcEnvQueryContext_LockOnTarget : public UEnvQueryContext {
     GENERATED_BODY()
 public:

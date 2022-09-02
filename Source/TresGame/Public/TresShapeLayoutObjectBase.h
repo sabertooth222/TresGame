@@ -5,20 +5,20 @@
 #include "UObject/NoExportTypes.h"
 #include "TresShapeLayoutObjectBase.generated.h"
 
-class UObject;
 class UTresSpawnActorManagerComponent;
+class UObject;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresShapeLayoutObjectBase : public ATresGimmickGeneratorBase, public ITresGeneratorInterface {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresSpawnActorManagerComponent* SpawnActorManager;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UObject*> ObjectArray;
     
-    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTransform> TransformArray;
     
     ATresShapeLayoutObjectBase();

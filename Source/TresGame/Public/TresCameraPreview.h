@@ -3,7 +3,7 @@
 #include "TresCameraNormal.h"
 #include "TresCameraPreview.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresCameraPreview : public ATresCameraNormal {
     GENERATED_BODY()
 public:

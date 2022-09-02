@@ -3,14 +3,14 @@
 #include "TresSkeletalMeshComponent.h"
 #include "TresPhotoHologramSkeletalMeshComponent.generated.h"
 
-UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTresPhotoHologramSkeletalMeshComponent : public UTresSkeletalMeshComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 BonamikPreRoll;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool StopBonamik;
     
     UTresPhotoHologramSkeletalMeshComponent();

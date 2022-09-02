@@ -1,37 +1,37 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ETresMapJumpFadeKind.h"
 #include "TresDirectionalTriggerBoxTickBase.h"
+#include "ETresMapJumpFadeKind.h"
 #include "TresMapJumpDirectionalTriggerBoxSignatureDelegate.h"
 #include "TresMapJumpDirectionalTriggerBox.generated.h"
 
 class UTresMapMarkerComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresMapJumpDirectionalTriggerBox : public ATresDirectionalTriggerBoxTickBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_MapName;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_TargetTag;
     
     UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresMapJumpFadeKind> m_FadeType;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_BlueprintMapJump;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresMapJumpDirectionalTriggerBoxSignature OnMapJump;
     
-    UPROPERTY(EditInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_OverrideMarkerSize;
     
 public:
-    UPROPERTY(Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresMapMarkerComponent* MapMarkerComponent;
     
     ATresMapJumpDirectionalTriggerBox();
@@ -41,7 +41,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void InvokeMapJump();
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BPE_MapJump();
     
 };

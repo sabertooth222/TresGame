@@ -3,7 +3,7 @@
 #include "TresProj_MagicAero.h"
 #include "TresProj_MagicAeroCylinder.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresProj_MagicAeroCylinder : public ATresProj_MagicAero {
     GENERATED_BODY()
 public:

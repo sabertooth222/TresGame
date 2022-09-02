@@ -10,13 +10,13 @@ USTRUCT(BlueprintType)
 struct FTresGumiShipRailShootingBattleSetData {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATriggerBase* m_pEnemySpawnTrigger;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<ATresGumiShipEnemyGenerator*> m_EnemyGeneratorList;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresGumiShipRailShootingRouteSplineDataGetter m_TriggerPointAttachData;
     
     TRESGAME_API FTresGumiShipRailShootingBattleSetData();

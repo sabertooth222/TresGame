@@ -5,17 +5,17 @@
 
 class ATresEnemy_e_ex071_ValidateTargetVolume;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemyPawn_e_ex071 : public ATresEnemyPawnBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<ATresEnemy_e_ex071_ValidateTargetVolume*> m_MyTargetVolumes;
     
 public:
     ATresEnemyPawn_e_ex071();
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool IsDesiredDie();
     
 };

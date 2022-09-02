@@ -1,21 +1,21 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "BehaviorTree/BTTaskNode.h"
 #include "ETresChrUniqueID.h"
+#include "BehaviorTree/BTTaskNode.h"
 #include "TresNpcBTTask_SetFriendTarget.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcBTTask_SetFriendTarget : public UBTTaskNode {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresChrUniqueID m_ChrUniqueID;
     
-    UPROPERTY(EditAnywhere)
-    uint32 m_isTargetActor: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_isTargetActor: 1;
     
-    UPROPERTY(EditAnywhere)
-    uint32 m_isDestination: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_isDestination: 1;
     
     UTresNpcBTTask_SetFriendTarget();
 };

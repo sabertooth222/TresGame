@@ -4,35 +4,35 @@
 #include "TresGimmickTsSwing.generated.h"
 
 class USceneComponent;
-class ATresCharPawnBase;
+class UPrimitiveComponent;
 class UCurveFloat;
 class AActor;
-class UPrimitiveComponent;
+class ATresCharPawnBase;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresGimmickTsSwing : public ATresGimmickSkeletalBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 ActionNum;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 UseNum;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ActionSpeedRate;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UCurveFloat* FadeCurve;
     
     ATresGimmickTsSwing();
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void UpdateAction(float Delta);
     
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void SwingStartSetBase(AActor* inActor, UPrimitiveComponent* InComponent, const FName InBoneName);
     
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void SwingEndSetBase(AActor* inActor, UPrimitiveComponent* InComponent, const FName InBoneName);
     
     UFUNCTION(BlueprintCallable)
@@ -41,10 +41,10 @@ public:
     UFUNCTION(BlueprintCallable)
     void EntryAction(ATresCharPawnBase* pPawn, USceneComponent* pAttachedParent);
     
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void EndAction(bool Broken);
     
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void BeginAction();
     
 };

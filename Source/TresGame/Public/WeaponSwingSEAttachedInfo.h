@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "WeaponSwingSEAttachedInfo.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FWeaponSwingSEAttachedInfo {
     GENERATED_BODY()
 public:

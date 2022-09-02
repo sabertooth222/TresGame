@@ -9,10 +9,10 @@ USTRUCT(BlueprintType)
 struct FTresProjectileAssetUnit {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName ProjectileName;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresProjectileBase> ProjectileData;
     
     TRESGAME_API FTresProjectileAssetUnit();

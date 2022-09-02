@@ -5,16 +5,16 @@
 
 class UTresDebugArrowComponent;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresDirectionalVolumeTickBase : public ATresVolume {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_PermitAngle;
     
 protected:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresDebugArrowComponent* DebugArrowComponent;
     
 public:
@@ -22,7 +22,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetEnableExecute(bool Enable);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsEnableExecute();
     
 };

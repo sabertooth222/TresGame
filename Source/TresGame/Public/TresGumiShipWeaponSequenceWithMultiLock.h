@@ -3,7 +3,7 @@
 #include "TresGumiShipWeaponSequence.h"
 #include "TresGumiShipWeaponSequenceWithMultiLock.generated.h"
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTresGumiShipWeaponSequenceWithMultiLock : public UTresGumiShipWeaponSequence {
     GENERATED_BODY()
 public:

@@ -5,17 +5,17 @@
 #include "BehaviorTree/BehaviorTreeTypes.h"
 #include "TresBTTask_BlackboardVectorValueModifier.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTTask_BlackboardVectorValueModifier : public UTresBTTask_BlackboardValueModifierBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
-    uint32 m_bUseBlackboard: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bUseBlackboard: 1;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector m_Value;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlackboardKeySelector m_BlackboardKeyValueB;
     
     UTresBTTask_BlackboardVectorValueModifier();

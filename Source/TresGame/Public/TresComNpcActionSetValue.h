@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FTresComNpcActionSetValue {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_Value;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_ScriptName;
     
     TRESGAME_API FTresComNpcActionSetValue();

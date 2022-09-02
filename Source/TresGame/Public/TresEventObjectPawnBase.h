@@ -3,7 +3,7 @@
 #include "TresEventPawnBase.h"
 #include "TresEventObjectPawnBase.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class TRESGAME_API ATresEventObjectPawnBase : public ATresEventPawnBase {
     GENERATED_BODY()
 public:

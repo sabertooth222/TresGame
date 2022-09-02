@@ -5,21 +5,21 @@
 #include "TresActor_e_ex771_Descent.generated.h"
 
 class UCurveFloat;
-class ATresWaterCurrentSplineActor;
 class UCapsuleComponent;
+class ATresWaterCurrentSplineActor;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresActor_e_ex771_Descent : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UCurveFloat* m_ForceRateCurve;
     
 protected:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UCapsuleComponent* MyDescentComponent;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresWaterCurrentSplineActor> m_DescentSplineClass;
     
 public:

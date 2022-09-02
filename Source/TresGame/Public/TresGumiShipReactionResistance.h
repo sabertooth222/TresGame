@@ -6,7 +6,7 @@ USTRUCT(BlueprintType)
 struct FTresGumiShipReactionResistance {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bBrow;
     
     TRESGAME_API FTresGumiShipReactionResistance();

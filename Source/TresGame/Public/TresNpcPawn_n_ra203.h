@@ -5,12 +5,12 @@
 
 class ATresProjectileBase;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresNpcPawn_n_ra203 : public ATresNpcPawnBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresProjectileBase* m_pProjBarrel;
     
 public:

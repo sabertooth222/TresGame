@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "TresRemyStoveFireParticleParam.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresRemyStoveFireParticleParam {
     GENERATED_BODY()
 public:

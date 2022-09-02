@@ -6,13 +6,13 @@ USTRUCT(BlueprintType)
 struct FTresEnemyCardWallParam_e_ex356 {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float RotationSpeed;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float RotationRadius;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     float RotationStopTimeList[5];
     
     TRESGAME_API FTresEnemyCardWallParam_e_ex356();

@@ -12,38 +12,38 @@ class UTresUIP_HudLeftScore;
 class UTresUIP_HudLeftNextLv;
 class UTresUIP_HudLeftGetMunny;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresUIP_HudLeft : public UTresCockpitParts {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresUIP_HudLeftInformation* m_Information;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresUIP_HudLeftMissionGage* m_MissionGage;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresUIP_HudLeftTimer* m_Timer;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresUIP_HudLeftGetItem* m_GetItem;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresUIP_HudLeftScore* m_Score;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresUIP_HudLeftScoreHit* m_ScoreHit;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresUIP_HudLeftNextLv* m_NextLv;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresUIP_HudLeftGetMunny* m_GetMunny;
     
 public:
     UTresUIP_HudLeft();
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     int32 OnCallback(int32 nId, int32 nParam);
     
 };

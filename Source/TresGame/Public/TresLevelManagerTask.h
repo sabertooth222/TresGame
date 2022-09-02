@@ -3,7 +3,7 @@
 #include "TresTaskBase.h"
 #include "TresLevelManagerTask.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresLevelManagerTask : public UTresTaskBase {
     GENERATED_BODY()
 public:

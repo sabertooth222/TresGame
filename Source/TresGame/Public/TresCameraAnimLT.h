@@ -6,16 +6,16 @@
 #include "UObject/NoExportTypes.h"
 #include "TresCameraAnimLT.generated.h"
 
-class ATresCameraAnimLT;
-class UObject;
 class AActor;
+class UObject;
+class ATresCameraAnimLT;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresCameraAnimLT : public ATresCameraAnim {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresCameraTargetInfo m_LookOnlyTargetInfo;
     
 public:

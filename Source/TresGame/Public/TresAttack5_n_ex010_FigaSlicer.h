@@ -3,7 +3,7 @@
 #include "TresNpcAttackDefinitionBase.h"
 #include "TresAttack5_n_ex010_FigaSlicer.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAttack5_n_ex010_FigaSlicer : public UTresNpcAttackDefinitionBase {
     GENERATED_BODY()
 public:

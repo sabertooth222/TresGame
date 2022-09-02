@@ -3,7 +3,7 @@
 #include "TresAttackDefinitionJump.h"
 #include "TresAttack1_e_ex073_Jump.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAttack1_e_ex073_Jump : public UTresAttackDefinitionJump {
     GENERATED_BODY()
 public:

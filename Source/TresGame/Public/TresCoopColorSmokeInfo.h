@@ -9,10 +9,10 @@ USTRUCT(BlueprintType)
 struct FTresCoopColorSmokeInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresCoopColorSmokeKind m_Color;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_pSmokeEffect;
     
     TRESGAME_API FTresCoopColorSmokeInfo();

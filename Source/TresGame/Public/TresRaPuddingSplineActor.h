@@ -1,14 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SQEX_SplineActor.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=SQEX_SplineActor -FallbackName=SQEX_SplineActor
 #include "TresRaPuddingSplineActor.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresRaPuddingSplineActor : public ASQEX_SplineActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_PointID;
     
     ATresRaPuddingSplineActor();

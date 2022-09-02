@@ -9,10 +9,10 @@ USTRUCT(BlueprintType)
 struct FTresBehaviorTreeInjectionData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayTag InjectionTag;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UBehaviorTree* BehaviorTree;
     
     TRESGAME_API FTresBehaviorTreeInjectionData();

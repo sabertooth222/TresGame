@@ -3,7 +3,7 @@
 #include "UObject/Object.h"
 #include "TresComNpcActionContext.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API UTresComNpcActionContext : public UObject {
     GENERATED_BODY()
 public:

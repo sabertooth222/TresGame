@@ -3,11 +3,11 @@
 #include "TresVolume.h"
 #include "TresOverridePhysMaterialVolume.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresOverridePhysMaterialVolume : public ATresVolume {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_DetectPriority;
     
     ATresOverridePhysMaterialVolume();

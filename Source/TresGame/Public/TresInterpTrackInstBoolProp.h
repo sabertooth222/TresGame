@@ -3,7 +3,7 @@
 #include "Matinee/InterpTrackInstBoolProp.h"
 #include "TresInterpTrackInstBoolProp.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API UTresInterpTrackInstBoolProp : public UInterpTrackInstBoolProp {
     GENERATED_BODY()
 public:

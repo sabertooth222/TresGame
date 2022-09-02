@@ -3,7 +3,7 @@
 #include "BehaviorTree/BTDecorator.h"
 #include "TresBTDecorator_LockGoal.generated.h"
 
-UCLASS(Deprecated, NotPlaceable)
+UCLASS(Blueprintable, Deprecated, NotPlaceable)
 class UDEPRECATED_TresBTDecorator_LockGoal : public UBTDecorator {
     GENERATED_BODY()
 public:

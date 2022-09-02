@@ -4,7 +4,7 @@
 #include "ETresEnemyToyKind.h"
 #include "TresEnemyToyComponent.generated.h"
 
-UCLASS(BlueprintType, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTresEnemyToyComponent : public USceneComponent {
     GENERATED_BODY()
 public:
@@ -14,12 +14,12 @@ private:
     UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresEnemyToyKind> m_ToyKind;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresEnemyToyOnPossession OnPossession;
     
 public:
     UTresEnemyToyComponent();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool CanUse() const;
     
 };

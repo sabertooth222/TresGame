@@ -10,13 +10,13 @@ USTRUCT(BlueprintType)
 struct FTresKeybladeAbilityData {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<ETresTextAbilityKind> m_ShootflowAbilitys;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<ETresCharWearForm> m_WearForms;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<ETresWeaponForm, FTresKeybladeFormAbilityData> m_FormAbilityMap;
     
     TRESGAME_API FTresKeybladeAbilityData();

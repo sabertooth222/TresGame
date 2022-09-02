@@ -3,7 +3,7 @@
 #include "TresAICharState_Run.h"
 #include "TresNpcState_Run.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcState_Run : public UTresAICharState_Run {
     GENERATED_BODY()
 public:

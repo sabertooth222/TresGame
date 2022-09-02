@@ -3,7 +3,7 @@
 #include "TresWeaponBase.h"
 #include "TresWeaponKeybladeBase.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresWeaponKeybladeBase : public ATresWeaponBase {
     GENERATED_BODY()
 public:

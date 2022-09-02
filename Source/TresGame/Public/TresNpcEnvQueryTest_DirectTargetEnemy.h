@@ -4,11 +4,11 @@
 #include "ETresEnemyUniqueID.h"
 #include "TresNpcEnvQueryTest_DirectTargetEnemy.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcEnvQueryTest_DirectTargetEnemy : public UEnvQueryTest {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresEnemyUniqueID m_EnemyUID;
     
     UTresNpcEnvQueryTest_DirectTargetEnemy();

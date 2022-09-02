@@ -4,11 +4,11 @@
 #include "ETresFNpcAIStyle_Cure.h"
 #include "TresNpcBTDecorator_AIStyle_Cure.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcBTDecorator_AIStyle_Cure : public UTresNpcBTDecoratorBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresFNpcAIStyle_Cure m_CureStyle;
     
     UTresNpcBTDecorator_AIStyle_Cure();

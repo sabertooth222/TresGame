@@ -9,10 +9,10 @@ USTRUCT(BlueprintType)
 struct FTresAttractionFlowAssetInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
-    TSubclassOf<ATresAccompanyPawnBase> m_AssetPtr;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TAssetSubclassOf<ATresAccompanyPawnBase> m_AssetPtr;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresAccompanyPawnBase> m_pAsset;
     
     TRESGAME_API FTresAttractionFlowAssetInfo();

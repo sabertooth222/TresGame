@@ -5,12 +5,12 @@
 
 class UAnimSequenceBase;
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAction2_e_ex011_ToCarriageMode : public UTresAction_e_ex011_Base {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     UAnimSequenceBase* m_AnimDataList[3];
     
 public:

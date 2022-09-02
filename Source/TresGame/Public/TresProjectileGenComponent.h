@@ -7,12 +7,12 @@
 
 class ATresProjectileBase;
 
-UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTresProjectileGenComponent : public UTresGimmickComponentBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<TSubclassOf<ATresProjectileBase>> m_Projctiles;
     
 public:
@@ -23,7 +23,7 @@ public:
     UFUNCTION(BlueprintCallable)
     ATresProjectileBase* BP_SpawnProjectile(int32 InIndex);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 BP_GetProjectileNum() const;
     
 };

@@ -3,7 +3,7 @@
 #include "TresCharState_WallKick.h"
 #include "TresPlayerState_WallKick.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_WallKick : public UTresCharState_WallKick {
     GENERATED_BODY()
 public:

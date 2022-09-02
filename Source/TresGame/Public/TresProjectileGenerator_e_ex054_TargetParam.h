@@ -4,11 +4,11 @@
 
 class ATresCharPawnBase;
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresProjectileGenerator_e_ex054_TargetParam {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresCharPawnBase* m_pTarget;
     
     TRESGAME_API FTresProjectileGenerator_e_ex054_TargetParam();

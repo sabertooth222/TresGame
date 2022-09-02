@@ -3,7 +3,7 @@
 #include "TresActionDefinitionBase.h"
 #include "TresCoopAction1_e_ex359_StartBerserk.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresCoopAction1_e_ex359_StartBerserk : public UTresActionDefinitionBase {
     GENERATED_BODY()
 public:

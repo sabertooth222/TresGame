@@ -10,27 +10,27 @@ class ATresEnemyPawn_e_bx901;
 class UPrimitiveComponent;
 class AActor;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemy_e_bx901_ActionTriggerVolume : public ATresVolume {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditInstanceOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<EBX901_ActionTriggerType> m_TriggerType;
     
-    UPROPERTY(EditInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FEX901_ActionKey m_ActionKeyInfo;
     
 protected:
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     TWeakObjectPtr<ATresEnemyPawn_e_bx901> m_pDarkBaymaxPawn;
     
 public:
     ATresEnemy_e_bx901_ActionTriggerVolume();
 private:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnEndOverlap(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnBeginOverlap(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
     
 };

@@ -15,25 +15,25 @@ class UTresSequentialTaskLogInterface : public UInterface {
 class ITresSequentialTaskLogInterface : public IInterface {
     GENERATED_BODY()
 public:
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     bool LogOutputTaskFinished(const FTresSequentialExecDataTable DataTable);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     bool LogOutputSequenceFinished(const FTresSequentialExecDataTable DataTable, const FDataTableRowHandle RowData);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     bool LogOutputQueryFinished(const FTresSequentialExecDataTable DataTable, const FDataTableRowHandle RowData);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     bool LogOutputProcessFinished(const FTresSequentialExecDataTable DataTable, const FDataTableRowHandle RowData);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     bool LogOutputExecuteSequence(const FTresSequentialExecDataTable DataTable, const FDataTableRowHandle RowData);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     bool LogOutputDecoratorSuccess(const AActor* MyPawn, const FTresSequentialExecDataTable DataTable, const FDataTableRowHandle RowData);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     bool LogOutputDecoratorFailed(const AActor* MyPawn, const FTresSequentialExecDataTable DataTable, const FDataTableRowHandle RowData);
     
 };

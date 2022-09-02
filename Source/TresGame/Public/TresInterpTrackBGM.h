@@ -4,7 +4,7 @@
 #include "SQEXSEADInterpTrackBGM.h"
 #include "TresInterpTrackBGM.generated.h"
 
-UCLASS(CollapseCategories)
+UCLASS(Blueprintable, CollapseCategories)
 class UTresInterpTrackBGM : public USQEXSEADInterpTrackBGM {
     GENERATED_BODY()
 public:

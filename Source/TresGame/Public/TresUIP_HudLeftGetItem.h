@@ -3,7 +3,7 @@
 #include "TresUIP_HudParts.h"
 #include "TresUIP_HudLeftGetItem.generated.h"
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class UTresUIP_HudLeftGetItem : public UTresUIP_HudParts {
     GENERATED_BODY()
 public:

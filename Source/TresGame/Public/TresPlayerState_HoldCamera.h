@@ -3,48 +3,48 @@
 #include "TresCharState_HoldCamera.h"
 #include "TresPlayerState_HoldCamera.generated.h"
 
-class UTresPhotoMissionComponent;
 class ATresCameraHoldCamera;
-class UTresNpcSmartphoneCameraComponent;
-class UTresHiddenMickeyComponent;
 class ATresGimmickRA_PuddingManager;
+class UTresHiddenMickeyComponent;
+class UTresPhotoMissionComponent;
+class UTresNpcSmartphoneCameraComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_HoldCamera : public UTresCharState_HoldCamera {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresCameraHoldCamera* m_pCamera;
     
-    UPROPERTY(Export)
+    UPROPERTY(EditAnywhere, Export)
     TWeakObjectPtr<UTresHiddenMickeyComponent> m_pCurrentLuckyMarker;
     
-    UPROPERTY(Export)
+    UPROPERTY(EditAnywhere, Export)
     TWeakObjectPtr<UTresHiddenMickeyComponent> m_pTargetLuckyMarker;
     
-    UPROPERTY(Export)
+    UPROPERTY(EditAnywhere, Export)
     TArray<TWeakObjectPtr<UTresPhotoMissionComponent>> m_pTargetPhotoMissionMarkerList;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     TWeakObjectPtr<ATresGimmickRA_PuddingManager> m_pPudManager;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FName> m_ShotTargetList;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FName> m_MissedTargetList;
     
-    UPROPERTY(Export)
+    UPROPERTY(EditAnywhere, Export)
     TWeakObjectPtr<UTresNpcSmartphoneCameraComponent> m_pNpcReactionMarker;
     
-    UPROPERTY(Export)
+    UPROPERTY(EditAnywhere, Export)
     TWeakObjectPtr<UTresNpcSmartphoneCameraComponent> m_pNpcTargetMarker;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<int32> m_SelfieActionIdxList;
     
-    UPROPERTY(Export)
+    UPROPERTY(EditAnywhere, Export)
     TArray<TWeakObjectPtr<UTresHiddenMickeyComponent>> m_pDetectedLuckyMarkerList;
     
 public:

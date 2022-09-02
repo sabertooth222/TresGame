@@ -6,17 +6,17 @@
 
 class AActor;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresGimmickGeneratorMI_04_EventSingle : public ATresGimmickGeneratorMI_04_EventBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AActor* TargetDoor;
     
 public:
     ATresGimmickGeneratorMI_04_EventSingle();
-    UFUNCTION(BlueprintImplementableEvent, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, BlueprintPure)
     FTransform BPIE_GetTargetTransform();
     
 };

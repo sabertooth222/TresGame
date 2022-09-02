@@ -3,7 +3,7 @@
 #include "TresBTInterface_DecoratorNativeBase.h"
 #include "TresBTInterface_DecoratorNativeRangeCheck.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresBTInterface_DecoratorNativeRangeCheck : public ATresBTInterface_DecoratorNativeBase {
     GENERATED_BODY()
 public:

@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FTresGimmickDropPrizeTable {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresGimmickDropPrizeDataUnit> m_Prizes;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_SpawnRate;
     
     TRESGAME_API FTresGimmickDropPrizeTable();

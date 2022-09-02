@@ -3,7 +3,7 @@
 #include "UObject/Object.h"
 #include "TresNpcAIStyle_Battle.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API UTresNpcAIStyle_Battle : public UObject {
     GENERATED_BODY()
 public:

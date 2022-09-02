@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct FTresEx304HitEffectInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_EffectAsset;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FName> m_AtkGrpNames;
     
     TRESGAME_API FTresEx304HitEffectInfo();

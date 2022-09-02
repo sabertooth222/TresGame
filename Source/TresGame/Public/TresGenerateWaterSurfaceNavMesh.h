@@ -5,15 +5,15 @@
 
 class UBoxComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresGenerateWaterSurfaceNavMesh : public AActor {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UBoxComponent* m_BoxComponent;
     
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UBoxComponent* m_NavModifierBoxComponent;
     
 public:

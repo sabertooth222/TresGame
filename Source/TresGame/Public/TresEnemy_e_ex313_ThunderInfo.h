@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FTresEnemy_e_ex313_ThunderInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* m_ThunderEff;
     
     TRESGAME_API FTresEnemy_e_ex313_ThunderInfo();

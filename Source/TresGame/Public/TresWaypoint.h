@@ -6,14 +6,14 @@
 
 class ATresWaypoint;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresWaypoint : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresWaypointKind::Type> MyWaypointKind;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(EditAnywhere)
     TWeakObjectPtr<ATresWaypoint> NextWaypoint;
     
     ATresWaypoint();

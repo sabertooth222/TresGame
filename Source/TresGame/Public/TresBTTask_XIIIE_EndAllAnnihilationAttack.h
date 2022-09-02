@@ -3,7 +3,7 @@
 #include "BehaviorTree/BTTaskNode.h"
 #include "TresBTTask_XIIIE_EndAllAnnihilationAttack.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTTask_XIIIE_EndAllAnnihilationAttack : public UBTTaskNode {
     GENERATED_BODY()
 public:

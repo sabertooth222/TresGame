@@ -3,7 +3,7 @@
 #include "BehaviorTree/BTTaskNode.h"
 #include "TresNpcBTTask_IncActionTaskLimitCount.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcBTTask_IncActionTaskLimitCount : public UBTTaskNode {
     GENERATED_BODY()
 public:

@@ -1,32 +1,32 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/EngineTypes.h"
 #include "TresGumiShipGimmickActorBase.h"
 #include "ETresGumiShipJumpPointID.h"
+#include "Engine/EngineTypes.h"
 #include "TresGumiShipGimmickJumpPoint.generated.h"
 
-class UPrimitiveComponent;
 class USphereComponent;
+class UPrimitiveComponent;
 class AActor;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresGumiShipGimmickJumpPoint : public ATresGumiShipGimmickActorBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USphereComponent* m_pCheckJumpAreaCollision;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresGumiShipJumpPointID m_WorldMapID;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fCheckAreaRadius;
     
 public:
     ATresGumiShipGimmickJumpPoint();
 protected:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnEnterCheckArea(UPrimitiveComponent* pOverlappedComponent, AActor* pOtherActor, UPrimitiveComponent* pOtherComp, int32 dOtherBodyIndex, bool bFromSweep, const FHitResult& rSweepResult);
     
 };

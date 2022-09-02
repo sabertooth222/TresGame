@@ -3,28 +3,28 @@
 #include "Templates/SubclassOf.h"
 #include "TresGumiShipCharaPawnBase.h"
 #include "UObject/NoExportTypes.h"
+#include "ETresGumiShipEnemyStateID.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "ETresGumiShipEnemyLookAtType.h"
 #include "ETresGumiShipEnemyStateResult.h"
-#include "ETresGumiShipEnemyStateID.h"
 #include "ETresGumiShipEnemyID.h"
 #include "UObject/NoExportTypes.h"
 #include "TresGumiShipEnemyPawnBase.generated.h"
 
-class ATresGumiShipEnemyPawnBase;
-class ATresGumiShipEnemyBattleStarter;
 class USQEX_ParticleAttachDataAsset;
-class UTresGumiShipEnemyGroupManager;
+class ATresGumiShipEnemyPawnBase;
+class ATresGumiShipPlayerPawnBase;
 class UTresGumiShipBattleDataTableSet;
+class ATresGumiShipEnemyPartsBase;
 class UTresGumiShipEnemyStateController;
 class AActor;
-class ATresGumiShipEnemyPartsBase;
 class ATresGumiShipEnemyGenerator;
-class ATresGumiShipPlayerPawnBase;
+class ATresGumiShipEnemyBattleStarter;
+class UTresGumiShipEnemyGroupManager;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresGumiShipEnemyPawnBase : public ATresGumiShipCharaPawnBase {
     GENERATED_BODY()
 public:
@@ -32,44 +32,44 @@ public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FEnemyDeadSignature, ATresGumiShipEnemyPawnBase*, pDeadEnemy);
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FEnemyAppearSignature, ATresGumiShipEnemyPawnBase*, pAppearEnemy);
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FEnemyDeadSignature OnEnemyDead;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FEnemyAppearSignature OnEnemyAppearComplete;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FEnemyDisappearSignature OnEnemyDisappearComplete;
     
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_EnemyNameID;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fEnemyBoundsRadius;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresGumiShipBattleDataTableSet* m_pBattleDataTableSet;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USQEX_ParticleAttachDataAsset* m_pEffectAttachDataAsset;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_nDeadEffectAttachGroupID;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_nUniqueDeadEffectAttachGroupID;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bEncountSymbolWithAnimation;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_EncountSymbolStateMotionName;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector2D m_GuideSymbolOffset;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UTresGumiShipEnemyStateController> m_UseStateControllerClass;
     
 public:
@@ -110,106 +110,106 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetAllMeshFadeRate(float FadeRate, bool PropagateToAttachedParts);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsLockOnPermissionOK() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsExistEnemyParts(FName PartsName) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsDeadOrDisappear() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsCrowdEnemy() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsBossEnemy() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsAttackPermissionOK() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsAttachedEnemyParts(ATresGumiShipEnemyPartsBase* pEnemyParts) const;
     
     UFUNCTION(BlueprintCallable)
     void HideEnemyPawn(bool HiddenEnable, bool PropagateToAttachedParts);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ETresGumiShipEnemyStateResult GetStateResult() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FName GetStateName(ETresGumiShipEnemyStateID StateID) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UTresGumiShipEnemyStateController* GetStateController() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ATresGumiShipEnemyGenerator* GetSpawnOwnerGenerator() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetScorePoint() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetPitchLimitAngle() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetMaxRotateSpeed() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ETresGumiShipEnemyStateID GetLastStateID() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ATresGumiShipPlayerPawnBase* GetGumiShipPlayerPawn() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetEnemyUnitID() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector2D GetEnemySymbolOffset() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FName GetEnemyNameID() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ETresGumiShipEnemyLookAtType GetEnemyLookAtType() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector GetEnemyLookAtOffset() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ETresGumiShipEnemyID GetEnemyID() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FGuid GetEnemyGUID() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetEnemyBoundsRadius() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FRotator GetDirectActorRotator() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector GetDirectActorLocation() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FName GetCurrentStateName() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ETresGumiShipEnemyStateID GetCurrentStateID() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ATresGumiShipEnemyBattleStarter* GetCurrentEnemyBattleStarter() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UTresGumiShipBattleDataTableSet* GetBattleDataTableSet() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetAttackPriority() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ATresGumiShipEnemyPartsBase* GetAttachedEnemyParts(FName PartsName) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UTresGumiShipEnemyGroupManager* GetAssignedEnemyGroupManager() const;
     
 protected:

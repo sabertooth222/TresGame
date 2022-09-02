@@ -6,17 +6,17 @@
 class UTresTimelineData;
 class UTresTimelineDataSection;
 
-UCLASS(Transient)
+UCLASS(Blueprintable, Transient)
 class UTresTimelinePlayer : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresTimelineData* m_Data;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UTresTimelineDataSection*> m_ActiveSections;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UObject*> m_GCGuard;
     
     UTresTimelinePlayer();

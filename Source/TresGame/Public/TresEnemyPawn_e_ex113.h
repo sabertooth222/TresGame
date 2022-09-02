@@ -5,23 +5,23 @@
 
 class UTresSkeletalMeshComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemyPawn_e_ex113 : public ATresEnemyPawnBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresSkeletalMeshComponent* ThornMesh;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_WarpDitherInterpTime;
     
 public:
     ATresEnemyPawn_e_ex113();
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void SpawnChild();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void DebugSetCoopNumProjectile(int32 Num);
     
 };

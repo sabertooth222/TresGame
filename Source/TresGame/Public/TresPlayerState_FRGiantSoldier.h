@@ -5,12 +5,12 @@
 
 class ATresFriendLinkPawnGiantSoldier;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_FRGiantSoldier : public UTresCharState_FRGiantSoldier {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresFriendLinkPawnGiantSoldier* m_pObj;
     
 public:

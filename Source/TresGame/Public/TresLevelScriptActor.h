@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ETresWorldCode.h"
 #include "Engine/LevelScriptActor.h"
 #include "ETresLevelVisibility.h"
+#include "ETresWorldCode.h"
 #include "ETresLevelEntityDisappearMode.h"
 #include "ETresPauseMenuType.h"
 #include "Engine/LatentActionManager.h"
@@ -12,27 +12,27 @@
 #include "TresLevelScriptActor.generated.h"
 
 class UTresMapSet;
+class ATresPawnBase;
 class UObject;
 class AActor;
 class ATresPlayerPawnBase;
 class ATresNpcPawnBase;
 class ATresEnemyPawnBase;
-class ATresPawnBase;
 class ATresBattleVolume;
 class ATresPlayerStart;
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API ATresLevelScriptActor : public ALevelScriptActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 VisibleExecNum;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 VisibleCompleteFrame;
     
 private:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresLevelVisibility m_LevelVisibleType;
     
 public:
@@ -46,13 +46,13 @@ public:
     UFUNCTION(BlueprintCallable)
     void TresSetPauseMenuType(TEnumAsByte<ETresPauseMenuType> Type);
     
-    UFUNCTION(BlueprintCallable, meta = (WorldContext = "WorldContextObject", LatentInfo = "LatentInfo", Latent))
+    UFUNCTION(BlueprintCallable)
     void StartTutorial(UObject* WorldContextObject, FLatentActionInfo LatentInfo, UTresMapSet* MapSet, FName TutorialName);
     
     UFUNCTION(BlueprintCallable)
     void SpawnLevelEntities(FName TargetGroup, int32 AppearInfoNo, bool IncrementAppearInfoNo, int32 UserDataNo, bool IncrementUserDataNo, UObject* Spawner, bool DelaySpawning, bool SkipDrawAttractionFlowMarker);
     
-    UFUNCTION(BlueprintCallable, meta = (WorldContext = "WorldContextObject"))
+    UFUNCTION(BlueprintCallable)
     static void SetTresPackageShouldBeVisible(UObject* WorldContextObject, FName PackageName, bool Visible, bool bOneFrameExecute);
     
     UFUNCTION(BlueprintCallable)
@@ -79,20 +79,20 @@ public:
     UFUNCTION(BlueprintCallable)
     void ReserveGarbageCollection(float Time);
     
-    UFUNCTION(BlueprintAuthorityOnly, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveTresTakingPhotoFinish(const TArray<FName>& ShotTargetList, const TArray<FName>& MissedTargetList);
     
-    UFUNCTION(BlueprintAuthorityOnly, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveTresRideVehicle(AActor* Actor);
     
-    UFUNCTION(BlueprintAuthorityOnly, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveTresPlayerTakeDamage(ATresPlayerPawnBase* Pawn, int32 DamagePoint);
     
-    UFUNCTION(BlueprintAuthorityOnly, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveTresFriendTakeDamage(ATresNpcPawnBase* Pawn, int32 DamagePoint);
     
     UFUNCTION(BlueprintAuthorityOnly, BlueprintImplementableEvent)
-    void ReceiveTresEnemyKilled(ATresEnemyPawnBase* Pawn, ATresPawnBase* KillerPawn, ETresCommandKind CmdKind, FTresDamageInfo InDamageInfo);
+    void ReceiveTresEnemyKilled(ATresEnemyPawnBase* Pawn, ATresPawnBase* KillerPawn, TEnumAsByte<ETresCommandKind> CmdKind, FTresDamageInfo InDamageInfo);
     
     UFUNCTION(BlueprintCallable)
     void RaiseWipeOutEventForGumi(AActor* pTarget, const ETresGumiShipEnemyID eEnemyID);
@@ -109,28 +109,28 @@ public:
     UFUNCTION(BlueprintCallable)
     void PostEndTutorial();
     
-    UFUNCTION(BlueprintAuthorityOnly, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable, BlueprintImplementableEvent)
     void OnWipeOutForGumi(AActor* pTarget, const ETresGumiShipEnemyID eEnemyID);
     
-    UFUNCTION(BlueprintAuthorityOnly, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable, BlueprintImplementableEvent)
     void OnWipeOut(FName GroupName, ATresEnemyPawnBase* Enemy, ATresPawnBase* KilledBy);
     
-    UFUNCTION(BlueprintAuthorityOnly, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable, BlueprintImplementableEvent)
     void OnQuitTutorial();
     
-    UFUNCTION(BlueprintAuthorityOnly, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable, BlueprintImplementableEvent)
     void OnQuitMiniGame();
     
-    UFUNCTION(BlueprintAuthorityOnly, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable, BlueprintImplementableEvent)
     void OnGenericEvent(FName EventName, UObject* Invoker, UObject* Target, int32 Param);
     
-    UFUNCTION(BlueprintAuthorityOnly, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable, BlueprintImplementableEvent)
     void OnEventSkip();
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnCameraManagerInitialization();
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnCameraInitializationCompleted();
     
     UFUNCTION(BlueprintCallable)

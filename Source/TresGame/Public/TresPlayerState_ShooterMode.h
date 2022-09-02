@@ -6,17 +6,17 @@
 class ATresCharPawnBase;
 class UTresLockonTargetComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_ShooterMode : public UTresCharState_ShooterMode {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresCharPawnBase* m_pTargetPawn;
     
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresLockonTargetComponent* m_pTargetComponent;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresCharPawnBase* m_pDamagePawn;
     
     UTresPlayerState_ShooterMode();

@@ -3,21 +3,21 @@
 #include "GameFramework/Actor.h"
 #include "TresProjectileManager.generated.h"
 
-class ATresRailSlideActor;
 class ATresProjectileBase;
+class ATresRailSlideActor;
 
-UCLASS(NotPlaceable)
+UCLASS(Blueprintable, NotPlaceable)
 class ATresProjectileManager : public AActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(DuplicateTransient, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<ATresProjectileBase*> m_ProjectileList;
     
-    UPROPERTY(DuplicateTransient, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<ATresProjectileBase*> m_ResidueProjList;
     
-    UPROPERTY(DuplicateTransient, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<ATresRailSlideActor*> m_ResidueRailList;
     
 public:

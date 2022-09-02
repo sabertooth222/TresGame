@@ -3,18 +3,18 @@
 #include "TresCharState_PlaneBoss.h"
 #include "TresPlayerState_PlaneBoss.generated.h"
 
-class ATresEnemyPawn_e_ex021;
 class ATresCameraEx021;
+class ATresEnemyPawn_e_ex021;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_PlaneBoss : public UTresCharState_PlaneBoss {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresEnemyPawn_e_ex021* m_pObj;
     
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresCameraEx021* m_Camera;
     
 public:

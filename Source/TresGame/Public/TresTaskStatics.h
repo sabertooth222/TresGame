@@ -3,7 +3,7 @@
 #include "UObject/Object.h"
 #include "TresTaskStatics.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class UTresTaskStatics : public UObject {
     GENERATED_BODY()
 public:

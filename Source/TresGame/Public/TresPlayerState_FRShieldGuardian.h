@@ -5,12 +5,12 @@
 
 class ATresFriendLinkPawnShieldGuardian;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_FRShieldGuardian : public UTresCharState_FRShieldGuardian {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresFriendLinkPawnShieldGuardian* m_pObj;
     
 public:

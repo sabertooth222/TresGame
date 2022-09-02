@@ -3,7 +3,7 @@
 #include "TresProjectileBase.h"
 #include "TresProj_LaserLineTrace.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresProj_LaserLineTrace : public ATresProjectileBase {
     GENERATED_BODY()
 public:
@@ -11,16 +11,16 @@ public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE(FTresOnLaserTerminate);
     
 private:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fLifeTime;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bIsLifeOverWhenArrivedLaserTerminate;
     
 public:
     ATresProj_LaserLineTrace();
 private:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnShutdownFromLaser();
     
 };

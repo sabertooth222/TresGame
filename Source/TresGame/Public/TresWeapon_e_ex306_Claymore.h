@@ -3,7 +3,7 @@
 #include "TresWeaponBase.h"
 #include "TresWeapon_e_ex306_Claymore.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class ATresWeapon_e_ex306_Claymore : public ATresWeaponBase {
     GENERATED_BODY()
 public:

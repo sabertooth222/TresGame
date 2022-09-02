@@ -4,14 +4,14 @@
 #include "TresInterpTrackShadowQualityControlKey.h"
 #include "TresInterpTrackShadowQualityControl.generated.h"
 
-UCLASS(CollapseCategories)
+UCLASS(Blueprintable, CollapseCategories)
 class TRESGAME_API UTresInterpTrackShadowQualityControl : public UInterpTrack {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere, EditFixedSize)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, EditFixedSize, meta=(AllowPrivateAccess=true))
     TArray<FTresInterpTrackShadowQualityControlKey> m_Keys;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FName> m_ComponentTags;
     
     UTresInterpTrackShadowQualityControl();

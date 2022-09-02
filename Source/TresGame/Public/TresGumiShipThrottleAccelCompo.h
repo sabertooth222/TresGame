@@ -3,7 +3,7 @@
 #include "TresGumiShipPlayerAccelerationBase.h"
 #include "TresGumiShipThrottleAccelCompo.generated.h"
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTresGumiShipThrottleAccelCompo : public UTresGumiShipPlayerAccelerationBase {
     GENERATED_BODY()
 public:

@@ -3,7 +3,7 @@
 #include "TresAttackDefinitionBase.h"
 #include "TresCoopAction2_e_ex006_Turn.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresCoopAction2_e_ex006_Turn : public UTresAttackDefinitionBase {
     GENERATED_BODY()
 public:

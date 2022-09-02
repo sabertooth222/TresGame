@@ -6,14 +6,14 @@
 class AActor;
 class UTresHopComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_Hopping : public UTresCharState_Hopping {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AActor* m_pHitActor;
     
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresHopComponent* m_pHitComponent;
     
     UTresPlayerState_Hopping();

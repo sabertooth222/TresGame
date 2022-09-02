@@ -7,7 +7,7 @@
 
 class AActor;
 
-UCLASS(Abstract, BlueprintType, NotPlaceable)
+UCLASS(Abstract, Blueprintable, NotPlaceable)
 class TRESGAME_API UTresPlaceStatics : public UObject {
     GENERATED_BODY()
 public:
@@ -15,7 +15,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static void SnapGround(AActor* Actor, const FTresSnapData& Data);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool CalcSnapGroundLocation(UObject* WorldContextObject, FVector Location, const FTresSnapData& Data, FVector& retLocation);
     
 };

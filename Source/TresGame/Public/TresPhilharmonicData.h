@@ -3,17 +3,17 @@
 #include "Engine/DataTable.h"
 #include "TresPhilharmonicData.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresPhilharmonicData : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName MapName;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString ProgramMoviePath;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString ProgramNameTextID;
     
     TRESGAME_API FTresPhilharmonicData();

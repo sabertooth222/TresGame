@@ -1,26 +1,26 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ETresForwardDirection.h"
 #include "TresProjectileBase.h"
+#include "ETresForwardDirection.h"
 #include "TresProj_LaserTemplate.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresProj_LaserTemplate : public ATresProjectileBase {
     GENERATED_BODY()
 public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE(FTresOnShutDown);
     
 private:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresForwardDirection> m_eEffectForward;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fScaleTime;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bIgnoreBodyCollision;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bLifeOverIfTakeDamage;
     
 public:

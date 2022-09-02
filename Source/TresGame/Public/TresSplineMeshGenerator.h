@@ -5,21 +5,21 @@
 #include "TresSplineMeshGenerator.generated.h"
 
 class ASQEX_SplineActor;
-class UStaticMesh;
 class USplineMeshComponent;
+class UStaticMesh;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresSplineMeshGenerator : public ATresGimmickGeneratorBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ASQEX_SplineActor* FirstSplineActor;
     
-    UPROPERTY(EditInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresSplineMeshExtensionStaticMeshInfo> MeshInfoArray;
     
-    UPROPERTY(EditInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ASQEX_SplineActor* EndSplineActor;
     
 public:
@@ -27,10 +27,10 @@ public:
     UFUNCTION(BlueprintCallable)
     void Create(ASQEX_SplineActor* splineActor, UStaticMesh* StaticMesh, UStaticMesh* collisionStaticMesh);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BP_SetupMesh(USplineMeshComponent* Mesh, bool isEnableCollision, float Length);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     USplineMeshComponent* BP_GenerateMesh();
     
 };

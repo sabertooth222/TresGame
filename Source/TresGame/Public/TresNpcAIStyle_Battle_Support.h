@@ -3,7 +3,7 @@
 #include "TresNpcAIStyle_Battle.h"
 #include "TresNpcAIStyle_Battle_Support.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API UTresNpcAIStyle_Battle_Support : public UTresNpcAIStyle_Battle {
     GENERATED_BODY()
 public:

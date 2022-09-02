@@ -5,12 +5,12 @@
 
 class UDrawFrustumComponent;
 
-UCLASS(NotPlaceable)
+UCLASS(Blueprintable, NotPlaceable)
 class ATresCameraDebug : public ATresCameraBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UDrawFrustumComponent* DrawFrustum;
     
 public:

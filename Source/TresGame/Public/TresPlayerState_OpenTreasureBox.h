@@ -3,7 +3,7 @@
 #include "TresCharState_OpenTreasureBox.h"
 #include "TresPlayerState_OpenTreasureBox.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_OpenTreasureBox : public UTresCharState_OpenTreasureBox {
     GENERATED_BODY()
 public:

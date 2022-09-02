@@ -3,7 +3,7 @@
 #include "TresAttackDefinitionWeaponBase.h"
 #include "TresWeaponAttack_e_ex781_AvatarAttack.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresWeaponAttack_e_ex781_AvatarAttack : public UTresAttackDefinitionWeaponBase {
     GENERATED_BODY()
 public:

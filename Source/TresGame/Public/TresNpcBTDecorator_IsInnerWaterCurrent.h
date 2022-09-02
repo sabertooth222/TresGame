@@ -3,7 +3,7 @@
 #include "TresNpcBTDecoratorBase.h"
 #include "TresNpcBTDecorator_IsInnerWaterCurrent.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcBTDecorator_IsInnerWaterCurrent : public UTresNpcBTDecoratorBase {
     GENERATED_BODY()
 public:

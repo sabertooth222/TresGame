@@ -6,14 +6,14 @@
 class ATresProjectileBase;
 class ATresCameraTargetOTS;
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAttack19_e_ex773_HvnFlareShot : public UTresAttackDefinitionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     TArray<TWeakObjectPtr<ATresProjectileBase>> m_FlareShotArray;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresCameraTargetOTS* m_Camera;
     
     UTresAttack19_e_ex773_HvnFlareShot();

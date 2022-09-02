@@ -3,7 +3,7 @@
 #include "TresCharState_FRShieldGuardian.h"
 #include "TresNpcState_FRShieldGuardian.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcState_FRShieldGuardian : public UTresCharState_FRShieldGuardian {
     GENERATED_BODY()
 public:

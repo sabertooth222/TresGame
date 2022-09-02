@@ -3,7 +3,7 @@
 #include "TresEnemyState_Appear.h"
 #include "TresEnemyState_e_dw402_Appear.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresEnemyState_e_dw402_Appear : public UTresEnemyState_Appear {
     GENERATED_BODY()
 public:

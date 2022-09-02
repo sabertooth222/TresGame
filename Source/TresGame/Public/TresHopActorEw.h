@@ -4,14 +4,14 @@
 #include "UObject/NoExportTypes.h"
 #include "TresHopActorEw.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresHopActorEw : public ATresHopActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector MyInverseUpVectorDir;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float PermissionAngle;
     
     ATresHopActorEw();

@@ -3,7 +3,7 @@
 #include "TresFlowComponentBase.h"
 #include "TresShootFlowComponent.generated.h"
 
-UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTresShootFlowComponent : public UTresFlowComponentBase {
     GENERATED_BODY()
 public:

@@ -6,15 +6,15 @@
 class UGFxObject;
 class UTresUIP_HudParts;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresUIP_HudRightKairiCounter : public UTresUIParts {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UGFxObject* m_pRoot;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresUIP_HudParts* m_HudParts;
     
 public:

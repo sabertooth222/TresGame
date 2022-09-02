@@ -5,32 +5,32 @@
 #include "TresCollShapeAssetUnit.h"
 #include "TresPawnOverlapComponentBase.generated.h"
 
-class ATresCharPawnBase;
-class UBodySetup;
 class UPrimitiveComponent;
+class UBodySetup;
+class ATresCharPawnBase;
 class AActor;
 
-UCLASS(Abstract, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTresPawnOverlapComponentBase : public UTresGimmickComponentBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresCollShapeAssetUnit> m_CollisionShapesSrc;
     
-    UPROPERTY(DuplicateTransient, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UBodySetup* m_pBodySetup;
     
-    UPROPERTY(DuplicateTransient, Transient)
+    UPROPERTY(DuplicateTransient, EditAnywhere, Transient)
     TArray<TWeakObjectPtr<ATresCharPawnBase>> m_OverlapList;
     
 public:
     UTresPawnOverlapComponentBase();
 protected:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnBodyEndOverlap(UPrimitiveComponent* OverlappedComp, AActor* Other, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnBodyBeginOverlap(UPrimitiveComponent* OverlappedComp, AActor* Other, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
     
 };

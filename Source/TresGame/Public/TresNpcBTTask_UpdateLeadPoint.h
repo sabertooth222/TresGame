@@ -4,11 +4,11 @@
 #include "BehaviorTree/BehaviorTreeTypes.h"
 #include "TresNpcBTTask_UpdateLeadPoint.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcBTTask_UpdateLeadPoint : public UBTTaskNode {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlackboardKeySelector m_LeadTarget;
     
     UTresNpcBTTask_UpdateLeadPoint();

@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FTresUICustomizeMagicCommand {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     FTresUICustomizeCommand Command[3];
     
     TRESGAME_API FTresUICustomizeMagicCommand();

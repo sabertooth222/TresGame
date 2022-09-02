@@ -3,7 +3,7 @@
 #include "GameFramework/Actor.h"
 #include "TresActorManager_e_ex725.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresActorManager_e_ex725 : public AActor {
     GENERATED_BODY()
 public:

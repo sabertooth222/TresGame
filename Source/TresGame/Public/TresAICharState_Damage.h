@@ -6,15 +6,15 @@
 class UParticleSystemComponent;
 class USceneComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresAICharState_Damage : public UTresCharState_Damage {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* m_MerryGoroundEffect;
     
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USceneComponent* m_pPoleComponent;
     
 public:

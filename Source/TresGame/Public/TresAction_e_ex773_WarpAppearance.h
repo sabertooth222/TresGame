@@ -3,14 +3,14 @@
 #include "TresActionDefinitionBase.h"
 #include "TresAction_e_ex773_WarpAppearance.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAction_e_ex773_WarpAppearance : public UTresActionDefinitionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float RigidTime;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bApear;
     
     UTresAction_e_ex773_WarpAppearance();

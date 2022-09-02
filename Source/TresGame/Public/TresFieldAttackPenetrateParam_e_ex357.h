@@ -3,17 +3,17 @@
 #include "TresFieldAttackParamBase_e_ex357.h"
 #include "TresFieldAttackPenetrateParam_e_ex357.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UTresFieldAttackPenetrateParam_e_ex357 : public UTresFieldAttackParamBase_e_ex357 {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float PenetrateCheckDelayTime;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float StartTime;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float AttackStartintervalTime;
     
     UTresFieldAttackPenetrateParam_e_ex357();

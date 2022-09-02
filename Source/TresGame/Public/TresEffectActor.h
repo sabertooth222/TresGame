@@ -5,11 +5,11 @@
 
 class UTresRootComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEffectActor : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresRootComponent* MyRoot;
     
     ATresEffectActor();

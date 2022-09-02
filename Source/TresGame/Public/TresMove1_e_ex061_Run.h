@@ -5,11 +5,11 @@
 
 class USQEX_ParticleAttachDataAsset;
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresMove1_e_ex061_Run : public UTresLocomotionDefinitionLandCodeDriven {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USQEX_ParticleAttachDataAsset* m_EffectDataAsset;
     
     UTresMove1_e_ex061_Run();

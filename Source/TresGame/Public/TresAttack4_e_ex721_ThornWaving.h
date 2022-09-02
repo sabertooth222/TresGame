@@ -3,7 +3,7 @@
 #include "TresAttackDefinitionBase.h"
 #include "TresAttack4_e_ex721_ThornWaving.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAttack4_e_ex721_ThornWaving : public UTresAttackDefinitionBase {
     GENERATED_BODY()
 public:

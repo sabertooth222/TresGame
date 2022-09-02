@@ -3,7 +3,7 @@
 #include "TresStateBase.h"
 #include "TresCharState_FRBlizzagaBoard.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresCharState_FRBlizzagaBoard : public UTresStateBase {
     GENERATED_BODY()
 public:

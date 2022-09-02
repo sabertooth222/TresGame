@@ -9,10 +9,10 @@ USTRUCT(BlueprintType)
 struct FTresUICampCharacterParam {
     GENERATED_BODY()
 public:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresUIActor* UIActor;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresUIDataAssetStatus* UIStatusData;
     
     TRESGAME_API FTresUICampCharacterParam();

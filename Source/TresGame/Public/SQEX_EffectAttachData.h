@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "SQEX_EffectAttachData.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FSQEX_EffectAttachData {
     GENERATED_BODY()
 public:

@@ -2,17 +2,17 @@
 #include "CoreMinimal.h"
 #include "TresEnemyEx773_AttractBT04Param.generated.h"
 
-class AActor;
 class ATresActor_e_ex773_Attract;
+class AActor;
 
 USTRUCT(BlueprintType)
 struct FTresEnemyEx773_AttractBT04Param {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresActor_e_ex773_Attract* m_pAttract;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AActor* m_pTarget;
     
     TRESGAME_API FTresEnemyEx773_AttractBT04Param();

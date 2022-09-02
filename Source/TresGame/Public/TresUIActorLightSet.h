@@ -3,7 +3,7 @@
 #include "GameFramework/Actor.h"
 #include "TresUIActorLightSet.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresUIActorLightSet : public AActor {
     GENERATED_BODY()
 public:

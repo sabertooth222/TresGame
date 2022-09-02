@@ -9,13 +9,13 @@ USTRUCT(BlueprintType)
 struct FTresTarHandParam_e_ex701 {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UTresAttack_e_ex701_SpawnTarHandBase> TarHandActionClass;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bEnablelifeTimeOverride: 1;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float OverrideLifeTime;
     
     TRESGAME_API FTresTarHandParam_e_ex701();

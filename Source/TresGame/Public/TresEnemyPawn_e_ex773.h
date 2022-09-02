@@ -1,161 +1,160 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ETresScreenEffectPriority -FallbackName=ETresScreenEffectPriority
 #include "TresEnemyXIIIPawnBase.h"
 #include "ETresEnemyXIIIPhaseType.h"
-#include "TresAnimNotifyState_AttachEffect.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ETresScreenEffectPriority -FallbackName=ETresScreenEffectPriority
 #include "TresEnemyPawn_e_ex773.generated.h"
 
 class ATresProjectileGenerator_e_ex773_LivelyFlarePillar;
-class ATresProjectileGenerator_e_ex773_FlareShotTornado;
-class AStaticMeshActor;
+class ATresProjectileGenerator_e_ex773_FlareShotHvn;
 class ATresProjectileGenerator_e_ex773_EncloseFlare;
+class ATresActor_e_ex773_UpdraftEffect;
 class ATresProjectileGenerator_e_ex773_EncloseFlareHvn;
 class ATresProjectileGenerator_e_ex773_FlareShot;
-class ATresActor_e_ex773_HvnEnvEffect;
-class ATresProjectileGenerator_e_ex773_FlareShotHvn;
+class USoundBase;
+class ATresProjectileGenerator_e_ex773_FlareShotTornado;
 class ATresProjectileGenerator_e_ex773_FlareTornado;
-class UTresParam_e_ex773_TerrainCrushing;
-class ATresActor_e_ex773_UpdraftEffect;
+class ATresActor_e_ex773_HvnEnvEffect;
 class ATresProjectile_e_ex773_SwordJoint;
 class USQEX_ParticleAttachDataAsset;
 class UTresEnemyPawn_e_ex773_EclipseManagerComponent;
 class UTresParam_e_ex773_Common;
 class UTresParam_e_ex773_Eclipse13;
+class UTresParam_e_ex773_TerrainCrushing;
 class ATresProjectile_e_ex773_HeavenlyPillar;
 class ATresProjectile_e_ex773_FlarePillarOmen;
 class ATresActor_e_ex773_Updraft;
 class ATresCameraNormal;
 class UTresParam_e_ex773_HeavenlyPillar;
-class USoundBase;
+class AStaticMeshActor;
 class ATresEnemyPawnBase;
 class AActor;
 class UTresStateBase;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemyPawn_e_ex773 : public ATresEnemyXIIIPawnBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresProjectileGenerator_e_ex773_EncloseFlare> m_pro_EncloseFlareGeneratorClass;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresProjectileGenerator_e_ex773_EncloseFlareHvn> m_pro_EncloseFlareHvnGeneratorClass;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresProjectileGenerator_e_ex773_FlareShot> m_pro_FlareShotGeneratorClass;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresProjectileGenerator_e_ex773_FlareShotHvn> m_pro_FlareShotHvnGeneratorClass;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresProjectileGenerator_e_ex773_FlareShotTornado> m_pro_FlareShotTornadoGeneratorClass;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresProjectileGenerator_e_ex773_FlareTornado> m_pro_FlareTornadoGeneratorClass;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresProjectileGenerator_e_ex773_LivelyFlarePillar> m_pro_LivelyFlarePillarGeneratorClass;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresActor_e_ex773_UpdraftEffect> m_pro_UpdraftEffectClass;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresActor_e_ex773_HvnEnvEffect> m_pro_HvnEnvEffectClass;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresActor_e_ex773_UpdraftEffect> m_pro_bt04UpdraftEffectClass;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresProjectile_e_ex773_SwordJoint> SwordJointClass;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USQEX_ParticleAttachDataAsset* m_PCEffDataAsset;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName EventNameForFinish;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float LimitZ_ForOneHeart;
     
 protected:
-    UPROPERTY(Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresEnemyPawn_e_ex773_EclipseManagerComponent* EclipseManagerComponent;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresParam_e_ex773_Common* CommonParameterAsset;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresParam_e_ex773_Eclipse13* ParameterEclipse13_Asset;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FName> SwordJointForceAnimationNameArray;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresProjectileGenerator_e_ex773_EncloseFlareHvn* m_EncloseFlareHvnGenerator;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresProjectileGenerator_e_ex773_FlareShot* m_FlareShotGenerator;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresProjectileGenerator_e_ex773_FlareShotHvn* m_FlareShotHvnGenerator;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresProjectileGenerator_e_ex773_FlareShotTornado* m_FlareShotTornadoGenerator;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresProjectileGenerator_e_ex773_FlareTornado* m_FlareTornadoGenerator;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UTresParam_e_ex773_TerrainCrushing> m_TerrainCrushingParam;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresProjectile_e_ex773_HeavenlyPillar* m_HeavenlyPillar;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresProjectile_e_ex773_FlarePillarOmen* m_AimFlarePillar;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresProjectileGenerator_e_ex773_LivelyFlarePillar* m_LivelyFlarePillarGenerator;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresActor_e_ex773_Updraft* m_HeavenlyUpdraft;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresCameraNormal* m_Camera;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UTresParam_e_ex773_HeavenlyPillar> m_HeavenlyPillarParam;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UTresParam_e_ex773_HeavenlyPillar> m_HeavenlyPillarBT04Param;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresActor_e_ex773_UpdraftEffect* m_HvnUpdraftEffect;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresActor_e_ex773_HvnEnvEffect* m_HvnEnvEffect;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresActor_e_ex773_UpdraftEffect* m_bt04UpdraftEffect;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     AStaticMeshActor* m_pPlFloorColl;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<USoundBase*> m_WarpVoiceDataArray;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<USoundBase*> m_HvnFlareShotVoiceDataArray;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<USoundBase*> m_RevengeWarpVoiceArray;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<USoundBase*> m_RevengeFlarePillarVoiceArray;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_WarpVoiceDisableTime;
     
 public:
@@ -181,7 +180,7 @@ public:
     UFUNCTION(BlueprintCallable)
     bool IsStartFlareTornadoEscape();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool IsSecondBattle();
     
     UFUNCTION(BlueprintCallable)
@@ -208,16 +207,16 @@ public:
     UFUNCTION(BlueprintCallable)
     bool IsFlareTornado();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool IsFinish();
     
     UFUNCTION(BlueprintCallable)
     bool IsEncloseFlare();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsEclipse13WaveComplete();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool IsEclipse13();
     
     UFUNCTION(BlueprintCallable)
@@ -235,38 +234,38 @@ public:
     UFUNCTION(BlueprintCallable)
     float GetEncloseFlareHitTime();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UTresEnemyPawn_e_ex773_EclipseManagerComponent* GetEclipseManagerComponent();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetEclipse13NowWaveNum();
     
     UFUNCTION(BlueprintCallable)
     void ExecNextWaveEclipse13(float ReserveTime, bool bNotifyJustInCase);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BPE_StepHeavenlyPillarExplosion(int32 Index);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BPE_StepHeavenlyPillar(int32 Index);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BPE_StepEclipse13(int32 Index);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     bool BPE_IsCancelStateFRPromiseWings(UTresStateBase* State);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BPE_ExecutePromiseWings();
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BPE_CreateHeavenlyPillarExplosionEffect();
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BPE_CreateHeavenlyPillarEffect();
     
 protected:
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BPE_ChangeTransparentMode(bool mode);
     
 public:

@@ -6,20 +6,20 @@
 
 class UTresLocomotionDefinitionBase;
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API UTresBTTask_CloseToTarget_T : public UTresBTTask_SequentialExecProcess {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UTresLocomotionDefinitionBase> m_CommonLocomotionDefinition;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_CommonUpdateTime;
     
-    UPROPERTY(AdvancedDisplay, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_Angle;
     
-    UPROPERTY(AdvancedDisplay, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_ItemSpace;
     
     UTresBTTask_CloseToTarget_T();

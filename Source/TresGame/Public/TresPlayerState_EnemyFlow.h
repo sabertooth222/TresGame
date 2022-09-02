@@ -7,17 +7,17 @@ class AActor;
 class UPrimitiveComponent;
 class ATresCharPawnBase;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_EnemyFlow : public UTresCharState_EnemyFlow {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AActor* m_pHitActor;
     
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UPrimitiveComponent* m_pHitComponent;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresCharPawnBase* m_pEnemyTurn;
     
     UTresPlayerState_EnemyFlow();

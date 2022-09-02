@@ -5,12 +5,12 @@
 
 class UTresActionDefinitionBase;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresAttack5_e_ex358_AvatarAttackAvatar : public UTresAttack_XIIILB_Base {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresActionDefinitionBase* m_CurrentDefinition;
     
 public:

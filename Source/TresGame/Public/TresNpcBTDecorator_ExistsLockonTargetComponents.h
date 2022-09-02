@@ -3,7 +3,7 @@
 #include "TresNpcBTDecoratorBase.h"
 #include "TresNpcBTDecorator_ExistsLockonTargetComponents.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcBTDecorator_ExistsLockonTargetComponents : public UTresNpcBTDecoratorBase {
     GENERATED_BODY()
 public:

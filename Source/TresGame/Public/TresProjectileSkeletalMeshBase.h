@@ -7,23 +7,23 @@ class USQEX_ParticleAttachDataAsset;
 class UTresSkeletalMeshComponent;
 class UTresEffectAttachComponent;
 
-UCLASS(Abstract, BlueprintType)
+UCLASS(Abstract, Blueprintable)
 class ATresProjectileSkeletalMeshBase : public ATresProjectileBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(Export, VisibleDefaultsOnly, BlueprintReadWrite, meta=(AllowPrivateAccess="true"))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresSkeletalMeshComponent* MyMesh;
     
-    UPROPERTY(Export, VisibleAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess="true"))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresEffectAttachComponent* m_EffectAttach;
     
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_AttachEffectGroupID;
     
 protected:
-    UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USQEX_ParticleAttachDataAsset* m_AttachData;
     
 public:

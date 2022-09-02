@@ -5,11 +5,11 @@
 
 class ATresVehiclePawnSpecialShip;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_SpecialShip : public UTresCharState_SpecialShip {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresVehiclePawnSpecialShip* m_pObj;
     
     UTresPlayerState_SpecialShip();

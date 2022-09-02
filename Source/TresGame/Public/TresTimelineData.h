@@ -5,11 +5,11 @@
 
 class UTresTimelineDataTrack;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class TRESGAME_API UTresTimelineData : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere, Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     TArray<UTresTimelineDataTrack*> m_Tracks;
     
     UTresTimelineData();

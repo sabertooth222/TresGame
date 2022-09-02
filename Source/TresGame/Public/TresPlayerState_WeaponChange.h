@@ -3,7 +3,7 @@
 #include "TresCharState_StyleChange.h"
 #include "TresPlayerState_WeaponChange.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_WeaponChange : public UTresCharState_StyleChange {
     GENERATED_BODY()
 public:

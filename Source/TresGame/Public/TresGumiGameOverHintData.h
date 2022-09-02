@@ -3,11 +3,11 @@
 #include "Engine/DataTable.h"
 #include "TresGumiGameOverHintData.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresGumiGameOverHintData : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString HintNameLocSpaceKey;
     
     TRESGAME_API FTresGumiGameOverHintData();

@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ETresItemDefReport.h"
 #include "Engine/DataTable.h"
+#include "ETresItemDefReport.h"
 #include "TresAnsemCodeData.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresAnsemCodeData : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresItemDefReport ItemID;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString DetailTextID;
     
     TRESGAME_API FTresAnsemCodeData();

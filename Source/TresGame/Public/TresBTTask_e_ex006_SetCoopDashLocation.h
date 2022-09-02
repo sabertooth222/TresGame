@@ -4,11 +4,11 @@
 #include "BehaviorTree/BehaviorTreeTypes.h"
 #include "TresBTTask_e_ex006_SetCoopDashLocation.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTTask_e_ex006_SetCoopDashLocation : public UBTTaskNode {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlackboardKeySelector m_Destination;
     
     UTresBTTask_e_ex006_SetCoopDashLocation();

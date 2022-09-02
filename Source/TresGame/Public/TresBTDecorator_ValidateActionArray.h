@@ -4,11 +4,11 @@
 #include "Tres_ValidateAction_Param.h"
 #include "TresBTDecorator_ValidateActionArray.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTDecorator_ValidateActionArray : public UBTDecorator {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTres_ValidateAction_Param> m_ValidateActionParam;
     
     UTresBTDecorator_ValidateActionArray();

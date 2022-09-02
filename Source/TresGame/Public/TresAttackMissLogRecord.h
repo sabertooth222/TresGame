@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "TresAttackMissLogRecord.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresAttackMissLogRecord {
     GENERATED_BODY()
 public:

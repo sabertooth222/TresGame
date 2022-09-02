@@ -6,15 +6,15 @@
 class ATresPatternActor_e_dw407b_PillarLight;
 class USceneComponent;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresPatternActor_e_dw407b_Manager : public AActor {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<ATresPatternActor_e_dw407b_PillarLight*> m_PatternList;
     
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USceneComponent* SceneComponent;
     
 public:

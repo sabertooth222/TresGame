@@ -3,195 +3,195 @@
 #include "UObject/Object.h"
 #include "TresUIManager.generated.h"
 
-class UTresMemoryArchiveController;
-class UTresGameInstance;
-class UTresUIParts;
-class UTresUIP_ScreenFilter;
-class UTresUIP_Cursor;
-class UTresUIP_HudCamera;
-class APlayerController;
 class USoundBase;
-class UTresMobilePortalController;
-class UTresUIP_Wipe;
 class UTresUIP_AutoSave;
+class UTresUIData;
+class UTresUIP_SaveLoad;
+class UTresUIParts;
+class UTresGameInstance;
+class APlayerController;
+class UTresUIP_Cursor;
+class UTresUIP_KeyItem;
+class UTresUIP_ScreenFilter;
+class UTresUIP_Wipe;
 class UTresUIP_Pause;
 class UTresUIP_Subtitle;
+class UTresMobilePortalController;
+class UTresUIP_HundredGame;
 class ATresHUDBase;
-class UTresUIP_SaveLoad;
+class UTresTheaterController;
+class UTresUIP_Message;
 class UTresUIP_GameHelp;
-class UTresUIP_BrightnessOption;
 class UTresUIP_MapName;
+class UTresMemoryArchiveController;
 class UTresUIP_VideoPlayer;
 class UTresUIP_BattleReport;
 class UTresUIP_NowLoading;
-class UTresUIP_KeyItem;
 class UTresUIP_MultiItemGet;
-class UTresCampController;
+class UTresUIP_BrightnessOption;
 class UTresUIP_ScreenOption;
-class UTresUIP_MenuGigasGame;
-class UTresUIP_HundredGame;
-class UTresUIP_LsiButtonSet;
-class UTresUIP_Message;
-class UTresTextColorSet;
-class UTresShopController;
 class UTresUIP_Hologram;
-class UTresUIP_HudCodeMenuInfo;
-class UTresTheaterController;
-class UTresPhilharmonicController;
-class UTresGameOverHintSelector;
-class UDataTable;
-class UTresUIData;
-class UTexture2D;
+class UTresUIP_MenuGigasGame;
+class UTresUIP_HudCamera;
 class UTresUISettingMenuDataAsset;
+class UTresUIP_LsiButtonSet;
+class UTresUIP_HudCodeMenuInfo;
+class UTresCampController;
+class UTresPhilharmonicController;
+class UTresShopController;
+class UTresGameOverHintSelector;
+class UTresTextColorSet;
+class UTexture2D;
+class UDataTable;
 class UTresUISystemSEDataSet;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresUIManager : public UObject {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UTresUIParts*> m_UIPartsAry;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UTresUIParts*> m_GarbageUIPartsAry;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresGameInstance* m_pGameInstance;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     APlayerController* m_pPlayerController;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresUIP_Cursor* m_Cursor;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresUIP_ScreenFilter* m_ScreenFilter;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresUIP_Wipe* m_Wipe;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresUIP_AutoSave* m_AutoSave;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresUIP_Pause* m_Pause;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresUIP_Subtitle* m_Subtitle;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresHUDBase* m_ActiveHUD;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresUIP_GameHelp* m_GameHelp;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresUIP_MapName* m_MapName;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresUIP_VideoPlayer* m_FullscreenVideoPlayer;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresUIP_SaveLoad* m_SaveLoad;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresUIP_BattleReport* m_BattleReport;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresUIP_NowLoading* m_LoadingScreen;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresUIP_KeyItem* m_KeyItem;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresUIP_MultiItemGet* m_MultiItemGet;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresUIP_BrightnessOption* m_ConfigBrightnessOption;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresUIP_ScreenOption* m_ConfigScreenOption;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresUIP_MenuGigasGame* m_GigasGameMenu;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresUIP_HudCamera* m_HudCamera;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresUIP_HundredGame* m_HudredGame;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresUIP_LsiButtonSet* m_LsiButtonSet;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresUIP_Message* m_PressKeyMessage;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresUIP_Hologram* m_Hologram;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresUIP_HudCodeMenuInfo* m_CodeMenuInfo;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresCampController* m_CampController;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresMobilePortalController* m_MobilePortalController;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresTheaterController* m_TheaterController;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresMemoryArchiveController* m_MemoryArchiveController;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresPhilharmonicController* m_PhilharmonicController;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresShopController* m_ShopController;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresGameOverHintSelector* m_GameOverHintSelector;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresUIData* m_UIData;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresTextColorSet* m_TextColorSet;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTexture2D* m_IconTextTexture;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UDataTable* m_IconTextData;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTexture2D* m_IconTextTexture_pf;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UDataTable* m_IconTextData_pf;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTexture2D* m_IconTextTexture_km;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UDataTable* m_IconTextData_km;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresUISettingMenuDataAsset* m_SettingMenuData;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UTresUIP_VideoPlayer*> m_fullScreenVideoSlots;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UTresUIP_VideoPlayer*> m_videoPlayerOnVideoComponents;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     USoundBase* m_TitleBGM;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresUISystemSEDataSet* m_OverrideSystemSEDataSet;
     
 public:

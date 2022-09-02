@@ -2,92 +2,92 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "ETresStateID.h"
-#include "TresEnemyPawnBase.h"
 #include "ParticleSystemAttachData_e_ex761.h"
+#include "TresEnemyPawnBase.h"
 #include "ETresEnemy_e_ex761_Weapon.h"
 #include "UObject/NoExportTypes.h"
 #include "TresEnemyPawn_e_ex761.generated.h"
 
 class UParticleSystem;
 class ATresEnemyManagerPawn_e_ex761;
-class ATresEnemyPawn_e_ex761;
-class USQEX_ParticleAttachDataAsset;
 class ATresCameraNormal;
+class USQEX_ParticleAttachDataAsset;
+class ATresEnemyPawn_e_ex761;
 class AActor;
 class UObject;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemyPawn_e_ex761 : public ATresEnemyPawnBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresEnemyManagerPawn_e_ex761> m_ManagerPawnClass;
     
-    UPROPERTY(AdvancedDisplay, EditDefaultsOnly)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 m_bEnableSyncAttractionHitPoint: 1;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USQEX_ParticleAttachDataAsset* m_WarpParticleAttachDataAsset;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 m_bEnableWarpInEffectAttach: 1;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 m_bEnableWarpOutEffectAttach: 1;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_SideWarpParticleSystem;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_VerticalWarpParticleSystem;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FParticleSystemAttachData_e_ex761 m_AuraEffectAttachData;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_PostAuraParticleSystem;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FParticleSystemAttachData_e_ex761 m_AlwaysEffectAttachData;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_CoopPostAuraParticleSystem;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_SpreadOutScreenEffectParticleSystem;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresEnemy_e_ex761_Weapon::Type> m_WeaponType;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_WeaponTrailEffectGroupID;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_RightHandMotionName;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_LeftHandMotionName;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_PrevBattleAreaIgnoreNum;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_BattleAreaIgnoreDistance;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_BattleAreaAppearTurnSpeed;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresCameraNormal> m_WavyLightningCameraClass;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_WavyLightningCameraStartInterpTime;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_WavyLightningCameraEndInterpTime;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresCameraNormal* m_Camera;
     
 public:
@@ -95,52 +95,52 @@ public:
     UFUNCTION()
     void OnDtorStateEvent(TEnumAsByte<ETresStateID> inStateID);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool IsXigbarWeapon() const;
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool IsWarpVanishMode() const;
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool IsReverseMode() const;
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool IsEnableForceWarp() const;
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool IsEnableDamageWarp() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ATresEnemyPawn_e_ex761* GetXigbarPawn() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     void GetTargetNoneOtherPawnList(TArray<ATresEnemyPawn_e_ex761*>& OutList) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetRightHandMotionBlendRate() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetLeftHandMotionBlendRate() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     void GetHomeLocationList(TArray<FVector>& OutList) const;
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     float GetCoopElapsedTime() const;
     
     UFUNCTION(BlueprintCallable)
     static AActor* GetBattleAreaCameraAimActor(UObject* WorldContextObject);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void DebugSetEnableDrawHomeLocations(int32 bEnable);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void DebugSetEnableDrawCoopCommonInfo(int32 bEnable);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void DebugEndReverseMode();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void DebugApplyReverseMode();
     
 };

@@ -3,14 +3,14 @@
 #include "Engine/DataTable.h"
 #include "TresWinnieAnimationData.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresWinnieAnimationData : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName AnimationName;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool isLoop;
     
     TRESGAME_API FTresWinnieAnimationData();

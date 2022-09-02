@@ -5,11 +5,11 @@
 
 class UDataTable;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresGumiShipBonusParameterDataTableSet : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UDataTable* m_pBonusParameterDataTable;
     
     UTresGumiShipBonusParameterDataTableSet();

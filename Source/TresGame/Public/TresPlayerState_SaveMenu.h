@@ -3,17 +3,17 @@
 #include "TresCharState_SaveMenu.h"
 #include "TresPlayerState_SaveMenu.generated.h"
 
-class UPrimitiveComponent;
 class AActor;
+class UPrimitiveComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_SaveMenu : public UTresCharState_SaveMenu {
     GENERATED_BODY()
 public:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     AActor* m_pTargetActor;
     
-    UPROPERTY(Export, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UPrimitiveComponent* m_pComponent;
     
     UTresPlayerState_SaveMenu();

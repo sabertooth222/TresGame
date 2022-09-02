@@ -6,10 +6,10 @@
 #include "Engine/LatentActionManager.h"
 #include "TresGimmick_Ts03_GigasGameMgr.generated.h"
 
-class USceneComponent;
 class UObject;
+class USceneComponent;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresGimmick_Ts03_GigasGameMgr : public AActor {
     GENERATED_BODY()
 public:
@@ -33,22 +33,22 @@ protected:
     UFUNCTION(BlueprintCallable)
     void RegistGimmickHudMarker(USceneComponent* pComp);
     
-    UFUNCTION(BlueprintCallable, meta = (WorldContext = "WorldContextObject", LatentInfo = "LatentInfo", Latent))
+    UFUNCTION(BlueprintCallable)
     void OpenTitle(const UObject* WorldContextObject, FLatentActionInfo LatentInfo);
     
-    UFUNCTION(BlueprintCallable, meta = (WorldContext = "WorldContextObject", LatentInfo = "LatentInfo", Latent))
+    UFUNCTION(BlueprintCallable)
     void OpenResult(const UObject* WorldContextObject, float ClearMilliSec, int32 totalScore, ETresUIGigasGameResultRank ClearRank, bool bNewRecord, FLatentActionInfo LatentInfo);
     
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void OnClosedUITitle(bool bGameStart);
     
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void OnClosedUIResult();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsValidDebugRank() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsDebugContinuousChain() const;
     
     UFUNCTION(BlueprintCallable)
@@ -57,31 +57,31 @@ protected:
     UFUNCTION(BlueprintCallable)
     void GetTitleResult(bool& StartGame);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetTimeRecord() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetHighScore() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ETresUIGigasGameResultRank GetDebugRank() const;
     
     UFUNCTION(BlueprintCallable)
     void FinalizeHud();
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void DebugSetSec(float sec);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void DebugSetScore(int32 Score);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void DebugSetContinuousChain(bool Enable);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void DebugSetChain(int32 chain);
     
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void ClearGame();
     
     UFUNCTION(BlueprintCallable)

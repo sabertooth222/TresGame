@@ -4,11 +4,11 @@
 #include "TresPhysMatEffectAssetUnit.h"
 #include "TresPhysMatEffectAsset.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPhysMatEffectAsset : public UTresLoadAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     FTresPhysMatEffectAssetUnit m_Effects[63];
     
     UTresPhysMatEffectAsset();

@@ -3,25 +3,25 @@
 #include "TresProjectileBase.h"
 #include "TresProjectile_e_ex316_LightBulb.generated.h"
 
+class ATresProjectile_e_ex316_DarkLaser;
 class UParticleSystem;
 class UParticleSystemComponent;
-class ATresProjectile_e_ex316_DarkLaser;
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class ATresProjectile_e_ex316_LightBulb : public ATresProjectileBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_CanterDistance;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_DarkLaserCoveringEffectData;
     
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresProjectile_e_ex316_DarkLaser* m_DarkLaser;
     
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* m_DarkLaserCoveringEffectCmp;
     
 public:

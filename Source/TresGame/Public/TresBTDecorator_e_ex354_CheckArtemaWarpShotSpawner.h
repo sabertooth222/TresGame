@@ -3,11 +3,11 @@
 #include "BehaviorTree/BTDecorator.h"
 #include "TresBTDecorator_e_ex354_CheckArtemaWarpShotSpawner.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTDecorator_e_ex354_CheckArtemaWarpShotSpawner : public UBTDecorator {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_iMaxProjNum;
     
     UTresBTDecorator_e_ex354_CheckArtemaWarpShotSpawner();

@@ -1,77 +1,77 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "TresEnemyXIIILBCoopPawnBase.h"
-#include "UObject/NoExportTypes.h"
 #include "TresDeathSentenceArmorRevengeParam_e_ex357.h"
 #include "Engine/EngineTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "ETresEnemyFieldSize_e_ex357.h"
 #include "ETresDeathSentenceRemoteEventType_e_ex357.h"
 #include "TresEnemyPawn_e_ex357.generated.h"
 
 class USphereComponent;
-class UPrimitiveComponent;
 class UParticleSystem;
-class UEnvQuery;
 class AActor;
+class UEnvQuery;
+class UPrimitiveComponent;
 class UObject;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemyPawn_e_ex357 : public ATresEnemyXIIILBCoopPawnBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USphereComponent* MyPullCollisionComponent;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_AuraParticleSystem;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_WeaponAuraParticleSystem;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresDeathSentenceArmorRevengeParam_e_ex357> m_DeathSentenceArmorRevengeParamList;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_DeathSentenceCinematicCoefficient;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_DeathSentenceCinematicStartTransitionTime;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_DeathSentenceCoefficient;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_DeathSentenceStartTransitionTime;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_DeathSentenceEndTransitionTime;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 m_bEnableBitExistLockonLowPriority: 1;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UEnvQuery* m_BitEnvQuery;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_BitEnvQueryRunIntervalTime;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_FieldPenetrateCheckStartDelayTime;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 m_bIsFieldDieDestroy: 1;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_FieldDieDestroyDelayTime;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 m_bIsFieldDieImmediate: 1;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_BloomShieldParticleSystem;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_DeathSentenceCounterParticleSystem;
     
 public:
@@ -88,31 +88,31 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetDisableBitAttack(bool bDisable);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnPullCollisionEndOverlap(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnPullCollisionBeginOverlap(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool IsStartedDamageReactionAfterIdle() const;
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool IsDeathSentence() const;
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     int32 GetSmallFieldNum() const;
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     int32 GetMediumFieldNum() const;
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     int32 GetLargeFieldNum() const;
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     int32 GetFieldNum() const;
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     int32 GetFieldManagerNum() const;
     
     UFUNCTION(BlueprintPure)
@@ -121,55 +121,55 @@ public:
     UFUNCTION(BlueprintPure)
     void GetFieldLocationsIgnoreNearestSize(TArray<FVector>& OutList, TEnumAsByte<ETresEnemyFieldSize_e_ex357::Type> InSizeType) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     void GetFieldLocationsIgnoreNearest(TArray<FVector>& OutList) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     void GetFieldLocations(TArray<FVector>& OutList) const;
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     float GetElapsedTimeSinceLastBitGenerate() const;
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     int32 GetBitNum() const;
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     int32 GetBitManagerNum() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     void GetBitLocationList(TArray<FVector>& OutList) const;
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool GetAttackGuarded();
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void DebugSetPhantomBlitzQuickTurnaroundParamIndex(int32 Index);
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void DebugSetNumWarpCut(int32 Num);
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void DebugSetNumContinuityCut(int32 Num);
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void DebugSetEnableForceDeathSentenceApplyDispelCommand(int32 Enable);
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void DebugSetEnableFieldForceShortLife(int32 Enable);
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void DebugSetEnableDrawPullCollision(int32 Enable);
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void DebugSetEnableDrawFastMoveArcTargetLocation(int32 Enable);
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void DebugSetDeathSentenceStartCount(int32 InCount);
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void DebugSetDeathSentenceCountSpeed(float InSpeed);
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void DebugEnableBloomShield(int32 Enable);
     
     UFUNCTION(BlueprintCallable)

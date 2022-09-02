@@ -8,7 +8,7 @@
 
 class ATresProjectileBase;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemyDarkSidePawnBase : public ATresEnemyPawnBase {
     GENERATED_BODY()
 public:
@@ -16,35 +16,35 @@ public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE(FTresEnemyPawn_e_dw407b_EndBigRoarLaser);
     DECLARE_DYNAMIC_MULTICAST_DELEGATE(FTresEnemyPawn_e_dw407b_BeginBigRoarLaser);
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresEnemyPawn_e_dw407b_BeginBigRoarLaser OnEnemyDw407bBeginBigRoarLaser;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresEnemyPawn_e_dw407b_EndBigRoarLaser OnEnemyDw407bEndBigRoarLaser;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresEnemyPawn_e_dw407b_EndLaserTiming OnEnemyDw407bEndLaserTiming;
     
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresEnemydw407ViewWay> m_ViewWay;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     FTresEnemyDarkSidePawnBase_LockOnParam m_LockOnViewTargetParams[3];
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_ViewTargetHeight;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresProjectileBase> m_ProdusedProjectileAsset;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresProjectileBase> m_TestAsset;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     uint32 m_SwitchingLockOnCursorPosHP;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UClass* m_PreActionDefinitionClass;
     
 public:

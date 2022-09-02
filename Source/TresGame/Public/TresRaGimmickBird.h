@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FTresRaGimmickBird {
     GENERATED_BODY()
 public:
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresSkeletalMeshComponent* m_Mesh;
     
     TRESGAME_API FTresRaGimmickBird();

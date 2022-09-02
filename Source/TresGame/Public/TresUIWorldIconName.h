@@ -9,14 +9,14 @@ USTRUCT(BlueprintType)
 struct FTresUIWorldIconName {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresWorldCode> WorldCode;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString WorldNameKey;
     
-    UPROPERTY(EditDefaultsOnly)
-    UTexture* IconAsset;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TAssetPtr<UTexture> IconAsset;
     
     TRESGAME_API FTresUIWorldIconName();
 };

@@ -3,7 +3,7 @@
 #include "TresGimmickHePuddingBase.h"
 #include "TresGimmickHePuddingBigBase.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresGimmickHePuddingBigBase : public ATresGimmickHePuddingBase {
     GENERATED_BODY()
 public:

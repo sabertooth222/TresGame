@@ -3,7 +3,7 @@
 #include "TresCharPawnBase.h"
 #include "TresEnemyJointActor_e_ex027a.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemyJointActor_e_ex027a : public ATresCharPawnBase {
     GENERATED_BODY()
 public:

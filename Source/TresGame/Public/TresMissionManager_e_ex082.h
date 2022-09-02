@@ -5,12 +5,12 @@
 
 class UTresMissionManagerParam_e_ex082;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresMissionManager_e_ex082 : public AActor {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresMissionManagerParam_e_ex082* m_Param;
     
 public:

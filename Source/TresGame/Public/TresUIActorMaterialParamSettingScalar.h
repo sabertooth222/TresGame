@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FTresUIActorMaterialParamSettingScalar {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName ParameterName;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Value;
     
     TRESGAME_API FTresUIActorMaterialParamSettingScalar();

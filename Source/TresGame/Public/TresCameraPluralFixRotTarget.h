@@ -8,12 +8,12 @@
 class UObject;
 class ATresCameraPluralFixRotTarget;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresCameraPluralFixRotTarget : public ATresCameraRotTarget {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FRotator> m_Rotations;
     
 public:

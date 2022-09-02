@@ -3,14 +3,14 @@
 #include "BehaviorTree/BTDecorator.h"
 #include "TresBTDecorator_GetAttackPermission.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTDecorator_GetAttackPermission : public UBTDecorator {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bCheckOnly;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_ElapsedTimeSinceLastAttack;
     
     UTresBTDecorator_GetAttackPermission();

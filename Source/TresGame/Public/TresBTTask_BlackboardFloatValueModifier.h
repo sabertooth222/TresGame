@@ -4,17 +4,17 @@
 #include "BehaviorTree/BehaviorTreeTypes.h"
 #include "TresBTTask_BlackboardFloatValueModifier.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTTask_BlackboardFloatValueModifier : public UTresBTTask_BlackboardValueModifierBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 m_bUseBlackboard: 1;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_Value;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlackboardKeySelector m_BlackboardKeyValueB;
     
     UTresBTTask_BlackboardFloatValueModifier();

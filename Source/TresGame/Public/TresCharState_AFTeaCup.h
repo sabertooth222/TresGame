@@ -3,7 +3,7 @@
 #include "TresStateBase.h"
 #include "TresCharState_AFTeaCup.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresCharState_AFTeaCup : public UTresStateBase {
     GENERATED_BODY()
 public:

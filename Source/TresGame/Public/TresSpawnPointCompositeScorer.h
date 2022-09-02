@@ -3,14 +3,14 @@
 #include "TresSpawnPointScorer.h"
 #include "TresSpawnPointCompositeScorer.generated.h"
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class TRESGAME_API UTresSpawnPointCompositeScorer : public UTresSpawnPointScorer {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UTresSpawnPointScorer*> m_Scorers;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<float> m_Factors;
     
     UTresSpawnPointCompositeScorer();

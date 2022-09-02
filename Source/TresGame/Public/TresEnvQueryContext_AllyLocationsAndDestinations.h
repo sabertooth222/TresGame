@@ -3,7 +3,7 @@
 #include "EnvironmentQuery/EnvQueryContext.h"
 #include "TresEnvQueryContext_AllyLocationsAndDestinations.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UTresEnvQueryContext_AllyLocationsAndDestinations : public UEnvQueryContext {
     GENERATED_BODY()
 public:

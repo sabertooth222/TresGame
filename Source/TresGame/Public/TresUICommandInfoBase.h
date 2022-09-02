@@ -6,14 +6,14 @@
 class AActor;
 class UPrimitiveComponent;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UTresUICommandInfoBase : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     AActor* m_Actor;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UPrimitiveComponent* m_Component;
     
     UTresUICommandInfoBase();

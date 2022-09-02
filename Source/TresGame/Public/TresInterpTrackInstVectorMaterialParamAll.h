@@ -3,7 +3,7 @@
 #include "TresInterpTrackInstVectorMaterialParam.h"
 #include "TresInterpTrackInstVectorMaterialParamAll.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API UTresInterpTrackInstVectorMaterialParamAll : public UTresInterpTrackInstVectorMaterialParam {
     GENERATED_BODY()
 public:

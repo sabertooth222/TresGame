@@ -8,7 +8,7 @@ struct FTresEquipValiableSetList {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresEquipValiableSet> m_List;
     
 public:

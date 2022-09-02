@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "ETresGumiShipReactionType.h"
 #include "ETresGumiShipAttackElementType.h"
 #include "ETresGumiShipAttackSubElemntType.h"
 #include "ETresGumiShipBadStateType.h"
-#include "ETresGumiShipReactionType.h"
 #include "TresGumiShipSkillParam.generated.h"
 
 class UParticleSystem;
@@ -12,28 +12,28 @@ USTRUCT(BlueprintType)
 struct FTresGumiShipSkillParam {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fAttackPoint;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresGumiShipAttackElementType m_eElementType;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresGumiShipAttackSubElemntType m_eSubElementType;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresGumiShipBadStateType m_eBadStateType;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fTimeOfBadStateEffective;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fPercentOfBadState;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresGumiShipReactionType m_eReactionType;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_pHitEffect;
     
     TRESGAME_API FTresGumiShipSkillParam();

@@ -3,7 +3,7 @@
 #include "TresCharState_SuperSlide.h"
 #include "TresNpcState_SuperSlide.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcState_SuperSlide : public UTresCharState_SuperSlide {
     GENERATED_BODY()
 public:

@@ -4,15 +4,15 @@
 #include "ETresEnemyStepDirectionType_e_ex309.h"
 #include "TresAction1_e_ex309_Step.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAction1_e_ex309_Step : public UTresActionDefinitionBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresEnemyStepDirectionType_e_ex309> m_DirectionType;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 m_bEnableStartTargetLocation: 1;
     
 public:

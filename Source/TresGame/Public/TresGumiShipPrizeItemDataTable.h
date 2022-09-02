@@ -7,14 +7,14 @@
 
 class ATresGumiShipDropPrize;
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresGumiShipPrizeItemDataTable : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresGumiShipDropPrize> m_SpawnClass;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresGumiShipPrizeDataTable m_Parameters;
     
     TRESGAME_API FTresGumiShipPrizeItemDataTable();

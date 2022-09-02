@@ -5,11 +5,11 @@
 
 class ATresEnemyXIIIPawnBase;
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class ATresEnemyXIIIAManager : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<ATresEnemyXIIIPawnBase*> m_EntryEnemyList;
     
     ATresEnemyXIIIAManager();

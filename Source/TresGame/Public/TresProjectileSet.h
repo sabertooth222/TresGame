@@ -4,11 +4,11 @@
 #include "TresProjectileAssetUnit.h"
 #include "TresProjectileSet.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresProjectileSet : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresProjectileAssetUnit> Projectiles;
     
     UTresProjectileSet();

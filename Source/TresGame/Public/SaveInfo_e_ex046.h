@@ -8,22 +8,22 @@ USTRUCT(BlueprintType)
 struct FSaveInfo_e_ex046 {
     GENERATED_BODY()
 public:
-    UPROPERTY(SaveGame)
+    UPROPERTY(EditAnywhere, SaveGame)
     int32 RegionHitPoint[3];
     
-    UPROPERTY(SaveGame)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
     uint8 bInheritParam: 1;
     
-    UPROPERTY(SaveGame)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
     uint8 bIsModeChangeRegionBreak: 1;
     
-    UPROPERTY(SaveGame)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
     FVector ModeChangePawnSpawnLocation;
     
-    UPROPERTY(SaveGame)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
     FRotator ModeChangePawnSpawnRotation;
     
-    UPROPERTY(SaveGame)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
     int32 ModeChangePawnAppearMode;
     
     TRESGAME_API FSaveInfo_e_ex046();

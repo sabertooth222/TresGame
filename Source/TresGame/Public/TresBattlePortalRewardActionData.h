@@ -4,14 +4,14 @@
 #include "TresSelfieCameraActionDef.h"
 #include "TresBattlePortalRewardActionData.generated.h"
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UTresBattlePortalRewardActionData : public UTresLoadAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FName> BattlePortalClearFlagCheckList;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresSelfieCameraActionDef> SelfieActionList;
     
     UTresBattlePortalRewardActionData();

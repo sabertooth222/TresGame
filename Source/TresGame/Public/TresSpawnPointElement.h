@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct TRESGAME_API FTresSpawnPointElement {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector m_Position;
     
     FTresSpawnPointElement();

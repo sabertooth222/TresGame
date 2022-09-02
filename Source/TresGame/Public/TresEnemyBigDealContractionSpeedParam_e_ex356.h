@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FTresEnemyBigDealContractionSpeedParam_e_ex356 {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Distance;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Speed;
     
     TRESGAME_API FTresEnemyBigDealContractionSpeedParam_e_ex356();

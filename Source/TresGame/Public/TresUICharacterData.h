@@ -1,39 +1,39 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TresUIGameFlagText.h"
 #include "ETresPlayerUniqueID.h"
 #include "Engine/DataTable.h"
 #include "ETresChrUniqueID.h"
 #include "ETresUIFaceUniqueID.h"
 #include "ETresWorldCode.h"
+#include "TresUIGameFlagText.h"
 #include "TresUICharacterData.generated.h"
 
-class UTexture;
 class UTresUIDataAssetStatus;
+class UTexture;
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresUICharacterData : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresChrUniqueID ChrUniqueID;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresPlayerUniqueID PlayerUniqueID;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresUIFaceUniqueID FaceUniqueID;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresWorldCode> WorldCode;
     
-    UPROPERTY(EditDefaultsOnly)
-    UTresUIDataAssetStatus* StatusData;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TAssetPtr<UTresUIDataAssetStatus> StatusData;
     
-    UPROPERTY(EditDefaultsOnly)
-    UTexture* MenuFaceIcon;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TAssetPtr<UTexture> MenuFaceIcon;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresUIGameFlagText> Names;
     
     TRESGAME_API FTresUICharacterData();

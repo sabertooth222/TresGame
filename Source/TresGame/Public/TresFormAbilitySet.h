@@ -5,12 +5,12 @@
 #include "TresFormAbilitySetUnit.h"
 #include "TresFormAbilitySet.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresFormAbilitySet : public UDataAsset {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<ETresCharWearForm, FTresFormAbilitySetUnit> m_Data;
     
 public:

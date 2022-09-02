@@ -8,41 +8,41 @@
 #include "TresCollisionManager.generated.h"
 
 class UTresRootComponent;
-class UTresSkeletalMeshComponent;
 class UTresGrassBumpAttachObj;
 class ATresCharPawnBase;
+class UTresSkeletalMeshComponent;
 class UTresBodyCollComponent;
 
-UCLASS(NotPlaceable, Transient)
+UCLASS(Blueprintable, NotPlaceable, Transient)
 class ATresCollisionManager : public AActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(DuplicateTransient, Export, Transient)
+    UPROPERTY(DuplicateTransient, EditAnywhere, Export, Transient)
     TMap<TWeakObjectPtr<UTresRootComponent>, UTresGrassBumpAttachObj*> m_DetectGrassBumpMap;
     
-    UPROPERTY(DuplicateTransient, Export, Transient)
+    UPROPERTY(DuplicateTransient, EditAnywhere, Export, Transient)
     TArray<TWeakObjectPtr<UTresRootComponent>> m_DetectPhysMatComponentList;
     
-    UPROPERTY(DuplicateTransient, Export, Transient)
+    UPROPERTY(DuplicateTransient, EditAnywhere, Export, Transient)
     TArray<TWeakObjectPtr<UTresSkeletalMeshComponent>> m_FootStepComponentList;
     
-    UPROPERTY(DuplicateTransient, Transient)
+    UPROPERTY(DuplicateTransient, EditAnywhere, Transient)
     TArray<TWeakObjectPtr<ATresCharPawnBase>> m_FootStepEffectGenPawnList;
     
-    UPROPERTY(DuplicateTransient, Export, Transient)
+    UPROPERTY(DuplicateTransient, EditAnywhere, Export, Transient)
     TArray<TWeakObjectPtr<UTresBodyCollComponent>> m_DetectBodyCompList;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresCollMgrDetectUpdateGrassBumpTickFunction m_UpdateGrassBumpTickFunction;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresCollMgrDetectPhysMatTickFunction m_DetectPhysMatTickFunction;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresCollMgrFootStepEffectGenTickFunction m_FootStepEffectGenTickFunction;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresCollMgrDetectBodyCollTickFunction m_DetectBodyCollTickFunction;
     
 public:

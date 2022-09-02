@@ -6,7 +6,7 @@ USTRUCT(BlueprintType)
 struct FTresLSIScoreEntryWins {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 wins;
     
     TRESGAME_API FTresLSIScoreEntryWins();

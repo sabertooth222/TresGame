@@ -3,7 +3,7 @@
 #include "TresActionDefinitionBase.h"
 #include "TresAction3_e_ex014_Spoilt.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAction3_e_ex014_Spoilt : public UTresActionDefinitionBase {
     GENERATED_BODY()
 public:

@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FTresAnims_e_he001a {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName AttackName;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName ReactionName;
     
     TRESGAME_API FTresAnims_e_he001a();

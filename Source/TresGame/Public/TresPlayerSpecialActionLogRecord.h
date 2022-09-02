@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "TresPlayerSpecialActionLogRecord.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresPlayerSpecialActionLogRecord {
     GENERATED_BODY()
 public:

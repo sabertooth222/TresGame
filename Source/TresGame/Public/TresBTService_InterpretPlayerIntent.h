@@ -5,20 +5,20 @@
 
 class UCurveFloat;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTService_InterpretPlayerIntent : public UBTService {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UCurveFloat* PlayerIntentWeightCurve;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UCurveFloat* NotMovingTimeCurve;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UCurveFloat* PlayerNotMovingTimeCurve;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UCurveFloat* ForwardPreferencePlayerNotMovingCurve;
     
     UTresBTService_InterpretPlayerIntent();

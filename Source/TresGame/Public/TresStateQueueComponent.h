@@ -8,33 +8,33 @@
 class UTresStateSet;
 class UTresStateBase;
 
-UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTresStateQueueComponent : public UActorComponent {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresStateSet* MyStateAsset;
     
-    UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool MyDisableAutoMainProc;
     
-    UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool MyIsSetDefaultState;
     
-    UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresStateID> MySetDefaultState;
     
-    UPROPERTY(AdvancedDisplay, EditDefaultsOnly, BlueprintReadWrite)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UTresStateBase> m_CinematicStateClass;
     
-    UPROPERTY(Transient, BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresStateBase* m_pCurrentState;
     
-    UPROPERTY(Transient, BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UTresStateBase*> m_StateQueue;
     
-    UPROPERTY(Transient, BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UTresStateBase*> m_RecycleState;
     
 public:

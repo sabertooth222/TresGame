@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FTresSignProjectileAttackStartDelayParam_e_ex357 {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName AttackCollisionGroupName;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float AttackStartDelayTime;
     
     TRESGAME_API FTresSignProjectileAttackStartDelayParam_e_ex357();

@@ -6,17 +6,17 @@
 #include "TresUICustomizeCommand.h"
 #include "TresUICustomizeDataAsset.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresUICustomizeDataAsset : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresUICustomizeMagicCommand> MagicCommands;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresUICustomizeCommand> LinkCommands;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TArray<TEnumAsByte<ETresCommandKind>> ItemCommands;
     
     UTresUICustomizeDataAsset();

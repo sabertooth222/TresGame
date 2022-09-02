@@ -3,7 +3,7 @@
 #include "TresNpcAttackDefinitionBase.h"
 #include "TresAttack1_n_ex033_LandCombo.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAttack1_n_ex033_LandCombo : public UTresNpcAttackDefinitionBase {
     GENERATED_BODY()
 public:

@@ -3,7 +3,7 @@
 #include "TresCameraDMBase.h"
 #include "TresCameraDMSimba.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresCameraDMSimba : public ATresCameraDMBase {
     GENERATED_BODY()
 public:

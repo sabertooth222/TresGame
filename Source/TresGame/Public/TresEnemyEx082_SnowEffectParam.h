@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct FTresEnemyEx082_SnowEffectParam {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* Effect;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName BoneName;
     
     TRESGAME_API FTresEnemyEx082_SnowEffectParam();

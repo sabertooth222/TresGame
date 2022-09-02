@@ -3,15 +3,15 @@
 #include "TresFriendLinkUtilityPawn.h"
 #include "TresFriendLinkPawnUltimateEnd.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresFriendLinkPawnUltimateEnd : public ATresFriendLinkUtilityPawn {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fFinishMotionStartLagTime;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fFriendLinkFinishInvincibleTime;
     
 public:

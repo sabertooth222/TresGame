@@ -4,15 +4,15 @@
 #include "TresUIWorldIconName.h"
 #include "TresUIWorldIconNameDataAsset.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresUIWorldIconNameDataAsset : public UDataAsset {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString m_WorldNameNameSpace;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresUIWorldIconName> m_IconName;
     
 public:

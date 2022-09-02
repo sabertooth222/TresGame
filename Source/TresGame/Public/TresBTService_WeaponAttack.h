@@ -7,33 +7,33 @@
 
 class UTresAttackDefinitionWeaponBase;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTService_WeaponAttack : public UBTService {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlackboardKeySelector m_Target;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlackboardKeySelector m_Destination;
     
-    UPROPERTY(VisibleDefaultsOnly)
-    uint32 m_bUseBBAttackDefinition: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bUseBBAttackDefinition: 1;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlackboardKeySelector m_BBAttackDefinition;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UTresAttackDefinitionWeaponBase> m_AttackDefinition;
     
-    UPROPERTY(EditAnywhere)
-    uint32 m_bValidateLocation: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bValidateLocation: 1;
     
-    UPROPERTY(EditAnywhere)
-    uint32 m_bValidateOrientation: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bValidateOrientation: 1;
     
-    UPROPERTY(EditAnywhere)
-    uint32 m_bValidateExecution: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bValidateExecution: 1;
     
     UTresBTService_WeaponAttack();
 };

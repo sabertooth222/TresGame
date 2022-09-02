@@ -5,17 +5,17 @@
 
 class UTresUIP_HudParts;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresUIP_HudOlaf : public UTresUIParts {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresUIP_HudParts* m_HudParts;
     
 public:
     UTresUIP_HudOlaf();
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     int32 OnCallback(int32 ID, int32 Param);
     
 };

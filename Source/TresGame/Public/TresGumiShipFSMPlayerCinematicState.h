@@ -3,7 +3,7 @@
 #include "TresGumiShipFSMPlayerStateBase.h"
 #include "TresGumiShipFSMPlayerCinematicState.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresGumiShipFSMPlayerCinematicState : public UTresGumiShipFSMPlayerStateBase {
     GENERATED_BODY()
 public:

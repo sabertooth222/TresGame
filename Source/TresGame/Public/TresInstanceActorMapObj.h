@@ -3,7 +3,7 @@
 #include "TresInstanceActor.h"
 #include "TresInstanceActorMapObj.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresInstanceActorMapObj : public ATresInstanceActor {
     GENERATED_BODY()
 public:

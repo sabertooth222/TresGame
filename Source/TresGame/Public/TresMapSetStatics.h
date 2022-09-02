@@ -3,7 +3,7 @@
 #include "UObject/Object.h"
 #include "TresMapSetStatics.generated.h"
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UTresMapSetStatics : public UObject {
     GENERATED_BODY()
 public:
@@ -14,7 +14,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static void SetEnableMapSet(bool Enable);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsEnableMapSet();
     
 };

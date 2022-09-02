@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FTresLSIScoreEntryHowtoPlayGolf {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresLSIHowtoPlayGolfMode mode;
     
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 Score;
     
     TRESGAME_API FTresLSIScoreEntryHowtoPlayGolf();

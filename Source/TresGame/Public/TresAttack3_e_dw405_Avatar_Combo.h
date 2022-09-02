@@ -6,12 +6,12 @@
 
 class UTresAttack_e_dw405_Base;
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAttack3_e_dw405_Avatar_Combo : public UTresAttack_e_dw405_Avatar_Base, public ITresAction_e_dw405_ComboInterface {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresAttack_e_dw405_Base* m_CurrentState;
     
 public:

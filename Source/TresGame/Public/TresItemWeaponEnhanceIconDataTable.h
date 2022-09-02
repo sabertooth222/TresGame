@@ -6,18 +6,18 @@
 
 class UTexture;
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresItemWeaponEnhanceIconDataTable : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresItemDefWeapon m_WeaponID;
     
-    UPROPERTY(EditDefaultsOnly)
-    UTexture* PickerIconAsset;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TAssetPtr<UTexture> PickerIconAsset;
     
-    UPROPERTY(EditDefaultsOnly)
-    UTexture* KeybladeIconAsset;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TAssetPtr<UTexture> KeybladeIconAsset;
     
     TRESGAME_API FTresItemWeaponEnhanceIconDataTable();
 };

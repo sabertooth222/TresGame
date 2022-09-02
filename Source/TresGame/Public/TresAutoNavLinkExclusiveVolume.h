@@ -5,11 +5,11 @@
 #include "TresAutoNavLinkExclusiveVolumeInfo.h"
 #include "TresAutoNavLinkExclusiveVolume.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresAutoNavLinkExclusiveVolume : public AVolume, public ITresAutoNavLinkExclusiveInterface {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresAutoNavLinkExclusiveVolumeInfo> ExclusiveInfo;
     
     ATresAutoNavLinkExclusiveVolume();

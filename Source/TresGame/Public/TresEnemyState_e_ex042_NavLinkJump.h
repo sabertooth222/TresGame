@@ -3,7 +3,7 @@
 #include "TresAICharState_NavLinkJumpCodeDriven.h"
 #include "TresEnemyState_e_ex042_NavLinkJump.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresEnemyState_e_ex042_NavLinkJump : public UTresAICharState_NavLinkJumpCodeDriven {
     GENERATED_BODY()
 public:

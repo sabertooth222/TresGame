@@ -3,42 +3,42 @@
 #include "TresUIParts.h"
 #include "TresUIP_Pause.generated.h"
 
-class UTresUIP_PauseButton;
 class UGFxObject;
+class UTresUIP_PauseButton;
 class UTresUIP_GameOver;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresUIP_Pause : public UTresUIParts {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UGFxObject* m_PauseRoot;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UGFxObject* m_PauseTitle;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UGFxObject* m_PauseHint;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UGFxObject* m_PauseHintText;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UGFxObject* m_PauseButtonSet;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     UTresUIP_PauseButton* m_PauseButton[6];
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UGFxObject* m_PauseBG;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresUIP_GameOver* m_GameOver;
     
 public:
     UTresUIP_Pause();
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     int32 OnCallback(int32 ID, int32 Param);
     
 };

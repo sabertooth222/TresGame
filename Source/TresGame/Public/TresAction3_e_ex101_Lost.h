@@ -3,7 +3,7 @@
 #include "TresActionDefinitionBase.h"
 #include "TresAction3_e_ex101_Lost.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAction3_e_ex101_Lost : public UTresActionDefinitionBase {
     GENERATED_BODY()
 public:

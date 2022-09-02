@@ -11,7 +11,7 @@ class UTresRandomPlaceRuleBase : public UObject {
     GENERATED_BODY()
 public:
     UTresRandomPlaceRuleBase();
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void BPNE_SpawnActor(AActor* ParentActor, UTresSpawnActorManagerComponent* SpawnComponent);
     
 };

@@ -3,7 +3,7 @@
 #include "TresGimmickActor.h"
 #include "TresGimmickBxCarManagerActor.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresGimmickBxCarManagerActor : public ATresGimmickActor {
     GENERATED_BODY()
 public:

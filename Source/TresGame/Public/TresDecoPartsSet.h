@@ -5,14 +5,14 @@
 #include "TresDecoPartsUnit.h"
 #include "TresDecoPartsSet.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API UTresDecoPartsSet : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresDecoPartsAttachPartIdx> m_AttachPartIndex;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresDecoPartsUnit> m_AssetList;
     
     UTresDecoPartsSet();

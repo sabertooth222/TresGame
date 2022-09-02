@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "TresWinniePuzzlePlayerRollParam.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresWinniePuzzlePlayerRollParam {
     GENERATED_BODY()
 public:

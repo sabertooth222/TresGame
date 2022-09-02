@@ -3,17 +3,17 @@
 #include "TresProjectileBase.h"
 #include "TresEnemy_e_ex311_DarkFiragaProjectileBase.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemy_e_ex311_DarkFiragaProjectileBase : public ATresProjectileBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_Hight;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_Wide;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_Count;
     
     ATresEnemy_e_ex311_DarkFiragaProjectileBase();

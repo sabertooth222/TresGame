@@ -5,17 +5,17 @@
 #include "TresEnemy_e_dw401_CycloneEffectParam.h"
 #include "TresAttack3_e_dw401_DevilTornado.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAttack3_e_dw401_DevilTornado : public UTresAttackDefinitionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresEnemy_e_dw401_DevilTornadoParam> m_DevilTornadoParam;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_pro_RushStartInterval;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresEnemy_e_dw401_CycloneEffectParam> m_CycloneEffectParam;
     
     UTresAttack3_e_dw401_DevilTornado();

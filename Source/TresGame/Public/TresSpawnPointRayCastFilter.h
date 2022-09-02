@@ -5,23 +5,23 @@
 #include "UObject/NoExportTypes.h"
 #include "TresSpawnPointRayCastFilter.generated.h"
 
-class UPrimitiveComponent;
 class AActor;
+class UPrimitiveComponent;
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class TRESGAME_API UTresSpawnPointRayCastFilter : public UTresSpawnPointFilter {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector m_Position;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     TArray<TWeakObjectPtr<AActor>> m_IgnoredActors;
     
-    UPROPERTY(Export)
+    UPROPERTY(EditAnywhere, Export)
     TArray<TWeakObjectPtr<UPrimitiveComponent>> m_IgnoredComponents;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ECollisionChannel> m_CollisionChannel;
     
     UTresSpawnPointRayCastFilter();

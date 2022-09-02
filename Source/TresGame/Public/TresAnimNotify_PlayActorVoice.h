@@ -5,11 +5,11 @@
 
 class UTresActorVoice;
 
-UCLASS(CollapseCategories, MinimalAPI)
+UCLASS(Blueprintable, CollapseCategories, MinimalAPI)
 class UTresAnimNotify_PlayActorVoice : public UAnimNotify {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresActorVoice* m_ActorVoice;
     
     UTresAnimNotify_PlayActorVoice();

@@ -3,7 +3,7 @@
 #include "TresCharState_FRGoofyShoot.h"
 #include "TresNpcState_n_ex002_FRGoofyShoot.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcState_n_ex002_FRGoofyShoot : public UTresCharState_FRGoofyShoot {
     GENERATED_BODY()
 public:

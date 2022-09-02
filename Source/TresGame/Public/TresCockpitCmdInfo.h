@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FTresCockpitCmdInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresCockpitCmd> m_cockpitCmdAry;
     
     TRESGAME_API FTresCockpitCmdInfo();

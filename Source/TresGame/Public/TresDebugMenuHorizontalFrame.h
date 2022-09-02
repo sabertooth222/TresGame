@@ -3,7 +3,7 @@
 #include "TresDebugMenuContainer.h"
 #include "TresDebugMenuHorizontalFrame.generated.h"
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class UTresDebugMenuHorizontalFrame : public UTresDebugMenuContainer {
     GENERATED_BODY()
 public:

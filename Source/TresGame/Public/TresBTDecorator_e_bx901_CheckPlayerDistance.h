@@ -3,20 +3,20 @@
 #include "BehaviorTree/BTDecorator.h"
 #include "TresBTDecorator_e_bx901_CheckPlayerDistance.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTDecorator_e_bx901_CheckPlayerDistance : public UBTDecorator {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fMin;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fMax;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bMin;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bMax;
     
     UTresBTDecorator_e_bx901_CheckPlayerDistance();

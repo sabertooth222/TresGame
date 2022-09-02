@@ -3,7 +3,7 @@
 #include "TresFriendLinkPawnBase.h"
 #include "TresFriendLinkPawnThinkOfYou.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresFriendLinkPawnThinkOfYou : public ATresFriendLinkPawnBase {
     GENERATED_BODY()
 public:

@@ -4,11 +4,11 @@
 #include "ETresEnemyEx006ScrumState.h"
 #include "TresBTDecorator_e_ex006_ScrumStateCheck.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTDecorator_e_ex006_ScrumStateCheck : public UBTDecorator {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresEnemyEx006ScrumState m_ScrumStateCheck;
     
     UTresBTDecorator_e_ex006_ScrumStateCheck();

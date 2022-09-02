@@ -3,7 +3,7 @@
 #include "EnvironmentQuery/EnvQueryTest.h"
 #include "TresNpcEnvQueryTest_CanUseFreeMovePoint.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcEnvQueryTest_CanUseFreeMovePoint : public UEnvQueryTest {
     GENERATED_BODY()
 public:

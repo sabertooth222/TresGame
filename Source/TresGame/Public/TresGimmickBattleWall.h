@@ -3,20 +3,20 @@
 #include "TresGimmickStaticBase.h"
 #include "TresGimmickBattleWall.generated.h"
 
-UCLASS(Abstract, Config=Game)
+UCLASS(Abstract, Blueprintable, Config=Game)
 class ATresGimmickBattleWall : public ATresGimmickStaticBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_EnableChangeCinematicEvent;
     
     ATresGimmickBattleWall();
 protected:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnChangeCinematicModeProc(bool bIsCinematicMode);
     
 public:
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BPEV_OnChangeCinematicMode(bool bIsCinematicMode);
     
 };

@@ -10,11 +10,3 @@ public:
     TRESGAME_API FTresRootComponentPostPhysicsTickFunction();
 };
 
-template<>
-struct TStructOpsTypeTraits<FTresRootComponentPostPhysicsTickFunction> : public TStructOpsTypeTraitsBase2<FTresRootComponentPostPhysicsTickFunction>
-{
-    enum
-    {
-        WithCopy = false
-    };
-};

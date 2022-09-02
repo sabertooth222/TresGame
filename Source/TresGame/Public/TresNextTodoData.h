@@ -2,24 +2,24 @@
 #include "CoreMinimal.h"
 #include "Engine/DataTable.h"
 #include "ETresWorldCode.h"
-#include "ETresUIDataVersion.h"
 #include "TresUIGameFlagData.h"
+#include "ETresUIDataVersion.h"
 #include "TresNextTodoData.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresNextTodoData : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresWorldCode> WorldCode;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresUIGameFlagData GameFlag;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString TextId;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresUIDataVersion Version;
     
     TRESGAME_API FTresNextTodoData();

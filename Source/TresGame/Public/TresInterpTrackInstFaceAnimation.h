@@ -5,20 +5,20 @@
 
 class UTresInterpTrackFaceAnimation;
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API UTresInterpTrackInstFaceAnimation : public UInterpTrackInst {
     GENERATED_BODY()
 public:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float LastUpdatePosition;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     int32 LastKeyIndex;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     bool IsAnimPlaying;
     
-    UPROPERTY(Transient)
+    UPROPERTY(EditAnywhere, Transient)
     TArray<TWeakObjectPtr<UTresInterpTrackFaceAnimation>> OtherFaceTracks;
     
     UTresInterpTrackInstFaceAnimation();

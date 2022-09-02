@@ -3,7 +3,7 @@
 #include "TresMiRxPawn.h"
 #include "TresMiRxEnemyPawnBase.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresMiRxEnemyPawnBase : public ATresMiRxPawn {
     GENERATED_BODY()
 public:

@@ -1,27 +1,27 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
+#include "UObject/NoExportTypes.h"
 #include "TresCameraDistanceTarget.h"
 #include "TresCameraTargetInfo.h"
-#include "UObject/NoExportTypes.h"
 #include "TresCameraTargetOTS.generated.h"
 
 class AActor;
-class ATresCameraTargetOTS;
 class UObject;
+class ATresCameraTargetOTS;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresCameraTargetOTS : public ATresCameraDistanceTarget {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresCameraTargetInfo m_TargetInfo2;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_LimitPitchMin;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_LimitPitchMax;
     
 public:

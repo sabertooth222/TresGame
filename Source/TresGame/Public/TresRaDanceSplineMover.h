@@ -8,31 +8,31 @@ USTRUCT(BlueprintType)
 struct FTresRaDanceSplineMover {
     GENERATED_BODY()
 public:
-    UPROPERTY(VisibleInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector m_Location;
     
-    UPROPERTY(VisibleInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FQuat m_Rotation;
     
-    UPROPERTY(VisibleInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bSelect;
     
-    UPROPERTY(VisibleInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bMoveing;
     
-    UPROPERTY(VisibleInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fNowLength;
     
-    UPROPERTY(VisibleInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fSpeed;
     
-    UPROPERTY(VisibleInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fLineSpeed;
     
-    UPROPERTY(VisibleInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fCurrentDistance;
     
-    UPROPERTY(VisibleInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bIsReverse;
     
     TRESGAME_API FTresRaDanceSplineMover();

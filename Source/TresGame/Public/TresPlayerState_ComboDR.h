@@ -3,7 +3,7 @@
 #include "TresPlayerState_Attack.h"
 #include "TresPlayerState_ComboDR.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_ComboDR : public UTresPlayerState_Attack {
     GENERATED_BODY()
 public:

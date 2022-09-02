@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FTresRapunzelDanceMission {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<EDancePerformType> ActionList;
     
     TRESGAME_API FTresRapunzelDanceMission();

@@ -2,16 +2,16 @@
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
 #include "TresGumiShipActorCompoBase.h"
-#include "UObject/NoExportTypes.h"
 #include "Engine/EngineTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "TresGumiShipEffectSetComponent.generated.h"
 
-class UParticleSystemComponent;
 class UParticleSystem;
+class UParticleSystemComponent;
 class USceneComponent;
 class AActor;
 
-UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTresGumiShipEffectSetComponent : public UTresGumiShipActorCompoBase {
     GENERATED_BODY()
 public:
@@ -19,7 +19,7 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UParticleSystem*> m_ParticleSystems;
     
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     TArray<UParticleSystemComponent*> m_ParticleSystemComponents;
     
 public:
@@ -42,7 +42,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void LoopEndEffect(bool bImmediatelyRemove);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsEndFromGroup(int32 dGroupID) const;
     
 };

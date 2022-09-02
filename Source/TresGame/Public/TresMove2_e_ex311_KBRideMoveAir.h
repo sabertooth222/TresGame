@@ -3,14 +3,14 @@
 #include "TresLocomotionDefinitionAirCodeDriven.h"
 #include "TresMove2_e_ex311_KBRideMoveAir.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresMove2_e_ex311_KBRideMoveAir : public UTresLocomotionDefinitionAirCodeDriven {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_RotationSpeed;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_MoveSpeed;
     
     UTresMove2_e_ex311_KBRideMoveAir();

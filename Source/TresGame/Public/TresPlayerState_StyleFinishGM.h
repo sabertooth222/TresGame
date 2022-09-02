@@ -5,12 +5,12 @@
 
 class ATresStylePawnGMGate;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_StyleFinishGM : public UTresPlayerState_StyleFinish {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresStylePawnGMGate* m_pGate;
     
 public:

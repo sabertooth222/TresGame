@@ -3,7 +3,7 @@
 #include "TresActionDefinitionBase.h"
 #include "TresAction5_e_ex353_FastMoveWarpForAerialCombo.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAction5_e_ex353_FastMoveWarpForAerialCombo : public UTresActionDefinitionBase {
     GENERATED_BODY()
 public:

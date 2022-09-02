@@ -3,15 +3,15 @@
 #include "TresEnemyPawnBase.h"
 #include "AITestHumanEnemyPawn.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class AAITestHumanEnemyPawn : public ATresEnemyPawnBase {
     GENERATED_BODY()
 public:
     AAITestHumanEnemyPawn();
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void DebugSwitchBT(FName InName);
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void DebugSetDefaultBT();
     
 };

@@ -4,17 +4,17 @@
 #include "ETresDlcChallengeCode.h"
 #include "TresCodeMenuChallengeData.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresCodeMenuChallengeData : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresDlcChallengeCode m_Code;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString m_NameId;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString m_DetailId;
     
     TRESGAME_API FTresCodeMenuChallengeData();

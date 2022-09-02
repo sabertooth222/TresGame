@@ -3,18 +3,18 @@
 #include "TresASProxyTresControlsListItem.h"
 #include "TresUIP_SaveLoadListItem.generated.h"
 
-class UTresUIP_SaveLoadSaveDataDisplayInfo;
 class UGFxObject;
+class UTresUIP_SaveLoadSaveDataDisplayInfo;
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class UTresUIP_SaveLoadListItem : public UTresASProxyTresControlsListItem {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UGFxObject* m_OrderNumber;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresUIP_SaveLoadSaveDataDisplayInfo* m_DisplayInfo;
     
 public:

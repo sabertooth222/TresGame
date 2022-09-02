@@ -8,21 +8,21 @@
 class UParticleSystem;
 class ATresProjectileBase;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresProjectile_e_ca901_DarkVortex : public ATresProjectileSkeletalMeshBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresProjectileBase> m_TentacleShootUpProjectileAsset;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_EffectAsset;
     
 public:
     ATresProjectile_e_ca901_DarkVortex();
 protected:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void HandleOnImpact(const FHitResult& HitResult);
     
 };

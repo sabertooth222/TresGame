@@ -8,13 +8,13 @@ class UTresNotifyEventToBlueprint : public UObject {
     GENERATED_BODY()
 public:
     UTresNotifyEventToBlueprint();
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnPreLoadMap();
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnPostLoadMap();
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnPlayPostcardFieldVoice();
     
 };

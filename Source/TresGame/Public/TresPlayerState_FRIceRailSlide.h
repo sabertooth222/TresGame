@@ -3,18 +3,18 @@
 #include "TresCharState_FRIceRailSlide.h"
 #include "TresPlayerState_FRIceRailSlide.generated.h"
 
-class USQEX_SplineComponent;
 class ASQEX_SplineActor;
+class USQEX_SplineComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_FRIceRailSlide : public UTresCharState_FRIceRailSlide {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ASQEX_SplineActor* m_SplineActor;
     
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USQEX_SplineComponent* m_SplineComponent;
     
 public:

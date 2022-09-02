@@ -10,10 +10,10 @@ USTRUCT(BlueprintType)
 struct FTresEquipmentAccompanyPawnAssetUnit {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresCommandKind> m_Command;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresAccompanyPawnBase> m_AssetData;
     
     TRESGAME_API FTresEquipmentAccompanyPawnAssetUnit();

@@ -3,7 +3,7 @@
 #include "EnvironmentQuery/EnvQueryContext.h"
 #include "TresNpcEnvQueryContext_CurrentFreeWalkArea.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UTresNpcEnvQueryContext_CurrentFreeWalkArea : public UEnvQueryContext {
     GENERATED_BODY()
 public:

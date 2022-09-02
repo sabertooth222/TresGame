@@ -3,7 +3,7 @@
 #include "Matinee/InterpTrackInstVectorProp.h"
 #include "TresInterpTrackInstVectorProp.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API UTresInterpTrackInstVectorProp : public UInterpTrackInstVectorProp {
     GENERATED_BODY()
 public:

@@ -6,16 +6,16 @@
 class UTresUIDataAssetCockpit;
 class UTresCockpit;
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class ATresHUD : public ATresHUDBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresUIDataAssetCockpit* m_CockpitData;
     
 public:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresCockpit* TresCockpit;
     
     ATresHUD();

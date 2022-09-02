@@ -1,58 +1,58 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SaveInfo_e_ex082.h"
-#include "TresEnemyPawnBase.h"
 #include "TresEnemyEx082_SnowEffectParam.h"
+#include "TresEnemyPawnBase.h"
+#include "SaveInfo_e_ex082.h"
 #include "TresEnemyPawn_e_ex082.generated.h"
 
 class UParticleSystem;
 class UEnvQuery;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemyPawn_e_ex082 : public ATresEnemyPawnBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_LandSnowEffect;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_LandSnowEffectBoneName;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     FTresEnemyEx082_SnowEffectParam m_SnowEffectParam[2];
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_SnowEffectHitCheckSize;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UEnvQuery* m_ModeChangeEnvQuery;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 m_bDisableAppearState: 1;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 m_bEnableMissionLookAt: 1;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 m_bEnableTiltBody: 1;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UClass* m_MissionManagerClass;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_MissionAttackCollisionGroupName;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_MissionAttackDataIDName;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_MissionAttackIntervalTime;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_MissionInitSpeed;
     
-    UPROPERTY(SaveGame)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
     FSaveInfo_e_ex082 m_SaveInfo;
     
 public:
@@ -63,28 +63,28 @@ public:
     UFUNCTION(BlueprintCallable)
     void MissionStart();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsStartModeChange() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsLandMode() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsFlyMode() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsEnableMissionLookAt() const;
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool IsAllRegionBreaked() const;
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void DebugSetNumUpthrust(int32 Num);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void DebugSetNumRush(int32 Num);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void DebugSetMissionDrawDisplay(int32 bEnable);
     
 };

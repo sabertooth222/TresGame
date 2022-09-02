@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FTresGumiShipBetweenSpeedEvent : public FTresGumiShipDirectEventBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fBottomSpeed;
     
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fTopSpeed;
     
     TRESGAME_API FTresGumiShipBetweenSpeedEvent();

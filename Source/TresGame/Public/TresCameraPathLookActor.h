@@ -3,7 +3,7 @@
 #include "TresCameraPathLocationActor.h"
 #include "TresCameraPathLookActor.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresCameraPathLookActor : public ATresCameraPathLocationActor {
     GENERATED_BODY()
 public:

@@ -4,17 +4,17 @@
 #include "BehaviorTree/BehaviorTreeTypes.h"
 #include "TresBTTask_e_ex044_SetHeightLimit.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTTask_e_ex044_SetHeightLimit : public UBTTask_BlueprintBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlackboardKeySelector m_HeightLimitKey;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fMaxHeight;
     
-    UPROPERTY(AdvancedDisplay, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fPoleTurnRadius;
     
     UTresBTTask_e_ex044_SetHeightLimit();

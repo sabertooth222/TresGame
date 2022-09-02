@@ -3,24 +3,24 @@
 #include "TresCameraDebug.h"
 #include "TresCameraDebugOrthoTopView.generated.h"
 
-UCLASS(Config=TresCameraDebugOrthoTopViewConfig)
+UCLASS(Blueprintable, Config=TresCameraDebugOrthoTopViewConfig)
 class ATresCameraDebugOrthoTopView : public ATresCameraDebug {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_OrthoWidth;
     
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_OrthoYaw;
     
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_OrthoMode;
     
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_OrthoTall;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_OrthoWidthIncrement;
     
 public:

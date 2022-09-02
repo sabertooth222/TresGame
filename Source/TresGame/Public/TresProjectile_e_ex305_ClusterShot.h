@@ -6,14 +6,14 @@
 class UParticleSystem;
 class ATresProjectile_e_ex305_ClusterShotExplosion;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresProjectile_e_ex305_ClusterShot : public ATresProjectileBase {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresProjectile_e_ex305_ClusterShotExplosion* m_ClusterShotExplosion;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_pro_ScrollHitEffData;
     
     ATresProjectile_e_ex305_ClusterShot();

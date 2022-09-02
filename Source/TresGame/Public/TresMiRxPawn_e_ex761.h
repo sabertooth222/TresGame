@@ -5,7 +5,7 @@
 
 class UTresGumiShipEffectSetComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresMiRxPawn_e_ex761 : public ATresMiRxEnemyPawnBase {
     GENERATED_BODY()
 public:
@@ -40,13 +40,13 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fLaserOmenWaitTime;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresGumiShipEffectSetComponent* m_pEffectSet;
     
 public:
     ATresMiRxPawn_e_ex761();
 private:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnLaserShutDown();
     
 };

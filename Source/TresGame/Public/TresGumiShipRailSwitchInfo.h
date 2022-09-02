@@ -9,10 +9,10 @@ struct FTresGumiShipRailSwitchInfo {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TWeakObjectPtr<ATresRailSlideActor> m_pDefaultOnRail;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TWeakObjectPtr<ATresRailSlideActor> m_pDefaultOffRail;
     
 public:

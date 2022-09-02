@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "TresComNpcEntityCountInfo.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresComNpcEntityCountInfo {
     GENERATED_BODY()
 public:

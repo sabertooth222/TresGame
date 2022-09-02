@@ -4,5 +4,5 @@
 
 class AActor;
 
-UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FTresGimmickHitCountComponentOnTresDestroyedGimmickSignature, AActor*, DamageCauser);
+UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FTresGimmickHitCountComponentOnTresDestroyedGimmickSignature, AActor*, DamageCauser);
 

@@ -8,19 +8,19 @@
 class UParticleSystem;
 class UParticleSystemComponent;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresProjectile_e_ex110_Dice : public ATresProjectileSkeletalMeshBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* m_DiceEff;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_DiceEffData;
     
     ATresProjectile_e_ex110_Dice();
 protected:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnProjectileBounce(const FHitResult& ImpactResult, const FVector& ImpactVelocity);
     
 };

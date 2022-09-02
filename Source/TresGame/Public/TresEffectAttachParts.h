@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FTresEffectAttachParts {
     GENERATED_BODY()
 public:
-    UPROPERTY(Export, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     USkeletalMeshComponent* m_pSkeletalMeshComponent;
     
     TRESGAME_API FTresEffectAttachParts();

@@ -4,11 +4,11 @@
 #include "TresRemunerationData.h"
 #include "TresRemunerationAsset.generated.h"
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class TRESGAME_API UTresRemunerationAsset : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresRemunerationData> DataArray;
     
     UTresRemunerationAsset();

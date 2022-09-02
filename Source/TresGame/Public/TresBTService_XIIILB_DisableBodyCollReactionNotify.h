@@ -3,7 +3,7 @@
 #include "BehaviorTree/BTService.h"
 #include "TresBTService_XIIILB_DisableBodyCollReactionNotify.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTService_XIIILB_DisableBodyCollReactionNotify : public UBTService {
     GENERATED_BODY()
 public:

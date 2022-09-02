@@ -3,7 +3,7 @@
 #include "BehaviorTree/BTService.h"
 #include "TresBTService_XIIILE_DisableNotifyEndChangeBodyCollReaction.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTService_XIIILE_DisableNotifyEndChangeBodyCollReaction : public UBTService {
     GENERATED_BODY()
 public:

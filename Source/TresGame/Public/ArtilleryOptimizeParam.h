@@ -2,14 +2,14 @@
 #include "CoreMinimal.h"
 #include "ArtilleryOptimizeParam.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FArtilleryOptimizeParam {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_OffsetIndex;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_AttackName;
     
     TRESGAME_API FArtilleryOptimizeParam();

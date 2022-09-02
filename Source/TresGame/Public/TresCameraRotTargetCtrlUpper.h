@@ -7,7 +7,7 @@
 class ATresCameraRotTargetCtrlUpper;
 class UObject;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresCameraRotTargetCtrlUpper : public ATresCameraRotTargetCtrl {
     GENERATED_BODY()
 public:

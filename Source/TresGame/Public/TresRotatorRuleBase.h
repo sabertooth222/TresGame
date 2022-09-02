@@ -10,7 +10,7 @@ class UTresRotatorRuleBase : public UObject {
     GENERATED_BODY()
 public:
     UTresRotatorRuleBase();
-    UFUNCTION(BlueprintImplementableEvent, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, BlueprintPure)
     FRotator BPIE_ConvertRotator(const FTransform& ParentTransform, const FTransform& targetTransform, const FRotator& OffsetRotation);
     
 };

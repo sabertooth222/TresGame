@@ -3,7 +3,7 @@
 #include "UObject/Object.h"
 #include "TresGameLib.generated.h"
 
-UCLASS(Abstract, NotPlaceable)
+UCLASS(Abstract, Blueprintable, NotPlaceable)
 class TRESGAME_API UTresGameLib : public UObject {
     GENERATED_BODY()
 public:

@@ -3,7 +3,7 @@
 #include "TresCharState_OneAction.h"
 #include "TresPlayerState_OneAction.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_OneAction : public UTresCharState_OneAction {
     GENERATED_BODY()
 public:

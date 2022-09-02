@@ -3,17 +3,17 @@
 #include "BehaviorTree/BTService.h"
 #include "TresBTService_e_ex773_ExecNextWaveEclipse13.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTService_e_ex773_ExecNextWaveEclipse13 : public UBTService {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ReserveTime;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bStartNotify;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bNotifyJustInCase;
     
     UTresBTService_e_ex773_ExecNextWaveEclipse13();

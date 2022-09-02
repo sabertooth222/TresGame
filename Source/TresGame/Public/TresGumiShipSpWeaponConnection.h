@@ -8,7 +8,7 @@
 class UTresGumiShipEffectSetComponent;
 class UTresGumiShipWeaponSequence;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresGumiShipSpWeaponConnection : public ATresGumiShipActorBase {
     GENERATED_BODY()
 public:
@@ -32,11 +32,11 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bWaitForAppearEffect;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresGumiShipEffectSetComponent* m_pEffectSet;
     
 protected:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresGumiShipWeaponSequence* m_pWeaponSequence;
     
 public:

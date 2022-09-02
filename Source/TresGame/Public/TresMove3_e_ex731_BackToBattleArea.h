@@ -4,14 +4,14 @@
 #include "ETresBodyCollReactionType.h"
 #include "TresMove3_e_ex731_BackToBattleArea.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresMove3_e_ex731_BackToBattleArea : public UTresLocomotionDefinitionFlyCodeDriven {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bInvincible;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresBodyCollReactionType m_BodyReactionType;
     
     UTresMove3_e_ex731_BackToBattleArea();

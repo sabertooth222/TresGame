@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FHiddenMickeyBoundingAreaCircles {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector2D Offset;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Size;
     
     TRESGAME_API FHiddenMickeyBoundingAreaCircles();

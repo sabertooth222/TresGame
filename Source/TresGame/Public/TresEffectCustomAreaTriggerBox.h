@@ -4,7 +4,7 @@
 #include "ETresEffectCustomAreaCode.h"
 #include "TresEffectCustomAreaTriggerBox.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEffectCustomAreaTriggerBox : public ATresTriggerBox {
     GENERATED_BODY()
 public:

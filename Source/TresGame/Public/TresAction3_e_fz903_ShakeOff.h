@@ -3,12 +3,12 @@
 #include "TresActionDefinitionBase.h"
 #include "TresAction3_e_fz903_ShakeOff.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAction3_e_fz903_ShakeOff : public UTresActionDefinitionBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_ShakeOffLoopTime;
     
 public:

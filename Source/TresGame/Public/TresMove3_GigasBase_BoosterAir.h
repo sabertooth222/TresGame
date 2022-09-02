@@ -3,14 +3,14 @@
 #include "TresLocomotionDefinitionAirCodeDriven.h"
 #include "TresMove3_GigasBase_BoosterAir.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresMove3_GigasBase_BoosterAir : public UTresLocomotionDefinitionAirCodeDriven {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_OverrideAccelMaxSpeed;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_OverrideAccelAcceleration;
     
     UTresMove3_GigasBase_BoosterAir();

@@ -8,27 +8,27 @@
 class UParticleSystemComponent;
 class UParticleSystem;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresGimmick_e_ex711_PhysicsActor : public AStaticMeshActor {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* m_DestinationEffect;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresGimmick_e_ex711_PhysicsActorGimmickKind> m_pro_GimmickKind;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresGimmick_e_ex711_PhysicsActorSizeKind> m_pro_SizeKind;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_pro_DestinationEffectData;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_pro_DisableDestinationEffectDist;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_pro_DestinationEffectScale;
     
 public:

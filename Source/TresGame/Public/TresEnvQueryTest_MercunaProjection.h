@@ -4,17 +4,17 @@
 #include "DataProviders/AIDataProvider.h"
 #include "TresEnvQueryTest_MercunaProjection.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresEnvQueryTest_MercunaProjection : public UEnvQueryTest {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAIDataProviderFloatValue DownHeight;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAIDataProviderFloatValue UpHeight;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAIDataProviderFloatValue OffsetZ;
     
     UTresEnvQueryTest_MercunaProjection();

@@ -6,11 +6,11 @@
 #include "TresMapMarkerInterface.h"
 #include "TresTriggerBox.generated.h"
 
-class UNavArea;
 class UShapeComponent;
+class UNavArea;
 class UTresStaticMeshComponent;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresTriggerBox : public ATriggerBox, public ITresNotifyInterface, public ITresMapMarkerInterface {
     GENERATED_BODY()
 public:

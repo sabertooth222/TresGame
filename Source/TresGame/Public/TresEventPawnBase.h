@@ -4,13 +4,13 @@
 #include "ETresChrUniqueID.h"
 #include "TresEventPawnBase.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class TRESGAME_API ATresEventPawnBase : public ATresCharPawnBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly)
-    uint32 m_bAutoChangeSkeletonUpdate: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bAutoChangeSkeletonUpdate: 1;
     
 public:
     ATresEventPawnBase();

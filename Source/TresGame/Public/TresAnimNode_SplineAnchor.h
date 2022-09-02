@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "Animation/AnimNodeBase.h"
+#include "Animation/AnimNodeBase.h"
 #include "ETresSplineAnchorInterpType.h"
-#include "Animation/AnimNodeBase.h"
-#include "Animation/AnimNodeBase.h"
 #include "Animation/InputScaleBias.h"
-#include "BoneContainer.h"
 #include "UObject/NoExportTypes.h"
+#include "BoneContainer.h"
 #include "UObject/NoExportTypes.h"
 #include "TresAnimNode_SplineAnchor.generated.h"
 
@@ -13,31 +13,31 @@ USTRUCT(BlueprintType)
 struct TRESGAME_API FTresAnimNode_SplineAnchor : public FAnimNode_Base {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FPoseLink SourcePose;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Alpha;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FInputScaleBias AlphaScaleBias;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_IsAnchorMode;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector m_TargetLocation;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     FBoneReference m_EffectNode;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     FBoneReference m_BaseNode;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresSplineAnchorInterpType m_InterpType;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FInterpCurveVector m_InterpLocationInfo;
     
     FTresAnimNode_SplineAnchor();

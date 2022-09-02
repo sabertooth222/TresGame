@@ -4,15 +4,15 @@
 #include "TresAIController.h"
 #include "TresComNpcController.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresComNpcController : public ATresAIController {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 m_bNoPawnDestroy: 1;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAIRequestID m_MoveRequestID;
     
 public:

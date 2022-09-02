@@ -3,11 +3,11 @@
 #include "BehaviorTree/BTTaskNode.h"
 #include "TresBTTask_ex301_CallFunction.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTTask_ex301_CallFunction : public UBTTaskNode {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName PropertyName;
     
     UTresBTTask_ex301_CallFunction();

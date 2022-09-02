@@ -3,7 +3,7 @@
 #include "TresAttackDefinitionMelee.h"
 #include "TresAttack4_e_ex107_Melee.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAttack4_e_ex107_Melee : public UTresAttackDefinitionMelee {
     GENERATED_BODY()
 public:

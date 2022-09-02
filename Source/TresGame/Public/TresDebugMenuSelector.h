@@ -4,7 +4,7 @@
 #include "TresDebugMenuSelectInput.h"
 #include "TresDebugMenuSelector.generated.h"
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class UTresDebugMenuSelector : public UTresDebugMenuText, public ITresDebugMenuSelectInput {
     GENERATED_BODY()
 public:

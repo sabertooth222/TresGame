@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct TRESGAME_API FTresMapSetObjData {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName Name;
     
     UPROPERTY(EditAnywhere)

@@ -5,10 +5,10 @@
 #include "TresCameraForceLockon.generated.h"
 
 class ATresCameraForceLockon;
-class UObject;
 class AActor;
+class UObject;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresCameraForceLockon : public ATresCameraNormalLoc {
     GENERATED_BODY()
 public:

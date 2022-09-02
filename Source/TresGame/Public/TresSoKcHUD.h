@@ -3,7 +3,7 @@
 #include "TresHUD.h"
 #include "TresSoKcHUD.generated.h"
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class ATresSoKcHUD : public ATresHUD {
     GENERATED_BODY()
 public:

@@ -5,21 +5,21 @@
 #include "TresAttractionFlowDrawingEntry.h"
 #include "TresAttractionFlowDrawingVolume.generated.h"
 
-class AActor;
 class UPrimitiveComponent;
+class AActor;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresAttractionFlowDrawingVolume : public ATresVolume, public ITresAttractionFlowDrawingInterface {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresAttractionFlowDrawingEntry> m_DrawingTable;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_Enable;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_ForceDisplay;
     
 public:

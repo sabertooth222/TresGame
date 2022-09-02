@@ -3,7 +3,7 @@
 #include "Matinee/InterpTrackVectorBase.h"
 #include "TresInterpTrackBlendSpaceControl.generated.h"
 
-UCLASS(CollapseCategories)
+UCLASS(Blueprintable, CollapseCategories)
 class TRESGAME_API UTresInterpTrackBlendSpaceControl : public UInterpTrackVectorBase {
     GENERATED_BODY()
 public:

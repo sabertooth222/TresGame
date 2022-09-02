@@ -1,69 +1,69 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TresGimmickSkeletalBase.h"
 #include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
-#include "EDanceSpecialPerformType.h"
 #include "ETresCommandKind.h"
+#include "TresGimmickSkeletalBase.h"
+#include "EDanceSpecialPerformType.h"
+#include "UObject/NoExportTypes.h"
 #include "TresRaSpecialPerformActor.generated.h"
 
-class ATresRaSpecialPerformActor;
-class UTresReactorComponent;
-class UTresStaticMeshComponent;
 class ATresRaFestivalDanceManager;
+class ATresRaSpecialPerformActor;
+class UTresStaticMeshComponent;
+class UTresReactorComponent;
 class ATresCharPawnBase;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresRaSpecialPerformActor : public ATresGimmickSkeletalBase {
     GENERATED_BODY()
 public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FTresOnSpecialPerform, FName, InActorName, ATresRaSpecialPerformActor*, inActor);
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresStaticMeshComponent* MyStaticMesh;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresOnSpecialPerform OnSpecialPerformStart;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresOnSpecialPerform OnSpecialPerformEnd;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 TensionUpLevel;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ReactionRange;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ReactionTime;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ClapHandsDistance;
     
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName PerformActorName;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EDanceSpecialPerformType PerformType;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName Player_PerformMotion;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName Gimmick_PerformMotion;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector PlayerRelativeLocation;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRotator PlayerRelativeRotation;
     
 private:
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     TWeakObjectPtr<ATresRaFestivalDanceManager> m_pDanceMng;
     
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresReactorComponent* m_pReactor;
     
 public:
@@ -73,10 +73,10 @@ private:
     void OnReactorCommand(ATresCharPawnBase* CommandCauser, TEnumAsByte<ETresCommandKind> CommandID, UTresReactorComponent* ReactorComponent);
     
 public:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnPlayerPerformStart();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnPlayerPerformEnd();
     
 };

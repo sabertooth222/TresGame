@@ -4,11 +4,11 @@
 #include "TresAttackDefinitionBase.h"
 #include "TresAttack_e_ex351_Base.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAttack_e_ex351_Base : public UTresAttackDefinitionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresBodyCollReactionType m_BodyCollReactionType;
     
     UTresAttack_e_ex351_Base();

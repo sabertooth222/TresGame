@@ -1,36 +1,36 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TresGimmickStaticBase.h"
 #include "TresGimmickBlastFanChangeActiveFanSignatureDelegate.h"
+#include "TresGimmickStaticBase.h"
 #include "TresGimmickBlastFan.generated.h"
 
 class UCurveFloat;
 class USoundBase;
 
-UCLASS(Config=Game)
+UCLASS(Blueprintable, Config=Game)
 class ATresGimmickBlastFan : public ATresGimmickStaticBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresGimmickBlastFanChangeActiveFanSignature ChangeActiveFan;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UCurveFloat* RotCurve;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ActiveRotationSpeed;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool EnableFanCollision;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundBase* PlaySound;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 FanModeMax;
     
     ATresGimmickBlastFan();
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void UpdateFanMode(int32 FanMode);
     
     UFUNCTION(BlueprintCallable)
@@ -39,7 +39,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void NextFanMode(float WaitTime);
     
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void ChangeRotation(float SpeedRate);
     
 };

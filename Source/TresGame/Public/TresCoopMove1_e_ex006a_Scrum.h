@@ -3,15 +3,15 @@
 #include "TresLocomotionDefinitionLandCodeDriven.h"
 #include "TresCoopMove1_e_ex006a_Scrum.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresCoopMove1_e_ex006a_Scrum : public UTresLocomotionDefinitionLandCodeDriven {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_FormationMaxSpeed;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_FormationAcceleration;
     
 public:

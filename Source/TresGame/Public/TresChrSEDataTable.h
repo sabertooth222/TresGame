@@ -5,11 +5,11 @@
 
 class USoundBase;
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresChrSEDataTable : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundBase* m_Asset;
     
     TRESGAME_API FTresChrSEDataTable();

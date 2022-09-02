@@ -3,7 +3,7 @@
 #include "TresEnemyShipPawnBase.h"
 #include "TresEnemyPawn_e_ca401.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemyPawn_e_ca401 : public ATresEnemyShipPawnBase {
     GENERATED_BODY()
 public:

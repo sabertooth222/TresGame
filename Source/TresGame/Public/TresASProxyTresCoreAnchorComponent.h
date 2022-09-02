@@ -3,7 +3,7 @@
 #include "TresASProxy.h"
 #include "TresASProxyTresCoreAnchorComponent.generated.h"
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class UTresASProxyTresCoreAnchorComponent : public UTresASProxy {
     GENERATED_BODY()
 public:

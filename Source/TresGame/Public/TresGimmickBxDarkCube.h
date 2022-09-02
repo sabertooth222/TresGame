@@ -7,14 +7,14 @@
 
 class UTresSpawnActorManagerComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresGimmickBxDarkCube : public ATresCharPawnBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_CheckSpawnPoint;
     
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresSpawnActorManagerComponent* SpawnActorManager;
     
     ATresGimmickBxDarkCube();
@@ -27,13 +27,13 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetAttackTeamNo(int32 InTeamNo);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void NotifyChangeGimmickPause(bool bPause);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool DarkcubeCanbeMovable() const;
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ChangeGimmickPause(bool bPause);
     
     UFUNCTION(BlueprintCallable)

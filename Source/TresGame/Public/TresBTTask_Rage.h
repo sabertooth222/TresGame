@@ -6,7 +6,7 @@
 #include "ETresRageSource.h"
 #include "TresBTTask_Rage.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTTask_Rage : public UBTTaskNode {
     GENERATED_BODY()
 public:
@@ -16,16 +16,16 @@ public:
     UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresRageSource::Type> m_ValueType;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_Value;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlackboardKeySelector m_BlackboardValue;
     
-    UPROPERTY(VisibleDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 m_bUseLiteral: 1;
     
-    UPROPERTY(VisibleDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 m_bUseBlackboard: 1;
     
     UTresBTTask_Rage();

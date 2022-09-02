@@ -17,7 +17,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     bool IsDecoratorFunctionNative(AActor* SelfActor, AActor* TargetActor, FVector TargetDestination, float valueA, float valueB);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     bool IsDecoratorFunction(AActor* SelfActor, AActor* TargetActor, FVector TargetDestination, float valueA, float valueB);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)

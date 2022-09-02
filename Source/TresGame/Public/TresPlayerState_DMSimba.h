@@ -6,14 +6,14 @@
 class ATresDisneyMagicPawnSimba;
 class ATresCameraDMSimba;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_DMSimba : public UTresCharState_DMSimba {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresDisneyMagicPawnSimba* m_pObj;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresCameraDMSimba* m_Camera;
     
     UTresPlayerState_DMSimba();

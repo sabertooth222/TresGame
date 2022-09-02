@@ -5,16 +5,16 @@
 
 class UTresFoodstuffRootComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresFoodstuffPlacementActor : public AActor {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresFoodstuffRootComponent* MyRootComponent;
     
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_KeyName;
     
     ATresFoodstuffPlacementActor();

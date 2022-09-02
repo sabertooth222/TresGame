@@ -5,11 +5,11 @@
 
 class ATresCameraRailSlide;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_RailSlide : public UTresCharState_RailSlide {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresCameraRailSlide* m_pCamera;
     
     UTresPlayerState_RailSlide();

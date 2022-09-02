@@ -8,12 +8,12 @@
 
 class UTresInfluenceEmitterComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresInfluenceEmitterActor : public AActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresInfluenceEmitterComponent* m_InfluenceEmitterComponent;
     
 public:

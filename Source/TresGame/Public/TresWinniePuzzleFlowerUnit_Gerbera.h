@@ -3,7 +3,7 @@
 #include "TresWinniePuzzleFlowerUnit.h"
 #include "TresWinniePuzzleFlowerUnit_Gerbera.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresWinniePuzzleFlowerUnit_Gerbera : public ATresWinniePuzzleFlowerUnit {
     GENERATED_BODY()
 public:

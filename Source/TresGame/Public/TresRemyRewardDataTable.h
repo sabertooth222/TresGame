@@ -1,39 +1,39 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "ETresItemDefFoodstuff.h"
 #include "Engine/DataTable.h"
 #include "RemyRecipeType.h"
 #include "ETresItemDefFood.h"
 #include "ETresItemDefAccessory.h"
 #include "ETresItemDefBattleItem.h"
-#include "ETresItemDefFoodstuff.h"
 #include "TresRemyRewardDataTable.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresRemyRewardDataTable : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     int16 CookingSuccessPoints;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     int16 CookingGreatSuccessPoints;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresItemDefAccessory Milestone1Reward;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresItemDefBattleItem Milestone2Reward;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     int16 CircumductionNum;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresItemDefFoodstuff CircumductionReward;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresItemDefFood CookingFailedReward;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     RemyRecipeType SpecialFoodStuffRecipeType;
     
     TRESGAME_API FTresRemyRewardDataTable();

@@ -4,11 +4,11 @@
 #include "WinniePlayerAnimationType.h"
 #include "TresWinniePlayerAnimationData.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresWinniePlayerAnimationData : public FTresWinnieAnimationData {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     WinniePlayerAnimationType AnimationType;
     
     TRESGAME_API FTresWinniePlayerAnimationData();

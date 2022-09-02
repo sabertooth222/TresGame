@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "TresWinniePuzzleCountInfo.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresWinniePuzzleCountInfo {
     GENERATED_BODY()
 public:

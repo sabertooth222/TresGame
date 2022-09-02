@@ -3,7 +3,7 @@
 #include "TresGimmickStaticBase.h"
 #include "TresTsGigasJump.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresTsGigasJump : public ATresGimmickStaticBase {
     GENERATED_BODY()
 public:

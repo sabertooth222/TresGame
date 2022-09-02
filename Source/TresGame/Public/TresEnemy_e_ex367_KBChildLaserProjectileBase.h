@@ -5,17 +5,17 @@
 #include "UObject/NoExportTypes.h"
 #include "TresEnemy_e_ex367_KBChildLaserProjectileBase.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemy_e_ex367_KBChildLaserProjectileBase : public ATresProjectileBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector m_RotSpeed;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresProjectileBase> m_HitBulletData;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_HitBulletTime;
     
     ATresEnemy_e_ex367_KBChildLaserProjectileBase();
