@@ -37,7 +37,7 @@ public:
     UParticleSystem* m_DamageSmokeParticle;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     TArray<UParticleSystemComponent*> m_DamageSmokeParticleComponentArray;
     
 public:

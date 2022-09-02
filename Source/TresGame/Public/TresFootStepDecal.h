@@ -10,7 +10,7 @@ UCLASS(Blueprintable)
 class ATresFootStepDecal : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UDecalComponent* m_Decal;
     
     ATresFootStepDecal();

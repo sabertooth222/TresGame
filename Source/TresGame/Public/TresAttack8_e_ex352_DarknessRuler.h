@@ -51,7 +51,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresHomingDarkLaserSpawnParams_e_ex352 m_HomingDarkLaserSpawnParam;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* m_ExplosionRangeEffectCmp;
     
     UTresAttack8_e_ex352_DarknessRuler();

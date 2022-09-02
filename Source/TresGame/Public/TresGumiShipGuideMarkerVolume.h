@@ -15,7 +15,7 @@ public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE(FTresGumiShipGuideVolume);
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USphereComponent* m_pEntryAreaCollision;
     
 public:

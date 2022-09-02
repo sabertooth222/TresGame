@@ -14,7 +14,7 @@ public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FPControllerInput, const FTresGMInputResult&, rResult, const ATresGumiShipPlayerControllerBase*, pController);
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTresGumiShipPlayerInputWorker* m_pWorker;
     
 public:

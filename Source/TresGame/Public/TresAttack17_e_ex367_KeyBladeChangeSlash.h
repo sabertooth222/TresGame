@@ -48,7 +48,7 @@ public:
     FRootMotionScaleDataParam_e_ex367 m_RootMotion4ScaleParam;
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* m_ChainParticle;
     
 public:

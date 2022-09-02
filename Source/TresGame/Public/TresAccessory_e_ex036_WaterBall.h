@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FTresAccessory_e_ex036_WaterBall {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* m_WaterBallEff;
     
     TRESGAME_API FTresAccessory_e_ex036_WaterBall();

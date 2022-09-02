@@ -14,7 +14,7 @@ class ATresBattleAreaVolume_e_ex761 : public ATresVolume {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USceneComponent* MyRotationCenterComponent;
     
     UPROPERTY(EditAnywhere)

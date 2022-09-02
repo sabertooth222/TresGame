@@ -431,7 +431,7 @@ public:
     FTresOnWaveClearPerformEnd OnWaveClearPerformEnd;
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTresRaFestivalDanceSplineComponent* MySplineMover;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -461,10 +461,10 @@ private:
     UPROPERTY(EditAnywhere)
     TWeakObjectPtr<ATresRaDanceNpc> m_pPartnerNpc;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UUserWidget* m_DanceUI;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UUserWidget* m_SpecialMoveUI;
     
     UPROPERTY(EditAnywhere)

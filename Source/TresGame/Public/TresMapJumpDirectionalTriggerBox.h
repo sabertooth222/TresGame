@@ -31,7 +31,7 @@ protected:
     float m_OverrideMarkerSize;
     
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTresMapMarkerComponent* MapMarkerComponent;
     
     ATresMapJumpDirectionalTriggerBox();

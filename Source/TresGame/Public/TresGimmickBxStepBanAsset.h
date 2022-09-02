@@ -10,7 +10,7 @@ UCLASS(Blueprintable, Config=Game)
 class ATresGimmickBxStepBanAsset : public ATresGimmickActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTresStaticMeshComponent* MyMesh;
     
     ATresGimmickBxStepBanAsset();

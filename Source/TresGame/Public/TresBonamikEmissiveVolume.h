@@ -11,7 +11,7 @@ UCLASS(Blueprintable)
 class TRESGAME_API ATresBonamikEmissiveVolume : public ATresVolume {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     TArray<USkinnedMeshComponent*> m_ReferencedComponets;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

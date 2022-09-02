@@ -9,7 +9,7 @@ UCLASS(Blueprintable)
 class TRESGAME_API UTresInterpTrackInstLightExposure : public UInterpTrackInst {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     TArray<ULightComponentBase*> m_LightComponents;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

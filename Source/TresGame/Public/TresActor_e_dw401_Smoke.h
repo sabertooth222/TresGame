@@ -10,7 +10,7 @@ UCLASS(Blueprintable, HideDropdown)
 class ATresActor_e_dw401_Smoke : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* m_SmokeEff;
     
 protected:

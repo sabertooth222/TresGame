@@ -13,7 +13,7 @@ class ATresGumiShipPawnBase : public APawn, public ITresGumiShipNotifyInterface 
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTresRootComponent* m_pRootComponent;
     
 public:

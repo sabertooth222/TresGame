@@ -9,7 +9,7 @@ USTRUCT(BlueprintType)
 struct TRESGAME_API FTresInterpGroupInstUpdateSettings {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USkeletalMeshComponent* m_SkeletalMeshComponent;
     
     UPROPERTY(EditAnywhere)

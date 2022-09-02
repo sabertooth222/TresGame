@@ -18,7 +18,7 @@ class ATresCollisionManager : public AActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(DuplicateTransient, EditAnywhere, Export, Transient)
+    UPROPERTY(DuplicateTransient, EditAnywhere, Instanced, Transient)
     TMap<TWeakObjectPtr<UTresRootComponent>, UTresGrassBumpAttachObj*> m_DetectGrassBumpMap;
     
     UPROPERTY(DuplicateTransient, EditAnywhere, Export, Transient)

@@ -94,7 +94,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresWeaponBase* m_pWeaponClaymore;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTresClaymoreManager_e_ex306* m_ClaymoreManager;
     
     UPROPERTY(EditAnywhere)

@@ -15,7 +15,7 @@ protected:
     TSubclassOf<UUserWidget> UMGReference;
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UUserWidget* m_pWidget;
     
 public:

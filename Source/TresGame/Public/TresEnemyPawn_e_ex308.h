@@ -23,7 +23,7 @@ private:
     UPROPERTY(EditAnywhere)
     uint32 m_bEnableRevengeVoice2D;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USphereComponent* MyPullCollisionComponent;
     
 public:

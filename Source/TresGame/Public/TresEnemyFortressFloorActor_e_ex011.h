@@ -11,7 +11,7 @@ class ATresEnemyFortressFloorActor_e_ex011 : public AActor, public ITresActorInt
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UBoxComponent* FloorBoxComponent;
     
 public:
