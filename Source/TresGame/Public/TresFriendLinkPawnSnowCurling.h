@@ -600,7 +600,7 @@ public:
     void SetupCamera();
     
     UFUNCTION(BlueprintImplementableEvent)
-    void OnSnowCurlingDamage(TEnumAsByte<EPhysicalSurface> surfType);
+    void OnSnowCurlingDamage(EPhysicalSurface surfType);
     
     UFUNCTION(BlueprintNativeEvent)
     void OnHit(EPhysicalSurface surfType);

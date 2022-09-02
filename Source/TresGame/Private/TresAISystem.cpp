@@ -1,6 +1,6 @@
 #include "TresAISystem.h"
 
-UTresAISystem::UTresAISystem(const FObjectInitializer& ObjectInitializer) : UAISystem(ObjectInitializer) {
+UTresAISystem::UTresAISystem(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_InfluenceMapManager = NULL;
     this->m_StaticEQSItemManager = NULL;
 }

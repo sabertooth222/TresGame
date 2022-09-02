@@ -112,7 +112,7 @@ void ATresCharPawnBase::RequestDirectMove(FVector refVelocity, bool bForceMaxSpe
 void ATresCharPawnBase::OnJumped_Implementation() {
 }
 
-bool ATresCharPawnBase::LaunchCharPawn(float Height, bool bForce, TEnumAsByte<ETresPlayerJumpModes> InJumpMode) {
+bool ATresCharPawnBase::LaunchCharPawn(float Height, bool bForce, ETresPlayerJumpModes InJumpMode) {
     return false;
 }
 

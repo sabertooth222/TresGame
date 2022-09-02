@@ -7,7 +7,7 @@ class ATresCharPawnBase;
 class UTresPlayerStateEvent;
 class UTresUICommandInfoBase;
 
-void ATresPlayerPawnBase::RequestEndCommandKind(TEnumAsByte<ETresCommandKind> inCommand, int32 InParam0) {
+void ATresPlayerPawnBase::RequestEndCommandKind(ETresCommandKind inCommand, int32 InParam0) {
 }
 
 bool ATresPlayerPawnBase::RemotePlayerStateEvent(FName EventName, AActor* inActor) {
