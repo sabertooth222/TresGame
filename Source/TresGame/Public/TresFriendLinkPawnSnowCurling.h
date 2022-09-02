@@ -603,7 +603,7 @@ public:
     void OnSnowCurlingDamage(TEnumAsByte<EPhysicalSurface> surfType);
     
     UFUNCTION(BlueprintNativeEvent)
-    void OnHit(TEnumAsByte<EPhysicalSurface> surfType);
+    void OnHit(EPhysicalSurface surfType);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetShortJumpFloorPitch() const;

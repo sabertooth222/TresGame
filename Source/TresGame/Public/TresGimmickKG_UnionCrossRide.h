@@ -103,7 +103,7 @@ public:
     void CloseHudUx();
     
     UFUNCTION(BlueprintNativeEvent)
-    bool BP_CanbeCommand(TEnumAsByte<ETresCommandKind> inCommand) const;
+    bool BP_CanbeCommand(ETresCommandKind inCommand) const;
     
     UFUNCTION(BlueprintCallable)
     void AddFixedDamage(int32 Damage);
