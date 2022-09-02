@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FEX354_ArtemaWarpShotSequenceInfoSet {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FEX354_ArtemaWarpShotSequenceInfo> m_SequenceInfoArray;
     
     TRESGAME_API FEX354_ArtemaWarpShotSequenceInfoSet();

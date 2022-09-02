@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FEX355_DashClaymoreMap {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresProjectileBase* m_pLastProj;
     
     TRESGAME_API FEX355_DashClaymoreMap();

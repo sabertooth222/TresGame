@@ -6,7 +6,7 @@ USTRUCT(BlueprintType)
 struct FEX359_EffectGroupID {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 ID;
     
     TRESGAME_API FEX359_EffectGroupID();

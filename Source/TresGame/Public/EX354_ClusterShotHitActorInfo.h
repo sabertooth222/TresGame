@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FEX354_ClusterShotHitActorInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AActor* m_HitActor;
     
     TRESGAME_API FEX354_ClusterShotHitActorInfo();

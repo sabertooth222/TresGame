@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FEX354_ArtemaRunShotSequenceInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fYaw;
     
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fHeightOffset;
     
     TRESGAME_API FEX354_ArtemaRunShotSequenceInfo();

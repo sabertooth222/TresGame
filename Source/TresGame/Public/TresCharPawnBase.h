@@ -87,7 +87,7 @@ protected:
     FVector BaseTranslationOffset;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 bPressedJump: 1;
+    uint32 bPressedJump: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float JumpKeyHoldTime;
@@ -119,7 +119,7 @@ protected:
     int32 m_MagicPoint;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
-    uint8 m_bAppearMsgSended: 1;
+    uint32 m_bAppearMsgSended: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MyMpChargeTime;
@@ -135,10 +135,10 @@ protected:
     
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bEnableAttractionFlowHitPoint: 1;
+    uint32 m_bEnableAttractionFlowHitPoint: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bEnableAttractionFlowMarkerProc: 1;
+    uint32 m_bEnableAttractionFlowMarkerProc: 1;
     
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))

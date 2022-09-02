@@ -4,11 +4,11 @@
 
 class AActor;
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FEX354_ArtemaWarpShotModifySet {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AActor* m_Target;
     
     TRESGAME_API FEX354_ArtemaWarpShotModifySet();

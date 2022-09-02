@@ -20,6 +20,6 @@ enum class ETresDlcCheatCode : uint8 {
     PerfectCooking,
     GumiCheat,
     _CodeMax,
-    _Max UMETA(Hidden),
+    _Max = 0x20,
 };
 

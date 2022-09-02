@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FEnemyShipDustEffectData {
     GENERATED_BODY()
 public:
-    UPROPERTY(Export, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* m_Particle;
     
     TRESGAME_API FEnemyShipDustEffectData();

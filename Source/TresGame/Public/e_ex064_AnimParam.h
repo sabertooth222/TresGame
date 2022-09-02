@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct Fe_ex064_AnimParam {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_AnimName;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     FInt32Interval m_NumRange;
     
     TRESGAME_API Fe_ex064_AnimParam();

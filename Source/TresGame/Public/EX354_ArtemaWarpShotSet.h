@@ -3,26 +3,26 @@
 #include "EX354_ArtemaWarpShotInfo.h"
 #include "EX354_ArtemaWarpShotSet.generated.h"
 
-class ATresCharPawnBase;
 class AActor;
+class ATresCharPawnBase;
 
 USTRUCT(BlueprintType)
 struct FEX354_ArtemaWarpShotSet {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FEX354_ArtemaWarpShotInfo> m_ArtemaWarpShotInfoArray;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bSendEventOnEnd;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bIgnoreTargetModify;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresCharPawnBase* m_Owner;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AActor* m_Target;
     
     TRESGAME_API FEX354_ArtemaWarpShotSet();

@@ -10,16 +10,16 @@ USTRUCT(BlueprintType)
 struct FEnemyShipCoreData {
     GENERATED_BODY()
 public:
-    UPROPERTY(Export, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* m_CoreParticleComponent;
     
-    UPROPERTY(Export, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* m_CoreThonParticleComponent;
     
-    UPROPERTY(Export, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UTresLockonTargetComponent* m_CoreLockOnComponent;
     
-    UPROPERTY(Export, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UTresBodyCollPrimitive* m_CoreBodyCollPrim;
     
     TRESGAME_API FEnemyShipCoreData();

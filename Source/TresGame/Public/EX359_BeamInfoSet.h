@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FEX359_BeamInfoSet {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FEX359_BeamInfo> m_BeamInfoArray;
     
     TRESGAME_API FEX359_BeamInfoSet();

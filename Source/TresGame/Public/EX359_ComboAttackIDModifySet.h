@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FEX359_ComboAttackIDModifySet {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_OldAttackID;
     
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_NewAttackID;
     
     TRESGAME_API FEX359_ComboAttackIDModifySet();

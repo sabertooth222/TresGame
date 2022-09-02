@@ -6,7 +6,7 @@ USTRUCT(BlueprintType)
 struct FEX359_RemoteEventID {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_RemoteEventName;
     
     TRESGAME_API FEX359_RemoteEventID();

@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FEX359_LaserInfoSet {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FEX359_LaserInfo> m_LaserInfoArray;
     
     TRESGAME_API FEX359_LaserInfoSet();

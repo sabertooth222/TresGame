@@ -18,7 +18,7 @@ public:
     TArray<ETresItemDefWeapon> m_Weapons;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bWeaponFixed: 1;
+    uint32 m_bWeaponFixed: 1;
     
     UPROPERTY(EditAnywhere)
     uint8 m_InitProtectorSlot;

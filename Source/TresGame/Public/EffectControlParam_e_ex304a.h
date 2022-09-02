@@ -8,13 +8,13 @@ USTRUCT(BlueprintType)
 struct FEffectControlParam_e_ex304a {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ChangeStartTimeRate;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FEffectControlParameterVector_e_ex304a> VectorParamList;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FEffectControlParameterFloat_e_ex304a> FloatParamList;
     
     TRESGAME_API FEffectControlParam_e_ex304a();

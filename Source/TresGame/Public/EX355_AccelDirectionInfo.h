@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FEX355_AccelDirectionInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Distance;
     
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<EEX355_AccelDir> Direction;
     
     TRESGAME_API FEX355_AccelDirectionInfo();
