@@ -3,7 +3,7 @@
 #include "TresNpcBTDecoratorBase.h"
 #include "TresNpcBTDecorator_IsInHoldCameraTrickAction.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcBTDecorator_IsInHoldCameraTrickAction : public UTresNpcBTDecoratorBase {
     GENERATED_BODY()
 public:

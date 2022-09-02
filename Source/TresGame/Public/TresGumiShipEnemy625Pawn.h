@@ -8,24 +8,24 @@
 
 class UParticleSystem;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresGumiShipEnemy625Pawn : public ATresGumiShipBossEnemyPawnBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_pSandSmokeEffectVFX;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_pEmergenSandSmokeEffectVFX;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_pLatentSandSmokeEffectVFX;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fAdvanceDistance;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_PairName;
     
 public:
@@ -64,13 +64,13 @@ public:
     void _ReleaseLaser();
     
 private:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _AttackMissile2();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _AttackMissile1();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _AttackMissile0();
     
 public:

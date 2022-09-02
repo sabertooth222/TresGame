@@ -3,7 +3,7 @@
 #include "Engine/TargetPoint.h"
 #include "TresGumiShipEnemyTerritoryPoint.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresGumiShipEnemyTerritoryPoint : public ATargetPoint {
     GENERATED_BODY()
 public:

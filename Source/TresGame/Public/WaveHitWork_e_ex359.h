@@ -4,11 +4,11 @@
 
 class ATresCharPawnBase;
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FWaveHitWork_e_ex359 {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresCharPawnBase* pOwner;
     
     TRESGAME_API FWaveHitWork_e_ex359();

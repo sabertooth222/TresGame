@@ -1,27 +1,27 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ETresMapJumpFadeKind.h"
 #include "TresTriggerBox.h"
 #include "TresMapJumpTriggerBoxSignatureDelegate.h"
+#include "ETresMapJumpFadeKind.h"
 #include "TresMapJumpTriggerBox.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresMapJumpTriggerBox : public ATresTriggerBox {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_MapName;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_TargetTag;
     
     UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresMapJumpFadeKind> m_FadeType;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_BlueprintMapJump;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresMapJumpTriggerBoxSignature OnMapJump;
     
     ATresMapJumpTriggerBox();

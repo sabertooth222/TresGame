@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FRaiseCutRootMotionScaleParam_e_ex761 {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Distance;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float RootMotionScale;
     
     TRESGAME_API FRaiseCutRootMotionScaleParam_e_ex761();

@@ -5,15 +5,15 @@
 
 class AActor;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresFriendLinkPawnGoofyShoot : public ATresFriendLinkPawnBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_Param_ThrowPitch;
     
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AActor* m_pDummyTarget;
     
 public:

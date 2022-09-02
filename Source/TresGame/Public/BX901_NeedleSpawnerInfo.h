@@ -9,7 +9,7 @@ USTRUCT(BlueprintType)
 struct FBX901_NeedleSpawnerInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<AActor> m_NeedleSpawnerClass;
     
     TRESGAME_API FBX901_NeedleSpawnerInfo();

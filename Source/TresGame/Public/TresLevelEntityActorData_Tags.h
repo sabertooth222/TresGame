@@ -3,14 +3,14 @@
 #include "TresLevelEntityActorData.h"
 #include "TresLevelEntityActorData_Tags.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class TRESGAME_API UTresLevelEntityActorData_Tags : public UTresLevelEntityActorData {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_KeepRuntimeValue;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FName> m_Tags;
     
     UTresLevelEntityActorData_Tags();

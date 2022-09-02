@@ -3,11 +3,11 @@
 #include "TresProjectileBase.h"
 #include "TresEnemy_e_ex781_FireProjectile.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemy_e_ex781_FireProjectile : public ATresProjectileBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_BulletListSet;
     
     ATresEnemy_e_ex781_FireProjectile();

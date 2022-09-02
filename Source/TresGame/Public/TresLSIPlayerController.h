@@ -4,7 +4,7 @@
 #include "TresControllerInterface.h"
 #include "TresLSIPlayerController.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresLSIPlayerController : public APlayerController, public ITresControllerInterface {
     GENERATED_BODY()
 public:

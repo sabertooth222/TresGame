@@ -4,17 +4,17 @@
 #include "UObject/NoExportTypes.h"
 #include "TresEnemy_e_ex367_TailPillarProjectileBase.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemy_e_ex367_TailPillarProjectileBase : public ATresProjectileBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector m_InitScale;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_ScaleZMin;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_ScaleSpeedZ;
     
     ATresEnemy_e_ex367_TailPillarProjectileBase();

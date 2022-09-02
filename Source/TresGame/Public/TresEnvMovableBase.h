@@ -3,7 +3,7 @@
 #include "TresEnvBase.h"
 #include "TresEnvMovableBase.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresEnvMovableBase : public ATresEnvBase {
     GENERATED_BODY()
 public:

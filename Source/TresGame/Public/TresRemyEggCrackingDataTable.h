@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FTresRemyEggCrackingDataTable : public FTresRemyCookingGameDataTableBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float StickEggCrackingValue;
     
     TRESGAME_API FTresRemyEggCrackingDataTable();

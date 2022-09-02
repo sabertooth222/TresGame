@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct FTresComNpcRandomFieldVoiceDatas {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_VoiceType;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UTresFieldVoice*> m_VoiceLists;
     
     TRESGAME_API FTresComNpcRandomFieldVoiceDatas();

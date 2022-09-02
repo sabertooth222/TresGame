@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FBX901_DarkCubeMine_DarkWingInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fMaxMoveDistance;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fMinMoveDistance;
     
     TRESGAME_API FBX901_DarkCubeMine_DarkWingInfo();

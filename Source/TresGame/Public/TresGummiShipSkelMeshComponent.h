@@ -5,12 +5,12 @@
 
 class UTresGummiShipAnimInstance;
 
-UCLASS(EditInlineNew, MinimalAPI, Transient, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, EditInlineNew, MinimalAPI, Transient, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTresGummiShipSkelMeshComponent : public USkeletalMeshComponent {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(NonTransactional, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, NonTransactional, Transient, meta=(AllowPrivateAccess=true))
     UTresGummiShipAnimInstance* MyAnimInstance;
     
 public:

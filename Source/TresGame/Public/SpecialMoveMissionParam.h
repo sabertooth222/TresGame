@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct FSpecialMoveMissionParam {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EDancePerformType perform;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EDanceActorType ActorType;
     
     TRESGAME_API FSpecialMoveMissionParam();

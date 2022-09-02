@@ -3,7 +3,7 @@
 #include "TresStylePawnBase.h"
 #include "TresStylePawnGMGate.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresStylePawnGMGate : public ATresStylePawnBase {
     GENERATED_BODY()
 public:

@@ -1,108 +1,108 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TresSavePointActivateSignatureDelegate.h"
 #include "TresPlayerStart.h"
 #include "TresReactorComponentInterface.h"
-#include "TresReactorDoCommandSignatureDelegate.h"
 #include "ETresSavePointDispType.h"
+#include "TresReactorDoCommandSignatureDelegate.h"
+#include "TresSavePointActivateSignatureDelegate.h"
 #include "TresSavePointActor.generated.h"
 
-class UParticleSystemComponent;
 class UTresMapMarkerComponent;
 class UTresSavePointRecoverComponent;
 class UTresReactorComponent;
 class UParticleSystem;
+class UParticleSystemComponent;
 class ATresCharPawnBase;
 
-UCLASS(Abstract, Config=Game)
+UCLASS(Abstract, Blueprintable, Config=Game)
 class ATresSavePointActor : public ATresPlayerStart, public ITresReactorComponentInterface {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresReactorComponent* MyReactor;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresSavePointRecoverComponent* MyRecover;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresMapMarkerComponent* MyMapMarker;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    uint32 m_bAutoActivate: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bAutoActivate: 1;
     
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere)
-    uint32 m_bGimmickComponentAutoLinkActivate: 1;
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bGimmickComponentAutoLinkActivate: 1;
     
-    UPROPERTY()
-    uint32 m_bIsActive: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bIsActive: 1;
     
-    UPROPERTY(DuplicateTransient, Transient)
-    uint32 m_bIsAccessed: 1;
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    uint8 m_bIsAccessed: 1;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    uint32 m_bLimitedSavePoint: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bLimitedSavePoint: 1;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_BaseEffect;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_LimitBaseEffect;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_BodyEffect;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_LimitBodyEffect;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_HealEffect;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_ClipOutDistance;
     
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* m_pBaseEffect;
     
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* m_pBodyEffect;
     
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* m_pHealEffect;
     
-    UPROPERTY(DuplicateTransient, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresCharPawnBase* m_pCheckPawn;
     
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresReactorDoCommandSignature OnReactorDoCommand;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresSavePointActivateSignature OnGimmickActivate;
     
     ATresSavePointActor();
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveGimmickActivate(bool bEnable);
     
 protected:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnChangeSavePointDispType(ETresSavePointDispType InDispType);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnChangePlayerArtsMode(bool bIsArtsMode);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnChangeCinematicMode(bool bIsCinematicMode);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnChangeBattleMode(bool bIsBattleMode);
     
 public:
     UFUNCTION(BlueprintCallable)
     void BP_SetDisableMode(bool bIsDisable);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool BP_IsGimmickActive() const;
     
     UFUNCTION(BlueprintCallable)

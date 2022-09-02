@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FDebrisStatePatternSet_e_he903 {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FDebrisStatePattern_e_he903> m_DebrisStatePatternArray;
     
     TRESGAME_API FDebrisStatePatternSet_e_he903();

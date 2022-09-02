@@ -3,7 +3,7 @@
 #include "TresProjectileBase.h"
 #include "TresProjectile_e_ex773_EncloseFlareOmen.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresProjectile_e_ex773_EncloseFlareOmen : public ATresProjectileBase {
     GENERATED_BODY()
 public:

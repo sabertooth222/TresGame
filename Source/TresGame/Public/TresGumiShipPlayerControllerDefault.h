@@ -3,7 +3,7 @@
 #include "TresGumiShipPlayerControllerBase.h"
 #include "TresGumiShipPlayerControllerDefault.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresGumiShipPlayerControllerDefault : public ATresGumiShipPlayerControllerBase {
     GENERATED_BODY()
 public:

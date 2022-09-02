@@ -3,7 +3,7 @@
 #include "TresAttackDefinitionDash.h"
 #include "TresAttack2_e_ex073_Spin.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAttack2_e_ex073_Spin : public UTresAttackDefinitionDash {
     GENERATED_BODY()
 public:

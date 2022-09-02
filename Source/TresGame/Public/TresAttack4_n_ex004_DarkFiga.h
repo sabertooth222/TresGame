@@ -3,7 +3,7 @@
 #include "TresNpcAttackDefinitionBase.h"
 #include "TresAttack4_n_ex004_DarkFiga.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAttack4_n_ex004_DarkFiga : public UTresNpcAttackDefinitionBase {
     GENERATED_BODY()
 public:

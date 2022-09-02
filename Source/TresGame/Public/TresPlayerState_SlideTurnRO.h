@@ -3,7 +3,7 @@
 #include "TresCharState_SlideTurn.h"
 #include "TresPlayerState_SlideTurnRO.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_SlideTurnRO : public UTresCharState_SlideTurn {
     GENERATED_BODY()
 public:

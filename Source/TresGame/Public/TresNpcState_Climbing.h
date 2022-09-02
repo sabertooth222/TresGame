@@ -6,14 +6,14 @@
 class AActor;
 class UPrimitiveComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcState_Climbing : public UTresCharState_Climbing {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AActor* m_pAttachActor;
     
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UPrimitiveComponent* m_pAttachComponent;
     
     UTresNpcState_Climbing();

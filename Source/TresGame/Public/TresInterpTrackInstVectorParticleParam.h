@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "Matinee/InterpTrackInst.h"
+#include "UObject/NoExportTypes.h"
 #include "TresInterpTrackInstVectorParticleParam.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresInterpTrackInstVectorParticleParam : public UInterpTrackInst {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector ResetVector;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 GroupID;
     
     UTresInterpTrackInstVectorParticleParam();

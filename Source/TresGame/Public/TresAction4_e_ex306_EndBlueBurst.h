@@ -3,7 +3,7 @@
 #include "TresActionDefinitionBase.h"
 #include "TresAction4_e_ex306_EndBlueBurst.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAction4_e_ex306_EndBlueBurst : public UTresActionDefinitionBase {
     GENERATED_BODY()
 public:

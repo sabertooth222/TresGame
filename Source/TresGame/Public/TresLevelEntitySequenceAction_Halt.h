@@ -3,7 +3,7 @@
 #include "TresLevelEntitySequenceAction.h"
 #include "TresLevelEntitySequenceAction_Halt.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class TRESGAME_API UTresLevelEntitySequenceAction_Halt : public UTresLevelEntitySequenceAction {
     GENERATED_BODY()
 public:

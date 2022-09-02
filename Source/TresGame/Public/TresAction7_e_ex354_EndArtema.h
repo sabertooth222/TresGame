@@ -3,7 +3,7 @@
 #include "TresAttackDefinitionWeaponBase.h"
 #include "TresAction7_e_ex354_EndArtema.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAction7_e_ex354_EndArtema : public UTresAttackDefinitionWeaponBase {
     GENERATED_BODY()
 public:

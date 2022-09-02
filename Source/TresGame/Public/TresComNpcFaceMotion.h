@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FTresComNpcFaceMotion {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_EyeAnimName;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fEyeBlendInTime;
     
     TRESGAME_API FTresComNpcFaceMotion();

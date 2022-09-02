@@ -3,7 +3,7 @@
 #include "TresAttackDefinitionWeaponBase.h"
 #include "TresAttack5_e_ex021_ShakeOff.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAttack5_e_ex021_ShakeOff : public UTresAttackDefinitionWeaponBase {
     GENERATED_BODY()
 public:

@@ -3,12 +3,12 @@
 #include "TresUIParts.h"
 #include "TresUIP_KeyItem.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresUIP_KeyItem : public UTresUIParts {
     GENERATED_BODY()
 public:
     UTresUIP_KeyItem();
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     int32 OnCallback(int32 ID, int32 Param);
     
 };

@@ -3,11 +3,11 @@
 #include "TresNpcBTDecoratorBase.h"
 #include "TresNpcBTDecorator_IsNpcModeMoveType.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcBTDecorator_IsNpcModeMoveType : public UTresNpcBTDecoratorBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bWalk;
     
     UTresNpcBTDecorator_IsNpcModeMoveType();

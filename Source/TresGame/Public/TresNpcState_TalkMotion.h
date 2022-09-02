@@ -3,7 +3,7 @@
 #include "TresCharState_TalkMotion.h"
 #include "TresNpcState_TalkMotion.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcState_TalkMotion : public UTresCharState_TalkMotion {
     GENERATED_BODY()
 public:

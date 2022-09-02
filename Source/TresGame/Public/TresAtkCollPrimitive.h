@@ -3,32 +3,32 @@
 #include "Components/PrimitiveComponent.h"
 #include "TresAtkCollPrimitive.generated.h"
 
-class USoundBase;
 class UCurveVector;
 class UStaticMesh;
+class USoundBase;
 class UBodySetup;
 
-UCLASS(Transient, ClassGroup=Custom, Within=TresAtkCollComponent, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, Transient, ClassGroup=Custom, Within=TresAtkCollComponent, meta=(BlueprintSpawnableComponent))
 class UTresAtkCollPrimitive : public UPrimitiveComponent {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(DuplicateTransient, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UStaticMesh* m_CollisionMesh;
     
-    UPROPERTY(DuplicateTransient, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UCurveVector* m_SizeVectorCurve;
     
-    UPROPERTY(DuplicateTransient, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UCurveVector* m_ScaleVectorCurve;
     
-    UPROPERTY(DuplicateTransient, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     USoundBase* m_HitSE;
     
-    UPROPERTY(DuplicateTransient, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     USoundBase* m_DefaultHitSE;
     
-    UPROPERTY(DuplicateTransient, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UBodySetup* m_pBodySetup;
     
 public:

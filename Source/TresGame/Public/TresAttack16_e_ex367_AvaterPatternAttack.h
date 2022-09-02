@@ -6,11 +6,11 @@
 
 class ATresAvaterGenerator_e_ex367_Slash;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresAttack16_e_ex367_AvaterPatternAttack : public UTresAttackDefinitionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresAvaterGenerator_e_ex367_Slash> m_PatternAttackGenerator;
     
     UTresAttack16_e_ex367_AvaterPatternAttack();

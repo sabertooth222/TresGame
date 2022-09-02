@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FCameraSensitivityInfoSet {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FCameraSensitivityInfo m_RotationSpeedPitch;
     
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FCameraSensitivityInfo m_RotationSpeedYaw;
     
     TRESGAME_API FCameraSensitivityInfoSet();

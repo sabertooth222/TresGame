@@ -6,18 +6,18 @@
 
 class UTresInterpTrackInstSceneCapture2D;
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API ATresSceneCapture2D : public ASceneCapture2D {
     GENERATED_BODY()
 public:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresInterpTrackInstSceneCapture2D* m_SceneCapture2DTrackInst;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     bool m_Dirty;
     
     ATresSceneCapture2D();
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BPE_SetupMirror(FVector V);
     
 };

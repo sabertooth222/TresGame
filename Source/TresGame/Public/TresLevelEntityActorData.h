@@ -3,7 +3,7 @@
 #include "UObject/Object.h"
 #include "TresLevelEntityActorData.generated.h"
 
-UCLASS(Abstract, EditInlineNew)
+UCLASS(Abstract, Blueprintable, EditInlineNew)
 class TRESGAME_API UTresLevelEntityActorData : public UObject {
     GENERATED_BODY()
 public:

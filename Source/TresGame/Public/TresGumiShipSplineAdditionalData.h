@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FTresGumiShipSplineAdditionalData {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresGumiShipSplineEventType m_eEventType;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fKeyDistanceRate;
     
     TRESGAME_API FTresGumiShipSplineAdditionalData();

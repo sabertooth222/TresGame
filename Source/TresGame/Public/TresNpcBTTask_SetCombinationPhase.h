@@ -3,11 +3,11 @@
 #include "BehaviorTree/BTTaskNode.h"
 #include "TresNpcBTTask_SetCombinationPhase.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcBTTask_SetCombinationPhase : public UBTTaskNode {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_PhaseIndex;
     
     UTresNpcBTTask_SetCombinationPhase();

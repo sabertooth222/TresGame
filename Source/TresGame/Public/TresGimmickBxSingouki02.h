@@ -3,7 +3,7 @@
 #include "TresGimmickBxSingouki.h"
 #include "TresGimmickBxSingouki02.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresGimmickBxSingouki02 : public ATresGimmickBxSingouki {
     GENERATED_BODY()
 public:

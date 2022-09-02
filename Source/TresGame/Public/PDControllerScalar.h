@@ -6,7 +6,7 @@ USTRUCT(BlueprintType)
 struct TRESGAME_API FPDControllerScalar {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Gain;
     
     FPDControllerScalar();

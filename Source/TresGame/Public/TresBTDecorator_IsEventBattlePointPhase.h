@@ -4,17 +4,17 @@
 #include "GameplayTagContainer.h"
 #include "TresBTDecorator_IsEventBattlePointPhase.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTDecorator_IsEventBattlePointPhase : public UBTDecorator {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FGameplayTag> m_PhaseTags;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bUseActorTag;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_ActorTag;
     
     UTresBTDecorator_IsEventBattlePointPhase();

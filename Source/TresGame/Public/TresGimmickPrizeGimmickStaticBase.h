@@ -4,14 +4,14 @@
 #include "TresGimmickDitherFadeInterface.h"
 #include "TresGimmickPrizeGimmickStaticBase.generated.h"
 
-UCLASS(Abstract, Config=Game)
+UCLASS(Abstract, Blueprintable, Config=Game)
 class ATresGimmickPrizeGimmickStaticBase : public ATresGimmickStaticBase, public ITresGimmickDitherFadeInterface {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_GimmickClipDitherParamName;
     
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_IsGimmickClipDitherParamInvert;
     
     ATresGimmickPrizeGimmickStaticBase();

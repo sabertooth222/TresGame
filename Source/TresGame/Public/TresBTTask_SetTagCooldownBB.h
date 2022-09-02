@@ -1,18 +1,18 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "BehaviorTree/Tasks/BTTask_SetTagCooldown.h"
 #include "BehaviorTree/BehaviorTreeTypes.h"
+#include "BehaviorTree/Tasks/BTTask_SetTagCooldown.h"
 #include "TresBTTask_SetTagCooldownBB.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTTask_SetTagCooldownBB : public UBTTask_SetTagCooldown {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(VisibleDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bUseBlackboard;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlackboardKeySelector BlackboardKey;
     
 public:

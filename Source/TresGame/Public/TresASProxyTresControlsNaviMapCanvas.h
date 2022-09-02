@@ -3,7 +3,7 @@
 #include "TresASProxy.h"
 #include "TresASProxyTresControlsNaviMapCanvas.generated.h"
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class UTresASProxyTresControlsNaviMapCanvas : public UTresASProxy {
     GENERATED_BODY()
 public:

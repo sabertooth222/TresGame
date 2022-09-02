@@ -10,13 +10,13 @@ USTRUCT(BlueprintType)
 struct FTresDebugMenuCustomPart {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresDebugMenuResourceType> m_ResourceType;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_ResourceIndex;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UTresDebugMenuObject> CustomClass;
     
     TRESGAME_API FTresDebugMenuCustomPart();

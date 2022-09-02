@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct FTresEnemyRetryVoiceData {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName FaceAnimName;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundBase* VOICE;
     
     TRESGAME_API FTresEnemyRetryVoiceData();

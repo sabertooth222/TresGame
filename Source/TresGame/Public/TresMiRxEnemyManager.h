@@ -5,7 +5,7 @@
 #include "TresMiRxReplicaStateTable.h"
 #include "TresMiRxEnemyManager.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresMiRxEnemyManager : public AActor, public ITresCommunicationTerminalInterface {
     GENERATED_BODY()
 public:
@@ -48,10 +48,10 @@ public:
     UFUNCTION(BlueprintCallable)
     void BP_RequestActionStart();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool BP_IsSimultaneoutWarpAttackState() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool BP_IsIdleState() const;
     
     

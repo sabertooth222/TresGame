@@ -3,7 +3,7 @@
 #include "TresSharedActor.h"
 #include "TresRemyActorBase.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresRemyActorBase : public ATresSharedActor {
     GENERATED_BODY()
 public:

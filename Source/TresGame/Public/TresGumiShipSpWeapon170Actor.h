@@ -3,7 +3,7 @@
 #include "TresGumiShipSpecialWeaponBaseActor.h"
 #include "TresGumiShipSpWeapon170Actor.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresGumiShipSpWeapon170Actor : public ATresGumiShipSpecialWeaponBaseActor {
     GENERATED_BODY()
 public:

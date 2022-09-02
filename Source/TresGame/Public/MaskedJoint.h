@@ -10,7 +10,7 @@ public:
     UPROPERTY(EditAnywhere)
     FBoneReference Joint;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Percentage;
     
     FMaskedJoint();

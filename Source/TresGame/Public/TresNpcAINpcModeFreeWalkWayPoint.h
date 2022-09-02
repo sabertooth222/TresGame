@@ -5,21 +5,21 @@
 #include "UObject/NoExportTypes.h"
 #include "TresNpcAINpcModeFreeWalkWayPoint.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresNpcAINpcModeFreeWalkWayPoint : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresChrUniqueID m_CharUniqueID;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bUseLookAtPoint;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector m_LookAtPoint;
     
     ATresNpcAINpcModeFreeWalkWayPoint();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FString GetCharUniqueIDName() const;
     
 };

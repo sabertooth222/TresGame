@@ -4,32 +4,32 @@
 #include "TresUIDataAsset.h"
 #include "TresUIDataAssetStatus.generated.h"
 
+class UTresUIHudCommandDataAsset;
+class ATresUIActor;
 class USwfMovie;
 class UObject;
-class UTresUIHudCommandDataAsset;
 class UTexture;
-class ATresUIActor;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresUIDataAssetStatus : public UTresUIDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USwfMovie* FaceSwfAsset;
     
-    UPROPERTY(VisibleDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UObject*> FaceSwfRefAssets;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool EnableWearForm;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresUIActor> CampTopUIActor;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTexture* MenuFaceIcon;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresUIHudCommandDataAsset* HudCommandDataAsset;
     
     UTresUIDataAssetStatus();

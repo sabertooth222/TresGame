@@ -4,17 +4,17 @@
 #include "UObject/NoExportTypes.h"
 #include "TresCoopAction_EnemyShipBase_DistributeDarkChargeFormation.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresCoopAction_EnemyShipBase_DistributeDarkChargeFormation : public UTresActionDefinitionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector m_OffsetPos;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector m_OffsetPos2;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_TargetPredictionOffsetTime;
     
     UTresCoopAction_EnemyShipBase_DistributeDarkChargeFormation();

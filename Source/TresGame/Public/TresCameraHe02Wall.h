@@ -6,12 +6,12 @@
 
 class UCameraShake;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresCameraHe02Wall : public ATresCameraRotTarget {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TSubclassOf<UCameraShake> m_CameraShakeClass;
     
 public:

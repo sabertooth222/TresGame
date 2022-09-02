@@ -6,26 +6,26 @@
 #include "BehaviorTree/BehaviorTreeTypes.h"
 #include "TresBTComposite_BlackboardRandom.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTComposite_BlackboardRandom : public UBTCompositeNode {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bFailOnAll;
     
-    UPROPERTY(VisibleDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresRandomDistributionType::Type> Distribution;
     
-    UPROPERTY(VisibleDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresControlledRandomPeriod::Type> Randomness;
     
-    UPROPERTY(VisibleDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bCustomPeriod;
     
-    UPROPERTY(VisibleDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Period;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FBlackboardKeySelector> Weights;
     
     UTresBTComposite_BlackboardRandom();

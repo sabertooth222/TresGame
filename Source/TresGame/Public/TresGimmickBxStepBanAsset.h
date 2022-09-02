@@ -3,21 +3,21 @@
 #include "TresGimmickActor.h"
 #include "TresGimmickBxStepBanAsset.generated.h"
 
-class AActor;
 class UTresStaticMeshComponent;
+class AActor;
 
-UCLASS(Config=Game)
+UCLASS(Blueprintable, Config=Game)
 class ATresGimmickBxStepBanAsset : public ATresGimmickActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresStaticMeshComponent* MyMesh;
     
     ATresGimmickBxStepBanAsset();
     UFUNCTION(BlueprintCallable)
     void SetStepBanAssetOwnerActor(AActor* GimmickOwner);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnChangeStepBanAssetOwner(AActor* GimmickOwner);
     
 };

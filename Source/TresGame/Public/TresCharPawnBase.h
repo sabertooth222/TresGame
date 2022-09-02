@@ -1,10 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "TresPawnBase.h"
-#include "Perception/AISightTargetInterface.h"
 #include "GenericTeamAgentInterface.h"
+#include "Perception/AISightTargetInterface.h"
 #include "ETresStateID.h"
 #include "ETresAnimNotifyBpEventID.h"
+#include "ETresTeam.h"
 #include "UObject/NoExportTypes.h"
 #include "TresCharMovementUpdatedSignatureDelegate.h"
 #include "ETresChrUniqueID.h"
@@ -12,46 +13,45 @@
 #include "ETresBodyCollReactionType.h"
 #include "ETresPlayerJumpModes.h"
 #include "ETresCommandKind.h"
-#include "Engine/EngineTypes.h"
+#include "ETresAbilityKind.h"
 #include "TresCharTakeDamageSignatureDelegate.h"
-#include "ETresTeam.h"
-#include "ETresWeaponType.h"
-#include "TresReactorDoCommandSignatureDelegate.h"
 #include "ETresDamageKind.h"
+#include "TresReactorDoCommandSignatureDelegate.h"
+#include "Engine/EngineTypes.h"
 #include "TresDamageInfo.h"
 #include "Engine/EngineTypes.h"
-#include "ETresAbilityKind.h"
 #include "AlphaBlend.h"
+#include "ETresWeaponType.h"
 #include "ETresItemDefWeapon.h"
 #include "TresCharPawnBase.generated.h"
 
-class UTresAtkCollComponent;
-class USQEXSEADAutoSeComponent;
+class USQEXSEADSoundReferenceEnumSet;
 class UTresCharMovementComponent;
-class UTresLockonTargetComponent;
+class USQEX_DynamicBindAssetUserData;
+class UTresSwimRingComponent;
+class UTresAtkCollComponent;
 class UTresSkeletalMeshComponent;
-class AController;
 class UTresBodyCollComponent;
 class UTresEquipmentComponent;
-class UTresEffectAttachComponent;
+class AController;
 class UTresStateQueueComponent;
-class UAnimMontage;
+class UTresEffectAttachComponent;
+class USQEXSEADAutoSeComponent;
 class UTresPoleComponent;
 class UTresHopComponent;
 class UParticleSystem;
 class UTresUIDataAssetStatus;
-class ATresAdhereObjBase;
-class UTresAttractionFlowMarkerComponent;
-class UTresSwimRingComponent;
 class USQEX_ParticleAttachDataAsset;
-class USQEXSEADSoundReferenceEnumSet;
-class USQEX_DynamicBindAssetUserData;
-class USQEXSEADAutoSeComponentCallbackDefault;
+class ATresAdhereObjBase;
+class UTresLockonTargetComponent;
+class UAnimMontage;
 class AActor;
+class UTresAttractionFlowMarkerComponent;
+class USQEXSEADAutoSeComponentCallbackDefault;
 class USQEX_KBD_Component;
 class UAnimSequenceBase;
 
-UCLASS(Abstract, BlueprintType)
+UCLASS(Abstract, Blueprintable)
 class TRESGAME_API ATresCharPawnBase : public ATresPawnBase, public IGenericTeamAgentInterface, public IAISightTargetInterface {
     GENERATED_BODY()
 public:
@@ -61,244 +61,244 @@ public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FTresAnimNotifyEndBpEvent, FName, AnimSeqName, TEnumAsByte<ETresAnimNotifyBpEventID>, EventID, int32, Param);
     
 private:
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresCharMovementComponent* MyMovement;
     
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresSkeletalMeshComponent* MyMesh;
     
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresAtkCollComponent* MyAtkColl;
     
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresBodyCollComponent* MyBodyColl;
     
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresEquipmentComponent* MyEquipment;
     
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresStateQueueComponent* MyStateComp;
     
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresEffectAttachComponent* MyEffectAtt;
     
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector BaseTranslationOffset;
     
-    UPROPERTY(BlueprintReadOnly)
-    uint32 bPressedJump: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 bPressedJump: 1;
     
-    UPROPERTY(BlueprintReadOnly, Transient, VisibleInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float JumpKeyHoldTime;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float JumpMaxHoldTime;
     
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresCharMovementUpdatedSignature OnCharacterMovementUpdated;
     
 protected:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresChrUniqueID m_ChrUniqueID;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 DebugLevel;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 MaxHitPoint;
     
-    UPROPERTY(SaveGame)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
     int32 m_HitPoint;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 MaxMagicPoint;
     
-    UPROPERTY(SaveGame)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
     int32 m_MagicPoint;
     
-    UPROPERTY(SaveGame)
-    uint32 m_bAppearMsgSended: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
+    uint8 m_bAppearMsgSended: 1;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MyMpChargeTime;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 MaxFocusPoint;
     
-    UPROPERTY(SaveGame)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
     int32 m_FocusPoint;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresBodyCollReactionType m_DefaultBodyCollReactionType;
     
 public:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    uint32 m_bEnableAttractionFlowHitPoint: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bEnableAttractionFlowHitPoint: 1;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    uint32 m_bEnableAttractionFlowMarkerProc: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bEnableAttractionFlowMarkerProc: 1;
     
 protected:
-    UPROPERTY(SaveGame)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
     int32 m_AttractionHP;
     
-    UPROPERTY(SaveGame)
+    UPROPERTY(EditAnywhere, SaveGame)
     TEnumAsByte<ETresCommandKind> m_AttractionMarkerCommandID;
     
-    UPROPERTY(SaveGame)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
     float m_AttractionMarkerRestTime;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    uint32 m_bRootTransCalcRootSpace: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bRootTransCalcRootSpace: 1;
     
-    UPROPERTY(BlueprintReadOnly, Transient, VisibleInstanceOnly)
-    uint32 bIsBattleMode: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    uint8 bIsBattleMode: 1;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    uint32 m_bIsInvincible: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bIsInvincible: 1;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    uint32 m_bIsNoDamageResponse: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bIsNoDamageResponse: 1;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    uint32 m_bNoHpDamage: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bNoHpDamage: 1;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    uint32 m_bIsHpLimitOne: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bIsHpLimitOne: 1;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    uint32 m_bIsHpLimitOneExceptPlayerAttack: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bIsHpLimitOneExceptPlayerAttack: 1;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    uint32 m_bIsNeedAttachAttackHitEffect: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bIsNeedAttachAttackHitEffect: 1;
     
-    UPROPERTY(AdvancedDisplay, BlueprintReadOnly, EditDefaultsOnly)
-    uint32 m_bDisableInvincibleInCinematicMode: 1;
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bDisableInvincibleInCinematicMode: 1;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float m_ControlAnalogInputModifier;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MyRailSlideSpeed;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_RailSlideJumpInertialVelocity;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_RailSlideJumpInertialBrake;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector m_DangleOffsetPos;
     
-    UPROPERTY(EditDefaultsOnly)
-    uint32 m_bEquipmentAutoSpawn: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bEquipmentAutoSpawn: 1;
     
-    UPROPERTY(Instanced, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UTresPoleComponent* m_LastHitPoleComponent;
     
-    UPROPERTY(Instanced, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UTresHopComponent* m_LastHitHopComponent;
     
-    UPROPERTY(BlueprintReadOnly, Transient, VisibleInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float m_NoActionCounter;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_LastWaterOuterEffect;
     
-    UPROPERTY(EditDefaultsOnly)
-    uint32 m_bCameraLookPosToMesh: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bCameraLookPosToMesh: 1;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresUIDataAssetStatus* m_pUIDataStatus;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    uint32 MySkelCtrl_IkDisableFlag: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 MySkelCtrl_IkDisableFlag: 1;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MySkelCtrl_IkInitValue;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    uint32 m_bApplyWetnessMaterial: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bApplyWetnessMaterial: 1;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    uint32 m_bApplyOceanWetnessMaterial: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bApplyOceanWetnessMaterial: 1;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_ApplyOceanWetnessMaterialMinHeight;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_ApplyOceanWetnessMaterialMaxHeight;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresAdhereObjBase* m_pBadStatAdhereActor;
     
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresCharTakeDamageSignature OnTresTakeDamage;
     
 protected:
-    UPROPERTY(DuplicateTransient, Instanced, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UTresLockonTargetComponent* m_FlowTarget;
     
-    UPROPERTY(DuplicateTransient, Instanced, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UTresAttractionFlowMarkerComponent* m_AttractionFlowMarker;
     
-    UPROPERTY(DuplicateTransient, Instanced, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UTresSwimRingComponent* m_pSwimRing;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresTeam::Type> MyTeam;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USQEX_ParticleAttachDataAsset* m_CmnAuraEffect;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USQEX_ParticleAttachDataAsset* m_CmnMagicCastEffect;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USQEX_ParticleAttachDataAsset* m_CmnBadStatesEffect;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USQEX_ParticleAttachDataAsset* m_CmnAppearEffect;
     
-    UPROPERTY(EditDefaultsOnly)
-    uint32 m_bEnableRegistFootStepEffectGen: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bEnableRegistFootStepEffectGen: 1;
     
-    UPROPERTY(EditDefaultsOnly)
-    uint32 m_bEnableWaterRippleEffect: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bEnableWaterRippleEffect: 1;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_RippleBaseBoneName;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_RippleLocationShiftScale;
     
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresCtorState OnCtorState;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresDtorState OnDtorState;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresAnimNotifyStartBpEvent OnAnimNotifyStartBpEvent;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresAnimNotifyEndBpEvent OnAnimNotifyEndBpEvent;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresReactorDoCommandSignature OnReactorDoCommand;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USQEXSEADSoundReferenceEnumSet* m_AutoSeAssets;
     
 protected:
-    UPROPERTY(Instanced, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     USQEXSEADAutoSeComponent* MyAutoSe;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     USQEXSEADAutoSeComponentCallbackDefault* MyAutoSeCallback;
     
 public:
@@ -390,28 +390,28 @@ public:
     UFUNCTION(BlueprintCallable)
     void RequestDirectMove(FVector refVelocity, bool bForceMaxSpeed);
     
-    UFUNCTION(BlueprintAuthorityOnly, BlueprintImplementableEvent, BlueprintCallable)
+    UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveTresTakeDamage(float DamagePoint, AController* InstigatedBy, const FHitResult& HitInfo, const FTresDamageInfo& DamageInfo, FVector ShotFromDirection, AActor* DamageCauser);
     
     UFUNCTION(BlueprintImplementableEvent)
-    void ReceiveDtorState(ETresStateID StateID);
+    void ReceiveDtorState(TEnumAsByte<ETresStateID> StateID);
     
     UFUNCTION(BlueprintImplementableEvent)
-    void ReceiveCtorState(ETresStateID StateID);
+    void ReceiveCtorState(TEnumAsByte<ETresStateID> StateID);
     
     UFUNCTION(BlueprintImplementableEvent)
-    void ReceiveAnimNotifyStartBpEvent(FName AnimSeqName, ETresAnimNotifyBpEventID EventID, int32 Param);
+    void ReceiveAnimNotifyStartBpEvent(FName AnimSeqName, TEnumAsByte<ETresAnimNotifyBpEventID> EventID, int32 Param);
     
     UFUNCTION(BlueprintImplementableEvent)
-    void ReceiveAnimNotifyEndBpEvent(FName AnimSeqName, ETresAnimNotifyBpEventID EventID, int32 Param);
+    void ReceiveAnimNotifyEndBpEvent(FName AnimSeqName, TEnumAsByte<ETresAnimNotifyBpEventID> EventID, int32 Param);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnLaunchedCharPawn(float Height);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnLaunched(FVector LaunchVelocity, bool bXYOverride, bool bZOverride);
     
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void OnJumped();
     
     UFUNCTION(BlueprintCallable)
@@ -420,133 +420,133 @@ public:
     UFUNCTION(BlueprintCallable)
     void LaunchCharacter(FVector LaunchVelocity, bool bXYOverride, bool bZOverride);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void K2_UpdateCustomMovement(float DeltaTime);
     
     UFUNCTION(BlueprintImplementableEvent)
-    void K2_OnMovementModeChanged(EMovementMode PrevMovementMode, EMovementMode NewMovementMode, uint8 PrevCustomMode, uint8 NewCustomMode);
+    void K2_OnMovementModeChanged(TEnumAsByte<EMovementMode> PrevMovementMode, TEnumAsByte<EMovementMode> NewMovementMode, uint8 PrevCustomMode, uint8 NewCustomMode);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsStopAI() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsOnGround() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsMoveModeWalking() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsMoveModeSwimming() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsMoveModeRailSlide() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsMoveModeFlying() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsMoveModeFalling() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsLandAnimPose() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsDisableAutoUpdateVelocity() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsConditionNoHpDamage() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsConditionNoDamageResponse() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsConditionInvincible() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsConditionHpLimitOneExceptPlayerAttack() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsConditionHpLimitOne() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsCinematicEndAIRestart() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsBattlePose() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsBattleMode() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetVelocityZ() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UTresCharMovementComponent* GetTresCharMovementComponent() const;
     
     UFUNCTION(BlueprintPure)
     TEnumAsByte<ETresStateID> GetStateID() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetMaxWalkSpeed() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetMaxSwimSpeed() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetMaxMagicPoint() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetMaxHitPoint() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetMaxFocusPoint() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetMaxFlySpeed() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetMagicPoint() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     USQEX_KBD_Component* GetKBDComponent() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetHitPointRate() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetHitPointPer() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetHitPoint() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetGravityZ() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetFocusPoint() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetDefaultMaxWalkSpeed() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetDefaultMaxSwimSpeed() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetDefaultMaxFlySpeed() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetDefaultBuoyancy() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector GetCurrentAcceleration() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetChrLevel() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetBuoyancy() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ETresBodyCollReactionType GetBodyCollReactionType(FName InGroup) const;
     
     UFUNCTION(BlueprintCallable)
@@ -603,40 +603,40 @@ public:
     UFUNCTION(BlueprintCallable)
     void BP_RequestDirectVelocity(FVector refVelocity);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool BP_IsRailSlideGoForword() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool BP_IsInnerWaterCurrent() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool BP_IsInnerWater() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool BP_IsConditionCheered() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool BP_IsAbilityEnable(ETresAbilityKind InAbilityKind) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector BP_GetWaterCurrentForce() const;
     
     UFUNCTION(BlueprintPure)
     TEnumAsByte<ETresStateID> BP_GetTransitionStateID() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 BP_GetRailSlideID() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector BP_GetLastTakeDamageHitLocation() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector BP_GetLastAttackHitLocation() const;
     
     UFUNCTION(BlueprintPure)
     TEnumAsByte<ETresWeaponType> BP_GetEquipWeaponType() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ETresItemDefWeapon BP_GetEquipWeaponID() const;
     
     UFUNCTION(BlueprintPure)
@@ -672,16 +672,16 @@ public:
     UFUNCTION(BlueprintCallable)
     void BP_AnimPlayAnimset(FName InAnimName, FName InSlotNodeName, float InBlendInTime, bool InLoop, int32 InEffectGroup, float InPlayRate, bool InRootTrans, bool InRootRot, float InRootTransScaleXY, float InRootTransScaleZ, bool InSameCheck);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FName BP_AnimGetLastPlayAnimName(FName InSlotName) const;
     
     UFUNCTION(BlueprintCallable)
     bool BP_AbilityRemove(ETresAbilityKind InAbilityKind);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 BP_AbilityGetLevel(ETresAbilityKind InAbilityKind) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 BP_AbilityGetEquipNum(ETresAbilityKind InAbilityKind) const;
     
     UFUNCTION(BlueprintCallable)

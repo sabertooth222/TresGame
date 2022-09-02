@@ -5,11 +5,11 @@
 
 class ATresProjectileBase;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresProjectileGenerator_e_ex361_DarkMine : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     TArray<TWeakObjectPtr<ATresProjectileBase>> m_DarkMineArray;
     
     ATresProjectileGenerator_e_ex361_DarkMine();

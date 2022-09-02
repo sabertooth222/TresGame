@@ -3,21 +3,21 @@
 #include "TresCharState_WallRun.h"
 #include "TresPlayerState_WallRun.generated.h"
 
+class ATresCameraWall;
 class AActor;
 class UPrimitiveComponent;
-class ATresCameraWall;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_WallRun : public UTresCharState_WallRun {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AActor* m_pHitActor;
     
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UPrimitiveComponent* m_pHitComponent;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresCameraWall* m_Camera;
     
     UTresPlayerState_WallRun();

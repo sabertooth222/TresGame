@@ -3,7 +3,7 @@
 #include "TresCharState_Cinematic.h"
 #include "TresEnemyState_e_dw402_Cinematic.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresEnemyState_e_dw402_Cinematic : public UTresCharState_Cinematic {
     GENERATED_BODY()
 public:

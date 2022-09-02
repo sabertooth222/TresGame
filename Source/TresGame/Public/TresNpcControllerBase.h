@@ -1,38 +1,38 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "ETresFNpcAINpcMode.h"
 #include "TresAIController_BT.h"
 #include "TresNpcAILeadFinishDelegate.h"
 #include "TresNpcAILeadEndDelegate.h"
 #include "ETresChrUniqueID.h"
-#include "ETresFNpcAINpcMode.h"
 #include "ETresFNpcAIStyle_Battle.h"
 #include "TresNpcControllerBase.generated.h"
 
-class ATresNpcAILeadSplineActor;
 class UTresNpcAILeadSplineController;
-class UTresNpcAIBattleController;
 class AActor;
+class UTresNpcAIBattleController;
+class ATresNpcAILeadSplineActor;
 class UBehaviorTree;
 class UBlackboardComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresNpcControllerBase : public ATresAIController_BT {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresNpcAILeadFinish OnLeadFinish;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresNpcAILeadEnd OnLeadEnd;
     
 protected:
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresChrUniqueID m_ChrUniqueID;
     
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresNpcAILeadSplineController* m_LeadSplineController;
     
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresNpcAIBattleController* m_BattleController;
     
 public:
@@ -58,34 +58,34 @@ public:
     UFUNCTION(BlueprintCallable)
     void ResetCancelEventName();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsPlayerBeingAttackedByEnemy() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsNpcModeWalk() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsLeadSub() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsLeadMoveTypeToRun() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsLeadLeaderWaiting() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsLeadGoal() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UTresNpcAILeadSplineController* GetLeadSplineController() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ETresFNpcAINpcMode GetCurrentNpcModeType() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UBlackboardComponent* GetBlackboardComponent();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UTresNpcAIBattleController* GetBattleController() const;
     
     UFUNCTION(BlueprintCallable)
@@ -94,13 +94,13 @@ public:
     UFUNCTION(BlueprintCallable)
     void DEBUG_SetNpcAIStyle_Battle(ETresFNpcAIStyle_Battle InNpcAIStyle_Battle);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool CanNpcMode() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool CanLeadWait() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool CanLead() const;
     
     UFUNCTION(BlueprintCallable)
@@ -109,7 +109,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void CancelLead();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool CanbeSwirlUpDamageReactionByEnemy() const;
     
 };

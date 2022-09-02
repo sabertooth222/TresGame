@@ -3,14 +3,14 @@
 #include "Matinee/InterpTrackInst.h"
 #include "TresInterpTrackInstFloatParticleParam.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresInterpTrackInstFloatParticleParam : public UInterpTrackInst {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ResetFloat;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 GroupID;
     
     UTresInterpTrackInstFloatParticleParam();

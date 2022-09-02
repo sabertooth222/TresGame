@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TresAIController.h"
 #include "GameplayTagContainer.h"
+#include "TresAIController.h"
 #include "TresAIController_BT.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresAIController_BT : public ATresAIController {
     GENERATED_BODY()
 public:
@@ -21,19 +21,19 @@ public:
     UFUNCTION(BlueprintCallable)
     void ResetAttackPermission();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool HasAttackPermissionTicket();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool HasAttackPermission();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetTimeSinceAIStarted() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FGameplayTag GetCurrentAttackPermissionTicket();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FGameplayTag GetCurrentAttackPermission();
     
 };

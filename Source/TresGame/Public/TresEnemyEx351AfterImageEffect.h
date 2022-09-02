@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct FTresEnemyEx351AfterImageEffect {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* WarpEffectData;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* VisibleEffectData;
     
     TRESGAME_API FTresEnemyEx351AfterImageEffect();

@@ -3,14 +3,14 @@
 #include "TresNpcBTDecoratorBase.h"
 #include "TresNpcBTDecorator_n_ex009_ComboHitCheck.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcBTDecorator_n_ex009_ComboHitCheck : public UTresNpcBTDecoratorBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_ComboCount;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_ComboHitState;
     
     UTresNpcBTDecorator_n_ex009_ComboHitCheck();

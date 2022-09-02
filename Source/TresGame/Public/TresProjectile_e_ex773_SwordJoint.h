@@ -5,11 +5,11 @@
 
 class USQEX_ParticleAttachDataAsset;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresProjectile_e_ex773_SwordJoint : public ATresCharPawnBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USQEX_ParticleAttachDataAsset* m_UniqueEffectDataAsset;
     
     ATresProjectile_e_ex773_SwordJoint();

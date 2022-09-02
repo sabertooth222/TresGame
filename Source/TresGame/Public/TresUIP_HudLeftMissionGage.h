@@ -4,12 +4,12 @@
 #include "TresUIPreloadInfo.h"
 #include "TresUIP_HudLeftMissionGage.generated.h"
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class UTresUIP_HudLeftMissionGage : public UTresUIP_HudParts {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FTresUIPreloadInfo m_PreloadInfo;
     
 public:

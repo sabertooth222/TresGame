@@ -3,7 +3,7 @@
 #include "GameFramework/Actor.h"
 #include "TresGimmickBouncyPetArea.generated.h"
 
-UCLASS(Config=Game)
+UCLASS(Blueprintable, Config=Game)
 class ATresGimmickBouncyPetArea : public AActor {
     GENERATED_BODY()
 public:

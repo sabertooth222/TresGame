@@ -3,7 +3,7 @@
 #include "TresLocomotionDefinitionFlyCodeDriven.h"
 #include "TresMove1_e_ex367_Caution.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresMove1_e_ex367_Caution : public UTresLocomotionDefinitionFlyCodeDriven {
     GENERATED_BODY()
 public:

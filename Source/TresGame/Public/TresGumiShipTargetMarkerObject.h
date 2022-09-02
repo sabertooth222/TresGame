@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct FTresGumiShipTargetMarkerObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UGFxObject* m_pRoot;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UGFxObject* m_pLockAnm;
     
     TRESGAME_API FTresGumiShipTargetMarkerObject();

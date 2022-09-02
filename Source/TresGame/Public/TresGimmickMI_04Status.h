@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FTresGimmickMI_04Status {
     GENERATED_BODY()
 public:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FSQEX_SplineMoverExecutor SplineMover;
     
     TRESGAME_API FTresGimmickMI_04Status();

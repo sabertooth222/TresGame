@@ -3,7 +3,7 @@
 #include "WildDanceActionParamBase_e_ex358.h"
 #include "WildDanceJinraiFirstActionParam_e_ex358.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UWildDanceJinraiFirstActionParam_e_ex358 : public UWildDanceActionParamBase_e_ex358 {
     GENERATED_BODY()
 public:

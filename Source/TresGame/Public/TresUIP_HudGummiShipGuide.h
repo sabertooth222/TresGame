@@ -4,18 +4,18 @@
 #include "TresGumiShipGuideObjects.h"
 #include "TresUIP_HudGummiShipGuide.generated.h"
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class UTresUIP_HudGummiShipGuide : public UTresGumiShipUISubParts {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(Transient)
+    UPROPERTY(EditAnywhere, Transient)
     FTresGumiShipGuideObjects m_WorldGuide[5];
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FTresGumiShipGuideObjects m_MarkerGuide;
     
-    UPROPERTY(Transient)
+    UPROPERTY(EditAnywhere, Transient)
     FTresGumiShipGuideObjects m_EnemyGuide[10];
     
 public:

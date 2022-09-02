@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FTresGameOverHintEnemyInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresEnemyUniqueID ID;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FName> AttackID;
     
     TRESGAME_API FTresGameOverHintEnemyInfo();

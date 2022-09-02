@@ -5,11 +5,11 @@
 
 class USpotLightComponent;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class TRESGAME_API ATresEventSpotLightPawn : public ATresEventPawnBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USpotLightComponent* MySpotLight;
     
     ATresEventSpotLightPawn();

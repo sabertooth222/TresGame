@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "TresGumiShipEnemyGroupWipeOutData.h"
 #include "ETresGumiShipBattleMissionRankType.h"
 #include "TresGumiShipActorCompoBase.h"
 #include "ETresGumiShipBattleMissionEndFactorType.h"
-#include "TresGumiShipEnemyGroupWipeOutData.h"
 #include "ETresGumiShipBonusType.h"
 #include "TresGumiShipMissionMgr.generated.h"
 
 class AActor;
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTresGumiShipMissionMgr : public UTresGumiShipActorCompoBase {
     GENERATED_BODY()
 public:
@@ -25,37 +25,37 @@ public:
     
     UTresGumiShipMissionMgr();
 protected:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnTargetWipeOut();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnResultRetry();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnRankConfirmedResult();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnOneEnemyGroupWipeOut(const FTresGumiShipEnemyGroupWipeOutData& rEnemyGroupWipeOutData);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnFinishedResultConfirm(int32 dSelectedIndex);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnFinishedResult();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnFinishedRailSlide();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnFinishedInfomation();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnDefeated(const AActor* pTarget);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnChangeHpOfPlayer(const int32 dOldHp, const int32 dNewHp, const float fRatio);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnCauseDamage(const AActor* pTarget, const float fDamage);
     
 };

@@ -3,7 +3,7 @@
 #include "TresCharState_DodgeRoll.h"
 #include "TresPlayerState_DodgeRoll.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_DodgeRoll : public UTresCharState_DodgeRoll {
     GENERATED_BODY()
 public:

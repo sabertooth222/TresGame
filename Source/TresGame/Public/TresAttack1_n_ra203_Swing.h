@@ -3,7 +3,7 @@
 #include "TresNpcAttackDefinitionBase.h"
 #include "TresAttack1_n_ra203_Swing.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAttack1_n_ra203_Swing : public UTresNpcAttackDefinitionBase {
     GENERATED_BODY()
 public:

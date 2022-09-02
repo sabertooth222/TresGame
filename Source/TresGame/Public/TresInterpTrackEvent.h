@@ -4,7 +4,7 @@
 #include "ETresFadeTrack_TheaterMode.h"
 #include "TresInterpTrackEvent.generated.h"
 
-UCLASS(CollapseCategories)
+UCLASS(Blueprintable, CollapseCategories)
 class TRESGAME_API UTresInterpTrackEvent : public UInterpTrackEvent {
     GENERATED_BODY()
 public:

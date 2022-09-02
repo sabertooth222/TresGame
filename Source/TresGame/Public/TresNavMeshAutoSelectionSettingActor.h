@@ -3,7 +3,7 @@
 #include "GameFramework/Actor.h"
 #include "TresNavMeshAutoSelectionSettingActor.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresNavMeshAutoSelectionSettingActor : public AActor {
     GENERATED_BODY()
 public:

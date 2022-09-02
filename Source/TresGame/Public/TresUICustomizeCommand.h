@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FTresUICustomizeCommand {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresCommandKind> CommandKind;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString HelpTextNamespaceKey;
     
     TRESGAME_API FTresUICustomizeCommand();

@@ -5,13 +5,13 @@
 #include "UObject/NoExportTypes.h"
 #include "TresProjectile_e_ex015_TOYBomb.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresProjectile_e_ex015_TOYBomb : public ATresProjectileStaticMeshBase {
     GENERATED_BODY()
 public:
     ATresProjectile_e_ex015_TOYBomb();
 protected:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnProjectileBounce(const FHitResult& ImpactResult, const FVector& ImpactVelocity);
     
 };

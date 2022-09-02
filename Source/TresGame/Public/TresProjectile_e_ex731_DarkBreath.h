@@ -3,14 +3,14 @@
 #include "TresProjectileBase.h"
 #include "TresProjectile_e_ex731_DarkBreath.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresProjectile_e_ex731_DarkBreath : public ATresProjectileBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bNoSmokeEffectOnGuard;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fSmokeEffectTime;
     
     ATresProjectile_e_ex731_DarkBreath();

@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FTresWorldAppendAnimSetUnit {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UTresAnimSet*> m_AnimSets;
     
     TRESGAME_API FTresWorldAppendAnimSetUnit();

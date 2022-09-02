@@ -3,14 +3,14 @@
 #include "BehaviorTree/BTDecorator.h"
 #include "TresBTDecorator_e_ex044_CheckHeight.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTDecorator_e_ex044_CheckHeight : public UBTDecorator {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fCheckHeight;
     
-    UPROPERTY(AdvancedDisplay, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fPoleTurnRadius;
     
     UTresBTDecorator_e_ex044_CheckHeight();

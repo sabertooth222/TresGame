@@ -6,14 +6,14 @@
 class USwfMovie;
 class UObject;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresUIDataAssetOlaf : public UTresUIDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USwfMovie* SwfAssetHudOlaf;
     
-    UPROPERTY(VisibleDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UObject*> OlafSwfRefAssets;
     
     UTresUIDataAssetOlaf();

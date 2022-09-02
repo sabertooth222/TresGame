@@ -4,11 +4,11 @@
 #include "GameplayTagContainer.h"
 #include "TresBTDecorator_GoalCheck.generated.h"
 
-UCLASS(Deprecated, NotPlaceable)
+UCLASS(Blueprintable, Deprecated, NotPlaceable)
 class UDEPRECATED_TresBTDecorator_GoalCheck : public UBTDecorator {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayTag Goal;
     
     UDEPRECATED_TresBTDecorator_GoalCheck();

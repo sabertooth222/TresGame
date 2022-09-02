@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct FTresInterpTrackActorVoiceKey {
     GENERATED_BODY()
 public:
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_Time;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresActorVoice* m_ActorVoice;
     
     TRESGAME_API FTresInterpTrackActorVoiceKey();

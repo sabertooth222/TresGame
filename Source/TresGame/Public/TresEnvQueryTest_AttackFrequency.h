@@ -3,7 +3,7 @@
 #include "EnvironmentQuery/EnvQueryTest.h"
 #include "TresEnvQueryTest_AttackFrequency.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresEnvQueryTest_AttackFrequency : public UEnvQueryTest {
     GENERATED_BODY()
 public:

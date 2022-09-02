@@ -1,24 +1,24 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TresUICampCharacterParam.h"
 #include "UObject/Object.h"
+#include "TresUICampCharacterParam.h"
 #include "TresCampController.generated.h"
 
 class UTresUIManager;
 class UTresUIP_CampMenu;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresCampController : public UObject {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresUIManager* m_UIManager;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresUIP_CampMenu* m_CampMenu;
     
-    UPROPERTY(Transient)
+    UPROPERTY(EditAnywhere, Transient)
     FTresUICampCharacterParam m_PartyParams[5];
     
 public:

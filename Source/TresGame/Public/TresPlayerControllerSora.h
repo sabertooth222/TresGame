@@ -3,7 +3,7 @@
 #include "TresPlayerControllerBase.h"
 #include "TresPlayerControllerSora.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresPlayerControllerSora : public ATresPlayerControllerBase {
     GENERATED_BODY()
 public:

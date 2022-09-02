@@ -3,7 +3,7 @@
 #include "UObject/Object.h"
 #include "TresGeneratorPlacePaternFromSplineBase.generated.h"
 
-UCLASS(Abstract, EditInlineNew)
+UCLASS(Abstract, Blueprintable, EditInlineNew)
 class UTresGeneratorPlacePaternFromSplineBase : public UObject {
     GENERATED_BODY()
 public:

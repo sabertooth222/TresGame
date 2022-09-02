@@ -4,20 +4,20 @@
 #include "UObject/NoExportTypes.h"
 #include "ClusterInfo.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FClusterInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float VoxelSize;
     
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBox Bounds;
     
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FIntVector VoxelNum;
     
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(EditAnywhere)
     TMap<uint32, uint32> OverlapInfo;
     
     TRESGAME_API FClusterInfo();

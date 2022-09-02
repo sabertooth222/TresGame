@@ -4,10 +4,10 @@
 #include "Engine/LatentActionManager.h"
 #include "TresSoKcKeyHoleManager.generated.h"
 
-class ATresSoKcKeyHoleManager;
 class UObject;
+class ATresSoKcKeyHoleManager;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresSoKcKeyHoleManager : public AActor {
     GENERATED_BODY()
 public:
@@ -15,25 +15,25 @@ public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FBgmChangeThresholdOverSignature, uint8, EventDispatchCount);
     
 private:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FKeyHoleFirstConnectedSignature _OnKeyHoleFirstConnected;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBgmChangeThresholdOverSignature _OnBgmChangeThresholdOver;
     
 public:
     ATresSoKcKeyHoleManager();
-    UFUNCTION(BlueprintPure, meta = (WorldContext = "WorldContextObject"))
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static ATresSoKcKeyHoleManager* Get(const UObject* WorldContext);
     
 private:
-    UFUNCTION(BlueprintCallable, meta = (WorldContext = "WorldContextObject", LatentInfo = "LatentInfo", Latent))
+    UFUNCTION(BlueprintCallable)
     static void _WaitAllKeyHoleGimmickRegister(const UObject* WorldContextObject, FLatentActionInfo LatentInfo);
     
-    UFUNCTION(BlueprintCallable, meta = (WorldContext = "WorldContextObject"))
+    UFUNCTION(BlueprintCallable)
     static bool _SetConnectNormaKeyHoleCount(const UObject* WorldContextObject, int32 NormaKeyHoleCount);
     
-    UFUNCTION(BlueprintCallable, meta = (WorldContext = "WorldContextObject"))
+    UFUNCTION(BlueprintCallable)
     static bool _SetAllKeyHoleGimmicksVisibility(const UObject* WorldContextObject, bool bVisibility);
     
 };

@@ -10,13 +10,13 @@ USTRUCT(BlueprintType)
 struct FTresEffectUnit {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere, Export, NoClear)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, NoClear, meta=(AllowPrivateAccess=true))
     UParticleSystem* MyParticleSystem;
     
-    UPROPERTY(EditAnywhere, Export, NoClear)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, NoClear, meta=(AllowPrivateAccess=true))
     USoundBase* MySoundCue;
     
-    UPROPERTY(EditAnywhere, Export, NoClear)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, NoClear, meta=(AllowPrivateAccess=true))
     FTresDecalData MyTresDecal;
     
     TRESGAME_API FTresEffectUnit();

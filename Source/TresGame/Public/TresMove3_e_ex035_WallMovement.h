@@ -3,12 +3,12 @@
 #include "TresLocomotionDefinitionBase.h"
 #include "TresMove3_e_ex035_WallMovement.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresMove3_e_ex035_WallMovement : public UTresLocomotionDefinitionBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_MoveTime;
     
 public:

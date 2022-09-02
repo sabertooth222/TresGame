@@ -3,7 +3,7 @@
 #include "GameFramework/Actor.h"
 #include "TresAIPoint.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresAIPoint : public AActor {
     GENERATED_BODY()
 public:

@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FTresComNpcMeshSetDatas {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_MeshName;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresComNpcReplaceMeshData> m_MeshLists;
     
     TRESGAME_API FTresComNpcMeshSetDatas();

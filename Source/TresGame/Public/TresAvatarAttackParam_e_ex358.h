@@ -9,10 +9,10 @@ USTRUCT(BlueprintType)
 struct FTresAvatarAttackParam_e_ex358 {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly, Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UWildDanceActionParamBase_e_ex358* ActionData;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresAvatarAttackAppearParam_e_ex358> AppearParamList;
     
     TRESGAME_API FTresAvatarAttackParam_e_ex358();

@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FTresEnemyEx711_OuterScaffoldGroupParam {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresEnemyEx711_OuterScaffoldParam> m_OuterScaffoldParamArray;
     
     TRESGAME_API FTresEnemyEx711_OuterScaffoldGroupParam();

@@ -5,17 +5,17 @@
 
 class UTresTaskBase;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UTresTaskExecutor : public UTresTaskExecuterBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UTresTaskBase*> m_TaskArrayGarbage;
     
 public:
     UTresTaskExecutor();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     TArray<UTresTaskBase*> GetTaskArray();
     
     UFUNCTION(BlueprintCallable)

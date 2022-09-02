@@ -3,7 +3,7 @@
 #include "WildDanceActionParamBase_e_ex358.h"
 #include "WildDanceDisableGenerateStateActionParamBase_e_ex358.generated.h"
 
-UCLASS(Abstract, EditInlineNew)
+UCLASS(Abstract, Blueprintable, EditInlineNew)
 class UWildDanceDisableGenerateStateActionParamBase_e_ex358 : public UWildDanceActionParamBase_e_ex358 {
     GENERATED_BODY()
 public:

@@ -3,7 +3,7 @@
 #include "TresCameraSpecialShip.h"
 #include "TresCameraSpecialShipDive.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresCameraSpecialShipDive : public ATresCameraSpecialShip {
     GENERATED_BODY()
 public:

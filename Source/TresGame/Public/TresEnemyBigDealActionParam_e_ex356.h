@@ -9,13 +9,13 @@ USTRUCT(BlueprintType)
 struct FTresEnemyBigDealActionParam_e_ex356 {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresEnemyBigDealAction_e_ex356::Type> ActionType;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ActionTime;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundBase* VoiceData;
     
     TRESGAME_API FTresEnemyBigDealActionParam_e_ex356();

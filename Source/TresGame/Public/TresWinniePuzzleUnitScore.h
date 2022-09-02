@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FTresWinniePuzzleUnitScore {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 UnitNum;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 Score;
     
     TRESGAME_API FTresWinniePuzzleUnitScore();

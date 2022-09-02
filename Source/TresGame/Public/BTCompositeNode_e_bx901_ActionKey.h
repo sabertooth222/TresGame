@@ -3,7 +3,7 @@
 #include "BehaviorTree/BTCompositeNode.h"
 #include "BTCompositeNode_e_bx901_ActionKey.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UBTCompositeNode_e_bx901_ActionKey : public UBTCompositeNode {
     GENERATED_BODY()
 public:

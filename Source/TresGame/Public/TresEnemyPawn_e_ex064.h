@@ -1,36 +1,36 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ex064WallPartsParameter.h"
+#include "ex064Parameter.h"
 #include "TresEnemyPawnBase.h"
 #include "ex064ShipBodyParameter.h"
-#include "ex064Parameter.h"
+#include "ex064WallPartsParameter.h"
 #include "TresEnemyPawn_e_ex064.generated.h"
 
 class UTresSkeletalMeshComponent;
 class ATresEnemyPawn_e_ex064_Wall;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemyPawn_e_ex064 : public ATresEnemyPawnBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresSkeletalMeshComponent* m_ShipBodyMesh;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresSkeletalMeshComponent* m_ShipMastMesh;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     Fex064ShipBodyParameter m_ShipParam;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     Fex064WallPartsParameter m_WallPartsParam;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     Fex064Parameter m_Param;
     
 private:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<ATresEnemyPawn_e_ex064_Wall*> m_WallPartsList;
     
 public:
@@ -38,13 +38,13 @@ public:
     UFUNCTION(BlueprintCallable)
     bool RequestWallPartsRespawn(float waitRespawnTime);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetShipHP() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetCurrentWallPartsNum() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetCurrentWallPartsMaxNum() const;
     
     UFUNCTION(BlueprintCallable)

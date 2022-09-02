@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FTresWinniePuzzleScoreEvalutionInOneTurnParam {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 ScoreInOneTurn;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     WinniePuzzleComboEvalution ScoreEvalution;
     
     TRESGAME_API FTresWinniePuzzleScoreEvalutionInOneTurnParam();

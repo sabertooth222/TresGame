@@ -1,7 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=NavigationSystem -FallbackName=NavigationSystem
-#include "AI/Navigation/NavigationSystem.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "TresNavigationSystem.generated.h"
@@ -9,12 +8,12 @@
 class UObject;
 class ANavLinkProxy;
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API UTresNavigationSystem : public UNavigationSystem {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<FName, ANavLinkProxy*> m_NavLinkProxyMap;
     
 public:

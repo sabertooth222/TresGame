@@ -3,7 +3,7 @@
 #include "GFxMoviePlayer.h"
 #include "TresMoviePlayer.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresMoviePlayer : public UGFxMoviePlayer {
     GENERATED_BODY()
 public:

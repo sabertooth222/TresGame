@@ -5,18 +5,18 @@
 
 class UTresNpcAIStyle_Battle;
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTresNpcAIBattleController : public UActorComponent {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UTresNpcAIStyle_Battle*> m_BattleStyleList;
     
 public:
     UTresNpcAIBattleController();
 protected:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnChangeBattleModeFunc(bool bBattleMode);
     
 };

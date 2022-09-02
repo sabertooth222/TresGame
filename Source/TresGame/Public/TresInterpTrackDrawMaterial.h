@@ -4,11 +4,11 @@
 #include "TresInterpTrackDrawMaterialKey.h"
 #include "TresInterpTrackDrawMaterial.generated.h"
 
-UCLASS(CollapseCategories)
+UCLASS(Blueprintable, CollapseCategories)
 class TRESGAME_API UTresInterpTrackDrawMaterial : public UInterpTrackFloatBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere, EditFixedSize)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, EditFixedSize, meta=(AllowPrivateAccess=true))
     TArray<FTresInterpTrackDrawMaterialKey> m_Keys;
     
     UTresInterpTrackDrawMaterial();

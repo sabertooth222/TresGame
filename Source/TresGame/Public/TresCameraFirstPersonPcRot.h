@@ -7,7 +7,7 @@
 class ATresCameraFirstPersonPcRot;
 class UObject;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresCameraFirstPersonPcRot : public ATresCameraFirstPerson {
     GENERATED_BODY()
 public:

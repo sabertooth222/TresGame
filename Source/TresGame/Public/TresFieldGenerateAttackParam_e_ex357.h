@@ -2,20 +2,20 @@
 #include "CoreMinimal.h"
 #include "TresFieldGenerateAttackParam_e_ex357.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresFieldGenerateAttackParam_e_ex357 {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bIsFieldPenetrateAttackStart: 1;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float StartTime;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float IntervalTime;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float LifeTime;
     
     TRESGAME_API FTresFieldGenerateAttackParam_e_ex357();

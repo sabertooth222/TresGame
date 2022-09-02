@@ -3,7 +3,7 @@
 #include "TresCameraNormal.h"
 #include "TresCameraPhotoHologram.generated.h"
 
-UCLASS(NotPlaceable)
+UCLASS(Blueprintable, NotPlaceable)
 class ATresCameraPhotoHologram : public ATresCameraNormal {
     GENERATED_BODY()
 public:

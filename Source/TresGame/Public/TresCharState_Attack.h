@@ -3,7 +3,7 @@
 #include "TresStateBase.h"
 #include "TresCharState_Attack.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresCharState_Attack : public UTresStateBase {
     GENERATED_BODY()
 public:

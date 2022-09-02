@@ -4,11 +4,11 @@
 #include "ETresBodyCollReactionType.h"
 #include "TresBTDecorator_ScopedReactionChange.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTDecorator_ScopedReactionChange : public UBTDecorator {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresBodyCollReactionType eBodyReactionType_;
     
     UTresBTDecorator_ScopedReactionChange();

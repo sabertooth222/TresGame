@@ -3,30 +3,30 @@
 #include "TresGumiShipCharaPawnBase.h"
 #include "TresGumiShipEnemyPartsBase.generated.h"
 
-class USQEX_ParticleAttachDataAsset;
 class ATresGumiShipEnemyPawnBase;
+class USQEX_ParticleAttachDataAsset;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresGumiShipEnemyPartsBase : public ATresGumiShipCharaPawnBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_EnemyPartsID;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USQEX_ParticleAttachDataAsset* m_pEffectAttachDataAsset;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bUsingAutoDestorySystem;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bDestoryWithMeshFadeOut;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fPartsDestoryFadeTime;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fPartsMeshHideDelayTime;
     
 public:
@@ -40,16 +40,16 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetAllMeshVisibility(bool Visibility);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsLockOnPermissionOK() const;
     
     UFUNCTION(BlueprintCallable)
     void HideEnemyParts(bool HiddenEnable);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ATresGumiShipEnemyPawnBase* GetPartsOwnerEnemy() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FName GetEnemyPartsID() const;
     
 };

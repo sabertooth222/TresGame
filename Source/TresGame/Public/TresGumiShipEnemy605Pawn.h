@@ -3,7 +3,7 @@
 #include "TresGumiShipSplinePathMoveTypeEnemyBase.h"
 #include "TresGumiShipEnemy605Pawn.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresGumiShipEnemy605Pawn : public ATresGumiShipSplinePathMoveTypeEnemyBase {
     GENERATED_BODY()
 public:

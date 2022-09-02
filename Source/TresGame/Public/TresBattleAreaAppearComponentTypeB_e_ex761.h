@@ -4,24 +4,24 @@
 #include "TresBattleAreaAppearComponentBase_e_ex761.h"
 #include "TresBattleAreaAppearComponentTypeB_e_ex761.generated.h"
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTresBattleAreaAppearComponentTypeB_e_ex761 : public UTresBattleAreaAppearComponentBase_e_ex761 {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 m_bIsCameraAimTarget: 1;
     
-    UPROPERTY(EditInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_AppearDelayTime;
     
-    UPROPERTY(EditInstanceOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresEnemy_e_ex761_BattleAreaAttack::Type> m_AttackType;
     
-    UPROPERTY(EditInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 m_bEnableOverrideAppearTurnSpeed: 1;
     
-    UPROPERTY(EditInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_OverrideTurnSpeed;
     
 public:

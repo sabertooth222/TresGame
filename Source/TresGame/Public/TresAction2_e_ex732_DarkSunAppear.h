@@ -3,11 +3,11 @@
 #include "TresActionDefinitionBase.h"
 #include "TresAction2_e_ex732_DarkSunAppear.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAction2_e_ex732_DarkSunAppear : public UTresActionDefinitionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bAppearAnim;
     
     UTresAction2_e_ex732_DarkSunAppear();

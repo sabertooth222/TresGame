@@ -7,47 +7,47 @@
 #include "TresEnemyPawn_e_ex361.generated.h"
 
 class USoundBase;
-class ATresProjectileGenerator_e_ex361_DarkHand_Thunder;
 class ATresProjectileGenerator_e_ex361_DarkMine;
-class UParticleSystem;
+class ATresProjectileGenerator_e_ex361_DarkHand_Thunder;
 class UParticleSystemComponent;
+class UParticleSystem;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemyPawn_e_ex361 : public ATresEnemyXIIILPawnBase {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bAura;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresProjectileGenerator_e_ex361_DarkMine> m_pro_DarkMineGeneratorClass;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresProjectileGenerator_e_ex361_DarkHand_Thunder> m_pro_DarkHand_ThunderGeneratorClass;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 m_pro_bTestDeleteThunder: 1;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresEnemyEx361CounterAfterActionPeriodInfo> m_AfterActionPeriod;
     
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresProjectileGenerator_e_ex361_DarkMine* m_DarkMineManager;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_pro_KabutowariDecalEffData;
     
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* m_KabutowariDecalEff;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<USoundBase*> m_DarkBiteVoiceDataArray;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<USoundBase*> m_RevengeVoiceDataArray;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_VoiceSocketName;
     
 public:
@@ -63,10 +63,10 @@ protected:
     bool IsThunderGenerator();
     
 public:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool IsHitCounterAttack();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool IsCounterSuccess();
     
     UFUNCTION(BlueprintCallable)

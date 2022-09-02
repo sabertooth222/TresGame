@@ -1,21 +1,21 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "TresProjectileBase.h"
 #include "TresEnemyEx773_FlareAttractParam.h"
+#include "TresProjectileBase.h"
 #include "TresProjectile_e_ex773_FlareOmen.generated.h"
 
 class ATresActor_e_ex773_Attract;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresProjectile_e_ex773_FlareOmen : public ATresProjectileBase {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresEnemyEx773_FlareAttractParam> m_AttractParamArray;
     
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresActor_e_ex773_Attract> m_pro_AttractClass;
     
 public:

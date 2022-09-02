@@ -3,11 +3,11 @@
 #include "TresLevelEntitySequenceCondition.h"
 #include "TresLevelEntitySequenceCondition_Or.generated.h"
 
-UCLASS(BlueprintType, EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class TRESGAME_API UTresLevelEntitySequenceCondition_Or : public UTresLevelEntitySequenceCondition {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     TArray<UTresLevelEntitySequenceCondition*> m_Conditions;
     
     UTresLevelEntitySequenceCondition_Or();

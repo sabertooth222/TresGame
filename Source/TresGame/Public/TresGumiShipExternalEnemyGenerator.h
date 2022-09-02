@@ -4,13 +4,13 @@
 #include "TresGumiShipEnemyGroupWipeOutData.h"
 #include "TresGumiShipExternalEnemyGenerator.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresGumiShipExternalEnemyGenerator : public ATresGumiShipEnemyGenerator {
     GENERATED_BODY()
 public:
     ATresGumiShipExternalEnemyGenerator();
 protected:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnGeneratedEnemyGroupWipeOut(const FTresGumiShipEnemyGroupWipeOutData& rEnemyGroupWipeOutData);
     
 };

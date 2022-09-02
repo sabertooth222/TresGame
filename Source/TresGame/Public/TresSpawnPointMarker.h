@@ -5,11 +5,11 @@
 
 class ATresSpawnPointManagementVolume;
 
-UCLASS(Transient)
+UCLASS(Blueprintable, Transient)
 class TRESGAME_API ATresSpawnPointMarker : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresSpawnPointManagementVolume* m_ManagementVolume;
     
     ATresSpawnPointMarker();

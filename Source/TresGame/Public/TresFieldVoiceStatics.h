@@ -3,7 +3,7 @@
 #include "UObject/Object.h"
 #include "TresFieldVoiceStatics.generated.h"
 
-UCLASS(Abstract, BlueprintType, NotPlaceable)
+UCLASS(Abstract, Blueprintable, NotPlaceable)
 class UTresFieldVoiceStatics : public UObject {
     GENERATED_BODY()
 public:
@@ -11,13 +11,13 @@ public:
     UFUNCTION(BlueprintCallable)
     static void StopAllFieldVoice(UObject* WorldContextObject);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsPlayingFieldVoiceEx(float waitElapsedTime);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsPlayingFieldVoice();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static float GetPlayingVoiceTime();
     
 };

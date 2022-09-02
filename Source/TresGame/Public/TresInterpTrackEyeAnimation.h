@@ -3,7 +3,7 @@
 #include "TresInterpTrackFaceAnimation.h"
 #include "TresInterpTrackEyeAnimation.generated.h"
 
-UCLASS(CollapseCategories)
+UCLASS(Blueprintable, CollapseCategories)
 class TRESGAME_API UTresInterpTrackEyeAnimation : public UTresInterpTrackFaceAnimation {
     GENERATED_BODY()
 public:

@@ -3,7 +3,7 @@
 #include "TresReactorComponent.h"
 #include "TresPhotoHologramReactorComponent.generated.h"
 
-UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTresPhotoHologramReactorComponent : public UTresReactorComponent {
     GENERATED_BODY()
 public:

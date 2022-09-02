@@ -3,7 +3,7 @@
 #include "Animation/AnimNotifies/AnimNotifyState.h"
 #include "TresAnimNotifyState_Bonamik_ReinitializeSimulationPose.generated.h"
 
-UCLASS(CollapseCategories, EditInlineNew, MinimalAPI)
+UCLASS(Blueprintable, CollapseCategories, EditInlineNew, MinimalAPI)
 class UTresAnimNotifyState_Bonamik_ReinitializeSimulationPose : public UAnimNotifyState {
     GENERATED_BODY()
 public:

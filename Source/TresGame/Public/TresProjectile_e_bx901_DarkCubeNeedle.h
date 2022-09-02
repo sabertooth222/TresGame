@@ -3,7 +3,7 @@
 #include "TresProjectileBase.h"
 #include "TresProjectile_e_bx901_DarkCubeNeedle.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class ATresProjectile_e_bx901_DarkCubeNeedle : public ATresProjectileBase {
     GENERATED_BODY()
 public:

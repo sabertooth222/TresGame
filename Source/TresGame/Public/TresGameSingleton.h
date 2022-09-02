@@ -5,14 +5,14 @@
 
 class UTresGameInstance;
 
-UCLASS(Transient)
+UCLASS(Blueprintable, Transient)
 class TRESGAME_API UTresGameSingleton : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bInitialized;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresGameInstance* TresGameInstance;
     
     UTresGameSingleton();

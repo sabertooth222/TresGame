@@ -4,11 +4,11 @@
 
 class UTresUICommandInfoBase;
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresCockpitActionCmdInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresUICommandInfoBase* m_pUICommandInfo;
     
     TRESGAME_API FTresCockpitActionCmdInfo();

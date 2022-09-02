@@ -3,7 +3,7 @@
 #include "Matinee/InterpTrackInst.h"
 #include "TresInterpTrackInstWeaponControl.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API UTresInterpTrackInstWeaponControl : public UInterpTrackInst {
     GENERATED_BODY()
 public:

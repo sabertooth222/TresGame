@@ -4,42 +4,42 @@
 #include "ETresItemDefWeapon.h"
 #include "TresPhotoHologramWeaponTable.generated.h"
 
-class UTexture;
 class UTresPhotoHologramWeaponAsset;
+class UTexture;
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresPhotoHologramWeaponTable : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString m_Comment;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_Index;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresItemDefWeapon m_WeaponItemID;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString m_WeaponNameNamespaceKey;
     
-    UPROPERTY(EditDefaultsOnly)
-    UTexture* m_IconAsset;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TAssetPtr<UTexture> m_IconAsset;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_UIPriority;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_MapSetId;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_NewMarkIndex;
     
-    UPROPERTY(EditDefaultsOnly)
-    UTresPhotoHologramWeaponAsset* m_WeaponAsset;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TAssetPtr<UTresPhotoHologramWeaponAsset> m_WeaponAsset;
     
-    UPROPERTY(EditDefaultsOnly)
-    TArray<UTresPhotoHologramWeaponAsset*> m_WeaponAssetList;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<TAssetPtr<UTresPhotoHologramWeaponAsset>> m_WeaponAssetList;
     
     TRESGAME_API FTresPhotoHologramWeaponTable();
 };

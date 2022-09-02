@@ -7,18 +7,18 @@ class UTresTheaterData;
 class UTresUIManager;
 class UTresUIP_Theater;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresTheaterController : public UObject {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresUIManager* m_UIManager;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresUIP_Theater* m_Theater;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresTheaterData* m_TheaterData;
     
 public:

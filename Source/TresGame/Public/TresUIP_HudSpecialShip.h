@@ -6,126 +6,126 @@
 
 class UTresASProxyTresControlsBitmapNumber;
 class UTresUIP_HudParts;
+class ATresVehiclePawnSpecialShip;
 class UGFxObject;
 class ATresPlayerControllerBase;
-class ATresVehiclePawnSpecialShip;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresUIP_HudSpecialShip : public UTresCockpitParts {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresHudSpecialShipTargetInfo> m_targetInfoAry;
     
 private:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresUIP_HudParts* m_pHudParts;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UGFxObject* m_pGFxRoot;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UGFxObject* m_pGFxScopeMove;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UGFxObject* m_pGFxScopeMoveGauge;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UGFxObject* m_pGFxScopeMoveScope;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UGFxObject* m_pGFxScopeMoveReload;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UGFxObject* m_pGFxSpecialShip;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UGFxObject* m_pGFxShipSpeed;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UGFxObject* m_pGFxSpeedGg;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UGFxObject* m_pGFxShipHp;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UGFxObject* m_pGFxShipIcon;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UGFxObject* m_pGFxIconEff;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UGFxObject* m_pGFxShipBase;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UGFxObject* m_pGFxGoalMeterP;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UGFxObject* m_pGFxGoalMeterL;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UGFxObject* m_pGFxGoalMeterBase;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UGFxObject* m_pGFxShipGoalMarker;
     
-    UPROPERTY(Transient)
+    UPROPERTY(EditAnywhere, Transient)
     UGFxObject* m_pGFxShipGoalArrow[2];
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UGFxObject* m_pGFxShipNaviMap;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresASProxyTresControlsBitmapNumber* m_pGFxGoalMarker;
     
-    UPROPERTY(Transient)
+    UPROPERTY(EditAnywhere, Transient)
     UTresASProxyTresControlsBitmapNumber* m_pGFxGoalArrow[2];
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     UGFxObject* m_pGFxActionCmdList[4];
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     UGFxObject* m_pGFxActionCmdData[4];
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     UGFxObject* m_pGFxActionCmdAct[4];
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     UGFxObject* m_pGFxActionCmdText[4];
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     UGFxObject* m_pGFxActionCmdCount[4];
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     UGFxObject* m_pGFxActionCmdGgAnm[4];
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     UGFxObject* m_pGFxActionCmdTime[4];
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     UGFxObject* m_pGFxActionCmdTime2[4];
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     UGFxObject* m_pGFxCmdActLogoGg[3];
     
-    UPROPERTY(Transient)
+    UPROPERTY(EditAnywhere, Transient)
     UGFxObject* m_pGFxActionPadBtn[4];
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UGFxObject* m_pGFxActEvTopPadBtn;
     
-    UPROPERTY(Transient)
+    UPROPERTY(EditAnywhere, Transient)
     UGFxObject* m_pGFxExModePadBtn[4];
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresPlayerControllerBase* m_pPlayerControllerBase;
     
-    UPROPERTY(Transient)
+    UPROPERTY(EditAnywhere, Transient)
     TWeakObjectPtr<ATresVehiclePawnSpecialShip> m_pVehiclePawnSpecialShip;
     
 public:
     UTresUIP_HudSpecialShip();
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     int32 OnCallback(int32 ID, int32 Param);
     
 };

@@ -4,33 +4,33 @@
 #include "TresStylePawnBase.h"
 #include "TresStylePawnSHPegasus.generated.h"
 
-class ATresCharPawnBase;
 class ATresProjectileBase;
 class ATresAccompanyPawnBase;
+class ATresCharPawnBase;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresStylePawnSHPegasus : public ATresStylePawnBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 m_bDispDebugLine: 1;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresProjectileBase> m_ProjThunder;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresAccompanyPawnBase> m_SHChariotAssets;
     
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresCharPawnBase* m_pTargetActor;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresCharPawnBase* m_pNextActor;
     
 public:
     ATresStylePawnSHPegasus();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetDeltaYaw() const;
     
 };

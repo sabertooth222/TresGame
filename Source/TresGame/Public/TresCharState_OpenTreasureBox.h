@@ -6,14 +6,14 @@
 class ATresTreasureBox;
 class ATresCameraAnim;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresCharState_OpenTreasureBox : public UTresStateBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresTreasureBox* m_pTreasureBox;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresCameraAnim* m_Camera;
     
     UTresCharState_OpenTreasureBox();

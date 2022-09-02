@@ -8,74 +8,74 @@
 class ATresEnemyManager_XIIIE;
 class USoundBase;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemyXIIIEPawnBase : public ATresEnemyXIIIPawnBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 m_bDebugActiveSecondAnnihilation: 1;
     
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 m_bIsAreaEPawn: 1;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresEnemyXIIIEPlayVoiceKind m_RevengePlayVoiceKind;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundBase* m_RevengeVoice;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_VisibleTime;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresEnemyManager_XIIIE> m_ManagerAsset;
     
 public:
     ATresEnemyXIIIEPawnBase();
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool IsStartFirstAnnihilation();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool IsMyAnnihilationAttackTurn();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool IsLeaderPawn();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool IsEndAnnihilation();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool IsDuringWarp();
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     bool IsDuringLeaderChangeOrFatalAttackCooldown();
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     bool IsDuringLeaderChangeCooldown();
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     bool IsDuringFatalAttackCooldown();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool IsDebugActiveSecondAnnihilation();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool IsActivatedFirstAnnihilation();
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void DebugSetLeader(int32 SetLeaderNum);
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     bool CanUseLeaderChange();
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     bool CanUseFatalAttack();
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     bool CanUseAnnihilation();
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     bool CanStartLeaderChangeOrFatalAttack();
     
 };

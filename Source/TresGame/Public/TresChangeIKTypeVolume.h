@@ -3,7 +3,7 @@
 #include "TresVolume.h"
 #include "TresChangeIKTypeVolume.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresChangeIKTypeVolume : public ATresVolume {
     GENERATED_BODY()
 public:

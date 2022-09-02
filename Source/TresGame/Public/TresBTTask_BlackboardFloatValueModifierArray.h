@@ -4,11 +4,11 @@
 #include "BehaviorTree/BTTaskNode.h"
 #include "TresBTTask_BlackboardFloatValueModifierArray.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTTask_BlackboardFloatValueModifierArray : public UBTTaskNode {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresBlackboardFloatValueModifier> m_FloatValueModifiers;
     
     UTresBTTask_BlackboardFloatValueModifierArray();

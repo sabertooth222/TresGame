@@ -3,7 +3,7 @@
 #include "TresAttackDefinitionBase.h"
 #include "TresAttack2_e_ex038_AeroStorm.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAttack2_e_ex038_AeroStorm : public UTresAttackDefinitionBase {
     GENERATED_BODY()
 public:

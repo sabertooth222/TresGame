@@ -5,15 +5,15 @@
 
 class UAnimationAsset;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_GimmickAttach : public UTresStateBase {
     GENERATED_BODY()
 public:
     UTresPlayerState_GimmickAttach();
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnAnimStarted(UAnimationAsset* InAnimAsset);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnAnimEnded(UAnimationAsset* InAnimAsset, bool bInterrupted);
     
 };

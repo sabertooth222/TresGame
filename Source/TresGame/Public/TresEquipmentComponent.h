@@ -8,68 +8,68 @@
 #include "TresEquipWeaponSlotWork.h"
 #include "TresEquipmentComponent.generated.h"
 
+class UTresWearformSet;
 class ATresPawnBase;
-class UTresWeaponSet;
 class USkeletalMeshComponent;
 class ATresWeaponBase;
-class USQEX_ParticleAttachDataAsset;
-class UTresWearformSet;
+class UTresWeaponSet;
 class UTresFormAbilitySet;
 class UTresPlayerMagicSet;
 class UTresProjectileSet;
+class USQEX_ParticleAttachDataAsset;
 class UTresChrBaseParam;
 
-UCLASS(BlueprintType, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTresEquipmentComponent : public UActorComponent, public ITresAnimInterface, public ITresNotifyInterface {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresPawnBase* m_AttachPawn;
     
-    UPROPERTY(BlueprintReadWrite, Export, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     USkeletalMeshComponent* m_AttachSkin;
     
-    UPROPERTY(BlueprintReadWrite, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<ATresWeaponBase*> m_WeaponEquips;
     
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresWeaponSet* MyWeaponSet;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    uint32 m_bIsFixedEquip: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bIsFixedEquip: 1;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresEquipmentAssetUnit> m_FixedEquips;
     
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresWearformSet* m_WearformSet;
     
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresFormAbilitySet* m_FormAbilityAsset;
     
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresPlayerMagicSet* m_MagicSet;
     
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresProjectileSet* m_ProjectileSet;
     
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USQEX_ParticleAttachDataAsset* m_CmnFormChangeChargeEffect;
     
-    UPROPERTY(DuplicateTransient, Transient, BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresPlayerMagicSet* m_ReplaceMagicSet;
     
-    UPROPERTY(DuplicateTransient, Transient, BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresProjectileSet* m_ReplaceProjectileSet;
     
-    UPROPERTY(DuplicateTransient, Transient, BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<FTresEquipmentAccompanyPawnAssetUnit> m_ReplaceAccompanyPawnAsset;
     
-    UPROPERTY(Transient)
+    UPROPERTY(EditAnywhere, Transient)
     FTresEquipWeaponSlotWork m_EquipSlots[3];
     
-    UPROPERTY(DuplicateTransient, Export, Transient, BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UTresChrBaseParam* m_pBaseParam;
     
 public:

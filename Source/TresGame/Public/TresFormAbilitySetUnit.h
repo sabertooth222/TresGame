@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct FTresFormAbilitySetUnit {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<ETresAbilityKind> m_Ability;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<ETresTextAbilityKind> m_TextAbility;
     
     TRESGAME_API FTresFormAbilitySetUnit();

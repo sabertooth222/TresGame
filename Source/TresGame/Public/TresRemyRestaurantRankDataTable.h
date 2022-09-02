@@ -6,20 +6,20 @@
 #include "RemyMilestone.h"
 #include "TresRemyRestaurantRankDataTable.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresRemyRestaurantRankDataTable : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     RemyRestaurantRank Rank;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 NecessaryPoint;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     RemyMilestone Milestone;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     RemyKitchenGrade KitchenGrade;
     
     TRESGAME_API FTresRemyRestaurantRankDataTable();

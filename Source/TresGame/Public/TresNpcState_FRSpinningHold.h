@@ -3,7 +3,7 @@
 #include "TresCharState_FRSpinningHold.h"
 #include "TresNpcState_FRSpinningHold.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcState_FRSpinningHold : public UTresCharState_FRSpinningHold {
     GENERATED_BODY()
 public:

@@ -3,17 +3,17 @@
 #include "BehaviorTree/BTDecorator.h"
 #include "TresBTDecorator_OverrideCameraLockon.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTDecorator_OverrideCameraLockon : public UBTDecorator {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_LockonLimitYaw;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bEnableLockonMoveRotation;
     
-    UPROPERTY(VisibleDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bOverrided;
     
     UTresBTDecorator_OverrideCameraLockon();

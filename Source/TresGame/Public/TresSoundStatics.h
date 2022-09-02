@@ -1,28 +1,28 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "ETresSoundModes.h"
 #include "UObject/Object.h"
+#include "Engine/LatentActionManager.h"
 #include "ETresWorldStaticBGMTypes.h"
 #include "ETresCategoryVolumeLayers.h"
-#include "Engine/LatentActionManager.h"
-#include "ETresSoundModes.h"
 #include "UObject/NoExportTypes.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=StringAssetReference -FallbackName=StringAssetReference
 #include "TresSoundStatics.generated.h"
 
-class UAudioComponent;
 class USoundBase;
+class UAudioComponent;
 class USoundConcurrency;
 class UTresFieldVoice;
 
-UCLASS(Abstract, BlueprintType, NotPlaceable)
+UCLASS(Abstract, Blueprintable, NotPlaceable)
 class UTresSoundStatics : public UObject {
     GENERATED_BODY()
 public:
     UTresSoundStatics();
-    UFUNCTION(BlueprintCallable, meta = (WorldContext = "WorldContextObject", LatentInfo = "LatentInfo", Latent))
+    UFUNCTION(BlueprintCallable)
     static void TresWaitForEndOfFieldVoice(UObject* WorldContextObject, FLatentActionInfo LatentInfo);
     
-    UFUNCTION(BlueprintCallable, meta = (WorldContext = "WorldContextObject"))
+    UFUNCTION(BlueprintCallable)
     static UAudioComponent* TresSpawnSound2D_BP(const UObject* WorldContextObject, USoundBase* Sound, float VolumeMultiplier, float PitchMultiplier, float StartTime, USoundConcurrency* ConcurrencySettings, bool bPersistAcrossLevelTransition, bool bAutoDestroy);
     
     UFUNCTION(BlueprintCallable)
@@ -43,19 +43,19 @@ public:
     UFUNCTION(BlueprintCallable)
     static void TresSound_SetBGVolume(TEnumAsByte<ETresCategoryVolumeLayers::Type> Layer, float Volume, float FadeTime);
     
-    UFUNCTION(BlueprintCallable, meta = (WorldContext = "WorldContextObject"))
+    UFUNCTION(BlueprintCallable)
     static int32 TresSound_GetAudiobleNumSoundsAtLocation(UObject* WorldContextObject, FVector Location);
     
-    UFUNCTION(BlueprintCallable, meta = (WorldContext = "WorldContextObject"))
+    UFUNCTION(BlueprintCallable)
     static void TresPlaySound2D_BP(const UObject* WorldContextObject, USoundBase* Sound, float VolumeMultiplier, float PitchMultiplier, float StartTime, USoundConcurrency* ConcurrencySettings);
     
-    UFUNCTION(BlueprintCallable, meta = (WorldContext = "WorldContextObject"))
+    UFUNCTION(BlueprintCallable)
     static void TresPlayFieldVoice(UObject* WorldContextObject, UTresFieldVoice* Asset, bool CanSkip);
     
-    UFUNCTION(BlueprintCallable, meta = (WorldContext = "WorldContextObject"))
+    UFUNCTION(BlueprintCallable)
     static FStringAssetReference TresGetWorldStaticBGMAssetReference(UObject* WorldContextObject, TEnumAsByte<ETresWorldStaticBGMTypes::Type> Type);
     
-    UFUNCTION(BlueprintCallable, meta = (WorldContext = "WorldContextObject"))
+    UFUNCTION(BlueprintCallable)
     static USoundBase* TresGetWorldStaticBGMAsset(UObject* WorldContextObject, TEnumAsByte<ETresWorldStaticBGMTypes::Type> Type);
     
 };

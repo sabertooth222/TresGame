@@ -4,17 +4,17 @@
 #include "TresUIDoFParams.h"
 #include "TresUISlowModeDataAsset.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresUISlowModeDataAsset : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresUIDoFParams DoFParams;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DoFTransitionTime;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float SlowRate;
     
     UTresUISlowModeDataAsset();

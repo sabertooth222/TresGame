@@ -9,10 +9,10 @@ USTRUCT(BlueprintType)
 struct FTresParam_e_ex773_SpawnParam {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Interval;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<AActor> SpawnClass;
     
     TRESGAME_API FTresParam_e_ex773_SpawnParam();

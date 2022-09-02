@@ -3,7 +3,7 @@
 #include "Engine/StaticMeshActor.h"
 #include "TresGimmickBX_Kousokugaitou.generated.h"
 
-UCLASS(Abstract, Config=Game)
+UCLASS(Abstract, Blueprintable, Config=Game)
 class ATresGimmickBX_Kousokugaitou : public AStaticMeshActor {
     GENERATED_BODY()
 public:

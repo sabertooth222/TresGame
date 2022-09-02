@@ -3,7 +3,7 @@
 #include "Animation/SkeletalMeshActor.h"
 #include "TresGumiShipSandBall625Pawn.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresGumiShipSandBall625Pawn : public ASkeletalMeshActor {
     GENERATED_BODY()
 public:

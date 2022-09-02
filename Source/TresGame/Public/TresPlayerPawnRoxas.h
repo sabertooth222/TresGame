@@ -8,7 +8,7 @@ class AController;
 class AActor;
 class UParticleSystem;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresPlayerPawnRoxas : public ATresPlayerPawnTemplate {
     GENERATED_BODY()
 public:
@@ -19,7 +19,7 @@ private:
     UParticleSystem* m_ParticleSystem;
     
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresOnDamage OnDamageEvent;
     
     ATresPlayerPawnRoxas();

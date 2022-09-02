@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FSlideShowFrameData {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTexture* Texture;
     
     TRESGAME_API FSlideShowFrameData();

@@ -3,7 +3,7 @@
 #include "EnvironmentQuery/Tests/EnvQueryTest_Distance.h"
 #include "TresEnvQueryTest_MinDistance.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresEnvQueryTest_MinDistance : public UEnvQueryTest_Distance {
     GENERATED_BODY()
 public:

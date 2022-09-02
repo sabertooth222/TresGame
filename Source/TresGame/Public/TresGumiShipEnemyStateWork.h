@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "TresGumiShipEnemyStateWork.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresGumiShipEnemyStateWork {
     GENERATED_BODY()
 public:

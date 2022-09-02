@@ -1,24 +1,24 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "BehaviorTree/BTDecorator.h"
 #include "EEX354_TargetMoveDir.h"
 #include "BehaviorTree/BehaviorTreeTypes.h"
-#include "BehaviorTree/BTDecorator.h"
 #include "TresBTDecorator_e_ex354_TargetMoveDirection.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTDecorator_e_ex354_TargetMoveDirection : public UBTDecorator {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlackboardKeySelector m_Target;
     
     UPROPERTY(EditAnywhere)
     TEnumAsByte<EEX354_TargetMoveDir> m_TargetMoveDir;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fAngleDiffRange;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fMinTargetVelocity;
     
     UTresBTDecorator_e_ex354_TargetMoveDirection();

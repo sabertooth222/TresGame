@@ -3,18 +3,18 @@
 #include "TresVolume.h"
 #include "TresNavMapVolume.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresNavMapVolume : public ATresVolume {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_DataTableKey;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_EnableNavMap;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_SwitchNavMapTime;
     
 public:

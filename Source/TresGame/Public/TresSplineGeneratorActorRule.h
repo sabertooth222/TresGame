@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FTresSplineGeneratorActorRule {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 SpawnPower;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresSplineGeneratorActorParam> ParamArray;
     
     TRESGAME_API FTresSplineGeneratorActorRule();

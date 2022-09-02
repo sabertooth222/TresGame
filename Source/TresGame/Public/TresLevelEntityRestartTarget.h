@@ -9,10 +9,10 @@ USTRUCT(BlueprintType)
 struct FTresLevelEntityRestartTarget {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresLevelEntityControlVolume* m_SequenceOwner;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresLevelEntityRestartSequence m_Sequence;
     
     TRESGAME_API FTresLevelEntityRestartTarget();

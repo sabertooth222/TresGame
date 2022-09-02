@@ -3,5 +3,5 @@
 #include "TresRecoveryHpMpFpLogInfo.h"
 #include "TresAI_BPEM_NotificationRecoveryHpMpFpLogInfoDelegate.generated.h"
 
-UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FTresAI_BPEM_NotificationRecoveryHpMpFpLogInfo, FTresRecoveryHpMpFpLogInfo, NotificationRecoveryHpMpFpLogInfo);
+UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FTresAI_BPEM_NotificationRecoveryHpMpFpLogInfo, FTresRecoveryHpMpFpLogInfo, NotificationRecoveryHpMpFpLogInfo);
 

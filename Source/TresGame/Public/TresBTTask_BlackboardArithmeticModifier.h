@@ -5,29 +5,29 @@
 #include "BehaviorTree/BehaviorTreeTypes.h"
 #include "TresBTTask_BlackboardArithmeticModifier.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTTask_BlackboardArithmeticModifier : public UTresBTTask_BlackboardValueModifierBase {
     GENERATED_BODY()
 public:
     UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresArithmeticModifierSource::Type> ValueTypeB;
     
-    UPROPERTY(VisibleDefaultsOnly)
-    uint32 bUseBlackboardB: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 bUseBlackboardB: 1;
     
-    UPROPERTY(VisibleDefaultsOnly)
-    uint32 bUsePropertyOrFunctionB: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 bUsePropertyOrFunctionB: 1;
     
-    UPROPERTY(VisibleDefaultsOnly)
-    uint32 bUseLiteralB: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 bUseLiteralB: 1;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlackboardKeySelector BlackboardKeyB;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName PropertyNameB;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float LiteralValueB;
     
     UTresBTTask_BlackboardArithmeticModifier();

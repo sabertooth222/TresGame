@@ -4,7 +4,7 @@
 #include "ETresCommandKind.h"
 #include "TresNpcBTDecorator_IsCureInfoCommand.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcBTDecorator_IsCureInfoCommand : public UTresNpcBTDecoratorBase {
     GENERATED_BODY()
 public:

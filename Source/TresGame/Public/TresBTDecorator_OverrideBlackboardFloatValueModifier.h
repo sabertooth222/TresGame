@@ -1,21 +1,21 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "BehaviorTree/BehaviorTreeTypes.h"
 #include "BehaviorTree/BTDecorator.h"
 #include "ETresDecoratorValueModifierMethod.h"
+#include "BehaviorTree/BehaviorTreeTypes.h"
 #include "TresBTDecorator_OverrideBlackboardFloatValueModifier.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTDecorator_OverrideBlackboardFloatValueModifier : public UBTDecorator {
     GENERATED_BODY()
 public:
     UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresDecoratorValueModifierMethod::Type> m_ValueModifierType;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlackboardKeySelector m_BlackboardKey;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_Value;
     
     UTresBTDecorator_OverrideBlackboardFloatValueModifier();

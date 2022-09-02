@@ -1,27 +1,27 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ATresFieldVoiceVolumeSignatureDelegate.h"
 #include "TresVolume.h"
+#include "ATresFieldVoiceVolumeSignatureDelegate.h"
 #include "TresFieldVoiceVolume.generated.h"
 
 class UTresFieldVoiceBluePrint;
 class UTresFieldVoiceCommonParam;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresFieldVoiceVolume : public ATresVolume {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_GroupName;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     TArray<UTresFieldVoiceBluePrint*> m_BluePrints;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresFieldVoiceCommonParam* m_pCommonParam;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FATresFieldVoiceVolumeSignature OnPlayFieldVoice;
     
 public:

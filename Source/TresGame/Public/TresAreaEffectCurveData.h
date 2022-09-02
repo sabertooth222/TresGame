@@ -2,23 +2,23 @@
 #include "CoreMinimal.h"
 #include "TresAreaEffectCurveData.generated.h"
 
-class UCurveFloat;
 class UCurveVector;
+class UCurveFloat;
 
 USTRUCT(BlueprintType)
 struct FTresAreaEffectCurveData {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UCurveVector* AreaBaseColorCurve;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UCurveVector* AreaBrightColorCurve;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UCurveVector* AreaDarkColorCurve;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UCurveFloat* AreaColorSynthesisCurve;
     
     TRESGAME_API FTresAreaEffectCurveData();

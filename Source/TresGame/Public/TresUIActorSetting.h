@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FTresUIActorSetting {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 LightSetIndex;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 PostProcessSetIndex;
     
     TRESGAME_API FTresUIActorSetting();

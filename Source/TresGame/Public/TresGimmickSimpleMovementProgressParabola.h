@@ -3,7 +3,7 @@
 #include "TresGimmickSimpleMovementProgressStraight.h"
 #include "TresGimmickSimpleMovementProgressParabola.generated.h"
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class UTresGimmickSimpleMovementProgressParabola : public UTresGimmickSimpleMovementProgressStraight {
     GENERATED_BODY()
 public:

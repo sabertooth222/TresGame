@@ -3,7 +3,7 @@
 #include "TresCharState_SpecialShip.h"
 #include "TresNpcState_SpecialShip.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcState_SpecialShip : public UTresCharState_SpecialShip {
     GENERATED_BODY()
 public:

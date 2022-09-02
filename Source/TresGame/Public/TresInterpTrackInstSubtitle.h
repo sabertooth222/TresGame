@@ -3,14 +3,14 @@
 #include "Matinee/InterpTrackInst.h"
 #include "TresInterpTrackInstSubtitle.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API UTresInterpTrackInstSubtitle : public UInterpTrackInst {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     uint32 m_WindowHandle;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_LastKeyIndex;
     
     UTresInterpTrackInstSubtitle();

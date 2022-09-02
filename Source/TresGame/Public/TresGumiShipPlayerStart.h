@@ -5,12 +5,12 @@
 
 class AActor;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresGumiShipPlayerStart : public ATresPlayerStart {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere)
     TWeakObjectPtr<AActor> m_pConnectedActor;
     
 public:

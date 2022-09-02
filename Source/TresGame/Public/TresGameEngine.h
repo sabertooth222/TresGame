@@ -3,7 +3,7 @@
 #include "Engine/GameEngine.h"
 #include "TresGameEngine.generated.h"
 
-UCLASS(MinimalAPI, NonTransient)
+UCLASS(Blueprintable, MinimalAPI, NonTransient)
 class UTresGameEngine : public UGameEngine {
     GENERATED_BODY()
 public:

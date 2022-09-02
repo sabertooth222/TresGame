@@ -4,43 +4,43 @@
 #include "GameFramework/Actor.h"
 #include "TresAtkCollManager.generated.h"
 
-class UTresDamageType;
 class UTresAtkCollComponent;
 class UParticleSystem;
+class UTresDamageType;
 
-UCLASS(NotPlaceable, Transient)
+UCLASS(Blueprintable, NotPlaceable, Transient)
 class ATresAtkCollManager : public AActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(DuplicateTransient, Export, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     TArray<UTresAtkCollComponent*> m_AtkCompList;
     
-    UPROPERTY(DuplicateTransient, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_CmnGuardReflectEffect;
     
-    UPROPERTY(DuplicateTransient, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_CmnStaggerReflectEffect;
     
-    UPROPERTY(DuplicateTransient, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_CmnInvincibleHitEffect;
     
-    UPROPERTY(DuplicateTransient, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_CmnCriticalHitEffect;
     
-    UPROPERTY(DuplicateTransient, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_CmnArmorHitEffect;
     
-    UPROPERTY(DuplicateTransient, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_CmnIgnoreGuardHitEffect;
     
-    UPROPERTY(DuplicateTransient, Transient)
+    UPROPERTY(DuplicateTransient, EditAnywhere, Transient)
     TSubclassOf<UTresDamageType> m_PhysDamageTypeClass[4];
     
-    UPROPERTY(DuplicateTransient, Transient)
+    UPROPERTY(DuplicateTransient, EditAnywhere, Transient)
     TMap<TWeakObjectPtr<AActor>, int32> m_CheeringList;
     
-    UPROPERTY(DuplicateTransient, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<AActor*> m_JoinForceTargetList;
     
 public:

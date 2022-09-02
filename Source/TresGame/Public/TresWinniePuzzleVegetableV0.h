@@ -8,21 +8,21 @@ class UTresWinniePuzzlePlayerUnitControllerBase;
 class UTresWinniePuzzleBossController;
 class UTresWinniePuzzleSlopeActionController;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresWinniePuzzleVegetableV0 : public ATresWinniePuzzleBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresWinniePuzzleUnitControllerBase* UnitCtrlBase;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresWinniePuzzlePlayerUnitControllerBase* PlayerUnitCtrlBase;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresWinniePuzzleSlopeActionController* SlopeActionCtrl;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresWinniePuzzleBossController* BossCtrl;
     
 public:

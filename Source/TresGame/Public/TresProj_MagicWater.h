@@ -3,16 +3,16 @@
 #include "TresProj_MagicBase.h"
 #include "TresProj_MagicWater.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresProj_MagicWater : public ATresProj_MagicBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly)
-    uint32 m_bSetFallingIfNoHoming: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bSetFallingIfNoHoming: 1;
     
-    UPROPERTY(EditDefaultsOnly)
-    uint32 m_bVikingShipSplash: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bVikingShipSplash: 1;
     
 public:
     ATresProj_MagicWater();

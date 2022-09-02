@@ -5,12 +5,12 @@
 
 class UTresFieldVoiceTask;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresFieldVoiceManager : public UObject {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UTresFieldVoiceTask*> TaskArray;
     
 public:

@@ -3,7 +3,7 @@
 #include "TresCharState_Bind.h"
 #include "TresPlayerState_Bind.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_Bind : public UTresCharState_Bind {
     GENERATED_BODY()
 public:

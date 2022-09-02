@@ -3,7 +3,7 @@
 #include "TresStylePawnBase.h"
 #include "TresStylePawnFLKraken.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresStylePawnFLKraken : public ATresStylePawnBase {
     GENERATED_BODY()
 public:

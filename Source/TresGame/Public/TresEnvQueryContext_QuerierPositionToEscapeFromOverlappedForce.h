@@ -3,7 +3,7 @@
 #include "EnvironmentQuery/EnvQueryContext.h"
 #include "TresEnvQueryContext_QuerierPositionToEscapeFromOverlappedForce.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UTresEnvQueryContext_QuerierPositionToEscapeFromOverlappedForce : public UEnvQueryContext {
     GENERATED_BODY()
 public:

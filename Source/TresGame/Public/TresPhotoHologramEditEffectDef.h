@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct FTresPhotoHologramEditEffectDef {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float TargetMaxRootSize;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* EditMarkerEffectData;
     
     TRESGAME_API FTresPhotoHologramEditEffectDef();

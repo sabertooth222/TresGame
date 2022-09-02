@@ -3,11 +3,11 @@
 #include "TresTimelineDataSection.h"
 #include "TresActorVoiceSubtitleSection.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class TRESGAME_API UTresActorVoiceSubtitleSection : public UTresTimelineDataSection {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString m_SubtitleKey;
     
     UTresActorVoiceSubtitleSection();

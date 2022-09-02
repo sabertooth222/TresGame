@@ -9,10 +9,10 @@ USTRUCT(BlueprintType)
 struct FOneCollInfo_e_ex359 {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 iNotifyParam;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresProjectile_e_ex359_Wave_OneCollision> pOneCollision;
     
     TRESGAME_API FOneCollInfo_e_ex359();

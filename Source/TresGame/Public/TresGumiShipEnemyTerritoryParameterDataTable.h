@@ -4,11 +4,11 @@
 #include "TresGumiShipEnemyTerritoryInfo.h"
 #include "TresGumiShipEnemyTerritoryParameterDataTable.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresGumiShipEnemyTerritoryParameterDataTable : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresGumiShipEnemyTerritoryInfo> m_Territory;
     
     TRESGAME_API FTresGumiShipEnemyTerritoryParameterDataTable();

@@ -6,21 +6,21 @@
 class UParticleSystem;
 class USplineComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresSplineParticleActor : public AActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_ParticleSystem;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_SpawnDistance;
     
-    UPROPERTY(EditDefaultsOnly)
-    uint32 m_bEnableSplineRotation: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bEnableSplineRotation: 1;
     
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USplineComponent* m_SplineComponent;
     
 public:

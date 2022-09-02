@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FTresBlackSphere_e_ex352 {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresBlackSphereSpawnParams_e_ex352> m_BlackSphereSpawnParams;
     
     TRESGAME_API FTresBlackSphere_e_ex352();

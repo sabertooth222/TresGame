@@ -3,11 +3,11 @@
 #include "Engine/DataTable.h"
 #include "TresGummiStickerDataTable.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresGummiStickerDataTable : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_nTextureName;
     
     TRESGAME_API FTresGummiStickerDataTable();

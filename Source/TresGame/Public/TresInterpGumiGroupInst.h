@@ -3,7 +3,7 @@
 #include "TresInterpGroupInst.h"
 #include "TresInterpGumiGroupInst.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API UTresInterpGumiGroupInst : public UTresInterpGroupInst {
     GENERATED_BODY()
 public:

@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct FTresDebugMenuMotionObjectProperty {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresDebugMenuMotionObjectPropertyType> m_PropertyType;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresDebugMenuMotionObjectKeyFrame> m_KeyFrames;
     
     TRESGAME_API FTresDebugMenuMotionObjectProperty();

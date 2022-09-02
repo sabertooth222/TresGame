@@ -6,18 +6,18 @@
 class UDataTable;
 class UStaticMesh;
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class ATresSoKcGameMode : public ATresGameMode {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UDataTable* m_pCommonParameterDataTable;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UStaticMesh* m_pInstancingDrawKeyHoleStaticMesh;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSet<int32> m_BgmChangeEventThresholdList;
     
 public:

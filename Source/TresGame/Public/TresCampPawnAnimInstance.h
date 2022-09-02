@@ -1,22 +1,22 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TresCharAnimInstance.h"
 #include "ETresCampPawnAnimTypeID.h"
+#include "TresCharAnimInstance.h"
 #include "TresCampPawnAnimInstance.generated.h"
 
 class ATresCampPawnBase;
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class UTresCampPawnAnimInstance : public UTresCharAnimInstance {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(EditAnywhere, Transient)
     TEnumAsByte<ETresCampPawnAnimTypeID> m_AnimType;
     
 public:
     UTresCampPawnAnimInstance();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ATresCampPawnBase* TryGetTresCampPawnOwner();
     
 };

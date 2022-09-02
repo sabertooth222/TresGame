@@ -4,11 +4,11 @@
 #include "ETresFNpcAICombiState.h"
 #include "TresNpcBTDecorator_IsCombiState.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcBTDecorator_IsCombiState : public UTresNpcBTDecoratorBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresFNpcAICombiState m_State;
     
     UTresNpcBTDecorator_IsCombiState();

@@ -8,15 +8,15 @@
 class UTresAttack_e_dw405_Base;
 class UEnvQuery;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class UTresAttack_e_dw405_ComboBase : public UTresAttackDefinitionBase, public ITresAction_e_dw405_ComboInterface, public ITresAction_e_dw405_Interface {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UEnvQuery* m_EQSQuery;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresAttack_e_dw405_Base* m_CurrentState;
     
 public:

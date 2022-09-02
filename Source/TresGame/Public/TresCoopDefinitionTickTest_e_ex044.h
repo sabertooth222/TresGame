@@ -6,16 +6,16 @@
 
 class UEnvQuery;
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresCoopDefinitionTickTest_e_ex044 : public UTresCoopDefinitionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UEnvQuery* QueryTemplate;
     
     UTresCoopDefinitionTickTest_e_ex044();
 protected:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool IsReady(const FTresCoopDefinitionParamBP& Param) const;
     
 };

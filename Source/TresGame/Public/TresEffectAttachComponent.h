@@ -1,28 +1,28 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "Components/SceneComponent.h"
+#include "UObject/NoExportTypes.h"
 #include "SQEX_CommonEffectData.h"
 #include "SQEX_DesignatedAttachData.h"
 #include "UObject/NoExportTypes.h"
 #include "TresEffectAttachComponent.generated.h"
 
-class USQEX_ParticleAttachDataAsset;
 class UMeshComponent;
+class USQEX_ParticleAttachDataAsset;
 class UObject;
 class AActor;
 
-UCLASS(BlueprintType, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTresEffectAttachComponent : public USceneComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FSQEX_CommonEffectData> CommonEffectList;
     
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FSQEX_DesignatedAttachData> DesignatedAttachDataList;
     
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<USQEX_ParticleAttachDataAsset*> CommonAttachDataList;
     
     UTresEffectAttachComponent();

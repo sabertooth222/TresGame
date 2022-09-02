@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FTresEnemyEx711_GimmickBouncyPetsGroupParam {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresEnemyEx711_GimmickBouncyPetsParam> m_GimmickBouncyPetsParamArray;
     
     TRESGAME_API FTresEnemyEx711_GimmickBouncyPetsGroupParam();

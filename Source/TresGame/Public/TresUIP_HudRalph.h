@@ -6,15 +6,15 @@
 
 class UGFxObject;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresUIP_HudRalph : public UTresCockpitParts {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UGFxObject* m_RalphSwitch;
     
-    UPROPERTY(Transient)
+    UPROPERTY(EditAnywhere, Transient)
     FHudRalph_RalphBtn m_RalphBtns[4];
     
 public:

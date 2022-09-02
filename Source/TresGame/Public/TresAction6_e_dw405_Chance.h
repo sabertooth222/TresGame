@@ -3,7 +3,7 @@
 #include "TresActionDefinitionBase.h"
 #include "TresAction6_e_dw405_Chance.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAction6_e_dw405_Chance : public UTresActionDefinitionBase {
     GENERATED_BODY()
 public:

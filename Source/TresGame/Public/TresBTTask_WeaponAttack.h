@@ -7,23 +7,23 @@
 
 class UTresAttackDefinitionWeaponBase;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTTask_WeaponAttack : public UBTTaskNode {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlackboardKeySelector m_Target;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlackboardKeySelector m_Destination;
     
-    UPROPERTY(VisibleDefaultsOnly)
-    uint32 m_bUseBBAttackDefinitionWeapon: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bUseBBAttackDefinitionWeapon: 1;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlackboardKeySelector m_BBAttackDefinitionWeapon;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UTresAttackDefinitionWeaponBase> m_AttackDefinitionWeapon;
     
     UTresBTTask_WeaponAttack();

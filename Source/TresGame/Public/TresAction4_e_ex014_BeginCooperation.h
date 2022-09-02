@@ -3,7 +3,7 @@
 #include "TresActionDefinitionBase.h"
 #include "TresAction4_e_ex014_BeginCooperation.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAction4_e_ex014_BeginCooperation : public UTresActionDefinitionBase {
     GENERATED_BODY()
 public:

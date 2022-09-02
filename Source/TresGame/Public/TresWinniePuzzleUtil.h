@@ -3,7 +3,7 @@
 #include "UObject/Object.h"
 #include "TresWinniePuzzleUtil.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresWinniePuzzleUtil : public UObject {
     GENERATED_BODY()
 public:

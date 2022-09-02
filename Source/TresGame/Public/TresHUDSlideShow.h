@@ -3,22 +3,22 @@
 #include "TresHUDBase.h"
 #include "TresHUDSlideShow.generated.h"
 
-class USoundBase;
-class UTresUIP_SlideShow;
 class UTresUIDataAssetSlideShow;
+class UTresUIP_SlideShow;
+class USoundBase;
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class ATresHUDSlideShow : public ATresHUDBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresUIDataAssetSlideShow* m_UIDataAssetSlideShow;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresUIP_SlideShow* m_pSlideShow;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     USoundBase* m_pSlideBgm;
     
 public:

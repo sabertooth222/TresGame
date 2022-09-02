@@ -2,5 +2,5 @@
 #include "CoreMinimal.h"
 #include "TresAccompanyPawnDisappearSignatureDelegate.generated.h"
 
-UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE(FTresAccompanyPawnDisappearSignature);
+UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE(FTresAccompanyPawnDisappearSignature);
 

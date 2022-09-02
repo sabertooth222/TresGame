@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FTresInterpTrackIndirectLightingCacheQualityControlKey {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_Time;
     
     UPROPERTY(EditAnywhere)

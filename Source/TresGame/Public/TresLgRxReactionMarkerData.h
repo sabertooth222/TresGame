@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FTresLgRxReactionMarkerData {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_SocketName;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector m_Offset;
     
     TRESGAME_API FTresLgRxReactionMarkerData();

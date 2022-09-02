@@ -5,11 +5,11 @@
 
 class ATresCharPawnBase;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcState_Idle : public UTresCharState_Idle {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresCharPawnBase* m_pLookAtTargetPawn;
     
     UTresNpcState_Idle();

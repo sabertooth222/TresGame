@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FTresEnemy_e_ex773_LivelyFlarePillarGenClass {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName ClassName;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName AttackName;
     
     TRESGAME_API FTresEnemy_e_ex773_LivelyFlarePillarGenClass();

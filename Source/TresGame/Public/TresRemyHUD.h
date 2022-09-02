@@ -4,29 +4,29 @@
 #include "TresHUDBase.h"
 #include "TresRemyHUD.generated.h"
 
-class UTresSharedUMG;
 class UTresUIDataAssetRemy;
-class UTresUIP_HudRemy;
+class UTresSharedUMG;
 class UTresUIP_MenuRemy;
+class UTresUIP_HudRemy;
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class ATresRemyHUD : public ATresHUDBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UTresSharedUMG> DebugUMGRef;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresUIDataAssetRemy* UIAsset;
     
 private:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresSharedUMG* m_debugUMG;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresUIP_HudRemy* m_HudRemy;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresUIP_MenuRemy* m_MenuRemy;
     
 public:

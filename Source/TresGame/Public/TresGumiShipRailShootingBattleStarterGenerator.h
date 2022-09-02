@@ -5,32 +5,32 @@
 #include "Engine/EngineTypes.h"
 #include "TresGumiShipRailShootingBattleStarterGenerator.generated.h"
 
-class ATriggerBase;
-class ATresGumiShipEnemyMoveRouteSpline;
 class UPrimitiveComponent;
+class ATresGumiShipEnemyMoveRouteSpline;
+class ATriggerBase;
 class AActor;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresGumiShipRailShootingBattleStarterGenerator : public ATresGumiShipEnemyGenerator {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresGumiShipSplinePathMoveParameter m_EncountSymbolMovementParameter;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresGumiShipEnemyMoveRouteSpline* m_pEncountSymbolMoveRouteSpline;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATriggerBase* m_pEncountSymbolActivateTrigger;
     
 public:
     ATresGumiShipRailShootingBattleStarterGenerator();
 private:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnLeaveActivateTriggerVolume(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnEnterActivateTriggerVolume(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
     
 };

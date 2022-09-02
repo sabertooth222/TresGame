@@ -5,7 +5,7 @@
 #include "ETresGameLevelID.h"
 #include "TresBTDecorator_GameLevelCheck.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTDecorator_GameLevelCheck : public UBTDecorator {
     GENERATED_BODY()
 public:

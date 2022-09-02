@@ -9,19 +9,19 @@ USTRUCT(BlueprintType)
 struct FTresBlackboardVectorValueModifierInOutParam {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlackboardKeySelector BlackboardKeyValueA;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bUseBlackboardKey: 1;
     
     UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresBlackboardValueModifierInOutMethod::Type> MethodType;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector Value;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlackboardKeySelector BlackboardKeyValueB;
     
     TRESGAME_API FTresBlackboardVectorValueModifierInOutParam();

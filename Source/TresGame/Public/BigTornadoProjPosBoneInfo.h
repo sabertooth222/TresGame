@@ -6,7 +6,7 @@ USTRUCT(BlueprintType)
 struct FBigTornadoProjPosBoneInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_BoneName;
     
     TRESGAME_API FBigTornadoProjPosBoneInfo();

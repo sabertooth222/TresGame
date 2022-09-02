@@ -3,7 +3,7 @@
 #include "Matinee/InterpTrackInstMove.h"
 #include "TresInterpTrackInstRelativeMove.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresInterpTrackInstRelativeMove : public UInterpTrackInstMove {
     GENERATED_BODY()
 public:

@@ -3,7 +3,7 @@
 #include "UObject/Object.h"
 #include "TresObjectDataBuffer.generated.h"
 
-UCLASS(Transient)
+UCLASS(Blueprintable, Transient)
 class UTresObjectDataBuffer : public UObject {
     GENERATED_BODY()
 public:

@@ -5,14 +5,14 @@
 #include "ETresEnvQueryTest_MercunaWallDistanceDir.h"
 #include "TresEnvQueryTest_MercunaWallDistance.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresEnvQueryTest_MercunaWallDistance : public UEnvQueryTest {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAIDataProviderFloatValue m_Distance;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresEnvQueryTest_MercunaWallDistanceDir::Type> m_Dir;
     
     UTresEnvQueryTest_MercunaWallDistance();

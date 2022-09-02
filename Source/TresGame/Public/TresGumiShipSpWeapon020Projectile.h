@@ -1,26 +1,26 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "Engine/EngineTypes.h"
 #include "TresGumiShipActualProjectile.h"
 #include "UObject/NoExportTypes.h"
-#include "Engine/EngineTypes.h"
 #include "TresGumiShipSpWeapon020Projectile.generated.h"
 
-class AActor;
-class UTresGumiShipDefCollisionSetCompo;
 class UPrimitiveComponent;
+class UTresGumiShipDefCollisionSetCompo;
+class AActor;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresGumiShipSpWeapon020Projectile : public ATresGumiShipActualProjectile {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresGumiShipDefCollisionSetCompo* m_pDefCollision;
     
 public:
     ATresGumiShipSpWeapon020Projectile();
 protected:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnComponentHit(UPrimitiveComponent* pHitComponent, AActor* pOtherActor, UPrimitiveComponent* pOtherComp, FVector vNormalImpulse, const FHitResult& rHit);
     
 };

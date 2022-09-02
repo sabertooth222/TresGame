@@ -1,21 +1,21 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TresWearformSetUnit.h"
 #include "Engine/DataAsset.h"
+#include "TresWearformSetUnit.h"
 #include "TresWearformSet.generated.h"
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UTresWearformSet : public UDataAsset {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     FTresWearformSetUnit m_Forms[11];
     
-    UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
-    uint32 m_bEnableColorChange: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bEnableColorChange: 1;
     
-    UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FName> m_ColorChangeMaterials;
     
 public:

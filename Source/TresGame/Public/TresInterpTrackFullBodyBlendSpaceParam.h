@@ -3,11 +3,11 @@
 #include "TresInterpTrackBlendSpaceControl.h"
 #include "TresInterpTrackFullBodyBlendSpaceParam.generated.h"
 
-UCLASS(CollapseCategories)
+UCLASS(Blueprintable, CollapseCategories)
 class TRESGAME_API UTresInterpTrackFullBodyBlendSpaceParam : public UTresInterpTrackBlendSpaceControl {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName SlotName;
     
     UTresInterpTrackFullBodyBlendSpaceParam();

@@ -4,7 +4,7 @@
 #include "TresTaskBase.h"
 #include "TresTimerTask.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresTimerTask : public UTresTaskBase {
     GENERATED_BODY()
 public:
@@ -24,7 +24,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void Init();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetNowTime();
     
     UFUNCTION(BlueprintCallable)

@@ -3,7 +3,7 @@
 #include "TresCharState_SlopeSlide.h"
 #include "TresNpcState_SlopeSlide.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcState_SlopeSlide : public UTresCharState_SlopeSlide {
     GENERATED_BODY()
 public:

@@ -3,7 +3,7 @@
 #include "TresGimmickLauncher.h"
 #include "TresGimmickFZ_Jump.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresGimmickFZ_Jump : public ATresGimmickLauncher {
     GENERATED_BODY()
 public:

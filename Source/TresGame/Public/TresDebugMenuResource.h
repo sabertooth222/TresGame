@@ -1,47 +1,47 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "TresDebugMenuMotionObjectProperty.h"
 #include "UObject/Object.h"
 #include "TresDebugMenuTextResource.h"
 #include "TresDebugMenuImageResource.h"
 #include "TresDebugMenuElement.h"
 #include "TresDebugMenuMovieClipResource.h"
 #include "TresDebugMenuCustomPart.h"
-#include "TresDebugMenuMotionObjectProperty.h"
 #include "TresDebugMenuMotionObject.h"
 #include "TresDebugMenuResource.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresDebugMenuResource : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FString> m_TextureNames;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_NumBaseTextureName;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresDebugMenuImageResource> m_ImageResources;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresDebugMenuTextResource> m_TextResources;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresDebugMenuMovieClipResource> m_MovieClips;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresDebugMenuElement> m_Elements;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_RootElementIndex;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresDebugMenuCustomPart> m_CustomParts;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresDebugMenuMotionObjectProperty> m_MotionObjectProperties;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresDebugMenuMotionObject> m_MotionObjects;
     
     UTresDebugMenuResource();

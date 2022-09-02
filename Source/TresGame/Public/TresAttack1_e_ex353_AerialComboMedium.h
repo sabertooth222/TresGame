@@ -3,14 +3,14 @@
 #include "TresAttack1_e_ex353_AerialComboBase.h"
 #include "TresAttack1_e_ex353_AerialComboMedium.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAttack1_e_ex353_AerialComboMedium : public UTresAttack1_e_ex353_AerialComboBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_RootMotionMinScale;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_RootMotionMaxScale;
     
     UTresAttack1_e_ex353_AerialComboMedium();

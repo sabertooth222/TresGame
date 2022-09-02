@@ -3,7 +3,7 @@
 #include "UObject/Object.h"
 #include "TresTaggedActorPropertyManager.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresTaggedActorPropertyManager : public UObject {
     GENERATED_BODY()
 public:

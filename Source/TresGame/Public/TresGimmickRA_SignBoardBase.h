@@ -5,17 +5,17 @@
 
 class UTresReactorComponent;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresGimmickRA_SignBoardBase : public ATresGimmickSimpleStaticBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresReactorComponent* MyReactor;
     
 public:
     ATresGimmickRA_SignBoardBase();
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnChangeBattleMode(bool bIsBattleMode);
     
 };

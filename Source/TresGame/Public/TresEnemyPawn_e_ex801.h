@@ -6,7 +6,7 @@
 
 class AActor;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemyPawn_e_ex801 : public ATresEnemyToyPawnBase {
     GENERATED_BODY()
 public:
@@ -14,13 +14,13 @@ public:
     UFUNCTION(BlueprintCallable)
     void PostAnimUpdate();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector GetPlasmaTargetFloorLocation() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     AActor* GetPlasmaTarget() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     void GetPlasmaLocationList(TArray<FVector>& OutList) const;
     
 };

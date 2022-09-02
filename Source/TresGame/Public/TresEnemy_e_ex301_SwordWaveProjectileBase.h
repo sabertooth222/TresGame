@@ -3,7 +3,7 @@
 #include "TresProjectileBase.h"
 #include "TresEnemy_e_ex301_SwordWaveProjectileBase.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemy_e_ex301_SwordWaveProjectileBase : public ATresProjectileBase {
     GENERATED_BODY()
 public:

@@ -3,7 +3,7 @@
 #include "TresBTDecorator_ActorValueCheckBase.h"
 #include "TresBTDecorator_ElapsedTimeSinceLastAttackCheck.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTDecorator_ElapsedTimeSinceLastAttackCheck : public UTresBTDecorator_ActorValueCheckBase {
     GENERATED_BODY()
 public:

@@ -4,11 +4,11 @@
 #include "ETresCoopRunningStatus.h"
 #include "TresBTTask_ChangeCoopStatus.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTTask_ChangeCoopStatus : public UBTTaskNode {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresCoopRunningStatus m_CoopStatus;
     
     UTresBTTask_ChangeCoopStatus();

@@ -6,18 +6,18 @@
 class APointLight;
 class ATresTsDancingPlant;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresTsDancingPlantSensor : public ATresGimmickActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<ATresTsDancingPlant*> PlantsList;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<APointLight*> PlantLights;
     
     ATresTsDancingPlantSensor();
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void ChangeRate(float Rate);
     
 };

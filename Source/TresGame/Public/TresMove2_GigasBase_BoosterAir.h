@@ -3,7 +3,7 @@
 #include "TresLocomotionDefinitionAir.h"
 #include "TresMove2_GigasBase_BoosterAir.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresMove2_GigasBase_BoosterAir : public UTresLocomotionDefinitionAir {
     GENERATED_BODY()
 public:

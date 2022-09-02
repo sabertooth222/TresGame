@@ -4,11 +4,11 @@
 #include "ETresNpcUseItemType.h"
 #include "TresNpcBTDecorator_HasItem.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcBTDecorator_HasItem : public UTresNpcBTDecoratorBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresNpcUseItemType m_UseItemType;
     
     UTresNpcBTDecorator_HasItem();

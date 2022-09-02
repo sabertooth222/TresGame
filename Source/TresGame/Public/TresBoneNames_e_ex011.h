@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FTresBoneNames_e_ex011 {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName ParentConnectBoneName;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName ChildConnectBoneName;
     
     TRESGAME_API FTresBoneNames_e_ex011();

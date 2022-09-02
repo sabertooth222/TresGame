@@ -3,7 +3,7 @@
 #include "BehaviorTree/BTTaskNode.h"
 #include "TresNpcBTTask_SetCureTargetBB.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcBTTask_SetCureTargetBB : public UBTTaskNode {
     GENERATED_BODY()
 public:

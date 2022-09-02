@@ -9,10 +9,10 @@ USTRUCT(BlueprintType)
 struct FTresUINaviMapMarkerData {
     GENERATED_BODY()
 public:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UGFxObject* ASObject;
     
-    UPROPERTY(Transient)
+    UPROPERTY(EditAnywhere, Transient)
     TWeakObjectPtr<AActor> OwnerActor;
     
     TRESGAME_API FTresUINaviMapMarkerData();

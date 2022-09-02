@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FTresEnemyEx361CounterAfterActionPeriodInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 HPPersentage;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 Period;
     
     TRESGAME_API FTresEnemyEx361CounterAfterActionPeriodInfo();

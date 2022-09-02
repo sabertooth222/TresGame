@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TresStaticEQSItemComponentInterface.h"
 #include "Components/BoxComponent.h"
+#include "TresStaticEQSItemComponentInterface.h"
 #include "TresStaticEQSItemBoxComponent.generated.h"
 
-UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTresStaticEQSItemBoxComponent : public UBoxComponent, public ITresStaticEQSItemComponentInterface {
     GENERATED_BODY()
 public:

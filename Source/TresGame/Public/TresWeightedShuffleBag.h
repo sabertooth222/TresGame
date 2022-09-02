@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "TresWeightedShuffleBag.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresWeightedShuffleBag {
     GENERATED_BODY()
 public:

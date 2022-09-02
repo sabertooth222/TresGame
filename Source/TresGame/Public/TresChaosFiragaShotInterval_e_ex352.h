@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FTresChaosFiragaShotInterval_e_ex352 {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_Interval;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bHomingEnabled;
     
     TRESGAME_API FTresChaosFiragaShotInterval_e_ex352();

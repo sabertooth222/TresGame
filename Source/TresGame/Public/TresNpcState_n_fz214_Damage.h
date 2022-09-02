@@ -3,7 +3,7 @@
 #include "TresNpcState_Damage.h"
 #include "TresNpcState_n_fz214_Damage.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcState_n_fz214_Damage : public UTresNpcState_Damage {
     GENERATED_BODY()
 public:

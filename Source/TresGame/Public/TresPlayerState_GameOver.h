@@ -5,12 +5,12 @@
 
 class ATresCameraAnim;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_GameOver : public UTresCharState_GameOver {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresCameraAnim* m_Camera;
     
 public:

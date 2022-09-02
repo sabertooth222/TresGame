@@ -5,11 +5,11 @@
 
 class UTresDecoPartsSet;
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API UTresDecoPartsAllSet : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UTresDecoPartsSet*> m_Assets;
     
     UTresDecoPartsAllSet();

@@ -3,7 +3,7 @@
 #include "TresGumiShipTrackingStateBase.h"
 #include "TresGumiShipTrackingGoStraightState.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresGumiShipTrackingGoStraightState : public UTresGumiShipTrackingStateBase {
     GENERATED_BODY()
 public:

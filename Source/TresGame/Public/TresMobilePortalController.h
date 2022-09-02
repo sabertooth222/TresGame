@@ -4,25 +4,25 @@
 #include "TresMobilePortalController.generated.h"
 
 class UTresUIManager;
-class ATresUIActor;
 class UTresUIP_MobilePortal;
 class UTresUIP_MobilePortalApp;
+class ATresUIActor;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresMobilePortalController : public UObject {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresUIManager* m_UIManager;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresUIP_MobilePortal* m_MobilePortal;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresUIP_MobilePortalApp* m_AppUIParts;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresUIActor* m_JiminyUIActor;
     
 public:

@@ -3,7 +3,7 @@
 #include "TresCameraNormal.h"
 #include "TresCameraShooterMode.generated.h"
 
-UCLASS(NotPlaceable)
+UCLASS(Blueprintable, NotPlaceable)
 class ATresCameraShooterMode : public ATresCameraNormal {
     GENERATED_BODY()
 public:

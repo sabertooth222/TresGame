@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FTresWinniePuzzleChallengeModeLimitTimeIncreaseParam {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 Level;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float IncreaseTime;
     
     TRESGAME_API FTresWinniePuzzleChallengeModeLimitTimeIncreaseParam();

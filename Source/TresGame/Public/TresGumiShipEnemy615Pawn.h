@@ -3,11 +3,11 @@
 #include "TresGumiShipFreeFlightTypeEnemyBase.h"
 #include "TresGumiShipEnemy615Pawn.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresGumiShipEnemy615Pawn : public ATresGumiShipFreeFlightTypeEnemyBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 mode;
     
     ATresGumiShipEnemy615Pawn();

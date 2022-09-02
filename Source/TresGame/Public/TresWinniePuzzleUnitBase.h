@@ -6,15 +6,15 @@
 
 class ATresWinniePuzzleCollisionUnit;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresWinniePuzzleUnitBase : public ASkeletalMeshActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     WinniePuzzleUnitType UnitTypeRef;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresWinniePuzzleCollisionUnit* m_pCollisionUnit;
     
 public:

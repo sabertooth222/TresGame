@@ -3,24 +3,24 @@
 #include "TresUIDataAsset.h"
 #include "TresUIDataAssetDance.generated.h"
 
-class USoundBase;
 class USwfMovie;
+class USoundBase;
 class UObject;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresUIDataAssetDance : public UTresUIDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USwfMovie* RaSwfAsset;
     
-    UPROPERTY(VisibleDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UObject*> RaSwfRefAssets;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundBase* ResultScoreSE;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundBase* ResultRankSE;
     
     UTresUIDataAssetDance();

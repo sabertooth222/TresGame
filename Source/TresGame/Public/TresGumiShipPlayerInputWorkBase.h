@@ -3,7 +3,7 @@
 #include "UObject/Object.h"
 #include "TresGumiShipPlayerInputWorkBase.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class UTresGumiShipPlayerInputWorkBase : public UObject {
     GENERATED_BODY()
 public:

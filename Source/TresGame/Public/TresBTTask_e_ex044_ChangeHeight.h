@@ -8,20 +8,20 @@
 
 class UTresAction1_e_ex044_ChangeHeight;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTTask_e_ex044_ChangeHeight : public UTresBTTask_Action {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UTresAction1_e_ex044_ChangeHeight> m_ActionDefinition_e_ex044;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresActionTaskParam> ActionTaskParams;
     
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlackboardKeySelector m_HeightValueKey;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bUseBBKey;
     
     UTresBTTask_e_ex044_ChangeHeight();

@@ -3,24 +3,24 @@
 #include "GameFramework/Actor.h"
 #include "TresPoleActorEw.generated.h"
 
-class USceneComponent;
 class UTresPoleComponent;
+class USceneComponent;
 
-UCLASS(Config=Game)
+UCLASS(Blueprintable, Config=Game)
 class ATresPoleActorEw : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USceneComponent* MyRootComponent;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresPoleComponent* PoleComponentDefault;
     
     ATresPoleActorEw();
     UFUNCTION(BlueprintCallable)
     void SetEnable(bool bEnable);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsEnable() const;
     
 };

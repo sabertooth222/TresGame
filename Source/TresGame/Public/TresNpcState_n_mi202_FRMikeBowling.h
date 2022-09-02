@@ -5,15 +5,15 @@
 
 class ATresCharPawnBase;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcState_n_mi202_FRMikeBowling : public UTresCharState_FRMikeBowling {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresCharPawnBase* m_pTargetPawn;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresCharPawnBase* m_pOldTargetPawn;
     
 public:

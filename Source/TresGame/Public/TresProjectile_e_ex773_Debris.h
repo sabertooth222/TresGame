@@ -3,7 +3,7 @@
 #include "TresProjectileStaticMeshBase.h"
 #include "TresProjectile_e_ex773_Debris.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresProjectile_e_ex773_Debris : public ATresProjectileStaticMeshBase {
     GENERATED_BODY()
 public:

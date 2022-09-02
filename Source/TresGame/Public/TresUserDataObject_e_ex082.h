@@ -4,14 +4,14 @@
 #include "MissionIntervalParam_e_ex082.h"
 #include "TresUserDataObject_e_ex082.generated.h"
 
-UCLASS(Abstract, EditInlineNew)
+UCLASS(Abstract, Blueprintable, EditInlineNew)
 class UTresUserDataObject_e_ex082 : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_ModeChangeTime;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMissionIntervalParam_e_ex082 m_IntervalParam;
     
     UTresUserDataObject_e_ex082();

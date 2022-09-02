@@ -3,7 +3,7 @@
 #include "TresProjectileSkeletalMeshBase.h"
 #include "TresProjectile_e_ex354_WarpArm.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresProjectile_e_ex354_WarpArm : public ATresProjectileSkeletalMeshBase {
     GENERATED_BODY()
 public:

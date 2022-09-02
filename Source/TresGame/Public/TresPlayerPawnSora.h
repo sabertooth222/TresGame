@@ -3,12 +3,12 @@
 #include "TresPlayerPawnBase.h"
 #include "TresPlayerPawnSora.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresPlayerPawnSora : public ATresPlayerPawnBase {
     GENERATED_BODY()
 public:
     ATresPlayerPawnSora();
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void DebugNotifyCommandQuickBattle();
     
 };

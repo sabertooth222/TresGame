@@ -2,74 +2,74 @@
 #include "CoreMinimal.h"
 #include "ETresEncountVolumeSnapTarget.h"
 #include "TresVolume.h"
-#include "ETresEncountVolumeVehicleMode.h"
 #include "TresEncountVolumeStartSignatureDelegate.h"
+#include "ETresEncountVolumeVehicleMode.h"
 #include "TresEncountVolumeStopSignatureDelegate.h"
 #include "TresEncountVolumeEntry.h"
 #include "Engine/EngineTypes.h"
 #include "TresEncountVolume.generated.h"
 
-class ATresBattleVolume;
 class ATresEncountDisableVolume;
-class ATresEncountSubEQSVolume;
 class UDataTable;
+class ATresBattleVolume;
+class ATresEncountSubEQSVolume;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEncountVolume : public ATresVolume {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresEncountVolumeVehicleMode m_VehicleMode;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresEncountVolumeSnapTarget m_SnapTarget;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UClass*> m_SupportVehicleClass;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresEncountVolumeStartSignature m_OnStart;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresEncountVolumeStopSignature m_OnStop;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_MinMovement;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_MaxMovement;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_MinMovementAfterBattle;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_ClampRateOfMovement;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_ClampRateOfMinMovement;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_EventNameOnSpawn;
     
     UPROPERTY(EditAnywhere)
     TEnumAsByte<ECollisionResponse> m_CollResponse;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresEncountVolumeEntry> m_Entries;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<ATresEncountDisableVolume*> m_DisableVolumes;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresBattleVolume* m_BattleOwner;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresEncountSubEQSVolume* m_SubEQSVolume;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresBattleVolume* m_SpawnedBattleOwner;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UDataTable* m_RewardsTbl;
     
     ATresEncountVolume();

@@ -3,11 +3,11 @@
 #include "TresStateBase.h"
 #include "TresAICharState_Action.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class UTresAICharState_Action : public UTresStateBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_ActionNumber;
     
     UTresAICharState_Action();

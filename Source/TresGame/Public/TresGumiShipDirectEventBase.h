@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FTresGumiShipDirectEventBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresGumiShipDirectParam m_DirectParam;
     
     TRESGAME_API FTresGumiShipDirectEventBase();

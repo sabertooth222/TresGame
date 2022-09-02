@@ -1,34 +1,34 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "TresAreaEffectData.h"
 #include "Engine/DataTable.h"
 #include "UObject/NoExportTypes.h"
 #include "TresAreaEffectCurveData.h"
-#include "TresAreaEffectData.h"
 #include "TresVFXAreaCustomTableData.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresVFXAreaCustomTableData : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString Description;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FLinearColor AreaBaseColor;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FLinearColor AreaBrightColor;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FLinearColor AreaDarkColor;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float AreaColorSynthesis;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresAreaEffectCurveData CurveDatas;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresAreaEffectData> AreaEffectData;
     
     TRESGAME_API FTresVFXAreaCustomTableData();

@@ -3,14 +3,14 @@
 #include "TresAttackDefinitionBase.h"
 #include "TresAttack_e_ex773_Eclipse13Base.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAttack_e_ex773_Eclipse13Base : public UTresAttackDefinitionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bWarpUsePoint;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float WarpStartTime;
     
     UTresAttack_e_ex773_Eclipse13Base();

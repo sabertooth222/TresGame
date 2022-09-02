@@ -3,7 +3,7 @@
 #include "BehaviorTree/BTDecorator.h"
 #include "TresBTDecorator_e_ex354_CounterWait.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTDecorator_e_ex354_CounterWait : public UBTDecorator {
     GENERATED_BODY()
 public:

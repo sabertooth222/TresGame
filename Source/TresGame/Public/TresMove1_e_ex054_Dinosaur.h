@@ -5,12 +5,12 @@
 
 class UAnimationAsset;
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresMove1_e_ex054_Dinosaur : public UTresLocomotionDefinitionLandCodeDriven {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UAnimationAsset* m_VolcanoQuickTurnAnimData;
     
 public:

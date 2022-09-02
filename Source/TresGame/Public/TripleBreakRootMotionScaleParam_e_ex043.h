@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FTripleBreakRootMotionScaleParam_e_ex043 {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Distance;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float RootMotionScale;
     
     TRESGAME_API FTripleBreakRootMotionScaleParam_e_ex043();

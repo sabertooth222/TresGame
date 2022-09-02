@@ -4,27 +4,27 @@
 #include "UObject/NoExportTypes.h"
 #include "TresSharedPlayerController.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresSharedPlayerController : public ATresPlayerControllerLowerBase {
     GENERATED_BODY()
 public:
     ATresSharedPlayerController();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetRightStickSlopeVectorLength() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector GetRightStickSlopeVector() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetRightStickSlopeDegrees() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetLeftStickSlopeVectorLength() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector GetLeftStickSlopeVector() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetLeftStickSlopeDegrees() const;
     
 };

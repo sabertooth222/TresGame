@@ -2,60 +2,60 @@
 #include "CoreMinimal.h"
 #include "TresGimmickComponentBase.h"
 #include "ETresReactorCommandID.h"
-#include "UObject/NoExportTypes.h"
 #include "TresReactorComponentInterface.h"
-#include "TresCollShapeAssetUnit.h"
+#include "UObject/NoExportTypes.h"
 #include "TresReactorDoCommandSignatureDelegate.h"
+#include "TresCollShapeAssetUnit.h"
 #include "TresReactorComponent.generated.h"
 
-class UBodySetup;
 class AActor;
+class UBodySetup;
 
-UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTresReactorComponent : public UTresGimmickComponentBase, public ITresReactorComponentInterface {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FColor m_ShapeColor;
     
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere)
-    uint32 m_bDrawBBox: 1;
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bDrawBBox: 1;
     
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FColor m_BBoxColor;
     
-    UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresCollShapeAssetUnit> m_CollisionShapesSrc;
     
 public:
-    UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
-    uint32 m_bLimitRotRange: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bLimitRotRange: 1;
     
-    UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_RotRangeProp;
     
-    UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
-    uint32 m_bNeedRayCheck: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bNeedRayCheck: 1;
     
-    UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresReactorCommandID m_Command;
     
-    UPROPERTY(BlueprintReadWrite, EditInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AActor* m_CmdTargetActor;
     
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
-    uint32 m_bDisableTargetMarker: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bDisableTargetMarker: 1;
     
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
-    uint32 m_bDisableCommandDisp: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bDisableCommandDisp: 1;
     
 protected:
-    UPROPERTY(DuplicateTransient, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UBodySetup* m_pBodySetup;
     
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresReactorDoCommandSignature OnReactorDoCommand;
     
     UTresReactorComponent();

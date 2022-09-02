@@ -4,11 +4,11 @@
 #include "EX354_ArtemaWarpShotSequenceInfoSet.h"
 #include "TresAttack15_e_ex354_SpawnArtemaWarpShotSequence.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAttack15_e_ex354_SpawnArtemaWarpShotSequence : public UTresAttackDefinitionWeaponBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FEX354_ArtemaWarpShotSequenceInfoSet m_SequenceInfoSet;
     
     UTresAttack15_e_ex354_SpawnArtemaWarpShotSequence();

@@ -1,23 +1,23 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Matinee/InterpTrackFloatBase.h"
 #include "ETresFadeTrack_TheaterMode.h"
+#include "Matinee/InterpTrackFloatBase.h"
 #include "TresInterpTrackForceFeedback.generated.h"
 
-UCLASS(CollapseCategories)
+UCLASS(Blueprintable, CollapseCategories)
 class TRESGAME_API UTresInterpTrackForceFeedback : public UInterpTrackFloatBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bAffectsLeftLarge;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bAffectsLeftSmall;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bAffectsRightLarge;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bAffectsRightSmall;
     
     UPROPERTY(EditAnywhere)

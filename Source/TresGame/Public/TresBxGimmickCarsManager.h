@@ -3,24 +3,24 @@
 #include "TresGimmickSpaceDivisionManager.h"
 #include "TresBxGimmickCarsManager.generated.h"
 
-class USceneComponent;
 class AActor;
+class USceneComponent;
 class ATresCharPawnBase;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresBxGimmickCarsManager : public ATresGimmickSpaceDivisionManager {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USceneComponent* MyRoot;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName GameFlagName;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FName> NoLightsFlagName;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 CarLODIndex;
     
     ATresBxGimmickCarsManager();
@@ -36,13 +36,13 @@ public:
     UFUNCTION(BlueprintCallable)
     void RegistObstacleObject(AActor* pActor, bool bMovable, float fBoundsRadius);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnMovePawnDelete(ATresCharPawnBase* InTargetPawn);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnMovePawnCreate(ATresCharPawnBase* InTargetPawn);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void NotifyChangeGimmickPause(bool bPause);
     
 };

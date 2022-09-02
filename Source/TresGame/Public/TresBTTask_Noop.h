@@ -4,7 +4,7 @@
 #include "BehaviorTree/BehaviorTreeTypes.h"
 #include "TresBTTask_Noop.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTTask_Noop : public UBTTaskNode {
     GENERATED_BODY()
 public:

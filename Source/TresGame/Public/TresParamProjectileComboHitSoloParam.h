@@ -6,7 +6,7 @@ USTRUCT(BlueprintType)
 struct FTresParamProjectileComboHitSoloParam {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Interval;
     
     TRESGAME_API FTresParamProjectileComboHitSoloParam();

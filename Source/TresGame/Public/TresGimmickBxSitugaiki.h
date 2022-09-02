@@ -5,11 +5,11 @@
 
 class UTresStaticMeshComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresGimmickBxSitugaiki : public ATresGimmickLauncher {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresStaticMeshComponent* m_PropellerMesh;
     
     ATresGimmickBxSitugaiki();

@@ -3,7 +3,7 @@
 #include "GameFramework/Actor.h"
 #include "TresPrizeMan.generated.h"
 
-UCLASS(NotPlaceable, Transient)
+UCLASS(Blueprintable, NotPlaceable, Transient)
 class ATresPrizeMan : public AActor {
     GENERATED_BODY()
 public:

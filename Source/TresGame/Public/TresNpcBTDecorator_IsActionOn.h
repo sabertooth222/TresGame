@@ -4,7 +4,7 @@
 #include "ETresNpcActionOnType.h"
 #include "TresNpcBTDecorator_IsActionOn.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcBTDecorator_IsActionOn : public UTresNpcBTDecoratorBase {
     GENERATED_BODY()
 public:

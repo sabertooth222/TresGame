@@ -1,28 +1,28 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TresComNpcVoiceSetDatas.h"
 #include "Engine/DataAsset.h"
+#include "TresComNpcVoiceSetDatas.h"
 #include "TresComNpcRandomVoiceDatas.h"
 #include "TresComNpcRandomFieldVoiceDatas.h"
 #include "TresComNpcVoiceSet.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API UTresComNpcVoiceSet : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresComNpcVoiceSetDatas> m_Datas;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresComNpcRandomVoiceDatas> m_StaggerDatas;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresComNpcRandomVoiceDatas> m_SpecialPerformDatas;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresComNpcRandomVoiceDatas> m_GreetDatas;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresComNpcRandomFieldVoiceDatas> m_HeroActionDatas;
     
     UTresComNpcVoiceSet();

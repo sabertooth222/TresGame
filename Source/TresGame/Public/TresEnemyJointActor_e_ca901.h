@@ -4,12 +4,12 @@
 #include "TresEnemyPawn_e_ca901_JointParam.h"
 #include "TresEnemyJointActor_e_ca901.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemyJointActor_e_ca901 : public ATresCharPawnBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresEnemyPawn_e_ca901_JointParam> m_JointParam;
     
 public:

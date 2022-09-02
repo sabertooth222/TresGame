@@ -3,7 +3,7 @@
 #include "TresStateBase.h"
 #include "TresCharState_FRMikeBowling.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresCharState_FRMikeBowling : public UTresStateBase {
     GENERATED_BODY()
 public:

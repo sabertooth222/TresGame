@@ -11,13 +11,13 @@ USTRUCT(BlueprintType)
 struct FWaveSet_e_ex310 {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresProjectile_e_ex310_Wave> pWaveSpawner;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresProjectile_e_ex310_Wave_OneCollision> pOneCollision;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FWaveInfo_e_ex310> WaveInfoArray;
     
     TRESGAME_API FWaveSet_e_ex310();

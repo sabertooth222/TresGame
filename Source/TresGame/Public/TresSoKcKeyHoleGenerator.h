@@ -5,15 +5,15 @@
 
 class USceneComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresSoKcKeyHoleGenerator : public AActor {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(Export, VisibleDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USceneComponent* GeneratorRootComponent;
     
-    UPROPERTY(EditInstanceOnly)
+    UPROPERTY(EditAnywhere)
     TWeakObjectPtr<AActor> m_pSourceHoudiniActor;
     
 public:

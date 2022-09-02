@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FTresDanceNpcActionSet {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<EDanceActorAction> ActionList;
     
     TRESGAME_API FTresDanceNpcActionSet();

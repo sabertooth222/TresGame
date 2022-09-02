@@ -1,35 +1,35 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "TresVolume.h"
-#include "ESQEX_Bonamik_EmissiveDirection.h"
 #include "UObject/NoExportTypes.h"
+#include "ESQEX_Bonamik_EmissiveDirection.h"
 #include "TresBonamikEmissiveVolume.generated.h"
 
 class USkinnedMeshComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API ATresBonamikEmissiveVolume : public ATresVolume {
     GENERATED_BODY()
 public:
-    UPROPERTY(Export, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     TArray<USkinnedMeshComponent*> m_ReferencedComponets;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FString> m_Groups;
     
     UPROPERTY(EditAnywhere)
     TEnumAsByte<ESQEX_Bonamik_EmissiveDirection> m_DirectionSpace;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector m_DirectionVec;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_BaseStrength;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_WaveAmplitude;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_WavePeriod;
     
     ATresBonamikEmissiveVolume();

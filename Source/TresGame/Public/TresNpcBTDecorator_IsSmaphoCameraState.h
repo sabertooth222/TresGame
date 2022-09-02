@@ -5,14 +5,14 @@
 #include "BehaviorTree/BehaviorTreeTypes.h"
 #include "TresNpcBTDecorator_IsSmaphoCameraState.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcBTDecorator_IsSmaphoCameraState : public UTresNpcBTDecoratorBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlackboardKeySelector m_Source;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<ETresNpcSmartphoneCameraState> m_States;
     
     UTresNpcBTDecorator_IsSmaphoCameraState();

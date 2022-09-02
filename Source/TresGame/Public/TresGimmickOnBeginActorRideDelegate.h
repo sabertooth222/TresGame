@@ -5,5 +5,5 @@
 class AActor;
 class UPrimitiveComponent;
 
-UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FTresGimmickOnBeginActorRide, AActor*, RideActor, UPrimitiveComponent*, Component, const FName, BoneName);
+UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FTresGimmickOnBeginActorRide, AActor*, RideActor, UPrimitiveComponent*, Component, const FName, BoneName);
 

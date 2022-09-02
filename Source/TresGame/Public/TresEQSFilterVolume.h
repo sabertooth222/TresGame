@@ -3,7 +3,7 @@
 #include "TresVolume.h"
 #include "TresEQSFilterVolume.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEQSFilterVolume : public ATresVolume {
     GENERATED_BODY()
 public:

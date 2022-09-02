@@ -2,5 +2,5 @@
 #include "CoreMinimal.h"
 #include "TresPoleComponentEndPoleTurnSignatureDelegate.generated.h"
 
-UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE(FTresPoleComponentEndPoleTurnSignature);
+UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE(FTresPoleComponentEndPoleTurnSignature);
 

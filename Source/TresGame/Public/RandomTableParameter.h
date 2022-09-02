@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FRandomTableParameter {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_GroupName;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresRandomVoiceForTable> m_RandomVoiceAssets;
     
     TRESGAME_API FRandomTableParameter();

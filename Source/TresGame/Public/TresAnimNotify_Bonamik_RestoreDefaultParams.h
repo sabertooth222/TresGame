@@ -3,7 +3,7 @@
 #include "Animation/AnimNotifies/AnimNotify.h"
 #include "TresAnimNotify_Bonamik_RestoreDefaultParams.generated.h"
 
-UCLASS(CollapseCategories, MinimalAPI)
+UCLASS(Blueprintable, CollapseCategories, MinimalAPI)
 class UTresAnimNotify_Bonamik_RestoreDefaultParams : public UAnimNotify {
     GENERATED_BODY()
 public:

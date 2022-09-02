@@ -6,11 +6,11 @@
 
 class UTresTaskBase;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UTresTaskList : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<TSubclassOf<UTresTaskBase>> GameTaskList;
     
     UTresTaskList();

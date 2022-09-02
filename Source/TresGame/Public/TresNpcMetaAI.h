@@ -10,11 +10,11 @@
 class AActor;
 class ATresNpcAILeadSplineActor;
 
-UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTresNpcMetaAI : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresNpcAICombiData> m_CombiDataList;
     
     UTresNpcMetaAI();
@@ -27,7 +27,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void StartLead(FName InLeadID, ETresChrUniqueID InApplyChrID, ATresNpcAILeadSplineActor* InLeadSplineActor, TArray<ETresChrUniqueID> InSubLeadCharaSlotList, FName InCancelEventName);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     void GetLeadWayPointList(TArray<FVector>& outResult, const AActor* inSourceActor);
     
     UFUNCTION(BlueprintCallable)

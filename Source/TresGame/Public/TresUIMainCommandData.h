@@ -1,31 +1,31 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Engine/DataTable.h"
-#include "ETresCommandKind.h"
-#include "TresCockpitStyleInfo.h"
 #include "ETresUIHudCommandExKind.h"
+#include "ETresCommandKind.h"
 #include "ETresUIMainCommandTitleKind.h"
+#include "TresCockpitStyleInfo.h"
 #include "TresUIMainCommandData.generated.h"
 
 class USwfMovie;
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresUIMainCommandData : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresCommandKind> m_CommandKind;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresUIHudCommandExKind m_CommandExKind;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresUIMainCommandTitleKind m_TitleKind;
     
-    UPROPERTY(EditDefaultsOnly)
-    USwfMovie* m_SwfAsset;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TAssetPtr<USwfMovie> m_SwfAsset;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresCockpitStyleInfo m_styleInfo;
     
     TRESGAME_API FTresUIMainCommandData();

@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ETresGumiShipWeaponSequencePort.h"
 #include "TresGumiShipGimmickActorBase.h"
-#include "Engine/EngineTypes.h"
 #include "UObject/NoExportTypes.h"
+#include "ETresGumiShipWeaponSequencePort.h"
+#include "Engine/EngineTypes.h"
 #include "TresGumiShipGimmickObjectBase.generated.h"
 
 class UTresGumiShipBodyCollisionSetCompo;
@@ -11,24 +11,24 @@ class USceneComponent;
 class UTresStaticMeshComponent;
 class UTresGumiShipWeaponSequence;
 class USQEX_ParticleAttachDataAsset;
-class AActor;
 class UPrimitiveComponent;
+class AActor;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresGumiShipGimmickObjectBase : public ATresGumiShipGimmickActorBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USceneComponent* m_pMeshBase;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresStaticMeshComponent* m_pStaticMesh;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresGumiShipBodyCollisionSetCompo* m_pBodyCollision;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresGumiShipWeaponSequence* m_pWeaponSequence;
     
 public:
@@ -57,26 +57,26 @@ public:
     UFUNCTION(BlueprintCallable)
     void PullWeaponTrigger(const TEnumAsByte<ETresGumiShipWeaponSequencePort> ePort, const bool bManual);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsInvincible() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsDead() const;
     
 protected:
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void _ReceiveTakeDamage(const AActor* pDamageCauser);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void _ReceiveHitSomething(UPrimitiveComponent* pHitComponent, AActor* pHitActor, const FHitResult& rHitInfo);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void _ReceiveDead();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnRootHit(UPrimitiveComponent* pHitComponent, AActor* pOtherActor, UPrimitiveComponent* pOtherComp, FVector vNormalImpulse, const FHitResult& rHit);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnBodyHit(UPrimitiveComponent* pHitComponent, AActor* pOtherActor, UPrimitiveComponent* pOtherComp, FVector vNormalImpulse, const FHitResult& rHit);
     
     UFUNCTION(BlueprintCallable)

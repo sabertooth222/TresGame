@@ -2,5 +2,5 @@
 #include "CoreMinimal.h"
 #include "TresGimmickOnBeginPauseSpecialSignatureDelegate.generated.h"
 
-UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE(FTresGimmickOnBeginPauseSpecialSignature);
+UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE(FTresGimmickOnBeginPauseSpecialSignature);
 

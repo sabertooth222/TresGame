@@ -3,7 +3,7 @@
 #include "Engine/EngineTypes.h"
 #include "TresPointDamageEvent.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresPointDamageEvent : public FPointDamageEvent {
     GENERATED_BODY()
 public:

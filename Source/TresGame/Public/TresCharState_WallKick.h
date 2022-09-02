@@ -6,14 +6,14 @@
 class AActor;
 class UPrimitiveComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresCharState_WallKick : public UTresStateBase {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AActor* m_pHitActor;
     
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UPrimitiveComponent* m_pHitComponent;
     
     UTresCharState_WallKick();

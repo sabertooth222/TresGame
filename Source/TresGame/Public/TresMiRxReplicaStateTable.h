@@ -8,7 +8,7 @@ struct FTresMiRxReplicaStateTable {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresMiRxReplicaStatePattern> m_Patterns;
     
 public:

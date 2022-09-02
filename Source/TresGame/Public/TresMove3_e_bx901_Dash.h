@@ -6,14 +6,14 @@
 
 class UCurveFloat;
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresMove3_e_bx901_Dash : public UTresLocomotionDefinitionFlyCodeDriven {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBX901_DarkCubeMineGroupSpawnInfo m_GroupSpawnInfo;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UCurveFloat* m_ShotWaitTimeScaleOnTargetDistanceCurve;
     
     UTresMove3_e_bx901_Dash();

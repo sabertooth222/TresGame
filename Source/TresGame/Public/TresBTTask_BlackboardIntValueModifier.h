@@ -3,11 +3,11 @@
 #include "TresBTTask_BlackboardValueModifierBase.h"
 #include "TresBTTask_BlackboardIntValueModifier.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTTask_BlackboardIntValueModifier : public UTresBTTask_BlackboardValueModifierBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_Value;
     
     UTresBTTask_BlackboardIntValueModifier();

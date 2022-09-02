@@ -3,7 +3,7 @@
 #include "UObject/Object.h"
 #include "TresEnemyManager_e_ex761.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresEnemyManager_e_ex761 : public UObject {
     GENERATED_BODY()
 public:

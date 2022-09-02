@@ -3,11 +3,11 @@
 #include "TresAttackDefinitionBase.h"
 #include "TresAttack1_e_ex310_Combo.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAttack1_e_ex310_Combo : public UTresAttackDefinitionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bForceCombo;
     
     UTresAttack1_e_ex310_Combo();

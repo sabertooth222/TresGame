@@ -6,15 +6,15 @@
 class UTresMI_02BossPartsGeneratorRule;
 class AActor;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresGimmickGeneratorMI_02 : public ATresGimmickGeneratorMI_02Base {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float SpeedWaterSplineNone;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresMI_02BossPartsGeneratorRule* GeneratorData;
     
 public:
@@ -37,10 +37,10 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetBossPartsVisibility(bool Visible);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetMoveSpeed();
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BPEV_SleepActor(AActor* Actor);
     
 };

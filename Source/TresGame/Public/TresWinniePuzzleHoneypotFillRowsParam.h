@@ -6,7 +6,7 @@ USTRUCT(BlueprintType)
 struct FTresWinniePuzzleHoneypotFillRowsParam {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<int32> RowIdxes;
     
     TRESGAME_API FTresWinniePuzzleHoneypotFillRowsParam();

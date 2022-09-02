@@ -4,16 +4,16 @@
 #include "TresCameraRotTargetCtrl.h"
 #include "TresCameraRc.generated.h"
 
+class UObject;
 class AActor;
 class ATresCameraRc;
-class UObject;
 
-UCLASS(NotPlaceable)
+UCLASS(Blueprintable, NotPlaceable)
 class ATresCameraRc : public ATresCameraRotTargetCtrl {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AActor* m_TargetActor;
     
 public:

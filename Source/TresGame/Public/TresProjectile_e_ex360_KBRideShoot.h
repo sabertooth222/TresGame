@@ -5,12 +5,12 @@
 
 class ATresEnemyPawn_e_ex360KBBoard;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresProjectile_e_ex360_KBRideShoot : public ATresProjectileBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresEnemyPawn_e_ex360KBBoard* m_KBBoard;
     
 public:

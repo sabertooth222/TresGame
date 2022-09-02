@@ -3,7 +3,7 @@
 #include "TresActionDefinitionBase.h"
 #include "TresAction7_e_ex711_ShootingRideWarp.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAction7_e_ex711_ShootingRideWarp : public UTresActionDefinitionBase {
     GENERATED_BODY()
 public:

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "TresEnemy_e_ex773_HvnDebrisBlowParam.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresEnemy_e_ex773_HvnDebrisBlowParam {
     GENERATED_BODY()
 public:

@@ -4,14 +4,14 @@
 #include "TresGummiPlanSetData.h"
 #include "TresGummiPlanDataTable.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresGummiPlanDataTable : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresGummiPlanSetData> m_nGummiPlanSet;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresGummiPlanSetData> m_nSpecialGummiPlanSet;
     
     TRESGAME_API FTresGummiPlanDataTable();

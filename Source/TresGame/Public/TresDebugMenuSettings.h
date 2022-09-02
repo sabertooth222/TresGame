@@ -3,17 +3,17 @@
 #include "UObject/Object.h"
 #include "TresDebugMenuSettings.generated.h"
 
-UCLASS(Config=TresDebugMenu)
+UCLASS(Blueprintable, Config=TresDebugMenu)
 class UTresDebugMenuSettings : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_English;
     
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_IgnoreGameFilter;
     
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FString> m_PassCodes;
     
     UTresDebugMenuSettings();

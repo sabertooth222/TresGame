@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FTresDebugMenuInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresDebugMenuScene* m_Instance;
     
     TRESGAME_API FTresDebugMenuInfo();

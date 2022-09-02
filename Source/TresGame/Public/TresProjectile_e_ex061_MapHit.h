@@ -3,11 +3,11 @@
 #include "TresProjectileBase.h"
 #include "TresProjectile_e_ex061_MapHit.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresProjectile_e_ex061_MapHit : public ATresProjectileBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_TakeOverHitGroupName;
     
     ATresProjectile_e_ex061_MapHit();

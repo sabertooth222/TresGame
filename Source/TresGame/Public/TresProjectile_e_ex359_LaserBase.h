@@ -3,7 +3,7 @@
 #include "TresProjectile_e_ex359_LightBase.h"
 #include "TresProjectile_e_ex359_LaserBase.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresProjectile_e_ex359_LaserBase : public ATresProjectile_e_ex359_LightBase {
     GENERATED_BODY()
 public:

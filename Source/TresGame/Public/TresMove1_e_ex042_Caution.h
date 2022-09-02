@@ -7,10 +7,10 @@ UCLASS(Blueprintable, HideDropdown)
 class UTresMove1_e_ex042_Caution : public UTresLocomotionDefinitionFlyCodeDriven {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_FallVelocity;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_MinAltitude_Start;
     
     UTresMove1_e_ex042_Caution();

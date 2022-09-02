@@ -3,11 +3,11 @@
 #include "TresSpawnPointFilter.h"
 #include "TresSpawnPointOrFilter.generated.h"
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class TRESGAME_API UTresSpawnPointOrFilter : public UTresSpawnPointFilter {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UTresSpawnPointFilter*> m_Filters;
     
     UTresSpawnPointOrFilter();

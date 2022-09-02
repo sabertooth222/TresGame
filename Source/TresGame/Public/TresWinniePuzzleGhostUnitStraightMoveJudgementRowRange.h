@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FTresWinniePuzzleGhostUnitStraightMoveJudgementRowRange {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 StartRow;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 EndRow;
     
     TRESGAME_API FTresWinniePuzzleGhostUnitStraightMoveJudgementRowRange();

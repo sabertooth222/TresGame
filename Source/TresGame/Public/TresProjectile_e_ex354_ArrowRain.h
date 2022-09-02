@@ -3,20 +3,20 @@
 #include "TresProjectileBase.h"
 #include "TresProjectile_e_ex354_ArrowRain.generated.h"
 
-class UCurveVector;
 class UCurveFloat;
+class UCurveVector;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresProjectile_e_ex354_ArrowRain : public ATresProjectileBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UCurveFloat* m_AtkCollRotPitchOffsetCurve;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UCurveVector* m_AtkCollPosOffsetCurve;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bDebugDisp;
     
     ATresProjectile_e_ex354_ArrowRain();

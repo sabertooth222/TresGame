@@ -1,21 +1,21 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "TresCameraRotTarget.h"
 #include "TresCameraTargetInfo.h"
+#include "TresCameraRotTarget.h"
 #include "UObject/NoExportTypes.h"
 #include "TresCameraDistanceAdjust2T.generated.h"
 
+class AActor;
 class UObject;
 class ATresCameraDistanceAdjust2T;
-class AActor;
 
-UCLASS(NotPlaceable)
+UCLASS(Blueprintable, NotPlaceable)
 class ATresCameraDistanceAdjust2T : public ATresCameraRotTarget {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresCameraTargetInfo m_TargetInfo2;
     
 public:

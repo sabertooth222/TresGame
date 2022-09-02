@@ -8,5 +8,5 @@
 class AController;
 class AActor;
 
-UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_SixParams(FTresCharTakeDamageSignature, float, DamagePoint, AController*, InstigatedBy, const FHitResult&, HitInfo, const FTresDamageInfo&, DamageInfo, FVector, ShotFromDirection, AActor*, DamageCauser);
+UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_SixParams(FTresCharTakeDamageSignature, float, DamagePoint, AController*, InstigatedBy, const FHitResult&, HitInfo, const FTresDamageInfo&, DamageInfo, FVector, ShotFromDirection, AActor*, DamageCauser);
 

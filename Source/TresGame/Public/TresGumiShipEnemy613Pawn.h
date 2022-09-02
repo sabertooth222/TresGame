@@ -3,7 +3,7 @@
 #include "TresGumiShipFreeFlightTypeEnemyBase.h"
 #include "TresGumiShipEnemy613Pawn.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresGumiShipEnemy613Pawn : public ATresGumiShipFreeFlightTypeEnemyBase {
     GENERATED_BODY()
 public:

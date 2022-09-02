@@ -3,7 +3,7 @@
 #include "TresUIParts.h"
 #include "TresUIP_CreditDLC.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresUIP_CreditDLC : public UTresUIParts {
     GENERATED_BODY()
 public:

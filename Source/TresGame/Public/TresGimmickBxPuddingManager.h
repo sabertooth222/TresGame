@@ -5,15 +5,15 @@
 
 class ATresGimmickBxPudding;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresGimmickBxPuddingManager : public AActor {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<ATresGimmickBxPudding*> m_pPuddings;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     bool m_bEnableLauncher;
     
 public:

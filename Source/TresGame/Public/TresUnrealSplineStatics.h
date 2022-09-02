@@ -3,7 +3,7 @@
 #include "UObject/Object.h"
 #include "TresUnrealSplineStatics.generated.h"
 
-UCLASS(Abstract, NotPlaceable)
+UCLASS(Abstract, Blueprintable, NotPlaceable)
 class UTresUnrealSplineStatics : public UObject {
     GENERATED_BODY()
 public:

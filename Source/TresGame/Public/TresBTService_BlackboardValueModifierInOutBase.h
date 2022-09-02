@@ -3,7 +3,7 @@
 #include "BehaviorTree/BTService.h"
 #include "TresBTService_BlackboardValueModifierInOutBase.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class UTresBTService_BlackboardValueModifierInOutBase : public UBTService {
     GENERATED_BODY()
 public:

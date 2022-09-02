@@ -5,12 +5,12 @@
 
 class UParticleSystem;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresGumiShipEffectProjectileBase : public ATresGumiShipProjectileBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_pAttachEffectType;
     
 public:

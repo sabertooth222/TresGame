@@ -9,11 +9,11 @@ USTRUCT(BlueprintType)
 struct FTresStoryEpisodeData {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresUIGameFlagText EpisodeText;
     
-    UPROPERTY(EditDefaultsOnly)
-    UTexture2D* IconAsset;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TAssetPtr<UTexture2D> IconAsset;
     
     TRESGAME_API FTresStoryEpisodeData();
 };

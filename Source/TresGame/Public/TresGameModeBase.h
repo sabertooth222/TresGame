@@ -5,31 +5,31 @@
 #include "TresGameModeBase.generated.h"
 
 class AActor;
-class UTresTaskExecutor;
-class UTresGameInstance;
 class UObject;
+class UTresGameInstance;
 class UTresFieldVoiceManager;
+class UTresTaskExecutor;
 
-UCLASS(NonTransient, Blueprintable)
+UCLASS(Blueprintable, NonTransient)
 class ATresGameModeBase : public ASQEX_GameMode {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(DuplicateTransient, Transient, BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresGameInstance* m_pTresGameInstance;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresTaskExecutor* m_pTaskExecuter;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UObject*> m_pTempObjectArray;
     
 private:
-    UPROPERTY(DuplicateTransient, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresFieldVoiceManager* m_pFieldVoiceManager;
     
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresGameModeBaseLastCleanupTickFunction m_LastCleanupTickFunction;
     
     ATresGameModeBase();

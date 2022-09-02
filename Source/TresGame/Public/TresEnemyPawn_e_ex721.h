@@ -7,126 +7,126 @@
 #include "TresEnemyPawn_e_ex721.generated.h"
 
 class ATresSkeletalMesh_e_ex721_WoodsJail;
-class AActor;
 class ATresSkeletalMesh_e_ex721_ThornWavingDummyActor;
 class ATresActorManager_e_ex725;
+class AActor;
 class ATresProjectileBase;
 class USQEX_ParticleAttachDataAsset;
 class ATresAIPoint_e_ex721_WarpDestination;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemyPawn_e_ex721 : public ATresEnemyPawnBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresSkeletalMesh_e_ex721_WoodsJail> m_WoodsJailAsset;
     
 private:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_AddTowerYaw;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_TowerOffsetZ;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_BoneName;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_AimOffsetZ;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_TowerLimitLockOnRange;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_TowerOffLockOnRange;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_RotateSpeed;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_SendDarkSceneEventTime;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_SendBrightSceneEventTime;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_DoReturnNormalModePearsentHP;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_InitEyeRotateSpeed;
     
 public:
-    UPROPERTY(EditInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AActor* m_LandScapeActor;
     
-    UPROPERTY(EditInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AActor* m_TowerActor;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<ATresSkeletalMesh_e_ex721_WoodsJail*> m_WoodsJails;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_ThornChainMaxNum;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresActorManager_e_ex725* m_ThornChainManager;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresSkeletalMesh_e_ex721_ThornWavingDummyActor> m_ThornWavingDummyMeshAsset;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     FTresThornWavingDummyMeshAttachInfo m_ThornWavingDummyMeshAttachInfo[4];
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USQEX_ParticleAttachDataAsset* m_EffDataAsset;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresProjectileBase> m_BlowProjectileAsset;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresProjectileBase> m_TossProjectileAsset;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     ATresSkeletalMesh_e_ex721_ThornWavingDummyActor* m_ThornWavingDummyMeshActors[4];
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresAIPoint_e_ex721_WarpDestination* m_WarpDestination;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresProjectileBase> m_CallBombProjectile;
     
     ATresEnemyPawn_e_ex721();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsTowerMode() const;
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool IsReturnNormalMode() const;
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     int32 GetExistThornChainNum();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     float GetEscapeLastWoodsJailElapsedTime();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     int32 GetCaptureTargetThornChainNum();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     float GetCapturedPlayerElapsedTime();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void DebugSetDashNum(int32 Num);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float BP_GetEyeRotateValue() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float BP_GetEyeRotateRateValue() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FRotator BP_GetAnimOffsetValue() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float BP_GetAnimOffsetRate() const;
     
 };

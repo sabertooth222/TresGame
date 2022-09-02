@@ -3,7 +3,7 @@
 #include "GameFramework/Actor.h"
 #include "TresPostcardFieldVoiceActor.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API ATresPostcardFieldVoiceActor : public AActor {
     GENERATED_BODY()
 public:

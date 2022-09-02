@@ -3,7 +3,7 @@
 #include "TresGumiShipGiveInfomationLockonPrimitive.h"
 #include "TresGumiShipActualLockonPrimitive.generated.h"
 
-UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTresGumiShipActualLockonPrimitive : public UTresGumiShipGiveInfomationLockonPrimitive {
     GENERATED_BODY()
 public:

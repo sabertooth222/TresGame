@@ -5,14 +5,14 @@
 
 class ATresKHSBlendVolume;
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API UTresInterpTrackInstKHSBlendVolumeControl : public UInterpTrackInst {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresKHSBlendVolume* m_KHSBlendVolume;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<ATresKHSBlendVolume*> m_KHSBlendVolumes;
     
     UTresInterpTrackInstKHSBlendVolumeControl();

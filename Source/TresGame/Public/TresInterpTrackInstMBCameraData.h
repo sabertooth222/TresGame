@@ -3,14 +3,14 @@
 #include "Matinee/InterpTrackInst.h"
 #include "TresInterpTrackInstMBCameraData.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresInterpTrackInstMBCameraData : public UInterpTrackInst {
     GENERATED_BODY()
 public:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     int32 m_LastKey;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     int32 m_LastClip;
     
     UTresInterpTrackInstMBCameraData();

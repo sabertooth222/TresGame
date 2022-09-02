@@ -4,11 +4,11 @@
 #include "TresGumiShipBattleMissionCommonParam.h"
 #include "TresGumiShipBattleMissionCommonParameterDataTable.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresGumiShipBattleMissionCommonParameterDataTable : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresGumiShipBattleMissionCommonParam m_Common;
     
     TRESGAME_API FTresGumiShipBattleMissionCommonParameterDataTable();

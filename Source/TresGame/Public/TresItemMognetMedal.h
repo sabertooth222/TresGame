@@ -1,29 +1,29 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
 #include "MognetMedalPrizeWork.h"
+#include "GameFramework/Actor.h"
 #include "TresItemMognetMedal.generated.h"
 
 class USceneComponent;
 class UParticleSystemComponent;
 class ATresCharPawnBase;
 
-UCLASS(Abstract, HideDropdown, NotPlaceable)
+UCLASS(Abstract, Blueprintable, HideDropdown, NotPlaceable)
 class ATresItemMognetMedal : public AActor {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USceneComponent* MyRoot;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* MyParticle;
     
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FMognetMedalPrizeWork> m_Drops;
     
-    UPROPERTY(DuplicateTransient, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresCharPawnBase* m_pAttachPawn;
     
 public:

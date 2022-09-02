@@ -6,11 +6,11 @@
 
 class ATresWorldMapObject;
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresWorldMapObjData : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresWorldMapObject> m_MapObj;
     
     TRESGAME_API FTresWorldMapObjData();

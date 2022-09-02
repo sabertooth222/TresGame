@@ -3,8 +3,8 @@
 #include "TresDamageInfo.h"
 #include "TresGimmickKilledCharSignatureDelegate.generated.h"
 
-class ATresGimmickActor;
 class ATresPawnBase;
+class ATresGimmickActor;
 
-UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FTresGimmickKilledCharSignature, ATresGimmickActor*, AttackCauser, ATresPawnBase*, KilledPawn, const FTresDamageInfo&, DamageInfo);
+UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FTresGimmickKilledCharSignature, ATresGimmickActor*, AttackCauser, ATresPawnBase*, KilledPawn, const FTresDamageInfo&, DamageInfo);
 

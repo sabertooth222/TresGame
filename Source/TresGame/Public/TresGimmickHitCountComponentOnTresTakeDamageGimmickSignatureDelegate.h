@@ -5,5 +5,5 @@
 
 class AActor;
 
-UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FTresGimmickHitCountComponentOnTresTakeDamageGimmickSignature, const FHitResult&, HitInfo, AActor*, DamageCauser);
+UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FTresGimmickHitCountComponentOnTresTakeDamageGimmickSignature, const FHitResult&, HitInfo, AActor*, DamageCauser);
 

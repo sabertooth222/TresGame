@@ -4,14 +4,14 @@
 #include "ETresAIActionAbortTimingID.h"
 #include "TresEnemyEx361CounterAfterActionInfo.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresEnemyEx361CounterAfterActionInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresEnemyEx361CounterAfterActionKind ActionKind;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresAIActionAbortTimingID AbortActionID;
     
     TRESGAME_API FTresEnemyEx361CounterAfterActionInfo();

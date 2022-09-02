@@ -6,47 +6,47 @@
 #include "ETresShopID.h"
 #include "TresShopActor.generated.h"
 
-class UTresBodyCollComponent;
 class UTresMapMarkerComponent;
 class UTresReactorComponent;
+class UTresBodyCollComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresShopActor : public ATresGimmickSkeletalBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresReactorComponent* MyReactor;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresMapMarkerComponent* MyMapMarker;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresBodyCollComponent* MyBodyColl;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresShopID m_ShopID;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresShopChrID m_ShopChrID;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_DefaultIdlingMotName;
     
 public:
     ATresShopActor();
 protected:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnChangeShopActorDispType(ETresSavePointDispType InDispType);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnChangePlayerArtsMode(bool bIsArtsMode);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnChangeCinematicMode(bool bIsCinematicMode);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnChangeBattleMode(bool bIsBattleMode);
     
 };

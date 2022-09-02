@@ -3,7 +3,7 @@
 #include "Matinee/InterpTrackInst.h"
 #include "TresInterpTrackInstFloatConsoleVariable.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API UTresInterpTrackInstFloatConsoleVariable : public UInterpTrackInst {
     GENERATED_BODY()
 public:

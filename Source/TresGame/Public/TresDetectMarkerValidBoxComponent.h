@@ -3,7 +3,7 @@
 #include "Components/BoxComponent.h"
 #include "TresDetectMarkerValidBoxComponent.generated.h"
 
-UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTresDetectMarkerValidBoxComponent : public UBoxComponent {
     GENERATED_BODY()
 public:

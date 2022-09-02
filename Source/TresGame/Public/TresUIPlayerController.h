@@ -3,7 +3,7 @@
 #include "GameFramework/PlayerController.h"
 #include "TresUIPlayerController.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresUIPlayerController : public APlayerController {
     GENERATED_BODY()
 public:

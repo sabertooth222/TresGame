@@ -7,13 +7,13 @@ USTRUCT(BlueprintType)
 struct FTresEnemyDarkSidePawnBase_LockOnParam {
     GENERATED_BODY()
 public:
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresEnemydw407Region> Region;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName BoneName;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float BoneOffset;
     
     TRESGAME_API FTresEnemyDarkSidePawnBase_LockOnParam();

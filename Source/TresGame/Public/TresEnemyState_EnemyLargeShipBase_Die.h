@@ -3,7 +3,7 @@
 #include "TresEnemyState_EnemyShipBase_DieBase.h"
 #include "TresEnemyState_EnemyLargeShipBase_Die.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresEnemyState_EnemyLargeShipBase_Die : public UTresEnemyState_EnemyShipBase_DieBase {
     GENERATED_BODY()
 public:

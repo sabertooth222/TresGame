@@ -8,27 +8,27 @@
 
 class UTresGumiShipPlayerAccelerationBase;
 
-UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTresGumiShipDirectSpeedCompo : public UTresGumiShipActorCompoBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresGumiShipTouchSpeedPointEvent> m_DirectParamsWhenPoint;
     
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresGumiShipBetweenSpeedEvent> m_DirectParamsWhenBetween;
     
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresGumiShipDirectParam m_DirectParamWhenUseNitro;
     
 public:
     UTresGumiShipDirectSpeedCompo();
 protected:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnUseNitro();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnChangeAccelCompo(UTresGumiShipPlayerAccelerationBase* pCompo);
     
 };

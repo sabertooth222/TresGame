@@ -5,23 +5,23 @@
 #include "TresAfterImageVisibleWorker.h"
 #include "TresEnemyPawn_e_ex302.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemyPawn_e_ex302 : public ATresEnemyXIIIEPawnBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     FTresEnemyEx302AfterImageEffect m_AfterImageEffects[4];
     
 private:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_AfterImageVisibleTime;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresAfterImageVisibleWorker> m_AfterImageVisibleWorker;
     
 public:
     ATresEnemyPawn_e_ex302();
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool IsHitWhipComboAttack();
     
 };

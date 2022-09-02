@@ -3,7 +3,7 @@
 #include "TresUIP_HudParts.h"
 #include "TresUIP_HudRightGetBonus.generated.h"
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class UTresUIP_HudRightGetBonus : public UTresUIP_HudParts {
     GENERATED_BODY()
 public:

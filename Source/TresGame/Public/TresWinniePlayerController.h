@@ -3,7 +3,7 @@
 #include "TresSharedPlayerController.h"
 #include "TresWinniePlayerController.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresWinniePlayerController : public ATresSharedPlayerController {
     GENERATED_BODY()
 public:

@@ -6,23 +6,23 @@
 #include "UObject/NoExportTypes.h"
 #include "TresPlaceChildBonusPrizeGenerator.generated.h"
 
-class AActor;
 class ATresPlacePrizeBase;
+class AActor;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresPlaceChildBonusPrizeGenerator : public ATresPlaceChildBonusPrizeBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 RandomGenerateNum_;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float GenerateRadius;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float GenerateOffsetZ;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<AActor> GeneratorChildClass;
     
     ATresPlaceChildBonusPrizeGenerator();

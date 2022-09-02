@@ -6,17 +6,17 @@
 #include "ETresItemDefGumiEtc.h"
 #include "TresGummiTreasureDataTable.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresGummiTreasureDataTable : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<ETresItemDefGumiParts> m_nTreasureGummiParts;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<ETresItemDefGumiEtc> m_nTreasureSpecialWeapon;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<ETresItemDefGumiShipBP> m_nTreasurePlan;
     
     TRESGAME_API FTresGummiTreasureDataTable();

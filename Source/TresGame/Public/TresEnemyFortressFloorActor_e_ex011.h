@@ -6,12 +6,12 @@
 
 class UBoxComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemyFortressFloorActor_e_ex011 : public AActor, public ITresActorInterface {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UBoxComponent* FloorBoxComponent;
     
 public:

@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "TresSpawnRuleChildGenerator.h"
 #include "UObject/Interface.h"
+#include "TresSpawnRuleChildGenerator.h"
 #include "TresGeneratorInterface.generated.h"
 
 class AActor;

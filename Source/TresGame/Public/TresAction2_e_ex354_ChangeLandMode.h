@@ -3,7 +3,7 @@
 #include "TresActionDefinitionBase.h"
 #include "TresAction2_e_ex354_ChangeLandMode.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAction2_e_ex354_ChangeLandMode : public UTresActionDefinitionBase {
     GENERATED_BODY()
 public:

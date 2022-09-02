@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct TRESGAME_API FTresLevelEntityUserData {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UObject* m_UserObject;
     
     UPROPERTY(EditAnywhere)

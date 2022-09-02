@@ -4,21 +4,21 @@
 #include "TresAdhereObjBase.h"
 #include "TresAdhereDischarge.generated.h"
 
-class UTresChrDataTableSet;
 class ATresProj_BadStatDischarge;
+class UTresChrDataTableSet;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresAdhereDischarge : public ATresAdhereObjBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresChrDataTableSet* m_pDataTableSet;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_CheckRange;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresProj_BadStatDischarge> m_GenerateClass;
     
 public:

@@ -1,18 +1,18 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TresGumiShipWeaponPrimitive.h"
 #include "ETresGumiShipWeaponSequencePort.h"
+#include "TresGumiShipWeaponPrimitive.h"
 #include "TresGumiShipWeaponBase.generated.h"
 
-UCLASS(Abstract, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Abstract, Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTresGumiShipWeaponBase : public UTresGumiShipWeaponPrimitive {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_WeaponDataName;
     
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresGumiShipWeaponSequencePort> m_ePort;
     
 public:

@@ -3,7 +3,7 @@
 #include "TresGumiShipRailSlideBattleArrangement.h"
 #include "TresGumiShipActualRailSlideArrangement.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresGumiShipActualRailSlideArrangement : public ATresGumiShipRailSlideBattleArrangement {
     GENERATED_BODY()
 public:

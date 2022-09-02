@@ -3,12 +3,12 @@
 #include "TresActionDefinitionBase.h"
 #include "TresAction7_e_ex761_BattleMemberForceWarpIn.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAction7_e_ex761_BattleMemberForceWarpIn : public UTresActionDefinitionBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_NotBattleMemberForceWarpInTargetDistance;
     
 public:

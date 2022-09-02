@@ -4,11 +4,11 @@
 #include "TresComNpcMeshSetDatas.h"
 #include "TresComNpcMeshSet.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API UTresComNpcMeshSet : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresComNpcMeshSetDatas> m_Datas;
     
     UTresComNpcMeshSet();

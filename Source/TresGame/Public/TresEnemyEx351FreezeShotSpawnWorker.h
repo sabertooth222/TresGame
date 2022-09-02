@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FTresEnemyEx351FreezeShotSpawnWorker {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresEnemyEx351SpawnInfoL SpawnInfo;
     
     TRESGAME_API FTresEnemyEx351FreezeShotSpawnWorker();

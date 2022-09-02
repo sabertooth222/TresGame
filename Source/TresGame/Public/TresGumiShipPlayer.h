@@ -1,32 +1,32 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "TresGumiShipPlayerPawnBase.h"
-#include "UObject/NoExportTypes.h"
 #include "TresGumiShipPlayerNotifyInterface.h"
-#include "Engine/LatentActionManager.h"
+#include "UObject/NoExportTypes.h"
 #include "ETresGumiShipBattleMissionEndFactorType.h"
+#include "ETresGumiShipBattleMissionRankType.h"
+#include "Engine/LatentActionManager.h"
 #include "TresGMInputResult.h"
 #include "ETresGumiShipRailSlideType.h"
-#include "ETresGumiShipBattleMissionRankType.h"
 #include "TresGumiShipPlayer.generated.h"
 
-class USceneComponent;
+class AActor;
 class UTresGumiShipDirectSpeedCompo;
-class UTresGumiShipBoostDirectCompo;
-class UTresGumiShipDefCollisionSetCompo;
-class UTresGumiShipTargetPointCompo;
+class USceneComponent;
 class UTresGumiShipMultiLockonCompo;
+class UTresGumiShipBoostDirectCompo;
+class UTresGumiShipTargetPointCompo;
 class UTresGumiShipRailSlideManager;
 class UTresGumiShipPlayBonus;
 class ATresGumiShipSpWeaponConnection;
-class UPrimitiveComponent;
+class UTresGumiShipDefCollisionSetCompo;
 class USphereComponent;
 class UTresGumiShipPlayerParameterDataTableSet;
 class UObject;
-class AActor;
 class ATresGumiShipPlayerControllerBase;
+class UPrimitiveComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresGumiShipPlayer : public ATresGumiShipPlayerPawnBase, public ITresGumiShipPlayerNotifyInterface {
     GENERATED_BODY()
 public:
@@ -39,50 +39,50 @@ public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FTresGumiShipChangedLockonTarget, USceneComponent*, pTarget);
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FTresGumiShipChangeBoostPoint, const float, fOldSeed, const float, fNewSpeed, const float, fRatio);
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresGumiShipChangeSpPoint m_OnChangeSpPointDispather;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresGumiShipChangeBoostPoint m_OnChangeBoostPointDispather;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresGumiShipChangedLockonTarget m_OnChangeLockonTargetDispather;
     
 protected:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresGumiShipDirectSpeedCompo* m_pSpeedDirectCompo;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresGumiShipBoostDirectCompo* m_pBoostDirectCompo;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresGumiShipTargetPointCompo* m_pTargetCursorPoint;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresGumiShipMultiLockonCompo* m_pLockonManager;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresGumiShipRailSlideManager* m_pRailSlideManager;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresGumiShipPlayBonus* m_pPlayBonus;
     
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(EditAnywhere)
     TWeakObjectPtr<ATresGumiShipSpWeaponConnection> m_pSpWeaponConnection;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresGumiShipDefCollisionSetCompo* m_pDefCollision;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USphereComponent* m_pWarningCollision;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USphereComponent* m_pLimitedCollision;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fWarningAreaRadius;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fLimitedAreaRadius;
     
 private:
@@ -94,7 +94,7 @@ private:
     
 public:
     ATresGumiShipPlayer();
-    UFUNCTION(BlueprintCallable, meta = (WorldContext = "pWorldContextObject", LatentInfo = "LatentInfo", Latent))
+    UFUNCTION(BlueprintCallable)
     static void WaitSetupPlayer(UObject* pWorldContextObject, FLatentActionInfo LatentInfo);
     
     UFUNCTION(BlueprintCallable)
@@ -103,88 +103,88 @@ public:
     UFUNCTION(BlueprintCallable)
     void RequestUseCameraForEnemyBattle(const float fInterpSec, const bool bIsTakeover);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsRouteRailSliding() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsRailSliding() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsAutoPilotFromGimmick() const;
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void GumiShip_ToggleDebug_SwitchEnableTrackingNoTimeLimit();
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void GumiShip_ToggleDebug_SwitchEnableTrackingDebugDraw();
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void GumiShip_ToggleDebug_DispPlayerParamInfo();
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void GumiShip_ToggleDebug_DispPlayerInfo();
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void GumiShip_ToggleDebug_ChangeMovementCompo(const FString& rCompoName);
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void GumiShip_ToggleDebug_ChangeAccelCompo(const FString& rCompoName);
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void GumiShip_Debug_SetSpWeaponNoCoolDownEnable(bool bIn);
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void GumiShip_Debug_SetSpWeaponNoConsumePointEnable(bool bIn);
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void GumiShip_Debug_SetOverrideParam(int32 dIndex, int32 dIn);
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void GumiShip_Debug_SetInvincible(bool bIn);
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void GumiShip_Debug_SetHpToOne();
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void GumiShip_Debug_SetForceBerserkMode(bool bIn);
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void GumiShip_Debug_SetExplosion(bool bIn, float fSpeed, float fRot);
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void GumiShip_Debug_SetEnableOverrideParam(int32 dIndex, bool bIn);
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void GumiShip_Debug_SetDontConsumeBoost(bool bIn);
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void GumiShip_Debug_SetBerserkModeSuppression(bool bIn);
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void GumiShip_Debug_SetBarrierHp(int32 dIn);
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void GumiShip_Debug_RailSlide_SetCameraFOV(float fIn);
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void GumiShip_Debug_RailSlide_SetCameraDegree(float fIn);
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void GumiShip_Debug_RailSlide_SetCameraArmLength(float fIn);
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void GumiShip_Debug_Lockon_SetDebugDraw(bool bIn);
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void GumiShip_Debug_CreateTinyShip(bool bIsRight, int32 dKind, int32 dIndex);
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void GumiShip_Debug_CreateSpWeapon(int32 dIndex);
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void GumiShip_Debug_CreateGumiShip(int32 dKind, int32 dIndex);
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void GumiShip_Debug_CleanAndSetWeapon(int32 dIndex);
     
     UFUNCTION(Exec)
@@ -256,7 +256,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void EnableBoostEffect(bool bIn);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool CanTracking() const;
     
     UFUNCTION(BlueprintCallable)
@@ -266,61 +266,61 @@ public:
     void BP_Debug_SetLockAtTargetForRailSlide(AActor* pTarget, const float fInterpSec, const FVector vOffset);
     
 private:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnTeardownBattleMission(const ETresGumiShipBattleMissionEndFactorType eEndType);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnStartBattleMission();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnRefreshedBarrier(const int32 dIndex);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnNeedRefrectionConfigSetting();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnInputXButtonRP(const FTresGMInputResult& rResult, const ATresGumiShipPlayerControllerBase* pController);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnInputSpWeaponButtonRP(const FTresGMInputResult& rResult, const ATresGumiShipPlayerControllerBase* pController);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnInputSpButtonRP(const FTresGMInputResult& rResult, const ATresGumiShipPlayerControllerBase* pController);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnInputR3ButtonRP(const FTresGMInputResult& rResult, const ATresGumiShipPlayerControllerBase* pController);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnInputL3ButtonRP(const FTresGMInputResult& rResult, const ATresGumiShipPlayerControllerBase* pController);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnInputCancelButtonRP(const FTresGMInputResult& rResult, const ATresGumiShipPlayerControllerBase* pController);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnInputAutoHorizontalButtonRP(const FTresGMInputResult& rResult, const ATresGumiShipPlayerControllerBase* pController);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnGraze(UPrimitiveComponent* pComponent, const FVector& rvGrazeLocation);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnFinishedRailSlide(const ETresGumiShipRailSlideType eRailSlideType);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnFinishedBattleMission(const ETresGumiShipBattleMissionEndFactorType eEndType);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnChangeSpPoint(const float fOld, const float fNow, const float fRatio);
     
     UFUNCTION()
     void _OnChangeRankForBattleMission(const TEnumAsByte<ETresGumiShipBattleMissionRankType> eOldRank, const TEnumAsByte<ETresGumiShipBattleMissionRankType> eNewRank);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnChangeLockonTargetForDist(USceneComponent* pNewTarget);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnChangedLockonTarget(USceneComponent* pNewTarget);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnBrokenBarrier(const int32 dIndex);
     
     

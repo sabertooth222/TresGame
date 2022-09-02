@@ -8,13 +8,13 @@ USTRUCT(BlueprintType)
 struct FTresWildDanceOneActionParam_e_ex358 {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly, Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UWildDanceActionParamBase_e_ex358* ActionData;
     
-    UPROPERTY(EditDefaultsOnly, Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UWildDanceActionParamBase_e_ex358* AirActionData;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float AirActionExecuteTargetHeight;
     
     TRESGAME_API FTresWildDanceOneActionParam_e_ex358();

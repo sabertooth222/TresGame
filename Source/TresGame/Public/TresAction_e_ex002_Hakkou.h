@@ -5,12 +5,12 @@
 
 class UAnimSequenceBase;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresAction_e_ex002_Hakkou : public UTresActionDefinitionBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UAnimSequenceBase* m_Anim;
     
 public:

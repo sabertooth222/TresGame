@@ -3,7 +3,7 @@
 #include "GameFramework/Actor.h"
 #include "TresPhysObjMan.generated.h"
 
-UCLASS(NotPlaceable, Transient)
+UCLASS(Blueprintable, NotPlaceable, Transient)
 class ATresPhysObjMan : public AActor {
     GENERATED_BODY()
 public:

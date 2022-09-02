@@ -5,11 +5,11 @@
 
 class UAnimSequenceBase;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresAICharState_PlayMotion : public UTresStateBase {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UAnimSequenceBase* m_AnimData;
     
     UTresAICharState_PlayMotion();

@@ -3,14 +3,14 @@
 #include "BehaviorTree/BTDecorator.h"
 #include "TresBTDecorator_OverrideMoveSpeed.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTDecorator_OverrideMoveSpeed : public UBTDecorator {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_SpeedRatio;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_TimeLimit;
     
     UTresBTDecorator_OverrideMoveSpeed();

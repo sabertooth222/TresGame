@@ -5,17 +5,17 @@
 
 class UCapsuleComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemyAirdroidPawnBase : public ATresEnemyToyRoboPawnBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UCapsuleComponent* MyBlowOffWindComponent;
     
 public:
     ATresEnemyAirdroidPawnBase();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetFanRotation() const;
     
 };

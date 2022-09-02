@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
 #include "TresSpawnActorDataForGenerator.h"
+#include "UObject/Object.h"
 #include "TresGeneratorRuleFromSplineBase.generated.h"
 
 class ATresStaticActorGeneratorFromSplineSimple;
 
-UCLASS(Abstract, BlueprintType, EditInlineNew)
+UCLASS(Abstract, Blueprintable, EditInlineNew)
 class UTresGeneratorRuleFromSplineBase : public UObject {
     GENERATED_BODY()
 public:
     UTresGeneratorRuleFromSplineBase();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     TArray<FTresSpawnActorDataForGenerator> GetDataArray(ATresStaticActorGeneratorFromSplineSimple* Parent);
     
 };

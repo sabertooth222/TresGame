@@ -3,11 +3,11 @@
 #include "Engine/DataTable.h"
 #include "TresAchievementParam.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresAchievementParam : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 Param;
     
     TRESGAME_API FTresAchievementParam();

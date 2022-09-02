@@ -3,7 +3,7 @@
 #include "TresCameraRailSlide.h"
 #include "TresCameraRailSlideSnowCurling.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresCameraRailSlideSnowCurling : public ATresCameraRailSlide {
     GENERATED_BODY()
 public:

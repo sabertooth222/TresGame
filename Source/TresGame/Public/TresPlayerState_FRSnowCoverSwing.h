@@ -5,12 +5,12 @@
 
 class ATresFriendLinkPawnSnowCoverSwing;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_FRSnowCoverSwing : public UTresCharState_FRSnowCoverSwing {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresFriendLinkPawnSnowCoverSwing* m_pObj;
     
 public:

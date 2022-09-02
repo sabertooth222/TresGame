@@ -6,11 +6,11 @@
 
 class ATresGenerator_e_ex781_GunShotMarker;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresAttack21_e_ex781_InvisibleShot : public UTresAttackDefinitionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresGenerator_e_ex781_GunShotMarker> m_PatterShotState;
     
     UTresAttack21_e_ex781_InvisibleShot();

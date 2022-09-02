@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FTresClaymoreSwingDownInfo_e_ex306 {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fRevolveRadius;
     
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fRevolveHeight;
     
     TRESGAME_API FTresClaymoreSwingDownInfo_e_ex306();

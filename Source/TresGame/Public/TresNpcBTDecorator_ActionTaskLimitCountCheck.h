@@ -3,11 +3,11 @@
 #include "TresNpcBTDecoratorBase.h"
 #include "TresNpcBTDecorator_ActionTaskLimitCountCheck.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcBTDecorator_ActionTaskLimitCountCheck : public UTresNpcBTDecoratorBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_Count;
     
     UTresNpcBTDecorator_ActionTaskLimitCountCheck();

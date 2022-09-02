@@ -6,7 +6,7 @@
 class UObject;
 class UTresDanceTimerTask;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresDanceTimerTask : public UTresTimerTask {
     GENERATED_BODY()
 public:

@@ -4,11 +4,11 @@
 #include "TresLevelEntityRestartTarget.h"
 #include "TresLevelEntitySequenceAction_RestartSequence.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class TRESGAME_API UTresLevelEntitySequenceAction_RestartSequence : public UTresLevelEntitySequenceAction {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresLevelEntityRestartTarget> m_RestartTargets;
     
     UTresLevelEntitySequenceAction_RestartSequence();

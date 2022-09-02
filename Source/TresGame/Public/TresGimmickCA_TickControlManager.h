@@ -3,18 +3,18 @@
 #include "GameFramework/Actor.h"
 #include "TresGimmickCA_TickControlManager.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresGimmickCA_TickControlManager : public AActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_UpdateNumPerFrame;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_ActiveNumPerFrame;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_ReserveSize;
     
 public:

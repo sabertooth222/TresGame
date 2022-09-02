@@ -3,7 +3,7 @@
 #include "TresActionDefinitionBase.h"
 #include "TresAction4_e_ex354_Reload.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAction4_e_ex354_Reload : public UTresActionDefinitionBase {
     GENERATED_BODY()
 public:

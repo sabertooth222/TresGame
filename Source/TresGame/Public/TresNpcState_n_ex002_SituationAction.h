@@ -3,7 +3,7 @@
 #include "TresNpcState_SituationAction.h"
 #include "TresNpcState_n_ex002_SituationAction.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcState_n_ex002_SituationAction : public UTresNpcState_SituationAction {
     GENERATED_BODY()
 public:

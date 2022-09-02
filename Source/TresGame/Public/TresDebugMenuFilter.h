@@ -3,7 +3,7 @@
 #include "UObject/Object.h"
 #include "TresDebugMenuFilter.generated.h"
 
-UCLASS(Transient)
+UCLASS(Blueprintable, Transient)
 class UTresDebugMenuFilter : public UObject {
     GENERATED_BODY()
 public:

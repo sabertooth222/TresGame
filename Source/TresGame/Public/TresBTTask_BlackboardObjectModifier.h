@@ -6,14 +6,14 @@
 
 class UObject;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTTask_BlackboardObjectModifier : public UBTTaskNode {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UObject* m_Value;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlackboardKeySelector m_BlackboardKey;
     
     UTresBTTask_BlackboardObjectModifier();

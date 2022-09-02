@@ -4,14 +4,14 @@
 #include "TresEwOpacityData.h"
 #include "TresEwOpacityListAsset.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresEwOpacityListAsset : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float OpacitySpeed;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresEwOpacityData> DataArray;
     
     UTresEwOpacityListAsset();

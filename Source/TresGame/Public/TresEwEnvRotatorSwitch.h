@@ -5,24 +5,24 @@
 
 class USceneComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEwEnvRotatorSwitch : public ATresGimmickActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USceneComponent* MyRoot;
     
-    UPROPERTY(BlueprintReadWrite, EditInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName RemoteEventName;
     
     ATresEwEnvRotatorSwitch();
     UFUNCTION(BlueprintCallable)
     void SetMoving(bool bMoving);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsMoving();
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BPE_SetMoving(bool bMoving);
     
 };

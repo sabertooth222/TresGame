@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct FAttackParam_e_ex761 {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAttackAppearParam_e_ex761 AppearParam;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAttackSendParam_e_ex761 SendParam;
     
     TRESGAME_API FAttackParam_e_ex761();

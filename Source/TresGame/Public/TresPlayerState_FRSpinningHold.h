@@ -5,12 +5,12 @@
 
 class ATresFriendLinkPawnSpinningHold;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_FRSpinningHold : public UTresCharState_FRSpinningHold {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresFriendLinkPawnSpinningHold* m_pObj;
     
 public:

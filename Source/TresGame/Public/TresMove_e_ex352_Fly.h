@@ -3,11 +3,11 @@
 #include "TresLocomotionDefinitionFlyCodeDriven.h"
 #include "TresMove_e_ex352_Fly.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresMove_e_ex352_Fly : public UTresLocomotionDefinitionFlyCodeDriven {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bPitchLimiterForVelocity;
     
     UTresMove_e_ex352_Fly();

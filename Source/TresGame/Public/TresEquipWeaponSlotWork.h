@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FTresEquipWeaponSlotWork {
     GENERATED_BODY()
 public:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresEquipDataBase* m_pAsset;
     
     TRESGAME_API FTresEquipWeaponSlotWork();

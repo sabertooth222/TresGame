@@ -5,14 +5,14 @@
 
 class ATresCharPawnBase;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class UTresAICharState_AttackBase : public UTresStateBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(EditAnywhere)
     TWeakObjectPtr<ATresCharPawnBase> m_AttackTarget;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_PlayAnimName;
     
     UTresAICharState_AttackBase();

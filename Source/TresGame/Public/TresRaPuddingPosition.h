@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FTresRaPuddingPosition {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName ID;
     
     UPROPERTY(EditAnywhere)

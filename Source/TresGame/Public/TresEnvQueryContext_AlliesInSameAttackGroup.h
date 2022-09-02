@@ -3,7 +3,7 @@
 #include "EnvironmentQuery/EnvQueryContext.h"
 #include "TresEnvQueryContext_AlliesInSameAttackGroup.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UTresEnvQueryContext_AlliesInSameAttackGroup : public UEnvQueryContext {
     GENERATED_BODY()
 public:

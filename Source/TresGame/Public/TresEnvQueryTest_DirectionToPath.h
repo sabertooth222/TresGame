@@ -2,40 +2,40 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "EnvironmentQuery/EnvQueryTest.h"
+#include "EnvironmentQuery/Tests/EnvQueryTest_Dot.h"
 #include "ETresContextPathDirectionMode.h"
 #include "ETresItemPathDirectionMode.h"
-#include "EnvironmentQuery/Tests/EnvQueryTest_Dot.h"
 #include "TresEnvQueryTest_DirectionToPath.generated.h"
 
 class UEnvQueryContext;
 class UNavigationQueryFilter;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresEnvQueryTest_DirectionToPath : public UEnvQueryTest {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UEnvQueryContext> PathStart;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UEnvQueryContext> PathEnd;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UNavigationQueryFilter> FilterClass;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UEnvQueryContext> Context;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresContextPathDirectionMode::Type> DirectionA;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresItemPathDirectionMode::Type> DirectionB;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EEnvTestDot TestMode;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bAbsoluteValue;
     
     UTresEnvQueryTest_DirectionToPath();

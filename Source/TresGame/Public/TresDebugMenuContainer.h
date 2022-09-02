@@ -3,11 +3,11 @@
 #include "TresDebugMenuObject.h"
 #include "TresDebugMenuContainer.generated.h"
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class UTresDebugMenuContainer : public UTresDebugMenuObject {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UTresDebugMenuObject*> m_MenuObjects;
     
     UTresDebugMenuContainer();

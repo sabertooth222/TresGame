@@ -9,26 +9,26 @@
 #include "ETresItemDefGumiShipBP.h"
 #include "TresUIGumiCheatDataAsset.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresUIGumiCheatDataAsset : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<ETresItemDefGumiParts> m_CheatParts;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<ETresItemDefGumiMaterial> m_CheatMaterials;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<ETresItemDefGumiPattern> m_CheatPatterns;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<ETresItemDefGumiSticker> m_CheatStickers;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<ETresItemDefGumiShipBP> m_CheatDefGumiShips;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<ETresItemDefGumiEtc> m_CheatWeapons;
     
     UTresUIGumiCheatDataAsset();

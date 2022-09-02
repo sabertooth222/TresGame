@@ -3,18 +3,18 @@
 #include "TresStateBase.h"
 #include "TresPlayerState_Gigas.generated.h"
 
-class ATresVehiclePawnGigas;
 class ATresCameraFirstPerson;
+class ATresVehiclePawnGigas;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_Gigas : public UTresStateBase {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresVehiclePawnGigas* m_pObj;
     
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresCameraFirstPerson* m_Camera;
     
 public:

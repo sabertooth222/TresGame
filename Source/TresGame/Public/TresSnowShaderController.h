@@ -6,33 +6,33 @@
 
 class UPrimitiveComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresSnowShaderController : public AActor {
     GENERATED_BODY()
 public:
     ATresSnowShaderController();
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetSnowRenderResolutionWidth(int32 inWidth);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetSnowRenderHeightRatio(float inHeightRatio);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetSnowRenderDepthLocation(FVector pos);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetSnowRenderCaptureOffset(float InOffset);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void RemoveDepthRender(UPrimitiveComponent* inPrimitive);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void DisableSnowRenderDepthFollowPlayer(bool inbDisable);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ClearSnowRenderDepth();
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void AddDepthRender(UPrimitiveComponent* inPrimitive);
     
 };

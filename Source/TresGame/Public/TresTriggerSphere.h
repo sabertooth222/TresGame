@@ -4,7 +4,7 @@
 #include "TresNotifyInterface.h"
 #include "TresTriggerSphere.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresTriggerSphere : public ATriggerSphere, public ITresNotifyInterface {
     GENERATED_BODY()
 public:

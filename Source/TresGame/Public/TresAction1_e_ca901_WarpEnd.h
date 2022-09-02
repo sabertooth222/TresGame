@@ -3,7 +3,7 @@
 #include "TresActionDefinitionBase.h"
 #include "TresAction1_e_ca901_WarpEnd.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAction1_e_ca901_WarpEnd : public UTresActionDefinitionBase {
     GENERATED_BODY()
 public:

@@ -4,14 +4,14 @@
 #include "ETresAbilityKind.h"
 #include "TresFoodCompleteMealEffectDataTable.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresFoodCompleteMealEffectDataTable : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresAbilityKind m_AbilityPlus;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_Level;
     
     TRESGAME_API FTresFoodCompleteMealEffectDataTable();

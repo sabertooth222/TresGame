@@ -6,15 +6,15 @@
 
 class USwfMovie;
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresUIStyleData : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresCommandKind> m_CommandKind;
     
-    UPROPERTY(EditDefaultsOnly)
-    USwfMovie* m_SwfAsset;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TAssetPtr<USwfMovie> m_SwfAsset;
     
     TRESGAME_API FTresUIStyleData();
 };

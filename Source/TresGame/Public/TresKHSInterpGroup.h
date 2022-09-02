@@ -3,11 +3,11 @@
 #include "Matinee/InterpGroup.h"
 #include "TresKHSInterpGroup.generated.h"
 
-UCLASS(CollapseCategories)
+UCLASS(Blueprintable, CollapseCategories)
 class TRESGAME_API UTresKHSInterpGroup : public UInterpGroup {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_RestoreWhenTerminated;
     
     UTresKHSInterpGroup();

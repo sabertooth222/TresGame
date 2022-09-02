@@ -1,40 +1,40 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "TresGimmickActor.h"
-#include "Animation/AnimInstance.h"
 #include "TresGimmickDitherFadeInterface.h"
+#include "Animation/AnimInstance.h"
 #include "Animation/AnimInstance.h"
 #include "TresGimmickSimpleSkeletalBase.generated.h"
 
-class UTresSkeletalMeshComponent;
 class UAnimationAsset;
+class UTresSkeletalMeshComponent;
 
-UCLASS(Abstract, Config=Game)
+UCLASS(Abstract, Blueprintable, Config=Game)
 class ATresGimmickSimpleSkeletalBase : public ATresGimmickActor, public ITresGimmickDitherFadeInterface {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnMontageStartedMCDelegate OnAnimationStarted;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnMontageEndedMCDelegate OnAnimationEnded;
     
 private:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresSkeletalMeshComponent* MyMesh;
     
 public:
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_GimmickClipDitherParamName;
     
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_IsGimmickClipDitherParamInvert;
     
     ATresGimmickSimpleSkeletalBase();
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveAnimationStarted(UAnimationAsset* AnimAsset);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveAnimationEnded(UAnimationAsset* AnimAsset, bool bInterrupted);
     
     UFUNCTION(BlueprintCallable)
@@ -56,10 +56,10 @@ public:
     float BP_AnimGetCurrentTime(FName InSlotName);
     
 protected:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnAnimStarted(UAnimationAsset* InAnimAsset);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnAnimEnded(UAnimationAsset* InAnimAsset, bool bInterrupted);
     
     

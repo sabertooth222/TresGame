@@ -1,84 +1,84 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "TresGimmickActor.h"
-#include "ETresGimmickLookAtType.h"
-#include "Animation/AnimInstance.h"
-#include "Animation/AnimInstance.h"
 #include "ETresGimmickLookAtTrackingType.h"
+#include "Animation/AnimInstance.h"
+#include "Animation/AnimInstance.h"
+#include "ETresGimmickLookAtType.h"
 #include "ETresAnimNotifyBpEventID.h"
 #include "TresGimmickSkeletalBase.generated.h"
 
-class UTresSkeletalMeshComponent;
 class UTresRootComponent;
+class UTresSkeletalMeshComponent;
 class UTresEffectAttachComponent;
 class UTresAnimSet;
 class UAnimationAsset;
 class USQEX_KBD_Component;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresGimmickSkeletalBase : public ATresGimmickActor {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresRootComponent* MyRoot;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresSkeletalMeshComponent* MyMesh;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresEffectAttachComponent* MyEffectAtt;
     
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnMontageStartedMCDelegate OnAnimationStarted;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnMontageEndedMCDelegate OnAnimationEnded;
     
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresGimmickLookAtTrackingType> m_GltTrackType;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_LookAtRateMultiRate;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_LookAtParamA;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresGimmickLookAtType> m_GltLookAtType;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UTresAnimSet*> m_AppendAnimSetMap;
     
 public:
     ATresGimmickSkeletalBase();
 protected:
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveNotifyProjectileAttackHitBpEvent();
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveNotifyAttackHitBpEvent();
     
     UFUNCTION(BlueprintImplementableEvent)
-    void ReceiveAnimNotifyStartBpEvent(FName AnimSeqName, ETresAnimNotifyBpEventID EventID, int32 Param);
+    void ReceiveAnimNotifyStartBpEvent(FName AnimSeqName, TEnumAsByte<ETresAnimNotifyBpEventID> EventID, int32 Param);
     
     UFUNCTION(BlueprintImplementableEvent)
-    void ReceiveAnimNotifyEndBpEvent(FName AnimSeqName, ETresAnimNotifyBpEventID EventID, int32 Param);
+    void ReceiveAnimNotifyEndBpEvent(FName AnimSeqName, TEnumAsByte<ETresAnimNotifyBpEventID> EventID, int32 Param);
     
 public:
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveAnimationStarted(UAnimationAsset* AnimAsset);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveAnimationEnded(UAnimationAsset* AnimAsset, bool bInterrupted);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     USQEX_KBD_Component* GetKBDComponent() const;
     
 protected:
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BP_NotifyTiming(int32 InParam);
     
 public:
@@ -101,10 +101,10 @@ public:
     float BP_AnimGetCurrentTime(FName InSlotName);
     
 protected:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnAnimStarted(UAnimationAsset* InAnimAsset);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnAnimEnded(UAnimationAsset* InAnimAsset, bool bInterrupted);
     
 };

@@ -4,11 +4,11 @@
 #include "ETresChrUniqueID.h"
 #include "TresEnvQueryTest_IsFriendNpc.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresEnvQueryTest_IsFriendNpc : public UEnvQueryTest {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresChrUniqueID FriendID;
     
     UTresEnvQueryTest_IsFriendNpc();

@@ -5,11 +5,11 @@
 
 class USoundBase;
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API UTresStaticSESet : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     USoundBase* m_Assets[43];
     
     UTresStaticSESet();

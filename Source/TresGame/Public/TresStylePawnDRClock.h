@@ -3,7 +3,7 @@
 #include "TresStylePawnBase.h"
 #include "TresStylePawnDRClock.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresStylePawnDRClock : public ATresStylePawnBase {
     GENERATED_BODY()
 public:

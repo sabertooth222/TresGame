@@ -6,23 +6,23 @@
 
 class UTresEnemyToyComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemyPawn_e_ex020 : public ATresEnemyPawnBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresDieParam_e_ex020 m_DieParam;
     
 public:
     ATresEnemyPawn_e_ex020();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     void GetToyComponentList(TArray<UTresEnemyToyComponent*>& OutList) const;
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     int32 GetNumToyPawnActiveOnly() const;
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     int32 GetNumToyPawn() const;
     
 };

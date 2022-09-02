@@ -6,22 +6,22 @@
 
 class UTresDebugArrowComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API ATresCoverActionVolume : public ATresVolume {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresDebugArrowComponent* MyDirArrow;
     
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresCoverIdlingDirID m_IdlingDir;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    uint32 m_bEnableCoverDir: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bEnableCoverDir: 1;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_CoverCameraID;
     
 public:

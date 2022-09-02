@@ -3,14 +3,14 @@
 #include "TresSpawnPointFilter.h"
 #include "TresSpawnPointIDFilter.generated.h"
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class TRESGAME_API UTresSpawnPointIDFilter : public UTresSpawnPointFilter {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FName> m_ValidIDs;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FName> m_InvalidIDs;
     
     UTresSpawnPointIDFilter();

@@ -17,16 +17,16 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetStep(int32 dIn);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnTick(const float fDeltaSeconds);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnExit();
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnEnter();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsFinishedState() const;
     
     UFUNCTION(BlueprintCallable)
@@ -35,26 +35,26 @@ public:
     UFUNCTION(BlueprintCallable)
     void IncrementStep();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetStep() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FName GetStateName() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetStateID() const;
     
     UFUNCTION(BlueprintCallable)
     void DecrementStep();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool CanCancelState() const;
     
 protected:
     UFUNCTION(BlueprintCallable)
     void _SetEnableCancelState(bool bIn);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FTresGumiShipStateArgs _GetArgs() const;
     
     UFUNCTION(BlueprintCallable)

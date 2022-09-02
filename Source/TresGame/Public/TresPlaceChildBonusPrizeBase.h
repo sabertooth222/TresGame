@@ -6,11 +6,11 @@
 
 class UTres1dChainActorComponent;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresPlaceChildBonusPrizeBase : public ATresPlacePrizeBase, public ITresGeneratorInterface {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, Export, VisibleDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTres1dChainActorComponent* DebugTres1dChainActorComponent;
     
     ATresPlaceChildBonusPrizeBase();

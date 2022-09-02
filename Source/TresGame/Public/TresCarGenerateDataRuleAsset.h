@@ -4,11 +4,11 @@
 #include "TresCarGenerateData.h"
 #include "TresCarGenerateDataRuleAsset.generated.h"
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UTresCarGenerateDataRuleAsset : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresCarGenerateData> DataArray;
     
     UTresCarGenerateDataRuleAsset();

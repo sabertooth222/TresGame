@@ -9,10 +9,10 @@ USTRUCT(BlueprintType)
 struct FTresEnemyXIIIPlayerKilledVoiceData {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresPlayerUniqueID PlayerUniqueID;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundBase* VOICE;
     
     TRESGAME_API FTresEnemyXIIIPlayerKilledVoiceData();

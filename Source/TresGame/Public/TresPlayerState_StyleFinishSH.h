@@ -9,24 +9,24 @@ class ATresStylePawnSHChariot;
 class ATresCameraFix;
 class ATresStylePawnSHFryingpan;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_StyleFinishSH : public UTresPlayerState_StyleFinish {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresStylePawnSHPegasus* m_pPegasus;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresStylePawnSHChariot* m_pChariot;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresCameraFix* m_CameraFix;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresCameraNormal* m_Camera;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresStylePawnSHFryingpan* m_pFryingpan;
     
 public:

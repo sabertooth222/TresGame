@@ -3,7 +3,7 @@
 #include "TresVolume.h"
 #include "TresSpawnPointDisableVolume.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API ATresSpawnPointDisableVolume : public ATresVolume {
     GENERATED_BODY()
 public:

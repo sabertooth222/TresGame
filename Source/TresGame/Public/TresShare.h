@@ -3,7 +3,7 @@
 #include "UObject/Object.h"
 #include "TresShare.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresShare : public UObject {
     GENERATED_BODY()
 public:

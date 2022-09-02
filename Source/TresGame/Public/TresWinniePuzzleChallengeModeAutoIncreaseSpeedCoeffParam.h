@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FTresWinniePuzzleChallengeModeAutoIncreaseSpeedCoeffParam {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float RemainingTime;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DecreaseSpeedCoeff;
     
     TRESGAME_API FTresWinniePuzzleChallengeModeAutoIncreaseSpeedCoeffParam();

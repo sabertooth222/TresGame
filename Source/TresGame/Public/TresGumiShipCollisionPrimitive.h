@@ -5,12 +5,12 @@
 
 class UBodySetup;
 
-UCLASS(Transient, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, Transient, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTresGumiShipCollisionPrimitive : public UTresGumiShipPrimitiveComponentBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(DuplicateTransient, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UBodySetup* m_pBodySetup;
     
 public:

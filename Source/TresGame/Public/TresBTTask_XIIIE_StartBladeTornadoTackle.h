@@ -3,7 +3,7 @@
 #include "BehaviorTree/BTTaskNode.h"
 #include "TresBTTask_XIIIE_StartBladeTornadoTackle.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTTask_XIIIE_StartBladeTornadoTackle : public UBTTaskNode {
     GENERATED_BODY()
 public:

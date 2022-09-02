@@ -3,11 +3,11 @@
 #include "Matinee/InterpTrackInst.h"
 #include "TresInterpTrackInstActorVoice.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API UTresInterpTrackInstActorVoice : public UInterpTrackInst {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_LastKeyIndex;
     
     UTresInterpTrackInstActorVoice();

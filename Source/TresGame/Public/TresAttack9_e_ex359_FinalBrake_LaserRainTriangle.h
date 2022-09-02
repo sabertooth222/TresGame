@@ -7,27 +7,27 @@
 #include "TresAttack9_e_ex359_FinalBrake_LaserRainTriangle.generated.h"
 
 class ATresProjectile_e_ex359_GuardBeamSpawner;
-class ATresProjectile_e_ex359_LaserSpawner;
 class ATresProjectileBase;
+class ATresProjectile_e_ex359_LaserSpawner;
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAttack9_e_ex359_FinalBrake_LaserRainTriangle : public UTresAttackDefinitionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresProjectile_e_ex359_LaserSpawner> m_ProjectileClass;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FEX359_LaserOnTimeInfoSet m_LaserOnTimeInfoSet;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresProjectile_e_ex359_GuardBeamSpawner> m_GuardBeamProjectileClass;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FEX359_GuardBeamInfoSet m_GuardBeamInfoSet;
     
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<ATresProjectileBase*> m_GuardBeamArray;
     
 public:

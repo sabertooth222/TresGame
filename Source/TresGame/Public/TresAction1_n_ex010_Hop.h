@@ -3,12 +3,12 @@
 #include "TresNpcAttackDefinitionBase.h"
 #include "TresAction1_n_ex010_Hop.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAction1_n_ex010_Hop : public UTresNpcAttackDefinitionBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 m_bSelectRight: 1;
     
 public:

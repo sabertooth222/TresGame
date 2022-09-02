@@ -3,12 +3,12 @@
 #include "TresGumiShipEnemyPartsBase.h"
 #include "TresGumiShipParts647Pawn.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresGumiShipParts647Pawn : public ATresGumiShipEnemyPartsBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fMaxYaw;
     
 public:

@@ -5,20 +5,20 @@
 #include "ETresSpawnPointHeightFilterType.h"
 #include "TresSpawnPointSizeFilter.generated.h"
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class TRESGAME_API UTresSpawnPointSizeFilter : public UTresSpawnPointFilter {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_Radius;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_Height;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresSpawnPointRadiusFilterType> m_RadiusFilterType;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresSpawnPointHeightFilterType> m_HeightFilterType;
     
     UTresSpawnPointSizeFilter();

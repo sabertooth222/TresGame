@@ -3,7 +3,7 @@
 #include "TresGameMode.h"
 #include "TresGameModeStandardPlayer.generated.h"
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class ATresGameModeStandardPlayer : public ATresGameMode {
     GENERATED_BODY()
 public:

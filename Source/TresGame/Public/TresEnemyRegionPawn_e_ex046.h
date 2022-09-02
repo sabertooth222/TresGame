@@ -3,7 +3,7 @@
 #include "TresCharPawnBase.h"
 #include "TresEnemyRegionPawn_e_ex046.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemyRegionPawn_e_ex046 : public ATresCharPawnBase {
     GENERATED_BODY()
 public:

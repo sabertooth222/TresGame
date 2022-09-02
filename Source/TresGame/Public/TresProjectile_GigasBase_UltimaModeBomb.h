@@ -3,12 +3,12 @@
 #include "TresProjectileBase.h"
 #include "TresProjectile_GigasBase_UltimaModeBomb.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresProjectile_GigasBase_UltimaModeBomb : public ATresProjectileBase {
     GENERATED_BODY()
 public:
     ATresProjectile_GigasBase_UltimaModeBomb();
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnTickMove(float InDeltaTime);
     
 };

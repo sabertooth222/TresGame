@@ -3,15 +3,15 @@
 #include "BehaviorTree/BTDecorator.h"
 #include "TresBTDecorator_CoopFunctionCheck.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTDecorator_CoopFunctionCheck : public UBTDecorator {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName FunctionName;
     
-    UPROPERTY(EditAnywhere)
-    uint32 bAutomaticallyEnterNodeName: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 bAutomaticallyEnterNodeName: 1;
     
     UTresBTDecorator_CoopFunctionCheck();
 };

@@ -4,14 +4,14 @@
 #include "DataProviders/AIDataProvider.h"
 #include "TresNpcEnvQueryTest_CureHpCheck.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcEnvQueryTest_CureHpCheck : public UEnvQueryTest {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAIDataProviderFloatValue m_HpRatio_Often;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAIDataProviderFloatValue m_HpRatio_Pinch;
     
     UTresNpcEnvQueryTest_CureHpCheck();

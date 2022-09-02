@@ -3,11 +3,11 @@
 #include "BehaviorTree/Services/BTService_BlackboardBase.h"
 #include "TresBTService_GameplayFocus.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTService_GameplayFocus : public UBTService_BlackboardBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_DelayClearFocusTime;
     
     UTresBTService_GameplayFocus();

@@ -3,7 +3,7 @@
 #include "BehaviorTree/BTTaskNode.h"
 #include "TresNpcBTTask_SetFreeWalkLookAtLocationBB.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcBTTask_SetFreeWalkLookAtLocationBB : public UBTTaskNode {
     GENERATED_BODY()
 public:

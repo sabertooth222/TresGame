@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "BehaviorTree/BTDecorator.h"
 #include "BehaviorTree/BehaviorTreeTypes.h"
 #include "ETresHateCompare.h"
-#include "BehaviorTree/BTDecorator.h"
 #include "BehaviorTree/Blackboard/BlackboardKeyType.h"
 #include "TresBTDecorator_HateCheck.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTDecorator_HateCheck : public UBTDecorator {
     GENERATED_BODY()
 public:
@@ -16,13 +16,13 @@ public:
     UPROPERTY(EditAnywhere)
     TEnumAsByte<EArithmeticKeyOperation::Type> m_ArithmeticOperation;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_Value;
     
-    UPROPERTY(VisibleDefaultsOnly)
-    uint32 m_bUseBlackboard: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bUseBlackboard: 1;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlackboardKeySelector m_TargetActor;
     
     UTresBTDecorator_HateCheck();

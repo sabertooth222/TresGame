@@ -3,7 +3,7 @@
 #include "TresActionDefinitionBase.h"
 #include "TresAttack9_e_ex359_FinalBrake_End.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAttack9_e_ex359_FinalBrake_End : public UTresActionDefinitionBase {
     GENERATED_BODY()
 public:

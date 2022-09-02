@@ -4,11 +4,11 @@
 #include "EEX734_CommonAction.h"
 #include "TresAction_e_ex734_Common.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAction_e_ex734_Common : public UTresActionDefinitionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<EEX734_CommonAction> m_Action;
     
     UTresAction_e_ex734_Common();

@@ -2,20 +2,20 @@
 #include "CoreMinimal.h"
 #include "TresRailSlideMoveInfo.generated.h"
 
-class USQEX_SplineComponent;
 class ASQEX_SplineActor;
+class USQEX_SplineComponent;
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresRailSlideMoveInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ASQEX_SplineActor* m_StartActor;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ASQEX_SplineActor* m_EndActor;
     
-    UPROPERTY(Export, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     USQEX_SplineComponent* m_Component;
     
     TRESGAME_API FTresRailSlideMoveInfo();

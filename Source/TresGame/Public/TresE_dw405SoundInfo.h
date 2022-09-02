@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FTresE_dw405SoundInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresE_dw405SoundData> SoundDatas;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float PlaySoundReamingTimeAtLastSound;
     
     TRESGAME_API FTresE_dw405SoundInfo();

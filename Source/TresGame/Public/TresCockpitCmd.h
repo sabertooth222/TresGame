@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FTresCockpitCmd {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresCommandKind> m_cmdKind;
     
     TRESGAME_API FTresCockpitCmd();

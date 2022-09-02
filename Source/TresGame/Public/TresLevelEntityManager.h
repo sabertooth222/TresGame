@@ -5,24 +5,24 @@
 #include "TresLevelEntityManager.generated.h"
 
 class UTresLevelEntityGroup;
-class ATresPawnBase;
 class ATresLevelEntity;
+class ATresPawnBase;
 
-UCLASS(Transient)
+UCLASS(Blueprintable, Transient)
 class TRESGAME_API UTresLevelEntityManager : public UObject {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UTresLevelEntityGroup*> m_Groups;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresEncountSpawnRequest> m_EncountSpawnRequests;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<ATresPawnBase*> m_RemoveActors;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<ATresLevelEntity*> m_PendingSpawn;
     
 public:

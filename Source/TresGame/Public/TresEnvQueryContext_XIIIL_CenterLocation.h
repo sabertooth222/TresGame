@@ -3,7 +3,7 @@
 #include "EnvironmentQuery/EnvQueryContext.h"
 #include "TresEnvQueryContext_XIIIL_CenterLocation.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UTresEnvQueryContext_XIIIL_CenterLocation : public UEnvQueryContext {
     GENERATED_BODY()
 public:

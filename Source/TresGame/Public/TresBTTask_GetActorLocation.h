@@ -4,14 +4,14 @@
 #include "BehaviorTree/BehaviorTreeTypes.h"
 #include "TresBTTask_GetActorLocation.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTTask_GetActorLocation : public UBTTaskNode {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlackboardKeySelector m_KeyActor;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlackboardKeySelector m_KeyLocation;
     
     UTresBTTask_GetActorLocation();

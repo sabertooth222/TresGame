@@ -6,17 +6,17 @@
 
 class AActor;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresClipGimmickUpdateMgr : public ATresGimmickUpdateMgr {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ClipLength;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<TSubclassOf<AActor>> ClipClasses;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 ClipActorPredictedSize;
     
     ATresClipGimmickUpdateMgr();

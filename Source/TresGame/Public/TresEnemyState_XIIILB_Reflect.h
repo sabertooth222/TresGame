@@ -3,7 +3,7 @@
 #include "TresEnemyState_XIIIL_Reflect.h"
 #include "TresEnemyState_XIIILB_Reflect.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresEnemyState_XIIILB_Reflect : public UTresEnemyState_XIIIL_Reflect {
     GENERATED_BODY()
 public:

@@ -5,33 +5,33 @@
 #include "TresGimmickCA_TickControlInterface.h"
 #include "TresGimmickCA_Jellyfish.generated.h"
 
-class UTresStaticMeshComponent;
 class UTresAtkCollComponent;
+class UTresStaticMeshComponent;
 class USceneComponent;
 
-UCLASS(Config=Game)
+UCLASS(Blueprintable, Config=Game)
 class ATresGimmickCA_Jellyfish : public ATresGimmickActor, public ITresGimmickCA_TickControlInterface {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresStaticMeshComponent* MyMesh;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresAtkCollComponent* MyAtkColl_Jelly;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USceneComponent* MyCollBase;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FCAJellyfishParam m_Parameter;
     
 public:
     ATresGimmickCA_Jellyfish();
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveNotifyProjectileAttackHitBpEvent();
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveNotifyAttackHitBpEvent();
     
     

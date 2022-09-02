@@ -6,12 +6,12 @@
 
 class USceneComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresGimmickEwRotationActor : public AActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USceneComponent* MyRoot;
     
 public:

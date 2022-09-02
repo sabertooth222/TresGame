@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct FTresEnemyEx304RootMotionScaleInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UCurveFloat* RootMotionScaleCurveData;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bOverRunTarget: 1;
     
     TRESGAME_API FTresEnemyEx304RootMotionScaleInfo();

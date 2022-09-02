@@ -12,13 +12,13 @@ public:
     UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresDetectCollShape2D::Type> ShapeType;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector Size;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector RelativeLocation;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRotator RelativeRocation;
     
     TRESGAME_API FTresDetectCollShapeAssetUnit2D();

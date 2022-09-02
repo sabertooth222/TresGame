@@ -7,17 +7,17 @@
 
 class UTresStateBase;
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresWeaponAttack_e_ex367_AvaterActionBase : public UTresAttackDefinitionWeaponBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UTresStateBase> m_AttackState;
     
     UPROPERTY(EditAnywhere)
     TEnumAsByte<MoveSlashTypes_e_ex367> m_PramMoveSlashType;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_AvatarId;
     
     UTresWeaponAttack_e_ex367_AvaterActionBase();

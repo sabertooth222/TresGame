@@ -3,7 +3,7 @@
 #include "Components/PrimitiveComponent.h"
 #include "TresInfluenceMapVolumeRenderingComponent.generated.h"
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTresInfluenceMapVolumeRenderingComponent : public UPrimitiveComponent {
     GENERATED_BODY()
 public:

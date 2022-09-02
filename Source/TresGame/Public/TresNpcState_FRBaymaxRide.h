@@ -3,7 +3,7 @@
 #include "TresCharState_FRBaymaxRide.h"
 #include "TresNpcState_FRBaymaxRide.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcState_FRBaymaxRide : public UTresCharState_FRBaymaxRide {
     GENERATED_BODY()
 public:

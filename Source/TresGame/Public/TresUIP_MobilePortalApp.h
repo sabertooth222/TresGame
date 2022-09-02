@@ -3,7 +3,7 @@
 #include "TresUIParts.h"
 #include "TresUIP_MobilePortalApp.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresUIP_MobilePortalApp : public UTresUIParts {
     GENERATED_BODY()
 public:

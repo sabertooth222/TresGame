@@ -3,18 +3,18 @@
 #include "TresGameCheatManager.h"
 #include "TresSoKcCheatManager.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresSoKcCheatManager : public UTresGameCheatManager {
     GENERATED_BODY()
 public:
     UTresSoKcCheatManager();
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void DebugDrawSoKcKeyHoleDetectCollision(bool bVisibility);
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void DebugDrawSoKcKeyHoleConnectingInternalCount(bool bVisibility);
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void DebugDrawSoKcKeyBladeBeamRaycast(bool bVisibility);
     
 };

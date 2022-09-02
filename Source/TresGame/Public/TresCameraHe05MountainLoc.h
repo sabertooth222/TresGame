@@ -3,7 +3,7 @@
 #include "TresCameraNormalLoc.h"
 #include "TresCameraHe05MountainLoc.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresCameraHe05MountainLoc : public ATresCameraNormalLoc {
     GENERATED_BODY()
 public:

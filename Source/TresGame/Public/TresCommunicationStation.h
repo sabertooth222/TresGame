@@ -3,7 +3,7 @@
 #include "GameFramework/Actor.h"
 #include "TresCommunicationStation.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresCommunicationStation : public AActor {
     GENERATED_BODY()
 public:

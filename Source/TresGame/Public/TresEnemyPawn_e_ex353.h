@@ -10,87 +10,87 @@
 #include "ETresStateID.h"
 #include "TresEnemyPawn_e_ex353.generated.h"
 
-class ATresProjectileBase;
-class ATresStaticMesh_e_ex353_Shield;
 class UTresProjectileManager_e_ex353_ThornBeam;
 class UParticleSystem;
+class ATresStaticMesh_e_ex353_Shield;
+class ATresProjectileBase;
 class UParticleSystemComponent;
 class USQEX_ParticleAttachDataAsset;
-class USoundBase;
 class UObject;
+class USoundBase;
 class AActor;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemyPawn_e_ex353 : public ATresEnemyXIIILEPawnBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     FTresEx353HitEffectInfo m_HitEffectInfos[2];
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresEx353HitEffectManager> m_HitEffectManager;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresProjectileManager_e_ex353_ThornBeam* m_ThornBeamManager;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresStaticMesh_e_ex353_Shield> m_ShieldActorClass;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_ThornWildDanceDarkAsset;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_ThornWildDanceFlushAsset;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_EveryDirectionShotAsset;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresProjectileBase> m_LaserShotProjectileClass;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresProjectileBase> m_LaserShotIgnoreGuardProjectileClass;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresProjectileBase> m_LaserShotMissProjectileClass;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 m_bIsEveryDirectionShotAfterSpawnStunProjectile: 1;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresProjectileBase> m_StunProjectileClass;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector m_EveryDirectionShotRotateSpeed;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_EveryDirectionShotDeployDist;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_SpawnStunProjectileTime;
     
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* m_ThornWildDanceDarkCmp;
     
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* m_EveryDirectionShotEffectCmp;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresEx353EveryDirectionShotReserveWorker> m_EveryDirectionShotReserveWorkerList;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USQEX_ParticleAttachDataAsset* m_Ex353EffectDataAsset;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<USoundBase*> m_DeadEndStartVoiceList;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<USoundBase*> m_DeadEndFinishVoiceList;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundBase* m_SpawnShieldVoice;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_NextPlayVoiceSpawnShieldTime;
     
     ATresEnemyPawn_e_ex353();
@@ -106,22 +106,22 @@ public:
     UFUNCTION()
     void OnCtorStateCallBack(TEnumAsByte<ETresStateID> inStateID);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool IsThornBeamMoveShield();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool IsThornBeamLoopCancel();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool IsHitAerialComboAttack();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool IsDuringThornWildDance();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool IsDebugFnishBlow();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     int32 GetShieldNum();
     
     UFUNCTION(BlueprintCallable)
@@ -130,7 +130,7 @@ public:
     UFUNCTION(BlueprintCallable)
     AActor* GetCenterActor();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool GetAttackGuarded();
     
     UFUNCTION(BlueprintCallable)

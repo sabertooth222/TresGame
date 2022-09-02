@@ -5,15 +5,15 @@
 
 class USQEX_ParticleAttachDataAsset;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemyPawn_e_ex701 : public ATresEnemyPawnBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     FName m_BodyCollisionNames[3];
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USQEX_ParticleAttachDataAsset* m_GroundEffectAttachDataAsset;
     
 public:
@@ -21,16 +21,16 @@ public:
     UFUNCTION(BlueprintCallable)
     void OnRetrySkip();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetRushAddAngle() const;
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     int32 GetNumTarHand() const;
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void DebugSetRushNum(int32 Num);
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void DebugSetEnableTarHandAlwaysEnd(int32 bEnable);
     
 };

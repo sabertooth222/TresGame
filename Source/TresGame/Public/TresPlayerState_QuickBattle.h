@@ -3,7 +3,7 @@
 #include "TresCharState_QuickBattle.h"
 #include "TresPlayerState_QuickBattle.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_QuickBattle : public UTresCharState_QuickBattle {
     GENERATED_BODY()
 public:

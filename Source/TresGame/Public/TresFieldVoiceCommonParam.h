@@ -3,14 +3,14 @@
 #include "UObject/Object.h"
 #include "TresFieldVoiceCommonParam.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresFieldVoiceCommonParam : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_GroupName;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_ExecuteNum;
     
     UTresFieldVoiceCommonParam();

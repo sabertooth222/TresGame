@@ -3,7 +3,7 @@
 #include "TresCharState_FRSnowChase.h"
 #include "TresNpcState_FRSnowChase.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcState_FRSnowChase : public UTresCharState_FRSnowChase {
     GENERATED_BODY()
 public:

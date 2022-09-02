@@ -5,11 +5,11 @@
 
 class ATresDisneyMagicPawnWandanyan;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_DMWandanyan : public UTresCharState_DMWandanyan {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresDisneyMagicPawnWandanyan* m_pObj;
     
     UTresPlayerState_DMWandanyan();

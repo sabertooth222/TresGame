@@ -3,42 +3,42 @@
 #include "Templates/SubclassOf.h"
 #include "Components/ActorComponent.h"
 #include "TresAnimInterface.h"
-#include "UObject/NoExportTypes.h"
 #include "TresNotifyInterface.h"
 #include "ETresFriendAreaID.h"
 #include "ETresChrUniqueID.h"
 #include "ETresCommandKind.h"
+#include "UObject/NoExportTypes.h"
 #include "TresFriendComponent.generated.h"
 
 class AActor;
-class ATresNpcPawnBase;
 class AController;
+class ATresNpcPawnBase;
 
-UCLASS(BlueprintType, EditInlineNew, ClassGroup=Custom, Config=Game, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, Config=Game, meta=(BlueprintSpawnableComponent))
 class UTresFriendComponent : public UActorComponent, public ITresAnimInterface, public ITresNotifyInterface {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AController* m_pController;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     TWeakObjectPtr<ATresNpcPawnBase> m_pFriendPawn[6];
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     TWeakObjectPtr<AActor> m_pCameraTargetActor;
     
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TSubclassOf<ATresNpcPawnBase> m_FriendPawnBPDefault[6];
     
-    UPROPERTY(Transient)
+    UPROPERTY(EditAnywhere, Transient)
     TSubclassOf<ATresNpcPawnBase> m_FriendPawnBP[6];
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 m_bDispDebugInfo: 1;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 m_bDispDebugLine: 1;
     
     UTresFriendComponent();
@@ -78,34 +78,34 @@ public:
     UFUNCTION(BlueprintCallable)
     void PlayVoiceFriendLink(TEnumAsByte<ETresCommandKind> Command, ETresChrUniqueID uid);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsExistGoofy() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsExistDonald() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsExistDonaGoo() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsExistChar(ETresChrUniqueID uid) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsExeLink() const;
     
     UFUNCTION(BlueprintCallable)
     bool IsDisableFriendWarpHome();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsCameraTargetActorEnable();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsCameraShortAnime();
     
     UFUNCTION(BlueprintCallable)
     FVector GetHomePos(ATresNpcPawnBase* pNpcPawn);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     AActor* GetCameraTargetActor();
     
     UFUNCTION(BlueprintCallable)

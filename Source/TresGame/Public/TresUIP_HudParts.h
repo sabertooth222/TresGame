@@ -3,7 +3,7 @@
 #include "TresUISubParts.h"
 #include "TresUIP_HudParts.generated.h"
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class UTresUIP_HudParts : public UTresUISubParts {
     GENERATED_BODY()
 public:

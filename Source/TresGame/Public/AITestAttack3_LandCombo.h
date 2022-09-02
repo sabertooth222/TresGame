@@ -3,7 +3,7 @@
 #include "AITestAttack_Base.h"
 #include "AITestAttack3_LandCombo.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UAITestAttack3_LandCombo : public UAITestAttack_Base {
     GENERATED_BODY()
 public:

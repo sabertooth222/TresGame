@@ -3,13 +3,13 @@
 #include "TresStateBase.h"
 #include "TresPlayerState_ReMindSoKcMain.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_ReMindSoKcMain : public UTresStateBase {
     GENERATED_BODY()
 public:
     UTresPlayerState_ReMindSoKcMain();
 private:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnLightWaveProjectileFinish();
     
 };

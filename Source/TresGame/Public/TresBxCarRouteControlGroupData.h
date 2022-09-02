@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FTresBxCarRouteControlGroupData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<ATresBxCarGenerator*> Generators;
     
     TRESGAME_API FTresBxCarRouteControlGroupData();

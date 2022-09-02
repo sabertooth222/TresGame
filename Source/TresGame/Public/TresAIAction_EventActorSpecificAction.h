@@ -4,14 +4,14 @@
 #include "ETresActorSpecificActionID.h"
 #include "TresAIAction_EventActorSpecificAction.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAIAction_EventActorSpecificAction : public UTresActionDefinitionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresActorSpecificActionID> m_SpecificActionID;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_SubID;
     
     UTresAIAction_EventActorSpecificAction();

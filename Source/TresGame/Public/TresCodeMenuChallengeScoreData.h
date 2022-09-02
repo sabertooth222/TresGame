@@ -5,20 +5,20 @@
 #include "TresUIGameFlagData.h"
 #include "TresCodeMenuChallengeScoreData.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresCodeMenuChallengeScoreData : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString m_NameId;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresCodeMenuChallengeScoreInfo> m_Scores;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresUIGameFlagData GameFlag;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_SecretOpenEnable;
     
     TRESGAME_API FTresCodeMenuChallengeScoreData();

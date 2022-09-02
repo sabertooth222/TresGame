@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FTresCodeMenuChallengeScoreInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresDlcChallengeScoreID m_Code;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FString> m_NameIds;
     
     TRESGAME_API FTresCodeMenuChallengeScoreInfo();

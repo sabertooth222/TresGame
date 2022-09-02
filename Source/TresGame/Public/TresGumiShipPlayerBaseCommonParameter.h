@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FTresGumiShipPlayerBaseCommonParameter {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fHitPoint;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fAttackPoint;
     
     TRESGAME_API FTresGumiShipPlayerBaseCommonParameter();

@@ -1,51 +1,51 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ETresRalphBlockKind.h"
 #include "GameFramework/Actor.h"
 #include "TresNotifyInterface.h"
 #include "TresActorInterface.h"
+#include "ETresRalphBlockKind.h"
 #include "TresDisneyMagicActorRalphBlock.generated.h"
 
 class UTresBodyCollComponent;
-class UTresStaticMeshComponent;
 class UParticleSystem;
 class UTresAtkCollComponent;
+class UTresStaticMeshComponent;
 class ATresDisneyMagicActorRalphBlock;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresDisneyMagicActorRalphBlock : public AActor, public ITresNotifyInterface, public ITresActorInterface {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresRalphBlockKind> m_BlockKind;
     
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_EffAssetExplosion;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_EffAssetDisappear;
     
 private:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresStaticMeshComponent* MyMesh;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresAtkCollComponent* MyAtkColl;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresBodyCollComponent* MyBodyColl;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresStaticMeshComponent* MyPenetrationEffectMesh;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<ATresDisneyMagicActorRalphBlock*> m_ChainBlockList;
     
 public:
     ATresDisneyMagicActorRalphBlock();
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnChangeGimmickPause(bool bPause);
     
     

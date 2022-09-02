@@ -2,17 +2,17 @@
 #include "CoreMinimal.h"
 #include "TresPhotoHologramPoseSet.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresPhotoHologramPoseSet {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName AnimName;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float StartTime;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool IsWeaponVisible;
     
     TRESGAME_API FTresPhotoHologramPoseSet();

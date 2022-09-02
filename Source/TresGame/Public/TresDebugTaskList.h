@@ -7,14 +7,14 @@
 class UTresDebugDisplayTask;
 class UTresTaskBase;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UTresDebugTaskList : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<TSubclassOf<UTresDebugDisplayTask>> DebugDisplayClassArray;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<TSubclassOf<UTresTaskBase>> DebugTaskList;
     
     UTresDebugTaskList();

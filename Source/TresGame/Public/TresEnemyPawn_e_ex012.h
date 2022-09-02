@@ -3,11 +3,11 @@
 #include "TresEnemyPawnBase.h"
 #include "TresEnemyPawn_e_ex012.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemyPawn_e_ex012 : public ATresEnemyPawnBase {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresEnemyPawnBase* m_TopAttachPawn;
     
     ATresEnemyPawn_e_ex012();

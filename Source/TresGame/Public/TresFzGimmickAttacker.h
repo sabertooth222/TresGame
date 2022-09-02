@@ -7,15 +7,15 @@
 class UTresChrBaseParam;
 class UTresChrDataTableSet;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresFzGimmickAttacker : public AActor, public ITresActorInterface {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(DuplicateTransient, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresChrDataTableSet* m_pDataTableSet;
     
-    UPROPERTY(DuplicateTransient, Export, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UTresChrBaseParam* m_pBaseParam;
     
 public:

@@ -10,10 +10,10 @@ USTRUCT(BlueprintType)
 struct FTresAutoNavLinkExclusiveVolumeInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UNavArea> AreaClass;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FNavAgentSelector SupportedAgents;
     
     TRESGAME_API FTresAutoNavLinkExclusiveVolumeInfo();

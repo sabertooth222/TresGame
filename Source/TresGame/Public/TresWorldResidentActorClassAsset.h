@@ -4,21 +4,21 @@
 #include "Engine/DataAsset.h"
 #include "TresWorldResidentActorClassAsset.generated.h"
 
-class UTresWorldResidentActorClassAsset;
 class AActor;
+class UTresWorldResidentActorClassAsset;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresWorldResidentActorClassAsset : public UDataAsset {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<FName, TSubclassOf<AActor>> AssetMaps;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<TSubclassOf<AActor>> AssetArray;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UTresWorldResidentActorClassAsset*> ReferenceAssets;
     
 public:

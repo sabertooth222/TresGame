@@ -3,7 +3,7 @@
 #include "TresActorVoiceTrackBase.h"
 #include "TresActorVoiceSubtitleTrack.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class TRESGAME_API UTresActorVoiceSubtitleTrack : public UTresActorVoiceTrackBase {
     GENERATED_BODY()
 public:

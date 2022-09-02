@@ -3,7 +3,7 @@
 #include "TresAIPoint.h"
 #include "TresAIPoint_e_ex353_ShieldSpawnLocation.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresAIPoint_e_ex353_ShieldSpawnLocation : public ATresAIPoint {
     GENERATED_BODY()
 public:

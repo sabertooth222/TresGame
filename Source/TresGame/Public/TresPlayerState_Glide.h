@@ -3,7 +3,7 @@
 #include "TresCharState_Glide.h"
 #include "TresPlayerState_Glide.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_Glide : public UTresCharState_Glide {
     GENERATED_BODY()
 public:

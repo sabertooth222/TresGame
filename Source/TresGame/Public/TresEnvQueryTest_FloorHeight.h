@@ -2,21 +2,21 @@
 #include "CoreMinimal.h"
 #include "EnvironmentQuery/EnvQueryTest.h"
 #include "ETresFloorTestMode.h"
-#include "DataProviders/AIDataProvider.h"
 #include "BehaviorTree/Blackboard/BlackboardKeyType.h"
+#include "DataProviders/AIDataProvider.h"
 #include "TresEnvQueryTest_FloorHeight.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresEnvQueryTest_FloorHeight : public UEnvQueryTest {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<EArithmeticKeyOperation::Type> Operation;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAIDataProviderFloatValue FloorHeight;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAIDataProviderFloatValue TestHeight;
     
     UPROPERTY(EditAnywhere)

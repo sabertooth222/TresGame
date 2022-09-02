@@ -4,17 +4,17 @@
 #include "DataProviders/AIDataProvider.h"
 #include "TresEnvQueryGenerator_OnRingDirectionAddOffset.generated.h"
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UTresEnvQueryGenerator_OnRingDirectionAddOffset : public UTresEnvQueryGenerator_OnRing {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAIDataProviderFloatValue DirectionAddOffsetX;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAIDataProviderFloatValue DirectionAddOffsetY;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAIDataProviderFloatValue DirectionAddOffsetZ;
     
     UTresEnvQueryGenerator_OnRingDirectionAddOffset();

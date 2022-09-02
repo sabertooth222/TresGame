@@ -4,47 +4,47 @@
 #include "TresControllerInterface.h"
 #include "TresPlayerControllerLowerBase.generated.h"
 
-class ATresCameraManager;
 class ATresCameraDebug;
+class ATresCameraManager;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class ATresPlayerControllerLowerBase : public APlayerController, public ITresControllerInterface {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(Transient, BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresCameraManager* m_pCameraManager;
     
-    UPROPERTY(Transient, BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresCameraDebug* m_pCameraDebug;
     
 public:
     ATresPlayerControllerLowerBase();
-    UFUNCTION(Exec, BlueprintCallable)
+    UFUNCTION(BlueprintCallable, Exec)
     void ToggleTresCameraDebugStop();
     
-    UFUNCTION(Exec, BlueprintCallable)
+    UFUNCTION(BlueprintCallable, Exec)
     void ToggleTresCameraDebug();
     
-    UFUNCTION(Exec, BlueprintCallable)
+    UFUNCTION(BlueprintCallable, Exec)
     void OnDebugPauseFrameSkip();
     
-    UFUNCTION(Exec, BlueprintCallable)
+    UFUNCTION(BlueprintCallable, Exec)
     void OnDebugPauseEnableGamePad();
     
-    UFUNCTION(Exec, BlueprintCallable)
+    UFUNCTION(BlueprintCallable, Exec)
     void OnDebugPauseEnable();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ATresCameraManager* GetTresCameraManager() const;
     
-    UFUNCTION(Exec, BlueprintCallable)
+    UFUNCTION(BlueprintCallable, Exec)
     void EnableDebugPauseFunction(bool bEnable);
     
-    UFUNCTION(Exec, BlueprintCallable)
+    UFUNCTION(BlueprintCallable, Exec)
     void DebugShowMatineeTime();
     
-    UFUNCTION(Exec, BlueprintCallable)
+    UFUNCTION(BlueprintCallable, Exec)
     void DebugShowCameraDebugInfo(bool bEnable);
     
     UFUNCTION(BlueprintCallable, Exec)
@@ -53,22 +53,22 @@ public:
     UFUNCTION(BlueprintCallable, Exec)
     void DebugSetFixedDeltaTime(float InFrameRate);
     
-    UFUNCTION(Exec, BlueprintCallable)
+    UFUNCTION(BlueprintCallable, Exec)
     void DebugSetCameraZero();
     
-    UFUNCTION(Exec, BlueprintCallable)
+    UFUNCTION(BlueprintCallable, Exec)
     void DebugSetCameraSpeedScale(float SpeedScale);
     
-    UFUNCTION(Exec, BlueprintCallable)
+    UFUNCTION(BlueprintCallable, Exec)
     void DebugSetCameraFieldOfView(float FOV);
     
-    UFUNCTION(Exec, BlueprintCallable)
+    UFUNCTION(BlueprintCallable, Exec)
     void DebugGamePadSpecialLeftDebugPause(int32 debugPauseStyle);
     
-    UFUNCTION(Exec, BlueprintCallable)
+    UFUNCTION(BlueprintCallable, Exec)
     void DebugCameraShutOutFade(bool bEnable);
     
-    UFUNCTION(Exec, BlueprintCallable)
+    UFUNCTION(Exec)
     void DebugCameraCollCheck(uint8 EnableNo);
     
     

@@ -3,7 +3,7 @@
 #include "TresGimmickGeneratorBase.h"
 #include "TresEditorOnlyGeneratorBase.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresEditorOnlyGeneratorBase : public ATresGimmickGeneratorBase {
     GENERATED_BODY()
 public:

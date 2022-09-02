@@ -3,7 +3,7 @@
 #include "TresEnemyPawnBase.h"
 #include "TresEnemyPawn_SAMPLE_e_ex002.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemyPawn_SAMPLE_e_ex002 : public ATresEnemyPawnBase {
     GENERATED_BODY()
 public:

@@ -1,32 +1,32 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "TresGummiShipPartsStruct.h"
+#include "GameFramework/SaveGame.h"
 #include "TresGummiShipAbility.h"
 #include "TresGummiShipHeader.h"
-#include "GameFramework/SaveGame.h"
 #include "TresGummiShipSticker.h"
-#include "TresGummiShipPartsStruct.h"
 #include "GummiShipSaveLoad.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UGummiShipSaveLoad : public USaveGame {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresGummiShipHeader m_header;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresGummiShipAbility m_Ability;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     FTresGummiShipSticker m_Sticker[8];
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresGummiShipPartsStruct> m_body;
     
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString GummiShipSaveSlotName;
     
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(EditAnywhere)
     uint32 UserIndex;
     
     UGummiShipSaveLoad();

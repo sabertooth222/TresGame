@@ -7,7 +7,7 @@
 class ATresCameraFixTarget;
 class UObject;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresCameraFixTarget : public ATresCameraTarget {
     GENERATED_BODY()
 public:

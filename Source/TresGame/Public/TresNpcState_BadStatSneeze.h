@@ -3,7 +3,7 @@
 #include "TresStateBase.h"
 #include "TresNpcState_BadStatSneeze.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcState_BadStatSneeze : public UTresStateBase {
     GENERATED_BODY()
 public:

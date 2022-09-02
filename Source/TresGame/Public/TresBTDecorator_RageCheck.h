@@ -4,14 +4,14 @@
 #include "BehaviorTree/Blackboard/BlackboardKeyType.h"
 #include "TresBTDecorator_RageCheck.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTDecorator_RageCheck : public UBTDecorator {
     GENERATED_BODY()
 public:
     UPROPERTY(EditAnywhere)
     TEnumAsByte<EArithmeticKeyOperation::Type> m_ArithmeticOperation;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_Value;
     
     UTresBTDecorator_RageCheck();

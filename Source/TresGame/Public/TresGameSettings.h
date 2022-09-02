@@ -4,54 +4,54 @@
 #include "InputCoreTypes.h"
 #include "TresGameSettings.generated.h"
 
-UCLASS(ConfigDoNotCheckDefaults, Config=GameSettings)
+UCLASS(Blueprintable, ConfigDoNotCheckDefaults, Config=GameSettings)
 class UTresGameSettings : public UObject {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(Config)
+    UPROPERTY(Config, EditAnywhere)
     uint8 GamePadDecideType;
     
-    UPROPERTY(Config)
+    UPROPERTY(Config, EditAnywhere)
     uint8 GamePadIconType;
     
-    UPROPERTY(Config)
+    UPROPERTY(Config, EditAnywhere)
     uint8 KeyboardDispayType;
     
-    UPROPERTY(Config)
+    UPROPERTY(Config, EditAnywhere)
     uint8 SoundMasterVolume;
     
-    UPROPERTY(Config)
+    UPROPERTY(Config, EditAnywhere)
     uint8 SoundBgmVolume;
     
-    UPROPERTY(Config)
+    UPROPERTY(Config, EditAnywhere)
     uint8 SoundSeVolume;
     
-    UPROPERTY(Config)
+    UPROPERTY(Config, EditAnywhere)
     uint8 SoundVoiceVolume;
     
-    UPROPERTY(Config)
+    UPROPERTY(Config, EditAnywhere)
     int8 DisplayGamma;
     
-    UPROPERTY(Config)
+    UPROPERTY(Config, EditAnywhere)
     uint8 KeyConfigCustom;
     
-    UPROPERTY(Config)
+    UPROPERTY(Config, EditAnywhere)
     int8 MouseSensitivityCustom;
     
-    UPROPERTY(Config)
+    UPROPERTY(Config, EditAnywhere)
     uint32 Version;
     
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString DispLanguage;
     
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString VoiceLanguage;
     
-    UPROPERTY(Config)
+    UPROPERTY(Config, EditAnywhere)
     FKey KeyConfigMain[21];
     
-    UPROPERTY(Config)
+    UPROPERTY(Config, EditAnywhere)
     FKey KeyConfigSub[21];
     
 public:

@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct FSQEX_DesignatedAttachData {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName Key;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USQEX_ParticleAttachDataAsset* DesignatedAttachData;
     
     TRESGAME_API FSQEX_DesignatedAttachData();

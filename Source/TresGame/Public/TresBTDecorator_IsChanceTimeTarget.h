@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "BehaviorTree/BehaviorTreeTypes.h"
 #include "BehaviorTree/BTDecorator.h"
+#include "BehaviorTree/BehaviorTreeTypes.h"
 #include "TresBTDecorator_IsChanceTimeTarget.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTDecorator_IsChanceTimeTarget : public UBTDecorator {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlackboardKeySelector m_BlackboardKey;
     
     UTresBTDecorator_IsChanceTimeTarget();

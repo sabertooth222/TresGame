@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FTresEnemyEx711_HopLevelParam {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresEnemyEx711_HopParam> m_HopParamArray;
     
     TRESGAME_API FTresEnemyEx711_HopLevelParam();

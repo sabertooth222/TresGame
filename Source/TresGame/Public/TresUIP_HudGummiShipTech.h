@@ -3,7 +3,7 @@
 #include "TresGumiShipUISubParts.h"
 #include "TresUIP_HudGummiShipTech.generated.h"
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class UTresUIP_HudGummiShipTech : public UTresGumiShipUISubParts {
     GENERATED_BODY()
 public:

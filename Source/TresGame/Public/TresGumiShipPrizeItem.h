@@ -4,7 +4,7 @@
 #include "UObject/NoExportTypes.h"
 #include "TresGumiShipPrizeItem.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API ATresGumiShipPrizeItem : public ATresGumiShipActorBase {
     GENERATED_BODY()
 public:

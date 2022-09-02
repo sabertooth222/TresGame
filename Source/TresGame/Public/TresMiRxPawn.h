@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TresCommunicationTerminalInterface.h"
 #include "TresCharPawnBase.h"
+#include "TresCommunicationTerminalInterface.h"
 #include "TresMiRxPawn.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresMiRxPawn : public ATresCharPawnBase, public ITresCommunicationTerminalInterface {
     GENERATED_BODY()
 public:

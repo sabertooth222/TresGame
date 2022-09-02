@@ -3,7 +3,7 @@
 #include "TresGumiShipSequentialProjectileBase.h"
 #include "TresGumiShipSpWeapon130Projectile.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresGumiShipSpWeapon130Projectile : public ATresGumiShipSequentialProjectileBase {
     GENERATED_BODY()
 public:

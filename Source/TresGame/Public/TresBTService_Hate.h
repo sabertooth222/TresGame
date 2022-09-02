@@ -6,7 +6,7 @@
 #include "ETresValueModifierMethod.h"
 #include "TresBTService_Hate.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTService_Hate : public UBTService {
     GENERATED_BODY()
 public:
@@ -16,13 +16,13 @@ public:
     UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresValueModifierMethod::Type> m_ValueModifierType;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_Value;
     
-    UPROPERTY(VisibleDefaultsOnly)
-    uint32 m_bUseBlackboard: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bUseBlackboard: 1;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlackboardKeySelector m_TargetActor;
     
     UTresBTService_Hate();

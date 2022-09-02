@@ -7,21 +7,21 @@
 
 class UTresAttack1_e_ex358_JinraiBase;
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAttack1_e_ex358_Jinrai : public UTresAttack_e_ex358_Base {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<TSubclassOf<UTresAttack1_e_ex358_JinraiBase>> m_JinraiAttackDefinitionClassList;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresEnemyJinraiPhaseType_e_ex358> m_StartPhaseType;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresEnemyJinraiPhaseType_e_ex358> m_EndPhaseType;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresAttack1_e_ex358_JinraiBase* m_CurrentAttackDefinition;
     
 public:

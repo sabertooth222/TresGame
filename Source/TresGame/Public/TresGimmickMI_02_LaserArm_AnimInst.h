@@ -5,14 +5,14 @@
 
 class ATresGimmickMI_02_LaserArm;
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class UTresGimmickMI_02_LaserArm_AnimInst : public UTresAnimInstance {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, VisibleDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_ArmUpdownValue;
     
-    UPROPERTY(BlueprintReadOnly, VisibleDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_ArmRotationValue;
     
     UTresGimmickMI_02_LaserArm_AnimInst();

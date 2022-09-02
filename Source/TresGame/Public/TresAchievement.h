@@ -3,7 +3,7 @@
 #include "UObject/Object.h"
 #include "TresAchievement.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresAchievement : public UObject {
     GENERATED_BODY()
 public:

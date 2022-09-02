@@ -3,7 +3,7 @@
 #include "TresGumiShipFSMPlayerStateBase.h"
 #include "TresGumiShipFSMPlayerWaitSetupState.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresGumiShipFSMPlayerWaitSetupState : public UTresGumiShipFSMPlayerStateBase {
     GENERATED_BODY()
 public:

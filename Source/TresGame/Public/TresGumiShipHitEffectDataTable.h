@@ -5,14 +5,14 @@
 
 class UParticleSystem;
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresGumiShipHitEffectDataTable : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_pHitEffect;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bUseScaleFromCameraDistTo;
     
     TRESGAME_API FTresGumiShipHitEffectDataTable();

@@ -3,7 +3,7 @@
 #include "TresCameraRotTargetCtrl.h"
 #include "TresCameraSnowCurling.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresCameraSnowCurling : public ATresCameraRotTargetCtrl {
     GENERATED_BODY()
 public:

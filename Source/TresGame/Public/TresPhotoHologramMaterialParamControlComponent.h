@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "Components/PrimitiveComponent.h"
+#include "UObject/NoExportTypes.h"
 #include "TresPhotoHologramMaterialParamControlComponent.generated.h"
 
 class UTresSkeletalMeshComponent;
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTresPhotoHologramMaterialParamControlComponent : public UPrimitiveComponent {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(Export)
+    UPROPERTY(EditAnywhere, Export)
     TWeakObjectPtr<UTresSkeletalMeshComponent> m_pTargetMesh;
     
 public:

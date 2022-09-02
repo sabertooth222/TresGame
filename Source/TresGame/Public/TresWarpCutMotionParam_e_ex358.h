@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FTresWarpCutMotionParam_e_ex358 {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresEnemyWarpCutMotionType_e_ex357> MotionType;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float AnimStartTime;
     
     TRESGAME_API FTresWarpCutMotionParam_e_ex358();

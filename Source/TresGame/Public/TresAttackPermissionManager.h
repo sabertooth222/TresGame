@@ -1,23 +1,23 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameplayTagContainer.h"
 #include "UObject/Object.h"
+#include "GameplayTagContainer.h"
 #include "ETresTeam.h"
 #include "TresAttackPermissionManager.generated.h"
 
 class UCurveVector;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class UTresAttackPermissionManager : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayTag AttackerGroup;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresTeam::Type> AttackFilter;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UCurveVector* MaxAttackerCurve;
     
     UTresAttackPermissionManager();

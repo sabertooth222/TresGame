@@ -3,7 +3,7 @@
 #include "TresProjectileBase.h"
 #include "TresProjectile_e_ex311_KBTail.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresProjectile_e_ex311_KBTail : public ATresProjectileBase {
     GENERATED_BODY()
 public:

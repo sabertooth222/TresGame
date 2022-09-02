@@ -3,14 +3,14 @@
 #include "Animation/AnimNotifies/AnimNotify.h"
 #include "TresAnimNotify_Bonamik_EnablePresetWind.generated.h"
 
-UCLASS(CollapseCategories, MinimalAPI)
+UCLASS(Blueprintable, CollapseCategories, MinimalAPI)
 class UTresAnimNotify_Bonamik_EnablePresetWind : public UAnimNotify {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_Enable;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FName> m_PresetNames;
     
     UTresAnimNotify_Bonamik_EnablePresetWind();

@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FBonePhysicsBlendRateDataList_e_ex816 {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FBonePhysicsBlendRateData_e_ex816> List;
     
     TRESGAME_API FBonePhysicsBlendRateDataList_e_ex816();

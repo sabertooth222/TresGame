@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FTresSpawnActorDataForGenerator : public FTresSpawnActorData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresSpawnRuleChildGenerator ChildParam;
     
     TRESGAME_API FTresSpawnActorDataForGenerator();

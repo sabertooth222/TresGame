@@ -3,7 +3,7 @@
 #include "UObject/Object.h"
 #include "TresSpawnPointFilter.generated.h"
 
-UCLASS(Transient)
+UCLASS(Blueprintable, Transient)
 class TRESGAME_API UTresSpawnPointFilter : public UObject {
     GENERATED_BODY()
 public:

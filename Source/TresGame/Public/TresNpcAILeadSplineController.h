@@ -9,7 +9,7 @@ class AActor;
 class ATresNpcAILeadSplineActor;
 class ATresNpcPawnBase;
 
-UCLASS(BlueprintType, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTresNpcAILeadSplineController : public UActorComponent {
     GENERATED_BODY()
 public:
@@ -21,44 +21,44 @@ public:
     void SetLeadSplineActor(AActor* InLeadSplineActor, FName InLeadID, FName InCancelEventName);
     
 protected:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnLeadSubFinishFunc(FName ID);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnLeadSubEndFunc(FName ID);
     
 public:
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsLeadSub() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsLeaderWaiting() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool HasLeadSplineActor() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector GetLeadSubOffset() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ATresNpcAILeadSplineActor* GetLeadSplineActorGoal() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ATresNpcAILeadSplineActor* GetLeadSplineActor() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ATresNpcPawnBase* GetLeadLeader() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FName GetLeadID() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector GetCharaClosestLocation() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FRotator GetBaseWayPointRotation() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector GetBaseWayPoint() const;
     
     UFUNCTION(BlueprintCallable)

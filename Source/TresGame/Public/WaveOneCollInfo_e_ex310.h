@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FWaveOneCollInfo_e_ex310 {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FOneCollInfo_e_ex310> OneCollInfoArray;
     
     TRESGAME_API FWaveOneCollInfo_e_ex310();

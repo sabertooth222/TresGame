@@ -3,7 +3,7 @@
 #include "TresInterpTrackBlendSpaceControl.h"
 #include "TresInterpTrackFaceBlendSpaceParam.generated.h"
 
-UCLASS(CollapseCategories)
+UCLASS(Blueprintable, CollapseCategories)
 class TRESGAME_API UTresInterpTrackFaceBlendSpaceParam : public UTresInterpTrackBlendSpaceControl {
     GENERATED_BODY()
 public:

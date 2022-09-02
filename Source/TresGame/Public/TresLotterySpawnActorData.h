@@ -10,13 +10,13 @@ USTRUCT(BlueprintType)
 struct FTresLotterySpawnActorData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<AActor> SpawnClass;
     
-    UPROPERTY(BlueprintReadOnly, EditInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 Power;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresSpawnRuleChildGenerator ChildGeneratorRule;
     
     TRESGAME_API FTresLotterySpawnActorData();

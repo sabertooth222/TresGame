@@ -3,7 +3,7 @@
 #include "TresProj_MagicFire.h"
 #include "TresProj_MagicDarkFiragaCore.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresProj_MagicDarkFiragaCore : public ATresProj_MagicFire {
     GENERATED_BODY()
 public:

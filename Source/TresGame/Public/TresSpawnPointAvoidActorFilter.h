@@ -3,11 +3,11 @@
 #include "TresSpawnPointFilter.h"
 #include "TresSpawnPointAvoidActorFilter.generated.h"
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class TRESGAME_API UTresSpawnPointAvoidActorFilter : public UTresSpawnPointFilter {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_Radius;
     
     UTresSpawnPointAvoidActorFilter();

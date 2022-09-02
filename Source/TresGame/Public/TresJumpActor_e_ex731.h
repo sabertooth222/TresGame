@@ -3,7 +3,7 @@
 #include "GameFramework/Actor.h"
 #include "TresJumpActor_e_ex731.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresJumpActor_e_ex731 : public AActor {
     GENERATED_BODY()
 public:

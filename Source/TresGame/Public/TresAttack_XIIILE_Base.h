@@ -3,7 +3,7 @@
 #include "TresAttackDefinitionBase.h"
 #include "TresAttack_XIIILE_Base.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAttack_XIIILE_Base : public UTresAttackDefinitionBase {
     GENERATED_BODY()
 public:

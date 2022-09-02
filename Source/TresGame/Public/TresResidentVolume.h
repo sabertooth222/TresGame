@@ -6,15 +6,15 @@
 
 class UObject;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresResidentVolume : public ATresVolume {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FStringAssetReference> m_AssetArray;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UObject*> m_AssetObjects;
     
 public:

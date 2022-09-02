@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "TresHopNavLinkExtendedInfo.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresHopNavLinkExtendedInfo {
     GENERATED_BODY()
 public:

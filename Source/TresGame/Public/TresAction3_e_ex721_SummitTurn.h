@@ -3,14 +3,14 @@
 #include "TresActionDefinitionBase.h"
 #include "TresAction3_e_ex721_SummitTurn.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAction3_e_ex721_SummitTurn : public UTresActionDefinitionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_RightTurnLimitAngle;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_LeftTurnLimitAngle;
     
     UTresAction3_e_ex721_SummitTurn();

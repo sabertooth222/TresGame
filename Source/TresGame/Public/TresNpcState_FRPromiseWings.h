@@ -3,7 +3,7 @@
 #include "TresCharState_FRPromiseWings.h"
 #include "TresNpcState_FRPromiseWings.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcState_FRPromiseWings : public UTresCharState_FRPromiseWings {
     GENERATED_BODY()
 public:

@@ -4,14 +4,14 @@
 #include "RemyAnimationType.h"
 #include "TresRemyAnimationDataTable.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresRemyAnimationDataTable : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     RemyAnimationType AnimationType;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName AnimationName;
     
     TRESGAME_API FTresRemyAnimationDataTable();

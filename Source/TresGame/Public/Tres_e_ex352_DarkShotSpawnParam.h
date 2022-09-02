@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FTres_e_ex352_DarkShotSpawnParam {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector Offset;
     
     TRESGAME_API FTres_e_ex352_DarkShotSpawnParam();

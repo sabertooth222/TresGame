@@ -6,12 +6,12 @@
 
 class UTresSkeletalMeshComponent;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresGumiShipGimmickCharaBase : public ATresGumiShipGimmickObjectBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresSkeletalMeshComponent* m_pSkeletalMesh;
     
 public:
@@ -19,16 +19,16 @@ public:
     UFUNCTION(BlueprintCallable)
     float PlayAnimByAnimSet(FName AnimName, FName SlotName, float fBlendInTime, int32 dFlags, int32 dEffectGroup, float fPlayRate, const FVector2D& rvRootTransScale);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsAnimEnd(const FName SlotName) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetAnimCurrentTime(const FName SlotName) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FName GetAnimCurrentName(const FName SlotName) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetAnimCurrentLength(const FName SlotName) const;
     
 };

@@ -1,46 +1,46 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/DataTable.h"
-#include "EGameOverHintType.h"
-#include "TresGameOverHintEnemyInfo.h"
-#include "ETresWorldCode.h"
-#include "ETresUIDataVersion.h"
-#include "TresUIGameFlagData.h"
 #include "ETresGameOverHintSpecialType.h"
+#include "Engine/DataTable.h"
+#include "TresUIGameFlagData.h"
+#include "EGameOverHintType.h"
+#include "ETresWorldCode.h"
+#include "TresGameOverHintEnemyInfo.h"
+#include "ETresUIDataVersion.h"
 #include "TresGameOverHintData.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresGameOverHintData : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString HintNameLocSpaceKey;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EGameOverHintType HintType;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 Priority;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresWorldCode> WorldCode;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName MapName;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresUIGameFlagData StartGameFlag;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresUIGameFlagData EndGameFlag;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresGameOverHintEnemyInfo> EnemyInfo;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresGameOverHintSpecialType SpecialType;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresUIDataVersion Version;
     
     TRESGAME_API FTresGameOverHintData();

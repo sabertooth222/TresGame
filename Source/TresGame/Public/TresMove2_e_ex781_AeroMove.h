@@ -3,7 +3,7 @@
 #include "TresLocomotionDefinitionFlyCodeDriven.h"
 #include "TresMove2_e_ex781_AeroMove.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresMove2_e_ex781_AeroMove : public UTresLocomotionDefinitionFlyCodeDriven {
     GENERATED_BODY()
 public:

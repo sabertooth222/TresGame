@@ -3,12 +3,12 @@
 #include "TresNpcAttackDefinitionBase.h"
 #include "TresAttack2_n_ex009_LandCombo.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAttack2_n_ex009_LandCombo : public UTresNpcAttackDefinitionBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_ComboMax;
     
 public:

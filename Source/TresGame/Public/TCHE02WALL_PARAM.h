@@ -5,11 +5,11 @@
 
 class UCameraShake;
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTCHE02WALL_PARAM {
     GENERATED_BODY()
 public:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TSubclassOf<UCameraShake> CameraShake;
     
     TRESGAME_API FTCHE02WALL_PARAM();

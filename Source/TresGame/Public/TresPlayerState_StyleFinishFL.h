@@ -5,12 +5,12 @@
 
 class ATresStylePawnFLKraken;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_StyleFinishFL : public UTresPlayerState_StyleFinish {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresStylePawnFLKraken* m_pKraken;
     
 public:

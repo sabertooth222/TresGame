@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "TresGumiShipMovemnetParam.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresGumiShipMovemnetParam {
     GENERATED_BODY()
 public:

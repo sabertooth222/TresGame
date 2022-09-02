@@ -5,11 +5,11 @@
 
 class ATresPhysObjStaticMeshActor;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBallPoolManageTask : public UTresTaskBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<ATresPhysObjStaticMeshActor*> Balls;
     
     UTresBallPoolManageTask();

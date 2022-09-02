@@ -9,10 +9,10 @@ USTRUCT(BlueprintType)
 struct FTresEnemyEx771_FlarePillarAttractParam {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresActor_e_ex771_Attract* m_pAttract;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AActor* m_pTarget;
     
     TRESGAME_API FTresEnemyEx771_FlarePillarAttractParam();

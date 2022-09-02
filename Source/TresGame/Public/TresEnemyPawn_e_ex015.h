@@ -4,15 +4,15 @@
 #include "UObject/NoExportTypes.h"
 #include "TresEnemyPawn_e_ex015.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemyPawn_e_ex015 : public ATresEnemyPawnBase {
     GENERATED_BODY()
 public:
     ATresEnemyPawn_e_ex015();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FRotator BP_GetAnimOffsetValue() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float BP_GetAnimOffsetAlpha() const;
     
 };

@@ -3,14 +3,14 @@
 #include "TresProjectileSkeletalMeshBase.h"
 #include "TresEnemy_e_ex781_SwordProjectile.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemy_e_ex781_SwordProjectile : public ATresProjectileSkeletalMeshBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_RotationSpeed;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_MoveEndDist;
     
     ATresEnemy_e_ex781_SwordProjectile();

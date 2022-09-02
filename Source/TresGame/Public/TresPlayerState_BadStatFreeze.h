@@ -3,7 +3,7 @@
 #include "TresCharState_BadStatFreeze.h"
 #include "TresPlayerState_BadStatFreeze.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_BadStatFreeze : public UTresCharState_BadStatFreeze {
     GENERATED_BODY()
 public:

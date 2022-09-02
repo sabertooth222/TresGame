@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TresGumiShipFSMState.h"
 #include "UObject/NoExportTypes.h"
+#include "TresGumiShipFSMState.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "TresGumiShipFSMPlayerStateBase.generated.h"
@@ -12,16 +12,16 @@ class UTresGumiShipPlayerMovementCompoBase;
 class UTresGumiShipEffectSetComponent;
 class ATresGumiShipPlayerControllerDefault;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresGumiShipFSMPlayerStateBase : public UTresGumiShipFSMState {
     GENERATED_BODY()
 public:
     UTresGumiShipFSMPlayerStateBase();
 protected:
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool _WasJustReleased(const FString& rstrID) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool _WasJustPressed(const FString& rstrID) const;
     
     UFUNCTION(BlueprintCallable)
@@ -48,28 +48,28 @@ protected:
     UFUNCTION(BlueprintCallable)
     void _PlaySound2D(const int32 dAssetID, float fVolumeMultiplier, float fPitchMultiplier, float fStartTime);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector2D _GetStickValue(const FString& rstrID) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ATresGumiShipPlayerPawnBase* _GetPlayer() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UTresGumiShipPlayerMovementCompoBase* _GetMovementCompo() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     USceneComponent* _GetModelBase() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UTresGumiShipEffectSetComponent* _GetEffectSet() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float _GetDownTime(const FString& rstrID) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     ATresGumiShipPlayerControllerDefault* _GetController() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float _GetAnalogValue(const FString& rstrID) const;
     
 };

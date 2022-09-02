@@ -6,15 +6,15 @@
 
 class ATresAccompanyPawnBase;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresNpcPawn_n_ca201 : public ATresNpcPawnBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresAccompanyPawnBase> m_FRJackSpinBP;
     
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_IsLinkMode;
     
 public:

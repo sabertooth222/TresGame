@@ -5,18 +5,18 @@
 #include "TresCoopDefinitionParamBP.h"
 #include "TresCoop2_e_ex026_SimultaneousRush.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresCoop2_e_ex026_SimultaneousRush : public UTresCoopDefinitionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresCoopSimultaneousRushInfo> m_SimultaneousRushInfos;
     
     UTresCoop2_e_ex026_SimultaneousRush();
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void CoopWarpReady(const FTresCoopDefinitionParamBP& Param);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void CoopWarpFinished(const FTresCoopDefinitionParamBP& Param);
     
 };

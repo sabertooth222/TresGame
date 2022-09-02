@@ -6,7 +6,7 @@
 
 class UObject;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemyPawn_e_dw407 : public ATresEnemyDarkSidePawnBase {
     GENERATED_BODY()
 public:

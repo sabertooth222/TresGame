@@ -3,12 +3,12 @@
 #include "TresAttackDefinitionBase.h"
 #include "TresAttack2_GigasBase_Punch.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAttack2_GigasBase_Punch : public UTresAttackDefinitionBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_pro_PunchTurnTime;
     
 public:

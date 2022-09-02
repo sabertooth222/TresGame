@@ -4,5 +4,5 @@
 
 class UTresLockonTargetComponent;
 
-UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FTresLockonTargetDoLockSignature, bool, bTargeted, UTresLockonTargetComponent*, Component);
+UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FTresLockonTargetDoLockSignature, bool, bTargeted, UTresLockonTargetComponent*, Component);
 

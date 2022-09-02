@@ -5,11 +5,11 @@
 
 class ATresDisneyMagicPawnAriel;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_DMAriel : public UTresCharState_DMAriel {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresDisneyMagicPawnAriel* m_pObj;
     
     UTresPlayerState_DMAriel();

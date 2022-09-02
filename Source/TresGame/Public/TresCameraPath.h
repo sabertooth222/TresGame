@@ -3,7 +3,7 @@
 #include "TresCameraTarget.h"
 #include "TresCameraPath.generated.h"
 
-UCLASS(NotPlaceable)
+UCLASS(Blueprintable, NotPlaceable)
 class ATresCameraPath : public ATresCameraTarget {
     GENERATED_BODY()
 public:

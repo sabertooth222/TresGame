@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FKunai_Setup {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_BoneName;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_IgnoreAtkCollGroupName;
     
     TRESGAME_API FKunai_Setup();

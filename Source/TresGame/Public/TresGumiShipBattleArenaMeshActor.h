@@ -3,7 +3,7 @@
 #include "Engine/StaticMeshActor.h"
 #include "TresGumiShipBattleArenaMeshActor.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresGumiShipBattleArenaMeshActor : public AStaticMeshActor {
     GENERATED_BODY()
 public:

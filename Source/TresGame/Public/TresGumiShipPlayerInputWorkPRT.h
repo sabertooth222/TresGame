@@ -3,7 +3,7 @@
 #include "TresGumiShipPlayerInputWorkPR.h"
 #include "TresGumiShipPlayerInputWorkPRT.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresGumiShipPlayerInputWorkPRT : public UTresGumiShipPlayerInputWorkPR {
     GENERATED_BODY()
 public:

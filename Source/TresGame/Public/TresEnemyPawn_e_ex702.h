@@ -6,20 +6,20 @@
 
 class USQEX_ParticleAttachDataAsset;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemyPawn_e_ex702 : public ATresEnemyPawnBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USQEX_ParticleAttachDataAsset* m_GroundEffectAttachDataAsset;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresSpawnHandParam_e_ex702 m_ModeChangeHandSpawnParam;
     
 public:
     ATresEnemyPawn_e_ex702();
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     int32 GetNumTarHand() const;
     
 };

@@ -5,12 +5,12 @@
 
 class ATresFriendLinkPawnFlareForce;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_FRFlareForce : public UTresCharState_FRFlareForce {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresFriendLinkPawnFlareForce* m_pObj;
     
 public:

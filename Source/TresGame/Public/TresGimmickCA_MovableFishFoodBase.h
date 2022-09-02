@@ -4,21 +4,21 @@
 #include "UObject/NoExportTypes.h"
 #include "TresGimmickCA_MovableFishFoodBase.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresGimmickCA_MovableFishFoodBase : public ATresGimmickCA_MovableFishBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     FFloatInterval m_ReactorActiveRange;
     
 public:
     ATresGimmickCA_MovableFishFoodBase();
 protected:
-    UFUNCTION(BlueprintAuthorityOnly, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable, BlueprintImplementableEvent)
     void OnFishFoodReactorDeactivate();
     
-    UFUNCTION(BlueprintAuthorityOnly, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable, BlueprintImplementableEvent)
     void OnFishFoodReactorActivate();
     
 };

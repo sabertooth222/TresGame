@@ -3,7 +3,7 @@
 #include "TresNpcBTDecoratorBase.h"
 #include "TresNpcBTDecorator_IsPlayingFieldVoice.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcBTDecorator_IsPlayingFieldVoice : public UTresNpcBTDecoratorBase {
     GENERATED_BODY()
 public:

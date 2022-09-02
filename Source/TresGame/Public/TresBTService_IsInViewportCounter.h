@@ -4,17 +4,17 @@
 #include "BehaviorTree/BehaviorTreeTypes.h"
 #include "TresBTService_IsInViewportCounter.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTService_IsInViewportCounter : public UBTService {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlackboardKeySelector m_Target;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlackboardKeySelector m_BlackboardKeyCounter;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_Interval;
     
     UTresBTService_IsInViewportCounter();

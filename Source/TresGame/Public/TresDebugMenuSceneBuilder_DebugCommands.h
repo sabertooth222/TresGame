@@ -3,7 +3,7 @@
 #include "TresDebugMenuSceneBuilder.h"
 #include "TresDebugMenuSceneBuilder_DebugCommands.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresDebugMenuSceneBuilder_DebugCommands : public UTresDebugMenuSceneBuilder {
     GENERATED_BODY()
 public:

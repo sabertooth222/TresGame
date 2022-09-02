@@ -7,7 +7,7 @@
 class UObject;
 class ATresCameraRotTargetAuto;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresCameraRotTargetAuto : public ATresCameraRotTarget {
     GENERATED_BODY()
 public:

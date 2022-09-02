@@ -3,11 +3,11 @@
 #include "UObject/Object.h"
 #include "TresEnemyXIIIRetryInheritParam.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresEnemyXIIIRetryInheritParam : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(SaveGame)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
     int32 m_HitPoint;
     
     UTresEnemyXIIIRetryInheritParam();

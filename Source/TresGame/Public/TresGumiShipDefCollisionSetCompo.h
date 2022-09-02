@@ -4,7 +4,7 @@
 #include "TresGumiShipDefCollisionParam.h"
 #include "TresGumiShipDefCollisionSetCompo.generated.h"
 
-UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTresGumiShipDefCollisionSetCompo : public UTresGumiShipCollisionSetCompo {
     GENERATED_BODY()
 public:
@@ -12,7 +12,7 @@ public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FTresGumiShipBrokenBarrier, const int32, dIndex);
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresGumiShipDefCollisionParam> m_pDefParams;
     
 public:

@@ -3,17 +3,17 @@
 #include "TresEnemyXIIIBPawnBase.h"
 #include "TresEnemyXIIIBCoopPawnBase.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresEnemyXIIIBCoopPawnBase : public ATresEnemyXIIIBPawnBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_BothVanishModeEndTime;
     
 public:
     ATresEnemyXIIIBCoopPawnBase();
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     bool IsEndVanishMarluxiaAndLarxene() const;
     
 };

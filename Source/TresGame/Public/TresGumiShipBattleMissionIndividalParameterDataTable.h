@@ -4,11 +4,11 @@
 #include "TresGumiShipBattleMissionIndividalParam.h"
 #include "TresGumiShipBattleMissionIndividalParameterDataTable.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresGumiShipBattleMissionIndividalParameterDataTable : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresGumiShipBattleMissionIndividalParam m_Individal;
     
     TRESGAME_API FTresGumiShipBattleMissionIndividalParameterDataTable();

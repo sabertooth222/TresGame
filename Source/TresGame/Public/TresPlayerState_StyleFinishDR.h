@@ -5,12 +5,12 @@
 
 class ATresStylePawnDRClock;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_StyleFinishDR : public UTresPlayerState_StyleFinish {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresStylePawnDRClock* m_pClock;
     
 public:

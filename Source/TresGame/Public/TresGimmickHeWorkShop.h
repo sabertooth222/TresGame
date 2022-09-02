@@ -3,18 +3,18 @@
 #include "TresGimmickSkeletalBase.h"
 #include "TresGimmickHeWorkShop.generated.h"
 
-class UTresInputTask;
 class UTresTaskExecuterBase;
+class UTresInputTask;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresGimmickHeWorkShop : public ATresGimmickSkeletalBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresInputTask* InputTask;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresTaskExecuterBase* m_pTaskExecuter;
     
 public:

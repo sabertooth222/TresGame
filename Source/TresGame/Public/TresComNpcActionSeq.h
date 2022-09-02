@@ -4,11 +4,11 @@
 #include "TresComNpcActionSeqDatas.h"
 #include "TresComNpcActionSeq.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API UTresComNpcActionSeq : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresComNpcActionSeqDatas> m_SeqDatas;
     
     UTresComNpcActionSeq();

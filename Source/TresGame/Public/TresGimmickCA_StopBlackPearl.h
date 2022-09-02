@@ -5,12 +5,12 @@
 
 class UTresCAShipComponent;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresGimmickCA_StopBlackPearl : public ATresGimmickSkeletalBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresCAShipComponent* TresCAShipComponent;
     
 public:

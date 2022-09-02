@@ -3,7 +3,7 @@
 #include "Components/ActorComponent.h"
 #include "TresGameTimerManagerComponent.generated.h"
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTresGameTimerManagerComponent : public UActorComponent {
     GENERATED_BODY()
 public:

@@ -3,20 +3,20 @@
 #include "TresCharState_Guard.h"
 #include "TresPlayerState_Guard.generated.h"
 
-class UTresLockonTargetComponent;
 class AActor;
+class UTresLockonTargetComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_Guard : public UTresCharState_Guard {
     GENERATED_BODY()
 public:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     AActor* m_pAttackPawn;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     AActor* m_pTargetPawn;
     
-    UPROPERTY(Export, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UTresLockonTargetComponent* m_pTargetComponent;
     
     UTresPlayerState_Guard();

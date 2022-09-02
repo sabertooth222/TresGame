@@ -9,7 +9,7 @@ struct FTresTeaCupPuddingData {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresEnemyPawn_e_ex050* m_pPuddingPawn;
     
 public:

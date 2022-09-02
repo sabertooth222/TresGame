@@ -3,7 +3,7 @@
 #include "TresWinniePuzzleFruitUnit.h"
 #include "TresWinniePuzzleFruitUnit_Lemon.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresWinniePuzzleFruitUnit_Lemon : public ATresWinniePuzzleFruitUnit {
     GENERATED_BODY()
 public:

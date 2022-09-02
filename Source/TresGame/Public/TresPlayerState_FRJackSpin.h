@@ -5,12 +5,12 @@
 
 class ATresFriendLinkPawnJackSpin;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_FRJackSpin : public UTresCharState_FRJackSpin {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresFriendLinkPawnJackSpin* m_pObj;
     
 public:

@@ -5,11 +5,11 @@
 
 class UDataTable;
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API UTresTreasureDataSet : public UTresLoadAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     UDataTable* m_TreasureDataTables[32];
     
     UTresTreasureDataSet();

@@ -7,41 +7,41 @@
 #include "TresEnemyPawn_e_ex352.generated.h"
 
 class USoundBase;
-class UPrimitiveComponent;
+class ATresProjectile_e_ex352_DarkMatter;
 class USphereComponent;
 class UParticleSystem;
-class ATresProjectile_e_ex352_DarkMatter;
 class UParticleSystemComponent;
 class ATresProjectileBase;
+class UPrimitiveComponent;
 class AActor;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemyPawn_e_ex352 : public ATresEnemyXIIILPawnBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USphereComponent* MyPullCollisionComponent;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     FVector m_DarkMatterOffset[2];
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     FVector m_DarkMatterOffsetForChange[2];
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_EnvironmentalChangeEffect;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_VisibleTime;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundBase* m_RevengeVoice;
     
-    UPROPERTY(Transient)
+    UPROPERTY(EditAnywhere, Transient)
     ATresProjectile_e_ex352_DarkMatter* m_DarkMatter[2];
     
-    UPROPERTY(Export, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* m_EnvironmentalChangeEffectCmp;
     
 public:
@@ -52,10 +52,10 @@ public:
     UFUNCTION(BlueprintCallable)
     void RemoveDarkMatter();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnPullCollisionEndOverlap(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnPullCollisionBeginOverlap(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
     
     UFUNCTION()
@@ -64,16 +64,16 @@ public:
     UFUNCTION()
     void OnCtorStateEvent_e_ex352(TEnumAsByte<ETresStateID> inStateID);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsExistDarkMatter() const;
     
     UFUNCTION(BlueprintCallable)
     void HideAnsem(bool bHide);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetReleaseDarkMineNum() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetDarkMatterNum() const;
     
 };

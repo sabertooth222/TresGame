@@ -3,15 +3,15 @@
 #include "TresAction_EnemyShipBase_Artillery.h"
 #include "TresAction_EnemyShipBase_ArtilleryFront.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAction_EnemyShipBase_ArtilleryFront : public UTresAction_EnemyShipBase_Artillery {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FName> m_FrontSocketNames;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_EnableDelayForIterateSocket;
     
 public:

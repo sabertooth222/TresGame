@@ -3,7 +3,7 @@
 #include "BehaviorTree/BTDecorator.h"
 #include "TresBTDecorator_RejectCoopJoin.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTDecorator_RejectCoopJoin : public UBTDecorator {
     GENERATED_BODY()
 public:

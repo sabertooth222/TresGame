@@ -5,12 +5,12 @@
 
 class ATresStylePawnSKChandelier;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_StyleFinishSK : public UTresPlayerState_StyleFinish {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresStylePawnSKChandelier* m_pChandelier;
     
 public:

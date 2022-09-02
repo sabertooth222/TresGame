@@ -1,37 +1,37 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "EnvironmentQuery/EnvQueryTypes.h"
 #include "BehaviorTree/BTService.h"
+#include "EnvironmentQuery/EnvQueryTypes.h"
 #include "BehaviorTree/BehaviorTreeTypes.h"
-#include "EnvironmentQuery/EnvQueryTypes.h"
-#include "EnvironmentQuery/EnvQueryTypes.h"
 #include "TresBTService_RunEQSQuery.generated.h"
 
 class UEnvQuery;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTService_RunEQSQuery : public UBTService {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UEnvQuery* EQSQueryOverride;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FEnvNamedValue> QueryParams;
     
     UPROPERTY(EditAnywhere)
     TEnumAsByte<EEnvQueryRunMode::Type> RunMode;
     
-    UPROPERTY(EditAnywhere)
-    uint32 bInvalidateBlackboardKeyOnFailure: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 bInvalidateBlackboardKeyOnFailure: 1;
     
 protected:
-    UPROPERTY(VisibleDefaultsOnly)
-    uint32 bUseBlackboardQuery: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 bUseBlackboardQuery: 1;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlackboardKeySelector EQSQuery;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlackboardKeySelector Result;
     
 public:

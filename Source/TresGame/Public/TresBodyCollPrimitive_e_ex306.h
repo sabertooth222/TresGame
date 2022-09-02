@@ -4,12 +4,12 @@
 #include "ETresBodyCollReactionType.h"
 #include "TresBodyCollPrimitive_e_ex306.generated.h"
 
-UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTresBodyCollPrimitive_e_ex306 : public UTresBodyCollPrimitive {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresBodyCollReactionType m_BodyReactionType_BB;
     
 public:

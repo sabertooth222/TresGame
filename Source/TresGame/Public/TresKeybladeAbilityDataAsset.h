@@ -5,12 +5,12 @@
 #include "ETresItemDefWeapon.h"
 #include "TresKeybladeAbilityDataAsset.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API UTresKeybladeAbilityDataAsset : public UDataAsset {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<ETresItemDefWeapon, FTresKeybladeAbilityData> m_Datas;
     
 public:

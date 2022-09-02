@@ -6,14 +6,14 @@
 class ATresDisneyMagicPawnStitch;
 class ATresCameraForceLockon;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_DMStitch : public UTresCharState_DMStitch {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresDisneyMagicPawnStitch* m_pObj;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresCameraForceLockon* m_Camera;
     
     UTresPlayerState_DMStitch();

@@ -3,11 +3,11 @@
 #include "BehaviorTree/BTTaskNode.h"
 #include "TresNpcBTTask_EnableAttackFlowWait.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcBTTask_EnableAttackFlowWait : public UBTTaskNode {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bEnable;
     
     UTresNpcBTTask_EnableAttackFlowWait();

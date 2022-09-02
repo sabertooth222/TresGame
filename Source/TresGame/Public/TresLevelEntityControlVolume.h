@@ -7,43 +7,43 @@
 
 class UTresLevelEntitySequence;
 class UTresLevelEntityControlVolumeData;
-class UTresLevelEntityManager;
-class UObject;
 class AActor;
+class UObject;
+class UTresLevelEntityManager;
 class UPrimitiveComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API ATresLevelEntityControlVolume : public ATresVolume {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTresLevelEntitySequence* m_EnterSequence;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTresLevelEntitySequence* m_ExitSequence;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     TArray<UTresLevelEntityControlVolumeData*> m_SharedData;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresLevelEntityManager* m_Manager;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ESQEX_ObjectType m_ControlObjectType;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGuid m_BattleVolumeGUID;
     
     UPROPERTY(EditAnywhere, Transient)
     TWeakObjectPtr<UObject> m_BattleOwner;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_WarpRequest;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float m_DistanceBattleOwner;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     bool m_ImmediateInvoke;
     
     ATresLevelEntityControlVolume();

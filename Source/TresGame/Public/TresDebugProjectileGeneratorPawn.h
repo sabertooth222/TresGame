@@ -5,12 +5,12 @@
 
 class UCurveFloat;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresDebugProjectileGeneratorPawn : public ATresCharPawnBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UCurveFloat* m_pro_ShootingRideAddScoreColorRateCurve;
     
 public:

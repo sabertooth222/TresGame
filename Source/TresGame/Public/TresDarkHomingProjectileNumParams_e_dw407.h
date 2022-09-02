@@ -7,13 +7,13 @@ USTRUCT(BlueprintType)
 struct FTresDarkHomingProjectileNumParams_e_dw407 {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresDarkHomingProjectileNum_e_dw407> m_SpawnProjectileNumParams;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 m_bIsUseIntervalGameLevelParam: 1;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 m_bIsUseSpeedGameLevelParam: 1;
     
     TRESGAME_API FTresDarkHomingProjectileNumParams_e_dw407();

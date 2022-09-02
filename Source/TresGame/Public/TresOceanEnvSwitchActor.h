@@ -2,64 +2,63 @@
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=SQEX_OceanEnvSwitchActor -FallbackName=SQEX_OceanEnvSwitchActor
-#include "SQEX_OceanEnvSwitchActor.h"
 #include "TresOceanEnvSwitchSignatureDelegate.h"
 #include "TresOceanEnvSwitchActor.generated.h"
 
+class AEmitterCameraLensEffectBase;
 class AActor;
 class ATresOceanShaderController;
 class APostProcessVolume;
 class ATresOceanPostProcessVolume;
-class AEmitterCameraLensEffectBase;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresOceanEnvSwitchActor : public ASQEX_OceanEnvSwitchActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresOceanEnvSwitchSignature OnChangeDiveMode;
     
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    uint32 m_bChangeOceanMaterialIndex: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bChangeOceanMaterialIndex: 1;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresOceanShaderController* m_pOceanController;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_OceanMaterialOverSea;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_OceanMaterialUnderSea;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    uint32 m_bChangeOceanPostProcessVolume: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bChangeOceanPostProcessVolume: 1;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     APostProcessVolume* m_pPostProcessOverSea;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresOceanPostProcessVolume* m_pPostProcessUnderSea;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_PostProcessBlendTime;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    uint32 m_bChangeLightProperty: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bChangeLightProperty: 1;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AActor* m_pLightPropertyChangeActor;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_TemperatureOverSea;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_TemperatureUnderSea;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<AEmitterCameraLensEffectBase> m_InLensEffectClass;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<AEmitterCameraLensEffectBase> m_OutLensEffectClass;
     
 public:

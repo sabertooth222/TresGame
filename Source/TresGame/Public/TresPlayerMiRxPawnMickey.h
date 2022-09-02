@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TresCommunicationTerminalInterface.h"
 #include "TresPlayerPawnTemplate.h"
+#include "TresCommunicationTerminalInterface.h"
 #include "ETresMiRxHolySealType.h"
 #include "TresPlayerMiRxPawnMickey.generated.h"
 
@@ -9,7 +9,7 @@ class UCurveFloat;
 class UParticleSystem;
 class UTresGumiShipEffectSetComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresPlayerMiRxPawnMickey : public ATresPlayerPawnTemplate, public ITresCommunicationTerminalInterface {
     GENERATED_BODY()
 public:
@@ -110,7 +110,7 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_dCountOfTakeDirectAttack;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresGumiShipEffectSetComponent* m_pEffectSet;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

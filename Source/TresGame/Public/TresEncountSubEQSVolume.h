@@ -3,7 +3,7 @@
 #include "TresVolume.h"
 #include "TresEncountSubEQSVolume.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEncountSubEQSVolume : public ATresVolume {
     GENERATED_BODY()
 public:

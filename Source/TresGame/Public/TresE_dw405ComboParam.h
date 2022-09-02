@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FTresE_dw405ComboParam {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresE_dw405AttackParam> AttackParams;
     
     TRESGAME_API FTresE_dw405ComboParam();

@@ -3,7 +3,7 @@
 #include "TresAccompanyPawnBase.h"
 #include "TresStylePawnBase.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresStylePawnBase : public ATresAccompanyPawnBase {
     GENERATED_BODY()
 public:

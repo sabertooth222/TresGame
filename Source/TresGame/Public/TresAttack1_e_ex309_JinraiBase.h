@@ -5,12 +5,12 @@
 
 class UAnimSequenceBase;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class UTresAttack1_e_ex309_JinraiBase : public UTresAttackDefinitionBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UAnimSequenceBase* m_AnimData;
     
 public:

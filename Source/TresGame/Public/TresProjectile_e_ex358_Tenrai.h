@@ -3,12 +3,12 @@
 #include "TresProjectileBase.h"
 #include "TresProjectile_e_ex358_Tenrai.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresProjectile_e_ex358_Tenrai : public ATresProjectileBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_FinishAttackIDName;
     
 public:

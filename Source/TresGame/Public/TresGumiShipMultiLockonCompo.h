@@ -5,13 +5,13 @@
 
 class USceneComponent;
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTresGumiShipMultiLockonCompo : public UTresGumiShipLockonCompo {
     GENERATED_BODY()
 public:
     UTresGumiShipMultiLockonCompo();
 private:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnChangeLockonTargetForDist(USceneComponent* pTarget);
     
 };

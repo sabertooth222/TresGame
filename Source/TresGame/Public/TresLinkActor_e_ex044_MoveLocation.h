@@ -5,7 +5,7 @@
 
 class ATresEnemyPawn_e_ex044;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresLinkActor_e_ex044_MoveLocation : public AActor {
     GENERATED_BODY()
 public:
@@ -13,7 +13,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetAvailable(bool Set, ATresEnemyPawn_e_ex044* pPawn);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsAvailable();
     
 };

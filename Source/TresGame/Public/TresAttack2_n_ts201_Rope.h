@@ -3,7 +3,7 @@
 #include "TresNpcAttackDefinitionRanged.h"
 #include "TresAttack2_n_ts201_Rope.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAttack2_n_ts201_Rope : public UTresNpcAttackDefinitionRanged {
     GENERATED_BODY()
 public:

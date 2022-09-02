@@ -3,7 +3,7 @@
 #include "TresVolume.h"
 #include "TresPowerSavingVolume.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresPowerSavingVolume : public ATresVolume {
     GENERATED_BODY()
 public:

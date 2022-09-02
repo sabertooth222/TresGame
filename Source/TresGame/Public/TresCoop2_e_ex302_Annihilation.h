@@ -3,7 +3,7 @@
 #include "TresCoopDefinitionBase.h"
 #include "TresCoop2_e_ex302_Annihilation.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresCoop2_e_ex302_Annihilation : public UTresCoopDefinitionBase {
     GENERATED_BODY()
 public:

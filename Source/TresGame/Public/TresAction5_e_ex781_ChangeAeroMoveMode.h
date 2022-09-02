@@ -3,11 +3,11 @@
 #include "TresActionDefinitionBase.h"
 #include "TresAction5_e_ex781_ChangeAeroMoveMode.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresAction5_e_ex781_ChangeAeroMoveMode : public UTresActionDefinitionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_IsAeroMoveMode;
     
     UTresAction5_e_ex781_ChangeAeroMoveMode();

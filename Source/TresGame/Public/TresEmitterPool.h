@@ -5,12 +5,12 @@
 
 class ATresEmitterPoolChild;
 
-UCLASS(NotPlaceable, Transient)
+UCLASS(Blueprintable, NotPlaceable, Transient)
 class ATresEmitterPool : public AActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(DuplicateTransient, Transient)
+    UPROPERTY(BlueprintReadWrite, DuplicateTransient, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ATresEmitterPoolChild* m_pSubActor;
     
 public:

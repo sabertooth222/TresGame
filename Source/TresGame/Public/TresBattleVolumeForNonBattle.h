@@ -3,7 +3,7 @@
 #include "TresBattleVolume.h"
 #include "TresBattleVolumeForNonBattle.generated.h"
 
-UCLASS(Deprecated, NotPlaceable)
+UCLASS(Blueprintable, Deprecated, NotPlaceable)
 class TRESGAME_API ADEPRECATED_TresBattleVolumeForNonBattle : public ATresBattleVolume {
     GENERATED_BODY()
 public:

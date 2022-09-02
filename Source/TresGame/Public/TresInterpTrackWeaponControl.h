@@ -4,11 +4,11 @@
 #include "TresWeaponControlTrackKey.h"
 #include "TresInterpTrackWeaponControl.generated.h"
 
-UCLASS(CollapseCategories)
+UCLASS(Blueprintable, CollapseCategories)
 class TRESGAME_API UTresInterpTrackWeaponControl : public UInterpTrack {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere, EditFixedSize)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, EditFixedSize, meta=(AllowPrivateAccess=true))
     TArray<FTresWeaponControlTrackKey> m_Keys;
     
     UTresInterpTrackWeaponControl();

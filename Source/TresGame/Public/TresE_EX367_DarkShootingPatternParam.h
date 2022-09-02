@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FTresE_EX367_DarkShootingPatternParam {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_ShotWaitTime;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector m_Offset;
     
     TRESGAME_API FTresE_EX367_DarkShootingPatternParam();

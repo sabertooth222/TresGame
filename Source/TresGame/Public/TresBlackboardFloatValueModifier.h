@@ -11,10 +11,10 @@ public:
     UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresValueModifierMethod::Type> ValueModifierType;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlackboardKeySelector BBKey;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Value;
     
     TRESGAME_API FTresBlackboardFloatValueModifier();

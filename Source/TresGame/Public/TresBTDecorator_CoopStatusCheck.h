@@ -4,14 +4,14 @@
 #include "ETresCoopRunningStatus.h"
 #include "TresBTDecorator_CoopStatusCheck.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTDecorator_CoopStatusCheck : public UBTDecorator {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresCoopRunningStatus m_CoopStatus;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bReferenceFromTeam;
     
     UTresBTDecorator_CoopStatusCheck();

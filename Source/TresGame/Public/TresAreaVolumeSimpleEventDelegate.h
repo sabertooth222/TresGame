@@ -2,5 +2,5 @@
 #include "CoreMinimal.h"
 #include "TresAreaVolumeSimpleEventDelegate.generated.h"
 
-UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE(FTresAreaVolumeSimpleEvent);
+UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE(FTresAreaVolumeSimpleEvent);
 

@@ -3,7 +3,7 @@
 #include "Engine/PostProcessVolume.h"
 #include "TresOceanPostProcessVolume.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresOceanPostProcessVolume : public APostProcessVolume {
     GENERATED_BODY()
 public:

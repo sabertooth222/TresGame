@@ -7,7 +7,7 @@
 
 class UParticleSystem;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresGumiShipParts720Pawn : public ATresGumiShipEnemyPartsBase {
     GENERATED_BODY()
 public:

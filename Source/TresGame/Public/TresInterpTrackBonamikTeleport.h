@@ -4,11 +4,11 @@
 #include "TresInterpTrackBonamikTeleportKey.h"
 #include "TresInterpTrackBonamikTeleport.generated.h"
 
-UCLASS(CollapseCategories)
+UCLASS(Blueprintable, CollapseCategories)
 class TRESGAME_API UTresInterpTrackBonamikTeleport : public UInterpTrack {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere, EditFixedSize)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, EditFixedSize, meta=(AllowPrivateAccess=true))
     TArray<FTresInterpTrackBonamikTeleportKey> m_Keys;
     
     UTresInterpTrackBonamikTeleport();

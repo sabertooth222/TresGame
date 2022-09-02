@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TresGimmickRecordChangePlayingSignatureDelegate.h"
+#include "TresGimmickRecordPlayTimeFinishedSignatureDelegate.h"
 #include "TresGimmickSkeletalBase.h"
 #include "TresGimmickRecordTurnedTopSpeedLightsSignatureDelegate.h"
 #include "TresGimmickRecordUpdateLightsRateSignatureDelegate.h"
-#include "TresGimmickRecordPlayTimeFinishedSignatureDelegate.h"
 #include "TresGimmickRecordChangeAttachmentSignatureDelegate.h"
+#include "TresGimmickRecordChangePlayingSignatureDelegate.h"
 #include "TresGimmickRecordChangeOnRecordSignatureDelegate.h"
 #include "TresGimmickRecord.generated.h"
 
@@ -14,54 +14,54 @@ class AActor;
 class ATresGimmickFrogPerformer;
 class USceneComponent;
 
-UCLASS(Config=Game)
+UCLASS(Blueprintable, Config=Game)
 class ATresGimmickRecord : public ATresGimmickSkeletalBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresGimmickRecordTurnedTopSpeedLightsSignature TurnedTopSpeedLights;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresGimmickRecordUpdateLightsRateSignature UpdateLightsRate;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresGimmickRecordPlayTimeFinishedSignature PlayTimeFinished;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresGimmickRecordChangeAttachmentSignature ChangeAttachment;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresGimmickRecordChangePlayingSignature ChangePlaying;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresGimmickRecordChangeOnRecordSignature ChangeOnRecord;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float AngleDumping;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float AngleAccelSpeed;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float BaseLength;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MaxAngleSpeed;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundBase* PlaySound;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float FinishPlayTime;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float AttachmentRecordLengthMin;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AActor* AttachedSoundActor;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<ATresGimmickFrogPerformer*> FrogList;
     
 public:
@@ -97,7 +97,7 @@ protected:
     UFUNCTION(BlueprintCallable)
     void SetAttachedParent(USceneComponent* pAttachedParent);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsFinished() const;
     
     UFUNCTION(BlueprintCallable)
@@ -106,7 +106,7 @@ protected:
     UFUNCTION(BlueprintCallable)
     void ClearPitchFade();
     
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void ChangePlayingState(bool Playing);
     
 };

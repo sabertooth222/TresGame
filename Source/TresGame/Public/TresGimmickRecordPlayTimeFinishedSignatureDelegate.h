@@ -2,5 +2,5 @@
 #include "CoreMinimal.h"
 #include "TresGimmickRecordPlayTimeFinishedSignatureDelegate.generated.h"
 
-UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE(FTresGimmickRecordPlayTimeFinishedSignature);
+UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE(FTresGimmickRecordPlayTimeFinishedSignature);
 

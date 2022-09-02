@@ -3,7 +3,7 @@
 #include "TresNpcAttackDefinitionBase.h"
 #include "TresAttack5_n_he201_EnergyBurst.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAttack5_n_he201_EnergyBurst : public UTresNpcAttackDefinitionBase {
     GENERATED_BODY()
 public:

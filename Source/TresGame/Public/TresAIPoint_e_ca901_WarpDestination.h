@@ -4,7 +4,7 @@
 #include "ETresEnemyca901WarpKind.h"
 #include "TresAIPoint_e_ca901_WarpDestination.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresAIPoint_e_ca901_WarpDestination : public ATresAIPoint {
     GENERATED_BODY()
 public:

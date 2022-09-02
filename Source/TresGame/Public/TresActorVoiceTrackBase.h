@@ -3,7 +3,7 @@
 #include "TresTimelineDataTrack.h"
 #include "TresActorVoiceTrackBase.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class UTresActorVoiceTrackBase : public UTresTimelineDataTrack {
     GENERATED_BODY()
 public:

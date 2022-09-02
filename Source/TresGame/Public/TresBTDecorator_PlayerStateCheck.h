@@ -4,11 +4,11 @@
 #include "ETresBTPlayerStateCkeck.h"
 #include "TresBTDecorator_PlayerStateCheck.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTDecorator_PlayerStateCheck : public UBTDecorator {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresBTPlayerStateCkeck m_PlayerStateCheck;
     
     UTresBTDecorator_PlayerStateCheck();

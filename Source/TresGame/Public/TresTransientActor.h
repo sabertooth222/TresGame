@@ -3,7 +3,7 @@
 #include "GameFramework/Actor.h"
 #include "TresTransientActor.generated.h"
 
-UCLASS(Abstract, Transient)
+UCLASS(Abstract, Blueprintable, Transient)
 class ATresTransientActor : public AActor {
     GENERATED_BODY()
 public:

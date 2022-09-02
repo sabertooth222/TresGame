@@ -6,20 +6,20 @@
 
 class ATresAccessory_e_ex036_WaterBallManager;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemyPawn_e_ex036 : public ATresEnemyPawnBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bMagicSquare;
     
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresAccessory_e_ex036_WaterBallManager> m_pro_WaterBallManagerClass;
     
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresAccessory_e_ex036_WaterBallManager* m_WaterBallManager;
     
 public:
@@ -27,7 +27,7 @@ public:
     UFUNCTION(BlueprintCallable)
     bool IsMagicSquare();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsFinMoveUp() const;
     
     UFUNCTION(BlueprintCallable)

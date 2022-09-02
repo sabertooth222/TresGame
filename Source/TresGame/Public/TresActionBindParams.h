@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "TresActionBindParams.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresActionBindParams {
     GENERATED_BODY()
 public:

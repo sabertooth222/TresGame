@@ -6,7 +6,7 @@
 class ULevelStreamingKismet;
 class ULevelStreaming;
 
-UCLASS(Abstract, BlueprintType, NotPlaceable)
+UCLASS(Abstract, Blueprintable, NotPlaceable)
 class TRESGAME_API UTresUnrealEngineLevelStatics : public UObject {
     GENERATED_BODY()
 public:
@@ -31,16 +31,16 @@ public:
     UFUNCTION(BlueprintCallable)
     static ULevelStreamingKismet* LoadStreamingLevelInstanceFromName(UObject* WorldContextObject, FName LevelName, bool& bOutSuccess);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static TArray<ULevelStreaming*> GetLevelStreamings();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static FString GetLevelRealPackageNameFromIndex(int32 Index);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static TArray<FString> GetLevelPackageNames(bool useCache);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static FString GetLevelPackageNameFromIndex(int32 Index);
     
 };

@@ -1,35 +1,35 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ETresCommandKind.h"
-#include "UObject/NoExportTypes.h"
 #include "TresGimmickSkeletalBase.h"
+#include "ETresCommandKind.h"
 #include "EGimmickKG_UnionCrossAnim.h"
+#include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "TresGimmickKG_UnionCrossRide.generated.h"
 
 class USoundBase;
 class ATresCharPawnBase;
-class ATresGimmickKG_UnionCrossEnemy;
 class ATresEventPawnBase;
 class ASQEX_SplineActor;
+class ATresGimmickKG_UnionCrossEnemy;
 
-UCLASS(Config=Game)
+UCLASS(Blueprintable, Config=Game)
 class ATresGimmickKG_UnionCrossRide : public ATresGimmickSkeletalBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<USoundBase*> Sound_Attacks;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundBase* Sound_Damage;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundBase* Sound_TurnningToAttack;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundBase* Sound_Charge;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ResoundWaitTime;
     
     ATresGimmickKG_UnionCrossRide();
@@ -57,43 +57,43 @@ public:
     UFUNCTION(BlueprintCallable)
     void OpenHudUx();
     
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void OnSplineMoveArrival();
     
     UFUNCTION(BlueprintNativeEvent)
-    void OnCommand(ETresCommandKind inCommand);
+    void OnCommand(TEnumAsByte<ETresCommandKind> inCommand);
     
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void NotifyTimingFromPawn(int32 InParam);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsStateAnimEnd() const;
     
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     bool IsEnableShield() const;
     
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     bool IsDamaged() const;
     
     UFUNCTION(BlueprintCallable)
     void InitializeRamdomTable(int32 MaxNum);
     
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void HitShield(ATresGimmickKG_UnionCrossEnemy* Enemy);
     
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void HitEnemy(ATresGimmickKG_UnionCrossEnemy* Enemy);
     
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     float GetShieldSize() const;
     
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     float GetPlayerSize() const;
     
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     FRotator GetPlayerRotator() const;
     
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     FVector GetPlayerCenter() const;
     
     UFUNCTION(BlueprintCallable)
@@ -103,7 +103,7 @@ public:
     void CloseHudUx();
     
     UFUNCTION(BlueprintNativeEvent)
-    bool BP_CanbeCommand(ETresCommandKind inCommand) const;
+    bool BP_CanbeCommand(TEnumAsByte<ETresCommandKind> inCommand) const;
     
     UFUNCTION(BlueprintCallable)
     void AddFixedDamage(int32 Damage);

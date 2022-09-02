@@ -3,7 +3,7 @@
 #include "GameFramework/Actor.h"
 #include "TresInstanceActor.generated.h"
 
-UCLASS(Config=Game)
+UCLASS(Blueprintable, Config=Game)
 class ATresInstanceActor : public AActor {
     GENERATED_BODY()
 public:

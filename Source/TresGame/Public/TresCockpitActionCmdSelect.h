@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "TresCockpitActionCmdSelect.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresCockpitActionCmdSelect {
     GENERATED_BODY()
 public:

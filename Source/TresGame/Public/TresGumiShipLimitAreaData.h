@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FTresGumiShipLimitAreaData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresGumiShipLimitType m_eType;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fValue;
     
     TRESGAME_API FTresGumiShipLimitAreaData();

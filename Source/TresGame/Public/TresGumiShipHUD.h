@@ -8,13 +8,13 @@
 #include "TresGumiShipHUD.generated.h"
 
 class UTresUIP_HudGummiShip;
+class USceneComponent;
 class UTresUIP_MenuGummiShip;
 class UTresUIP_MobileAlbum;
 class ATresGumiShipBattleVolume;
 class ATresGumiShipPlayerControllerBase;
-class USceneComponent;
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class ATresGumiShipHUD : public ATresHUDBase {
     GENERATED_BODY()
 public:
@@ -25,23 +25,23 @@ public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE(FTresGumiSettingMenuFinish);
     DECLARE_DYNAMIC_MULTICAST_DELEGATE(FTresGumiRecordMenuFinish);
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresGumiShipHudResultRankConfirmed OnRankConfirmedResultHudDispather;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresGumiShipHudResultFinish OnFinishResultHudDispather;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresGumiShipHudResultRetry OnRetryResultHudDispather;
     
 private:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresUIP_HudGummiShip* m_pHud;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresUIP_MenuGummiShip* m_pGummiMenu;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresUIP_MobileAlbum* m_pAlbum;
     
 public:
@@ -86,67 +86,67 @@ public:
     void CloseInfomation();
     
 private:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnUpdateInfomation(float DeltaTime);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnStartSpWeapon();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnStartBattleMission();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnResultHudRetry();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnResultHudRankConfirmed();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnResultHudFinish();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnPostSetupPlayer();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnPostCreateSpWeapon();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnOutBattleMode(ATresGumiShipBattleVolume* pBattleVolume);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnInBattleMode(ATresGumiShipBattleVolume* pBattleVolume);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnGetItem(int32 eItemId);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnDefeatedEnemy(const int32 dCount);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnCoolTimeSpWeapon();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnCoolEndSpWeapon();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnCompletedBonus(const FTresGumiShipBonusParameterDataTable& rInfo);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnClosedGameHelp(int32 UserParam);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnChangeTinyShipFormation(const FTresGMInputResult& rResult, const ATresGumiShipPlayerControllerBase* pController);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnChangeSpWeaponGauge(const float fOldPoint, const float fNewPoint, const float fRatio);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnChangeSpeedGauge(const float fOldPoint, const float fNewPoint, const float fRatio);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnChangeHpGauge(const int32 dOldHp, const int32 dNewHp, const float fRatio);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnChangedLockonTarget(USceneComponent* pTarget);
     
     UFUNCTION()

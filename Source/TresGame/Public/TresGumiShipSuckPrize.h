@@ -3,7 +3,7 @@
 #include "TresGumiShipActorBase.h"
 #include "TresGumiShipSuckPrize.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API ATresGumiShipSuckPrize : public ATresGumiShipActorBase {
     GENERATED_BODY()
 public:

@@ -3,7 +3,7 @@
 #include "TresEnemyState_ToyBase_Damage.h"
 #include "TresEnemyState_e_ex830_Damage.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresEnemyState_e_ex830_Damage : public UTresEnemyState_ToyBase_Damage {
     GENERATED_BODY()
 public:

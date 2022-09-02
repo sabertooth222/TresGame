@@ -5,11 +5,11 @@
 
 class UTresGumiShipAtkCollisionSetCompo;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresGumiShipEnemy601Pawn : public ATresGumiShipFreeFlightTypeEnemyBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresGumiShipAtkCollisionSetCompo* m_pRushAtkCollision;
     
     ATresGumiShipEnemy601Pawn();

@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TresCharPawnBase.h"
 #include "TresGimmickCA_TickControlInterface.h"
-#include "ETresBodyPushPowerLevel.h"
+#include "TresCharPawnBase.h"
 #include "TresGimmickDitherFadeInterface.h"
 #include "CAMovableBarrelParam.h"
+#include "ETresBodyPushPowerLevel.h"
 #include "CAMovableBarrelPrizeParam.h"
 #include "CAMovableBarrelRunAwayParam.h"
 #include "UObject/NoExportTypes.h"
@@ -12,27 +12,27 @@
 
 class UParticleSystem;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresGimmickCA_MovableBarrel : public ATresCharPawnBase, public ITresGimmickCA_TickControlInterface, public ITresGimmickDitherFadeInterface {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FCAMovableBarrelParam m_Parameter;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FCAMovableBarrelPrizeParam m_prizeParam;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FCAMovableBarrelRunAwayParam m_runAwayParam;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_DestroyEffectAsset;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_DestroyEffectSocket;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresBodyPushPowerLevel m_PushPower;
     
     UPROPERTY(EditAnywhere)
@@ -41,7 +41,7 @@ protected:
 public:
     ATresGimmickCA_MovableBarrel();
 protected:
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool UseNaviMeshCheck() const;
     
     UFUNCTION(BlueprintCallable)
@@ -59,16 +59,16 @@ protected:
     UFUNCTION(BlueprintCallable)
     bool RequestStartMove();
     
-    UFUNCTION(BlueprintAuthorityOnly, BlueprintImplementableEvent)
+    UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable, BlueprintImplementableEvent)
     void OnHitPointZero();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsStopMovement() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsRunAwayFromPlayerMode() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetDirectionChangeInterval() const;
     
     

@@ -5,11 +5,11 @@
 
 class UObject;
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class TRESGAME_API UTresLevelEntityControlVolumeData_Object : public UTresLevelEntityControlVolumeData {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UObject* m_Object;
     
     UTresLevelEntityControlVolumeData_Object();

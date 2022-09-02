@@ -3,7 +3,7 @@
 #include "TresNpcBTDecoratorBase.h"
 #include "TresNpcBTDecorator_CanLeadGoalTurn.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcBTDecorator_CanLeadGoalTurn : public UTresNpcBTDecoratorBase {
     GENERATED_BODY()
 public:

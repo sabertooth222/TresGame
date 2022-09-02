@@ -5,7 +5,7 @@
 
 class ATresGumiShipProjectileBase;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresGumiShipSpWeapon050Actor : public ATresGumiShipSpecialWeaponBaseActor {
     GENERATED_BODY()
 public:

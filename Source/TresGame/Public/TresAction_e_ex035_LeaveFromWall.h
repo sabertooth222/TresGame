@@ -3,7 +3,7 @@
 #include "TresActionDefinitionBase.h"
 #include "TresAction_e_ex035_LeaveFromWall.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresAction_e_ex035_LeaveFromWall : public UTresActionDefinitionBase {
     GENERATED_BODY()
 public:

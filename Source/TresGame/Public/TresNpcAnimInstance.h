@@ -3,7 +3,7 @@
 #include "TresAIAnimInstance.h"
 #include "TresNpcAnimInstance.generated.h"
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class UTresNpcAnimInstance : public UTresAIAnimInstance {
     GENERATED_BODY()
 public:

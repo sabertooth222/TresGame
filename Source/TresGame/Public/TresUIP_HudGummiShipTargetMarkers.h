@@ -4,12 +4,12 @@
 #include "TresGumiShipTargetMarkerObject.h"
 #include "TresUIP_HudGummiShipTargetMarkers.generated.h"
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class UTresUIP_HudGummiShipTargetMarkers : public UTresGumiShipUISubParts {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(Transient)
+    UPROPERTY(EditAnywhere, Transient)
     FTresGumiShipTargetMarkerObject m_rTargetMarkers[30];
     
 public:

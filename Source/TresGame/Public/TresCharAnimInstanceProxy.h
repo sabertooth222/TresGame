@@ -3,7 +3,7 @@
 #include "TresAnimInstanceProxy.h"
 #include "TresCharAnimInstanceProxy.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct TRESGAME_API FTresCharAnimInstanceProxy : public FTresAnimInstanceProxy {
     GENERATED_BODY()
 public:

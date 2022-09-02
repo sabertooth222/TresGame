@@ -3,11 +3,11 @@
 #include "BehaviorTree/BTDecorator.h"
 #include "TresBTDecorator_ScopedCoopWorker.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTDecorator_ScopedCoopWorker : public UBTDecorator {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bExecutablePriority;
     
     UTresBTDecorator_ScopedCoopWorker();

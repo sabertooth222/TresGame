@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FTresDebugMenuTimeline {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresDebugMenuLayer> m_Layers;
     
     TRESGAME_API FTresDebugMenuTimeline();

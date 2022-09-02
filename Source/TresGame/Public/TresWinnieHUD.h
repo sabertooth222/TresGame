@@ -4,25 +4,25 @@
 #include "TresHUDBase.h"
 #include "TresWinnieHUD.generated.h"
 
-class UTresUIDataAsset;
-class UTresSharedUMG;
 class UTresUIP_HundredGame;
+class UTresSharedUMG;
+class UTresUIDataAsset;
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class ATresWinnieHUD : public ATresHUDBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UTresSharedUMG> DebugUMGRef;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresUIDataAsset* m_UIDataAssetHundredGame;
     
 private:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresSharedUMG* m_pDebugUMG;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresUIP_HundredGame* m_HundredGameUI;
     
 public:

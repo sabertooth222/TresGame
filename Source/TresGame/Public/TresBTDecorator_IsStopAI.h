@@ -3,7 +3,7 @@
 #include "BehaviorTree/BTDecorator.h"
 #include "TresBTDecorator_IsStopAI.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTDecorator_IsStopAI : public UBTDecorator {
     GENERATED_BODY()
 public:

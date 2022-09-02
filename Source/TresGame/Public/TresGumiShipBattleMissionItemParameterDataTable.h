@@ -4,14 +4,14 @@
 #include "TresGumiShipDropPrizeData.h"
 #include "TresGumiShipBattleMissionItemParameterDataTable.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresGumiShipBattleMissionItemParameterDataTable : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     FTresGumiShipDropPrizeData m_Compensations[3];
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresGumiShipDropPrizeData m_CompensationForFirstTime;
     
     TRESGAME_API FTresGumiShipBattleMissionItemParameterDataTable();

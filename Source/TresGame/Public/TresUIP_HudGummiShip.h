@@ -4,28 +4,28 @@
 #include "TresUIP_HudGummiShip.generated.h"
 
 class UTresUIP_HudGummiParamSet;
-class UTresUIP_HudGummiShipScore;
+class UTresUIP_HudGummiShipEnemyHP;
+class UTresUIP_HudGummiShipItemGet;
+class UTresUIP_HudGummiShipTech;
 class UTresUIP_HudGummiShipSPWeapon;
 class UTresUIP_HudGummiShipRank;
-class UTresUIP_HudGummiShipItemGet;
 class UTresUIP_HudGummiShipSight;
 class UTresUIP_HudGummiShipGuide;
 class UTresUIP_HudGummiShipRader;
-class UTresUIP_HudGummiShipTech;
 class UTresUIP_HudGummiShipEnemyMarkers;
 class UTresUIP_HudGummiShipTargetMarkers;
 class UTresUIP_HudGummiShipChain;
+class UTresUIP_HudGummiShipScore;
 class UTresUIP_HudGummiShipScoreRate;
 class UTresUIP_HudGummiShipBonus;
 class UTresUIP_HudGummiShipAutoLock;
-class UTresUIP_HudGummiShipEnemyHP;
 class UTresUIP_HudGummiShipResult;
 class UTresUIP_HudGummiShipAlert;
 class UTresUIP_HudGummiShipAutoPilot;
 class UTresUIP_HudGummiShipMessageWindow;
 class UTresUIP_HudGummiShipInfomation;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresUIP_HudGummiShip : public UTresGumiShipUIParts {
     GENERATED_BODY()
 public:
@@ -33,89 +33,89 @@ public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE(FTresGumiShipHudResultRankConfirmed);
     DECLARE_DYNAMIC_MULTICAST_DELEGATE(FTresGumiShipHudResultFinish);
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresGumiShipHudResultRankConfirmed OnResultHudRankConfirmedDispather;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresGumiShipHudResultFinish OnResultHudFinishDispather;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresGumiShipHudResultRetry OnResultHudRetryDispather;
     
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresUIP_HudGummiShipSPWeapon* m_pSpWeapon;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresUIP_HudGummiShipRank* m_pRank;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresUIP_HudGummiShipItemGet* m_pItemGet;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresUIP_HudGummiParamSet* m_pParamSet;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresUIP_HudGummiShipSight* m_pSight;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresUIP_HudGummiShipGuide* m_pGuide;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresUIP_HudGummiShipRader* m_pRader;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresUIP_HudGummiShipTech* m_pTech;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresUIP_HudGummiShipEnemyMarkers* m_pMarker;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresUIP_HudGummiShipTargetMarkers* m_pTarget;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresUIP_HudGummiShipChain* m_pChain;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresUIP_HudGummiShipScore* m_pScore;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresUIP_HudGummiShipScoreRate* m_pScoreRate;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresUIP_HudGummiShipBonus* m_pBonus;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresUIP_HudGummiShipAutoLock* m_pAutoLock;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresUIP_HudGummiShipEnemyHP* m_pEnemyHp;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresUIP_HudGummiShipResult* m_pResult;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresUIP_HudGummiShipAlert* m_pAlert;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresUIP_HudGummiShipAutoPilot* m_pAutoPilot;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresUIP_HudGummiShipMessageWindow* m_pMessageWindow;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresUIP_HudGummiShipInfomation* m_pInfomation;
     
 public:
     UTresUIP_HudGummiShip();
 private:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnResultRetry();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnResultRankConfirmed();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnResultFinish();
     
 };

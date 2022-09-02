@@ -3,14 +3,14 @@
 #include "TresGumiShipEnemyPawnBase.h"
 #include "TresGumiShipSplinePathMoveTypeEnemyBase.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresGumiShipSplinePathMoveTypeEnemyBase : public ATresGumiShipEnemyPawnBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool OnBattle;
     
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool Locked;
     
     ATresGumiShipSplinePathMoveTypeEnemyBase();

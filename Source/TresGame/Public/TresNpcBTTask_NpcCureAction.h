@@ -3,7 +3,7 @@
 #include "TresBTTask_Action.h"
 #include "TresNpcBTTask_NpcCureAction.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcBTTask_NpcCureAction : public UTresBTTask_Action {
     GENERATED_BODY()
 public:

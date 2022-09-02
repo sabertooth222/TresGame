@@ -3,7 +3,7 @@
 #include "TresStateBase.h"
 #include "TresCharState_Swaying.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresCharState_Swaying : public UTresStateBase {
     GENERATED_BODY()
 public:

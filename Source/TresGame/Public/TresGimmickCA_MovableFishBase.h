@@ -1,25 +1,25 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "GameFramework/Actor.h"
+#include "UObject/NoExportTypes.h"
 #include "SQEX_SplineMoverExecutor.h"
 #include "TresGimmickCA_TickControlInterface.h"
 #include "TresGimmickCA_MovableFishBase.generated.h"
 
 class ASQEX_SplineActor;
 
-UCLASS(Config=Game)
+UCLASS(Blueprintable, Config=Game)
 class ATresGimmickCA_MovableFishBase : public AActor, public ITresGimmickCA_TickControlInterface {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSQEX_SplineMoverExecutor SplineMover;
     
     UPROPERTY(EditAnywhere)
     FFloatInterval m_TickEnableRange;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bEnableMove;
     
 public:
@@ -40,10 +40,10 @@ protected:
     UFUNCTION(BlueprintCallable)
     void SetEnableMove(bool bEnable);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnArrival();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetSpeed();
     
     

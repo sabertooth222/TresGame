@@ -1,24 +1,24 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Engine/DataTable.h"
-#include "ETresUICheatCategory.h"
 #include "ETresDlcCheatCode.h"
+#include "ETresUICheatCategory.h"
 #include "TresCodeMenuCheatData.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresCodeMenuCheatData : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresDlcCheatCode m_Code;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString m_NameId;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString m_DetailId;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresUICheatCategory m_Category;
     
     TRESGAME_API FTresCodeMenuCheatData();

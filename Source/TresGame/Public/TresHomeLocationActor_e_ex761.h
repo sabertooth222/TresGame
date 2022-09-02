@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ETresEnemyEx761_Location.h"
 #include "GameFramework/Actor.h"
+#include "ETresEnemyEx761_Location.h"
 #include "TresHomeLocationActor_e_ex761.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresHomeLocationActor_e_ex761 : public AActor {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditInstanceOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresEnemyEx761_Location::Type> m_LocationType;
     
 public:

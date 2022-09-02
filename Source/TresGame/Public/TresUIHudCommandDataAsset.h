@@ -1,21 +1,21 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TresShortcutCommandData.h"
 #include "Engine/DataAsset.h"
 #include "TresSubCommandData.h"
+#include "TresShortcutCommandData.h"
 #include "TresUIHudCommandDataAsset.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresUIHudCommandDataAsset : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresSubCommandData MagicCommands;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresShortcutCommandData ShortcutCommands;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresSubCommandData LinkCommands;
     
     UTresUIHudCommandDataAsset();

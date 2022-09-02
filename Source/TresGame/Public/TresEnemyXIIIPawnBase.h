@@ -1,51 +1,51 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "TresEnemyPawnBase.h"
-#include "ETresEnemyXIIIPhaseType.h"
 #include "TresEnemyXIIIPlayerKilledVoiceData.h"
+#include "ETresEnemyXIIIPhaseType.h"
 #include "UObject/NoExportTypes.h"
 #include "TresEnemyXIIIPawnBase.generated.h"
 
 class USQEX_ParticleAttachDataAsset;
 class UTresEnemyXIIIRetryInheritParam;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemyXIIIPawnBase : public ATresEnemyPawnBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USQEX_ParticleAttachDataAsset* m_UniqueEffectDataAsset;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresEnemyXIIIPhaseType m_FirstPhaseType;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     float m_PhaseChangeHitPointMinRateList[5];
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     float m_RetryStartHitPointRateList[5];
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresEnemyXIIIPlayerKilledVoiceData> m_PlayerKilledVoiceDataList;
     
-    UPROPERTY(EditInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 m_bDebugEnableForcePhaseType: 1;
     
-    UPROPERTY(EditInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresEnemyXIIIPhaseType m_DebugForcePhaseType;
     
-    UPROPERTY(EditInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 m_bDebugEnableForceCenterLocation: 1;
     
-    UPROPERTY(EditInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector m_DebugForceCenterLocation;
     
 protected:
-    UPROPERTY(SaveGame)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
     ETresEnemyXIIIPhaseType m_PhaseType;
     
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresEnemyXIIIRetryInheritParam* m_RetryInheritParam;
     
 public:
@@ -53,19 +53,19 @@ public:
     UFUNCTION(BlueprintCallable)
     void NotifyChangePhase(ETresEnemyXIIIPhaseType InNewPhaseType);
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     bool IsDuringCoopActionCooldown();
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     bool IsDuringAlertCooldown();
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     bool IsAnnoyingAttackToPlayer();
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     int32 GetPhaseNo() const;
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BP_OnChangePhase(ETresEnemyXIIIPhaseType InNewPhaseType);
     
 };

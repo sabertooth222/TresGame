@@ -6,14 +6,14 @@
 class UTresDebugMenuObject;
 class UTresDebugMenuCommandPage;
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class UTresDebugMenuCommandMainWindow : public UTresDebugMenuContainer {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresDebugMenuObject* m_BackGround;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresDebugMenuCommandPage* m_IndexPage;
     
     UTresDebugMenuCommandMainWindow();

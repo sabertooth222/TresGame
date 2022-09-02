@@ -3,7 +3,7 @@
 #include "BehaviorTree/BTTaskNode.h"
 #include "TresNpcBTTask_CalcLeadGoalTurnPointBB.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcBTTask_CalcLeadGoalTurnPointBB : public UBTTaskNode {
     GENERATED_BODY()
 public:

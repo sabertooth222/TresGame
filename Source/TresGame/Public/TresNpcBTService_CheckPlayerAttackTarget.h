@@ -3,7 +3,7 @@
 #include "BehaviorTree/Services/BTService_BlackboardBase.h"
 #include "TresNpcBTService_CheckPlayerAttackTarget.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcBTService_CheckPlayerAttackTarget : public UBTService_BlackboardBase {
     GENERATED_BODY()
 public:

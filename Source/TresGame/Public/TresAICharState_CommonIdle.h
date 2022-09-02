@@ -3,7 +3,7 @@
 #include "TresCharState_Idle.h"
 #include "TresAICharState_CommonIdle.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresAICharState_CommonIdle : public UTresCharState_Idle {
     GENERATED_BODY()
 public:

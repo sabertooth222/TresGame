@@ -6,32 +6,32 @@
 
 class ATresLinkActor_e_ex202_Entry;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresLinkActor_e_ex202_Exit : public ATresLinkActor_e_ex202_Base {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(EditAnywhere)
     TArray<TWeakObjectPtr<ATresLinkActor_e_ex202_Entry>> m_EntryActors;
     
-    UPROPERTY(EditInstanceOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresLinkActorEx202Size> m_Size;
     
-    UPROPERTY(EditInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 m_bEnableCorrection: 1;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     float m_OffsetDistances[3];
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     float m_AddMotionAlpha[3];
     
 public:
     ATresLinkActor_e_ex202_Exit();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     TArray<ATresLinkActor_e_ex202_Entry*> GetEntryActors() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool CanUse() const;
     
 };

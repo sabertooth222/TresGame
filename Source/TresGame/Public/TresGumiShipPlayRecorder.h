@@ -1,24 +1,24 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TresGumiShipActorCompoBase.h"
 #include "TresGumiShipEnemyGroupWipeOutData.h"
+#include "TresGumiShipActorCompoBase.h"
 #include "TresGumiShipPlayRecorder.generated.h"
 
 class AActor;
 
-UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTresGumiShipPlayRecorder : public UTresGumiShipActorCompoBase {
     GENERATED_BODY()
 public:
     UTresGumiShipPlayRecorder();
 protected:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnEnemyGroupWipeOutInBattleArea(const FTresGumiShipEnemyGroupWipeOutData& rEnemyGroupWipeOutData);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnDefeated(const AActor* pTarget);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void _OnAllEnemyGroupWipeOutInBattleArea();
     
 };

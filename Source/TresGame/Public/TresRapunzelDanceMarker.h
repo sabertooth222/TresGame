@@ -6,20 +6,20 @@
 
 class UParticleSystemComponent;
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresRapunzelDanceMarker {
     GENERATED_BODY()
 public:
-    UPROPERTY(VisibleInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EDancePerformType m_PerformType;
     
-    UPROPERTY(VisibleInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_Length;
     
-    UPROPERTY(VisibleInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector m_Location;
     
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* m_pPSC;
     
     TRESGAME_API FTresRapunzelDanceMarker();

@@ -9,16 +9,16 @@ USTRUCT(BlueprintType)
 struct FTresWinniePuzzleComboBonusGaugeIncreaseParam {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresWinniePuzzleBonusGaugeIncreaseByComboParam> IncreaseByComboParam;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresWinniePuzzleBonusGaugeIncreaseByInvolvedUnitsNumParam> IncreaseByInvolvedUnitsNumParam;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresWinniePuzzleBonusGaugeIncreaseRateParam> IncreaseRateParam;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool EnableIncreaseRateWhenGetCombo2OrMore;
     
     TRESGAME_API FTresWinniePuzzleComboBonusGaugeIncreaseParam();

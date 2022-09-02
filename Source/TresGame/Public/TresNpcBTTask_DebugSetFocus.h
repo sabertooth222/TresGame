@@ -3,7 +3,7 @@
 #include "BehaviorTree/BTTaskNode.h"
 #include "TresNpcBTTask_DebugSetFocus.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcBTTask_DebugSetFocus : public UBTTaskNode {
     GENERATED_BODY()
 public:

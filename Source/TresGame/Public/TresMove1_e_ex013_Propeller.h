@@ -3,7 +3,7 @@
 #include "TresLocomotionDefinitionAirCodeDriven.h"
 #include "TresMove1_e_ex013_Propeller.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresMove1_e_ex013_Propeller : public UTresLocomotionDefinitionAirCodeDriven {
     GENERATED_BODY()
 public:

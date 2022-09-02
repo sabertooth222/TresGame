@@ -5,12 +5,12 @@
 
 class ATresFriendLinkPawnCallMeteor;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_FRCallMeteor : public UTresCharState_FRCallMeteor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresFriendLinkPawnCallMeteor* m_pObj;
     
 public:

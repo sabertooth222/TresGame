@@ -3,7 +3,7 @@
 #include "TresActionDefinitionBase.h"
 #include "TresAction_ToyWaitBase.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAction_ToyWaitBase : public UTresActionDefinitionBase {
     GENERATED_BODY()
 public:

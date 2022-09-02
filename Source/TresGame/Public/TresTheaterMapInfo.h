@@ -8,11 +8,11 @@ USTRUCT(BlueprintType)
 struct FTresTheaterMapInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName MapName;
     
-    UPROPERTY(EditDefaultsOnly)
-    UTresTexturePump* TexturePump;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TAssetPtr<UTresTexturePump> TexturePump;
     
     TRESGAME_API FTresTheaterMapInfo();
 };

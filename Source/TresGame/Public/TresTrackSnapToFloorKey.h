@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FTresTrackSnapToFloorKey {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_Time;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_SnapToFloor;
     
     TRESGAME_API FTresTrackSnapToFloorKey();

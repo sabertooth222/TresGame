@@ -1,21 +1,21 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "TresCameraRotTarget.h"
 #include "TresCameraTargetInfo.h"
+#include "TresCameraRotTarget.h"
 #include "UObject/NoExportTypes.h"
 #include "TresCameraRotTarget2TC.generated.h"
 
-class UObject;
 class AActor;
+class UObject;
 class ATresCameraRotTarget2TC;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresCameraRotTarget2TC : public ATresCameraRotTarget {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresCameraTargetInfo m_TargetInfo2;
     
 public:

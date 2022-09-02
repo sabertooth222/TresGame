@@ -4,7 +4,7 @@
 #include "ETresEnemyShip.h"
 #include "TresEnemyShipBTDecorator_IsAliveShipCore.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresEnemyShipBTDecorator_IsAliveShipCore : public UBTDecorator {
     GENERATED_BODY()
 public:

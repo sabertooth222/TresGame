@@ -2,5 +2,5 @@
 #include "CoreMinimal.h"
 #include "TresVideoPlayFinishSignatureDelegate.generated.h"
 
-UDELEGATE() DECLARE_DYNAMIC_MULTICAST_DELEGATE(FTresVideoPlayFinishSignature);
+UDELEGATE(BlueprintCallable) DECLARE_DYNAMIC_MULTICAST_DELEGATE(FTresVideoPlayFinishSignature);
 

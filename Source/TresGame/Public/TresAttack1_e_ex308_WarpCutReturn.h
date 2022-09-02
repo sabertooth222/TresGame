@@ -3,7 +3,7 @@
 #include "TresAttackDefinitionBase.h"
 #include "TresAttack1_e_ex308_WarpCutReturn.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAttack1_e_ex308_WarpCutReturn : public UTresAttackDefinitionBase {
     GENERATED_BODY()
 public:

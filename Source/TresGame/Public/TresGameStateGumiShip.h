@@ -3,7 +3,7 @@
 #include "TresGameState.h"
 #include "TresGameStateGumiShip.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresGameStateGumiShip : public ATresGameState {
     GENERATED_BODY()
 public:

@@ -3,7 +3,7 @@
 #include "UObject/Object.h"
 #include "TresInfluenceMapManager.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresInfluenceMapManager : public UObject {
     GENERATED_BODY()
 public:

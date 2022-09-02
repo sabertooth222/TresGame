@@ -9,99 +9,99 @@
 #include "TresEnemyPawn_e_ex011.generated.h"
 
 class USceneComponent;
-class AActor;
-class ATresEnemyPawn_e_ex011;
 class ATresEnemyFortressFloorActor_e_ex011;
 class UTresAttackDefinitionBase;
 class UTresActionDefinitionBase;
+class AActor;
+class ATresEnemyPawn_e_ex011;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemyPawn_e_ex011 : public ATresEnemyPawnBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USceneComponent* CoopJumpLocationComponent;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_MaxConnect;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_SpawnNumConnect;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresBoneNames_e_ex011 m_ConnectFortressBoneNames;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresBoneNames_e_ex011 m_ConnectCarriageBoneNames;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresWheelRotationWork_e_ex011> m_WheelRotationWorkList;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_ConnectBoneDistance;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_PassStepHeight;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_HillClimbAngle;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 m_bIsAutoCarriageMode: 1;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UTresActionDefinitionBase> m_ToCarriageActionClass;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_StringConnectPointDistance;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_StringConnectPointDistanceInterpSpeed;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_StringRotationAddConnectPointDistance;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_StringRotationAddConnectPointDistanceMaxAngle;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_StringRotationAddConnectPointDistanceRate;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_StringRotationAdjustPower;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_RodConnectPointDistance;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_RodConnectPointDistanceInterpSpeed;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_RodRotationAdjustPower;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_RodConnectPointMaxAngle;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<AActor> m_CoopJumpActorClass;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UTresAttackDefinitionBase> m_CoopAttackDefinitionClass;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresEnemyFortressFloorActor_e_ex011> m_FortressFloorCollisionActorClass;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresE_ex011ConnectEffectParam m_ConnectEffectParam;
     
-    UPROPERTY(SaveGame)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
     int32 m_NumConnect;
     
-    UPROPERTY(SaveGame)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
     uint8 m_bIsEndFortressMode: 1;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_RepelSpeed;
     
 public:
@@ -109,46 +109,46 @@ public:
     UFUNCTION(BlueprintCallable)
     void ResetCarriageStartState();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool IsTop() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FRotator GetWheelRotation(FName InBoneName, bool bInverse) const;
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     int32 GetNum() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     void GetConnectPawnList(TArray<ATresEnemyPawn_e_ex011*>& OutList) const;
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void DebugToFortressMode();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void DebugToCarriageMode();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void DebugSetNumTailSwing(int32 Num);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void DebugSetNumDash(int32 Num);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void DebugSetNumBombardment(int32 Num);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void DebugSetEnableDrawTarget(int32 bEnable);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void DebugDisappearConnectEffect();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void DebugDestroyChild(int32 Num);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void DebugCreateChild(int32 Num);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void DebugAppearConnectEffect();
     
     UFUNCTION(BlueprintCallable)

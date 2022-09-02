@@ -1,28 +1,28 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TresGummiShipHeader.h"
-#include "GameFramework/SaveGame.h"
-#include "TresGummiShipSticker.h"
 #include "TresGummiShipPartsStruct.h"
+#include "GameFramework/SaveGame.h"
+#include "TresGummiShipHeader.h"
+#include "TresGummiShipSticker.h"
 #include "TinyShipSaveLoad.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTinyShipSaveLoad : public USaveGame {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresGummiShipHeader m_header;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     FTresGummiShipSticker m_Sticker[8];
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresGummiShipPartsStruct> m_body;
     
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString TinyShipSaveSlotName;
     
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(EditAnywhere)
     uint32 UserIndex;
     
     UTinyShipSaveLoad();

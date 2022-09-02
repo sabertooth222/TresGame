@@ -3,7 +3,7 @@
 #include "TresWinniePuzzleCharacterPawn.h"
 #include "TresWinniePuzzlePoohPawn.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresWinniePuzzlePoohPawn : public ATresWinniePuzzleCharacterPawn {
     GENERATED_BODY()
 public:

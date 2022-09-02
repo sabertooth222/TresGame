@@ -3,7 +3,7 @@
 #include "TresCharState_FRUltimateEnd.h"
 #include "TresPlayerState_FRUltimateEnd.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_FRUltimateEnd : public UTresCharState_FRUltimateEnd {
     GENERATED_BODY()
 public:

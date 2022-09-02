@@ -5,11 +5,11 @@
 
 class ATresCharPawnBase;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresPlayerState_RiskDodge : public UTresCharState_RiskDodge {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresCharPawnBase* m_pAttackerPawn;
     
     UTresPlayerState_RiskDodge();

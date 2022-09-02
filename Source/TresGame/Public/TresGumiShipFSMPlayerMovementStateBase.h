@@ -5,22 +5,22 @@
 #include "UObject/NoExportTypes.h"
 #include "TresGumiShipFSMPlayerMovementStateBase.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresGumiShipFSMPlayerMovementStateBase : public UTresGumiShipFSMPlayerStateBase {
     GENERATED_BODY()
 public:
     UTresGumiShipFSMPlayerMovementStateBase();
 protected:
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FRotator _GetPlayerRotation() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FRotator _GetPlayerRelativeRotation() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector _GetPlayerRelativeLocation() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector _GetPlayerLocation() const;
     
     UFUNCTION(BlueprintCallable)

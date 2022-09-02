@@ -3,7 +3,7 @@
 #include "TresAction3_e_ex761_WarpInBase.h"
 #include "TresAction3_e_ex761_ForceWarpIn.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAction3_e_ex761_ForceWarpIn : public UTresAction3_e_ex761_WarpInBase {
     GENERATED_BODY()
 public:

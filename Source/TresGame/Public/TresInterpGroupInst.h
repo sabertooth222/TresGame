@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TresInterpGroupInstUpdateSettings.h"
 #include "Matinee/InterpGroupInst.h"
+#include "TresInterpGroupInstUpdateSettings.h"
 #include "TresInterpGroupInst.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API UTresInterpGroupInst : public UInterpGroupInst {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresInterpGroupInstUpdateSettings> m_UpdateSettings;
     
     UTresInterpGroupInst();

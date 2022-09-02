@@ -3,14 +3,14 @@
 #include "TresDirectionalVolumeTickBase.h"
 #include "TresDispDestinationVolume.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresDispDestinationVolume : public ATresDirectionalVolumeTickBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString m_Namespace;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString m_Key;
     
     ATresDispDestinationVolume();

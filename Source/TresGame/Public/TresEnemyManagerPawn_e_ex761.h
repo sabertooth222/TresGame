@@ -5,12 +5,12 @@
 
 class UTresEnemyManager_e_ex761;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemyManagerPawn_e_ex761 : public ATresEnemyPawnBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresEnemyManager_e_ex761* m_Manager;
     
 public:

@@ -4,18 +4,18 @@
 #include "GameFramework/Actor.h"
 #include "TresActor_e_dw401_Updraft.generated.h"
 
-class ATresWaterCurrentSplineActor;
 class UCapsuleComponent;
+class ATresWaterCurrentSplineActor;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresActor_e_dw401_Updraft : public AActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UCapsuleComponent* MyUpdraftComponent;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresWaterCurrentSplineActor> m_UpdraftSplineClass;
     
 public:

@@ -9,7 +9,7 @@ UCLASS(Blueprintable)
 class UTresPlayerState_AFVikingShip : public UTresCharState_AFVikingShip {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresAttractionPawnVikingShip* m_pShip;
     
     UTresPlayerState_AFVikingShip();

@@ -3,7 +3,7 @@
 #include "GameFramework/Actor.h"
 #include "TresAIPointSequencialExec.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresAIPointSequencialExec : public AActor {
     GENERATED_BODY()
 public:

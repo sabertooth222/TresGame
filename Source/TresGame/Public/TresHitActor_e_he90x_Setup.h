@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FTresHitActor_e_he90x_Setup {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fRadius;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fHeight;
     
     TRESGAME_API FTresHitActor_e_he90x_Setup();

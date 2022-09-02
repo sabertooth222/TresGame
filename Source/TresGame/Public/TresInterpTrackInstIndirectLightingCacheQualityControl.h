@@ -6,14 +6,14 @@
 
 class UPrimitiveComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API UTresInterpTrackInstIndirectLightingCacheQualityControl : public UInterpTrackInst {
     GENERATED_BODY()
 public:
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     TArray<UPrimitiveComponent*> m_Components;
     
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     TArray<TEnumAsByte<EIndirectLightingCacheQuality>> m_OriginalValues;
     
     UTresInterpTrackInstIndirectLightingCacheQualityControl();

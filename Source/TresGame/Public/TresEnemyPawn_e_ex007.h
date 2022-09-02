@@ -3,12 +3,12 @@
 #include "TresEnemyPawnBase.h"
 #include "TresEnemyPawn_e_ex007.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresEnemyPawn_e_ex007 : public ATresEnemyPawnBase {
     GENERATED_BODY()
 public:
     ATresEnemyPawn_e_ex007();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsCoopMode() const;
     
 };

@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FTresMI_02GeneratorRuleParamArray {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresMI_02GeneratorRuleParam> Params;
     
     TRESGAME_API FTresMI_02GeneratorRuleParamArray();

@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct FParticleSystemAttachData_e_ex761 {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* ParticleSystem;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName AttachSocketName;
     
     TRESGAME_API FParticleSystemAttachData_e_ex761();

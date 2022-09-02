@@ -3,15 +3,15 @@
 #include "UObject/Object.h"
 #include "TresCameraConfig.generated.h"
 
-UCLASS(Config=TresCameraConfig)
+UCLASS(Blueprintable, Config=TresCameraConfig)
 class UTresCameraConfig : public UObject {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 m_bAutoMoveRotationYawOnly: 1;
     
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 m_bNoCollision: 1;
     
 public:

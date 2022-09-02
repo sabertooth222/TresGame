@@ -4,12 +4,12 @@
 #include "TresProjEffectSet_e_ex359.h"
 #include "TresProjectileMeshComponent_e_ex359.generated.h"
 
-UCLASS(EditInlineNew, MinimalAPI, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, EditInlineNew, MinimalAPI, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UTresProjectileMeshComponent_e_ex359 : public UTresSkeletalMeshComponent {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresProjEffectSet_e_ex359 m_EffectSet;
     
 public:

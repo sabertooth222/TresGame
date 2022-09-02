@@ -5,14 +5,14 @@
 #include "ETresFNpcAINpcMode.h"
 #include "TresNpcBTDecorator_IsNpcModeType.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNpcBTDecorator_IsNpcModeType : public UTresNpcBTDecoratorBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBlackboardKeySelector m_Source;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<ETresFNpcAINpcMode> m_NpcModes;
     
     UTresNpcBTDecorator_IsNpcModeType();

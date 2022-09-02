@@ -3,7 +3,7 @@
 #include "TresActionDefinitionBase.h"
 #include "TresAction4_GigasBase_StartUltimaMode.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAction4_GigasBase_StartUltimaMode : public UTresActionDefinitionBase {
     GENERATED_BODY()
 public:

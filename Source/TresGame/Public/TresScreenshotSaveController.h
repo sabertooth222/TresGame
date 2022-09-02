@@ -5,12 +5,12 @@
 
 class UTresGameInstance;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresScreenshotSaveController : public UObject {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresGameInstance* m_pTresGameInstance;
     
 public:

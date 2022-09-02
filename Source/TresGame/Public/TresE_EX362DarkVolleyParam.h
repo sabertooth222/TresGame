@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FTresE_EX362DarkVolleyParam {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector m_Offset;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector m_Rot;
     
     TRESGAME_API FTresE_EX362DarkVolleyParam();

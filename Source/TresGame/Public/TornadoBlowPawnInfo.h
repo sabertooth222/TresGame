@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "TornadoBlowPawnInfo.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTornadoBlowPawnInfo {
     GENERATED_BODY()
 public:

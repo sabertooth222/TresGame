@@ -8,13 +8,13 @@ USTRUCT(BlueprintType)
 struct FTresEquipmentSetNameTable {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresWeaponForm m_FormType;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresWeaponGrowLvl m_GrowLevel;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_EquipSetName;
     
     TRESGAME_API FTresEquipmentSetNameTable();

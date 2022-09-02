@@ -3,7 +3,7 @@
 #include "TresNpcAttackDefinitionBase.h"
 #include "TresAction1_n_mi204_Hidden.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAction1_n_mi204_Hidden : public UTresNpcAttackDefinitionBase {
     GENERATED_BODY()
 public:

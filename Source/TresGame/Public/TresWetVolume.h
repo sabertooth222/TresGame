@@ -3,12 +3,12 @@
 #include "TresVolume.h"
 #include "TresWetVolume.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresWetVolume : public ATresVolume {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_WetnessTimeParam;
     
 public:

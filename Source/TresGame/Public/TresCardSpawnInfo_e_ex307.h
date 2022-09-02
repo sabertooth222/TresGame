@@ -1,23 +1,23 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ETresEnemy_e_ex307_DummyCardSpawn.h"
 #include "TresCardAction_e_ex307.h"
+#include "ETresEnemy_e_ex307_DummyCardSpawn.h"
 #include "TresCardSpawnInfo_e_ex307.generated.h"
 
 USTRUCT(BlueprintType)
 struct FTresCardSpawnInfo_e_ex307 {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float HitPointRate;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     int32 Num[3];
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresEnemy_e_ex307_DummyCardSpawn::Type> DummyCardsSpawnType;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     FTresCardAction_e_ex307 CardAction[3];
     
     TRESGAME_API FTresCardSpawnInfo_e_ex307();

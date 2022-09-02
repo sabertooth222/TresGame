@@ -6,15 +6,15 @@
 class UTresASProxyTresControlsListItem;
 class UTresASProxyTresControlsScrollBar;
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class UTresASProxyTresControlsList : public UTresASProxyTresCoreAnchorComponent {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UTresASProxyTresControlsListItem*> m_ListItems;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresASProxyTresControlsScrollBar* m_ScrollBar;
     
 public:

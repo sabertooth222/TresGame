@@ -1,51 +1,50 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "Engine/DataAsset.h"
 #include "TresUIMobilePortalDataAsset.generated.h"
 
 class UDataTable;
 class UTextureRenderTarget2D;
-class ATresUIActor;
-class UTresUIMobileDictionaryDataAsset;
 class USwfMovie;
+class ATresUIActor;
 class USoundBase;
+class UTresUIMobileDictionaryDataAsset;
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresUIMobilePortalDataAsset : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTextureRenderTarget2D* JiminyRenderTargetTexture;
     
-    UPROPERTY(EditDefaultsOnly)
-    TSubclassOf<ATresUIActor> JiminyActor;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TAssetSubclassOf<ATresUIActor> JiminyActor;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresUIMobileDictionaryDataAsset* DictionaryData;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UDataTable* KeywordGlossaryData;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UDataTable* AnsemCodeData;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UDataTable* StoryData;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UDataTable* LSIGameData;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TAssetPtr<USwfMovie> SwfMovieAssetLSIButtonSet;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName LSIGamePlayRewardItemName;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TAssetPtr<USoundBase> LSIMenuBGM;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TAssetPtr<USwfMovie> SwfMovieAssets[12];
     
     UTresUIMobilePortalDataAsset();

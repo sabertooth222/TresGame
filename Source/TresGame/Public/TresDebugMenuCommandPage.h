@@ -3,7 +3,7 @@
 #include "TresDebugMenuContainer.h"
 #include "TresDebugMenuCommandPage.generated.h"
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class UTresDebugMenuCommandPage : public UTresDebugMenuContainer {
     GENERATED_BODY()
 public:

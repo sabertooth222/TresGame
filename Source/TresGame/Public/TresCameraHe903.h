@@ -7,7 +7,7 @@
 class ATresCameraHe903;
 class UObject;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresCameraHe903 : public ATresCameraNormalDstTgt2 {
     GENERATED_BODY()
 public:

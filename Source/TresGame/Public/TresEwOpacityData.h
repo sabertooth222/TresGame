@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FTresEwOpacityData {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 Num;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Opacity;
     
     TRESGAME_API FTresEwOpacityData();

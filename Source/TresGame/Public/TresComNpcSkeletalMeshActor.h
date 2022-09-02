@@ -7,18 +7,18 @@
 
 class UTresSkeletalMeshComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API ATresComNpcSkeletalMeshActor : public AActor, public ITresAnimInterface {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresComNpcAttachMesh> m_AttachMeshs;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fNearCameraRange;
     
 private:
-    UPROPERTY(Export, VisibleDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UTresSkeletalMeshComponent* MyMesh;
     
 public:

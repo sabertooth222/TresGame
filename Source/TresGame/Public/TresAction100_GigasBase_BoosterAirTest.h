@@ -3,7 +3,7 @@
 #include "TresActionDefinitionBase.h"
 #include "TresAction100_GigasBase_BoosterAirTest.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAction100_GigasBase_BoosterAirTest : public UTresActionDefinitionBase {
     GENERATED_BODY()
 public:

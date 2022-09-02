@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FTresEnemyEx711_TornadoInvolveParam {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresGimmick_e_ex711_PhysicsActor* m_pActor;
     
     TRESGAME_API FTresEnemyEx711_TornadoInvolveParam();

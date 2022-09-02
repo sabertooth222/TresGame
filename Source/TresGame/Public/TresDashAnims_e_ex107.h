@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct FTresDashAnims_e_ex107 {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UAnimSequenceBase* StartAnimData;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UAnimSequenceBase* DashAnimData;
     
     TRESGAME_API FTresDashAnims_e_ex107();

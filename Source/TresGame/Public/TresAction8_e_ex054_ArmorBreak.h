@@ -4,14 +4,14 @@
 #include "ETresEnemy_e_ex054_BattleStyle.h"
 #include "TresAction8_e_ex054_ArmorBreak.generated.h"
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAction8_e_ex054_ArmorBreak : public UTresActionDefinitionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresEnemy_e_ex054_BattleStyle> m_pro_BattleStyle;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_pro_StunTime;
     
     UTresAction8_e_ex054_ArmorBreak();

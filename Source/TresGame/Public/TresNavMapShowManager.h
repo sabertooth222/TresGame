@@ -3,7 +3,7 @@
 #include "UObject/Object.h"
 #include "TresNavMapShowManager.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresNavMapShowManager : public UObject {
     GENERATED_BODY()
 public:

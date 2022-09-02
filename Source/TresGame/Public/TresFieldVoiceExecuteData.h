@@ -4,14 +4,14 @@
 
 class AActor;
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresFieldVoiceExecuteData {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AActor* m_pExecuter;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_Time;
     
     TRESGAME_API FTresFieldVoiceExecuteData();

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "TresCockpitFriend.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresCockpitFriend {
     GENERATED_BODY()
 public:

@@ -3,7 +3,7 @@
 #include "BehaviorTree/BTDecorator.h"
 #include "TresBTDecorator_GigasBase_OverrideMoveAcceleration.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresBTDecorator_GigasBase_OverrideMoveAcceleration : public UBTDecorator {
     GENERATED_BODY()
 public:

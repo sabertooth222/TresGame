@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=StringAssetReference -FallbackName=StringAssetReference
 #include "ETresWorldCode.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=StringAssetReference -FallbackName=StringAssetReference
 #include "TresWorldCodeLoadAssetName.generated.h"
 
 USTRUCT(BlueprintType)
@@ -11,7 +11,7 @@ public:
     UPROPERTY(EditAnywhere, GlobalConfig)
     TEnumAsByte<ETresWorldCode> m_WorldCode;
     
-    UPROPERTY(EditAnywhere, GlobalConfig)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, GlobalConfig, meta=(AllowPrivateAccess=true))
     FStringAssetReference m_AssetName;
     
     TRESGAME_API FTresWorldCodeLoadAssetName();

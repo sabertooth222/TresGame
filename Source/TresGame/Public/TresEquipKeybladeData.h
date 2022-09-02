@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ETresWeaponForm.h"
 #include "TresEquipDataBase.h"
+#include "ETresWeaponForm.h"
 #include "TresEquipValiableSetList.h"
 #include "TresEquipKeybladeData.generated.h"
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class TRESGAME_API UTresEquipKeybladeData : public UTresEquipDataBase {
     GENERATED_BODY()
 public:

@@ -3,7 +3,7 @@
 #include "TresBluePrintFieldVoiceBase.h"
 #include "TresFieldVoiceBluePrint.generated.h"
 
-UCLASS(Abstract, EditInlineNew)
+UCLASS(Abstract, Blueprintable, EditInlineNew)
 class UTresFieldVoiceBluePrint : public UTresBluePrintFieldVoiceBase {
     GENERATED_BODY()
 public:

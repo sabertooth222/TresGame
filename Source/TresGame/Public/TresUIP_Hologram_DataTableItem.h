@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "TresUIP_Hologram_DataTableItem.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FTresUIP_Hologram_DataTableItem {
     GENERATED_BODY()
 public:

@@ -5,11 +5,11 @@
 
 class AActor;
 
-UCLASS(CollapseCategories)
+UCLASS(Blueprintable, CollapseCategories)
 class TRESGAME_API UTresExternalActorInterpGroup : public UInterpGroup {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TLazyObjectPtr<AActor> m_Actor;
     
     UTresExternalActorInterpGroup();

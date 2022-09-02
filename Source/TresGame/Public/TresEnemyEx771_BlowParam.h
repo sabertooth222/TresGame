@@ -9,10 +9,10 @@ USTRUCT(BlueprintType)
 struct FTresEnemyEx771_BlowParam {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresActor_e_ex771_Attract* m_pBlow;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AActor* m_pTarget;
     
     TRESGAME_API FTresEnemyEx771_BlowParam();

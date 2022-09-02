@@ -6,13 +6,13 @@ USTRUCT(BlueprintType)
 struct FTresEnemyBigDealCardRotationEndParam_e_ex356 {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 NotCardDesignNum;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 PlainCardDesignNum;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 LuxordCardDesignNum;
     
     TRESGAME_API FTresEnemyBigDealCardRotationEndParam_e_ex356();

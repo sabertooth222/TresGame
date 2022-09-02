@@ -5,18 +5,18 @@
 #include "EX354_ClusterShotHitActorInfo.h"
 #include "TresProjectile_e_ex354_ClusterShotManager.generated.h"
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresProjectile_e_ex354_ClusterShotManager : public ATresProjectileBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<ATresProjectileBase*> m_ClusterShotArray;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FEX354_ClusterShotMoveInfo> m_ClusterShotMoveInfoArray;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FEX354_ClusterShotHitActorInfo> m_ClusterShotHitActorInfoArray;
     
 public:
