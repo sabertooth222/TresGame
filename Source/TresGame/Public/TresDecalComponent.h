@@ -1,5 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "SQEX_DecalComponent.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=SQEX_DecalComponent -FallbackName=SQEX_DecalComponent
 #include "TresDecalComponent.generated.h"
 

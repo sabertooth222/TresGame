@@ -9,6 +9,7 @@
 #include "Engine/EngineTypes.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ETresKHSMaterialParameterIDScalarType -FallbackName=ETresKHSMaterialParameterIDScalarType
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ETresKHSMaterialParameterIDVectorType -FallbackName=ETresKHSMaterialParameterIDVectorType
+#include "TresEnemyPawn_e_ex306.h"
 #include "UObject/NoExportTypes.h"
 #include "TresSkeletalMeshComponent.generated.h"
 

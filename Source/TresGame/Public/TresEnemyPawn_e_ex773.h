@@ -3,6 +3,7 @@
 #include "Templates/SubclassOf.h"
 #include "TresEnemyXIIIPawnBase.h"
 #include "ETresEnemyXIIIPhaseType.h"
+#include "TresDecoPartsComponent.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ETresScreenEffectPriority -FallbackName=ETresScreenEffectPriority
 #include "TresEnemyPawn_e_ex773.generated.h"
 

@@ -6,6 +6,7 @@
 #include "Camera/PlayerCameraManager.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=EViewTargetBlendInterpYaw -FallbackName=EViewTargetBlendInterpYaw
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=EViewTargetBlendInterp -FallbackName=EViewTargetBlendInterp
+#include "ViewTargetTransitionParamsEx.h"
 #include "Engine/Scene.h"
 #include "TresCameraBase.generated.h"
 

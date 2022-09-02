@@ -2,6 +2,7 @@
 #include "CoreMinimal.h"
 #include "Components/StaticMeshComponent.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ETresKHSMaterialParameterIDScalarType -FallbackName=ETresKHSMaterialParameterIDScalarType
+#include "TresDecoPartsComponent.h"
 #include "UObject/NoExportTypes.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ETresKHSMaterialParameterIDVectorType -FallbackName=ETresKHSMaterialParameterIDVectorType
 #include "TresStaticMeshComponent.generated.h"

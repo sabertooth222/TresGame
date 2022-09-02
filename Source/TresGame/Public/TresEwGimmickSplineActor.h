@@ -1,8 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=SQEX_SplineActor -FallbackName=SQEX_SplineActor
+#include "SQEX_SplineActor.h"
 #include "ETresGimmickEwDirectionType.h"
+#include "SQEX_SplineActor.h"
 #include "TresEwGimmickSplineActor.generated.h"
 
 class UAnimationAsset;

@@ -1,5 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "ESQEX_ScreenFadeLayer.h"
 #include "Matinee/InterpTrackFade.h"
 #include "ETresFadeTrack_TheaterMode.h"
 #include "TresInterpTrackFadeKey.h"

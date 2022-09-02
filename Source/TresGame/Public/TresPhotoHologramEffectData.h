@@ -2,6 +2,8 @@
 #include "CoreMinimal.h"
 #include "TresHologramWorldInitParam.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ESQEX_ATTACH_OBJECT_NAME -FallbackName=ESQEX_ATTACH_OBJECT_NAME
+#include "ESQEX_ATTACH_EFFECT_END_TYPE.h"
+#include "ESQEX_ATTACH_OBJECT_NAME.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ESQEX_ATTACH_EFFECT_END_TYPE -FallbackName=ESQEX_ATTACH_EFFECT_END_TYPE
