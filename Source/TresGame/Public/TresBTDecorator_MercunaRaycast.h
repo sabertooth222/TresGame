@@ -8,7 +8,7 @@ UCLASS(Blueprintable)
 class UTresBTDecorator_MercunaRaycast : public UBTDecorator {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresDecoratorMercunaRaycast::Type> m_Dir;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

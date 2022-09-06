@@ -6,7 +6,7 @@ USTRUCT(BlueprintType)
 struct FTresGumiShipBattleMisisonBonusWithConditionI {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     uint32 m_udBonusPoint;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

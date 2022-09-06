@@ -15,10 +15,10 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_Height;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresSpawnPointRadiusFilterType> m_RadiusFilterType;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresSpawnPointHeightFilterType> m_HeightFilterType;
     
     UTresSpawnPointSizeFilter();

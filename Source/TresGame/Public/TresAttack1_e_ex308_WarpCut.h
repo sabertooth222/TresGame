@@ -16,7 +16,7 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_LoopAbortNumFailed;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     int32 m_NumLoopList[5];
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

@@ -11,7 +11,7 @@ class ATresLinkActor_e_ex202_Entry : public ATresLinkActor_e_ex202_Base {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TWeakObjectPtr<ATresLinkActor_e_ex202_Exit> m_ExitActor;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))

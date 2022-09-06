@@ -11,7 +11,7 @@ UCLASS(Blueprintable)
 class UTresAttack7_e_ex781_ReverseSlash : public UTresAttackDefinitionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ReverseSlashTypes_e_ex781> m_ReverseSlashType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

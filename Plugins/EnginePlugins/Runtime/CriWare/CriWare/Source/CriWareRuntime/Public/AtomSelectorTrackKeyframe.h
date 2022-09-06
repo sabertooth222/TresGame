@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FAtomSelectorTrackKeyframe {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     float Time;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     FString SelectorLabel;
     
     CRIWARERUNTIME_API FAtomSelectorTrackKeyframe();

@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FTresBlackboardFloatValueModifier {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresValueModifierMethod::Type> ValueModifierType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

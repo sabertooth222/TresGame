@@ -15,7 +15,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float m_Stiffness;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     uint32 m_ParticleIds[50];
     
     BONAMIKRT_API FSQEX_BonamikShapeMatchingDesc();

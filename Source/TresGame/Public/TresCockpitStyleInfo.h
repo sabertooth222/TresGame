@@ -10,7 +10,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FString> m_strBtnLocKeyAry;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TArray<TEnumAsByte<ETresUIPadButtonType>> m_eBtnTypeAry;
     
     TRESGAME_API FTresCockpitStyleInfo();

@@ -15,7 +15,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresProjectile_e_ex114_Kunai> m_Projectile;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     FKunai_Setup m_KunaiSetUp[4];
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

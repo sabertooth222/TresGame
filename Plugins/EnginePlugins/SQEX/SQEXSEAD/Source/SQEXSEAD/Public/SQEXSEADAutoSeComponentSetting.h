@@ -8,7 +8,7 @@ UCLASS()
 class SQEXSEAD_API USQEXSEADAutoSeComponentSetting : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     FSQEXSEADAutoSeComponentInitParams InitParams;
     
     USQEXSEADAutoSeComponentSetting();

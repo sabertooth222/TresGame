@@ -24,7 +24,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRotator m_MaxRotationSpeed;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     FTresChaosFiragaParams_e_ex352 m_ChaosFiragaParams[2];
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

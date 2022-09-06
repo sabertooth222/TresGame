@@ -34,7 +34,7 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* m_AirParticle;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TWeakObjectPtr<AActor> m_Target;
     
 public:

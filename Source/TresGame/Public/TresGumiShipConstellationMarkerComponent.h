@@ -10,7 +10,7 @@ class UTresGumiShipConstellationMarkerComponent : public UTresDetectMarkerCompon
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresGumiShipConstellationCode> ConstellationCode;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

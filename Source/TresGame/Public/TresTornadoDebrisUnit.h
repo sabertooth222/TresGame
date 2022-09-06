@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FTresTornadoDebrisUnit {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresTornadoDebrisStateName> StateName;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

@@ -8,7 +8,7 @@ UCLASS()
 class SQEXSEAD_API USQEXSEADSurfaceAssetReferenceTable : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     FSQEXSEADSurfaceAssetReferenceTableData TableData;
     
     USQEXSEADSurfaceAssetReferenceTable();

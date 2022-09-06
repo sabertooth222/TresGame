@@ -11,7 +11,7 @@ public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE(FTresOnShutDown);
     
 private:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresForwardDirection> m_eEffectForward;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

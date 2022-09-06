@@ -7,10 +7,10 @@ UCLASS(CollapseCategories, MinimalAPI)
 class UMatineeTrackAtomCategoryName : public UMatineeTrackAtomBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     FString CategoryName;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     bool bEnableVolumeTrack;
     
     UMatineeTrackAtomCategoryName();

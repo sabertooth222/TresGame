@@ -12,7 +12,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ANavLinkProxy* NavLinkProxy;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresNavLinkSegment_e_ex035> NavLinkSegment;
     
     TRESGAME_API FTresNavLinkSet_e_ex035();

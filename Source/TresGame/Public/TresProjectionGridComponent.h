@@ -49,7 +49,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_FreezingUpdate;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TWeakObjectPtr<ACameraActor> m_pDebugCameraActor;
     
     UTresProjectionGridComponent();

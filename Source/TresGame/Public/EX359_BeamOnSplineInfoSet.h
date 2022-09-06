@@ -11,7 +11,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FEX359_BeamOnSplineInfo> m_BeamOnSplineInfoArray;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<EEX359_SpawnDirType> m_DirType;
     
     TRESGAME_API FEX359_BeamOnSplineInfoSet();

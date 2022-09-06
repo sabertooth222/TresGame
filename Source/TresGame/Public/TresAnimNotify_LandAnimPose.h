@@ -9,7 +9,7 @@ class UTresAnimNotify_LandAnimPose : public UAnimNotify {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresLandAnimPose> m_LandAnimPose;
     
 public:

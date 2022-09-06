@@ -10,7 +10,7 @@ USTRUCT(BlueprintType)
 struct FBigTornadoProjInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<EBigTornadoProjPos> m_ProjPos;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

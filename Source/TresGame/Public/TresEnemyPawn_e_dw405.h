@@ -19,7 +19,7 @@ class ATresEnemyPawn_e_dw405 : public ATresEnemyPawnBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresEnemyDw405BattleCount> m_BattleCount;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

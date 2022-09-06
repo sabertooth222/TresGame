@@ -9,7 +9,7 @@ USTRUCT(BlueprintType)
 struct FTresE_dw405NormalComboParam {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresEnemyDw405AttackPossibleKind> AttackPossibleKind;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

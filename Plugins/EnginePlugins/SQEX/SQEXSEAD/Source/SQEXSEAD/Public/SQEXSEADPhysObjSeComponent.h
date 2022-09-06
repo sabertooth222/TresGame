@@ -15,7 +15,7 @@ UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class SQEXSEAD_API USQEXSEADPhysObjSeComponent : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     USQEXSEADPhysObjSeComponentSetting* Setting;
     
 private:

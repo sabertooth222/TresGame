@@ -8,10 +8,10 @@ UCLASS(CollapseCategories, MinimalAPI)
 class UMatineeTrackAtom : public UMatineeTrackAtomSoundBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TArray<FString> AisacList;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TArray<FString> SelectorList;
     
     UPROPERTY(EditAnywhere, EditFixedSize)

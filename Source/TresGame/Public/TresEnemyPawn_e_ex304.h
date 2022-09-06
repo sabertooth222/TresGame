@@ -10,7 +10,7 @@ UCLASS(Blueprintable)
 class ATresEnemyPawn_e_ex304 : public ATresEnemyXIIIEPawnBase, public ITresFRThinkOfYouInterface {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     FTresEx304HitEffectInfo m_HitEffectInfos[2];
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

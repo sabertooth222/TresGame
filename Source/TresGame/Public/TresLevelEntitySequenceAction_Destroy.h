@@ -8,7 +8,7 @@ UCLASS(Blueprintable, EditInlineNew)
 class TRESGAME_API UTresLevelEntitySequenceAction_Destroy : public UTresLevelEntitySequenceAction {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresLevelEntityDisappearMode> m_DisappearMode;
     
     UTresLevelEntitySequenceAction_Destroy();

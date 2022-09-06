@@ -9,7 +9,7 @@ USTRUCT(BlueprintType)
 struct FTresEnemyBigDealActionParam_e_ex356 {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresEnemyBigDealAction_e_ex356::Type> ActionType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

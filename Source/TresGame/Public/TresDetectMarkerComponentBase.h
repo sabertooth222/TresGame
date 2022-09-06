@@ -87,7 +87,7 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     TArray<UActorComponent*> m_ValidAreaBox;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     TArray<TWeakObjectPtr<AActor>> m_RaycastIgnoreTagList;
     
 public:

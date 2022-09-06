@@ -15,7 +15,7 @@ class UTresGumiShipCollisionSetCompo : public UTresGumiShipPrimitiveComponentBas
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresGumiShipCollisionPriority> m_ePriority;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

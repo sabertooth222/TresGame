@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FTresDebugMenuMotionObjectProperty {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresDebugMenuMotionObjectPropertyType> m_PropertyType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

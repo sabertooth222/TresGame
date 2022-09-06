@@ -11,7 +11,7 @@ class UTresAction1_e_ex301_Teleport : public UTresActionDefinitionBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<TeleportTypes_e_ex301> m_PramTeleportType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

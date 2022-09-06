@@ -8,7 +8,7 @@ UCLASS(Blueprintable, HideDropdown)
 class UTresAIAction_EventActorSpecificAction : public UTresActionDefinitionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresActorSpecificActionID> m_SpecificActionID;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

@@ -12,7 +12,7 @@ class ATresEnemyPawn_e_ex038 : public ATresEnemyPawnBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     ATresProjectileBase* m_pAeroCutter[3];
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct TRESGAME_API FTresLookAtSubBoneParam {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     FBoneReference m_Bone;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

@@ -9,7 +9,7 @@ UCLASS(Blueprintable)
 class UTresBTTask_BlackboardArithmeticModifier : public UTresBTTask_BlackboardValueModifierBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresArithmeticModifierSource::Type> ValueTypeB;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

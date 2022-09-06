@@ -8,7 +8,7 @@ UCLASS(Blueprintable)
 class UTresPhysMatEffectAsset : public UTresLoadAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     FTresPhysMatEffectAssetUnit m_Effects[63];
     
     UTresPhysMatEffectAsset();

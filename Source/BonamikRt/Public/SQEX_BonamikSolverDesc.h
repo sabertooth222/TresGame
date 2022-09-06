@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FSQEX_BonamikSolverDesc {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     uint32 m_GroupID;
     
     UPROPERTY(VisibleAnywhere)
@@ -22,25 +22,25 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool m_IsEnableDraw;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     uint32 m_ColIter;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     uint32 m_ConsIter;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     uint32 m_ConeIter;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     uint32 m_LinkIter;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     uint32 m_SolverIter;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     uint32 m_TagId;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     uint32 m_CollisionTagId;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)

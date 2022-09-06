@@ -9,7 +9,7 @@ class UTresAttack2_e_ex011_WheeliePress : public UTresAttack_e_ex011_Base {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     FTresMotion_e_ex011_WheeliePress m_AnimDataList[3];
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

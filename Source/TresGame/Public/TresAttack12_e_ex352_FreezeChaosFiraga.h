@@ -34,7 +34,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_DarkBiteStartBiteTime;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     UParticleSystem* m_DarkBiteEffect[2];
     
 protected:

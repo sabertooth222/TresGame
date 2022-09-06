@@ -10,7 +10,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_Time;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ESQEX_ShadowQuality> m_Quality;
     
     TRESGAME_API FTresInterpTrackShadowQualityControlKey();

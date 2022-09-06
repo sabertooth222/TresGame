@@ -10,7 +10,7 @@ USTRUCT(BlueprintType)
 struct FSQEX_BonamikBodyDesc {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     uint32 m_Index;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
@@ -28,10 +28,10 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 m_ChildId;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     uint32 m_GroupID;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     int32 m_ColId[8];
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
@@ -91,7 +91,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FQuat m_LocalRotation;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     uint32 m_CollisionBatchNo;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)

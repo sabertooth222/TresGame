@@ -9,7 +9,7 @@ UCLASS(Abstract, Blueprintable)
 class UTresAICharState_AttackBase : public UTresStateBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TWeakObjectPtr<ATresCharPawnBase> m_AttackTarget;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

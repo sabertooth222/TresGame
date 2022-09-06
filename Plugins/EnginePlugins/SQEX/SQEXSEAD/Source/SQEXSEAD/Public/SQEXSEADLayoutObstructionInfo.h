@@ -10,13 +10,13 @@ USTRUCT(BlueprintType)
 struct FSQEXSEADLayoutObstructionInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ESQEXSEADLayoutObstructionType::Type> ObstructionType;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TArray<FVector> ObstructionPointLocations;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TArray<AStaticMeshActor*> LinkedMeshActorList;
     
     SQEXSEAD_API FSQEXSEADLayoutObstructionInfo();

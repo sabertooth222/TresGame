@@ -9,7 +9,7 @@ class ATresAIPoint_e_ca901_WarpDestination : public ATresAIPoint {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresEnemyca901WarpKind> m_WarpKind;
     
 public:

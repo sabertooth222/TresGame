@@ -8,7 +8,7 @@ UCLASS()
 class BONAMIKRT_API ASQEX_WorldSettings : public AWorldSettings {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     FSQEX_BonamikPresetWindSettings m_BonamikPresetWindSettings[10];
     
     ASQEX_WorldSettings();

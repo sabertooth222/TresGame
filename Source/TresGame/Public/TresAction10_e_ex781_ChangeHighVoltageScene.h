@@ -8,7 +8,7 @@ UCLASS(Blueprintable)
 class UTresAction10_e_ex781_ChangeHighVoltageScene : public UTresActionDefinitionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<HVSceneTypes_e_ex781> m_ChangeSceneType;
     
     UTresAction10_e_ex781_ChangeHighVoltageScene();

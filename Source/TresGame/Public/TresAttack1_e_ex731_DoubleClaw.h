@@ -8,7 +8,7 @@ UCLASS(Blueprintable, HideDropdown)
 class UTresAttack1_e_ex731_DoubleClaw : public UTresAttackDefinitionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<e_ex731_DoubleClawType> m_ActionType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

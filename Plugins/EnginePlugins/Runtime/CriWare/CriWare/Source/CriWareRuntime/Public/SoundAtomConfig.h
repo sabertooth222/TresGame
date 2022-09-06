@@ -7,7 +7,7 @@ UCLASS()
 class CRIWARERUNTIME_API USoundAtomConfig : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     FString AcfFilePath;
     
     USoundAtomConfig();

@@ -7,7 +7,7 @@ UCLASS(CollapseCategories)
 class SQEXSEAD_API USQEXSEADInterpTrackSound : public UInterpTrackSound {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     uint8 bTreatAsNonWorldSound: 1;
     
     USQEXSEADInterpTrackSound();

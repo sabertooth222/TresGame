@@ -10,7 +10,7 @@ UCLASS(Blueprintable, HideDropdown)
 class UTresAttack19_e_ex771_HvnFlareShot : public UTresAttackDefinitionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     TArray<TWeakObjectPtr<ATresProjectileBase>> m_FlareShotArray;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))

@@ -10,13 +10,13 @@ UCLASS()
 class SQEXSEAD_API USQEXSEADAutoSeComponentAssetTable : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     FSQEXSEADAutoSeComponentAssetTablePerSurface PerSurfaceInfos[63];
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     FSQEXSEADAutoSeComponentAssetTableNonSurface NonSurfaceInfos;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     FSQEXSEADSurfaceAssetReferenceTableData AuxSurfaceAssetTable;
     
     USQEXSEADAutoSeComponentAssetTable();

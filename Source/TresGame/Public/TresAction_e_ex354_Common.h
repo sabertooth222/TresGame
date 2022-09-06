@@ -8,7 +8,7 @@ UCLASS(Blueprintable, HideDropdown)
 class UTresAction_e_ex354_Common : public UTresActionDefinitionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<EEX354_CommonAction> m_Action;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

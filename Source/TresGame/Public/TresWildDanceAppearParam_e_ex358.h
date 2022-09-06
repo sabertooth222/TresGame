@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FTresWildDanceAppearParam_e_ex358 {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresEnemyWildDanceAppearLocation_e_ex358::Type> LocationType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -23,7 +23,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bCalcAppearLocationDelayAfter: 1;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresEnemyChangeManualLockonPriority_e_ex358::Type> ChangeManualLockonPriority;
     
     TRESGAME_API FTresWildDanceAppearParam_e_ex358();

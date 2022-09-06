@@ -9,7 +9,7 @@ UCLASS(Blueprintable)
 class UTresBTDecorator_SetBlackboardFloat : public UBTDecorator {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresValueModifierMethod::Type> m_ValueModifierType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

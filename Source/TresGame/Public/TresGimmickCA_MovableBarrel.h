@@ -35,7 +35,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresBodyPushPowerLevel m_PushPower;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     FFloatInterval m_TickEnableRange;
     
 public:

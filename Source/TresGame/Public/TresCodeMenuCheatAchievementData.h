@@ -27,7 +27,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresUIGameFlagData GameFlag;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresWorldCode> WorldCode;
     
     TRESGAME_API FTresCodeMenuCheatAchievementData();

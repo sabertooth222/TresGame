@@ -8,7 +8,7 @@ UCLASS(Blueprintable, HideDropdown)
 class UTresAction8_e_ex054_ArmorBreak : public UTresActionDefinitionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresEnemy_e_ex054_BattleStyle> m_pro_BattleStyle;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

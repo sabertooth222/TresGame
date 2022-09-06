@@ -28,7 +28,7 @@ public:
     UPROPERTY(EditDefaultsOnly)
     EMercunaPointDistribution Distribution;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TSubclassOf<UEnvQueryContext> center;
     
     UEnvQueryGenerator_Mercuna_Sphere();

@@ -67,7 +67,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName SmartphoneUnblockTag;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<EDepthOfFieldMethod> DOFMethod;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -146,7 +146,7 @@ private:
     UPROPERTY(EditAnywhere, Export)
     TWeakObjectPtr<UTresDetectMarkerComponentBase> m_pTargetMarker;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     TArray<TWeakObjectPtr<AActor>> m_IgnoreActors;
     
     UPROPERTY(EditAnywhere, Export)

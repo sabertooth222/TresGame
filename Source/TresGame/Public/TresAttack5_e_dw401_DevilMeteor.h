@@ -13,7 +13,7 @@ UCLASS(Blueprintable, HideDropdown)
 class UTresAttack5_e_dw401_DevilMeteor : public UTresAttackDefinitionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     TArray<TWeakObjectPtr<ATresProjectileBase>> m_MeteorArray;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

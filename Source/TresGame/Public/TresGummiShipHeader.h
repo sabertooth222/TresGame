@@ -16,10 +16,10 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresItemDefGumiShipBP m_ItemID;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     uint16 m_nTotalBaseGummiNum;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     uint16 m_nTotalDecoGummiNum;
     
     TRESGAME_API FTresGummiShipHeader();

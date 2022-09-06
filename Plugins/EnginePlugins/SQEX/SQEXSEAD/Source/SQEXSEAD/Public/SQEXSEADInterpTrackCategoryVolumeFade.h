@@ -7,13 +7,13 @@ UCLASS(CollapseCategories)
 class SQEXSEAD_API USQEXSEADInterpTrackCategoryVolumeFade : public UInterpTrackFloatBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     FName CategoryName;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TArray<FName> ExtendCategoryNames;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     float OnMatineeEndSetCategoryVolume;
     
     USQEXSEADInterpTrackCategoryVolumeFade();

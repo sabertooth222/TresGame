@@ -8,7 +8,7 @@ UCLASS(Blueprintable, CollapseCategories)
 class TRESGAME_API UTresInterpTrackEvent : public UInterpTrackEvent {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresFadeTrack_TheaterMode> m_TheaterMode;
     
     UTresInterpTrackEvent();

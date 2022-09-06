@@ -8,7 +8,7 @@ UCLASS(Blueprintable)
 class UTresNpcBTTask_SetActionOn : public UBTTaskNode {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresNpcActionOnType> m_ActionOnType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

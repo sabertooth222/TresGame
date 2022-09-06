@@ -11,7 +11,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresItemDefGumiShipBP m_GummiShipPlan;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     ETresItemDefGumiShipBP m_TinyShipPlan[2];
     
     TRESGAME_API FTresGummiPlanSetData();

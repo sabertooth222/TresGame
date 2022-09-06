@@ -8,16 +8,16 @@ USTRUCT(BlueprintType)
 struct FTresRemyUnlockDishLevelDataTable : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     int16 EarnUnlockDishLevelPointsWhenSuccess;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     int16 EarnUnlockDishLevelPointsWhenGreatSuccess;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     int16 EarnUnlockDishLevelPointsWhenFail;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TMap<RemyDishLevel, int16> UnlockDishLevelPoints;
     
     TRESGAME_API FTresRemyUnlockDishLevelDataTable();

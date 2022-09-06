@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FTresShortcutCommandPageData {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresCommandKind> Commands[4];
     
     TRESGAME_API FTresShortcutCommandPageData();

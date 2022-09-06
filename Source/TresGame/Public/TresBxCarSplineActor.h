@@ -9,7 +9,7 @@ UCLASS(Blueprintable)
 class ATresBxCarSplineActor : public ASQEX_SplineActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<EGimmickBX_CarSplineBlinker> m_eBlinkerType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

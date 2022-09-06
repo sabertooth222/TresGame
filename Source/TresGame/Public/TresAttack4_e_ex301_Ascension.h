@@ -14,7 +14,7 @@ class UTresAttack4_e_ex301_Ascension : public UTresAttackDefinitionBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<TresAttack4AscensionTypes_e_ex301> m_AscensionTypeParam;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

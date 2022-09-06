@@ -9,7 +9,7 @@ UCLASS(Blueprintable, HideDropdown)
 class UTresAction4_e_bx901_QuickMove : public UTresActionDefinitionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<EBX901_QuickMoveDir> m_Direction;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

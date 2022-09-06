@@ -9,7 +9,7 @@ UCLASS(Blueprintable, HideDropdown)
 class UTresAction3_e_ex043_PhaseSwitch : public UTresActionDefinitionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresEnemy_e_ex043_PhaseNum> m_PhaseNum;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

@@ -7,10 +7,10 @@ UCLASS(MinimalAPI)
 class UAtomSoundObject : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     bool EnableVoiceLimitScope;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     bool EnableCategoryCueLimitScope;
     
     UAtomSoundObject();

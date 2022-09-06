@@ -9,7 +9,7 @@ USTRUCT(BlueprintType)
 struct TRESGAME_API FTresLevelEntityAppearInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresLevelEntityAppearMode> m_AppearMode;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

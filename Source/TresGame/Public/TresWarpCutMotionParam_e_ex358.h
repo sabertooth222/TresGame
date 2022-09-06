@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FTresWarpCutMotionParam_e_ex358 {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresEnemyWarpCutMotionType_e_ex357> MotionType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

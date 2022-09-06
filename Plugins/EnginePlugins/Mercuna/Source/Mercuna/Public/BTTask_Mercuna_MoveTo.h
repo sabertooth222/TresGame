@@ -7,10 +7,10 @@ UCLASS()
 class MERCUNA_API UBTTask_Mercuna_MoveTo : public UBTTask_BlackboardBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     float Speed;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     float EndDistance;
     
     UPROPERTY()

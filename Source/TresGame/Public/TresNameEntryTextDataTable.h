@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FTresNameEntryTextDataTable : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     FTresNameEntryTextData TextList[9];
     
     TRESGAME_API FTresNameEntryTextDataTable();

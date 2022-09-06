@@ -11,7 +11,7 @@ USTRUCT(BlueprintType)
 struct TRESGAME_API FTresAnimNode_LookAt : public FAnimNode_SkeletalControlBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     FBoneReference BoneToModify;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

@@ -9,7 +9,7 @@ class UTresAttack2_e_ex081_RotationGliding : public UTresAttackDefinitionBase {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresAttack2_e_ex081_RotationGliding_HitWallReactionType> m_HitWallReactionType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

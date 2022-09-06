@@ -8,13 +8,13 @@ USTRUCT(BlueprintType)
 struct BONAMIKRT_API FSQEX_BonamikPresetWindSettings {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     FName m_PresetName;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     USQEX_BonamikWindDesc* m_WindDesc;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TArray<FString> m_TargetGroups;
     
     FSQEX_BonamikPresetWindSettings();

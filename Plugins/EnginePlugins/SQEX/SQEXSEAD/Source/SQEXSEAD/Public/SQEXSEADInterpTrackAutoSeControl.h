@@ -11,7 +11,7 @@ public:
     UPROPERTY(EditAnywhere, EditFixedSize)
     TArray<FSQEXSEADAutoSeControlTrackKey> Keys;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     FName OverrideGroupName;
     
     USQEXSEADInterpTrackAutoSeControl();

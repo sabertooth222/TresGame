@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FTresEnemyDarkSidePawnBase_LockOnParam {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresEnemydw407Region> Region;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

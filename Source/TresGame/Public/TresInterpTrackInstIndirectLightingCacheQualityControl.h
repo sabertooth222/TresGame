@@ -13,7 +13,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     TArray<UPrimitiveComponent*> m_Components;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TArray<TEnumAsByte<EIndirectLightingCacheQuality>> m_OriginalValues;
     
     UTresInterpTrackInstIndirectLightingCacheQualityControl();

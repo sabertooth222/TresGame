@@ -13,7 +13,7 @@ class ATresAIController : public AAIController, public ITresControllerInterface 
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresCharInputType> m_CharInputType;
     
 public:

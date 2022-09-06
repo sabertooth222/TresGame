@@ -9,7 +9,7 @@ UCLASS(Blueprintable)
 class ATresProjectileGenerator_e_ex361_DarkMine : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TArray<TWeakObjectPtr<ATresProjectileBase>> m_DarkMineArray;
     
     ATresProjectileGenerator_e_ex361_DarkMine();

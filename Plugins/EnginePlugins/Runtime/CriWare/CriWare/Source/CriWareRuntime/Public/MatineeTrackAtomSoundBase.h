@@ -7,7 +7,7 @@ UCLASS(Abstract, CollapseCategories, MinimalAPI)
 class UMatineeTrackAtomSoundBase : public UMatineeTrackAtomBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     bool bContinueSoundOnMatineeEnd;
     
     UMatineeTrackAtomSoundBase();

@@ -13,10 +13,10 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FString m_ChildBodyName;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     uint32 m_ParentId;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     uint32 m_ChildId;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
@@ -82,13 +82,13 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float m_LRAdamping;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     uint32 m_LinkBatchNo;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     uint32 m_ConeBatchNo;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     uint32 m_CollisionBatchNo;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)

@@ -81,31 +81,31 @@ private:
     UPROPERTY(EditAnywhere, Transient)
     UTresASProxyTresControlsBitmapNumber* m_pGFxGoalArrow[2];
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     UGFxObject* m_pGFxActionCmdList[4];
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     UGFxObject* m_pGFxActionCmdData[4];
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     UGFxObject* m_pGFxActionCmdAct[4];
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     UGFxObject* m_pGFxActionCmdText[4];
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     UGFxObject* m_pGFxActionCmdCount[4];
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     UGFxObject* m_pGFxActionCmdGgAnm[4];
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     UGFxObject* m_pGFxActionCmdTime[4];
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     UGFxObject* m_pGFxActionCmdTime2[4];
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     UGFxObject* m_pGFxCmdActLogoGg[3];
     
     UPROPERTY(EditAnywhere, Transient)

@@ -11,7 +11,7 @@ UCLASS(Blueprintable, HideDropdown)
 class UTresAttack10_e_ex360_CloneBurstSlash : public UTresAttackDefinitionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<CloneBurstSlashTypes_e_ex360> m_SlashType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

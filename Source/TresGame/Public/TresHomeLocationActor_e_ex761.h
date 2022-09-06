@@ -9,7 +9,7 @@ class ATresHomeLocationActor_e_ex761 : public AActor {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresEnemyEx761_Location::Type> m_LocationType;
     
 public:

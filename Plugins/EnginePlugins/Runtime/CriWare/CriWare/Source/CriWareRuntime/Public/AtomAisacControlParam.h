@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FAtomAisacControlParam {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     FString Name;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     float Value;
     
     CRIWARERUNTIME_API FAtomAisacControlParam();

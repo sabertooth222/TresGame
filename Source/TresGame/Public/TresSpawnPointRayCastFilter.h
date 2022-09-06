@@ -15,13 +15,13 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector m_Position;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TArray<TWeakObjectPtr<AActor>> m_IgnoredActors;
     
     UPROPERTY(EditAnywhere, Export)
     TArray<TWeakObjectPtr<UPrimitiveComponent>> m_IgnoredComponents;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ECollisionChannel> m_CollisionChannel;
     
     UTresSpawnPointRayCastFilter();

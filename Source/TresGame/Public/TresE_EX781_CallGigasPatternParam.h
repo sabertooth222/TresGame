@@ -9,7 +9,7 @@ USTRUCT(BlueprintType)
 struct FTresE_EX781_CallGigasPatternParam {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ColorTypes_e_ex781Gigas> m_GigasType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

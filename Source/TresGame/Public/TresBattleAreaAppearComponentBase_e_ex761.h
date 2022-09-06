@@ -9,7 +9,7 @@ class UTresBattleAreaAppearComponentBase_e_ex761 : public USceneComponent {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresEnemy_e_ex761_Weapon::Type> m_WeaponType;
     
 public:

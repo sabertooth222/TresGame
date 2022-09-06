@@ -9,7 +9,7 @@ UCLASS(Blueprintable, CollapseCategories)
 class TRESGAME_API UTresInterpTrackSubtitle : public UInterpTrack {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresSubtitleTrack_OptionVoice> m_OptionVoice;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

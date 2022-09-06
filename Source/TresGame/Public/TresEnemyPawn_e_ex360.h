@@ -46,7 +46,7 @@ public:
     float m_KeyBladeRideMinHigh;
     
 private:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     ATresEnemyPawn_e_ex360* m_pAvaterPawn[10];
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

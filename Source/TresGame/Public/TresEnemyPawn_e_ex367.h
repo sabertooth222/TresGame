@@ -58,7 +58,7 @@ public:
     TSubclassOf<ATresEnemyPawn_e_ex367_Ascension> m_AscensionObjectData;
     
 private:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     ATresEnemyPawn_e_ex367* m_pAvaterPawn[13];
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

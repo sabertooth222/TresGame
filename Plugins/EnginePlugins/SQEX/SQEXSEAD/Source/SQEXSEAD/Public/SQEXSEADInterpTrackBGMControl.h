@@ -13,7 +13,7 @@ public:
     UPROPERTY(EditAnywhere, EditFixedSize)
     TArray<FSQEXSEADBGMControlTrackKey> Keys;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     USoundBase* BGMAssetPtr;
     
     USQEXSEADInterpTrackBGMControl();

@@ -17,7 +17,7 @@ class ATresDisneyMagicActorRalphBlock : public AActor, public ITresNotifyInterfa
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresRalphBlockKind> m_BlockKind;
     
 public:

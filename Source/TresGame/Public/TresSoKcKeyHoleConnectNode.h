@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FTresSoKcKeyHoleConnectNode {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TWeakObjectPtr<ATresSoKcKeyHoleGimmickActor> ConnectableKeyHole;
     
     TRESGAME_API FTresSoKcKeyHoleConnectNode();

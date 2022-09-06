@@ -27,7 +27,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_Angle;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<EArithmeticKeyOperation::Type> m_ArithmeticOperation;
     
     UTresNpcBTDecorator_NpcAngleCheck();

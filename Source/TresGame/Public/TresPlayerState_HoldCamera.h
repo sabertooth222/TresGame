@@ -26,7 +26,7 @@ private:
     UPROPERTY(EditAnywhere, Export)
     TArray<TWeakObjectPtr<UTresPhotoMissionComponent>> m_pTargetPhotoMissionMarkerList;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TWeakObjectPtr<ATresGimmickRA_PuddingManager> m_pPudManager;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

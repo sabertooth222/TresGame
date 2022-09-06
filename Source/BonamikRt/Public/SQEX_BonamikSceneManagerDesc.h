@@ -16,16 +16,16 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool m_IsUseGPU;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     uint32 m_SubStep;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float m_Dt;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     uint32 m_TotalGroup;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     FString m_GroupName[48];
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
@@ -55,28 +55,28 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FVector m_ForceRange;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     uint32 m_TotalLinkBatches;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     uint32 m_TotalLinksInBatch[15];
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     uint32 m_TotalConeBatches;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     uint32 m_TotalConesInBatch[15];
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     uint32 m_TotalCollisionBatches;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     uint32 m_TotalCollisionsInBatch[15];
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     uint32 m_TotalSelfCollisionBatches;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     uint32 m_TotalSelfCollisionsInBatch[15];
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
@@ -88,7 +88,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool m_EnableGroundCollision;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     uint32 m_RefUpVec;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)

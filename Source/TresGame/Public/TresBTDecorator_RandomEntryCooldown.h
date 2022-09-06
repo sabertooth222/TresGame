@@ -9,7 +9,7 @@ UCLASS(Blueprintable)
 class UTresBTDecorator_RandomEntryCooldown : public UBTDecorator {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresRandomEntryCooldownProbabilitySource::Type> m_ValueType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

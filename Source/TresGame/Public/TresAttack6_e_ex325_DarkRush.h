@@ -12,7 +12,7 @@ class UTresAttack6_e_ex325_DarkRush : public UTresAttackDefinitionBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<DarkRushTypes_e_ex325> m_DarkRushType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

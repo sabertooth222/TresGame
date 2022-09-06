@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FTresEx050SpawnInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TWeakObjectPtr<AActor> wpSpawn;
     
     TRESGAME_API FTresEx050SpawnInfo();

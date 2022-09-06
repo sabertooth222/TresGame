@@ -13,7 +13,7 @@ class UTresAttack3_e_ex325_DarkVolley : public UTresAttackDefinitionBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<DarkVolleyNumTypes_e_ex325> m_DarkVolleyNumType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

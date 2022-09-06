@@ -6,7 +6,7 @@ USTRUCT(BlueprintType)
 struct FTresNameEntryTextData {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     FString Text[100];
     
     TRESGAME_API FTresNameEntryTextData();

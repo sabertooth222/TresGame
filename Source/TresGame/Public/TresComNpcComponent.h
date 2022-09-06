@@ -10,7 +10,7 @@ class UTresComNpcComponent : public UActorComponent {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     TArray<TWeakObjectPtr<ATresNpcPawn_c_npc>> m_pComNpcPawn;
     
 public:

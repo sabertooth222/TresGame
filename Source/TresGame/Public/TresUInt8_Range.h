@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FTresUInt8_Range {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     uint8 m_uMinValue;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     uint8 m_uMaxValue;
     
     TRESGAME_API FTresUInt8_Range();

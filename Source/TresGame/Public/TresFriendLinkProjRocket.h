@@ -17,7 +17,7 @@ public:
     UParticleSystem* m_FadeOutEffData;
     
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TWeakObjectPtr<AActor> m_pTargetPawn;
     
 public:

@@ -10,13 +10,13 @@ UCLASS(CollapseCategories, MinimalAPI)
 class UMatineeTrackAtomCueName : public UMatineeTrackAtomSoundBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TArray<FString> AisacList;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TArray<FString> SelectorList;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     USoundAtomCueSheet* CueSheet;
     
     UPROPERTY(EditAnywhere, EditFixedSize)

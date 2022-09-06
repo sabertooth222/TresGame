@@ -8,7 +8,7 @@ UCLASS()
 class BONAMIKRT_API USQEX_BonamikWindCollectionAsset : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TArray<FSQEX_BonamikPresetWindSettings> m_BonamikPresetWindSettings;
     
     USQEX_BonamikWindCollectionAsset();

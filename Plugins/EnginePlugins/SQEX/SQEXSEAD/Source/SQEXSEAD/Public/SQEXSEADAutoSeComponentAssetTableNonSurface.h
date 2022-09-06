@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct SQEXSEAD_API FSQEXSEADAutoSeComponentAssetTableNonSurface {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     FStringAssetReference SoundAssetPaths[10];
     
     FSQEXSEADAutoSeComponentAssetTableNonSurface();

@@ -9,7 +9,7 @@ UCLASS(Blueprintable)
 class TRESGAME_API UTresDecoPartsSet : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresDecoPartsAttachPartIdx> m_AttachPartIndex;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

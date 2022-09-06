@@ -7,7 +7,7 @@ UCLASS()
 class SQEXSEAD_API USQEXSEADSurfaceNameTable : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     FName Names[63];
     
     USQEXSEADSurfaceNameTable();

@@ -19,10 +19,10 @@ public:
     float GameEndWaitTime;
     
 private:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TArray<TWeakObjectPtr<ATresGimmickRA_Pudding_ControlActor>> m_ControlActorList;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TWeakObjectPtr<ATresGimmickRA_Pudding_ControlActor> m_pShotRaPuddingControlActor;
     
 public:

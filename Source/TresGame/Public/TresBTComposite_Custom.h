@@ -8,7 +8,7 @@ UCLASS(Blueprintable)
 class UTresBTComposite_Custom : public UBTCompositeNode {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresCustomCompositeReturnCondition::Type> ReturnCondition;
     
     UTresBTComposite_Custom();
