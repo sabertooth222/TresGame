@@ -176,7 +176,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresAdhereObjBase> m_BadStatHoneyClass;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     TSubclassOf<UTresDamageType> m_PhysDamageTypeClass[4];
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

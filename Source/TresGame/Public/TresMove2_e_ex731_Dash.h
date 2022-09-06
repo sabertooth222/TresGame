@@ -21,7 +21,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fBodyReactionResetTime;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     FEX731_DashEffectInfo m_DashEffectInfoArray[2];
     
     UTresMove2_e_ex731_Dash();

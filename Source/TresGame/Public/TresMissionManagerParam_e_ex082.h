@@ -8,7 +8,7 @@ UCLASS(Abstract, Blueprintable, EditInlineNew)
 class UTresMissionManagerParam_e_ex082 : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     float ModeChangeTimeList[3];
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

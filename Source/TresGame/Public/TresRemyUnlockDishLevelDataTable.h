@@ -17,7 +17,7 @@ public:
     UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     int16 EarnUnlockDishLevelPointsWhenFail;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     TMap<RemyDishLevel, int16> UnlockDishLevelPoints;
     
     TRESGAME_API FTresRemyUnlockDishLevelDataTable();

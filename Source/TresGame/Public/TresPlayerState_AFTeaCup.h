@@ -12,7 +12,7 @@ UCLASS(Blueprintable)
 class UTresPlayerState_AFTeaCup : public UTresCharState_AFTeaCup {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     ATresAttractionPawnTeaCup* m_pCup[3];
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

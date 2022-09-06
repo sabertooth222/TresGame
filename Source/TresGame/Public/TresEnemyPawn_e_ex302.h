@@ -9,7 +9,7 @@ UCLASS(Blueprintable)
 class ATresEnemyPawn_e_ex302 : public ATresEnemyXIIIEPawnBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     FTresEnemyEx302AfterImageEffect m_AfterImageEffects[4];
     
 private:
