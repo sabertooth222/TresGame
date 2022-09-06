@@ -10,7 +10,7 @@ UCLASS(Blueprintable, Config=Game)
 class ATresTriggerVolumeFriendNpc : public ATriggerVolume {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresNotifyFriendNpc::Type> m_NotifyType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

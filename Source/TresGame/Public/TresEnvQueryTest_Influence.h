@@ -8,7 +8,7 @@ UCLASS(Blueprintable)
 class UTresEnvQueryTest_Influence : public UEnvQueryTest {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresInfluenceMapLayer::Type> Layer;
     
     UTresEnvQueryTest_Influence();

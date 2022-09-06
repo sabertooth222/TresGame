@@ -9,7 +9,7 @@ UCLASS(Blueprintable)
 class TRESGAME_API UTresStaticSESet : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     USoundBase* m_Assets[43];
     
     UTresStaticSESet();

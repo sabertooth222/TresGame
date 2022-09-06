@@ -12,7 +12,7 @@ class UTresAttack1_e_ex367_MoveSlashCurve : public UTresAttackDefinitionBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<MoveSlashTypes_e_ex367> m_PramMoveSlashType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

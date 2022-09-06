@@ -8,7 +8,7 @@ UCLASS(Blueprintable, EditInlineNew)
 class UWildDanceStepActionParam_e_ex358 : public UWildDanceActionParamBase_e_ex358 {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresEnemyStepDirectionType_e_ex358> StepDirectionType;
     
     UWildDanceStepActionParam_e_ex358();

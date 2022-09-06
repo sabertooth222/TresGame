@@ -100,7 +100,7 @@ public:
     float m_FieldDist;
     
 private:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TWeakObjectPtr<AActor> m_MyTarget;
     
 public:

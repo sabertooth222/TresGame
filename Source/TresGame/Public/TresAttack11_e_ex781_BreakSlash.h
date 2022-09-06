@@ -14,7 +14,7 @@ UCLASS(Blueprintable)
 class UTresAttack11_e_ex781_BreakSlash : public UTresAttackDefinitionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<BreakSlashNumTypes_e_ex781> m_Type;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

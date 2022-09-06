@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FTresAvatarAttackAppearParam_e_ex358 {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresEnemyAvatarAttackAppearLocation_e_ex358::Type> LocationType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

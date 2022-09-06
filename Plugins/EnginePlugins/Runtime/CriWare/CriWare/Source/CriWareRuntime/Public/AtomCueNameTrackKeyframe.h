@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FAtomCueNameTrackKeyframe {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     float Time;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     FString CueName;
     
     CRIWARERUNTIME_API FAtomCueNameTrackKeyframe();

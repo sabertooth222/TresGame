@@ -163,7 +163,7 @@ public:
     int32 VFXGroupID_FairLoop;
     
 private:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TWeakObjectPtr<ATresGimmickRA_Pudding_ControlActor> m_pControlActor;
     
 public:

@@ -16,7 +16,7 @@ class UTresAction2_e_ex357_GenerateField : public UTresAction_e_ex357_Base {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresEnemyFieldSize_e_ex357::Type> m_FieldSizeType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

@@ -15,7 +15,7 @@ private:
     UNavModifierComponent* MyNavModifierComponent;
     
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresEnemyToyKind> m_ToyKind;
     
 public:

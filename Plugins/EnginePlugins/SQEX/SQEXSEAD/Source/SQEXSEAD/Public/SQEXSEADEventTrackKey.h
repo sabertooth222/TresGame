@@ -9,7 +9,7 @@ public:
     UPROPERTY()
     float Time;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     FName EventName;
     
     SQEXSEAD_API FSQEXSEADEventTrackKey();

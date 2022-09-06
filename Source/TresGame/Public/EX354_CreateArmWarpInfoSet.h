@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FEX354_CreateArmWarpInfoSet {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     FEX354_CreateArmWarpInfo m_ArmWarpInfoArray[2];
     
     TRESGAME_API FEX354_CreateArmWarpInfoSet();

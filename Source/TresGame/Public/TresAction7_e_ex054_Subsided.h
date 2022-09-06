@@ -8,7 +8,7 @@ UCLASS(Blueprintable, HideDropdown)
 class UTresAction7_e_ex054_Subsided : public UTresActionDefinitionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresEnemy_e_ex054_BattleStyle> m_pro_BattleStyle;
     
     UTresAction7_e_ex054_Subsided();

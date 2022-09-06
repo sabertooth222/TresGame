@@ -10,7 +10,7 @@ UCLASS(Blueprintable)
 class ATresEnemyPawn_e_ex047 : public ATresEnemyPawnBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETrese_ex047WorldTypes> m_WorldType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

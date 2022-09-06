@@ -22,7 +22,7 @@ public:
     TSubclassOf<ATresWaterCurrentSplineActor> m_WaterSplineClass;
     
 private:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TArray<TWeakObjectPtr<ATresWaterCurrentSplineActor>> m_WaterSplineList;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

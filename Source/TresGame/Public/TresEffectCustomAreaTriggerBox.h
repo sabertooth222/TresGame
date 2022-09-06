@@ -8,7 +8,7 @@ UCLASS(Blueprintable)
 class ATresEffectCustomAreaTriggerBox : public ATresTriggerBox {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresEffectCustomAreaCode> m_CostomEffectAreaCode;
     
     ATresEffectCustomAreaTriggerBox();

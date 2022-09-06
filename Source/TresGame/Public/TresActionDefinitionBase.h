@@ -12,7 +12,7 @@ UCLASS(Abstract, Blueprintable, NotPlaceable)
 class UTresActionDefinitionBase : public UTresStateBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TWeakObjectPtr<AActor> m_Target;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -22,7 +22,7 @@ public:
     TWeakObjectPtr<USceneComponent> m_LockonTarget;
     
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TArray<TEnumAsByte<ETresStateID>> m_ViableStates;
     
 private:

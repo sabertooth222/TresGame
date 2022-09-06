@@ -10,7 +10,7 @@ UCLASS(Blueprintable, HideDropdown)
 class UTresAttack5_e_ex367_XIIIAttack : public UTresAttackDefinitionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<TresAttack5XIIIAttackTypes_e_ex367> m_ActionType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

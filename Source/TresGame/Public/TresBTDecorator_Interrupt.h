@@ -10,10 +10,10 @@ UCLASS(Blueprintable)
 class UTresBTDecorator_Interrupt : public UBTDecorator {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<EInterruptableEvent::Type> EventType;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<EInterruptAbortBehavior::Type> CustomAbortBehavior;
     
     UTresBTDecorator_Interrupt();

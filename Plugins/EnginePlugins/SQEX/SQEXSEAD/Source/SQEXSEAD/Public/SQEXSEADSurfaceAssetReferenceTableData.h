@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct SQEXSEAD_API FSQEXSEADSurfaceAssetReferenceTableData {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TArray<FSQEXSEADSurfaceAssetReferenceRecord> Records;
     
     FSQEXSEADSurfaceAssetReferenceTableData();

@@ -8,7 +8,7 @@ UCLASS(Blueprintable)
 class UTresEnemyShipBTDecorator_IsAliveShipCore : public UBTDecorator {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresEnemyShip::Type> m_LocType;
     
     UTresEnemyShipBTDecorator_IsAliveShipCore();

@@ -26,7 +26,7 @@ public:
     TSubclassOf<UTresActionDefinitionBase> m_LastAction;
     
 private:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     ATresEnemyPawn_e_ex781* m_pAvaterPawn[13];
     
 public:

@@ -10,7 +10,7 @@ USTRUCT(BlueprintType)
 struct FTresDebugMenuCustomPart {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresDebugMenuResourceType> m_ResourceType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

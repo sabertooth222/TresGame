@@ -8,7 +8,7 @@ UCLASS(Blueprintable)
 class UTresNpcBTDecorator_IsActionOn : public UTresNpcBTDecoratorBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresNpcActionOnType> m_ActionOnType;
     
     UTresNpcBTDecorator_IsActionOn();

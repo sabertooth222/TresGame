@@ -8,7 +8,7 @@ UCLASS()
 class BONAMIKRT_API ASQEX_BonamikCustomWind_Actor : public ASQEX_BonamikWind_Actor {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     FCustomWindSettings m_WindSetting;
     
     ASQEX_BonamikCustomWind_Actor();

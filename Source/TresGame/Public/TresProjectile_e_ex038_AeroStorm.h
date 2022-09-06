@@ -9,7 +9,7 @@ UCLASS(Abstract, Blueprintable)
 class ATresProjectile_e_ex038_AeroStorm : public ATresProjectileBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     ATresProjectileBase* m_pAeroCutter[3];
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

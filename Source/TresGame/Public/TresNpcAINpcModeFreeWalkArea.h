@@ -9,7 +9,7 @@ UCLASS(Blueprintable)
 class TRESGAME_API ATresNpcAINpcModeFreeWalkArea : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TArray<TWeakObjectPtr<ATresNpcAINpcModeFreeWalkWayPoint>> m_FreeWalkWayPoints;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

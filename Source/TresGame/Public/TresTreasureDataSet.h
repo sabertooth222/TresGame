@@ -9,7 +9,7 @@ UCLASS(Blueprintable)
 class TRESGAME_API UTresTreasureDataSet : public UTresLoadAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     UDataTable* m_TreasureDataTables[32];
     
     UTresTreasureDataSet();

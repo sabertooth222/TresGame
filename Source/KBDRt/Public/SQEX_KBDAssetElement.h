@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct KBDRT_API FSQEX_KBDAssetElement {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     FName ElementName;
     
     UPROPERTY(EditAnywhere, Instanced)

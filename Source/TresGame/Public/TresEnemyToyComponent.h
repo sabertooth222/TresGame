@@ -11,7 +11,7 @@ public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE(FTresEnemyToyOnPossession);
     
 private:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresEnemyToyKind> m_ToyKind;
     
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

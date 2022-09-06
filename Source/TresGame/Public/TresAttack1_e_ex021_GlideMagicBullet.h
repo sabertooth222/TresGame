@@ -8,7 +8,7 @@ class UTresAttack1_e_ex021_GlideMagicBullet : public UTresAttackDefinitionWeapon
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     uint32 m_ShotNum;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

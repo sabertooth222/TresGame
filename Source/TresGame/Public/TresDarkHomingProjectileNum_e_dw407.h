@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FTresDarkHomingProjectileNum_e_dw407 {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     uint32 m_ForwardProjectileNum;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     uint32 m_BackwardProjectileNum;
     
     TRESGAME_API FTresDarkHomingProjectileNum_e_dw407();

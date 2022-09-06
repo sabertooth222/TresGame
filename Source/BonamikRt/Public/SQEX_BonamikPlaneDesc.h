@@ -6,7 +6,7 @@ USTRUCT(BlueprintType)
 struct FSQEX_BonamikPlaneDesc {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     uint32 m_GroupID;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
@@ -27,7 +27,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 m_ParticleC;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     uint32 m_Index;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
@@ -42,7 +42,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 m_CollisionBatchNo;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     int32 m_ColId[8];
     
     BONAMIKRT_API FSQEX_BonamikPlaneDesc();

@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FAtomSelectorParam {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     FString Selector;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     FString label;
     
     CRIWARERUNTIME_API FAtomSelectorParam();

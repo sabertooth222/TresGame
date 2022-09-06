@@ -15,7 +15,7 @@ UCLASS(Blueprintable, HideDropdown)
 class UTresAttack7_e_he903_BigTornado : public UTresAttackDefinitionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     FBigTornadoProjPosBoneInfo m_ProjPosBoneInfoArray[2];
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

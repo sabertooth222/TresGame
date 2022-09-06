@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FSpawnEx052Actors {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     TArray<TWeakObjectPtr<AActor>> wpActors;
     
     TRESGAME_API FSpawnEx052Actors();

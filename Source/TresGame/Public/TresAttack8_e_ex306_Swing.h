@@ -72,7 +72,7 @@ public:
     int32 m_WarpDisappearGroupID;
     
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     ATresProjectileBase* m_ProjectileArray[4];
     
 public:

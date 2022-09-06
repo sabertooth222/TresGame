@@ -10,10 +10,10 @@ UCLASS(Blueprintable, CollapseCategories, EditInlineNew, MinimalAPI)
 class UTresAnimNotifyState_Bonamik_WorldWind : public UAnimNotifyState {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ESQEX_Bonamik_WindType_Notify> m_WindType;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ESQEX_Bonamik_WindAreaType> m_AreaType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

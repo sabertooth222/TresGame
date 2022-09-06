@@ -24,10 +24,10 @@ protected:
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     FMercunaNavigationConfiguration Configuration;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     bool Pathfinding;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     bool DynamicAvoidance;
     
 public:

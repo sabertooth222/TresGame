@@ -10,7 +10,7 @@ UCLASS(Blueprintable)
 class ATresEnemyPawn_e_ex781_Gigas : public ATresEnemyPawnBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ColorTypes_e_ex781Gigas> m_ColorType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

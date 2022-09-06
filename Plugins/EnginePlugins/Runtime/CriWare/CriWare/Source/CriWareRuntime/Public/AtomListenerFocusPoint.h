@@ -7,10 +7,10 @@ UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class CRIWARERUNTIME_API UAtomListenerFocusPoint : public USceneComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     float DistanceFocusLevel;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     float DirectionFocusLevel;
     
     UAtomListenerFocusPoint();

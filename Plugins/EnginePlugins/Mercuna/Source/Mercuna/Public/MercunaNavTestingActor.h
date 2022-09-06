@@ -12,13 +12,13 @@ UCLASS()
 class MERCUNA_API AMercunaNavTestingActor : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     float Radius;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     uint8 bSearchStart: 1;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     AMercunaNavTestingActor* OtherActor;
     
     UPROPERTY(BlueprintReadOnly, Transient, VisibleAnywhere)

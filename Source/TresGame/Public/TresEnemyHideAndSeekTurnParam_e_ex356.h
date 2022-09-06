@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FTresEnemyHideAndSeekTurnParam_e_ex356 {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresEnemyHideAndSeekLocation_e_ex356::Type> TurnLocationType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

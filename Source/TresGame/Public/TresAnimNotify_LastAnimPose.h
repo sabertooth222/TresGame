@@ -9,7 +9,7 @@ class UTresAnimNotify_LastAnimPose : public UAnimNotify {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresLastAnimPose> m_LastAnimPose;
     
 public:

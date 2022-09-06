@@ -16,10 +16,10 @@ public:
     UPROPERTY()
     FString AcbFilePath;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     bool bOverrideAwbDirectory;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     FDirectoryPath AwbDirectory;
     
     UPROPERTY(VisibleAnywhere)

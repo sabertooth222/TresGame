@@ -14,14 +14,14 @@ UCLASS(Blueprintable)
 class ATresEnemy_e_bx901_ActionTriggerVolume : public ATresVolume {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<EBX901_ActionTriggerType> m_TriggerType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FEX901_ActionKey m_ActionKeyInfo;
     
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TWeakObjectPtr<ATresEnemyPawn_e_bx901> m_pDarkBaymaxPawn;
     
 public:

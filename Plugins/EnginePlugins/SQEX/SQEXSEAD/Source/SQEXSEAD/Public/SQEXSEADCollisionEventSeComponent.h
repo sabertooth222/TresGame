@@ -21,7 +21,7 @@ public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     USoundBase* OnPawnHitSoundAsset;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     float HitDistanceThreshold;
     
     UPROPERTY(BlueprintReadOnly, EditAnywhere)

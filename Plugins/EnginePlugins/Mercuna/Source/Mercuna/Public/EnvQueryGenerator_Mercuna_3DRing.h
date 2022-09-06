@@ -33,7 +33,7 @@ public:
     UPROPERTY(EditDefaultsOnly)
     FAIDataProviderIntValue NumberOfLayers;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TSubclassOf<UEnvQueryContext> center;
     
     UEnvQueryGenerator_Mercuna_3DRing();

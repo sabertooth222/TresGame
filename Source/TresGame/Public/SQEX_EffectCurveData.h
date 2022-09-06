@@ -9,7 +9,7 @@ USTRUCT(BlueprintType)
 struct FSQEX_EffectCurveData {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<FSQEX_EFFCT_CURVE_DATA_AXIS> ParamAxis;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

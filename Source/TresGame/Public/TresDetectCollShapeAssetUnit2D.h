@@ -9,7 +9,7 @@ USTRUCT(BlueprintType)
 struct FTresDetectCollShapeAssetUnit2D {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresDetectCollShape2D::Type> ShapeType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

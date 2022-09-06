@@ -87,7 +87,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fOnDamageAddBerserkGageRate_Berserk;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     FVoiceSet_e_ex306 m_VoiceGroupSetArray[6];
     
 protected:
@@ -97,7 +97,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTresClaymoreManager_e_ex306* m_ClaymoreManager;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TWeakObjectPtr<ATresCharPawnBase> m_XionPawn;
     
 public:

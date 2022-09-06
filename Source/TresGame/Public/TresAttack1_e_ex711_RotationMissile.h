@@ -9,7 +9,7 @@ UCLASS(Blueprintable, HideDropdown)
 class UTresAttack1_e_ex711_RotationMissile : public UTresAttackDefinitionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     TArray<TWeakObjectPtr<ATresProjectileBase>> m_MissileArray;
     
 protected:

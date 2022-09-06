@@ -9,7 +9,7 @@ class ATresGimmickCA_MovableFishFoodBase : public ATresGimmickCA_MovableFishBase
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     FFloatInterval m_ReactorActiveRange;
     
 public:

@@ -9,7 +9,7 @@ UCLASS(Blueprintable)
 class TRESGAME_API UTresFoodstuffDropDataSet : public UTresLoadAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     UDataTable* m_FoodstuffDropDataTables[32];
     
     UTresFoodstuffDropDataSet();

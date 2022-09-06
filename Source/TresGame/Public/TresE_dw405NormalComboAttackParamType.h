@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FTresE_dw405NormalComboAttackParamType {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     FTresE_dw405NormalComboAttackParam Type[2];
     
     TRESGAME_API FTresE_dw405NormalComboAttackParamType();

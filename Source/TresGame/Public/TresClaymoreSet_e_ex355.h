@@ -9,7 +9,7 @@ struct FTresClaymoreSet_e_ex355 {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TWeakObjectPtr<ATresProjectile_e_ex355_Claymore_Idle> pClaymore;
     
 public:

@@ -8,10 +8,10 @@ UCLASS(Blueprintable)
 class ATresEnemyPawn_e_ex028 : public ATresEnemyPawnBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresEnemy_e_ex028_BodyColor> m_pro_DefaultBodyColor;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TArray<TEnumAsByte<ETresEnemy_e_ex028_BodyColor>> m_pro_BodyColorArray;
     
     ATresEnemyPawn_e_ex028();

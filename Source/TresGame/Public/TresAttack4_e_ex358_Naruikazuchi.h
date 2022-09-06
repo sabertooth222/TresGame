@@ -13,7 +13,7 @@ class UTresAttack4_e_ex358_Naruikazuchi : public UTresAttack_e_ex358_Base {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresEnemyNaruikazuchi_e_ex358::Type> m_NaruikazuchiType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

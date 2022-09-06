@@ -8,7 +8,7 @@ UCLASS(Blueprintable)
 class UTresBTTask_Noop : public UBTTaskNode {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<EBTNodeResult::Type> m_SelectionType;
     
     UTresBTTask_Noop();

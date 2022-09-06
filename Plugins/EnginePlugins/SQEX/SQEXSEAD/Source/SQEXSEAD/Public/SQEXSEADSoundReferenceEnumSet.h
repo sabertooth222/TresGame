@@ -8,7 +8,7 @@ UCLASS()
 class SQEXSEAD_API USQEXSEADSoundReferenceEnumSet : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TArray<FSQEXSEADSoundReference> References;
     
     USQEXSEADSoundReferenceEnumSet();

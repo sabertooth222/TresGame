@@ -8,7 +8,7 @@ UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class SQEXSEAD_API USQEXSEADVolumeComponent : public USceneComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     FSQEXSEADVolumeInfo VolumeInfo;
     
     USQEXSEADVolumeComponent();

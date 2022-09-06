@@ -20,7 +20,7 @@ class ATresEnemyPawn_e_ex054 : public ATresEnemyPawnBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TArray<TWeakObjectPtr<AActor>> m_ProjectileGeneratorArray;
     
 public:

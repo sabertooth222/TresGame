@@ -11,13 +11,13 @@ UCLASS(Blueprintable, CollapseCategories)
 class TRESGAME_API UTresInterpTrackFade : public UInterpTrackFade {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresFadeTrack_TheaterMode> m_TheaterMode;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, EditFixedSize, meta=(AllowPrivateAccess=true))
     TArray<FTresInterpTrackFadeKey> m_Keys;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ESQEX_ScreenFadeLayer> m_FadeLayer;
     
     UTresInterpTrackFade();

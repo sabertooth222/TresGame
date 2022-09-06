@@ -9,7 +9,7 @@ UCLASS(Blueprintable, HideDropdown)
 class UTresAttack2_e_ex711_VerticalMissile : public UTresAttackDefinitionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     TArray<TWeakObjectPtr<ATresProjectileBase>> m_MissileArray;
     
 protected:

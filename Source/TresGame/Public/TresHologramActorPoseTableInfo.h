@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FTresHologramActorPoseTableInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TWeakObjectPtr<UDataTable> m_pTable;
     
     TRESGAME_API FTresHologramActorPoseTableInfo();

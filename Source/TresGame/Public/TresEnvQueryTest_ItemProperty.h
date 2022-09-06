@@ -8,7 +8,7 @@ UCLASS(Blueprintable)
 class UTresEnvQueryTest_ItemProperty : public UEnvQueryTest {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresEnvQueryTestItemPropertySource::Type> m_ValueType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

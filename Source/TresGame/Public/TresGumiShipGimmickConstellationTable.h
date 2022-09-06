@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FTresGumiShipGimmickConstellationTable : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresGumiShipConstellationCode> m_ConstellationCode;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

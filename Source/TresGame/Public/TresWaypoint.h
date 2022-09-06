@@ -10,10 +10,10 @@ UCLASS(Blueprintable)
 class ATresWaypoint : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresWaypointKind::Type> MyWaypointKind;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TWeakObjectPtr<ATresWaypoint> NextWaypoint;
     
     ATresWaypoint();

@@ -10,7 +10,7 @@ UCLASS(Blueprintable, HideDropdown)
 class UTresAction7_e_ex355_Warp : public UTresActionDefinitionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<EWarpType_e_ex355> m_WarpType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

@@ -11,7 +11,7 @@ UCLASS(Blueprintable, HideDropdown)
 class UTresAttack2_e_ex043_FlameFang : public UTresAttackDefinitionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresEnemy_e_ex043_FlameFangBoostType> m_FlameFangBoostType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

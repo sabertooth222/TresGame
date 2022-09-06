@@ -8,10 +8,10 @@ UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class MERCUNA_API UMercunaObstacleComponent : public USceneComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     EMerObstacleType Type;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     float Radius;
     
     UMercunaObstacleComponent();

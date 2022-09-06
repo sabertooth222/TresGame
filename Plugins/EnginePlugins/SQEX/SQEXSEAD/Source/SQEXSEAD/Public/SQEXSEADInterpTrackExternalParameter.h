@@ -7,10 +7,10 @@ UCLASS(CollapseCategories)
 class SQEXSEAD_API USQEXSEADInterpTrackExternalParameter : public UInterpTrackFloatBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     FName ExternalParameterName;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     float OnMatineeEndSetParameterValue;
     
     USQEXSEADInterpTrackExternalParameter();

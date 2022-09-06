@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FTresOverwriteAllowedMips {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<TextureGroup> m_TextureGroup;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

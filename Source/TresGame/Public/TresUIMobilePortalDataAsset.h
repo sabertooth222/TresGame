@@ -44,7 +44,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TAssetPtr<USoundBase> LSIMenuBGM;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TAssetPtr<USwfMovie> SwfMovieAssets[12];
     
     UTresUIMobilePortalDataAsset();

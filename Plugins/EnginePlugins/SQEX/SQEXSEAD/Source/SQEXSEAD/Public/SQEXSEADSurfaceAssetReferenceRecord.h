@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct SQEXSEAD_API FSQEXSEADSurfaceAssetReferenceRecord {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     FName Name;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     FStringAssetReference AssetRefs[63];
     
     FSQEXSEADSurfaceAssetReferenceRecord();
