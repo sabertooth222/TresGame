@@ -32,7 +32,7 @@ public:
     UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     int8 m_nFormationAdd;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     ETresItemDefGumiEtc m_nAbilityKind[5];
     
     TRESGAME_API FTresGumiShipRankDataTable();

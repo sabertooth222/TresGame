@@ -7,7 +7,7 @@ UCLASS(Blueprintable, EditInlineNew)
 class TRESGAME_API UTresLevelEntityControlVolumeData_Float : public UTresLevelEntityControlVolumeData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     float m_Float[4];
     
     UTresLevelEntityControlVolumeData_Float();

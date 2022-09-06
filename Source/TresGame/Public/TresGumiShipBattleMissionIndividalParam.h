@@ -14,10 +14,10 @@ public:
     UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     uint32 m_udScoreOfRanks[5];
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     int32 m_dTimeBonus[8];
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     FTresGumiShipBattleMisisonBonusWithConditionI m_DefeatedBonus[3];
     
     UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))

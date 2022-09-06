@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FTresUICustomizeMagicCommand {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     FTresUICustomizeCommand Command[3];
     
     TRESGAME_API FTresUICustomizeMagicCommand();

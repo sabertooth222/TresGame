@@ -76,10 +76,10 @@ private:
     UPROPERTY(EditAnywhere, Export)
     TArray<TWeakObjectPtr<UTresGimmickRA_Pudding_PhotoComponent>> m_ExtraCompList;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     TMap<FName, TWeakObjectPtr<ATresRaPuddingSplineActor>> m_PositionDic;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     TMap<FName, TWeakObjectPtr<UParticleSystem>> m_EffectDic;
     
 public:

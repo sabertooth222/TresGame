@@ -9,7 +9,7 @@ class ATresProj_MagicBase : public ATresProjectileBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     FTresProj_MagicReaction m_Reaction[8];
     
 public:
