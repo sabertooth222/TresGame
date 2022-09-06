@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FTresGumiShipBattleMissionItemParameterDataTable : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     FTresGumiShipDropPrizeData m_Compensations[3];
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
