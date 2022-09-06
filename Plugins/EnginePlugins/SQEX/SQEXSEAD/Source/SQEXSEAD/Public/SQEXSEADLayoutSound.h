@@ -9,7 +9,7 @@ UCLASS(MinimalAPI)
 class ASQEXSEADLayoutSound : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     USQEXSEADLayoutComponent* LayoutComponent;
     
     ASQEXSEADLayoutSound();

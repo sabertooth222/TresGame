@@ -6,16 +6,16 @@ USTRUCT(BlueprintType)
 struct SQEXSEAD_API FSQEXSEADAutoSeDetectorSettingSwing {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     bool bOverrideKnockDetectVelocityThreshold;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     float KnockDetectVelocityThreshold;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     bool bOverrideRubDetectVelocityThreshold;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     float RubDetectVelocityThreshold;
     
     FSQEXSEADAutoSeDetectorSettingSwing();

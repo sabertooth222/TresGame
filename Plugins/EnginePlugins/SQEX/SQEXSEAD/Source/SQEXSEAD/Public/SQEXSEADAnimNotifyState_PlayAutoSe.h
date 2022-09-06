@@ -8,10 +8,10 @@ UCLASS(CollapseCategories, EditInlineNew)
 class SQEXSEAD_API USQEXSEADAnimNotifyState_PlayAutoSe : public UAnimNotifyState {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     FSQEXSEADAnimNotifyPlayAutoSeParams PlaySettings;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     float FadeOutDuration;
     
     USQEXSEADAnimNotifyState_PlayAutoSe();

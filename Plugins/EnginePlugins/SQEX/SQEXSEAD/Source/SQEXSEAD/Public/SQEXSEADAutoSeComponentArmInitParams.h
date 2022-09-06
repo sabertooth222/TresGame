@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct SQEXSEAD_API FSQEXSEADAutoSeComponentArmInitParams {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     FName ShoulderName;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     FName ElbowName;
     
     FSQEXSEADAutoSeComponentArmInitParams();

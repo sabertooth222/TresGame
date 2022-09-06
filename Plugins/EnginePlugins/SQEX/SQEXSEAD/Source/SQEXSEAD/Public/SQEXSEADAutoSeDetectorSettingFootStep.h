@@ -6,16 +6,16 @@ USTRUCT(BlueprintType)
 struct SQEXSEAD_API FSQEXSEADAutoSeDetectorSettingFootStep {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     bool bOverrideFootShuffleAssumeBodyStopVelocityThreshold;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     float FootShuffleAssumeBodyStopVelocityThreshold;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     bool bOverrideFootShuffleDetectFootAccelThreshold;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     float FootShuffleDetectFootAccelThreshold;
     
     FSQEXSEADAutoSeDetectorSettingFootStep();

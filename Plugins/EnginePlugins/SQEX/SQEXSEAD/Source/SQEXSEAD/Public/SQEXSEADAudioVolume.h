@@ -12,7 +12,7 @@ UCLASS()
 class SQEXSEAD_API ASQEXSEADAudioVolume : public AVolume {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     USQEXSEADVolumeComponent* VolumeComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated)

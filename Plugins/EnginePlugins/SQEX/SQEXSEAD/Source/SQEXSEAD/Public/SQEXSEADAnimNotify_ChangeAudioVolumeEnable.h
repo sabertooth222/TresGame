@@ -7,10 +7,10 @@ UCLASS(CollapseCategories)
 class SQEXSEAD_API USQEXSEADAnimNotify_ChangeAudioVolumeEnable : public UAnimNotify {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     FString AudioVolumeName;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     uint8 bEnable: 1;
     
     USQEXSEADAnimNotify_ChangeAudioVolumeEnable();

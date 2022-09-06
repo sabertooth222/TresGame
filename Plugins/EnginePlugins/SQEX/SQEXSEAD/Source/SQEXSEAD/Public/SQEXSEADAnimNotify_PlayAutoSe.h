@@ -8,7 +8,7 @@ UCLASS(CollapseCategories)
 class SQEXSEAD_API USQEXSEADAnimNotify_PlayAutoSe : public UAnimNotify {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     FSQEXSEADAnimNotifyPlayAutoSeParams PlaySettings;
     
     USQEXSEADAnimNotify_PlayAutoSe();
