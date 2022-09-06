@@ -7,6 +7,7 @@ UCLASS(Blueprintable, EditInlineNew)
 class UTresEnvQueryContext_Enemies : public UEnvQueryContext {
     GENERATED_BODY()
 public:
-    UTresEnvQueryContext_Enemies();
+    UTresEnvQueryContext_Enemies(const FObjectInitializer& ObjectInitializer);
+    
 };
 
