@@ -14,10 +14,10 @@ public:
     UPROPERTY(AssetRegistrySearchable, EditAnywhere)
     bool bUseKohrogiAttenuation;
     
-    UPROPERTY(AssetRegistrySearchable, BlueprintReadOnly)
+    UPROPERTY(AssetRegistrySearchable, BlueprintReadWrite)
     USQEXSEADSoundBank* ReferenceBank;
     
-    UPROPERTY(AssetRegistrySearchable, BlueprintReadOnly)
+    UPROPERTY(AssetRegistrySearchable, BlueprintReadWrite)
     int32 SoundIndex;
     
     UPROPERTY(AssetRegistrySearchable, EditAnywhere)

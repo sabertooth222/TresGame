@@ -17,19 +17,19 @@ public:
     UPROPERTY(Transient)
     USQEXSEADAutoSeComponentCallback* AutoSeCallback;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     USQEXSEADAutoSeComponentSetting* SettingData;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     USQEXSEADAutoSeComponentAssetTable* AssetTable;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     USQEXSEADAutoSeDetectionSetting* DetectionSetting;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     uint8 bEnableClip: 1;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     uint8 bAlwaysMotionOnlyMode: 1;
     
 private:

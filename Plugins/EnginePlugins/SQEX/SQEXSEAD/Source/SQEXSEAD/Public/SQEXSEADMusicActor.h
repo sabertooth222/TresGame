@@ -12,7 +12,7 @@ public:
     UPROPERTY()
     uint8 bAutoPlay: 1;
     
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere)
     UAudioComponent* AudioComponent;
     
     ASQEXSEADMusicActor();

@@ -10,13 +10,13 @@ class UTresAttackDefinitionRanged : public UTresAttackDefinitionBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     class UAnimSequenceBase* m_AttackAnimData;
 	
-	UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 m_NumberOfAttacks;
 	
-	UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<class ATresProjectileBase> m_Projectile;
 };
 

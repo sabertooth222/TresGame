@@ -9,7 +9,7 @@ UCLASS(MinimalAPI)
 class ASQEXSEADLayoutObstruction : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     USQEXSEADLayoutObstructionComponent* ObstructionComponent;
     
     ASQEXSEADLayoutObstruction();
