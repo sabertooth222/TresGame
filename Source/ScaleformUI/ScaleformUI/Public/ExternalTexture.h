@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct FExternalTexture {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FString Resource;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UTexture* Texture;
     
     SCALEFORMUI_API FExternalTexture();

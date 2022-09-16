@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FGFxWidgetBinding {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FName WidgetName;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UClass* WidgetClass;
     
     SCALEFORMUI_API FGFxWidgetBinding();
