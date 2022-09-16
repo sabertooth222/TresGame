@@ -9,22 +9,22 @@ class USwfMovie : public UObject {
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
-    uint8 bUseGFxExport: 1;
+    uint32 bUseGFxExport: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
-    uint8 bOptimizeForMobiles: 1;
+    uint32 bOptimizeForMobiles: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
-    uint8 bSetSRGBOnImportedTextures: 1;
+    uint32 bSetSRGBOnImportedTextures: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
-    uint8 bPackTextures: 1;
+    uint32 bPackTextures: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     int32 PackTextureSize;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
-    uint8 bForceSquarePacking: 1;
+    uint32 bForceSquarePacking: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<FlashTextureRescale> TextureRescale;
@@ -33,27 +33,27 @@ public:
     FString TextureFormat;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
-    uint8 bReplaceImages: 1;
+    uint32 bReplaceImages: 1;
     
-    UPROPERTY(AssetRegistrySearchable, VisibleAnywhere)
+    UPROPERTY(AssetRegistrySearchable, BlueprintReadWrite, EditAnywhere)
     FString SourceFile;
     
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FString> FontMappings;
     
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FString SourceFileTimestamp;
     
     UPROPERTY(Transient)
     uint64 ImportTimeStamp;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<uint8> RawData;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FString> ReferencedAssetNames;
     
-    UPROPERTY(Transient, VisibleAnywhere)
+    UPROPERTY(Transient, BlueprintReadWrite, EditAnywhere)
     TArray<UObject*> References;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))

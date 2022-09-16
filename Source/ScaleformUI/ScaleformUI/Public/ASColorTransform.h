@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct SCALEFORMUI_API FASColorTransform {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FLinearColor Multiply;
     
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FLinearColor Add;
     
     FASColorTransform();

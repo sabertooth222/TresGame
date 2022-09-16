@@ -8,10 +8,10 @@ UCLASS(MinimalAPI, Transient)
 class UGFxEngine : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FGCReference> GCReferences;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 RefCount;
     
     UGFxEngine();

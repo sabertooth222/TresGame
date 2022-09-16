@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct FGCReference {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UObject* Object;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 RefCount;
     
     SCALEFORMUI_API FGCReference();
