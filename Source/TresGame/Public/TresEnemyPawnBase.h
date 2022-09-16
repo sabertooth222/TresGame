@@ -54,7 +54,7 @@ protected:
     TArray<TSubclassOf<ATresEnemyPawnBase>> m_SpawnEnemyClasses;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bEnableDieBodyPush: 1;
+    uint32 m_bEnableDieBodyPush: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresEnemyMajorUseID> m_eMajorUseID;

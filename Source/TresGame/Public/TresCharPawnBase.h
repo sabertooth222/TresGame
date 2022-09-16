@@ -151,31 +151,31 @@ protected:
     float m_AttractionMarkerRestTime;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bRootTransCalcRootSpace: 1;
+    uint32 m_bRootTransCalcRootSpace: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
-    uint8 bIsBattleMode: 1;
+    uint32 bIsBattleMode: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bIsInvincible: 1;
+    uint32 m_bIsInvincible: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bIsNoDamageResponse: 1;
+    uint32 m_bIsNoDamageResponse: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bNoHpDamage: 1;
+    uint32 m_bNoHpDamage: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bIsHpLimitOne: 1;
+    uint32 m_bIsHpLimitOne: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bIsHpLimitOneExceptPlayerAttack: 1;
+    uint32 m_bIsHpLimitOneExceptPlayerAttack: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bIsNeedAttachAttackHitEffect: 1;
+    uint32 m_bIsNeedAttachAttackHitEffect: 1;
     
     UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bDisableInvincibleInCinematicMode: 1;
+    uint32 m_bDisableInvincibleInCinematicMode: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float m_ControlAnalogInputModifier;
@@ -193,7 +193,7 @@ protected:
     FVector m_DangleOffsetPos;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bEquipmentAutoSpawn: 1;
+    uint32 m_bEquipmentAutoSpawn: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UTresPoleComponent* m_LastHitPoleComponent;
@@ -208,22 +208,22 @@ protected:
     UParticleSystem* m_LastWaterOuterEffect;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bCameraLookPosToMesh: 1;
+    uint32 m_bCameraLookPosToMesh: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTresUIDataAssetStatus* m_pUIDataStatus;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 MySkelCtrl_IkDisableFlag: 1;
+    uint32 MySkelCtrl_IkDisableFlag: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MySkelCtrl_IkInitValue;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bApplyWetnessMaterial: 1;
+    uint32 m_bApplyWetnessMaterial: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bApplyOceanWetnessMaterial: 1;
+    uint32 m_bApplyOceanWetnessMaterial: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_ApplyOceanWetnessMaterialMinHeight;
@@ -264,10 +264,10 @@ protected:
     USQEX_ParticleAttachDataAsset* m_CmnAppearEffect;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bEnableRegistFootStepEffectGen: 1;
+    uint32 m_bEnableRegistFootStepEffectGen: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bEnableWaterRippleEffect: 1;
+    uint32 m_bEnableWaterRippleEffect: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_RippleBaseBoneName;
