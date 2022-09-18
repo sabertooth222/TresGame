@@ -11,10 +11,10 @@ UCLASS()
 class MERCUNA_API UEnvQueryTest_Mercuna_Project : public UMercunaQueryTest {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     FAIDataProviderFloatValue MaxSearchRadius;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TSubclassOf<UEnvQueryContext> Context;
     
     UEnvQueryTest_Mercuna_Project();

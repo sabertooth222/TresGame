@@ -5,12 +5,12 @@
 
 class AMercunaNavOctree;
 
-UCLASS(MinimalAPI)
+UCLASS(MinimalAPI, BlueprintType)
 class AMercunaNavVolume : public AVolume {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
     AMercunaNavOctree* NavOctree;
     
 public:

@@ -449,7 +449,9 @@ ATresCharPawnBase::ATresCharPawnBase() {
     this->MyMovement = CreateDefaultSubobject<UTresAICharMovementComponent>(TEXT("TresCharMovement0"));
     this->MyMesh = CreateDefaultSubobject<UTresSkeletalMeshComponent>(TEXT("TresCharMesh0"));
     this->MyAtkColl = CreateDefaultSubobject<UTresAtkCollComponent>(TEXT("TresAtkColl0"));
+    MyAtkColl->SetupAttachment(MyMesh);
     this->MyBodyColl = CreateDefaultSubobject<UTresBodyCollComponent>(TEXT("TresBodyColl0"));
+    MyBodyColl->SetupAttachment(MyMesh);
     this->MyEquipment = CreateDefaultSubobject<UTresEquipmentComponent>(TEXT("TresEquipment0"));
     this->MyStateComp = CreateDefaultSubobject<UTresStateQueueComponent>(TEXT("TresStateQueue0"));
     this->MyEffectAtt = CreateDefaultSubobject<UTresEffectAttachComponent>(TEXT("TresEffectAttach0"));

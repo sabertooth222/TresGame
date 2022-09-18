@@ -21,7 +21,7 @@ public:
     FMercunaMoveComplete OnMoveCompleted;
     
 protected:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FMercunaNavigationConfiguration Configuration;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))

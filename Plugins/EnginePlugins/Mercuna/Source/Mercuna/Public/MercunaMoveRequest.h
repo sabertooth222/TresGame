@@ -4,11 +4,11 @@
 
 class AActor;
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct MERCUNA_API FMercunaMoveRequest {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite)
     AActor* GoalActor;
     
     FMercunaMoveRequest();

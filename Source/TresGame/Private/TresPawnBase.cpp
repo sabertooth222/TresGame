@@ -187,7 +187,7 @@ void ATresPawnBase::AdjustRotate(float InRotRate) {
 
 ATresPawnBase::ATresPawnBase() {
     this->MyRoot = CreateDefaultSubobject<UTresRootComponent>(TEXT("TresRoot"));
-    RootComponent = MyRoot;
+    SetRootComponent(MyRoot);
     this->m_pDataTableSet = NULL;
     this->m_SoundAliasAsset = NULL;
     this->m_pBaseParam = NULL;

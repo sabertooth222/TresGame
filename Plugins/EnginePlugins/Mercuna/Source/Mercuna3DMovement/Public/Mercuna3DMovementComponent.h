@@ -15,12 +15,12 @@ protected:
     FMercuna3DMovementProperties MovementProperties;
     
     UPROPERTY(Transient)
-    uint8 bPositionCorrected: 1;
+    uint32 bPositionCorrected: 1;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FVector Acceleration;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FVector AngularVelocity;
     
 public:

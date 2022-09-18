@@ -8,7 +8,7 @@ class AMercunaNavTestingActor;
 class USphereComponent;
 class UMercunaPath;
 
-UCLASS()
+UCLASS(BlueprintType)
 class MERCUNA_API AMercunaNavTestingActor : public AActor {
     GENERATED_BODY()
 public:
@@ -16,19 +16,19 @@ public:
     float Radius;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
-    uint8 bSearchStart: 1;
+    uint32 bSearchStart: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     AMercunaNavTestingActor* OtherActor;
     
     UPROPERTY(BlueprintReadOnly, Transient, VisibleAnywhere)
-    uint8 bPathExist: 1;
+    uint32 bPathExist: 1;
     
     UPROPERTY(BlueprintReadOnly, Transient, VisibleAnywhere)
-    uint8 bPathIsPartial: 1;
+    uint32 bPathIsPartial: 1;
     
     UPROPERTY(BlueprintReadOnly, Transient, VisibleAnywhere)
-    uint8 bPathIsOutOfNodes: 1;
+    uint32 bPathIsOutOfNodes: 1;
     
     UPROPERTY(BlueprintReadOnly, Transient, VisibleAnywhere)
     float PathLength;
