@@ -5,8 +5,8 @@
 
 ATresEnemyPawn_e_ex009::ATresEnemyPawn_e_ex009() {
 	UActorComponent* MeshComponent = GetComponentByClass(UTresSkeletalMeshComponent::StaticClass());
-	USceneComponent* TresBodyCollPrimitive = NewObject<UTresBodyCollPrimitive>(MeshComponent, "TresBodyCollPrimitive1");
+	USceneComponent* TresBodyCollPrimitive = NewObject<UTresBodyCollPrimitive>(this, "TresBodyCollPrimitive1");
 	TresBodyCollPrimitive->SetupAttachment(Cast<USceneComponent>(MeshComponent));
-	TresBodyCollPrimitive->RegisterComponent();
+	/*TresBodyCollPrimitive->RegisterComponent();*/
 }
 
