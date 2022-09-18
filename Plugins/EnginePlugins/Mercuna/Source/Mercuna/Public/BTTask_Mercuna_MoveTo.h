@@ -14,10 +14,10 @@ public:
     float EndDistance;
     
     UPROPERTY()
-    uint8 bObserveBlackboardValue: 1;
+    uint32 bObserveBlackboardValue: 1;
     
     UPROPERTY(AdvancedDisplay, EditAnywhere)
-    uint8 bAllowPartialPath: 1;
+    uint32 bAllowPartialPath: 1;
     
     UBTTask_Mercuna_MoveTo();
 };

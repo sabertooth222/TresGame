@@ -12,26 +12,26 @@ UCLASS(NotPlaceable)
 class MERCUNA_API AMercunaNavOctree : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(Config, EditAnywhere, BlueprintReadWrite)
     float CellSize;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(Config, EditAnywhere, BlueprintReadWrite)
     int32 MinPawnRadius;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(Config, EditAnywhere, BlueprintReadWrite)
     int32 MaxPawnRadius;
     
 private:
-    UPROPERTY(Transient)
+    UPROPERTY(Transient, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
     EMerOctreeDebugDrawMode DebugDrawMode;
     
-    UPROPERTY(Export, Transient)
+    UPROPERTY(Instanced, Transient, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
     UMerNavOctreeRenderingComponent* MerNavOctreeRenderingComponent;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
     bool bBuildAsSublevel;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
     bool bNeedsRebuild;
     
     UPROPERTY(NonPIEDuplicateTransient)

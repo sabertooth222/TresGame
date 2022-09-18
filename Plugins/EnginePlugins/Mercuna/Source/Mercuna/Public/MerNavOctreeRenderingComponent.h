@@ -9,10 +9,10 @@ UCLASS(ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UMerNavOctreeRenderingComponent : public UPrimitiveComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UMaterialInterface* Material;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UMaterialInterface* SelectionMaterial;
     
     UMerNavOctreeRenderingComponent();

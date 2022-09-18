@@ -11,7 +11,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     FName ElementName;
     
-    UPROPERTY(EditAnywhere, Instanced)
+    UPROPERTY(EditAnywhere, Instanced, BlueprintReadWrite)
     TArray<UAssetUserData*> AssetUserDatas;
     
     FSQEX_KBDAssetElement();

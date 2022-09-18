@@ -59,27 +59,27 @@ public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FTresCtorState, ETresStateID, StateID);
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FTresAnimNotifyStartBpEvent, FName, AnimSeqName, TEnumAsByte<ETresAnimNotifyBpEventID>, EventID, int32, Param);
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FTresAnimNotifyEndBpEvent, FName, AnimSeqName, TEnumAsByte<ETresAnimNotifyBpEventID>, EventID, int32, Param);
-    
-private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+
+private:    
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTresCharMovementComponent* MyMovement;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTresSkeletalMeshComponent* MyMesh;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTresAtkCollComponent* MyAtkColl;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTresBodyCollComponent* MyBodyColl;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTresEquipmentComponent* MyEquipment;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTresStateQueueComponent* MyStateComp;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTresEffectAttachComponent* MyEffectAtt;
     
 protected:

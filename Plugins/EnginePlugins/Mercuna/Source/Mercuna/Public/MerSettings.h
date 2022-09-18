@@ -7,19 +7,19 @@ UCLASS(DefaultConfig, Config=Game)
 class MERCUNA_API UMerSettings : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(Config, EditAnywhere, BlueprintReadWrite)
     float DebugLengthScale;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(Config, EditAnywhere, BlueprintReadWrite)
     bool bAlwaysShowErrors;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(Config, EditAnywhere, BlueprintReadWrite)
     float CellSize;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(Config, EditAnywhere, BlueprintReadWrite)
     int32 MinPawnRadius;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(Config, EditAnywhere, BlueprintReadWrite)
     int32 MaxPawnRadius;
     
     UMerSettings();

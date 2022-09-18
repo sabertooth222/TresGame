@@ -8,6 +8,7 @@
 #include "TresReactorComponentInterface.h"
 #include "TresActorInterface.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ESQEX_AI_ThinkType -FallbackName=ESQEX_AI_ThinkType
+#include "ESQEX_AI_ThinkType.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "Engine/EngineTypes.h"

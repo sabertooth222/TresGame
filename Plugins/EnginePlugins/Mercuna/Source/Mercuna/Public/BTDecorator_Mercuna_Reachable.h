@@ -4,7 +4,7 @@
 #include "BehaviorTree/BTDecorator.h"
 #include "BTDecorator_Mercuna_Reachable.generated.h"
 
-UCLASS()
+UCLASS(BlueprintType)
 class MERCUNA_API UBTDecorator_Mercuna_Reachable : public UBTDecorator {
     GENERATED_BODY()
 public:

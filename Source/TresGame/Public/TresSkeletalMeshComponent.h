@@ -22,20 +22,20 @@ class UTresSkeletalMeshComponent : public USkeletalMeshComponent, public ITresAn
 public:
 protected:
     UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bCanbeDetectAsBodyColl: 1;
+    uint32 m_bCanbeDetectAsBodyColl: 1;
     
     UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_BodyCollGrpName;
     
     UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_BodyCollIgnoreNameNoneGroup: 1;
+    uint32 m_BodyCollIgnoreNameNoneGroup: 1;
     
     UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresBodyCollReactionType m_BodyCollReactionType;
     
 public:
     UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bNeedSnowRenderDepthPrimitive: 1;
+    uint32 m_bNeedSnowRenderDepthPrimitive: 1;
     
     UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_SnowTailAttachName;
@@ -47,13 +47,13 @@ public:
     FVector m_SnowTailAttachScale;
     
     UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bEnableSyncAnimPlay: 1;
+    uint32 m_bEnableSyncAnimPlay: 1;
     
     UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bEnableBonamikWhenOwnerHidden: 1;
+    uint32 m_bEnableBonamikWhenOwnerHidden: 1;
     
     UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bEnableCollisionFootStep: 1;
+    uint32 m_bEnableCollisionFootStep: 1;
     
     UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_bDisableCollisionFootStepLOD;

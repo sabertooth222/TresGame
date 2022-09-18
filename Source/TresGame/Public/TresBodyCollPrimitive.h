@@ -11,7 +11,6 @@
 #include "TresBodyCollPrimitive.generated.h"
 
 class AActor;
-class UTresBodyCollPrimitive;
 class UStaticMesh;
 class UBodySetup;
 
@@ -27,7 +26,7 @@ protected:
     FName MyBodyName;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 MyIgnoreNameNoneGroup: 1;
+    uint32 MyIgnoreNameNoneGroup: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresBodyCollision::Type> MyShapeType;
@@ -42,25 +41,25 @@ protected:
     ETresBodyCollReactionType m_BodyReactionType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bFixedBodyReactionType: 1;
+    uint32 m_bFixedBodyReactionType: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bEnableDamage: 1;
+    uint32 m_bEnableDamage: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bEnablePush: 1;
+    uint32 m_bEnablePush: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bEnableCamera: 1;
+    uint32 m_bEnableCamera: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bEnableBlockCamera: 1;
+    uint32 m_bEnableBlockCamera: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresBodyCollOverlapCameraFunction> m_OverlapCameraFunction;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bIsBodyCollBaseLocationDist3D: 1;
+    uint32 m_bIsBodyCollBaseLocationDist3D: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresBodyTakeDamageEffect> m_DamageEffects;
