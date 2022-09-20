@@ -17,4 +17,5 @@ public:
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float m_MinPitch;                                                                 // 0x0174 (size: 0x4)
 
+	UTresAttackDefinitionWeaponBase();
 }; // Size: 0x178

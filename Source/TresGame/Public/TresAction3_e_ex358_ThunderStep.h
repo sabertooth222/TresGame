@@ -1,8 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "TresAction_e_ex358_Base.h"
-#include "UObject/NoExportTypes.h"
 #include "EnvironmentQuery/EnvQueryTypes.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=LinearColor -FallbackName=LinearColor
+//CROSS-MODULE INCLUDE V2: -ModuleName=AIModule -ObjectName=EEnvQueryRunMode -FallbackName=EEnvQueryRunMode
 #include "TresAction3_e_ex358_ThunderStep.generated.h"
 
 class UEnvQuery;
@@ -13,7 +14,7 @@ class UTresAction3_e_ex358_ThunderStep : public UTresAction_e_ex358_Base {
 public:
 private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bEnableMoveTime: 1;
+    uint32 m_bEnableMoveTime: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_MoveTime;
@@ -39,7 +40,7 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UEnvQuery* m_EnvQuery;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EEnvQueryRunMode::Type> m_EnvQueryRunMode;
     
 public:
