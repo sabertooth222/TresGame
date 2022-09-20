@@ -10,7 +10,7 @@ class UTresAction2_e_ex011_ToCarriageMode : public UTresAction_e_ex011_Base {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
+    UPROPERTY(EditAnywhere)
     UAnimSequenceBase* m_AnimDataList[3];
     
 public:

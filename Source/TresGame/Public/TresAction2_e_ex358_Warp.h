@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "TresAction_e_ex358_Base.h"
-#include "EnvironmentQuery/EnvQueryTypes.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=AIModule -ObjectName=EEnvQueryRunMode -FallbackName=EEnvQueryRunMode
 #include "TresAction2_e_ex358_Warp.generated.h"
 
 class UEnvQuery;
@@ -14,7 +14,7 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UEnvQuery* m_EnvQuery;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<EEnvQueryRunMode::Type> m_EnvQueryRunMode;
     
 public:

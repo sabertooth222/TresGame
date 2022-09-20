@@ -1,22 +1,27 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "Templates/SubclassOf.h"
 #include "TresAttackDefinitionBase.h"
 #include "TresAttackDefinitionRanged.generated.h"
 
 class UAnimSequenceBase;
+class ATresProjectileBase;
 
-UCLASS(HideDropdown)
+UCLASS(Blueprintable, HideDropdown)
 class UTresAttackDefinitionRanged : public UTresAttackDefinitionBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    class UAnimSequenceBase* m_AttackAnimData;
-	
-	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UAnimSequenceBase* m_AttackAnimData;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_NumberOfAttacks;
-	
-	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TSubclassOf<class ATresProjectileBase> m_Projectile;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TSubclassOf<ATresProjectileBase> m_Projectile;
+    
+public:
+    UTresAttackDefinitionRanged();
 };
 

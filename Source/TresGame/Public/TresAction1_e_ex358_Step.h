@@ -9,7 +9,7 @@ class UTresAction1_e_ex358_Step : public UTresAction_e_ex358_Base {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ETresEnemyStepDirectionType_e_ex358> m_DirectionType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
