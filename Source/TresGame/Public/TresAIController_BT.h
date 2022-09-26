@@ -8,7 +8,7 @@ UCLASS(Blueprintable)
 class ATresAIController_BT : public ATresAIController {
     GENERATED_BODY()
 public:
-    ATresAIController_BT();
+    ATresAIController_BT(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     bool SetAttackPermissionTicket(FGameplayTag RequiredAttackGroup, bool bCheckOnly);
     

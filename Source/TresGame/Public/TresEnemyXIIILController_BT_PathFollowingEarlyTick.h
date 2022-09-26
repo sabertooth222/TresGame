@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresEnemyXIIILController_BT_PathFollowingEarlyTick : public ATresAIController_BT {
     GENERATED_BODY()
 public:
-    ATresEnemyXIIILController_BT_PathFollowingEarlyTick();
+    ATresEnemyXIIILController_BT_PathFollowingEarlyTick(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -10,12 +10,12 @@ class ATresComNpcController : public ATresAIController {
 public:
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bNoPawnDestroy: 1;
+    uint32 m_bNoPawnDestroy: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAIRequestID m_MoveRequestID;
     
 public:
-    ATresComNpcController();
+    ATresComNpcController(const FObjectInitializer& ObjectInitializer);
 };
 

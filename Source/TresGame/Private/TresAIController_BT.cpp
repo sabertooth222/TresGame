@@ -34,6 +34,7 @@ FGameplayTag ATresAIController_BT::GetCurrentAttackPermission() {
     return FGameplayTag{};
 }
 
-ATresAIController_BT::ATresAIController_BT() {
+ATresAIController_BT::ATresAIController_BT(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+
 }
 

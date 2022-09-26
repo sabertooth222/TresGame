@@ -17,7 +17,7 @@ protected:
     TEnumAsByte<ETresCharInputType> m_CharInputType;
     
 public:
-    ATresAIController();
+    ATresAIController(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetMyTarget(AActor* inNewMyTarget);
     

@@ -97,7 +97,7 @@ bool ATresNpcControllerBase::CanbeSwirlUpDamageReactionByEnemy() const {
     return false;
 }
 
-ATresNpcControllerBase::ATresNpcControllerBase() {
+ATresNpcControllerBase::ATresNpcControllerBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_ChrUniqueID = ETresChrUniqueID::TRES_CHR_UID_UNKNOWN;
     this->m_LeadSplineController = CreateDefaultSubobject<UTresNpcAILeadSplineController>(TEXT("LeadSplineController"));
     this->m_BattleController = CreateDefaultSubobject<UTresNpcAIBattleController>(TEXT("BattleController"));
