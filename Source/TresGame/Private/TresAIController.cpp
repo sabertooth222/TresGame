@@ -1,5 +1,7 @@
 #include "TresAIController.h"
 
+#include "TresPathFollowingComponent.h"
+
 class AActor;
 
 void ATresAIController::SetMyTarget(AActor* inNewMyTarget) {
@@ -77,7 +79,7 @@ FVector ATresAIController::BP_GetHeadFocalPoint() const {
 void ATresAIController::BP_ClearHeadFocus() {
 }
 
-ATresAIController::ATresAIController() {
+ATresAIController::ATresAIController(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer.SetDefaultSubobjectClass<UTresPathFollowingComponent>(TEXT("PathFollowingComponent"))) {
     this->m_CharInputType = TRES_CHAR_INPUT_AI;
 }
 

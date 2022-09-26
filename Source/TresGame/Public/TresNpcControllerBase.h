@@ -36,7 +36,7 @@ protected:
     UTresNpcAIBattleController* m_BattleController;
     
 public:
-    ATresNpcControllerBase();
+    ATresNpcControllerBase(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void StartNpcMode(ETresFNpcAINpcMode InNpcMode, FName InCancelEventName);
     
