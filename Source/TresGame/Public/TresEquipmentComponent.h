@@ -37,7 +37,7 @@ protected:
     UTresWeaponSet* MyWeaponSet;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bIsFixedEquip: 1;
+    uint32 m_bIsFixedEquip: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresEquipmentAssetUnit> m_FixedEquips;

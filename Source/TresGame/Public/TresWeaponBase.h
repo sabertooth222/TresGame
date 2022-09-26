@@ -1,5 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "ESQEX_OverwriteDiscrenment.h"
+#include "ESQEX_ShadowQuality.h"
 #include "TresPawnBase.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ESQEX_OverwriteDiscrenment -FallbackName=ESQEX_OverwriteDiscrenment
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ESQEX_ShadowQuality -FallbackName=ESQEX_ShadowQuality
@@ -51,10 +53,10 @@ protected:
     float m_AppearVisibleDelayTime;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bIsEnableAppearScaleAnim: 1;
+    uint32 m_bIsEnableAppearScaleAnim: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bIsDelayAppearScaleAnim: 1;
+    uint32 m_bIsDelayAppearScaleAnim: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_AppearScaleAnimTime;
@@ -63,10 +65,10 @@ protected:
     float m_AppearScaleAnimStartScale;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bIsEnableAppearDitherAnim: 1;
+    uint32 m_bIsEnableAppearDitherAnim: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bIsDelayAppearDitherAnim: 1;
+    uint32 m_bIsDelayAppearDitherAnim: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_AppearDitherAnimTime;
@@ -84,7 +86,7 @@ protected:
     float m_DisappearVisibleDelayTime;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bIsEnableDisappearScaleAnim: 1;
+    uint32 m_bIsEnableDisappearScaleAnim: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_DisappearScaleAnimTime;
@@ -93,7 +95,7 @@ protected:
     float m_DisappearScaleAnimEndScale;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bIsEnableDisappearDitherAnim: 1;
+    uint32 m_bIsEnableDisappearDitherAnim: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_DisappearDitherAnimTime;
@@ -132,13 +134,13 @@ protected:
     USQEXSEADSoundReferenceEnumSet* m_SoundAssets_Swing;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bEnableMapCollisionOnFreeMove: 1;
+    uint32 m_bEnableMapCollisionOnFreeMove: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_DisableOverwriteMeshOrgOverwriteDiscrenment: 1;
+    uint32 m_DisableOverwriteMeshOrgOverwriteDiscrenment: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bIsNotifyOnlyVisible: 1;
+    uint32 m_bIsNotifyOnlyVisible: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     USceneComponent* m_EquipAttachParent;

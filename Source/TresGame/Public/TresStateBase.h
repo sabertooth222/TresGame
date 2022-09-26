@@ -20,7 +20,7 @@ class AActor;
 class USQEX_ParticleAttachDataAsset;
 class UAnimSequenceBase;
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Blueprintable)
 class UTresStateBase : public UObject, public ITresAnimInterface, public ITresNotifyInterface {
     GENERATED_BODY()
 public:
@@ -32,7 +32,7 @@ protected:
     TEnumAsByte<ETresStateID> MyStateID;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bEnableRecycle: 1;
+    uint32 m_bEnableRecycle: 1;
     
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -48,22 +48,22 @@ public:
     float m_TurnToTargetSpeed;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bEnableChange: 1;
+    uint32 m_bEnableChange: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bReverseLeg: 1;
+    uint32 m_bReverseLeg: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bEnableTraction: 1;
+    uint32 m_bEnableTraction: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bEnableTurnToTarget: 1;
+    uint32 m_bEnableTurnToTarget: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bFaceAt: 1;
+    uint32 m_bFaceAt: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bEnableInput: 1;
+    uint32 m_bEnableInput: 1;
     
     UTresStateBase();
     UFUNCTION(BlueprintCallable, BlueprintPure)
