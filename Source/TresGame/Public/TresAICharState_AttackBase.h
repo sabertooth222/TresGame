@@ -5,7 +5,7 @@
 
 class ATresCharPawnBase;
 
-UCLASS(Abstract, Blueprintable)
+UCLASS(Blueprintable)
 class UTresAICharState_AttackBase : public UTresStateBase {
     GENERATED_BODY()
 public:

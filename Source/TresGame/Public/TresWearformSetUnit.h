@@ -13,7 +13,7 @@ public:
     FName m_FormName;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bTextureReplace: 1;
+    uint32 m_bTextureReplace: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresWearformTextureReplaceData> m_TextureReplaceData;
@@ -22,7 +22,7 @@ public:
     TArray<UTresAnimSet*> m_ReplaceAnimSets;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bPlayFaceAnim: 1;
+    uint32 m_bPlayFaceAnim: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_PlayFaceAnimName;

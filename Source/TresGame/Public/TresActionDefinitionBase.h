@@ -8,7 +8,7 @@
 class AActor;
 class USceneComponent;
 
-UCLASS(Abstract, Blueprintable, NotPlaceable)
+UCLASS(Blueprintable, NotPlaceable)
 class UTresActionDefinitionBase : public UTresStateBase {
     GENERATED_BODY()
 public:
@@ -27,7 +27,7 @@ protected:
     
 private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bActionAbortPermission: 1;
+    uint32 m_bActionAbortPermission: 1;
     
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

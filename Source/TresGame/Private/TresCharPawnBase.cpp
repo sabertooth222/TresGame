@@ -448,6 +448,7 @@ void ATresCharPawnBase::ApplyKBD(USQEX_DynamicBindAssetUserData* KBDAssetUserDat
 ATresCharPawnBase::ATresCharPawnBase() {
     this->MyMovement = CreateDefaultSubobject<UTresAICharMovementComponent>(TEXT("TresCharMovement0"));
     this->MyMesh = CreateDefaultSubobject<UTresSkeletalMeshComponent>(TEXT("TresCharMesh0"));
+    MyMesh->SetupAttachment(GetRootComponent());
     this->MyAtkColl = CreateDefaultSubobject<UTresAtkCollComponent>(TEXT("TresAtkColl0"));
     MyAtkColl->SetupAttachment(MyMesh);
     this->MyBodyColl = CreateDefaultSubobject<UTresBodyCollComponent>(TEXT("TresBodyColl0"));
@@ -455,6 +456,7 @@ ATresCharPawnBase::ATresCharPawnBase() {
     this->MyEquipment = CreateDefaultSubobject<UTresEquipmentComponent>(TEXT("TresEquipment0"));
     this->MyStateComp = CreateDefaultSubobject<UTresStateQueueComponent>(TEXT("TresStateQueue0"));
     this->MyEffectAtt = CreateDefaultSubobject<UTresEffectAttachComponent>(TEXT("TresEffectAttach0"));
+    MyEffectAtt->SetupAttachment(GetRootComponent());
     this->bPressedJump = false;
     this->JumpKeyHoldTime = 0.00f;
     this->JumpMaxHoldTime = 0.00f;

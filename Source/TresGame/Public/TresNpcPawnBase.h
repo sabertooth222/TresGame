@@ -55,19 +55,19 @@ public:
     TArray<TEnumAsByte<ETresCommandKind>> m_HaveFriendLinkCommand;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bDispDebugInfo: 1;
+    uint32 m_bDispDebugInfo: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bDispDebugAnimSet: 1;
+    uint32 m_bDispDebugAnimSet: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bDispDebugAnimInfo: 1;
+    uint32 m_bDispDebugAnimInfo: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bDispDebugLineAndSphere: 1;
+    uint32 m_bDispDebugLineAndSphere: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bDispDebugSmartphoneCamera: 1;
+    uint32 m_bDispDebugSmartphoneCamera: 1;
     
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
