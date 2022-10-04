@@ -12,7 +12,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresAutoNavLinkExclusiveVolumeInfo> ExclusiveInfo;
     
-    ATresAutoNavLinkExclusiveVolume();
+    ATresAutoNavLinkExclusiveVolume(const FObjectInitializer& ObjectInitializer);
     
     // Fix for true pure virtual functions not being implemented
 };

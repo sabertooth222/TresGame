@@ -13,6 +13,6 @@ private:
     ETresBodyPushPowerLevel m_BodyPushPowerLevel;
     
 public:
-    ATresBodyPushPawn_e_ex356();
+    ATresBodyPushPawn_e_ex356(const FObjectInitializer& ObjectInitializer);
 };
 

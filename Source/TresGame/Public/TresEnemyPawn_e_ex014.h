@@ -19,7 +19,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRotator m_pro_TanpopoOffsetRot;
     
-    ATresEnemyPawn_e_ex014();
+    ATresEnemyPawn_e_ex014(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetDebugStateNo(int32 NO);
     

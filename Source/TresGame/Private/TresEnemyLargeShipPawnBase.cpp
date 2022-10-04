@@ -31,7 +31,7 @@ ATresEnemyPawnBase* ATresEnemyLargeShipPawnBase::BP_SpawnOtherShip(ETresEnemyUni
     return NULL;
 }
 
-ATresEnemyLargeShipPawnBase::ATresEnemyLargeShipPawnBase() {
+ATresEnemyLargeShipPawnBase::ATresEnemyLargeShipPawnBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_PropsMeshOnBoard = CreateDefaultSubobject<UTresStaticMeshComponent>(TEXT("EnemyShipBase_PropsMeshOnBoardName"));
     this->m_TemplateForOverlapCheck = NULL;
     this->m_TemplateOfBattleOnBoardCollision = NULL;

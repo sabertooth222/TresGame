@@ -16,6 +16,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* m_BladeTornadoAppearCmp;
     
-    ATresProjectile_XIIIE_BladeTornado();
+    ATresProjectile_XIIIE_BladeTornado(const FObjectInitializer& ObjectInitializer);
 };
 

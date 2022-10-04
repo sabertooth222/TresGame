@@ -1,6 +1,6 @@
 #include "TresFriendLinkPawnMountCurling.h"
 
-ATresFriendLinkPawnMountCurling::ATresFriendLinkPawnMountCurling() {
+ATresFriendLinkPawnMountCurling::ATresFriendLinkPawnMountCurling(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_Param_FirstSpeed = 1200.00f;
     this->m_Param_DownStartTime = 2.00f;
     this->m_Param_DownSpeed = 80.00f;

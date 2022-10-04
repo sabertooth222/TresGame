@@ -122,6 +122,6 @@ protected:
     UTresWinniePuzzleSoundPlayer* SoundPlayer;
     
 public:
-    ATresWinniePuzzleBase();
+    ATresWinniePuzzleBase(const FObjectInitializer& ObjectInitializer);
 };
 

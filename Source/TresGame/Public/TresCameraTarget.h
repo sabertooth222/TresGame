@@ -26,7 +26,7 @@ protected:
     FTresCameraTargetInfo m_TargetInfo;
     
 public:
-    ATresCameraTarget();
+    ATresCameraTarget(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetTresCameraTargetInfluenceRotationValue(bool bYaw, bool bPitch, bool bRoll, FRotator TargetRotation);
     

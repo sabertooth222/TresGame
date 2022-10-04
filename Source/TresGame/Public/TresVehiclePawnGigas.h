@@ -166,7 +166,7 @@ private:
     UAudioComponent* m_BoostSE;
     
 public:
-    ATresVehiclePawnGigas();
+    ATresVehiclePawnGigas(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void TeleportGigas(const FVector& InLocation, const FRotator& InRotation);
     

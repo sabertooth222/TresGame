@@ -1,7 +1,7 @@
 #include "TresAdhereObjBase.h"
 #include "TresRootComponent.h"
 
-ATresAdhereObjBase::ATresAdhereObjBase() {
+ATresAdhereObjBase::ATresAdhereObjBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MyRoot = CreateDefaultSubobject<UTresRootComponent>(TEXT("TresRoot"));
     this->m_pAttachPawn = NULL;
     this->m_pCauserActor = NULL;

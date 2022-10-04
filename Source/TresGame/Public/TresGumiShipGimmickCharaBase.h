@@ -15,7 +15,7 @@ protected:
     UTresSkeletalMeshComponent* m_pSkeletalMesh;
     
 public:
-    ATresGumiShipGimmickCharaBase();
+    ATresGumiShipGimmickCharaBase(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     float PlayAnimByAnimSet(FName AnimName, FName SlotName, float fBlendInTime, int32 dFlags, int32 dEffectGroup, float fPlayRate, const FVector2D& rvRootTransScale);
     

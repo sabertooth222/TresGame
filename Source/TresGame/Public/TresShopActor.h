@@ -35,7 +35,7 @@ protected:
     FName m_DefaultIdlingMotName;
     
 public:
-    ATresShopActor();
+    ATresShopActor(const FObjectInitializer& ObjectInitializer);
 protected:
     UFUNCTION(BlueprintCallable)
     void OnChangeShopActorDispType(ETresSavePointDispType InDispType);

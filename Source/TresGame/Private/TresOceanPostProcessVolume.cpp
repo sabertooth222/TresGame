@@ -1,5 +1,5 @@
 #include "TresOceanPostProcessVolume.h"
 
-ATresOceanPostProcessVolume::ATresOceanPostProcessVolume() {
+ATresOceanPostProcessVolume::ATresOceanPostProcessVolume(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

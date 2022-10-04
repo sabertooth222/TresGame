@@ -30,6 +30,6 @@ protected:
     UTresGumiShipAtkCollisionSetCompo* m_pAtkComllision;
     
 public:
-    ATresGumiShipSpWeapon180Actor();
+    ATresGumiShipSpWeapon180Actor(const FObjectInitializer& ObjectInitializer);
 };
 

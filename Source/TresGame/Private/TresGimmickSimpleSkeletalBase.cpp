@@ -31,7 +31,7 @@ void ATresGimmickSimpleSkeletalBase::_OnAnimStarted(UAnimationAsset* InAnimAsset
 void ATresGimmickSimpleSkeletalBase::_OnAnimEnded(UAnimationAsset* InAnimAsset, bool bInterrupted) {
 }
 
-ATresGimmickSimpleSkeletalBase::ATresGimmickSimpleSkeletalBase() {
+ATresGimmickSimpleSkeletalBase::ATresGimmickSimpleSkeletalBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MyMesh = CreateDefaultSubobject<UTresSkeletalMeshComponent>(TEXT("TresGimmickMesh0"));
     this->m_IsGimmickClipDitherParamInvert = false;
 }

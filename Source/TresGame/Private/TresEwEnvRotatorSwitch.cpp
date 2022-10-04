@@ -9,7 +9,7 @@ bool ATresEwEnvRotatorSwitch::IsMoving() {
 }
 
 
-ATresEwEnvRotatorSwitch::ATresEwEnvRotatorSwitch() {
+ATresEwEnvRotatorSwitch::ATresEwEnvRotatorSwitch(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MyRoot = CreateDefaultSubobject<USceneComponent>(TEXT("MyRoot"));
 }
 

@@ -12,6 +12,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     USceneComponent* TresRootComponent;
     
-    ATresLevelActorManager();
+    ATresLevelActorManager(const FObjectInitializer& ObjectInitializer);
 };
 

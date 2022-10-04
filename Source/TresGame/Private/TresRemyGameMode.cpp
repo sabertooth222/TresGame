@@ -21,7 +21,7 @@ UTresRemyData* ATresRemyGameMode::GetData() const {
     return NULL;
 }
 
-ATresRemyGameMode::ATresRemyGameMode() {
+ATresRemyGameMode::ATresRemyGameMode(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->GameManagerRef = NULL;
     this->PawnRef = NULL;
     this->RemyRatPawnRef = NULL;

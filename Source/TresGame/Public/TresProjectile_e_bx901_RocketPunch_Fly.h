@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable)
 class ATresProjectile_e_bx901_RocketPunch_Fly : public ATresProjectile_e_ex901_RailSlideBase {
     GENERATED_BODY()
 public:
-    ATresProjectile_e_bx901_RocketPunch_Fly();
+    ATresProjectile_e_bx901_RocketPunch_Fly(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -33,7 +33,7 @@ void ATresGumiShipEnemyGenerator::_OnEnterEnemySpawnTriggerVolume(UPrimitiveComp
 void ATresGumiShipEnemyGenerator::_OnDisappearTriggerOtherEnemyGroupAppear() {
 }
 
-ATresGumiShipEnemyGenerator::ATresGumiShipEnemyGenerator() {
+ATresGumiShipEnemyGenerator::ATresGumiShipEnemyGenerator(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_pUsingEnemyPresetDataTable = NULL;
     this->m_uMaxAttackPermissionNum = 1;
     this->m_eEnemyGroupMoveType = ETresGumiShipEnemyGroupMoveType::FIXED_LOCATION;

@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable)
 class ATresChangeIKTypeVolume : public ATresVolume {
     GENERATED_BODY()
 public:
-    ATresChangeIKTypeVolume();
+    ATresChangeIKTypeVolume(const FObjectInitializer& ObjectInitializer);
 };
 

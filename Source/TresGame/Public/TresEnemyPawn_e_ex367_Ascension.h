@@ -126,6 +126,6 @@ private:
     TArray<ATresEnemy_e_ex367_AscensionPillarProjectileBase*> m_PillarList;
     
 public:
-    ATresEnemyPawn_e_ex367_Ascension();
+    ATresEnemyPawn_e_ex367_Ascension(const FObjectInitializer& ObjectInitializer);
 };
 

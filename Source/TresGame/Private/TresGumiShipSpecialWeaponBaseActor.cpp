@@ -25,7 +25,7 @@ void ATresGumiShipSpecialWeaponBaseActor::_OnChangeSpPoint(const float fOldPoint
 void ATresGumiShipSpecialWeaponBaseActor::_CheckAttackTerm(const TEnumAsByte<ETresGumiShipWeaponSequencePort> ePort, bool& rbCanAttack) {
 }
 
-ATresGumiShipSpecialWeaponBaseActor::ATresGumiShipSpecialWeaponBaseActor() {
+ATresGumiShipSpecialWeaponBaseActor::ATresGumiShipSpecialWeaponBaseActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_pWeaponSequence = CreateDefaultSubobject<UTresGumiShipWeaponSequence>(TEXT("WeaponSequence"));
     this->m_pMeshBasePoint = CreateDefaultSubobject<USceneComponent>(TEXT("MeshBasePoint"));
     this->m_pSkeltalWeaponMesh = CreateDefaultSubobject<UTresSkeletalMeshComponent>(TEXT("SkeltalMeshR"));

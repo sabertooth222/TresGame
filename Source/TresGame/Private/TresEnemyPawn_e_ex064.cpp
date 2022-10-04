@@ -20,7 +20,7 @@ int32 ATresEnemyPawn_e_ex064::GetCurrentWallPartsMaxNum() const {
 void ATresEnemyPawn_e_ex064::AddShipHP(int32 Value) {
 }
 
-ATresEnemyPawn_e_ex064::ATresEnemyPawn_e_ex064() {
+ATresEnemyPawn_e_ex064::ATresEnemyPawn_e_ex064(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_ShipBodyMesh = CreateDefaultSubobject<UTresSkeletalMeshComponent>(TEXT("e_ex064_ShipBodyMesh"));
     this->m_ShipMastMesh = CreateDefaultSubobject<UTresSkeletalMeshComponent>(TEXT("e_ex064_ShipMastMesh"));
 }

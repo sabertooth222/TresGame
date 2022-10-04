@@ -20,7 +20,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_LegFixBoneName_R;
     
-    ATresEnemyPawn_e_he902();
+    ATresEnemyPawn_e_he902(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FTransform BP_GetLegFixTransform_R() const;
     

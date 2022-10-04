@@ -1,5 +1,5 @@
 #include "TresTransientGimmickGeneratorBase.h"
 
-ATresTransientGimmickGeneratorBase::ATresTransientGimmickGeneratorBase() {
+ATresTransientGimmickGeneratorBase::ATresTransientGimmickGeneratorBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

@@ -8,7 +8,7 @@ ATresCameraHe05Mountain* ATresCameraHe05Mountain::BP_SpawnTresCameraHe05Mountain
     return NULL;
 }
 
-ATresCameraHe05Mountain::ATresCameraHe05Mountain() {
+ATresCameraHe05Mountain::ATresCameraHe05Mountain(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_TitanDistance = 200.00f;
     this->m_DistanceCurve = NULL;
 }

@@ -15,6 +15,6 @@ protected:
     float m_fFriendLinkFinishInvincibleTime;
     
 public:
-    ATresFriendLinkPawnUltimateEnd();
+    ATresFriendLinkPawnUltimateEnd(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -25,7 +25,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<AActor> GeneratorChildClass;
     
-    ATresPlaceChildBonusPrizeGenerator();
+    ATresPlaceChildBonusPrizeGenerator(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     AActor* SpawnActorRandSnapPos(const FTresSnapData& Data, ATresPlacePrizeBase* bonusPlz);
     

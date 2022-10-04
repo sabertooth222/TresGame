@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresUIPlayerController : public APlayerController {
     GENERATED_BODY()
 public:
-    ATresUIPlayerController();
+    ATresUIPlayerController(const FObjectInitializer& ObjectInitializer);
 };
 

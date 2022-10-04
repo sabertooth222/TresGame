@@ -11,6 +11,6 @@ void ATresRandomPlaceTest::SetSplinePos(ASQEX_SplineActor* splineActor, float po
 void ATresRandomPlaceTest::SetSplineActor(ASQEX_SplineActor* splineActor) {
 }
 
-ATresRandomPlaceTest::ATresRandomPlaceTest() {
+ATresRandomPlaceTest::ATresRandomPlaceTest(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

@@ -6,6 +6,6 @@ bool ATresBTInterface_DecoratorNativeBase::IsDecoratorFunctionNative_Implementat
     return false;
 }
 
-ATresBTInterface_DecoratorNativeBase::ATresBTInterface_DecoratorNativeBase() {
+ATresBTInterface_DecoratorNativeBase::ATresBTInterface_DecoratorNativeBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

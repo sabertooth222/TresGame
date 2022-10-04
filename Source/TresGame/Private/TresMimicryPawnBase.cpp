@@ -1,5 +1,5 @@
 #include "TresMimicryPawnBase.h"
 
-ATresMimicryPawnBase::ATresMimicryPawnBase() {
+ATresMimicryPawnBase::ATresMimicryPawnBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

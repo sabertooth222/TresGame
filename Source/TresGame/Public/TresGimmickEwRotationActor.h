@@ -15,7 +15,7 @@ protected:
     USceneComponent* MyRoot;
     
 public:
-    ATresGimmickEwRotationActor();
+    ATresGimmickEwRotationActor(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetRotationEx(const FRotator& Rotator);
     

@@ -18,6 +18,6 @@ protected:
     UParticleSystem* m_ThundagaEffData;
     
 public:
-    ATresProjectileGenerator_e_ex027_Thundaga();
+    ATresProjectileGenerator_e_ex027_Thundaga(const FObjectInitializer& ObjectInitializer);
 };
 

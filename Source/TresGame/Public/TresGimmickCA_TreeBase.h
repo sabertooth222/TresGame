@@ -16,7 +16,7 @@ protected:
     float m_SpawnPrizeIntervalOnHit;
     
 public:
-    ATresGimmickCA_TreeBase();
+    ATresGimmickCA_TreeBase(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void StopPrizeShower();
     

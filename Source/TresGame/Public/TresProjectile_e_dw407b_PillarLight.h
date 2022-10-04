@@ -28,6 +28,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USplineComponent* m_PatternActor;
     
-    ATresProjectile_e_dw407b_PillarLight();
+    ATresProjectile_e_dw407b_PillarLight(const FObjectInitializer& ObjectInitializer);
 };
 

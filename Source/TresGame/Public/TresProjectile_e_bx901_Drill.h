@@ -57,7 +57,7 @@ protected:
     TArray<TWeakObjectPtr<ATresProjectileBase>> m_DuplicatedDrillArray;
     
 public:
-    ATresProjectile_e_bx901_Drill();
+    ATresProjectile_e_bx901_Drill(const FObjectInitializer& ObjectInitializer);
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     USceneComponent* DuplicateDrillComp(FVector Offset);

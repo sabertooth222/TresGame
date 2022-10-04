@@ -8,7 +8,7 @@ UCLASS(Blueprintable)
 class ATresRemyCookingEggCracking : public ATresRemyCookingBase {
     GENERATED_BODY()
 public:
-    ATresRemyCookingEggCracking();
+    ATresRemyCookingEggCracking(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void PushState(TEnumAsByte<RemyCookingGameState> State);
     

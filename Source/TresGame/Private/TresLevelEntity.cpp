@@ -19,7 +19,7 @@ void ATresLevelEntity::DestorySelfWithActor() {
 void ATresLevelEntity::DestorySelf() {
 }
 
-ATresLevelEntity::ATresLevelEntity() {
+ATresLevelEntity::ATresLevelEntity(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_ForceLazyLoad = false;
     this->TransformComponent = CreateDefaultSubobject<USceneComponent>(TEXT("TransformComponent0"));
     this->m_MaxSpawnCount = 1;

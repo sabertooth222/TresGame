@@ -19,7 +19,7 @@ private:
     UTresReactorComponent* m_pReactor;
     
 public:
-    ATresGimmickRA_Impression_SplashWater();
+    ATresGimmickRA_Impression_SplashWater(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveRapunzelWaterHit();
     

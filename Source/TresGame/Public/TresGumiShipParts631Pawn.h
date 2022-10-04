@@ -20,6 +20,6 @@ protected:
     UParticleSystem* m_pWallSnowVFX;
     
 public:
-    ATresGumiShipParts631Pawn();
+    ATresGumiShipParts631Pawn(const FObjectInitializer& ObjectInitializer);
 };
 

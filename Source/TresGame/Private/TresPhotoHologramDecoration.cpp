@@ -4,7 +4,7 @@
 void ATresPhotoHologramDecoration::RequestRemoveHologram() {
 }
 
-ATresPhotoHologramDecoration::ATresPhotoHologramDecoration() {
+ATresPhotoHologramDecoration::ATresPhotoHologramDecoration(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MyStaticMesh = CreateDefaultSubobject<UTresStaticMeshComponent>(TEXT("MyStaticMesh"));
 }
 

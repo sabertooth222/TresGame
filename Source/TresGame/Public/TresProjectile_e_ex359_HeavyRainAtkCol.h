@@ -10,6 +10,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fAtkCollProjYawOffset;
     
-    ATresProjectile_e_ex359_HeavyRainAtkCol();
+    ATresProjectile_e_ex359_HeavyRainAtkCol(const FObjectInitializer& ObjectInitializer);
 };
 

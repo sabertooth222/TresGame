@@ -9,7 +9,7 @@ void ATresSoKcPlayerPawnSora::_DetachKeyBladeBeamEffect() {
 void ATresSoKcPlayerPawnSora::_ChangeKeyHoleConnectMissionState() {
 }
 
-ATresSoKcPlayerPawnSora::ATresSoKcPlayerPawnSora() {
+ATresSoKcPlayerPawnSora::ATresSoKcPlayerPawnSora(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_pAppendAnimSet = NULL;
     this->m_pLightSphereEffectAsset = NULL;
     this->m_pKeyBladeBeamEffectAsset = NULL;

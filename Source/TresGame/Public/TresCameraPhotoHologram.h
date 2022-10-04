@@ -7,6 +7,6 @@ UCLASS(Blueprintable, NotPlaceable)
 class ATresCameraPhotoHologram : public ATresCameraNormal {
     GENERATED_BODY()
 public:
-    ATresCameraPhotoHologram();
+    ATresCameraPhotoHologram(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -14,6 +14,6 @@ private:
     UParticleSystem* m_MapHitEffect;
     
 public:
-    ATresProjectile_e_ex046_BlizzardBreath();
+    ATresProjectile_e_ex046_BlizzardBreath(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresStylePawnGMGate : public ATresStylePawnBase {
     GENERATED_BODY()
 public:
-    ATresStylePawnGMGate();
+    ATresStylePawnGMGate(const FObjectInitializer& ObjectInitializer);
 };
 

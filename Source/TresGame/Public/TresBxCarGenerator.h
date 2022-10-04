@@ -43,7 +43,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName GeneratorName;
     
-    ATresBxCarGenerator();
+    ATresBxCarGenerator(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetEnableCreateCars(bool Enable);
     

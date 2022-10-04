@@ -1,5 +1,5 @@
 #include "TresRaPuddingSplineActor.h"
 
-ATresRaPuddingSplineActor::ATresRaPuddingSplineActor() {
+ATresRaPuddingSplineActor::ATresRaPuddingSplineActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

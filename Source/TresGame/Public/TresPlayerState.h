@@ -15,7 +15,7 @@ protected:
     int32 m_TeamNo;
     
 public:
-    ATresPlayerState();
+    ATresPlayerState(const FObjectInitializer& ObjectInitializer);
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
     UFUNCTION(BlueprintCallable)

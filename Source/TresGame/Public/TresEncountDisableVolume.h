@@ -11,6 +11,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETresEncountDisableVolumeType m_ShapeType;
     
-    ATresEncountDisableVolume();
+    ATresEncountDisableVolume(const FObjectInitializer& ObjectInitializer);
 };
 

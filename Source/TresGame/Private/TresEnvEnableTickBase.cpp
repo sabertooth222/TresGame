@@ -1,5 +1,5 @@
 #include "TresEnvEnableTickBase.h"
 
-ATresEnvEnableTickBase::ATresEnvEnableTickBase() {
+ATresEnvEnableTickBase::ATresEnvEnableTickBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

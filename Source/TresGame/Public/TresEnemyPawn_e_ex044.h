@@ -108,7 +108,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<ATresGimmickBxStepBanAsset*> m_GimmickArray;
     
-    ATresEnemyPawn_e_ex044();
+    ATresEnemyPawn_e_ex044(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     bool IsPlayerPoleTurning();
     

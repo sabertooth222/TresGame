@@ -1,6 +1,6 @@
 #include "TresPostcardFieldVoiceActor.h"
 
 
-ATresPostcardFieldVoiceActor::ATresPostcardFieldVoiceActor() {
+ATresPostcardFieldVoiceActor::ATresPostcardFieldVoiceActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

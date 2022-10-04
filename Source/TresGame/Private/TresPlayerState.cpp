@@ -19,7 +19,7 @@ void ATresPlayerState::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& Out
     DOREPLIFETIME(ATresPlayerState, m_TeamNo);
 }
 
-ATresPlayerState::ATresPlayerState() {
+ATresPlayerState::ATresPlayerState(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_TeamNo = 0;
 }
 

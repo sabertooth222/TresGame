@@ -14,6 +14,6 @@ private:
     TWeakObjectPtr<AActor> m_pConnectedActor;
     
 public:
-    ATresGumiShipPlayerStart();
+    ATresGumiShipPlayerStart(const FObjectInitializer& ObjectInitializer);
 };
 

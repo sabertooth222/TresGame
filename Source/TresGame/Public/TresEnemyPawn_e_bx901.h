@@ -71,7 +71,7 @@ private:
     USceneComponent* MyRot;
     
 public:
-    ATresEnemyPawn_e_bx901();
+    ATresEnemyPawn_e_bx901(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void WindEffectStart();
     

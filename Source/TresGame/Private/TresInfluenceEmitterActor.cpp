@@ -19,7 +19,7 @@ void ATresInfluenceEmitterActor::SetMaxInfluence(float inMaxInfluence) {
 void ATresInfluenceEmitterActor::SetLayer(TEnumAsByte<ETresInfluenceMapLayer::Type> InLayer) {
 }
 
-ATresInfluenceEmitterActor::ATresInfluenceEmitterActor() {
+ATresInfluenceEmitterActor::ATresInfluenceEmitterActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_InfluenceEmitterComponent = CreateDefaultSubobject<UTresInfluenceEmitterComponent>(TEXT("InfEmitterComp"));
 }
 

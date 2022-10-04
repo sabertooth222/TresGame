@@ -20,7 +20,7 @@ bool ATresEnemyPawn_e_ex313::CanUseDarkAuraKabutowari() {
     return false;
 }
 
-ATresEnemyPawn_e_ex313::ATresEnemyPawn_e_ex313() {
+ATresEnemyPawn_e_ex313::ATresEnemyPawn_e_ex313(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_bAura = false;
     this->m_pro_DarkMineGeneratorClass = NULL;
     this->m_pro_DarkHand_ThunderGeneratorClass = NULL;

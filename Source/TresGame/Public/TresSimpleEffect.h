@@ -25,6 +25,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fLoopEndTime;
     
-    ATresSimpleEffect();
+    ATresSimpleEffect(const FObjectInitializer& ObjectInitializer);
 };
 

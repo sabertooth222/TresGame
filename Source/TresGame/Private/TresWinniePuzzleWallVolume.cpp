@@ -1,5 +1,5 @@
 #include "TresWinniePuzzleWallVolume.h"
 
-ATresWinniePuzzleWallVolume::ATresWinniePuzzleWallVolume() {
+ATresWinniePuzzleWallVolume::ATresWinniePuzzleWallVolume(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

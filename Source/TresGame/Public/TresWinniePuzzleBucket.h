@@ -11,6 +11,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     WinniePuzzleBucketType BucketType;
     
-    ATresWinniePuzzleBucket();
+    ATresWinniePuzzleBucket(const FObjectInitializer& ObjectInitializer);
 };
 

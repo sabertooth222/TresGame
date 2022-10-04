@@ -14,6 +14,6 @@ public:
     UPROPERTY(AdvancedDisplay, EditAnywhere)
     uint32 Version;
     
-    ATresAutoNavLinkSettingActor();
+    ATresAutoNavLinkSettingActor(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -1,6 +1,6 @@
 #include "TresFriendLinkPawnShieldGuardian.h"
 
-ATresFriendLinkPawnShieldGuardian::ATresFriendLinkPawnShieldGuardian() {
+ATresFriendLinkPawnShieldGuardian::ATresFriendLinkPawnShieldGuardian(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_Param_ArmorBodyHP = 3;
     this->m_Param_SmallDamageBrake = 0.98f;
     this->m_Param_SmallDamagePower = 100.00f;

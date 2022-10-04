@@ -1,6 +1,6 @@
 #include "TresDirectionalVolume.h"
 
-ATresDirectionalVolume::ATresDirectionalVolume() {
+ATresDirectionalVolume::ATresDirectionalVolume(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_PlayerOnly = true;
     this->m_Check_ActorDirrection = true;
     this->m_X_Plus = false;

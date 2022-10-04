@@ -12,7 +12,7 @@ ATresCameraRc* ATresCameraRc::BP_SpawnTresCameraRc(UObject* WorldContextObject, 
     return NULL;
 }
 
-ATresCameraRc::ATresCameraRc() {
+ATresCameraRc::ATresCameraRc(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_TargetActor = NULL;
 }
 

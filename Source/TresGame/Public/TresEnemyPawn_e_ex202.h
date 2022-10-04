@@ -48,7 +48,7 @@ private:
     float m_Angle;
     
 public:
-    ATresEnemyPawn_e_ex202();
+    ATresEnemyPawn_e_ex202(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsSnakeMode() const;
     

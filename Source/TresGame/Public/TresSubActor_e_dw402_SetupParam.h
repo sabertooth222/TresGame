@@ -16,6 +16,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_pro_DevilDiveLimitRadius;
     
-    ATresSubActor_e_dw402_SetupParam();
+    ATresSubActor_e_dw402_SetupParam(const FObjectInitializer& ObjectInitializer);
 };
 

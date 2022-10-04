@@ -6,6 +6,6 @@ bool ATresGimmickCA_Coconut::CheckEnableSpawnPrize(const AActor* OtherActor) con
     return false;
 }
 
-ATresGimmickCA_Coconut::ATresGimmickCA_Coconut() {
+ATresGimmickCA_Coconut::ATresGimmickCA_Coconut(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

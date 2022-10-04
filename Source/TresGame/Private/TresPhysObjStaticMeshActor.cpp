@@ -23,7 +23,7 @@ void ATresPhysObjStaticMeshActor::OnMeshComponentSleep(UPrimitiveComponent* Slee
 void ATresPhysObjStaticMeshActor::OnActorTakeAnyDamage(AActor* DamagedActor, float Damage, const UDamageType* DamageType, AController* InstigatedBy, AActor* DamageCauser) {
 }
 
-ATresPhysObjStaticMeshActor::ATresPhysObjStaticMeshActor() {
+ATresPhysObjStaticMeshActor::ATresPhysObjStaticMeshActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_bDisappearAfterWake = false;
     this->m_bDisappearLeaveInitLoc = false;
     this->m_bDisappearLeaveInitPhysVolume = false;

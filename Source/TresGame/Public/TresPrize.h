@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable)
 class ATresPrize : public ATresPrizeBase {
     GENERATED_BODY()
 public:
-    ATresPrize();
+    ATresPrize(const FObjectInitializer& ObjectInitializer);
 };
 

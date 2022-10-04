@@ -208,7 +208,7 @@ bool ATresGumiShipEnemyPawnBase::_CancelAttackPermissionRequest() {
     return false;
 }
 
-ATresGumiShipEnemyPawnBase::ATresGumiShipEnemyPawnBase() {
+ATresGumiShipEnemyPawnBase::ATresGumiShipEnemyPawnBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_EnemyNameID = TEXT("e_gmXXX_0");
     this->m_fEnemyBoundsRadius = 0.00f;
     this->m_pBattleDataTableSet = NULL;

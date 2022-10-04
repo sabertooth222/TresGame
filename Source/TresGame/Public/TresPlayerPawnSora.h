@@ -7,7 +7,7 @@ UCLASS(Blueprintable)
 class ATresPlayerPawnSora : public ATresPlayerPawnBase {
     GENERATED_BODY()
 public:
-    ATresPlayerPawnSora();
+    ATresPlayerPawnSora(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, Exec)
     void DebugNotifyCommandQuickBattle();
     

@@ -122,7 +122,7 @@ void ATresEnemyPawn_e_ex773::ExecNextWaveEclipse13(float ReserveTime, bool bNoti
 void ATresEnemyPawn_e_ex773::BpDestroyEquipment() {
 }
 
-ATresEnemyPawn_e_ex773::ATresEnemyPawn_e_ex773() {
+ATresEnemyPawn_e_ex773::ATresEnemyPawn_e_ex773(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_pro_EncloseFlareGeneratorClass = NULL;
     this->m_pro_EncloseFlareHvnGeneratorClass = NULL;
     this->m_pro_FlareShotGeneratorClass = NULL;

@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresUIActorLightSet : public AActor {
     GENERATED_BODY()
 public:
-    ATresUIActorLightSet();
+    ATresUIActorLightSet(const FObjectInitializer& ObjectInitializer);
 };
 

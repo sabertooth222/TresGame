@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable)
 class ATresProjectile_e_ex361_DarkBiteAtkCol : public ATresProjectileBase {
     GENERATED_BODY()
 public:
-    ATresProjectile_e_ex361_DarkBiteAtkCol();
+    ATresProjectile_e_ex361_DarkBiteAtkCol(const FObjectInitializer& ObjectInitializer);
 };
 

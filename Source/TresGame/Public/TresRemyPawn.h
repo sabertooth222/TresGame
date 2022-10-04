@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresRemyPawn : public ATresPlayerPawnBase {
     GENERATED_BODY()
 public:
-    ATresRemyPawn();
+    ATresRemyPawn(const FObjectInitializer& ObjectInitializer);
 };
 

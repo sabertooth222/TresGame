@@ -141,6 +141,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bTraceHitDebugDisplay;
     
-    ATresProjectile_e_ex043_PoleFireProjectile();
+    ATresProjectile_e_ex043_PoleFireProjectile(const FObjectInitializer& ObjectInitializer);
 };
 

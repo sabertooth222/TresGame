@@ -122,7 +122,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_pro_VernierEffData;
     
-    ATresEnemyGigasPawnBase();
+    ATresEnemyGigasPawnBase(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetStateMachineStep(int32 step);
     

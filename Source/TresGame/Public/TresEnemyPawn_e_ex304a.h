@@ -25,7 +25,7 @@ private:
     TArray<FEffectControlParam_e_ex304a> m_EffectControlParamList;
     
 public:
-    ATresEnemyPawn_e_ex304a();
+    ATresEnemyPawn_e_ex304a(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void StartPowerEffect();
     

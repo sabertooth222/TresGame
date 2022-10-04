@@ -22,7 +22,7 @@ void ATresGameMode::DebugEnableHitStop(bool bEnable) {
 void ATresGameMode::BPE_OverrideMapJumpPath_Implementation(UObject* From, int32 InFadeKind, const FName& InMapName, const FName& InPlayerStartTag, FName& OutMapName, FName& OutPlayerStartTag) {
 }
 
-ATresGameMode::ATresGameMode() {
+ATresGameMode::ATresGameMode(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_pTresGameState = NULL;
     this->m_AtkCollManager = NULL;
     this->m_ProjectileManager = NULL;

@@ -7,6 +7,6 @@ UCLASS(Blueprintable, Config=Game)
 class ATresGimmickCA_ChimneyBase : public AActor {
     GENERATED_BODY()
 public:
-    ATresGimmickCA_ChimneyBase();
+    ATresGimmickCA_ChimneyBase(const FObjectInitializer& ObjectInitializer);
 };
 

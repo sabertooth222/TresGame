@@ -29,6 +29,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float BattleModeCheckDistance;
     
-    ATresRaButterflyActor();
+    ATresRaButterflyActor(const FObjectInitializer& ObjectInitializer);
 };
 

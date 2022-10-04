@@ -10,6 +10,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_MasterPoseNum;
     
-    ATresEnemyPawn_e_ex006a();
+    ATresEnemyPawn_e_ex006a(const FObjectInitializer& ObjectInitializer);
 };
 

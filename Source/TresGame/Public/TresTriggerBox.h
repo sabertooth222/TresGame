@@ -14,7 +14,7 @@ UCLASS(Abstract, Blueprintable)
 class ATresTriggerBox : public ATriggerBox, public ITresNotifyInterface, public ITresMapMarkerInterface {
     GENERATED_BODY()
 public:
-    ATresTriggerBox();
+    ATresTriggerBox(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetAreaClass(UShapeComponent* Component, TSubclassOf<UNavArea> AreaClass);
     

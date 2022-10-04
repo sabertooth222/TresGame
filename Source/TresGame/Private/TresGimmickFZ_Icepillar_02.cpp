@@ -25,7 +25,7 @@ bool ATresGimmickFZ_Icepillar_02::BP_CheckAttackLocation(AActor* Attacker, FVect
     return false;
 }
 
-ATresGimmickFZ_Icepillar_02::ATresGimmickFZ_Icepillar_02() {
+ATresGimmickFZ_Icepillar_02::ATresGimmickFZ_Icepillar_02(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_IsCinematicMode = false;
     this->m_AttackRadius = 100.00f;
     this->m_PersonalSpaceRadius = 300.00f;

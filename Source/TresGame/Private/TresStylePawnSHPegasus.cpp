@@ -4,7 +4,7 @@ float ATresStylePawnSHPegasus::GetDeltaYaw() const {
     return 0.0f;
 }
 
-ATresStylePawnSHPegasus::ATresStylePawnSHPegasus() {
+ATresStylePawnSHPegasus::ATresStylePawnSHPegasus(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_bDispDebugLine = false;
     this->m_ProjThunder = NULL;
     this->m_SHChariotAssets = NULL;

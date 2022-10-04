@@ -8,7 +8,7 @@ UCLASS(Blueprintable, Config=Game)
 class ATresGimmickCA_SeaweedBase : public AActor, public ITresGimmickDitherFadeInterface {
     GENERATED_BODY()
 public:
-    ATresGimmickCA_SeaweedBase();
+    ATresGimmickCA_SeaweedBase(const FObjectInitializer& ObjectInitializer);
     
     // Fix for true pure virtual functions not being implemented
 };

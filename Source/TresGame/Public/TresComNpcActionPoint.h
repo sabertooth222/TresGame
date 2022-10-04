@@ -16,6 +16,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FName> m_LinkPoints;
     
-    ATresComNpcActionPoint();
+    ATresComNpcActionPoint(const FObjectInitializer& ObjectInitializer);
 };
 

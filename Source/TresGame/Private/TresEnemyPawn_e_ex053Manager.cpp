@@ -63,7 +63,7 @@ int32 ATresEnemyPawn_e_ex053Manager::GetDieScore() const {
     return 0;
 }
 
-ATresEnemyPawn_e_ex053Manager::ATresEnemyPawn_e_ex053Manager() {
+ATresEnemyPawn_e_ex053Manager::ATresEnemyPawn_e_ex053Manager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_SpawnClass = NULL;
     this->m_DieTime = 20.00f;
     this->m_Score = 10;

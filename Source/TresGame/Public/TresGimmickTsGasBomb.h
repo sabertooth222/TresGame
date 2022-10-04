@@ -7,6 +7,6 @@ UCLASS(Blueprintable, Config=Game)
 class ATresGimmickTsGasBomb : public ATresGimmickStaticBase {
     GENERATED_BODY()
 public:
-    ATresGimmickTsGasBomb();
+    ATresGimmickTsGasBomb(const FObjectInitializer& ObjectInitializer);
 };
 

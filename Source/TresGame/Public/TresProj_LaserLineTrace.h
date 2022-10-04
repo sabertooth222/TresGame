@@ -18,7 +18,7 @@ private:
     bool m_bIsLifeOverWhenArrivedLaserTerminate;
     
 public:
-    ATresProj_LaserLineTrace();
+    ATresProj_LaserLineTrace(const FObjectInitializer& ObjectInitializer);
 private:
     UFUNCTION(BlueprintCallable)
     void _OnShutdownFromLaser();

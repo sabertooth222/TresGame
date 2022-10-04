@@ -17,6 +17,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector2D LimitDeg;
     
-    ATresGumiShipSpWeapon070Actor();
+    ATresGumiShipSpWeapon070Actor(const FObjectInitializer& ObjectInitializer);
 };
 

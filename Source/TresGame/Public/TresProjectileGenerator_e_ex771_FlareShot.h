@@ -20,6 +20,6 @@ public:
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresEnemy_e_ex771_FlareShotSphereEntryParam> m_FlareShotSphereEntryParamArray;
     
-    ATresProjectileGenerator_e_ex771_FlareShot();
+    ATresProjectileGenerator_e_ex771_FlareShot(const FObjectInitializer& ObjectInitializer);
 };
 

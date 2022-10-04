@@ -1,6 +1,6 @@
 #include "TresWinniePuzzleTiggerPawn.h"
 
-ATresWinniePuzzleTiggerPawn::ATresWinniePuzzleTiggerPawn() {
+ATresWinniePuzzleTiggerPawn::ATresWinniePuzzleTiggerPawn(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->EntryJumpMoveSpeed = 0.00f;
     this->EntryJumpHeight = 0.00f;
     this->ReadyLandingRotateRate = 0.00f;

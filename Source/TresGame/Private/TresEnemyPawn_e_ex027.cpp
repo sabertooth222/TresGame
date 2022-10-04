@@ -19,7 +19,7 @@ FVector ATresEnemyPawn_e_ex027::GetSweepOutPos() {
 void ATresEnemyPawn_e_ex027::BP_DebugSetDefaultPos() {
 }
 
-ATresEnemyPawn_e_ex027::ATresEnemyPawn_e_ex027() {
+ATresEnemyPawn_e_ex027::ATresEnemyPawn_e_ex027(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_pro_WheelRotSpeed = 360.00f;
     this->m_pro_PlayerBindReleaseEffData = NULL;
     this->m_PlayerBindReleaseEff = NULL;

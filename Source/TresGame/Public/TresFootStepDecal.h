@@ -13,7 +13,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UDecalComponent* m_Decal;
     
-    ATresFootStepDecal();
+    ATresFootStepDecal(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetFootStepDecalMaterial(UMaterialInterface* NewDecalMaterial);
     

@@ -28,6 +28,6 @@ private:
     float m_AtkCollWidth;
     
 public:
-    ATresProjectile_e_ex801_HeatBreath();
+    ATresProjectile_e_ex801_HeatBreath(const FObjectInitializer& ObjectInitializer);
 };
 

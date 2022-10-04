@@ -12,7 +12,7 @@ void ATresProjectile_e_ex773_ReverseFlarePillarOmen::CreateFlarePillarOmenEff() 
 
 
 
-ATresProjectile_e_ex773_ReverseFlarePillarOmen::ATresProjectile_e_ex773_ReverseFlarePillarOmen() {
+ATresProjectile_e_ex773_ReverseFlarePillarOmen::ATresProjectile_e_ex773_ReverseFlarePillarOmen(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_FlarePillarOmenEff = NULL;
     this->m_pro_FlarePillarOmenEffData = NULL;
     this->m_pro_Omen1Time = 0.20f;

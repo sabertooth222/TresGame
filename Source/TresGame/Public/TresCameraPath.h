@@ -7,6 +7,6 @@ UCLASS(Blueprintable, NotPlaceable)
 class ATresCameraPath : public ATresCameraTarget {
     GENERATED_BODY()
 public:
-    ATresCameraPath();
+    ATresCameraPath(const FObjectInitializer& ObjectInitializer);
 };
 

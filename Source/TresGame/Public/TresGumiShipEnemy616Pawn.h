@@ -13,6 +13,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool AppearEnd;
     
-    ATresGumiShipEnemy616Pawn();
+    ATresGumiShipEnemy616Pawn(const FObjectInitializer& ObjectInitializer);
 };
 

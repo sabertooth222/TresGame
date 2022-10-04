@@ -24,6 +24,6 @@ protected:
     TSubclassOf<ATresProjectileBase> m_KBTailAttackPawnData;
     
 public:
-    ATresEnemy_e_ex311_KeyBladeProjectileBase();
+    ATresEnemy_e_ex311_KeyBladeProjectileBase(const FObjectInitializer& ObjectInitializer);
 };
 

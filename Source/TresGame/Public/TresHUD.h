@@ -18,6 +18,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UTresCockpit* TresCockpit;
     
-    ATresHUD();
+    ATresHUD(const FObjectInitializer& ObjectInitializer);
 };
 

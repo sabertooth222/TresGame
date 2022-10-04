@@ -6,6 +6,6 @@ bool ATresGumiShipSpWeapon050Actor::SetTarget(ATresGumiShipProjectileBase* pProj
     return false;
 }
 
-ATresGumiShipSpWeapon050Actor::ATresGumiShipSpWeapon050Actor() {
+ATresGumiShipSpWeapon050Actor::ATresGumiShipSpWeapon050Actor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

@@ -11,7 +11,7 @@ void ATresMapSetVolume::ChangeMapSet(UTresMapSet* newMapSet) {
 void ATresMapSetVolume::ChangeCommandName(FName newCommandName) {
 }
 
-ATresMapSetVolume::ATresMapSetVolume() {
+ATresMapSetVolume::ATresMapSetVolume(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MapSet = NULL;
     this->bUseOverlapManager = false;
 }

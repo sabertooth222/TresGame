@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresMapEffectActor : public ATresEffectActor {
     GENERATED_BODY()
 public:
-    ATresMapEffectActor();
+    ATresMapEffectActor(const FObjectInitializer& ObjectInitializer);
 };
 

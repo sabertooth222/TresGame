@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable)
 class ATresProjectile_e_ex305_WarpArm : public ATresProjectileSkeletalMeshBase {
     GENERATED_BODY()
 public:
-    ATresProjectile_e_ex305_WarpArm();
+    ATresProjectile_e_ex305_WarpArm(const FObjectInitializer& ObjectInitializer);
 };
 

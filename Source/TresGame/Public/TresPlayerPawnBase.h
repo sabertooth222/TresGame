@@ -828,7 +828,7 @@ protected:
     UParticleSystemComponent* m_pDeathSentenceCountEffect;
     
 public:
-    ATresPlayerPawnBase();
+    ATresPlayerPawnBase(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void RequestEndCommandKind(ETresCommandKind inCommand, int32 InParam0);
     

@@ -16,7 +16,7 @@
 #include "TresWinniePuzzleObjectPool.h"
 #include "TresWinniePuzzleSoundPlayer.h"
 
-ATresWinniePuzzleBase::ATresWinniePuzzleBase() {
+ATresWinniePuzzleBase::ATresWinniePuzzleBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->DebugFixedCameraMoveSpeed = 0.00f;
     this->DebugFixedCameraFOVChangeSpeed = 0.00f;
     this->RaycastDistance = 0.00f;

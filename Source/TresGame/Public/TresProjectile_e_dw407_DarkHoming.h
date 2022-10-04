@@ -18,6 +18,6 @@ private:
     float m_FadeoutTime;
     
 public:
-    ATresProjectile_e_dw407_DarkHoming();
+    ATresProjectile_e_dw407_DarkHoming(const FObjectInitializer& ObjectInitializer);
 };
 

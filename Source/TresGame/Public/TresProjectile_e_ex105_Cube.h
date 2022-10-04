@@ -39,6 +39,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_pro_CubeLightHighEffData;
     
-    ATresProjectile_e_ex105_Cube();
+    ATresProjectile_e_ex105_Cube(const FObjectInitializer& ObjectInitializer);
 };
 

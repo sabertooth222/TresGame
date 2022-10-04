@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresCameraSnowCurling : public ATresCameraRotTargetCtrl {
     GENERATED_BODY()
 public:
-    ATresCameraSnowCurling();
+    ATresCameraSnowCurling(const FObjectInitializer& ObjectInitializer);
 };
 

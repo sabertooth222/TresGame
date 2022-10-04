@@ -1,6 +1,6 @@
 #include "TresWarpFriendNpcVolume.h"
 
-ATresWarpFriendNpcVolume::ATresWarpFriendNpcVolume() {
+ATresWarpFriendNpcVolume::ATresWarpFriendNpcVolume(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_bVolumeOutEnd = true;
     this->m_bUsedWarpPoint = false;
     this->m_DelayTime = 0.00f;

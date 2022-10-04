@@ -34,7 +34,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 m_LazerDebug: 1;
     
-    ATresEnemyPawn_e_ex106();
+    ATresEnemyPawn_e_ex106(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     bool IsMeshVisible();
     

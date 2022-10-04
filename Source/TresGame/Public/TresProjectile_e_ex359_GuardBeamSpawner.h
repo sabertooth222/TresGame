@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable)
 class ATresProjectile_e_ex359_GuardBeamSpawner : public ATresProjectileBase {
     GENERATED_BODY()
 public:
-    ATresProjectile_e_ex359_GuardBeamSpawner();
+    ATresProjectile_e_ex359_GuardBeamSpawner(const FObjectInitializer& ObjectInitializer);
 };
 

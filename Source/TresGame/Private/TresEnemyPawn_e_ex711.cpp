@@ -81,7 +81,7 @@ void ATresEnemyPawn_e_ex711::DebugCloseRadioTower() {
 void ATresEnemyPawn_e_ex711::AddCommonCounter() {
 }
 
-ATresEnemyPawn_e_ex711::ATresEnemyPawn_e_ex711() {
+ATresEnemyPawn_e_ex711::ATresEnemyPawn_e_ex711(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_RadioTowerOpenCurve = NULL;
     this->m_RadioTowerCloseCurve = NULL;
     this->m_EffDataAsset = NULL;

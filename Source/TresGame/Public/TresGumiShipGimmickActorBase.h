@@ -19,7 +19,7 @@ protected:
     ETresGumiShipGimmickID m_eGimmickID;
     
 public:
-    ATresGumiShipGimmickActorBase();
+    ATresGumiShipGimmickActorBase(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void FadeOutEffect(float InFadeOutTime, int32 InGroupID);
     

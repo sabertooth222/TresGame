@@ -22,7 +22,7 @@ void ATresEnemyXIIIBPawnBase::DebugSetEnableAlwaysCardScapegoat(int32 bEnable) {
 void ATresEnemyXIIIBPawnBase::DebugSetDefaultBT() {
 }
 
-ATresEnemyXIIIBPawnBase::ATresEnemyXIIIBPawnBase() {
+ATresEnemyXIIIBPawnBase::ATresEnemyXIIIBPawnBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_VanishModeEndTime = 1.00f;
     this->m_VanishModeEndQuery = NULL;
     this->m_SmokeCardParticleSystem = NULL;

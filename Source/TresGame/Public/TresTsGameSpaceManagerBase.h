@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable)
 class ATresTsGameSpaceManagerBase : public AActor {
     GENERATED_BODY()
 public:
-    ATresTsGameSpaceManagerBase();
+    ATresTsGameSpaceManagerBase(const FObjectInitializer& ObjectInitializer);
 };
 

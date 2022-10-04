@@ -8,6 +8,6 @@ ATresCameraPluralFixRotTarget* ATresCameraPluralFixRotTarget::BP_SpawnTresCamera
     return NULL;
 }
 
-ATresCameraPluralFixRotTarget::ATresCameraPluralFixRotTarget() {
+ATresCameraPluralFixRotTarget::ATresCameraPluralFixRotTarget(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

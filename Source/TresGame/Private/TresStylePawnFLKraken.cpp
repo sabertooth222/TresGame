@@ -1,5 +1,5 @@
 #include "TresStylePawnFLKraken.h"
 
-ATresStylePawnFLKraken::ATresStylePawnFLKraken() {
+ATresStylePawnFLKraken::ATresStylePawnFLKraken(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

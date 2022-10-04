@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresGumiShipPrizeBase : public ATresGumiShipGimmickActorBase {
     GENERATED_BODY()
 public:
-    ATresGumiShipPrizeBase();
+    ATresGumiShipPrizeBase(const FObjectInitializer& ObjectInitializer);
 };
 

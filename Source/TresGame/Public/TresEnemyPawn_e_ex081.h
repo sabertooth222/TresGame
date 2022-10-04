@@ -23,6 +23,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_UpsideDownFallDisappearID;
     
-    ATresEnemyPawn_e_ex081();
+    ATresEnemyPawn_e_ex081(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -24,6 +24,6 @@ private:
     ATresCameraManager* m_CameraManager;
     
 public:
-    ATresProjectile_n_ca201_BoneCrush();
+    ATresProjectile_n_ca201_BoneCrush(const FObjectInitializer& ObjectInitializer);
 };
 

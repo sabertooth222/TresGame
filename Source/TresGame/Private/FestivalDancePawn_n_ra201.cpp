@@ -5,7 +5,7 @@
 void AFestivalDancePawn_n_ra201::OnDanceRhythmBeat() {
 }
 
-AFestivalDancePawn_n_ra201::AFestivalDancePawn_n_ra201() {
+AFestivalDancePawn_n_ra201::AFestivalDancePawn_n_ra201(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_HairMesh1 = CreateDefaultSubobject<UTresSkeletalMeshComponent>(TEXT("TresCharHairMesh1"));
     this->m_Reactor = CreateDefaultSubobject<UTresReactorComponent>(TEXT("TresReactor"));
     this->PerformChangeCount = 0;

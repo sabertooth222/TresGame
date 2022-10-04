@@ -59,7 +59,7 @@ protected:
     uint8 m_bIgnoreTargetForwardWhenPredictLocation: 1;
     
 public:
-    ATresGumiShipProjectileBase();
+    ATresGumiShipProjectileBase(const FObjectInitializer& ObjectInitializer);
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void _ReceiveOverRange();

@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable)
 class ATresGumiShipSpWeapon030Actor : public ATresGumiShipSpecialWeaponBaseActor {
     GENERATED_BODY()
 public:
-    ATresGumiShipSpWeapon030Actor();
+    ATresGumiShipSpWeapon030Actor(const FObjectInitializer& ObjectInitializer);
 };
 

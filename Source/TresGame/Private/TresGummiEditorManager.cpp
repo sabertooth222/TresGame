@@ -20,7 +20,7 @@ void ATresGummiEditorManager::DelegateSpecialWeaponHelpOut(int32 InParam) {
 void ATresGummiEditorManager::DelegateGummiAbilityHelpOut(int32 InParam) {
 }
 
-ATresGummiEditorManager::ATresGummiEditorManager() {
+ATresGummiEditorManager::ATresGummiEditorManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_pSceneComponent = CreateDefaultSubobject<USceneComponent>(TEXT("GummiEditorManagerScene"));
     this->m_pRootComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("GummiEditorManagerRoot"));
     this->GummiShipActorRef = ATresCreateGummiShipActor::StaticClass();

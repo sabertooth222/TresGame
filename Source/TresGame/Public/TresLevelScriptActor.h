@@ -36,7 +36,7 @@ private:
     ETresLevelVisibility m_LevelVisibleType;
     
 public:
-    ATresLevelScriptActor();
+    ATresLevelScriptActor(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void VanishLevelEntities(FName TargetGroup, TEnumAsByte<ETresLevelEntityDisappearMode> DisappearMode, bool SaveProperties);
     

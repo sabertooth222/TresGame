@@ -9,7 +9,7 @@ UCLASS(Blueprintable)
 class ATresLinkActor_e_ex044_MoveLocation : public AActor {
     GENERATED_BODY()
 public:
-    ATresLinkActor_e_ex044_MoveLocation();
+    ATresLinkActor_e_ex044_MoveLocation(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetAvailable(bool Set, ATresEnemyPawn_e_ex044* pPawn);
     

@@ -8,6 +8,6 @@
 
 
 
-ATresSnowShaderController::ATresSnowShaderController() {
+ATresSnowShaderController::ATresSnowShaderController(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

@@ -101,6 +101,6 @@ protected:
     AActor* m_Target;
     
 public:
-    ATresProjectile_e_ex354_ChargeShot();
+    ATresProjectile_e_ex354_ChargeShot(const FObjectInitializer& ObjectInitializer);
 };
 

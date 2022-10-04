@@ -1,5 +1,5 @@
 #include "TresGumiShipTriggerSphere.h"
 
-ATresGumiShipTriggerSphere::ATresGumiShipTriggerSphere() {
+ATresGumiShipTriggerSphere::ATresGumiShipTriggerSphere(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

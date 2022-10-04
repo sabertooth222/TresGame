@@ -1,5 +1,5 @@
 #include "TresTsGameSpaceManagerBase.h"
 
-ATresTsGameSpaceManagerBase::ATresTsGameSpaceManagerBase() {
+ATresTsGameSpaceManagerBase::ATresTsGameSpaceManagerBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

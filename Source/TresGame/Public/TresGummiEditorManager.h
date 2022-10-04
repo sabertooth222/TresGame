@@ -120,7 +120,7 @@ protected:
     TArray<FTresRealGummiShipStruct> m_DecoGummiData9;
     
 public:
-    ATresGummiEditorManager();
+    ATresGummiEditorManager(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintPure)
     ATresHudGummiMenu* GetHUD() const;
     

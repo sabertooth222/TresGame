@@ -1,7 +1,7 @@
 #include "TresActor_e_ex773_Updraft.h"
 #include "Components/CapsuleComponent.h"
 
-ATresActor_e_ex773_Updraft::ATresActor_e_ex773_Updraft() {
+ATresActor_e_ex773_Updraft::ATresActor_e_ex773_Updraft(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_ForceRateCurve = NULL;
     this->m_Projectile = NULL;
     this->MyUpdraftComponent = CreateDefaultSubobject<UCapsuleComponent>(TEXT("UpdraftCollision0"));

@@ -14,7 +14,7 @@ int32 ATresEnemyPawn_e_ca901::GetExistTentacleNum() {
 void ATresEnemyPawn_e_ca901::BP_DebugAllSpawnTentacle() {
 }
 
-ATresEnemyPawn_e_ca901::ATresEnemyPawn_e_ca901() {
+ATresEnemyPawn_e_ca901::ATresEnemyPawn_e_ca901(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_JointActorAsset = NULL;
     this->m_pJointActor = NULL;
     this->m_ShipMeshActor = NULL;

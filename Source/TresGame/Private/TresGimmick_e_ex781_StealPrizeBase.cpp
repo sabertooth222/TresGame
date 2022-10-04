@@ -1,7 +1,7 @@
 #include "TresGimmick_e_ex781_StealPrizeBase.h"
 #include "Components/SceneComponent.h"
 
-ATresGimmick_e_ex781_StealPrizeBase::ATresGimmick_e_ex781_StealPrizeBase() {
+ATresGimmick_e_ex781_StealPrizeBase::ATresGimmick_e_ex781_StealPrizeBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MyRoot = CreateDefaultSubobject<USceneComponent>(TEXT("TresRoot"));
     this->m_ParabolaHeight = 280.00f;
     this->m_SoundGet = NULL;

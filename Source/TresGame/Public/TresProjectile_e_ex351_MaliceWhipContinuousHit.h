@@ -7,6 +7,6 @@ UCLASS(Blueprintable, HideDropdown)
 class ATresProjectile_e_ex351_MaliceWhipContinuousHit : public ATresProjectileBase {
     GENERATED_BODY()
 public:
-    ATresProjectile_e_ex351_MaliceWhipContinuousHit();
+    ATresProjectile_e_ex351_MaliceWhipContinuousHit(const FObjectInitializer& ObjectInitializer);
 };
 

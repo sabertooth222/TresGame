@@ -1,5 +1,5 @@
 #include "TresCharTriggerBox.h"
 
-ATresCharTriggerBox::ATresCharTriggerBox() {
+ATresCharTriggerBox::ATresCharTriggerBox(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

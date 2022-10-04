@@ -65,7 +65,7 @@ void ATresEnemyPawn_e_ex761::DebugEndReverseMode() {
 void ATresEnemyPawn_e_ex761::DebugApplyReverseMode() {
 }
 
-ATresEnemyPawn_e_ex761::ATresEnemyPawn_e_ex761() {
+ATresEnemyPawn_e_ex761::ATresEnemyPawn_e_ex761(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_ManagerPawnClass = NULL;
     this->m_bEnableSyncAttractionHitPoint = false;
     this->m_WarpParticleAttachDataAsset = NULL;

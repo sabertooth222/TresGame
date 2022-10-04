@@ -101,7 +101,7 @@ protected:
     bool m_bExplisionAttack;
     
 public:
-    ATresEnemyPawn_e_ex056();
+    ATresEnemyPawn_e_ex056(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetSplineActor(ASQEX_SplineActor* pActor);
     

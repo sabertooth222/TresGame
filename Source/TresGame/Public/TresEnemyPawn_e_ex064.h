@@ -34,7 +34,7 @@ private:
     TArray<ATresEnemyPawn_e_ex064_Wall*> m_WallPartsList;
     
 public:
-    ATresEnemyPawn_e_ex064();
+    ATresEnemyPawn_e_ex064(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     bool RequestWallPartsRespawn(float waitRespawnTime);
     

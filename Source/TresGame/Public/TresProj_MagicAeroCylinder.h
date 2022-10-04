@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable)
 class ATresProj_MagicAeroCylinder : public ATresProj_MagicAero {
     GENERATED_BODY()
 public:
-    ATresProj_MagicAeroCylinder();
+    ATresProj_MagicAeroCylinder(const FObjectInitializer& ObjectInitializer);
 };
 

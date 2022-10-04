@@ -17,6 +17,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FLinearColor m_ChangeColor;
     
-    ATresProjectile_e_ex771_FlarePillar();
+    ATresProjectile_e_ex771_FlarePillar(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -22,6 +22,6 @@ private:
     UTresAtkCollComponent* MyAtkColl;
     
 public:
-    ATresFRSnowCoverSwingTree();
+    ATresFRSnowCoverSwingTree(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -148,7 +148,7 @@ private:
     TArray<USoundBase*> m_BigDealLuxordSideCardAttackVoiceDataList;
     
 public:
-    ATresEnemyPawn_e_ex356();
+    ATresEnemyPawn_e_ex356(const FObjectInitializer& ObjectInitializer);
 private:
     UFUNCTION(BlueprintCallable)
     void OnPlayerTakeDamage(float DamagePoint, AController* InstigatedBy, const FHitResult& HitInfo, const FTresDamageInfo& DamageInfo, FVector ShotFromDirection, AActor* DamageCauser);

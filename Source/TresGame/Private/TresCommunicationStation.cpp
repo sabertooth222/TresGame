@@ -1,5 +1,5 @@
 #include "TresCommunicationStation.h"
 
-ATresCommunicationStation::ATresCommunicationStation() {
+ATresCommunicationStation::ATresCommunicationStation(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

@@ -1,5 +1,5 @@
 #include "TresGumiShipEnemyTerritoryPoint.h"
 
-ATresGumiShipEnemyTerritoryPoint::ATresGumiShipEnemyTerritoryPoint() {
+ATresGumiShipEnemyTerritoryPoint::ATresGumiShipEnemyTerritoryPoint(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

@@ -18,6 +18,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* m_LandHitEffCmp;
     
-    ATresProjectile_e_dw407b_BigRoar();
+    ATresProjectile_e_dw407b_BigRoar(const FObjectInitializer& ObjectInitializer);
 };
 

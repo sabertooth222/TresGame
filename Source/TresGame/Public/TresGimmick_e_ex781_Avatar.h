@@ -30,6 +30,6 @@ private:
     ATresEnemyPawn_e_ex781* m_pAvaterPawn[13];
     
 public:
-    ATresGimmick_e_ex781_Avatar();
+    ATresGimmick_e_ex781_Avatar(const FObjectInitializer& ObjectInitializer);
 };
 

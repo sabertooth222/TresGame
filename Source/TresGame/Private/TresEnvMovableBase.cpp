@@ -1,5 +1,5 @@
 #include "TresEnvMovableBase.h"
 
-ATresEnvMovableBase::ATresEnvMovableBase() {
+ATresEnvMovableBase::ATresEnvMovableBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

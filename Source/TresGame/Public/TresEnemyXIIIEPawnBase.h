@@ -32,7 +32,7 @@ protected:
     TSubclassOf<ATresEnemyManager_XIIIE> m_ManagerAsset;
     
 public:
-    ATresEnemyXIIIEPawnBase();
+    ATresEnemyXIIIEPawnBase(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     bool IsStartFirstAnnihilation();
     

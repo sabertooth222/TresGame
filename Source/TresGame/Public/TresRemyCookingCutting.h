@@ -86,7 +86,7 @@ private:
     AStaticMeshActor* m_pBowlActor;
     
 public:
-    ATresRemyCookingCutting();
+    ATresRemyCookingCutting(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void PushState(TEnumAsByte<RemyCookingGameState> State);
     

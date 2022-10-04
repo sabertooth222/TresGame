@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable)
 class ATresProj_MagicDarkFiragaCore : public ATresProj_MagicFire {
     GENERATED_BODY()
 public:
-    ATresProj_MagicDarkFiragaCore();
+    ATresProj_MagicDarkFiragaCore(const FObjectInitializer& ObjectInitializer);
 };
 

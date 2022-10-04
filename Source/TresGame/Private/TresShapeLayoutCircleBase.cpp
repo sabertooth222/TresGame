@@ -1,5 +1,5 @@
 #include "TresShapeLayoutCircleBase.h"
 
-ATresShapeLayoutCircleBase::ATresShapeLayoutCircleBase() {
+ATresShapeLayoutCircleBase::ATresShapeLayoutCircleBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

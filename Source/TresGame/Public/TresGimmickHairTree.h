@@ -17,7 +17,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_ActionPointSize2D;
     
-    ATresGimmickHairTree();
+    ATresGimmickHairTree(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     FVector GetActionPointLocation(int32 InIndex);
     

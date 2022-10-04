@@ -50,7 +50,7 @@ private:
     USQEX_ParticleAttachDataAsset* m_WheelEffectAttachDataAsset;
     
 public:
-    ATresEnemyPawn_e_ex043();
+    ATresEnemyPawn_e_ex043(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetWeakAuraPhase();
     

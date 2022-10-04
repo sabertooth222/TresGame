@@ -49,7 +49,7 @@ private:
     UTresNavMapShowManager* m_pNavMapShowManager;
     
 public:
-    ATresGameMode();
+    ATresGameMode(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintPure)
     ATresAICoordinator* GetAICoordinator() const;
     

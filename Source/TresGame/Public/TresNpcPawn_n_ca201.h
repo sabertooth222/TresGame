@@ -18,6 +18,6 @@ private:
     bool m_IsLinkMode;
     
 public:
-    ATresNpcPawn_n_ca201();
+    ATresNpcPawn_n_ca201(const FObjectInitializer& ObjectInitializer);
 };
 

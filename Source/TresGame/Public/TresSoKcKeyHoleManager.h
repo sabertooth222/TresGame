@@ -22,7 +22,7 @@ private:
     FBgmChangeThresholdOverSignature _OnBgmChangeThresholdOver;
     
 public:
-    ATresSoKcKeyHoleManager();
+    ATresSoKcKeyHoleManager(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static ATresSoKcKeyHoleManager* Get(const UObject* WorldContext);
     

@@ -65,7 +65,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fInWaterWarpDepth;
     
-    ATresNpcPawn_n_ra201();
+    ATresNpcPawn_n_ra201(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetAimOffsetAlpha() const;
     

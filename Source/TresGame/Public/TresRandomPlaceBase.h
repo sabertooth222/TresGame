@@ -18,7 +18,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTresSpawnActorManagerComponent* SpawnActorManager;
     
-    ATresRandomPlaceBase();
+    ATresRandomPlaceBase(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void spawn();
     

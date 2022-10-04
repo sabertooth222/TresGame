@@ -3,6 +3,6 @@
 void ATresGumiShipEnemy632Pawn::SetCannonShotCount(int32 ShotAttackCount) {
 }
 
-ATresGumiShipEnemy632Pawn::ATresGumiShipEnemy632Pawn() {
+ATresGumiShipEnemy632Pawn::ATresGumiShipEnemy632Pawn(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

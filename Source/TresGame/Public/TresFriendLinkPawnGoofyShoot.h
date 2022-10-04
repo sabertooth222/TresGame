@@ -17,6 +17,6 @@ private:
     AActor* m_pDummyTarget;
     
 public:
-    ATresFriendLinkPawnGoofyShoot();
+    ATresFriendLinkPawnGoofyShoot(const FObjectInitializer& ObjectInitializer);
 };
 

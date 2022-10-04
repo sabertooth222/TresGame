@@ -1,6 +1,6 @@
 #include "TresGumiShipEnemy617Pawn.h"
 
-ATresGumiShipEnemy617Pawn::ATresGumiShipEnemy617Pawn() {
+ATresGumiShipEnemy617Pawn::ATresGumiShipEnemy617Pawn(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_MaxSpeed = 300.00f;
     this->m_fWaitTime = 1.00f;
     this->m_fMovieRange = 600.00f;

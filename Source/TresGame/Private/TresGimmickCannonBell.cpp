@@ -3,7 +3,7 @@
 #include "TresBodyCollPrimitive.h"
 #include "TresLockonTargetComponent.h"
 
-ATresGimmickCannonBell::ATresGimmickCannonBell() {
+ATresGimmickCannonBell::ATresGimmickCannonBell(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_pBellEffect = CreateDefaultSubobject<UParticleSystemComponent>(TEXT("BellEnableEffect"));
     this->m_pBodyCollPrimitive = CreateDefaultSubobject<UTresBodyCollPrimitive>(TEXT("BodyCollision"));
     this->m_pLockonTargetComponent = CreateDefaultSubobject<UTresLockonTargetComponent>(TEXT("LockonTarget"));

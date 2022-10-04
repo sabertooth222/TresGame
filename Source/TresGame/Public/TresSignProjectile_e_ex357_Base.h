@@ -25,6 +25,6 @@ private:
     TArray<FTresSignProjectileAttackStartDelayParam_e_ex357> m_AttackStartDelayParamList;
     
 public:
-    ATresSignProjectile_e_ex357_Base();
+    ATresSignProjectile_e_ex357_Base(const FObjectInitializer& ObjectInitializer);
 };
 

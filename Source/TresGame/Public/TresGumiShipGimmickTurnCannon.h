@@ -15,6 +15,6 @@ protected:
     FName m_DataTableName;
     
 public:
-    ATresGumiShipGimmickTurnCannon();
+    ATresGumiShipGimmickTurnCannon(const FObjectInitializer& ObjectInitializer);
 };
 

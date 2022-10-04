@@ -37,7 +37,7 @@ float ATresEnemyPawn_e_ex054::GetAddMotionAlpha() {
     return 0.0f;
 }
 
-ATresEnemyPawn_e_ex054::ATresEnemyPawn_e_ex054() {
+ATresEnemyPawn_e_ex054::ATresEnemyPawn_e_ex054(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_EffDataAsset = NULL;
     this->m_VolcanoEff = NULL;
     this->m_pro_VolcanoEffData = NULL;

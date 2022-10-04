@@ -45,7 +45,7 @@ protected:
     UParticleSystemComponent* m_EnvironmentalChangeEffectCmp;
     
 public:
-    ATresEnemyPawn_e_ex352();
+    ATresEnemyPawn_e_ex352(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     ATresProjectileBase* SpawnDarkMatter(int32 Index);
     

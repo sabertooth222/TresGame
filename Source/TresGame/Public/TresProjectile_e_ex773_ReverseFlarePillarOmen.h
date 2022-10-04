@@ -43,7 +43,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UCurveFloat* m_UpdraftForceRateCurve;
     
-    ATresProjectile_e_ex773_ReverseFlarePillarOmen();
+    ATresProjectile_e_ex773_ReverseFlarePillarOmen(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void CreateUpdraft();
     

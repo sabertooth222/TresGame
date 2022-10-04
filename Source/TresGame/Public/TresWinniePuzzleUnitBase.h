@@ -18,6 +18,6 @@ protected:
     ATresWinniePuzzleCollisionUnit* m_pCollisionUnit;
     
 public:
-    ATresWinniePuzzleUnitBase();
+    ATresWinniePuzzleUnitBase(const FObjectInitializer& ObjectInitializer);
 };
 

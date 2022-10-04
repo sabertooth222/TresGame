@@ -57,7 +57,7 @@ void ATresGumiShipEnemy625Pawn::_AttackLaser() {
 void ATresGumiShipEnemy625Pawn::_AttackCluster(bool PlayerTarget, FVector vect) {
 }
 
-ATresGumiShipEnemy625Pawn::ATresGumiShipEnemy625Pawn() {
+ATresGumiShipEnemy625Pawn::ATresGumiShipEnemy625Pawn(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_pSandSmokeEffectVFX = NULL;
     this->m_pEmergenSandSmokeEffectVFX = NULL;
     this->m_pLatentSandSmokeEffectVFX = NULL;

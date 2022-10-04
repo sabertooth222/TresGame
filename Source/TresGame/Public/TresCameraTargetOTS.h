@@ -25,7 +25,7 @@ protected:
     float m_LimitPitchMax;
     
 public:
-    ATresCameraTargetOTS();
+    ATresCameraTargetOTS(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetLimitPitch(float Min, float Max);
     

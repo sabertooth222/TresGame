@@ -17,6 +17,6 @@ private:
     ATresCharPawnBase* m_Target;
     
 public:
-    ATresEnemy_e_ex781_IllegalFinishProjectile();
+    ATresEnemy_e_ex781_IllegalFinishProjectile(const FObjectInitializer& ObjectInitializer);
 };
 

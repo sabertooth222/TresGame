@@ -4,7 +4,7 @@ bool ATresEnemyPawn_e_ex311::IsFinishAttack() {
     return false;
 }
 
-ATresEnemyPawn_e_ex311::ATresEnemyPawn_e_ex311() {
+ATresEnemyPawn_e_ex311::ATresEnemyPawn_e_ex311(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_KBBoard = NULL;
     this->m_KBBoardTailAttackPawnData = NULL;
     this->m_SpawnTailAttackIntervalTime = 0.50f;

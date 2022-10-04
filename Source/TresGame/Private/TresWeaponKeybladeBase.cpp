@@ -1,5 +1,5 @@
 #include "TresWeaponKeybladeBase.h"
 
-ATresWeaponKeybladeBase::ATresWeaponKeybladeBase() {
+ATresWeaponKeybladeBase::ATresWeaponKeybladeBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

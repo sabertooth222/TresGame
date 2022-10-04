@@ -51,7 +51,7 @@ protected:
     TArray<UDecalComponent*> m_DecalComp;
     
 public:
-    ATresCreateGummiShipActor();
+    ATresCreateGummiShipActor(const FObjectInitializer& ObjectInitializer);
 private:
     UFUNCTION()
     void ChangeState(TEnumAsByte<CreateGummiShipState> State);

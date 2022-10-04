@@ -400,7 +400,7 @@ private:
     ATresTreasureBox* m_pTreasureBox;
     
 public:
-    ATresVehiclePawnSpecialShip();
+    ATresVehiclePawnSpecialShip(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void OnStartBossDefeatEffect();
     

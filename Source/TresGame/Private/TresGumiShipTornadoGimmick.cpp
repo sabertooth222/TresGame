@@ -3,7 +3,7 @@
 void ATresGumiShipTornadoGimmick::StopRotation(bool bStop) {
 }
 
-ATresGumiShipTornadoGimmick::ATresGumiShipTornadoGimmick() {
+ATresGumiShipTornadoGimmick::ATresGumiShipTornadoGimmick(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->RotationSpeed = 0.00f;
 }
 

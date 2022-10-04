@@ -3,7 +3,7 @@
 void ATresHUDBase::ShowAreaRect(int32 X, int32 Y, int32 Width, int32 Height) {
 }
 
-ATresHUDBase::ATresHUDBase() {
+ATresHUDBase::ATresHUDBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_ScreenMaterial = NULL;
     this->m_ScreenMaterialX = 0.00f;
     this->m_ScreenMaterialY = 0.00f;

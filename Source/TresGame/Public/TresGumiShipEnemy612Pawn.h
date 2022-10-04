@@ -16,6 +16,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float PitchVelocity;
     
-    ATresGumiShipEnemy612Pawn();
+    ATresGumiShipEnemy612Pawn(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -23,7 +23,7 @@ protected:
     ASQEX_SplineActor* EndSplineActor;
     
 public:
-    ATresSplineMeshGenerator();
+    ATresSplineMeshGenerator(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void Create(ASQEX_SplineActor* splineActor, UStaticMesh* StaticMesh, UStaticMesh* collisionStaticMesh);
     

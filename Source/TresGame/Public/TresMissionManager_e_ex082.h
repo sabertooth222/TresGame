@@ -14,6 +14,6 @@ private:
     UTresMissionManagerParam_e_ex082* m_Param;
     
 public:
-    ATresMissionManager_e_ex082();
+    ATresMissionManager_e_ex082(const FObjectInitializer& ObjectInitializer);
 };
 

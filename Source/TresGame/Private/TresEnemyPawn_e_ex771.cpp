@@ -72,7 +72,7 @@ float ATresEnemyPawn_e_ex771::GetEncloseFlareHitTime() {
     return 0.0f;
 }
 
-ATresEnemyPawn_e_ex771::ATresEnemyPawn_e_ex771() {
+ATresEnemyPawn_e_ex771::ATresEnemyPawn_e_ex771(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_pro_EncloseFlareGeneratorClass = NULL;
     this->m_pro_EncloseFlareHvnGeneratorClass = NULL;
     this->m_pro_FlareShotGeneratorClass = NULL;

@@ -48,7 +48,7 @@ private:
     UTresEnemyCardManager_e_ex307* m_CardManager;
     
 public:
-    ATresEnemyPawn_e_ex307();
+    ATresEnemyPawn_e_ex307(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SpawnCards();
     

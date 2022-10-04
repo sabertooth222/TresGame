@@ -31,6 +31,6 @@ float ATresGimmick_Bx_FlashTracerMgr::GetClearTime(ETresGimmickBxFlashTracerCour
 
 
 
-ATresGimmick_Bx_FlashTracerMgr::ATresGimmick_Bx_FlashTracerMgr() {
+ATresGimmick_Bx_FlashTracerMgr::ATresGimmick_Bx_FlashTracerMgr(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

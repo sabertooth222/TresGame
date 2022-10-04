@@ -19,6 +19,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bDebugDisp;
     
-    ATresProjectile_e_ex354_ArrowRain();
+    ATresProjectile_e_ex354_ArrowRain(const FObjectInitializer& ObjectInitializer);
 };
 

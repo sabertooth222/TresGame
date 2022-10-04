@@ -86,7 +86,7 @@ protected:
     ATresEnemyXIIIAManager* m_XIIIAManager;
     
 public:
-    ATresEnemyPawn_e_ex305();
+    ATresEnemyPawn_e_ex305(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     bool IsZeroMagazine();
     

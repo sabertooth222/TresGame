@@ -1,6 +1,6 @@
 #include "TresWinniePuzzleRabbitPawn.h"
 
-ATresWinniePuzzleRabbitPawn::ATresWinniePuzzleRabbitPawn() {
+ATresWinniePuzzleRabbitPawn::ATresWinniePuzzleRabbitPawn(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->EnterAnimationPlayRate = 0.00f;
     this->EnterMoveSpeed = 0.00f;
     this->HarvestJumpMoveSpeed = 0.00f;

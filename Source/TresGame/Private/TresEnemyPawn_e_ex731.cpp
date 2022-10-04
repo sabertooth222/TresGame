@@ -5,7 +5,7 @@ bool ATresEnemyPawn_e_ex731::IsOutOfBattleArea() {
     return false;
 }
 
-ATresEnemyPawn_e_ex731::ATresEnemyPawn_e_ex731() {
+ATresEnemyPawn_e_ex731::ATresEnemyPawn_e_ex731(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_fSmallDamageTurnRate = 0.00f;
     this->m_fBlowDamageTurnRate = 0.00f;
     this->m_bUseBlowAsParabolaDamage = true;

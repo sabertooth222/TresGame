@@ -21,7 +21,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_WindPower;
     
-    ATresGrassShaderController();
+    ATresGrassShaderController(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetGrassParameter(int32 InIndex, FVector InPosition, float InRadius, float inPower, int32 InType, float inDetailPower);
     

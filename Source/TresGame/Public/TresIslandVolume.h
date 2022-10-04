@@ -33,6 +33,6 @@ protected:
     TArray<UTexture2D*> EndResidentTextureList;
     
 public:
-    ATresIslandVolume();
+    ATresIslandVolume(const FObjectInitializer& ObjectInitializer);
 };
 

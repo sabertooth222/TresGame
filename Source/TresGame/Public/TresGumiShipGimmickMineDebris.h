@@ -16,7 +16,7 @@ protected:
     FName m_DataTableName;
     
 public:
-    ATresGumiShipGimmickMineDebris();
+    ATresGumiShipGimmickMineDebris(const FObjectInitializer& ObjectInitializer);
 protected:
     UFUNCTION(BlueprintCallable)
     void _OnOverlapBegin(UPrimitiveComponent* pOverlappedComponent, AActor* pOtherActor, UPrimitiveComponent* pOtherComp, int32 dOtherBodyIndex, bool bFromSweep, const FHitResult& rSweepResult);

@@ -14,6 +14,6 @@ private:
     UTresRootComponent* MyRoot;
     
 public:
-    ATresGimmickBxDarkCubeParts();
+    ATresGimmickBxDarkCubeParts(const FObjectInitializer& ObjectInitializer);
 };
 

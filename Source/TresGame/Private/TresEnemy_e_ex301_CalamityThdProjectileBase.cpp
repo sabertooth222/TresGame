@@ -1,6 +1,6 @@
 #include "TresEnemy_e_ex301_CalamityThdProjectileBase.h"
 
-ATresEnemy_e_ex301_CalamityThdProjectileBase::ATresEnemy_e_ex301_CalamityThdProjectileBase() {
+ATresEnemy_e_ex301_CalamityThdProjectileBase::ATresEnemy_e_ex301_CalamityThdProjectileBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_WaitTime = 0.00f;
     this->m_ScaleXMin = 200.00f;
     this->m_ScaleX = 500.00f;

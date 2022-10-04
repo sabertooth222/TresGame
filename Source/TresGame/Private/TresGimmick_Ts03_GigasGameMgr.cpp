@@ -72,6 +72,6 @@ void ATresGimmick_Ts03_GigasGameMgr::ClearGame_Implementation() {
 void ATresGimmick_Ts03_GigasGameMgr::AddAward(const FString& LocalizeKey, int32 Score) {
 }
 
-ATresGimmick_Ts03_GigasGameMgr::ATresGimmick_Ts03_GigasGameMgr() {
+ATresGimmick_Ts03_GigasGameMgr::ATresGimmick_Ts03_GigasGameMgr(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

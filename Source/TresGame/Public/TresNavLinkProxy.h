@@ -11,7 +11,7 @@ UCLASS(Blueprintable)
 class ATresNavLinkProxy : public ANavLinkProxy {
     GENERATED_BODY()
 public:
-    ATresNavLinkProxy();
+    ATresNavLinkProxy(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetNavLinkEnabled(bool bEnabled);
     

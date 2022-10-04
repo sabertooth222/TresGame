@@ -8,7 +8,7 @@ UCLASS(Blueprintable, HideDropdown)
 class ATresProjectile_e_ex302_BindProjectile : public ATresProjectileBase {
     GENERATED_BODY()
 public:
-    ATresProjectile_e_ex302_BindProjectile();
+    ATresProjectile_e_ex302_BindProjectile(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void HandleOnImpact(const FHitResult& HitResult);
     

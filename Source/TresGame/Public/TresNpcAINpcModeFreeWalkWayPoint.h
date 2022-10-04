@@ -18,7 +18,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector m_LookAtPoint;
     
-    ATresNpcAINpcModeFreeWalkWayPoint();
+    ATresNpcAINpcModeFreeWalkWayPoint(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FString GetCharUniqueIDName() const;
     

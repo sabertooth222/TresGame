@@ -32,6 +32,6 @@ protected:
     FName m_DataTableName;
     
 public:
-    ATresGumiShipGimmickMagmaPool();
+    ATresGumiShipGimmickMagmaPool(const FObjectInitializer& ObjectInitializer);
 };
 

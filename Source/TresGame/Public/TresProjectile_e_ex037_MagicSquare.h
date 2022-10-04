@@ -16,7 +16,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_HoveringSpeedRate;
     
-    ATresProjectile_e_ex037_MagicSquare();
+    ATresProjectile_e_ex037_MagicSquare(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetHoveringZ() const;
     

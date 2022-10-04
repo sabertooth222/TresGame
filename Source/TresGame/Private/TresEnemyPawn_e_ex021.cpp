@@ -53,7 +53,7 @@ bool ATresEnemyPawn_e_ex021::BP_DebugFireBreath() {
 void ATresEnemyPawn_e_ex021::BP_DebugEndWeaponAttack() {
 }
 
-ATresEnemyPawn_e_ex021::ATresEnemyPawn_e_ex021() {
+ATresEnemyPawn_e_ex021::ATresEnemyPawn_e_ex021(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_Reactor = CreateDefaultSubobject<UTresReactorComponent>(TEXT("TresEnemy021Reactor"));
     this->m_PlayerCameraEx021 = NULL;
     this->m_RevengeAction = NULL;

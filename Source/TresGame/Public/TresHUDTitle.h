@@ -63,6 +63,6 @@ private:
     UTresUIP_InitialSetting* m_IniSettings;
     
 public:
-    ATresHUDTitle();
+    ATresHUDTitle(const FObjectInitializer& ObjectInitializer);
 };
 

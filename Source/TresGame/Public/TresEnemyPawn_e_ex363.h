@@ -34,6 +34,6 @@ private:
     ATresCharPawnBase* m_BuddyPawn;
     
 public:
-    ATresEnemyPawn_e_ex363();
+    ATresEnemyPawn_e_ex363(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -18,6 +18,6 @@ protected:
     UParticleSystem* m_FireEffData;
     
 public:
-    ATresProjectile_e_ex711_Missile();
+    ATresProjectile_e_ex711_Missile(const FObjectInitializer& ObjectInitializer);
 };
 

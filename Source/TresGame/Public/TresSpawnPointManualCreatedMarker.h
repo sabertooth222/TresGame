@@ -16,6 +16,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_Height;
     
-    ATresSpawnPointManualCreatedMarker();
+    ATresSpawnPointManualCreatedMarker(const FObjectInitializer& ObjectInitializer);
 };
 

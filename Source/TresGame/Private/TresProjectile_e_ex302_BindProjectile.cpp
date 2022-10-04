@@ -3,6 +3,6 @@
 void ATresProjectile_e_ex302_BindProjectile::HandleOnImpact(const FHitResult& HitResult) {
 }
 
-ATresProjectile_e_ex302_BindProjectile::ATresProjectile_e_ex302_BindProjectile() {
+ATresProjectile_e_ex302_BindProjectile::ATresProjectile_e_ex302_BindProjectile(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

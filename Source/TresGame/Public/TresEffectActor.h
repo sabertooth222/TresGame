@@ -12,7 +12,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTresRootComponent* MyRoot;
     
-    ATresEffectActor();
+    ATresEffectActor(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void ResetEffect(int32 in_GroupID);
     

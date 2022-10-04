@@ -47,7 +47,7 @@ void ATresEnemyPawn_e_bx901::DebugSetDarkNeedleRainNum(int32 InNum) {
 }
 
 
-ATresEnemyPawn_e_bx901::ATresEnemyPawn_e_bx901() {
+ATresEnemyPawn_e_bx901::ATresEnemyPawn_e_bx901(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_fPitchResetRate = 0.15f;
     this->m_fRailSlideRotResetRate = 0.15f;
     this->m_fRailSlideRollScale = 0.00f;

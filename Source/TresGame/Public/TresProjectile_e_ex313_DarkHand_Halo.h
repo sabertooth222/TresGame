@@ -12,6 +12,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_pro_HaloEffData;
     
-    ATresProjectile_e_ex313_DarkHand_Halo();
+    ATresProjectile_e_ex313_DarkHand_Halo(const FObjectInitializer& ObjectInitializer);
 };
 

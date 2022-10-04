@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable)
 class ATresLockOnActor_e_ex353_ForShield : public ATresCharPawnBase {
     GENERATED_BODY()
 public:
-    ATresLockOnActor_e_ex353_ForShield();
+    ATresLockOnActor_e_ex353_ForShield(const FObjectInitializer& ObjectInitializer);
 };
 

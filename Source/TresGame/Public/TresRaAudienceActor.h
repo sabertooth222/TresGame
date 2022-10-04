@@ -38,6 +38,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresComNpcScaleData m_ScaleData;
     
-    ATresRaAudienceActor();
+    ATresRaAudienceActor(const FObjectInitializer& ObjectInitializer);
 };
 

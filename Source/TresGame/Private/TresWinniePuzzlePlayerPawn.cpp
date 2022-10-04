@@ -1,6 +1,6 @@
 #include "TresWinniePuzzlePlayerPawn.h"
 
-ATresWinniePuzzlePlayerPawn::ATresWinniePuzzlePlayerPawn() {
+ATresWinniePuzzlePlayerPawn::ATresWinniePuzzlePlayerPawn(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->RestingIdlingPlayTimes = 0;
     this->WalkingRunningRotateRate = 0.00f;
     this->StartWalkingStickValue = 0.00f;

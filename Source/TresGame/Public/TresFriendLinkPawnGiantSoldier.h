@@ -81,6 +81,6 @@ private:
     ATresProjectileBase* m_pProjectile;
     
 public:
-    ATresFriendLinkPawnGiantSoldier();
+    ATresFriendLinkPawnGiantSoldier(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -26,7 +26,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_Param_FinishSlowTime;
     
-    ATresFriendLinkPawnPromiseWings();
+    ATresFriendLinkPawnPromiseWings(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FRotator BP_GetRotationToPromiseWingsTarget() const;
     

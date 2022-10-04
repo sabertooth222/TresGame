@@ -2,7 +2,7 @@
 #include "Components/CapsuleComponent.h"
 #include "Components/StaticMeshComponent.h"
 
-ATresGimmick_e_ex781_GravitySphere::ATresGimmick_e_ex781_GravitySphere() {
+ATresGimmick_e_ex781_GravitySphere::ATresGimmick_e_ex781_GravitySphere(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MyGravityCollision = CreateDefaultSubobject<UCapsuleComponent>(TEXT("GravitySceneCollision0"));
     this->MyCatchDetectCollision = CreateDefaultSubobject<UCapsuleComponent>(TEXT("CatchDetectCollision0"));
     this->MyDomeCollision = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("DomeCollision0"));

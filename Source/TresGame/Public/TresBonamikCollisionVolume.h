@@ -38,6 +38,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     TArray<USkinnedMeshComponent*> m_ReferencedComponets;
     
-    ATresBonamikCollisionVolume();
+    ATresBonamikCollisionVolume(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -16,7 +16,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fSmallDamageTurnRate;
     
-    ATresEnemyPawn_e_ex732();
+    ATresEnemyPawn_e_ex732(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetUpperBodyBlendWeight() const;
     

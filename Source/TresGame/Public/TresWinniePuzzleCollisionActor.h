@@ -14,6 +14,6 @@ protected:
     USphereComponent* SphereComponent;
     
 public:
-    ATresWinniePuzzleCollisionActor();
+    ATresWinniePuzzleCollisionActor(const FObjectInitializer& ObjectInitializer);
 };
 

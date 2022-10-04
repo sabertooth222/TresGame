@@ -22,6 +22,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool IsHologramDestroyEvent;
     
-    ATresPhotoHologramAreaVolume();
+    ATresPhotoHologramAreaVolume(const FObjectInitializer& ObjectInitializer);
 };
 

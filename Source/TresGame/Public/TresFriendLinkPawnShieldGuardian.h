@@ -25,6 +25,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_Param_MeshFloorPitchLimit;
     
-    ATresFriendLinkPawnShieldGuardian();
+    ATresFriendLinkPawnShieldGuardian(const FObjectInitializer& ObjectInitializer);
 };
 

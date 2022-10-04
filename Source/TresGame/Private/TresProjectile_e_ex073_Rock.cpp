@@ -1,6 +1,6 @@
 #include "TresProjectile_e_ex073_Rock.h"
 
-ATresProjectile_e_ex073_Rock::ATresProjectile_e_ex073_Rock() {
+ATresProjectile_e_ex073_Rock::ATresProjectile_e_ex073_Rock(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_FlipProjectileSpeed = 0.00f;
     this->m_FlipAngle = 0.00f;
     this->m_FlipMaxAngle = 0.00f;

@@ -33,7 +33,7 @@ private:
     bool m_bIgnoreParentRotation;
     
 public:
-    ATresGumiShipRailSlideArrangement();
+    ATresGumiShipRailSlideArrangement(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void BP_SwitchRailSwitchState(FName RailSwitchName);
     

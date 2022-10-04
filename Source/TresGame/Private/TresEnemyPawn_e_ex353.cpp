@@ -57,7 +57,7 @@ void ATresEnemyPawn_e_ex353::BP_FinishThornWildDance() {
 void ATresEnemyPawn_e_ex353::BP_EndHandCharging() {
 }
 
-ATresEnemyPawn_e_ex353::ATresEnemyPawn_e_ex353() {
+ATresEnemyPawn_e_ex353::ATresEnemyPawn_e_ex353(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_ThornBeamManager = CreateDefaultSubobject<UTresProjectileManager_e_ex353_ThornBeam>(TEXT("ThornBeamManager"));
     this->m_ShieldActorClass = NULL;
     this->m_ThornWildDanceDarkAsset = NULL;

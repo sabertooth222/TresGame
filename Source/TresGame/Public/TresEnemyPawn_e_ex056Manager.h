@@ -38,7 +38,7 @@ private:
     bool m_bNotifyStop;
     
 public:
-    ATresEnemyPawn_e_ex056Manager();
+    ATresEnemyPawn_e_ex056Manager(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     bool SpawnFlyPudding(const int32 Num, const int32 SplineIndex, const float MoveSpeed);
     

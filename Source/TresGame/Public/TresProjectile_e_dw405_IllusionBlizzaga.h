@@ -18,6 +18,6 @@ private:
     float m_SpinSpeedInterpTime;
     
 public:
-    ATresProjectile_e_dw405_IllusionBlizzaga();
+    ATresProjectile_e_dw405_IllusionBlizzaga(const FObjectInitializer& ObjectInitializer);
 };
 

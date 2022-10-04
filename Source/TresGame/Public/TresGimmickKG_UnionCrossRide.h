@@ -32,7 +32,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ResoundWaitTime;
     
-    ATresGimmickKG_UnionCrossRide();
+    ATresGimmickKG_UnionCrossRide(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void StartUnionCross(ATresCharPawnBase* pPawn, ATresEventPawnBase* pAttachPawn);
     

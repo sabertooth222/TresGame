@@ -21,6 +21,6 @@ protected:
     float m_JumpLookRate;
     
 public:
-    ATresCameraDMBase();
+    ATresCameraDMBase(const FObjectInitializer& ObjectInitializer);
 };
 

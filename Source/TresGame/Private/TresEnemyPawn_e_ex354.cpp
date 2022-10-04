@@ -113,7 +113,7 @@ bool ATresEnemyPawn_e_ex354::CanChangeField_Doughnut() const {
 void ATresEnemyPawn_e_ex354::BP_OnReceiveRemoteEvent(FName inEventName) {
 }
 
-ATresEnemyPawn_e_ex354::ATresEnemyPawn_e_ex354() {
+ATresEnemyPawn_e_ex354::ATresEnemyPawn_e_ex354(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_bFlyMode = false;
     this->m_bAura = false;
     this->e_ex313Pawn = NULL;

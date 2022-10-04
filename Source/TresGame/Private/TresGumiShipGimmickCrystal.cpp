@@ -14,7 +14,7 @@ float ATresGumiShipGimmickCrystal::_GetRecoveryInversePoint() {
 void ATresGumiShipGimmickCrystal::_CheckTreasureMap() {
 }
 
-ATresGumiShipGimmickCrystal::ATresGumiShipGimmickCrystal() {
+ATresGumiShipGimmickCrystal::ATresGumiShipGimmickCrystal(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_NowHitPoint = 0.00f;
     this->m_MaxHP = 0;
     this->m_MaxHitPoint = 3000;

@@ -14,6 +14,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float PermissionAngle;
     
-    ATresHopActorEw();
+    ATresHopActorEw(const FObjectInitializer& ObjectInitializer);
 };
 

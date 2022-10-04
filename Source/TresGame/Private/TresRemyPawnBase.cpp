@@ -1,5 +1,5 @@
 #include "TresRemyPawnBase.h"
 
-ATresRemyPawnBase::ATresRemyPawnBase() {
+ATresRemyPawnBase::ATresRemyPawnBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

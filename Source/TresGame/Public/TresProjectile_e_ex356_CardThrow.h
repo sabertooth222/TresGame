@@ -7,7 +7,7 @@ UCLASS(Blueprintable)
 class ATresProjectile_e_ex356_CardThrow : public ATresProjectile_e_ex356_HideAndSeekBase {
     GENERATED_BODY()
 public:
-    ATresProjectile_e_ex356_CardThrow();
+    ATresProjectile_e_ex356_CardThrow(const FObjectInitializer& ObjectInitializer);
 private:
     UFUNCTION(BlueprintCallable)
     void MoveUpdate(float InDeltaTime);

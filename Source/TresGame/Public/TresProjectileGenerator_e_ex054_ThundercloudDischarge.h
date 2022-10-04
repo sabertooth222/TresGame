@@ -18,6 +18,6 @@ protected:
     UParticleSystem* m_pro_DischargeEffData;
     
 public:
-    ATresProjectileGenerator_e_ex054_ThundercloudDischarge();
+    ATresProjectileGenerator_e_ex054_ThundercloudDischarge(const FObjectInitializer& ObjectInitializer);
 };
 

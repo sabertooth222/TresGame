@@ -35,7 +35,7 @@ private:
     UMaterialParameterCollection* m_MPCSysCommon;
     
 public:
-    ATresSceneManager();
+    ATresSceneManager(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void TrgSceneCapture(bool InIsEnableInvGamma, bool inIsSmartPhoneCameraCapture, bool inIsCampBackground);
     

@@ -1,5 +1,5 @@
 #include "TresEnemyBouncyPetsPawnBase.h"
 
-ATresEnemyBouncyPetsPawnBase::ATresEnemyBouncyPetsPawnBase() {
+ATresEnemyBouncyPetsPawnBase::ATresEnemyBouncyPetsPawnBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

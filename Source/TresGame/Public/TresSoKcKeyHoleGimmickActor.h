@@ -58,6 +58,6 @@ protected:
     TArray<FTresSoKcKeyHoleConnectNode> m_ConnectableKeyHoleList;
     
 public:
-    ATresSoKcKeyHoleGimmickActor();
+    ATresSoKcKeyHoleGimmickActor(const FObjectInitializer& ObjectInitializer);
 };
 

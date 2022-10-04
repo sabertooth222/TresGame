@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresGumiShipTriggerCapsule : public ATriggerCapsule {
     GENERATED_BODY()
 public:
-    ATresGumiShipTriggerCapsule();
+    ATresGumiShipTriggerCapsule(const FObjectInitializer& ObjectInitializer);
 };
 

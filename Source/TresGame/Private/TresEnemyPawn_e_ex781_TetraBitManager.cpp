@@ -1,6 +1,6 @@
 #include "TresEnemyPawn_e_ex781_TetraBitManager.h"
 
-ATresEnemyPawn_e_ex781_TetraBitManager::ATresEnemyPawn_e_ex781_TetraBitManager() {
+ATresEnemyPawn_e_ex781_TetraBitManager::ATresEnemyPawn_e_ex781_TetraBitManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_TetraBitClass = NULL;
     this->m_TriangleParticleData = NULL;
     this->m_RiseParticleData = NULL;

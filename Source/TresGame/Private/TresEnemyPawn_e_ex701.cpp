@@ -17,7 +17,7 @@ void ATresEnemyPawn_e_ex701::DebugSetRushNum(int32 Num) {
 void ATresEnemyPawn_e_ex701::DebugSetEnableTarHandAlwaysEnd(int32 bEnable) {
 }
 
-ATresEnemyPawn_e_ex701::ATresEnemyPawn_e_ex701() {
+ATresEnemyPawn_e_ex701::ATresEnemyPawn_e_ex701(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_GroundEffectAttachDataAsset = NULL;
 }
 

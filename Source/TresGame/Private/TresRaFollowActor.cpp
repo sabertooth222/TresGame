@@ -13,7 +13,7 @@ void ATresRaFollowActor::InitGroup(TArray<ATresRaFollowActor*> groupActors) {
 void ATresRaFollowActor::_OnGroupActorTouched(int32 groupNumber) {
 }
 
-ATresRaFollowActor::ATresRaFollowActor() {
+ATresRaFollowActor::ATresRaFollowActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_GroupNumber = 0;
     this->m_ReactDistance = 100.00f;
     this->m_MaxSpeed = 680.00f;

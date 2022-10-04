@@ -79,7 +79,7 @@ private:
     AStaticMeshActor* m_pEggBowlActor;
     
 public:
-    ATresRemyCookingEggCrackingV2();
+    ATresRemyCookingEggCrackingV2(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void PushState(TEnumAsByte<RemyCookingGameState> State);
     

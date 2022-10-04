@@ -42,7 +42,7 @@ void ATresPlacePrizeBase::CallUserConstructionScript() {
 
 
 
-ATresPlacePrizeBase::ATresPlacePrizeBase() {
+ATresPlacePrizeBase::ATresPlacePrizeBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MyRoot = CreateDefaultSubobject<USceneComponent>(TEXT("SceneComponent"));
     this->CollectionMovementClass = NULL;
     this->OverrideSphereRadius_ = 300.00f;

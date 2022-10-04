@@ -28,6 +28,6 @@ void ATresCameraRotTarget::BP_SetControllerStick(TEnumAsByte<ETresCameraStick> L
 void ATresCameraRotTarget::BP_SetAutoRotationParam(FRotator AutoRotation, bool bLerpAutoRotationYaw) {
 }
 
-ATresCameraRotTarget::ATresCameraRotTarget() {
+ATresCameraRotTarget::ATresCameraRotTarget(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

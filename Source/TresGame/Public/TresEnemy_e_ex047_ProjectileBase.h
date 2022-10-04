@@ -22,6 +22,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_FireTurnAfterHomingTurnMax;
     
-    ATresEnemy_e_ex047_ProjectileBase();
+    ATresEnemy_e_ex047_ProjectileBase(const FObjectInitializer& ObjectInitializer);
 };
 

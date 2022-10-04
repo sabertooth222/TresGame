@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresStylePawnWATower : public ATresStylePawnBase {
     GENERATED_BODY()
 public:
-    ATresStylePawnWATower();
+    ATresStylePawnWATower(const FObjectInitializer& ObjectInitializer);
 };
 

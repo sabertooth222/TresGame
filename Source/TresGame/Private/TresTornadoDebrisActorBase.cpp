@@ -9,7 +9,7 @@ FVector ATresTornadoDebrisActorBase::GetLocalEvadeLocation(float inMaxEvadeDista
 }
 
 
-ATresTornadoDebrisActorBase::ATresTornadoDebrisActorBase() {
+ATresTornadoDebrisActorBase::ATresTornadoDebrisActorBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_pRotateSceneComp = NULL;
     this->m_pDebrisMeshComp = NULL;
     this->m_iPushLevel = 0;

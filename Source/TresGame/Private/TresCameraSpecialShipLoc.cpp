@@ -1,6 +1,6 @@
 #include "TresCameraSpecialShipLoc.h"
 
-ATresCameraSpecialShipLoc::ATresCameraSpecialShipLoc() {
+ATresCameraSpecialShipLoc::ATresCameraSpecialShipLoc(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_PluralLimitYawMin[0] = -65.00f;
     this->m_PluralLimitYawMin[1] = -65.00f;
     this->m_PluralLimitYawMin[2] = -65.00f;

@@ -22,6 +22,6 @@ private:
     UTresUIP_Tutorial* m_Tutorial;
     
 public:
-    ATresHUDTutorial();
+    ATresHUDTutorial(const FObjectInitializer& ObjectInitializer);
 };
 

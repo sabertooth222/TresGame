@@ -76,7 +76,7 @@ bool ATresEnemyPawn_e_ex781::AliveCallGigasGenerator() {
     return false;
 }
 
-ATresEnemyPawn_e_ex781::ATresEnemyPawn_e_ex781() {
+ATresEnemyPawn_e_ex781::ATresEnemyPawn_e_ex781(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_OpacityFadeSpeed = 5.00f;
     this->m_AeroGuardState = NULL;
     this->m_BackJumpState = NULL;

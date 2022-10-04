@@ -122,7 +122,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 m_bDisableAvatarAppear: 1;
     
-    ATresEnemyPawn_e_dw405();
+    ATresEnemyPawn_e_dw405(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void NotifyBattleStart();
     

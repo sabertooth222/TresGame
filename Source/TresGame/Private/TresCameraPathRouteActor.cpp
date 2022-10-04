@@ -3,7 +3,7 @@
 void ATresCameraPathRouteActor::EnableCameraPathRoute(bool bEnable, int32 Priority) {
 }
 
-ATresCameraPathRouteActor::ATresCameraPathRouteActor() {
+ATresCameraPathRouteActor::ATresCameraPathRouteActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_EffectiveRange = 0.00f;
     this->m_BlendTime = 1.00f;
     this->m_bJumpGroundLook = false;

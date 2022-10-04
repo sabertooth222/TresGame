@@ -57,7 +57,7 @@ protected:
     ATresTreasureBox* m_pTrueTreasureBox;
     
 public:
-    ATresTreasureBox();
+    ATresTreasureBox(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     bool OpenOptionalOpenedBox();
     

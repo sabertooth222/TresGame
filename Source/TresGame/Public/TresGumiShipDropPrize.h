@@ -13,6 +13,6 @@ protected:
     GUMI_SHIP_PRIZE_ITEM_KIND m_KindID;
     
 public:
-    ATresGumiShipDropPrize();
+    ATresGumiShipDropPrize(const FObjectInitializer& ObjectInitializer);
 };
 

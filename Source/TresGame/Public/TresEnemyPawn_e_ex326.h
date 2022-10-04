@@ -109,7 +109,7 @@ private:
     AStaticMeshActor* m_DurkRushCamHitActor;
     
 public:
-    ATresEnemyPawn_e_ex326();
+    ATresEnemyPawn_e_ex326(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void OnPullCollisionEndOverlap(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
     

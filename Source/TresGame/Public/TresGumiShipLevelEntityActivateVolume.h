@@ -16,7 +16,7 @@ protected:
     TArray<AActor*> m_ManagementActorList;
     
 public:
-    ATresGumiShipLevelEntityActivateVolume();
+    ATresGumiShipLevelEntityActivateVolume(const FObjectInitializer& ObjectInitializer);
 private:
     UFUNCTION(BlueprintCallable)
     void _OnLeaveActivateVolume(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex);

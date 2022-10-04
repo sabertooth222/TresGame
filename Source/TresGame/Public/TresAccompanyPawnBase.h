@@ -84,7 +84,7 @@ protected:
     TArray<ATresCharPawnBase*> m_SlavePawnList;
     
 public:
-    ATresAccompanyPawnBase();
+    ATresAccompanyPawnBase(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveAccompanyPawnDoFinish();
     

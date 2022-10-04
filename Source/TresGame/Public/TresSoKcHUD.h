@@ -7,6 +7,6 @@ UCLASS(Blueprintable, NonTransient)
 class ATresSoKcHUD : public ATresHUD {
     GENERATED_BODY()
 public:
-    ATresSoKcHUD();
+    ATresSoKcHUD(const FObjectInitializer& ObjectInitializer);
 };
 

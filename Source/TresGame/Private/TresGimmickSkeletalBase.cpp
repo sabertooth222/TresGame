@@ -43,7 +43,7 @@ void ATresGimmickSkeletalBase::_OnAnimStarted(UAnimationAsset* InAnimAsset) {
 void ATresGimmickSkeletalBase::_OnAnimEnded(UAnimationAsset* InAnimAsset, bool bInterrupted) {
 }
 
-ATresGimmickSkeletalBase::ATresGimmickSkeletalBase() {
+ATresGimmickSkeletalBase::ATresGimmickSkeletalBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MyRoot = CreateDefaultSubobject<UTresRootComponent>(TEXT("TresRoot"));
     this->MyMesh = CreateDefaultSubobject<UTresSkeletalMeshComponent>(TEXT("TresGimmickMesh0"));
     this->MyEffectAtt = CreateDefaultSubobject<UTresEffectAttachComponent>(TEXT("TresEffectAttach0"));

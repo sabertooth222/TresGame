@@ -13,6 +13,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fTurnYawMax;
     
-    ATresFriendLinkPawnMikeBowling();
+    ATresFriendLinkPawnMikeBowling(const FObjectInitializer& ObjectInitializer);
 };
 

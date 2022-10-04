@@ -7,6 +7,6 @@ UCLASS(Blueprintable, NonTransient)
 class ATresGameModeReplayPointBase : public ATresGameModeBase {
     GENERATED_BODY()
 public:
-    ATresGameModeReplayPointBase();
+    ATresGameModeReplayPointBase(const FObjectInitializer& ObjectInitializer);
 };
 

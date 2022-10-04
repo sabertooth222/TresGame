@@ -1,5 +1,5 @@
 #include "TresCameraNormalLoc.h"
 
-ATresCameraNormalLoc::ATresCameraNormalLoc() {
+ATresCameraNormalLoc::ATresCameraNormalLoc(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

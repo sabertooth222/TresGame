@@ -12,7 +12,7 @@ protected:
     TArray<FString> CheckLevelNameArray;
     
 public:
-    ATresCheckLoadLevelVolume();
+    ATresCheckLoadLevelVolume(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SelectLevelFromList();
     

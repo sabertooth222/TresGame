@@ -1,5 +1,5 @@
 #include "TresFriendLinkPawnThinkOfYou.h"
 
-ATresFriendLinkPawnThinkOfYou::ATresFriendLinkPawnThinkOfYou() {
+ATresFriendLinkPawnThinkOfYou::ATresFriendLinkPawnThinkOfYou(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

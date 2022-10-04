@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresJumpActor_e_ex731 : public AActor {
     GENERATED_BODY()
 public:
-    ATresJumpActor_e_ex731();
+    ATresJumpActor_e_ex731(const FObjectInitializer& ObjectInitializer);
 };
 

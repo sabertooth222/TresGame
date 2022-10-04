@@ -13,6 +13,6 @@ protected:
     TSubclassOf<ATresProjectileBase> m_Projectile;
     
 public:
-    ATresProjectile_e_ex106_Attack1();
+    ATresProjectile_e_ex106_Attack1(const FObjectInitializer& ObjectInitializer);
 };
 

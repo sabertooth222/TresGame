@@ -1,6 +1,6 @@
 #include "TresEnemyManager_XIIIE.h"
 
-ATresEnemyManager_XIIIE::ATresEnemyManager_XIIIE() {
+ATresEnemyManager_XIIIE::ATresEnemyManager_XIIIE(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_ExtractRule = ETresEnemyXIIIELeaderChangeRule::Alternate;
     this->m_PostAuraEffData = NULL;
     this->m_PostAuraEff = NULL;

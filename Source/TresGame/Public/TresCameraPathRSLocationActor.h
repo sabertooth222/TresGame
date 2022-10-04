@@ -7,6 +7,6 @@ UCLASS(Blueprintable, Placeable)
 class ATresCameraPathRSLocationActor : public ATresCameraPathSplineLinkActor {
     GENERATED_BODY()
 public:
-    ATresCameraPathRSLocationActor();
+    ATresCameraPathRSLocationActor(const FObjectInitializer& ObjectInitializer);
 };
 

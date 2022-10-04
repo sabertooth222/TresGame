@@ -20,6 +20,6 @@ private:
     float m_WeaponChangeDelayTime;
     
 public:
-    ATresWeapon_e_ex355_Claymore();
+    ATresWeapon_e_ex355_Claymore(const FObjectInitializer& ObjectInitializer);
 };
 

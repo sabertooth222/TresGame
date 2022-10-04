@@ -1,5 +1,5 @@
 #include "TresGumiShipRailSlideBattleArrangement.h"
 
-ATresGumiShipRailSlideBattleArrangement::ATresGumiShipRailSlideBattleArrangement() {
+ATresGumiShipRailSlideBattleArrangement::ATresGumiShipRailSlideBattleArrangement(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

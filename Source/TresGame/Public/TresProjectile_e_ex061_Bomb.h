@@ -22,6 +22,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fRotVel;
     
-    ATresProjectile_e_ex061_Bomb();
+    ATresProjectile_e_ex061_Bomb(const FObjectInitializer& ObjectInitializer);
 };
 

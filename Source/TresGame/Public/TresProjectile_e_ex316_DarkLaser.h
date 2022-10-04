@@ -21,6 +21,6 @@ protected:
     UParticleSystemComponent* m_HitLandEffectCmp;
     
 public:
-    ATresProjectile_e_ex316_DarkLaser();
+    ATresProjectile_e_ex316_DarkLaser(const FObjectInitializer& ObjectInitializer);
 };
 

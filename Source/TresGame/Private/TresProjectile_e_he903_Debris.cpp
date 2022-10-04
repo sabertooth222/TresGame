@@ -1,7 +1,7 @@
 #include "TresProjectile_e_he903_Debris.h"
 #include "Components/SceneComponent.h"
 
-ATresProjectile_e_he903_Debris::ATresProjectile_e_he903_Debris() {
+ATresProjectile_e_he903_Debris::ATresProjectile_e_he903_Debris(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_BombMesh = NULL;
     this->m_BombMesh_Static = NULL;
     this->MyRot = CreateDefaultSubobject<USceneComponent>(TEXT("TresProjectileRotCmp0"));

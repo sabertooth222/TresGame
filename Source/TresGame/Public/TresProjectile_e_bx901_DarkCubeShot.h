@@ -58,6 +58,6 @@ protected:
     bool m_bOwnHit;
     
 public:
-    ATresProjectile_e_bx901_DarkCubeShot();
+    ATresProjectile_e_bx901_DarkCubeShot(const FObjectInitializer& ObjectInitializer);
 };
 

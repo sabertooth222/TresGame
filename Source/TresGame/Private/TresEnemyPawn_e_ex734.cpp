@@ -15,7 +15,7 @@ void ATresEnemyPawn_e_ex734::DebugSetDarkRainRate(int32 Rate) {
 }
 
 
-ATresEnemyPawn_e_ex734::ATresEnemyPawn_e_ex734() {
+ATresEnemyPawn_e_ex734::ATresEnemyPawn_e_ex734(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_iRequiredWolfKillNum = 10;
 }
 

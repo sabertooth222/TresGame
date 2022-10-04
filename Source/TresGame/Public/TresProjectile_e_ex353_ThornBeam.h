@@ -44,6 +44,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresEnemyEx353ThornBeamAfterHitInfo m_AfterHitInfo;
     
-    ATresProjectile_e_ex353_ThornBeam();
+    ATresProjectile_e_ex353_ThornBeam(const FObjectInitializer& ObjectInitializer);
 };
 

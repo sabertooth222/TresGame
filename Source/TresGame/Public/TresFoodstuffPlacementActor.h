@@ -17,6 +17,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_KeyName;
     
-    ATresFoodstuffPlacementActor();
+    ATresFoodstuffPlacementActor(const FObjectInitializer& ObjectInitializer);
 };
 

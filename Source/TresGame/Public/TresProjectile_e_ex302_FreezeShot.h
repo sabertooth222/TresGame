@@ -16,6 +16,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* m_ChargeEffectCmp;
     
-    ATresProjectile_e_ex302_FreezeShot();
+    ATresProjectile_e_ex302_FreezeShot(const FObjectInitializer& ObjectInitializer);
 };
 

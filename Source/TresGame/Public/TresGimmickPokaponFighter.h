@@ -7,6 +7,6 @@ UCLASS(Blueprintable, Config=Game)
 class ATresGimmickPokaponFighter : public ATresGimmickSkeletalBase {
     GENERATED_BODY()
 public:
-    ATresGimmickPokaponFighter();
+    ATresGimmickPokaponFighter(const FObjectInitializer& ObjectInitializer);
 };
 

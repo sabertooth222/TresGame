@@ -26,6 +26,6 @@ protected:
     float m_HomingRateZ;
     
 public:
-    ATresProjectile_e_ex352_DarkLaser();
+    ATresProjectile_e_ex352_DarkLaser(const FObjectInitializer& ObjectInitializer);
 };
 

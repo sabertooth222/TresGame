@@ -14,7 +14,7 @@ int32 ATresEnemyPawn_e_ex053::GetDieScore() const {
 }
 
 
-ATresEnemyPawn_e_ex053::ATresEnemyPawn_e_ex053() {
+ATresEnemyPawn_e_ex053::ATresEnemyPawn_e_ex053(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_pDiveEffect = NULL;
     this->m_JumpState = NULL;
     this->m_bShoted = false;

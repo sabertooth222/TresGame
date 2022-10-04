@@ -13,6 +13,6 @@ private:
     TEnumAsByte<ETresEnemyEx761_Location::Type> m_LocationType;
     
 public:
-    ATresHomeLocationActor_e_ex761();
+    ATresHomeLocationActor_e_ex761(const FObjectInitializer& ObjectInitializer);
 };
 

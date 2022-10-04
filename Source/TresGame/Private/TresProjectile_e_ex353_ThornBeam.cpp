@@ -1,6 +1,6 @@
 #include "TresProjectile_e_ex353_ThornBeam.h"
 
-ATresProjectile_e_ex353_ThornBeam::ATresProjectile_e_ex353_ThornBeam() {
+ATresProjectile_e_ex353_ThornBeam::ATresProjectile_e_ex353_ThornBeam(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_ThornBeamBlowProjectileAsset = NULL;
     this->m_ThornBeamCatchEff = NULL;
     this->m_CatchCurveData = NULL;

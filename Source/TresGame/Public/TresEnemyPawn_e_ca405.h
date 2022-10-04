@@ -65,7 +65,7 @@ public:
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresEnemyPawn_e_ca405SpawnModeSignature OnLotteryNextSpawnPoint;
     
-    ATresEnemyPawn_e_ca405();
+    ATresEnemyPawn_e_ca405(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetMissionStartTime(bool bStart);
     

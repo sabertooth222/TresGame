@@ -23,6 +23,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AActor* m_SpawnActor;
     
-    ATresProjectile_e_ex359_BeamBase();
+    ATresProjectile_e_ex359_BeamBase(const FObjectInitializer& ObjectInitializer);
 };
 

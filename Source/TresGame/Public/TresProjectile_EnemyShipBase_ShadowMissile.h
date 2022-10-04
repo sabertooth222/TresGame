@@ -76,6 +76,6 @@ protected:
     float m_HomingTurnAccelByAngle;
     
 public:
-    ATresProjectile_EnemyShipBase_ShadowMissile();
+    ATresProjectile_EnemyShipBase_ShadowMissile(const FObjectInitializer& ObjectInitializer);
 };
 

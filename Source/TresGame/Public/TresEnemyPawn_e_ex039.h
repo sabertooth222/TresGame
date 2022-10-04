@@ -17,6 +17,6 @@ private:
     int32 m_NumAttck;
     
 public:
-    ATresEnemyPawn_e_ex039();
+    ATresEnemyPawn_e_ex039(const FObjectInitializer& ObjectInitializer);
 };
 

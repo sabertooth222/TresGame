@@ -13,7 +13,7 @@ void ATresGumiShipPlayerControllerBase::ToggleDebugGMKeyConfigTest() {
 void ATresGumiShipPlayerControllerBase::ToggleDebugChannelInputDraw() {
 }
 
-ATresGumiShipPlayerControllerBase::ATresGumiShipPlayerControllerBase() {
+ATresGumiShipPlayerControllerBase::ATresGumiShipPlayerControllerBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_pWorker = CreateDefaultSubobject<UTresGumiShipPlayerInputWorker>(TEXT("Worker"));
 }
 

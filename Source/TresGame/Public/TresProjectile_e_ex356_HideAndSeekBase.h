@@ -72,6 +72,6 @@ protected:
     UParticleSystem* m_SmokeParticleSystem;
     
 public:
-    ATresProjectile_e_ex356_HideAndSeekBase();
+    ATresProjectile_e_ex356_HideAndSeekBase(const FObjectInitializer& ObjectInitializer);
 };
 

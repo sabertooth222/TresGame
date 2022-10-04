@@ -13,6 +13,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fSmokeEffectTime;
     
-    ATresProjectile_e_ex731_DarkBreath();
+    ATresProjectile_e_ex731_DarkBreath(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -12,6 +12,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_WaterBallEffData;
     
-    ATresAccessory_e_ex036_WaterBallManager();
+    ATresAccessory_e_ex036_WaterBallManager(const FObjectInitializer& ObjectInitializer);
 };
 

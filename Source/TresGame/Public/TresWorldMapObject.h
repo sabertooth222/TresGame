@@ -80,7 +80,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* m_pMarkerEffect;
     
-    ATresWorldMapObject();
+    ATresWorldMapObject(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     bool IsTreasureSphiaState();
     

@@ -167,6 +167,6 @@ private:
     TWeakObjectPtr<ATresGimmickRA_Pudding_ControlActor> m_pControlActor;
     
 public:
-    ATresEnemyPawn_e_ex051();
+    ATresEnemyPawn_e_ex051(const FObjectInitializer& ObjectInitializer);
 };
 

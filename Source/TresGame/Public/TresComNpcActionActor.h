@@ -14,6 +14,6 @@ private:
     UTresComNpcActionComponent* MyComNpcAction;
     
 public:
-    ATresComNpcActionActor();
+    ATresComNpcActionActor(const FObjectInitializer& ObjectInitializer);
 };
 

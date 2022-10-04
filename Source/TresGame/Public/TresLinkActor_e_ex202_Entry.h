@@ -24,7 +24,7 @@ private:
     float m_Angle;
     
 public:
-    ATresLinkActor_e_ex202_Entry();
+    ATresLinkActor_e_ex202_Entry(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetRadius() const;
     

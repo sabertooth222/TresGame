@@ -18,6 +18,6 @@ protected:
     int32 m_AppendCure;
     
 public:
-    ATresNpcPawn_n_ex023();
+    ATresNpcPawn_n_ex023(const FObjectInitializer& ObjectInitializer);
 };
 

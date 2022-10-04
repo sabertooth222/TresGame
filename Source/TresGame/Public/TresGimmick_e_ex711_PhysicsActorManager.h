@@ -101,6 +101,6 @@ protected:
     TArray<FTresEnemyEx711_OuterScaffoldGroupParam> m_OuterScaffoldGroupParamArray;
     
 public:
-    ATresGimmick_e_ex711_PhysicsActorManager();
+    ATresGimmick_e_ex711_PhysicsActorManager(const FObjectInitializer& ObjectInitializer);
 };
 

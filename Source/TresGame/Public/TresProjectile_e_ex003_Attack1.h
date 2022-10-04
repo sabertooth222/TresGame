@@ -13,6 +13,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_MaxScale;
     
-    ATresProjectile_e_ex003_Attack1();
+    ATresProjectile_e_ex003_Attack1(const FObjectInitializer& ObjectInitializer);
 };
 

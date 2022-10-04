@@ -24,7 +24,7 @@ void ATresCameraAnim::BP_SetTresCameraAnimCtrl(bool bEnable, float WaitTime, flo
 void ATresCameraAnim::BP_SetTresCameraAnimBaseOffset(FVector offsetLocation, FRotator OffsetRotation) {
 }
 
-ATresCameraAnim::ATresCameraAnim() {
+ATresCameraAnim::ATresCameraAnim(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_CamAnimIns = NULL;
     this->m_CameraInterest = NULL;
     this->m_CameraUpVector = NULL;

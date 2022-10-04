@@ -33,7 +33,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_ParameterScale;
     
-    ATresEnemyPawn_e_ex107();
+    ATresEnemyPawn_e_ex107(const FObjectInitializer& ObjectInitializer);
     UFUNCTION()
     void OnDtorStateEvent(TEnumAsByte<ETresStateID> inStateID);
     

@@ -22,7 +22,7 @@ bool ATresWorldMapObject::IsJumpPoint() {
     return false;
 }
 
-ATresWorldMapObject::ATresWorldMapObject() {
+ATresWorldMapObject::ATresWorldMapObject(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_nWmPlaceD = ETresWoldPlaceID::WM_PLACE_ID00;
     this->m_nWmObjID = ETresWoldMapObjID::WM_OBJ_ID00;
     this->m_nWorldSymbleID = ETresGumiShipWorldSymbolID::E_GM01_WS_HE;

@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresProjectile_e_ex326_DarkRush_Column : public ATresProjectileBase {
     GENERATED_BODY()
 public:
-    ATresProjectile_e_ex326_DarkRush_Column();
+    ATresProjectile_e_ex326_DarkRush_Column(const FObjectInitializer& ObjectInitializer);
 };
 

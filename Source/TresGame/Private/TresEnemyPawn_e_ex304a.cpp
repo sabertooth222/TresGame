@@ -15,7 +15,7 @@ void ATresEnemyPawn_e_ex304a::DebugPowerEffectNextStep() {
 void ATresEnemyPawn_e_ex304a::DebugMovePowerEffectStartLocation() {
 }
 
-ATresEnemyPawn_e_ex304a::ATresEnemyPawn_e_ex304a() {
+ATresEnemyPawn_e_ex304a::ATresEnemyPawn_e_ex304a(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_NextPhaseChangeTime = 30.00f;
     this->m_EffectAttachData = NULL;
 }

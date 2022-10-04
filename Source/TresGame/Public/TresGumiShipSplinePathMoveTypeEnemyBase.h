@@ -13,6 +13,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool Locked;
     
-    ATresGumiShipSplinePathMoveTypeEnemyBase();
+    ATresGumiShipSplinePathMoveTypeEnemyBase(const FObjectInitializer& ObjectInitializer);
 };
 

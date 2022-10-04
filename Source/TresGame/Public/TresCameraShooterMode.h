@@ -7,6 +7,6 @@ UCLASS(Blueprintable, NotPlaceable)
 class ATresCameraShooterMode : public ATresCameraNormal {
     GENERATED_BODY()
 public:
-    ATresCameraShooterMode();
+    ATresCameraShooterMode(const FObjectInitializer& ObjectInitializer);
 };
 

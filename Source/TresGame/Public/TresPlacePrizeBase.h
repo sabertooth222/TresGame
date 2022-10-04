@@ -33,7 +33,7 @@ protected:
     float DisableComponentRadius_;
     
 public:
-    ATresPlacePrizeBase();
+    ATresPlacePrizeBase(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void TresAddComponent(TSubclassOf<UActorComponent> Class, const FTransform& Transform, UActorComponent*& Out);
     

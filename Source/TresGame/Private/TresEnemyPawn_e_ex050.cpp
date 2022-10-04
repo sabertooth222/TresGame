@@ -10,7 +10,7 @@ ETresEx050PuddingType ATresEnemyPawn_e_ex050::GetPuddingType() const {
     return ETresEx050PuddingType::SMALL;
 }
 
-ATresEnemyPawn_e_ex050::ATresEnemyPawn_e_ex050() {
+ATresEnemyPawn_e_ex050::ATresEnemyPawn_e_ex050(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_Type = ETresEx050PuddingType::SMALL;
     this->m_pHitEffect = NULL;
     this->m_StrawberrySize = 10.00f;

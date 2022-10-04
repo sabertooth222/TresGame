@@ -8,7 +8,7 @@ bool ATresEnemyPawn_e_ex362::CanChangePattern() {
     return false;
 }
 
-ATresEnemyPawn_e_ex362::ATresEnemyPawn_e_ex362() {
+ATresEnemyPawn_e_ex362::ATresEnemyPawn_e_ex362(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_EnemyPawn_BuddyData = NULL;
     this->m_ChangeAirIdlePlayRate = 0.00f;
     this->m_ChangeIdlePlayRate = 0.00f;

@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable)
 class ATresEnemyToyRoboPawnBase : public ATresEnemyToyPawnBase {
     GENERATED_BODY()
 public:
-    ATresEnemyToyRoboPawnBase();
+    ATresEnemyToyRoboPawnBase(const FObjectInitializer& ObjectInitializer);
 };
 

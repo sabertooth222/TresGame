@@ -57,7 +57,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UDataTable* m_EffectBaseColorTable;
     
-    ATresWorldSettings();
+    ATresWorldSettings(const FObjectInitializer& ObjectInitializer);
     
     // Fix for true pure virtual functions not being implemented
 };

@@ -24,6 +24,6 @@ private:
     bool m_bLifeOverIfTakeDamage;
     
 public:
-    ATresProj_LaserTemplate();
+    ATresProj_LaserTemplate(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -18,6 +18,6 @@ protected:
     ATresProjectileBase* m_AtkCollProj;
     
 public:
-    ATresProjectile_e_ex359_HeavyRain();
+    ATresProjectile_e_ex359_HeavyRain(const FObjectInitializer& ObjectInitializer);
 };
 

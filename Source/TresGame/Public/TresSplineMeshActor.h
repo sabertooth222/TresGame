@@ -18,6 +18,6 @@ private:
     USplineMeshComponent* SplineMeshComponent;
     
 public:
-    ATresSplineMeshActor();
+    ATresSplineMeshActor(const FObjectInitializer& ObjectInitializer);
 };
 

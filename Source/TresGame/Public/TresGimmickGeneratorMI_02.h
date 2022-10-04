@@ -18,7 +18,7 @@ protected:
     UTresMI_02BossPartsGeneratorRule* GeneratorData;
     
 public:
-    ATresGimmickGeneratorMI_02();
+    ATresGimmickGeneratorMI_02(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void spawn();
     

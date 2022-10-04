@@ -29,7 +29,7 @@ private:
     TSubclassOf<ATresCharPawnBase> m_LockOnActorClass;
     
 public:
-    ATresStaticMesh_e_ex353_Shield();
+    ATresStaticMesh_e_ex353_Shield(const FObjectInitializer& ObjectInitializer);
     
     // Fix for true pure virtual functions not being implemented
 };

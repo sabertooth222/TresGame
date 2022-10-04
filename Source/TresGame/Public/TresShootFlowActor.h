@@ -14,6 +14,6 @@ private:
     UTresShootFlowComponent* m_Root;
     
 public:
-    ATresShootFlowActor();
+    ATresShootFlowActor(const FObjectInitializer& ObjectInitializer);
 };
 

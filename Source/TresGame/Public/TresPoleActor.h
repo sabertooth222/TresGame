@@ -14,7 +14,7 @@ private:
     UTresPoleComponent* MyRoot;
     
 public:
-    ATresPoleActor();
+    ATresPoleActor(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetEnable(bool bEnable);
     

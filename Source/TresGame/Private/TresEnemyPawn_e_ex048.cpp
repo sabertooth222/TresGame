@@ -7,7 +7,7 @@ bool ATresEnemyPawn_e_ex048::IsFlyMode() const {
 void ATresEnemyPawn_e_ex048::BP_DebugSetBT() {
 }
 
-ATresEnemyPawn_e_ex048::ATresEnemyPawn_e_ex048() {
+ATresEnemyPawn_e_ex048::ATresEnemyPawn_e_ex048(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_LandModeAnimSet = NULL;
     this->m_BladeEffectData = NULL;
     this->m_MissileProjectileAsset = NULL;

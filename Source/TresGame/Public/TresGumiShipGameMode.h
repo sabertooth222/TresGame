@@ -128,7 +128,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool LoadComplete;
     
-    ATresGumiShipGameMode();
+    ATresGumiShipGameMode(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void RefleshGuideMarkerArea();
     

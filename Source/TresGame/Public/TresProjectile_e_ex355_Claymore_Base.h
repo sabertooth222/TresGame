@@ -46,7 +46,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bParticleStartDelayTime;
     
-    ATresProjectile_e_ex355_Claymore_Base();
+    ATresProjectile_e_ex355_Claymore_Base(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SpawnWave_OneColl(int32 InParam, bool bOwnerLoc, FVector inOwnerLoc, bool bOwnerYaw, float inOwnerYaw);
     

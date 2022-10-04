@@ -22,7 +22,7 @@ protected:
     ETresMI_04_DoorGeneratorMoveType MoveType;
     
 public:
-    ATresGimmickGeneratorMI_04_Base();
+    ATresGimmickGeneratorMI_04_Base(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetSplineActor(ASQEX_SplineActor* splineActor);
     

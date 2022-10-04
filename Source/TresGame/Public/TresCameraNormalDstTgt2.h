@@ -34,7 +34,7 @@ protected:
     float m_DistanceTargetBoneRadius1;
     
 public:
-    ATresCameraNormalDstTgt2();
+    ATresCameraNormalDstTgt2(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     static ATresCameraNormalDstTgt2* BP_SpawnTresCameraNormalDstTgt2(UObject* WorldContextObject, TSubclassOf<ATresCameraNormalDstTgt2> CameraClass, const FName CameraName);
     

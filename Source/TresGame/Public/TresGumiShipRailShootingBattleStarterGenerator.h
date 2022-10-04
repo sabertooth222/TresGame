@@ -25,7 +25,7 @@ protected:
     ATriggerBase* m_pEncountSymbolActivateTrigger;
     
 public:
-    ATresGumiShipRailShootingBattleStarterGenerator();
+    ATresGumiShipRailShootingBattleStarterGenerator(const FObjectInitializer& ObjectInitializer);
 private:
     UFUNCTION(BlueprintCallable)
     void _OnLeaveActivateTriggerVolume(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex);

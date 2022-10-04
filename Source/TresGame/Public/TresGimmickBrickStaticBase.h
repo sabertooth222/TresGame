@@ -43,7 +43,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_DitherTime;
     
-    ATresGimmickBrickStaticBase();
+    ATresGimmickBrickStaticBase(const FObjectInitializer& ObjectInitializer);
 protected:
     UFUNCTION(BlueprintCallable)
     void OnTresTakeDamageGimmickCallback(const FHitResult& HitInfo, AActor* DamageCauser);

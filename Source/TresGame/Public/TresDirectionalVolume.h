@@ -40,6 +40,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<AActor*> m_InsideActors;
     
-    ATresDirectionalVolume();
+    ATresDirectionalVolume(const FObjectInitializer& ObjectInitializer);
 };
 

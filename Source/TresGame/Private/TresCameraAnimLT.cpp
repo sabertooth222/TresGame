@@ -12,6 +12,6 @@ ATresCameraAnimLT* ATresCameraAnimLT::BP_SpawnTresCameraAnimLT(UObject* WorldCon
 void ATresCameraAnimLT::BP_SetTresCameraLookOnlyTargetParam(AActor* LookTarget, FVector TargetOffset, FVector TargetLocalOffset, FName TargetBoneName) {
 }
 
-ATresCameraAnimLT::ATresCameraAnimLT() {
+ATresCameraAnimLT::ATresCameraAnimLT(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

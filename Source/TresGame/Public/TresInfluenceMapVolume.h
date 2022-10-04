@@ -25,6 +25,6 @@ protected:
     TArray<int32> m_ValidIndices;
     
 public:
-    ATresInfluenceMapVolume();
+    ATresInfluenceMapVolume(const FObjectInitializer& ObjectInitializer);
 };
 

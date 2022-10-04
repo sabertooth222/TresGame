@@ -16,6 +16,6 @@ UTresStaticMeshComponent* ATresTriggerBox::GetDebugStaticMeshComponent() {
     return NULL;
 }
 
-ATresTriggerBox::ATresTriggerBox() {
+ATresTriggerBox::ATresTriggerBox(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

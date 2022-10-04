@@ -3,6 +3,6 @@
 void ATresPlayerPawnSora::DebugNotifyCommandQuickBattle() {
 }
 
-ATresPlayerPawnSora::ATresPlayerPawnSora() {
+ATresPlayerPawnSora::ATresPlayerPawnSora(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

@@ -15,7 +15,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bHasHorn;
     
-    ATresEnemyPawn_e_ex045();
+    ATresEnemyPawn_e_ex045(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool HasHorn();
     

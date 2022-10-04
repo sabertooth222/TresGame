@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresCameraSpecialShipDive : public ATresCameraSpecialShip {
     GENERATED_BODY()
 public:
-    ATresCameraSpecialShipDive();
+    ATresCameraSpecialShipDive(const FObjectInitializer& ObjectInitializer);
 };
 

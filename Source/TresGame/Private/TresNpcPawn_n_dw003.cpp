@@ -28,7 +28,7 @@ bool ATresNpcPawn_n_dw003::IsAITargetDarkSide() const {
     return false;
 }
 
-ATresNpcPawn_n_dw003::ATresNpcPawn_n_dw003() {
+ATresNpcPawn_n_dw003::ATresNpcPawn_n_dw003(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_EffDevilWave = NULL;
     this->m_PawnID = TEXT("n_dw003");
     this->m_AppendCure = 160;

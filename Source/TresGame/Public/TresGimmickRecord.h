@@ -65,7 +65,7 @@ protected:
     TArray<ATresGimmickFrogPerformer*> FrogList;
     
 public:
-    ATresGimmickRecord();
+    ATresGimmickRecord(const FObjectInitializer& ObjectInitializer);
 protected:
     UFUNCTION(BlueprintCallable)
     void SetSpeedRateImidiately(float Rate);

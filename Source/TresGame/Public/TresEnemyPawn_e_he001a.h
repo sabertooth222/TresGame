@@ -62,7 +62,7 @@ protected:
     UParticleSystemComponent* m_BlurEff;
     
 public:
-    ATresEnemyPawn_e_he001a();
+    ATresEnemyPawn_e_he001a(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsRollerCoaster() const;
     

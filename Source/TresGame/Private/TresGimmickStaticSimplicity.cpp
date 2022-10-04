@@ -1,5 +1,5 @@
 #include "TresGimmickStaticSimplicity.h"
 
-ATresGimmickStaticSimplicity::ATresGimmickStaticSimplicity() {
+ATresGimmickStaticSimplicity::ATresGimmickStaticSimplicity(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

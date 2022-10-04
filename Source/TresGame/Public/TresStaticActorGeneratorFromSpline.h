@@ -28,7 +28,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<AActor> triggerTargetClass;
     
-    ATresStaticActorGeneratorFromSpline();
+    ATresStaticActorGeneratorFromSpline(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void OnGenerateOverlapEnd(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
     

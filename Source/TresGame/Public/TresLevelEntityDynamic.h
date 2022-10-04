@@ -7,6 +7,6 @@ UCLASS(Blueprintable, NotPlaceable)
 class TRESGAME_API ATresLevelEntityDynamic : public ATresLevelEntity {
     GENERATED_BODY()
 public:
-    ATresLevelEntityDynamic();
+    ATresLevelEntityDynamic(const FObjectInitializer& ObjectInitializer);
 };
 

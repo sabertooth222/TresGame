@@ -48,7 +48,7 @@ protected:
     UClass* m_PreActionDefinitionClass;
     
 public:
-    ATresEnemyDarkSidePawnBase();
+    ATresEnemyDarkSidePawnBase(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void BP_SpawnProjectile();
     

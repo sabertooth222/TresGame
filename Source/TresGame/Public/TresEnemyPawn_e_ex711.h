@@ -78,7 +78,7 @@ protected:
     TSubclassOf<ATresEnemyPawn_e_ex711_Head> m_HeadPawnClass;
     
 public:
-    ATresEnemyPawn_e_ex711();
+    ATresEnemyPawn_e_ex711(const FObjectInitializer& ObjectInitializer);
 protected:
     UFUNCTION(BlueprintCallable)
     void SetCommonCounterZero();

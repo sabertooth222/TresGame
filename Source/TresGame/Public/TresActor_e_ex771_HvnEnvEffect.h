@@ -24,6 +24,6 @@ protected:
     float m_HvnEnvEffAlphaMin;
     
 public:
-    ATresActor_e_ex771_HvnEnvEffect();
+    ATresActor_e_ex771_HvnEnvEffect(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -28,6 +28,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_pro_MoveDistMax;
     
-    ATresProjectile_e_ex105_RanbuCubeJoint();
+    ATresProjectile_e_ex105_RanbuCubeJoint(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -16,6 +16,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     TArray<USpotLightComponent*> SpotLightComponents;
     
-    ATresGimmickCarLightMgr();
+    ATresGimmickCarLightMgr(const FObjectInitializer& ObjectInitializer);
 };
 

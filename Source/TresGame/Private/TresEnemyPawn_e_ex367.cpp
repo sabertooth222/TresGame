@@ -23,7 +23,7 @@ bool ATresEnemyPawn_e_ex367::InBattleField() {
 void ATresEnemyPawn_e_ex367::BP_ChangeGoatMagicCircle() {
 }
 
-ATresEnemyPawn_e_ex367::ATresEnemyPawn_e_ex367() {
+ATresEnemyPawn_e_ex367::ATresEnemyPawn_e_ex367(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_Avatar = NULL;
     this->m_SwordWaveSocketName = TEXT("ATK_00");
     this->m_WarpEffData = NULL;

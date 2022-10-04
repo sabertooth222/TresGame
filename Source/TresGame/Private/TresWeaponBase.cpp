@@ -15,7 +15,7 @@ USQEX_KBD_Component* ATresWeaponBase::GetKBDComponent() const {
     return NULL;
 }
 
-ATresWeaponBase::ATresWeaponBase() {
+ATresWeaponBase::ATresWeaponBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MyMovement = CreateDefaultSubobject<UTresWeaponMovementComponent>(TEXT("TresWeaponMovement0"));
     this->MyMesh = CreateDefaultSubobject<UTresSkeletalMeshComponent>(TEXT("TresWeaponMesh0"));
     this->MyAtkColl = CreateDefaultSubobject<UTresAtkCollComponent>(TEXT("TresAtkColl0"));

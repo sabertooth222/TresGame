@@ -1,5 +1,5 @@
 #include "TresNpcGuestPawnBase.h"
 
-ATresNpcGuestPawnBase::ATresNpcGuestPawnBase() {
+ATresNpcGuestPawnBase::ATresNpcGuestPawnBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

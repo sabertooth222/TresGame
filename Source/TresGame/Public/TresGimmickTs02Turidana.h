@@ -10,7 +10,7 @@ UCLASS(Blueprintable, Config=Game)
 class ATresGimmickTs02Turidana : public ATresGimmickSkeletalBase {
     GENERATED_BODY()
 public:
-    ATresGimmickTs02Turidana();
+    ATresGimmickTs02Turidana(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void GimmickNotifyActorStartSetBase(AActor* inActor, UPrimitiveComponent* InComponent, const FName InBoneName);
     

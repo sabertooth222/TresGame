@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresEnemyWeapon_e_ex761 : public ATresWeaponBase {
     GENERATED_BODY()
 public:
-    ATresEnemyWeapon_e_ex761();
+    ATresEnemyWeapon_e_ex761(const FObjectInitializer& ObjectInitializer);
 };
 

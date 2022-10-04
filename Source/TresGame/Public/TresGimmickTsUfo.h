@@ -36,7 +36,7 @@ protected:
     ETresBodyPushPowerLevel BodyPushPowerLevel;
     
 public:
-    ATresGimmickTsUfo();
+    ATresGimmickTsUfo(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetSplineActor(ASQEX_SplineActor* spline);
     

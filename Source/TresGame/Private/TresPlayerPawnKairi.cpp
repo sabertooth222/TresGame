@@ -1,6 +1,6 @@
 #include "TresPlayerPawnKairi.h"
 
-ATresPlayerPawnKairi::ATresPlayerPawnKairi() {
+ATresPlayerPawnKairi::ATresPlayerPawnKairi(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_UIDataShootFlow = NULL;
 }
 

@@ -14,7 +14,7 @@ void ATresPhotoHologramActor::RequestRemoveHologram() {
 void ATresPhotoHologramActor::OnReactorCommand(ATresCharPawnBase* CommandCauser, TEnumAsByte<ETresCommandKind> CommandID, UTresReactorComponent* ReactorComponent) {
 }
 
-ATresPhotoHologramActor::ATresPhotoHologramActor() {
+ATresPhotoHologramActor::ATresPhotoHologramActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->StartWalkSpeed = 0.00f;
     this->MaxWalkSpeed = 0.00f;
     this->StartWalkSpeedKeepTime = 0.00f;

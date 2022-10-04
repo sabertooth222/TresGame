@@ -16,6 +16,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_Count;
     
-    ATresEnemy_e_ex311_DarkFiragaProjectileBase();
+    ATresEnemy_e_ex311_DarkFiragaProjectileBase(const FObjectInitializer& ObjectInitializer);
 };
 

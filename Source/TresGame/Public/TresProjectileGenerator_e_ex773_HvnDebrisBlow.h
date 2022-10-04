@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresProjectileGenerator_e_ex773_HvnDebrisBlow : public AActor {
     GENERATED_BODY()
 public:
-    ATresProjectileGenerator_e_ex773_HvnDebrisBlow();
+    ATresProjectileGenerator_e_ex773_HvnDebrisBlow(const FObjectInitializer& ObjectInitializer);
 };
 

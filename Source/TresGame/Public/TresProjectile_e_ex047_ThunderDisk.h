@@ -34,6 +34,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_HomingTurnMax;
     
-    ATresProjectile_e_ex047_ThunderDisk();
+    ATresProjectile_e_ex047_ThunderDisk(const FObjectInitializer& ObjectInitializer);
 };
 

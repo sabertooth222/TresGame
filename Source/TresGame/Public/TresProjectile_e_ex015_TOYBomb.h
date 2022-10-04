@@ -9,7 +9,7 @@ UCLASS(Abstract, Blueprintable)
 class ATresProjectile_e_ex015_TOYBomb : public ATresProjectileStaticMeshBase {
     GENERATED_BODY()
 public:
-    ATresProjectile_e_ex015_TOYBomb();
+    ATresProjectile_e_ex015_TOYBomb(const FObjectInitializer& ObjectInitializer);
 protected:
     UFUNCTION(BlueprintCallable)
     void OnProjectileBounce(const FHitResult& ImpactResult, const FVector& ImpactVelocity);

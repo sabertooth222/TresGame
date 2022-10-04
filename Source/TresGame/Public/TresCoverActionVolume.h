@@ -25,6 +25,6 @@ protected:
     int32 m_CoverCameraID;
     
 public:
-    ATresCoverActionVolume();
+    ATresCoverActionVolume(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -76,7 +76,7 @@ protected:
     TArray<ATresProjectileBase*> m_AvaterProjList;
     
 public:
-    ATresPlayerControllerBase();
+    ATresPlayerControllerBase(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SimulateKeypress(FKey Key, TEnumAsByte<EInputEvent> EventType, float AmountDepressed, bool bGamepad);
     

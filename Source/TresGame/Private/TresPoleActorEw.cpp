@@ -9,7 +9,7 @@ bool ATresPoleActorEw::IsEnable() const {
     return false;
 }
 
-ATresPoleActorEw::ATresPoleActorEw() {
+ATresPoleActorEw::ATresPoleActorEw(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MyRootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("MyRoot"));
     this->PoleComponentDefault = CreateDefaultSubobject<UTresPoleComponent>(TEXT("PoleComponentDefault"));
 }

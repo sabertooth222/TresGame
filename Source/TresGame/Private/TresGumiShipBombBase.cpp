@@ -1,5 +1,5 @@
 #include "TresGumiShipBombBase.h"
 
-ATresGumiShipBombBase::ATresGumiShipBombBase() {
+ATresGumiShipBombBase::ATresGumiShipBombBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

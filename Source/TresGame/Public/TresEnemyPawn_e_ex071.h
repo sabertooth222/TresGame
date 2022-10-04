@@ -14,7 +14,7 @@ private:
     TArray<ATresEnemy_e_ex071_ValidateTargetVolume*> m_MyTargetVolumes;
     
 public:
-    ATresEnemyPawn_e_ex071();
+    ATresEnemyPawn_e_ex071(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     bool IsDesiredDie();
     

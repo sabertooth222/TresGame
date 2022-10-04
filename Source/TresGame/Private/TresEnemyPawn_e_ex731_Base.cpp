@@ -16,7 +16,7 @@ int32 ATresEnemyPawn_e_ex731_Base::GetWolfNum() const {
     return 0;
 }
 
-ATresEnemyPawn_e_ex731_Base::ATresEnemyPawn_e_ex731_Base() {
+ATresEnemyPawn_e_ex731_Base::ATresEnemyPawn_e_ex731_Base(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_EffDataAsset = NULL;
 }
 

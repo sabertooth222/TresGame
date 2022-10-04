@@ -56,7 +56,7 @@ protected:
     FName m_DataTableName;
     
 public:
-    ATresGumiShipGimmickCrystal();
+    ATresGumiShipGimmickCrystal(const FObjectInitializer& ObjectInitializer);
 protected:
     UFUNCTION(BlueprintCallable)
     void _SetUpCrystal(int32 Min, int32 Max, bool spawn);

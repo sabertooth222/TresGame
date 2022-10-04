@@ -1,6 +1,6 @@
 #include "TresAttractionPawnRollerCoaster.h"
 
-ATresAttractionPawnRollerCoaster::ATresAttractionPawnRollerCoaster() {
+ATresAttractionPawnRollerCoaster::ATresAttractionPawnRollerCoaster(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_RailEffectClass = NULL;
     this->m_RailEffectLeadDist = 600.00f;
     this->m_PassengerCarClass = NULL;

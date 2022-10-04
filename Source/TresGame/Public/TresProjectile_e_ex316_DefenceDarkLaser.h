@@ -49,6 +49,6 @@ protected:
     UParticleSystemComponent* m_DarkLaserDecal;
     
 public:
-    ATresProjectile_e_ex316_DefenceDarkLaser();
+    ATresProjectile_e_ex316_DefenceDarkLaser(const FObjectInitializer& ObjectInitializer);
 };
 

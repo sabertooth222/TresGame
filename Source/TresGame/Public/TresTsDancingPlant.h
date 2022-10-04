@@ -12,6 +12,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTresStaticMeshComponent* MyMesh;
     
-    ATresTsDancingPlant();
+    ATresTsDancingPlant(const FObjectInitializer& ObjectInitializer);
 };
 

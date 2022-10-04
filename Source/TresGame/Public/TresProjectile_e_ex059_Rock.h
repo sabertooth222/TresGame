@@ -25,6 +25,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fRotVel;
     
-    ATresProjectile_e_ex059_Rock();
+    ATresProjectile_e_ex059_Rock(const FObjectInitializer& ObjectInitializer);
 };
 

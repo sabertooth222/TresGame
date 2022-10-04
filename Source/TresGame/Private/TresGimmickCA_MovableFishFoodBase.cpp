@@ -2,6 +2,6 @@
 
 
 
-ATresGimmickCA_MovableFishFoodBase::ATresGimmickCA_MovableFishFoodBase() {
+ATresGimmickCA_MovableFishFoodBase::ATresGimmickCA_MovableFishFoodBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

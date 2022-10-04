@@ -21,6 +21,6 @@ protected:
     TWeakObjectPtr<AActor> m_pTargetPawn;
     
 public:
-    ATresFriendLinkProjRocket();
+    ATresFriendLinkProjRocket(const FObjectInitializer& ObjectInitializer);
 };
 

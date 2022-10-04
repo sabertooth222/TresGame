@@ -18,6 +18,6 @@ protected:
     float m_fIntervalTime;
     
 public:
-    ATresNpcPawn_n_he201();
+    ATresNpcPawn_n_he201(const FObjectInitializer& ObjectInitializer);
 };
 

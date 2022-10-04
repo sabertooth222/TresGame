@@ -1,6 +1,6 @@
 #include "TresEnemyPawn_e_ex105.h"
 
-ATresEnemyPawn_e_ex105::ATresEnemyPawn_e_ex105() {
+ATresEnemyPawn_e_ex105::ATresEnemyPawn_e_ex105(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_pCubeJoint = NULL;
     this->m_pChaosShotCubeJoint = NULL;
     this->m_pRanbuCubeJoint = NULL;

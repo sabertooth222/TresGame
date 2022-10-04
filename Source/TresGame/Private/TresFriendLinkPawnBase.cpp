@@ -1,5 +1,5 @@
 #include "TresFriendLinkPawnBase.h"
 
-ATresFriendLinkPawnBase::ATresFriendLinkPawnBase() {
+ATresFriendLinkPawnBase::ATresFriendLinkPawnBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

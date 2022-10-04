@@ -2,7 +2,7 @@
 #include "TresGumiShipSoundSetComponent.h"
 #include "TresRootComponent.h"
 
-ATresGumiShipActorBase::ATresGumiShipActorBase() {
+ATresGumiShipActorBase::ATresGumiShipActorBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_pRootComponent = CreateDefaultSubobject<UTresRootComponent>(TEXT("TresRoot"));
     this->m_pSoundSet = CreateDefaultSubobject<UTresGumiShipSoundSetComponent>(TEXT("SoundSet"));
 }

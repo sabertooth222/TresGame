@@ -28,7 +28,7 @@ bool ATresEnemyPawn_e_ex359::IsDamageBodyReactionCoroutineFinished() const {
     return false;
 }
 
-ATresEnemyPawn_e_ex359::ATresEnemyPawn_e_ex359() {
+ATresEnemyPawn_e_ex359::ATresEnemyPawn_e_ex359(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_BodyReactionTypeWhileStun = ETresBodyCollReactionType::TRES_BODY_RT_INVINCIBLE;
     this->m_BodyReactionTypeWhileFinalBrake = ETresBodyCollReactionType::TRES_BODY_RT_INVINCIBLE;
     this->m_bIgnoreBodyReacyionNotifyWhileFinalBrake = true;

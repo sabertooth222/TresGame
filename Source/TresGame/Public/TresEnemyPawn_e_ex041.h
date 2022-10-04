@@ -18,6 +18,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 m_bIsAreaCaPawn: 1;
     
-    ATresEnemyPawn_e_ex041();
+    ATresEnemyPawn_e_ex041(const FObjectInitializer& ObjectInitializer);
 };
 

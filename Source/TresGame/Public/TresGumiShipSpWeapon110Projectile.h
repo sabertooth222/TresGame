@@ -13,6 +13,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float IntervalTime;
     
-    ATresGumiShipSpWeapon110Projectile();
+    ATresGumiShipSpWeapon110Projectile(const FObjectInitializer& ObjectInitializer);
 };
 

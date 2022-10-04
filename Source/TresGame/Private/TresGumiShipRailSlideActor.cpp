@@ -1,5 +1,5 @@
 #include "TresGumiShipRailSlideActor.h"
 
-ATresGumiShipRailSlideActor::ATresGumiShipRailSlideActor() {
+ATresGumiShipRailSlideActor::ATresGumiShipRailSlideActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

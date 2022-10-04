@@ -60,7 +60,7 @@ private:
     bool m_IsLinkMode;
     
 public:
-    ATresNpcPawn_n_mi202();
+    ATresNpcPawn_n_mi202(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     bool IsMikeAppealOn();
     

@@ -19,7 +19,7 @@ protected:
     Fe_ex064_WallParam m_Param;
     
 public:
-    ATresEnemyPawn_e_ex064_Wall();
+    ATresEnemyPawn_e_ex064_Wall(const FObjectInitializer& ObjectInitializer);
     
     // Fix for true pure virtual functions not being implemented
 };

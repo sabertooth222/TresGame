@@ -14,6 +14,6 @@ private:
     ATresRaFestivalDanceManager* m_pDanceMng;
     
 public:
-    ATresRaPairDancePawn();
+    ATresRaPairDancePawn(const FObjectInitializer& ObjectInitializer);
 };
 

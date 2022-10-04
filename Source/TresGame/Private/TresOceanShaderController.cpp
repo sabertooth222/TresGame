@@ -3,7 +3,7 @@
 #include "Components/SceneComponent.h"
 #include "Components/BillboardComponent.h"
 
-ATresOceanShaderController::ATresOceanShaderController() {
+ATresOceanShaderController::ATresOceanShaderController(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_SceneComponent = CreateDefaultSubobject<USceneComponent>(TEXT("Scene"));
     this->m_SpriteComponent = CreateDefaultSubobject<UBillboardComponent>(TEXT("Sprite"));
     this->m_pGridMaterial = NULL;

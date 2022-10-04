@@ -19,6 +19,6 @@ protected:
     TSubclassOf<ATresWaterCurrentSplineActor> m_AttractSplineClass;
     
 public:
-    ATresActor_e_ex771_Attract();
+    ATresActor_e_ex771_Attract(const FObjectInitializer& ObjectInitializer);
 };
 

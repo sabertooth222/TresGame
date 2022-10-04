@@ -1,6 +1,6 @@
 #include "TresCameraDebugOrthoTopView.h"
 
-ATresCameraDebugOrthoTopView::ATresCameraDebugOrthoTopView() {
+ATresCameraDebugOrthoTopView::ATresCameraDebugOrthoTopView(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_OrthoWidth = 1000.00f;
     this->m_OrthoYaw = 0.00f;
     this->m_OrthoMode = 0;

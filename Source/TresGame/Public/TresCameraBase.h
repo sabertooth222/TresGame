@@ -75,7 +75,7 @@ protected:
     float m_fRotationLerpPer;
     
 public:
-    ATresCameraBase();
+    ATresCameraBase(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void StartTresCamera(bool bTakeover, FViewTargetTransitionParamsEx TransitionParams);
     

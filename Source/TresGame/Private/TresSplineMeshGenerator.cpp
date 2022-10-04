@@ -8,7 +8,7 @@ void ATresSplineMeshGenerator::Create(ASQEX_SplineActor* splineActor, UStaticMes
 
 
 
-ATresSplineMeshGenerator::ATresSplineMeshGenerator() {
+ATresSplineMeshGenerator::ATresSplineMeshGenerator(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->FirstSplineActor = NULL;
     this->EndSplineActor = NULL;
 }

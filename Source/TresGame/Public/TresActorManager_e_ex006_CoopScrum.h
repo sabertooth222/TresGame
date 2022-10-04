@@ -12,7 +12,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<ATresEnemy_e_ex006_CoopScrumVolume*> m_SpawnFilterVolume;
     
-    ATresActorManager_e_ex006_CoopScrum();
+    ATresActorManager_e_ex006_CoopScrum(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsCoopMode() const;
     

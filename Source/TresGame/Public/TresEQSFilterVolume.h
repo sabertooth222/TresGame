@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresEQSFilterVolume : public ATresVolume {
     GENERATED_BODY()
 public:
-    ATresEQSFilterVolume();
+    ATresEQSFilterVolume(const FObjectInitializer& ObjectInitializer);
 };
 

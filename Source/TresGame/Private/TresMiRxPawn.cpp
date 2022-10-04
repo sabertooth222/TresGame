@@ -1,5 +1,5 @@
 #include "TresMiRxPawn.h"
 
-ATresMiRxPawn::ATresMiRxPawn() {
+ATresMiRxPawn::ATresMiRxPawn(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

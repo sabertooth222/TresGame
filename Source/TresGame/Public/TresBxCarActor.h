@@ -39,7 +39,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USQEXSEADZeroOneSeComponent* CarTravelSeComponent;
     
-    ATresBxCarActor();
+    ATresBxCarActor(const FObjectInitializer& ObjectInitializer);
     
     // Fix for true pure virtual functions not being implemented
 };

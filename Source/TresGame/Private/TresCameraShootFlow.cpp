@@ -1,5 +1,5 @@
 #include "TresCameraShootFlow.h"
 
-ATresCameraShootFlow::ATresCameraShootFlow() {
+ATresCameraShootFlow::ATresCameraShootFlow(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

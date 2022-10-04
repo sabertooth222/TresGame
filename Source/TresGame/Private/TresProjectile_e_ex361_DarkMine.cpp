@@ -1,6 +1,6 @@
 #include "TresProjectile_e_ex361_DarkMine.h"
 
-ATresProjectile_e_ex361_DarkMine::ATresProjectile_e_ex361_DarkMine() {
+ATresProjectile_e_ex361_DarkMine::ATresProjectile_e_ex361_DarkMine(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_DarkMineBootEff = NULL;
     this->m_DarkMineBombDist = 500.00f;
     this->m_DarkMineBombTime = 0.80f;

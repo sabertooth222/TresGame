@@ -48,7 +48,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USQEX_ParticleAttachDataAsset* m_EffDataAsset;
     
-    ATresEnemyPawn_e_ex004();
+    ATresEnemyPawn_e_ex004(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetDebugStateNo(int32 NO);
     

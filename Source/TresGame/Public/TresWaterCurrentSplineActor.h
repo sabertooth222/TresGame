@@ -19,6 +19,6 @@ protected:
     float m_fDampingRate;
     
 public:
-    ATresWaterCurrentSplineActor();
+    ATresWaterCurrentSplineActor(const FObjectInitializer& ObjectInitializer);
 };
 

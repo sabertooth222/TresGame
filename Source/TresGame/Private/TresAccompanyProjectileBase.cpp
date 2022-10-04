@@ -1,5 +1,5 @@
 #include "TresAccompanyProjectileBase.h"
 
-ATresAccompanyProjectileBase::ATresAccompanyProjectileBase() {
+ATresAccompanyProjectileBase::ATresAccompanyProjectileBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

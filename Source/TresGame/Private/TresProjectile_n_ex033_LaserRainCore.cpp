@@ -1,6 +1,6 @@
 #include "TresProjectile_n_ex033_LaserRainCore.h"
 
-ATresProjectile_n_ex033_LaserRainCore::ATresProjectile_n_ex033_LaserRainCore() {
+ATresProjectile_n_ex033_LaserRainCore::ATresProjectile_n_ex033_LaserRainCore(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_nShotMax = 7;
     this->m_fShotWaitTime = 0.50f;
     this->m_fShotWaitShortTime = 0.20f;

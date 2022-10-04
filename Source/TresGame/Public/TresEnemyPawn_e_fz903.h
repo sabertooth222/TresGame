@@ -34,7 +34,7 @@ private:
     float m_BlowDamageTurnRate;
     
 public:
-    ATresEnemyPawn_e_fz903();
+    ATresEnemyPawn_e_fz903(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     bool IsArmour() const;
     

@@ -109,7 +109,7 @@ private:
     UMercunaObstacleComponent* ObstacleComponent;
     
 public:
-    ATresAIPawnBase();
+    ATresAIPawnBase(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetRage(float inValue);
     

@@ -15,7 +15,7 @@ private:
     UBoxComponent* FloorBoxComponent;
     
 public:
-    ATresEnemyFortressFloorActor_e_ex011();
+    ATresEnemyFortressFloorActor_e_ex011(const FObjectInitializer& ObjectInitializer);
     
     // Fix for true pure virtual functions not being implemented
 };

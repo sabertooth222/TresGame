@@ -19,6 +19,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 ClipActorPredictedSize;
     
-    ATresClipGimmickUpdateMgr();
+    ATresClipGimmickUpdateMgr(const FObjectInitializer& ObjectInitializer);
 };
 

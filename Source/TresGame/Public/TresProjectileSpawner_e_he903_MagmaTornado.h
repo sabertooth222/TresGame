@@ -7,6 +7,6 @@ UCLASS(Blueprintable, HideDropdown)
 class ATresProjectileSpawner_e_he903_MagmaTornado : public AActor {
     GENERATED_BODY()
 public:
-    ATresProjectileSpawner_e_he903_MagmaTornado();
+    ATresProjectileSpawner_e_he903_MagmaTornado(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -24,7 +24,7 @@ FVector ATresNpcAILeadSplineActor::GetDirectionClosest(const FVector& InLocation
     return FVector{};
 }
 
-ATresNpcAILeadSplineActor::ATresNpcAILeadSplineActor() {
+ATresNpcAILeadSplineActor::ATresNpcAILeadSplineActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_bStartPoint = false;
     this->m_Mode = TRES_FNPC_AI_LEAD_MODE_LEAD;
     this->m_MoveType = TRES_FNPC_AI_LEAD_MOVE_RUN;

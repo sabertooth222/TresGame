@@ -19,6 +19,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_StopHomingTargetSpeed;
     
-    ATresProjectile_e_ex352_DarkBarrageBlackSphereExplode();
+    ATresProjectile_e_ex352_DarkBarrageBlackSphereExplode(const FObjectInitializer& ObjectInitializer);
 };
 

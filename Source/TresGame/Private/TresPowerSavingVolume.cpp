@@ -1,5 +1,5 @@
 #include "TresPowerSavingVolume.h"
 
-ATresPowerSavingVolume::ATresPowerSavingVolume() {
+ATresPowerSavingVolume::ATresPowerSavingVolume(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

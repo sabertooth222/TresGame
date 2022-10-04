@@ -1,6 +1,6 @@
 #include "TresEnemy_e_ex367_KeyBladeLaserProjectileBase.h"
 
-ATresEnemy_e_ex367_KeyBladeLaserProjectileBase::ATresEnemy_e_ex367_KeyBladeLaserProjectileBase() {
+ATresEnemy_e_ex367_KeyBladeLaserProjectileBase::ATresEnemy_e_ex367_KeyBladeLaserProjectileBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_ChildAttackWaitTime = 0.00f;
     this->m_AttackWaitTime = 0.00f;
     this->m_AttackHitBGTime = 0.00f;

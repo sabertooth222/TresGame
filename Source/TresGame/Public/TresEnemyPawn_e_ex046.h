@@ -48,7 +48,7 @@ private:
     TArray<FString> m_DebugBlizzardBreathClassFilePathList;
     
 public:
-    ATresEnemyPawn_e_ex046();
+    ATresEnemyPawn_e_ex046(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetAppearStateSpecial();
     

@@ -19,7 +19,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_EffectRange;
     
-    ATresGimmickTsGasBombManager();
+    ATresGimmickTsGasBombManager(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void StartVoiceEffect(FVector BaseLocation, float EffectRange);
     

@@ -1,6 +1,6 @@
 #include "TresProjectile_e_ex354_NormalShot.h"
 
-ATresProjectile_e_ex354_NormalShot::ATresProjectile_e_ex354_NormalShot() {
+ATresProjectile_e_ex354_NormalShot::ATresProjectile_e_ex354_NormalShot(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_fMinVelocityOnReflect = 2000.00f;
     this->m_fMaxPitchAdjustHeight = 0.00f;
     this->m_fDownDivideAngle = 0.00f;

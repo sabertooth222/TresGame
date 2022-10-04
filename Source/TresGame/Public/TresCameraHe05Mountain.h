@@ -20,7 +20,7 @@ protected:
     UCurveFloat* m_DistanceCurve;
     
 public:
-    ATresCameraHe05Mountain();
+    ATresCameraHe05Mountain(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     static ATresCameraHe05Mountain* BP_SpawnTresCameraHe05Mountain(UObject* WorldContextObject, TSubclassOf<ATresCameraHe05Mountain> CameraClass, const FName CameraName);
     

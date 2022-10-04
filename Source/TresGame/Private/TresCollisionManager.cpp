@@ -1,5 +1,5 @@
 #include "TresCollisionManager.h"
 
-ATresCollisionManager::ATresCollisionManager() {
+ATresCollisionManager::ATresCollisionManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

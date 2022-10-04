@@ -46,6 +46,6 @@ protected:
     FTresCollMgrDetectBodyCollTickFunction m_DetectBodyCollTickFunction;
     
 public:
-    ATresCollisionManager();
+    ATresCollisionManager(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -1,6 +1,6 @@
 #include "TresProj_Ragnarok.h"
 
-ATresProj_Ragnarok::ATresProj_Ragnarok() {
+ATresProj_Ragnarok::ATresProj_Ragnarok(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_RollingSpeed = 180.00f;
     this->m_RollingSpeedAdd = 1800.00f;
     this->m_RollingSpeedMax = 1200.00f;

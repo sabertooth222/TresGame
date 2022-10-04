@@ -39,7 +39,7 @@ protected:
     FFloatInterval m_TickEnableRange;
     
 public:
-    ATresGimmickCA_MovableBarrel();
+    ATresGimmickCA_MovableBarrel(const FObjectInitializer& ObjectInitializer);
 protected:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool UseNaviMeshCheck() const;

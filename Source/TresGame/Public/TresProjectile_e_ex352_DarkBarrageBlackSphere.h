@@ -7,6 +7,6 @@ UCLASS(Blueprintable, HideDropdown)
 class ATresProjectile_e_ex352_DarkBarrageBlackSphere : public ATresProjectileBase {
     GENERATED_BODY()
 public:
-    ATresProjectile_e_ex352_DarkBarrageBlackSphere();
+    ATresProjectile_e_ex352_DarkBarrageBlackSphere(const FObjectInitializer& ObjectInitializer);
 };
 

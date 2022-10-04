@@ -17,7 +17,7 @@ private:
     float m_WarpDitherInterpTime;
     
 public:
-    ATresEnemyPawn_e_ex113();
+    ATresEnemyPawn_e_ex113(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, Exec)
     void SpawnChild();
     

@@ -238,7 +238,7 @@ protected:
     bool bExploded;
     
 public:
-    ATresProjectileBase();
+    ATresProjectileBase(const FObjectInitializer& ObjectInitializer);
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)

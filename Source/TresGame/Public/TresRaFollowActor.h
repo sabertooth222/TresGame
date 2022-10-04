@@ -61,7 +61,7 @@ protected:
     USplineComponent* m_Spline;
     
 public:
-    ATresRaFollowActor();
+    ATresRaFollowActor(const FObjectInitializer& ObjectInitializer);
 protected:
     UFUNCTION(BlueprintCallable)
     void SetActorState(EFollowActorState State);

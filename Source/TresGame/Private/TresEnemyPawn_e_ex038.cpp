@@ -15,7 +15,7 @@ int32 ATresEnemyPawn_e_ex038::GetAeroCutterNum() {
 void ATresEnemyPawn_e_ex038::Debug_ForcingCancelMagicSquare() {
 }
 
-ATresEnemyPawn_e_ex038::ATresEnemyPawn_e_ex038() {
+ATresEnemyPawn_e_ex038::ATresEnemyPawn_e_ex038(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_pAeroCutter[0] = NULL;
     this->m_pAeroCutter[1] = NULL;
     this->m_pAeroCutter[2] = NULL;

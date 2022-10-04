@@ -1,5 +1,5 @@
 #include "TresPlayerControllerMiRxMickey.h"
 
-ATresPlayerControllerMiRxMickey::ATresPlayerControllerMiRxMickey() {
+ATresPlayerControllerMiRxMickey::ATresPlayerControllerMiRxMickey(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

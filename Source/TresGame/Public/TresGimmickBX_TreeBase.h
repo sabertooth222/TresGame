@@ -14,6 +14,6 @@ private:
     UTresStaticMeshComponent* MyMesh;
     
 public:
-    ATresGimmickBX_TreeBase();
+    ATresGimmickBX_TreeBase(const FObjectInitializer& ObjectInitializer);
 };
 

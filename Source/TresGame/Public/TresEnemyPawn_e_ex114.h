@@ -25,7 +25,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_RevengeAllowLastPawnNum;
     
-    ATresEnemyPawn_e_ex114();
+    ATresEnemyPawn_e_ex114(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsNowBunshin() const;
     

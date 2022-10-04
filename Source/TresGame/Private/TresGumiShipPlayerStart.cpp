@@ -1,5 +1,5 @@
 #include "TresGumiShipPlayerStart.h"
 
-ATresGumiShipPlayerStart::ATresGumiShipPlayerStart() {
+ATresGumiShipPlayerStart::ATresGumiShipPlayerStart(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

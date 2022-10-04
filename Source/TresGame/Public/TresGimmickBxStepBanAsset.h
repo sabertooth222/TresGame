@@ -13,7 +13,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTresStaticMeshComponent* MyMesh;
     
-    ATresGimmickBxStepBanAsset();
+    ATresGimmickBxStepBanAsset(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetStepBanAssetOwnerActor(AActor* GimmickOwner);
     

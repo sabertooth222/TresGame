@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresPlayerControllerSora : public ATresPlayerControllerBase {
     GENERATED_BODY()
 public:
-    ATresPlayerControllerSora();
+    ATresPlayerControllerSora(const FObjectInitializer& ObjectInitializer);
 };
 

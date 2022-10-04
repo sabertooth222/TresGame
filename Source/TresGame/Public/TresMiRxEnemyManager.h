@@ -32,7 +32,7 @@ private:
     TArray<FTresMiRxReplicaStateTable> m_StateTable;
     
 public:
-    ATresMiRxEnemyManager();
+    ATresMiRxEnemyManager(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void BP_ToSecondHalf();
     

@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable)
 class ATresProjectile_e_he903_IceTornado : public ATresProjectileBase {
     GENERATED_BODY()
 public:
-    ATresProjectile_e_he903_IceTornado();
+    ATresProjectile_e_he903_IceTornado(const FObjectInitializer& ObjectInitializer);
 };
 

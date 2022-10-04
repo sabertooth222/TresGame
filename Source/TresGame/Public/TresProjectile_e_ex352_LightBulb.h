@@ -43,6 +43,6 @@ protected:
     float m_DisableAttackCollisionTime;
     
 public:
-    ATresProjectile_e_ex352_LightBulb();
+    ATresProjectile_e_ex352_LightBulb(const FObjectInitializer& ObjectInitializer);
 };
 

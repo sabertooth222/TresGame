@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable)
 class ATresProjectile_e_ex313_DarkHand_Thunder : public ATresProjectileBase {
     GENERATED_BODY()
 public:
-    ATresProjectile_e_ex313_DarkHand_Thunder();
+    ATresProjectile_e_ex313_DarkHand_Thunder(const FObjectInitializer& ObjectInitializer);
 };
 

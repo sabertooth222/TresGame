@@ -20,7 +20,7 @@ int32 ATresGimmickCA_PrizeChimney::GetHitPoint() const {
 void ATresGimmickCA_PrizeChimney::DeactivateChimneyGimmick() {
 }
 
-ATresGimmickCA_PrizeChimney::ATresGimmickCA_PrizeChimney() {
+ATresGimmickCA_PrizeChimney::ATresGimmickCA_PrizeChimney(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_GroupOwner = NULL;
     this->m_SmokeParticleAsset = NULL;
     this->m_SmokeFinishParticleAsset = NULL;

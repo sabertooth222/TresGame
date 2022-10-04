@@ -53,7 +53,7 @@ void ATresEnemyPawn_e_ex301::BP_AscensionAttackStart() {
 void ATresEnemyPawn_e_ex301::BattleEndAscensionMode() {
 }
 
-ATresEnemyPawn_e_ex301::ATresEnemyPawn_e_ex301() {
+ATresEnemyPawn_e_ex301::ATresEnemyPawn_e_ex301(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_LightPower = 1.00f;
     this->m_AspirStartTime = 5.00f;
     this->m_AspirIntervalTime = 1.00f;

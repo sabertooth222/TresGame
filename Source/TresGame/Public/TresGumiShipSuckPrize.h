@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class TRESGAME_API ATresGumiShipSuckPrize : public ATresGumiShipActorBase {
     GENERATED_BODY()
 public:
-    ATresGumiShipSuckPrize();
+    ATresGumiShipSuckPrize(const FObjectInitializer& ObjectInitializer);
 };
 

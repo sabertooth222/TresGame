@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable)
 class ATresProjectile_e_ex305_ArrowRainArrow : public ATresProjectileBase {
     GENERATED_BODY()
 public:
-    ATresProjectile_e_ex305_ArrowRainArrow();
+    ATresProjectile_e_ex305_ArrowRainArrow(const FObjectInitializer& ObjectInitializer);
 };
 

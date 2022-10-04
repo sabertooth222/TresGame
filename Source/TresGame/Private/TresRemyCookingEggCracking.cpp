@@ -17,6 +17,6 @@ float ATresRemyCookingEggCracking::GetGameDuration() const {
 void ATresRemyCookingEggCracking::ChangeState(TEnumAsByte<RemyCookingGameState> State) {
 }
 
-ATresRemyCookingEggCracking::ATresRemyCookingEggCracking() {
+ATresRemyCookingEggCracking::ATresRemyCookingEggCracking(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

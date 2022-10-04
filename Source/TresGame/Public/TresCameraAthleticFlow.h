@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresCameraAthleticFlow : public ATresCameraTarget {
     GENERATED_BODY()
 public:
-    ATresCameraAthleticFlow();
+    ATresCameraAthleticFlow(const FObjectInitializer& ObjectInitializer);
 };
 

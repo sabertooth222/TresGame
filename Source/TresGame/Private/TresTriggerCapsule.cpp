@@ -1,5 +1,5 @@
 #include "TresTriggerCapsule.h"
 
-ATresTriggerCapsule::ATresTriggerCapsule() {
+ATresTriggerCapsule::ATresTriggerCapsule(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

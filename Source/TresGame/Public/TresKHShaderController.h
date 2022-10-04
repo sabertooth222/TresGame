@@ -17,7 +17,7 @@ private:
     UMaterialInterface* m_CurrentPostProcessMaterial;
     
 public:
-    ATresKHShaderController();
+    ATresKHShaderController(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetKHSSceneEmissiveCoefficient(float Coefficient);
     

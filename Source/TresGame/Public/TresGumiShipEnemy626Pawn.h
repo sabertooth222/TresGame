@@ -80,7 +80,7 @@ protected:
     float m_fMaterialParamMax;
     
 public:
-    ATresGumiShipEnemy626Pawn();
+    ATresGumiShipEnemy626Pawn(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool SetPermitFiring(bool Enable);
     

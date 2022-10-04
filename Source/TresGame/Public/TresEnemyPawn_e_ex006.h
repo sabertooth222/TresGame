@@ -45,7 +45,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_ReflectKnockBackBrake;
     
-    ATresEnemyPawn_e_ex006();
+    ATresEnemyPawn_e_ex006(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     bool IsIncludeFormation();
     

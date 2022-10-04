@@ -37,6 +37,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bParticleRotSync;
     
-    ATresProjectile_e_he903_Debris();
+    ATresProjectile_e_he903_Debris(const FObjectInitializer& ObjectInitializer);
 };
 

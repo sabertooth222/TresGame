@@ -80,7 +80,7 @@ void ATresEnemyPawn_e_ex356::BigDealRemoteEventForLevelBP(UObject* WorldContextO
 void ATresEnemyPawn_e_ex356::BigDealCinematicStartForLevelBP(UObject* WorldContextObject, int32 InRandomSeed, float InOneCardScaleUpTime, float InAllCardScaleUpTime) {
 }
 
-ATresEnemyPawn_e_ex356::ATresEnemyPawn_e_ex356() {
+ATresEnemyPawn_e_ex356::ATresEnemyPawn_e_ex356(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_CardClass = NULL;
     this->m_TargetExplodeProjectileClass = NULL;
     this->m_BigDealProjectileClass = NULL;

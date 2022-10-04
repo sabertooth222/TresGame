@@ -8,7 +8,7 @@ ATresCameraNormalDstTgt2* ATresCameraNormalDstTgt2::BP_SpawnTresCameraNormalDstT
     return NULL;
 }
 
-ATresCameraNormalDstTgt2::ATresCameraNormalDstTgt2() {
+ATresCameraNormalDstTgt2::ATresCameraNormalDstTgt2(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_NearTargetDistance2 = 1000.00f;
     this->m_NearCamDistance2 = 1000.00f;
     this->m_FarTargetDistance2 = 4000.00f;

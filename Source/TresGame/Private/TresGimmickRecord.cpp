@@ -46,7 +46,7 @@ void ATresGimmickRecord::ClearPitchFade() {
 void ATresGimmickRecord::ChangePlayingState_Implementation(bool Playing) {
 }
 
-ATresGimmickRecord::ATresGimmickRecord() {
+ATresGimmickRecord::ATresGimmickRecord(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->AngleDumping = 0.15f;
     this->AngleAccelSpeed = 350.00f;
     this->BaseLength = 130.00f;

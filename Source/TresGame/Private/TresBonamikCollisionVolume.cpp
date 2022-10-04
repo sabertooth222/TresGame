@@ -1,6 +1,6 @@
 #include "TresBonamikCollisionVolume.h"
 
-ATresBonamikCollisionVolume::ATresBonamikCollisionVolume() {
+ATresBonamikCollisionVolume::ATresBonamikCollisionVolume(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_ControlBonamikCollision = true;
     this->m_ControlBonamikWeightAndEnable = false;
     this->m_AllowMultipleOverlaps = false;

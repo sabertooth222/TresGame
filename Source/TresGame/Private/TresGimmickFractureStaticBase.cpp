@@ -1,5 +1,5 @@
 #include "TresGimmickFractureStaticBase.h"
 
-ATresGimmickFractureStaticBase::ATresGimmickFractureStaticBase() {
+ATresGimmickFractureStaticBase::ATresGimmickFractureStaticBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

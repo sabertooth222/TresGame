@@ -18,7 +18,7 @@ protected:
     UTresGumiShipDefCollisionSetCompo* m_pDefCollision;
     
 public:
-    ATresGumiShipSpWeapon020Projectile();
+    ATresGumiShipSpWeapon020Projectile(const FObjectInitializer& ObjectInitializer);
 protected:
     UFUNCTION(BlueprintCallable)
     void _OnComponentHit(UPrimitiveComponent* pHitComponent, AActor* pOtherActor, UPrimitiveComponent* pOtherComp, FVector vNormalImpulse, const FHitResult& rHit);

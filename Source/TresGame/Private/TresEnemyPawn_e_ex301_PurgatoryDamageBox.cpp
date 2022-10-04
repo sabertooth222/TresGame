@@ -10,7 +10,7 @@ void ATresEnemyPawn_e_ex301_PurgatoryDamageBox::OnPullCollisionEndOverlap(UPrimi
 void ATresEnemyPawn_e_ex301_PurgatoryDamageBox::OnPullCollisionBeginOverlap(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult) {
 }
 
-ATresEnemyPawn_e_ex301_PurgatoryDamageBox::ATresEnemyPawn_e_ex301_PurgatoryDamageBox() {
+ATresEnemyPawn_e_ex301_PurgatoryDamageBox::ATresEnemyPawn_e_ex301_PurgatoryDamageBox(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_DamageStartTime = 0.00f;
     this->m_DamageIntervalTime = 3.00f;
     this->m_Damage = 1.00f;

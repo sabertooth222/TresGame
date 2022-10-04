@@ -44,6 +44,6 @@ protected:
     TArray<AActor*> m_JoinForceTargetList;
     
 public:
-    ATresAtkCollManager();
+    ATresAtkCollManager(const FObjectInitializer& ObjectInitializer);
 };
 

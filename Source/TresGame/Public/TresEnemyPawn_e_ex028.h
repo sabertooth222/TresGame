@@ -14,7 +14,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TArray<TEnumAsByte<ETresEnemy_e_ex028_BodyColor>> m_pro_BodyColorArray;
     
-    ATresEnemyPawn_e_ex028();
+    ATresEnemyPawn_e_ex028(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     bool isBodyColor(TEnumAsByte<ETresEnemy_e_ex028_BodyColor> Color);
     

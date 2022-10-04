@@ -15,7 +15,7 @@ bool ATresEnemyPawn_e_ex047::IsCallEnemyInvisible() {
 void ATresEnemyPawn_e_ex047::BpDoPop() {
 }
 
-ATresEnemyPawn_e_ex047::ATresEnemyPawn_e_ex047() {
+ATresEnemyPawn_e_ex047::ATresEnemyPawn_e_ex047(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_WorldType = (ETrese_ex047WorldTypes)0;
     this->m_MasicParticle = NULL;
 }

@@ -19,7 +19,7 @@ UTresGummiEditorDataTableSet* ATresGummiMenuManager::GetGummiEditorData() const 
 void ATresGummiMenuManager::DelegateGummiMissionHelpOut(int32 InParam) {
 }
 
-ATresGummiMenuManager::ATresGummiMenuManager() {
+ATresGummiMenuManager::ATresGummiMenuManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_pShip = NULL;
     this->m_pMist = NULL;
     this->m_pBlackBG = NULL;

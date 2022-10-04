@@ -9,7 +9,7 @@ FVector ATresAccompanyPawnBase::BP_GetSafetyPos() const {
     return FVector{};
 }
 
-ATresAccompanyPawnBase::ATresAccompanyPawnBase() {
+ATresAccompanyPawnBase::ATresAccompanyPawnBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_UIDataAccompany = NULL;
     this->MyPenetrationEffectMesh = CreateDefaultSubobject<UTresSkeletalMeshComponent>(TEXT("TresEffectMesh0"));
     this->MyPenetrationParticleEffect = CreateDefaultSubobject<UParticleSystemComponent>(TEXT("TresPenetrationEffect0"));
