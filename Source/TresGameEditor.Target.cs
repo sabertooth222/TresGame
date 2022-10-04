@@ -5,6 +5,8 @@ public class TresGameEditorTarget : TargetRules {
 		Type = TargetType.Editor;
 		ExtraModuleNames.AddRange(new string[] {
 			"ActorSequence",
+			"AnimGraph",
+			"AnimationBlueprintEditor",
 			"BonamikRt",
 			"ClothingSystemRuntime",
 			"GeometryCache",
