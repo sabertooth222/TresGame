@@ -1,6 +1,6 @@
 #include "TresProjectile_e_ex354_ChargeShot.h"
 
-ATresProjectile_e_ex354_ChargeShot::ATresProjectile_e_ex354_ChargeShot() {
+ATresProjectile_e_ex354_ChargeShot::ATresProjectile_e_ex354_ChargeShot(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_fMinBoundDistance = 0.00f;
     this->m_fMaxBoundDistance = 100000.00f;
     this->m_fMinBoundAngle = 0.00f;

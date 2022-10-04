@@ -26,6 +26,6 @@ private:
     UTresUIP_HundredGame* m_HundredGameUI;
     
 public:
-    ATresWinnieHUD();
+    ATresWinnieHUD(const FObjectInitializer& ObjectInitializer);
 };
 

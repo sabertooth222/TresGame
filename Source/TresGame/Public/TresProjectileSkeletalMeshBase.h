@@ -27,6 +27,6 @@ protected:
     USQEX_ParticleAttachDataAsset* m_AttachData;
     
 public:
-    ATresProjectileSkeletalMeshBase();
+    ATresProjectileSkeletalMeshBase(const FObjectInitializer& ObjectInitializer);
 };
 

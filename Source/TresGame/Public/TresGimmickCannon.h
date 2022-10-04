@@ -36,6 +36,6 @@ protected:
     FName m_PreAnimationName;
     
 public:
-    ATresGimmickCannon();
+    ATresGimmickCannon(const FObjectInitializer& ObjectInitializer);
 };
 

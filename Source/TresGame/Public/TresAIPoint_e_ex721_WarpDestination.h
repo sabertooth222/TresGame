@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresAIPoint_e_ex721_WarpDestination : public ATresAIPoint {
     GENERATED_BODY()
 public:
-    ATresAIPoint_e_ex721_WarpDestination();
+    ATresAIPoint_e_ex721_WarpDestination(const FObjectInitializer& ObjectInitializer);
 };
 

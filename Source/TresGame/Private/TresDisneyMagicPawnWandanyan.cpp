@@ -1,6 +1,6 @@
 #include "TresDisneyMagicPawnWandanyan.h"
 
-ATresDisneyMagicPawnWandanyan::ATresDisneyMagicPawnWandanyan() {
+ATresDisneyMagicPawnWandanyan::ATresDisneyMagicPawnWandanyan(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_pCamera = NULL;
     this->m_fMoveSpeedLv1 = 400.00f;
     this->m_fMoveSpeedLv2 = 500.00f;

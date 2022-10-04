@@ -1,6 +1,6 @@
 #include "TresAtkCollManager.h"
 
-ATresAtkCollManager::ATresAtkCollManager() {
+ATresAtkCollManager::ATresAtkCollManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_CmnGuardReflectEffect = NULL;
     this->m_CmnStaggerReflectEffect = NULL;
     this->m_CmnInvincibleHitEffect = NULL;

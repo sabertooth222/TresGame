@@ -246,7 +246,7 @@ void ATresGumiShipPlayer::_OnChangedLockonTarget(USceneComponent* pNewTarget) {
 void ATresGumiShipPlayer::_OnBrokenBarrier(const int32 dIndex) {
 }
 
-ATresGumiShipPlayer::ATresGumiShipPlayer() {
+ATresGumiShipPlayer::ATresGumiShipPlayer(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_pSpeedDirectCompo = CreateDefaultSubobject<UTresGumiShipDirectSpeedCompo>(TEXT("SpeedDirectCompo"));
     this->m_pBoostDirectCompo = CreateDefaultSubobject<UTresGumiShipBoostDirectCompo>(TEXT("BoostDirectCompo"));
     this->m_pTargetCursorPoint = CreateDefaultSubobject<UTresGumiShipTargetPointCompo>(TEXT("TargetCursorPoint"));

@@ -59,7 +59,7 @@ bool ATresEnemyXIIIEPawnBase::CanStartLeaderChangeOrFatalAttack() {
     return false;
 }
 
-ATresEnemyXIIIEPawnBase::ATresEnemyXIIIEPawnBase() {
+ATresEnemyXIIIEPawnBase::ATresEnemyXIIIEPawnBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_bDebugActiveSecondAnnihilation = false;
     this->m_bIsAreaEPawn = true;
     this->m_RevengePlayVoiceKind = ETresEnemyXIIIEPlayVoiceKind::VoiceAtLocation;

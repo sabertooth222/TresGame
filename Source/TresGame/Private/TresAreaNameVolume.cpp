@@ -1,6 +1,6 @@
 #include "TresAreaNameVolume.h"
 
-ATresAreaNameVolume::ATresAreaNameVolume() {
+ATresAreaNameVolume::ATresAreaNameVolume(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_EnableAreaName = true;
     this->m_ShowAreaNameUI = true;
     this->m_EnableNavMap = false;

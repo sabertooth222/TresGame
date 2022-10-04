@@ -42,7 +42,7 @@ void ATresGumiShipEnemy622Pawn::_ChangeState(GUMISHIP_ENEMY622_STATUS Status) {
 void ATresGumiShipEnemy622Pawn::_CannonAttackChange(bool change) {
 }
 
-ATresGumiShipEnemy622Pawn::ATresGumiShipEnemy622Pawn() {
+ATresGumiShipEnemy622Pawn::ATresGumiShipEnemy622Pawn(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_pBarrierVFX = NULL;
     this->m_pProductVFX = NULL;
     this->m_fAdvanceDistance = 3000.00f;

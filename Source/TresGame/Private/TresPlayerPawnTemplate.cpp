@@ -6,7 +6,7 @@ void ATresPlayerPawnTemplate::_OnDtorStateForBind(TEnumAsByte<ETresStateID> eSta
 void ATresPlayerPawnTemplate::_OnCtorStateForBind(TEnumAsByte<ETresStateID> eStateID) {
 }
 
-ATresPlayerPawnTemplate::ATresPlayerPawnTemplate() {
+ATresPlayerPawnTemplate::ATresPlayerPawnTemplate(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_pAttackStateDataSet = NULL;
     this->m_StrongAddMotionSlotName = TEXT("FullBodyAdd");
     this->m_fAddReactionCoolDownTime = 0.00f;

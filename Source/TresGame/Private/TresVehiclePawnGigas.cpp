@@ -61,7 +61,7 @@ bool ATresVehiclePawnGigas::EndElectroState() {
     return false;
 }
 
-ATresVehiclePawnGigas::ATresVehiclePawnGigas() {
+ATresVehiclePawnGigas::ATresVehiclePawnGigas(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_ProjMachineGun = NULL;
     this->m_ProjCannon = NULL;
     this->m_ProjBomb = NULL;

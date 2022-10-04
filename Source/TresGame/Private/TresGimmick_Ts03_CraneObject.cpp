@@ -12,7 +12,7 @@ void ATresGimmick_Ts03_CraneObject::CraneRemoveCollisionShape(const FName InTagN
 void ATresGimmick_Ts03_CraneObject::CraneAppendCollisionShape(const FName InTagName, FVector InSize, FVector InRelativeLocaiton, FRotator InRelativeRotation, bool bUpdate) {
 }
 
-ATresGimmick_Ts03_CraneObject::ATresGimmick_Ts03_CraneObject() {
+ATresGimmick_Ts03_CraneObject::ATresGimmick_Ts03_CraneObject(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->BodyCollComponent = CreateDefaultSubobject<UTresBodyCollComponent>(TEXT("BodyCollComponent"));
 }
 

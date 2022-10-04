@@ -13,6 +13,6 @@ private:
     FTresGumiShipElementResistance ElementResistance;
     
 public:
-    ATresGumiShipSpWeapon160Actor();
+    ATresGumiShipSpWeapon160Actor(const FObjectInitializer& ObjectInitializer);
 };
 

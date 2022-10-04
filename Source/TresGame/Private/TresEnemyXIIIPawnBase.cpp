@@ -20,7 +20,7 @@ int32 ATresEnemyXIIIPawnBase::GetPhaseNo() const {
 }
 
 
-ATresEnemyXIIIPawnBase::ATresEnemyXIIIPawnBase() {
+ATresEnemyXIIIPawnBase::ATresEnemyXIIIPawnBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_UniqueEffectDataAsset = NULL;
     this->m_FirstPhaseType = ETresEnemyXIIIPhaseType::PHASE1;
     this->m_PhaseChangeHitPointMinRateList[0] = 0.00f;

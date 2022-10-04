@@ -29,7 +29,7 @@ protected:
     FName m_PairName;
     
 public:
-    ATresGumiShipEnemy625Pawn();
+    ATresGumiShipEnemy625Pawn(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetEnableDead();
     

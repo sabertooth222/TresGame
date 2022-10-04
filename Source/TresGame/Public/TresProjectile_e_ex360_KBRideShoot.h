@@ -14,6 +14,6 @@ private:
     ATresEnemyPawn_e_ex360KBBoard* m_KBBoard;
     
 public:
-    ATresProjectile_e_ex360_KBRideShoot();
+    ATresProjectile_e_ex360_KBRideShoot(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -8,6 +8,6 @@ FRotator ATresNpcPawn_n_ts201::GetAimOffset() const {
     return FRotator{};
 }
 
-ATresNpcPawn_n_ts201::ATresNpcPawn_n_ts201() {
+ATresNpcPawn_n_ts201::ATresNpcPawn_n_ts201(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

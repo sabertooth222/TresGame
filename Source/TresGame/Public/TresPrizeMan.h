@@ -7,6 +7,6 @@ UCLASS(Blueprintable, NotPlaceable, Transient)
 class ATresPrizeMan : public AActor {
     GENERATED_BODY()
 public:
-    ATresPrizeMan();
+    ATresPrizeMan(const FObjectInitializer& ObjectInitializer);
 };
 

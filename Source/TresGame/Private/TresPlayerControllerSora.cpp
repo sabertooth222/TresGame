@@ -1,5 +1,5 @@
 #include "TresPlayerControllerSora.h"
 
-ATresPlayerControllerSora::ATresPlayerControllerSora() {
+ATresPlayerControllerSora::ATresPlayerControllerSora(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

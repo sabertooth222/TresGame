@@ -1,5 +1,5 @@
 #include "TresPlayerControllerTemplate.h"
 
-ATresPlayerControllerTemplate::ATresPlayerControllerTemplate() {
+ATresPlayerControllerTemplate::ATresPlayerControllerTemplate(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

@@ -1,6 +1,6 @@
 #include "TresProjectile_XIIIE_BladeTornadoForTackle.h"
 
-ATresProjectile_XIIIE_BladeTornadoForTackle::ATresProjectile_XIIIE_BladeTornadoForTackle() {
+ATresProjectile_XIIIE_BladeTornadoForTackle::ATresProjectile_XIIIE_BladeTornadoForTackle(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_BladeTornadoTipData = NULL;
     this->m_BladeTornadoAppearData = NULL;
     this->m_BladeTornadoHitLandData = NULL;

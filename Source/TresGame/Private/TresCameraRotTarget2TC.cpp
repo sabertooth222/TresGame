@@ -15,6 +15,6 @@ void ATresCameraRotTarget2TC::BP_SetTresCamera2TCDistancePlus(bool bDistancePlus
 void ATresCameraRotTarget2TC::BP_SetTresCamera2ndTargetParam(AActor* Target2, FVector TargetOffset, FVector TargetLocalOffset, FName TargetBoneName) {
 }
 
-ATresCameraRotTarget2TC::ATresCameraRotTarget2TC() {
+ATresCameraRotTarget2TC::ATresCameraRotTarget2TC(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

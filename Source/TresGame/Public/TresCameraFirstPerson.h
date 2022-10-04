@@ -11,7 +11,7 @@ UCLASS(Blueprintable, NotPlaceable)
 class ATresCameraFirstPerson : public ATresCameraTarget {
     GENERATED_BODY()
 public:
-    ATresCameraFirstPerson();
+    ATresCameraFirstPerson(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     static ATresCameraFirstPerson* BP_SpawnTresCameraFirstPerson(UObject* WorldContextObject, TSubclassOf<ATresCameraFirstPerson> CameraClass, const FName CameraName);
     

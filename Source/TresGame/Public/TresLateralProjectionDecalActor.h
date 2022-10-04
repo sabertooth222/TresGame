@@ -16,6 +16,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UDecalComponent* DecalComponent;
     
-    ATresLateralProjectionDecalActor();
+    ATresLateralProjectionDecalActor(const FObjectInitializer& ObjectInitializer);
 };
 

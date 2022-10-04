@@ -172,7 +172,7 @@ bool ATresPlayerPawnBase::BP_NotifyForcedStartDiveFall() {
     return false;
 }
 
-ATresPlayerPawnBase::ATresPlayerPawnBase() {
+ATresPlayerPawnBase::ATresPlayerPawnBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MyFrdMgr = CreateDefaultSubobject<UTresFriendComponent>(TEXT("TresFriendComponent0"));
     this->MyStateEvent = CreateDefaultSubobject<UTresPlayerStateEventComponent>(TEXT("UTresPlayerStateEventComponent0"));
     this->MySprintSpeed = 980.00f;

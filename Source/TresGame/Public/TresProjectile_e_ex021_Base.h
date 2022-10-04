@@ -17,6 +17,6 @@ private:
     UParticleSystem* m_ExplosionEffData;
     
 public:
-    ATresProjectile_e_ex021_Base();
+    ATresProjectile_e_ex021_Base(const FObjectInitializer& ObjectInitializer);
 };
 

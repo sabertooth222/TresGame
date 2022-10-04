@@ -15,6 +15,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName EndOverlapCommandName;
     
-    ATresMapSetVolumeEx();
+    ATresMapSetVolumeEx(const FObjectInitializer& ObjectInitializer);
 };
 

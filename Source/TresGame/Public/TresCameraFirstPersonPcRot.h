@@ -11,7 +11,7 @@ UCLASS(Blueprintable)
 class ATresCameraFirstPersonPcRot : public ATresCameraFirstPerson {
     GENERATED_BODY()
 public:
-    ATresCameraFirstPersonPcRot();
+    ATresCameraFirstPersonPcRot(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     static ATresCameraFirstPersonPcRot* BP_SpawnTresCameraFirstPersonPcRot(UObject* WorldContextObject, TSubclassOf<ATresCameraFirstPersonPcRot> CameraClass, const FName CameraName);
     

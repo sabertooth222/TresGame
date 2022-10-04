@@ -18,6 +18,6 @@ protected:
     UParticleSystem* m_pro_SmokeEffData;
     
 public:
-    ATresActor_e_dw401_Smoke();
+    ATresActor_e_dw401_Smoke(const FObjectInitializer& ObjectInitializer);
 };
 

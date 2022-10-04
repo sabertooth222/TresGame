@@ -22,7 +22,7 @@ private:
     UTresSkeletalMeshComponent* MyMesh;
     
 public:
-    ATresComNpcSkeletalMeshActor();
+    ATresComNpcSkeletalMeshActor(const FObjectInitializer& ObjectInitializer);
     
     // Fix for true pure virtual functions not being implemented
 };

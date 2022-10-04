@@ -1,6 +1,6 @@
 #include "TresProjectile_e_ex035_Nuts.h"
 
-ATresProjectile_e_ex035_Nuts::ATresProjectile_e_ex035_Nuts() {
+ATresProjectile_e_ex035_Nuts::ATresProjectile_e_ex035_Nuts(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_fRotAxisDeviation = 0.00f;
     this->m_fRotVel = 0.00f;
     this->m_fDisappearTime = 0.00f;

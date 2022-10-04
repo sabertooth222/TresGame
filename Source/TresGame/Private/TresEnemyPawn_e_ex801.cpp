@@ -16,6 +16,6 @@ AActor* ATresEnemyPawn_e_ex801::GetPlasmaTarget() const {
 void ATresEnemyPawn_e_ex801::GetPlasmaLocationList(TArray<FVector>& OutList) const {
 }
 
-ATresEnemyPawn_e_ex801::ATresEnemyPawn_e_ex801() {
+ATresEnemyPawn_e_ex801::ATresEnemyPawn_e_ex801(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

@@ -5,7 +5,7 @@
 void ATresProjectile_e_ex901_RailSlideBase::RefreshAtkColl() {
 }
 
-ATresProjectile_e_ex901_RailSlideBase::ATresProjectile_e_ex901_RailSlideBase() {
+ATresProjectile_e_ex901_RailSlideBase::ATresProjectile_e_ex901_RailSlideBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_HitPoint = 1;
     this->m_FireParticle = NULL;
     this->m_FireParticleComp = NULL;

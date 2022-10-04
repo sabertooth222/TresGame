@@ -22,7 +22,7 @@ protected:
     float m_fAdvanceDistance;
     
 public:
-    ATresGumiShipParts646Pawn();
+    ATresGumiShipParts646Pawn(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool _StartAttack(FVector _target);
     

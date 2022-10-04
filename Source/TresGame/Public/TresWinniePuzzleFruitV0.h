@@ -42,6 +42,6 @@ private:
     ATresWinniePuzzleLumpyPawn* m_pLumpyPawn;
     
 public:
-    ATresWinniePuzzleFruitV0();
+    ATresWinniePuzzleFruitV0(const FObjectInitializer& ObjectInitializer);
 };
 

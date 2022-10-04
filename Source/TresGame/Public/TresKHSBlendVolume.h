@@ -231,6 +231,6 @@ public:
     UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, Interp, meta=(AllowPrivateAccess=true))
     bool UsePlayerLocation;
     
-    ATresKHSBlendVolume();
+    ATresKHSBlendVolume(const FObjectInitializer& ObjectInitializer);
 };
 

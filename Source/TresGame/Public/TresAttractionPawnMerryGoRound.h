@@ -87,7 +87,7 @@ private:
     ATresProjectileBase* m_pChainReserveProj;
     
 public:
-    ATresAttractionPawnMerryGoRound();
+    ATresAttractionPawnMerryGoRound(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetRotYaw() const;
     

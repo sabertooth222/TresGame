@@ -85,7 +85,7 @@ void ATresAICoordinator::GetActorsWithAffiliation(TArray<AActor*>& outResult, co
 void ATresAICoordinator::BP_AssignAttackers(TArray<AActor*> inSourceActors) {
 }
 
-ATresAICoordinator::ATresAICoordinator() {
+ATresAICoordinator::ATresAICoordinator(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->PostAttackerAssignedCooldown = NULL;
     this->PostTargetAttackedCooldown = NULL;
     this->EnableDebugDraw = false;

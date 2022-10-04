@@ -12,6 +12,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_PCHitEffData;
     
-    ATresProjectile_e_dw401_DevilCyclone();
+    ATresProjectile_e_dw401_DevilCyclone(const FObjectInitializer& ObjectInitializer);
 };
 

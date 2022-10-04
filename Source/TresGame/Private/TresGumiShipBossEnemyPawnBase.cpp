@@ -8,6 +8,6 @@ bool ATresGumiShipBossEnemyPawnBase::GenerateSupportEnemy(int32 UsingEnemyGenera
     return false;
 }
 
-ATresGumiShipBossEnemyPawnBase::ATresGumiShipBossEnemyPawnBase() {
+ATresGumiShipBossEnemyPawnBase::ATresGumiShipBossEnemyPawnBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

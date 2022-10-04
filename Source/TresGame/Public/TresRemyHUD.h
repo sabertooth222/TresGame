@@ -30,6 +30,6 @@ private:
     UTresUIP_MenuRemy* m_MenuRemy;
     
 public:
-    ATresRemyHUD();
+    ATresRemyHUD(const FObjectInitializer& ObjectInitializer);
 };
 

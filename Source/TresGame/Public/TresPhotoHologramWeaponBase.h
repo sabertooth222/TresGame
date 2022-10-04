@@ -7,7 +7,7 @@ UCLASS(Blueprintable)
 class ATresPhotoHologramWeaponBase : public ATresWeaponBase {
     GENERATED_BODY()
 public:
-    ATresPhotoHologramWeaponBase();
+    ATresPhotoHologramWeaponBase(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void BP_NotifyStartChangeAttachParent(const FName InSocketName);
     

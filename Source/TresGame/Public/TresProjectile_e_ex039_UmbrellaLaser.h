@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresProjectile_e_ex039_UmbrellaLaser : public ATresProjectileBase {
     GENERATED_BODY()
 public:
-    ATresProjectile_e_ex039_UmbrellaLaser();
+    ATresProjectile_e_ex039_UmbrellaLaser(const FObjectInitializer& ObjectInitializer);
 };
 

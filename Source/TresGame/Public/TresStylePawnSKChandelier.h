@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresStylePawnSKChandelier : public ATresStylePawnBase {
     GENERATED_BODY()
 public:
-    ATresStylePawnSKChandelier();
+    ATresStylePawnSKChandelier(const FObjectInitializer& ObjectInitializer);
 };
 

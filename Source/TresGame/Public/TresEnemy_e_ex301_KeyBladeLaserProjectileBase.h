@@ -64,6 +64,6 @@ protected:
     float m_ChildShotTime;
     
 public:
-    ATresEnemy_e_ex301_KeyBladeLaserProjectileBase();
+    ATresEnemy_e_ex301_KeyBladeLaserProjectileBase(const FObjectInitializer& ObjectInitializer);
 };
 

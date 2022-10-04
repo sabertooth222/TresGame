@@ -34,6 +34,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_ScaleZ;
     
-    ATresEnemy_e_ex301_CalamityThdProjectileBase();
+    ATresEnemy_e_ex301_CalamityThdProjectileBase(const FObjectInitializer& ObjectInitializer);
 };
 

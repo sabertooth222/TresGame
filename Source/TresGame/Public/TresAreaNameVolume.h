@@ -24,6 +24,6 @@ private:
     float m_SwitchNavMapTime;
     
 public:
-    ATresAreaNameVolume();
+    ATresAreaNameVolume(const FObjectInitializer& ObjectInitializer);
 };
 

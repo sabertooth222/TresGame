@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresActualCommunicationStation : public ATresCommunicationStation {
     GENERATED_BODY()
 public:
-    ATresActualCommunicationStation();
+    ATresActualCommunicationStation(const FObjectInitializer& ObjectInitializer);
 };
 

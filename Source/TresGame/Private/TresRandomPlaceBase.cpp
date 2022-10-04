@@ -8,7 +8,7 @@ void ATresRandomPlaceBase::DestroyAndSpawn() {
 }
 
 
-ATresRandomPlaceBase::ATresRandomPlaceBase() {
+ATresRandomPlaceBase::ATresRandomPlaceBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->GeneratedRule = NULL;
     this->SpawnActorManager = CreateDefaultSubobject<UTresSpawnActorManagerComponent>(TEXT("SpawnActorManager"));
 }

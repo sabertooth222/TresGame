@@ -12,7 +12,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USQEX_ParticleAttachDataAsset* m_EffDataAsset;
     
-    ATresEnemyPawn_e_ex731_Base();
+    ATresEnemyPawn_e_ex731_Base(const FObjectInitializer& ObjectInitializer);
 protected:
     UFUNCTION(BlueprintCallable)
     static void OnReceiveRemoteEvent(FName inEventName);

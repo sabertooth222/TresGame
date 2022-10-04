@@ -13,6 +13,6 @@ protected:
     FEX354_ArtemaWarpShotSet m_ShotSet;
     
 public:
-    ATresProjectile_e_ex354_ArtemaWarpShotSpawner();
+    ATresProjectile_e_ex354_ArtemaWarpShotSpawner(const FObjectInitializer& ObjectInitializer);
 };
 

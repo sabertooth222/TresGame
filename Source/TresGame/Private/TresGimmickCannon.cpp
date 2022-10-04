@@ -3,7 +3,7 @@
 #include "Components/ArrowComponent.h"
 #include "TresLockonTargetComponent.h"
 
-ATresGimmickCannon::ATresGimmickCannon() {
+ATresGimmickCannon::ATresGimmickCannon(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_pBodyCollPrimitive = CreateDefaultSubobject<UTresBodyCollPrimitive>(TEXT("BodyCollision"));
     this->m_pArrowComponent = CreateDefaultSubobject<UArrowComponent>(TEXT("Arrow"));
     this->m_pLockonTargetComponent = CreateDefaultSubobject<UTresLockonTargetComponent>(TEXT("LockonTarget"));

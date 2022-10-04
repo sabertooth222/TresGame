@@ -1,6 +1,6 @@
 #include "TresEnemyPawn_e_ex001a.h"
 
-ATresEnemyPawn_e_ex001a::ATresEnemyPawn_e_ex001a() {
+ATresEnemyPawn_e_ex001a::ATresEnemyPawn_e_ex001a(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_SpawnPointEQSQuery = NULL;
     this->m_MaxSpawnDistance = 1500.00f;
     this->m_MinSpawnDistance = 1000.00f;

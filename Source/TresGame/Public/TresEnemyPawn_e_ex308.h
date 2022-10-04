@@ -27,7 +27,7 @@ private:
     USphereComponent* MyPullCollisionComponent;
     
 public:
-    ATresEnemyPawn_e_ex308();
+    ATresEnemyPawn_e_ex308(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void OnPullCollisionEndOverlap(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
     

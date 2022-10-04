@@ -13,7 +13,7 @@ protected:
     uint8 m_bAutoChangeSkeletonUpdate: 1;
     
 public:
-    ATresEventPawnBase();
+    ATresEventPawnBase(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void BP_RestorePropertyToDefault();
     

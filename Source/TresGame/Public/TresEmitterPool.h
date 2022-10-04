@@ -14,6 +14,6 @@ protected:
     ATresEmitterPoolChild* m_pSubActor;
     
 public:
-    ATresEmitterPool();
+    ATresEmitterPool(const FObjectInitializer& ObjectInitializer);
 };
 

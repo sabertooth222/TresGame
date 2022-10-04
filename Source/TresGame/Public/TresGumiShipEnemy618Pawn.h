@@ -17,6 +17,6 @@ protected:
     UParticleSystem* m_pShockWaveVFX;
     
 public:
-    ATresGumiShipEnemy618Pawn();
+    ATresGumiShipEnemy618Pawn(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable)
 class ATresTsGigasJump : public ATresGimmickStaticBase {
     GENERATED_BODY()
 public:
-    ATresTsGigasJump();
+    ATresTsGigasJump(const FObjectInitializer& ObjectInitializer);
 };
 

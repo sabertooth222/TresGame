@@ -127,7 +127,7 @@ protected:
     TArray<FVector> m_NavLinkPoins;
     
 public:
-    ATresRailSlideActor();
+    ATresRailSlideActor(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool BP_IsRailGimmickActive() const;
     

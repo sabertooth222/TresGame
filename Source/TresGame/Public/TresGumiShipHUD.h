@@ -45,7 +45,7 @@ private:
     UTresUIP_MobileAlbum* m_pAlbum;
     
 public:
-    ATresGumiShipHUD();
+    ATresGumiShipHUD(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetSightEnable(bool bIn);
     

@@ -36,6 +36,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AActor* m_pTarget;
     
-    ATresProjectile_e_ex773_FlarePillarOmen();
+    ATresProjectile_e_ex773_FlarePillarOmen(const FObjectInitializer& ObjectInitializer);
 };
 

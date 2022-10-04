@@ -160,7 +160,7 @@ void ATresRaFestivalDanceManager::CloseHudDanceResult() {
 void ATresRaFestivalDanceManager::ActivateStandByNpc(int32 InGroupID) {
 }
 
-ATresRaFestivalDanceManager::ATresRaFestivalDanceManager() {
+ATresRaFestivalDanceManager::ATresRaFestivalDanceManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->PlayerSpeed = 500.00f;
     this->PlayerRotateSpeed = 10.00f;
     this->Idle_MotionName = TEXT("ODanceMove");

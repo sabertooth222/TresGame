@@ -1,6 +1,6 @@
 #include "TresRaButterflyActor.h"
 
-ATresRaButterflyActor::ATresRaButterflyActor() {
+ATresRaButterflyActor::ATresRaButterflyActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->EditorInfoComp = NULL;
     this->EscapeDistance = 0.00f;
     this->FadeOutTime = 0.00f;

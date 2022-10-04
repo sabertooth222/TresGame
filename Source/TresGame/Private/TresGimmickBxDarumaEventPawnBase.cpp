@@ -1,5 +1,5 @@
 #include "TresGimmickBxDarumaEventPawnBase.h"
 
-ATresGimmickBxDarumaEventPawnBase::ATresGimmickBxDarumaEventPawnBase() {
+ATresGimmickBxDarumaEventPawnBase::ATresGimmickBxDarumaEventPawnBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

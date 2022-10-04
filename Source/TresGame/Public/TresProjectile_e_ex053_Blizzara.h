@@ -12,6 +12,6 @@ protected:
     FName m_IDName;
     
 public:
-    ATresProjectile_e_ex053_Blizzara();
+    ATresProjectile_e_ex053_Blizzara(const FObjectInitializer& ObjectInitializer);
 };
 

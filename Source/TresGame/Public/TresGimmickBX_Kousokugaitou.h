@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable, Config=Game)
 class ATresGimmickBX_Kousokugaitou : public AStaticMeshActor {
     GENERATED_BODY()
 public:
-    ATresGimmickBX_Kousokugaitou();
+    ATresGimmickBX_Kousokugaitou(const FObjectInitializer& ObjectInitializer);
 };
 

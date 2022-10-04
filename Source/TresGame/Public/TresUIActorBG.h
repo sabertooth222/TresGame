@@ -14,6 +14,6 @@ private:
     UStaticMeshComponent* MeshComponent;
     
 public:
-    ATresUIActorBG();
+    ATresUIActorBG(const FObjectInitializer& ObjectInitializer);
 };
 

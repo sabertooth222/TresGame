@@ -1,6 +1,6 @@
 #include "TresRaAudienceActor.h"
 
-ATresRaAudienceActor::ATresRaAudienceActor() {
+ATresRaAudienceActor::ATresRaAudienceActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_IdleAnimName = TEXT("idleN");
     this->m_BodyColType = 0;
     this->m_PoseGroupType = 0;

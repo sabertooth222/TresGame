@@ -1,6 +1,6 @@
 #include "TresEnemyPawn_e_ex360KBBoard.h"
 
-ATresEnemyPawn_e_ex360KBBoard::ATresEnemyPawn_e_ex360KBBoard() {
+ATresEnemyPawn_e_ex360KBBoard::ATresEnemyPawn_e_ex360KBBoard(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_KBBoardPopParticleData = NULL;
     this->m_KBBoardParticleData = NULL;
     this->m_KBBoardShootProjData = NULL;

@@ -8,7 +8,7 @@ FRotator ATresNpcPawn_n_ts202::GetAimOffset() const {
     return FRotator{};
 }
 
-ATresNpcPawn_n_ts202::ATresNpcPawn_n_ts202() {
+ATresNpcPawn_n_ts202::ATresNpcPawn_n_ts202(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_FRWoodyBuzzRocketBP = NULL;
 }
 

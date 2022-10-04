@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable)
 class ATresGimmickHePuddingBigBase : public ATresGimmickHePuddingBase {
     GENERATED_BODY()
 public:
-    ATresGimmickHePuddingBigBase();
+    ATresGimmickHePuddingBigBase(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -19,7 +19,7 @@ void ATresEnemyPawn_e_ex026::BP_StartSpread() {
 void ATresEnemyPawn_e_ex026::BP_DebugSetBBDestination() {
 }
 
-ATresEnemyPawn_e_ex026::ATresEnemyPawn_e_ex026() {
+ATresEnemyPawn_e_ex026::ATresEnemyPawn_e_ex026(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_EffDataAsset = NULL;
     this->m_ColorSmokeRailSlideActor = NULL;
     this->m_SmallAirPlainData = NULL;

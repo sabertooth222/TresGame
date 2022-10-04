@@ -26,7 +26,7 @@ private:
     TWeakObjectPtr<ATresGimmickRA_Pudding_ControlActor> m_pShotRaPuddingControlActor;
     
 public:
-    ATresGimmickRA_PuddingManager();
+    ATresGimmickRA_PuddingManager(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetGameStart();
     

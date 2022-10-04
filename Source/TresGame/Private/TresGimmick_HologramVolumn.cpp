@@ -23,7 +23,7 @@ void ATresGimmick_HologramVolumn::ApplyLoadProject(UObject* WorldContextObject, 
 void ATresGimmick_HologramVolumn::ApplyHologramLocationReset() {
 }
 
-ATresGimmick_HologramVolumn::ATresGimmick_HologramVolumn() {
+ATresGimmick_HologramVolumn::ATresGimmick_HologramVolumn(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->HologramDataTable = NULL;
     this->HologramWeaponTable = NULL;
     this->HologramMapDataTable = NULL;

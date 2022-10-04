@@ -57,7 +57,7 @@ void ATresNpcPawn_c_npc::BP_ResetLookAt() {
 void ATresNpcPawn_c_npc::BP_ReqEndMotion() {
 }
 
-ATresNpcPawn_c_npc::ATresNpcPawn_c_npc() {
+ATresNpcPawn_c_npc::ATresNpcPawn_c_npc(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_IdleAnimName = TEXT("idleN");
     this->m_BodyColType = 0;
     this->m_PoseGroupType = 0;

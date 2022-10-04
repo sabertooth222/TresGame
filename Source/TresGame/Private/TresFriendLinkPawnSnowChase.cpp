@@ -8,7 +8,7 @@ void ATresFriendLinkPawnSnowChase::SnowChaseSetCameraAreaBox(AActor* inActor) {
 void ATresFriendLinkPawnSnowChase::SnowChaseApplayAvalancheDamage() {
 }
 
-ATresFriendLinkPawnSnowChase::ATresFriendLinkPawnSnowChase() {
+ATresFriendLinkPawnSnowChase::ATresFriendLinkPawnSnowChase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MaxSpeed_ = 2000.00f;
     this->MinSpeed_ = 1000.00f;
     this->Acceleration_ = 150.00f;

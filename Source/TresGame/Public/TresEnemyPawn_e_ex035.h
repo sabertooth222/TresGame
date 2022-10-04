@@ -39,7 +39,7 @@ protected:
     USceneComponent* m_JumpLinkComp;
     
 public:
-    ATresEnemyPawn_e_ex035();
+    ATresEnemyPawn_e_ex035(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, BlueprintPure)
     bool ValidateStep(ATresCharPawnBase* inOwnerPawn, FVector Velocity, float GravityScale, FText& outReason) const;
     

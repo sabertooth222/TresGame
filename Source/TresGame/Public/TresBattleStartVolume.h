@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class TRESGAME_API ATresBattleStartVolume : public ATresLevelEntityControlVolume {
     GENERATED_BODY()
 public:
-    ATresBattleStartVolume();
+    ATresBattleStartVolume(const FObjectInitializer& ObjectInitializer);
 };
 

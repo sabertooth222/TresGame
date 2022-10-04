@@ -60,7 +60,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_CheckSpawnPoint;
     
-    ATresGimmickBalanceBall();
+    ATresGimmickBalanceBall(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetSensorEnable(bool Enable);
     

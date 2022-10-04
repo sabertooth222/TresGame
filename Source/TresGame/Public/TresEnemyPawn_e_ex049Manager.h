@@ -33,6 +33,6 @@ private:
     float m_PuddingVisibilityDistanceSq;
     
 public:
-    ATresEnemyPawn_e_ex049Manager();
+    ATresEnemyPawn_e_ex049Manager(const FObjectInitializer& ObjectInitializer);
 };
 

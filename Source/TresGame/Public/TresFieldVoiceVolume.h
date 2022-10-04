@@ -25,6 +25,6 @@ protected:
     FATresFieldVoiceVolumeSignature OnPlayFieldVoice;
     
 public:
-    ATresFieldVoiceVolume();
+    ATresFieldVoiceVolume(const FObjectInitializer& ObjectInitializer);
 };
 

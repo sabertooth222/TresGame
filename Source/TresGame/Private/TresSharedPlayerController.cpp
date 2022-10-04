@@ -24,6 +24,6 @@ float ATresSharedPlayerController::GetLeftStickSlopeDegrees() const {
     return 0.0f;
 }
 
-ATresSharedPlayerController::ATresSharedPlayerController() {
+ATresSharedPlayerController::ATresSharedPlayerController(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

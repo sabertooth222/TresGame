@@ -1,5 +1,5 @@
 #include "TresStylePawnSHChariot.h"
 
-ATresStylePawnSHChariot::ATresStylePawnSHChariot() {
+ATresStylePawnSHChariot::ATresStylePawnSHChariot(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

@@ -16,6 +16,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_TailEffData;
     
-    ATresProjectile_e_ex036_Attack1();
+    ATresProjectile_e_ex036_Attack1(const FObjectInitializer& ObjectInitializer);
 };
 

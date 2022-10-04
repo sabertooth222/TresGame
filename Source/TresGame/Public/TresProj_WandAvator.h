@@ -14,6 +14,6 @@ protected:
     UTresLockonTargetComponent* m_AttackTargetComponent;
     
 public:
-    ATresProj_WandAvator();
+    ATresProj_WandAvator(const FObjectInitializer& ObjectInitializer);
 };
 

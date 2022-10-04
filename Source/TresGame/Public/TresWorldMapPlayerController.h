@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresWorldMapPlayerController : public APlayerController {
     GENERATED_BODY()
 public:
-    ATresWorldMapPlayerController();
+    ATresWorldMapPlayerController(const FObjectInitializer& ObjectInitializer);
 };
 

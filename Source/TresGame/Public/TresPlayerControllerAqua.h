@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresPlayerControllerAqua : public ATresPlayerControllerBase {
     GENERATED_BODY()
 public:
-    ATresPlayerControllerAqua();
+    ATresPlayerControllerAqua(const FObjectInitializer& ObjectInitializer);
 };
 

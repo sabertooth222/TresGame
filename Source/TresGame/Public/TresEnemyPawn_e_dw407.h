@@ -10,7 +10,7 @@ UCLASS(Blueprintable)
 class ATresEnemyPawn_e_dw407 : public ATresEnemyDarkSidePawnBase {
     GENERATED_BODY()
 public:
-    ATresEnemyPawn_e_dw407();
+    ATresEnemyPawn_e_dw407(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     static void Ex409SendEvent(UObject* WorldContextObject, ETresEnemyEx409Event EventType);
     

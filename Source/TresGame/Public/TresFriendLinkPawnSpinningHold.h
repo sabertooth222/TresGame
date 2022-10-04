@@ -105,6 +105,6 @@ private:
     AActor* m_pDummyTarget;
     
 public:
-    ATresFriendLinkPawnSpinningHold();
+    ATresFriendLinkPawnSpinningHold(const FObjectInitializer& ObjectInitializer);
 };
 

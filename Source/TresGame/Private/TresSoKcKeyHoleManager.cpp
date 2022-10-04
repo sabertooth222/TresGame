@@ -18,6 +18,6 @@ bool ATresSoKcKeyHoleManager::_SetAllKeyHoleGimmicksVisibility(const UObject* Wo
     return false;
 }
 
-ATresSoKcKeyHoleManager::ATresSoKcKeyHoleManager() {
+ATresSoKcKeyHoleManager::ATresSoKcKeyHoleManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

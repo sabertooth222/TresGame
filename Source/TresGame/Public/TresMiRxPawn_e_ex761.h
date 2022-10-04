@@ -44,7 +44,7 @@ private:
     UTresGumiShipEffectSetComponent* m_pEffectSet;
     
 public:
-    ATresMiRxPawn_e_ex761();
+    ATresMiRxPawn_e_ex761(const FObjectInitializer& ObjectInitializer);
 private:
     UFUNCTION(BlueprintCallable)
     void _OnLaserShutDown();

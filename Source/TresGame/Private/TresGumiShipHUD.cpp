@@ -109,7 +109,7 @@ void ATresGumiShipHUD::_OnChangedLockonTarget(USceneComponent* pTarget) {
 void ATresGumiShipHUD::_OnBattleBonus(TEnumAsByte<ETresGumiShipBonusType> eType, int32 dPoint) {
 }
 
-ATresGumiShipHUD::ATresGumiShipHUD() {
+ATresGumiShipHUD::ATresGumiShipHUD(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_pHud = NULL;
     this->m_pGummiMenu = NULL;
     this->m_pAlbum = NULL;

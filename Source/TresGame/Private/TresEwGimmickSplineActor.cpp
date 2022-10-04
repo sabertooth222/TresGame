@@ -1,6 +1,6 @@
 #include "TresEwGimmickSplineActor.h"
 
-ATresEwGimmickSplineActor::ATresEwGimmickSplineActor() {
+ATresEwGimmickSplineActor::ATresEwGimmickSplineActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->AnimationAsset = NULL;
     this->BlendInTime = 0.00f;
     this->BlendOutTime = 0.00f;

@@ -18,6 +18,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_HitBulletTime;
     
-    ATresEnemy_e_ex367_KBChildLaserProjectileBase();
+    ATresEnemy_e_ex367_KBChildLaserProjectileBase(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -202,7 +202,7 @@ private:
     UParticleSystemComponent* m_DangerParticle;
     
 public:
-    ATresEnemyPawn_e_ex301();
+    ATresEnemyPawn_e_ex301(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void OnPullCollisionEndOverlap(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
     

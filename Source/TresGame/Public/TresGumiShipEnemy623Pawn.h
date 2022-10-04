@@ -42,7 +42,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundBase* MonitorArrangeBGM;
     
-    ATresGumiShipEnemy623Pawn();
+    ATresGumiShipEnemy623Pawn(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetALSPhase(int32 phase);
     

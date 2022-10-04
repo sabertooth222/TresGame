@@ -1,5 +1,5 @@
 #include "TresNavMeshAutoSelectionSettingActor.h"
 
-ATresNavMeshAutoSelectionSettingActor::ATresNavMeshAutoSelectionSettingActor() {
+ATresNavMeshAutoSelectionSettingActor::ATresNavMeshAutoSelectionSettingActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

@@ -14,6 +14,6 @@ private:
     UTresRootComponent* MyRoot;
     
 public:
-    ATresGimmickInterest();
+    ATresGimmickInterest(const FObjectInitializer& ObjectInitializer);
 };
 

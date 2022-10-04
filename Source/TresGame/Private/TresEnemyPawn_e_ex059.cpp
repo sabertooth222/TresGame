@@ -35,7 +35,7 @@ float ATresEnemyPawn_e_ex059::BP_GetAnimOffsetAlpha() const {
     return 0.0f;
 }
 
-ATresEnemyPawn_e_ex059::ATresEnemyPawn_e_ex059() {
+ATresEnemyPawn_e_ex059::ATresEnemyPawn_e_ex059(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_pMaskSkeletalMeshComp = NULL;
     this->m_pMaskBodyCollPrim = NULL;
     this->m_AuraEffect = NULL;

@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresDisappearEnemyVolume : public ATresVolume {
     GENERATED_BODY()
 public:
-    ATresDisappearEnemyVolume();
+    ATresDisappearEnemyVolume(const FObjectInitializer& ObjectInitializer);
 };
 

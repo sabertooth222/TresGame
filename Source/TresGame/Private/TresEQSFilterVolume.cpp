@@ -1,5 +1,5 @@
 #include "TresEQSFilterVolume.h"
 
-ATresEQSFilterVolume::ATresEQSFilterVolume() {
+ATresEQSFilterVolume::ATresEQSFilterVolume(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

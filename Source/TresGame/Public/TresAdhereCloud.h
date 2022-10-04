@@ -27,6 +27,6 @@ protected:
     float m_WeatherHeavyRainParamCTarget;
     
 public:
-    ATresAdhereCloud();
+    ATresAdhereCloud(const FObjectInitializer& ObjectInitializer);
 };
 

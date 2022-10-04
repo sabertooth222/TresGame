@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresProjectile_e_ex046_SnowCyclone : public ATresProjectileBase {
     GENERATED_BODY()
 public:
-    ATresProjectile_e_ex046_SnowCyclone();
+    ATresProjectile_e_ex046_SnowCyclone(const FObjectInitializer& ObjectInitializer);
 };
 

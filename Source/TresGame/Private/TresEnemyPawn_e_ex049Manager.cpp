@@ -1,6 +1,6 @@
 #include "TresEnemyPawn_e_ex049Manager.h"
 
-ATresEnemyPawn_e_ex049Manager::ATresEnemyPawn_e_ex049Manager() {
+ATresEnemyPawn_e_ex049Manager::ATresEnemyPawn_e_ex049Manager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_PuddingEnableDistance = 0.00f;
     this->m_PuddingVisibilityDistance = 0.00f;
     this->m_PuddingEnableCheckNum = 6;

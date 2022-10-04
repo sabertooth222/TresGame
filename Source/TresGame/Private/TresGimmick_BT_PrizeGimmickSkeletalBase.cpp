@@ -1,7 +1,7 @@
 #include "TresGimmick_BT_PrizeGimmickSkeletalBase.h"
 #include "TresStaticMeshComponent.h"
 
-ATresGimmick_BT_PrizeGimmickSkeletalBase::ATresGimmick_BT_PrizeGimmickSkeletalBase() {
+ATresGimmick_BT_PrizeGimmickSkeletalBase::ATresGimmick_BT_PrizeGimmickSkeletalBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MyStaticMesh = CreateDefaultSubobject<UTresStaticMeshComponent>(TEXT("MyStaticMesh"));
     this->ShadowMesh = CreateDefaultSubobject<UTresStaticMeshComponent>(TEXT("ShadowMesh"));
     this->m_DitherFadeStartTime = 1.50f;

@@ -27,7 +27,7 @@ float ATresEnemyPawn_e_ex013::GetPropellerKoshiRot() const {
     return 0.0f;
 }
 
-ATresEnemyPawn_e_ex013::ATresEnemyPawn_e_ex013() {
+ATresEnemyPawn_e_ex013::ATresEnemyPawn_e_ex013(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_bFluff = false;
     this->m_InvisibleTime = 1.00f;
     this->m_InvisibleTime2 = 0.50f;

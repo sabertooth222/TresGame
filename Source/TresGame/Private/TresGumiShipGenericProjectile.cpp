@@ -1,5 +1,5 @@
 #include "TresGumiShipGenericProjectile.h"
 
-ATresGumiShipGenericProjectile::ATresGumiShipGenericProjectile() {
+ATresGumiShipGenericProjectile::ATresGumiShipGenericProjectile(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

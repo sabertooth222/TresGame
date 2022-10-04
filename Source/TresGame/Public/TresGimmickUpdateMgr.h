@@ -14,6 +14,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 PredictedSize;
     
-    ATresGimmickUpdateMgr();
+    ATresGimmickUpdateMgr(const FObjectInitializer& ObjectInitializer);
 };
 

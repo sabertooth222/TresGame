@@ -16,6 +16,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_pro_DarkMineBootEffData;
     
-    ATresProjectile_e_ex313_DarkMine();
+    ATresProjectile_e_ex313_DarkMine(const FObjectInitializer& ObjectInitializer);
 };
 

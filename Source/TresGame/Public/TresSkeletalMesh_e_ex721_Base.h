@@ -23,7 +23,7 @@ private:
     UTresEffectAttachComponent* MyEffectAtt;
     
 public:
-    ATresSkeletalMesh_e_ex721_Base();
+    ATresSkeletalMesh_e_ex721_Base(const FObjectInitializer& ObjectInitializer);
     
     // Fix for true pure virtual functions not being implemented
 };

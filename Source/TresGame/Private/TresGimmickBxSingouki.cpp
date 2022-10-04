@@ -22,7 +22,7 @@ bool ATresGimmickBxSingouki::BreakSignal_Implementation() {
     return false;
 }
 
-ATresGimmickBxSingouki::ATresGimmickBxSingouki() {
+ATresGimmickBxSingouki::ATresGimmickBxSingouki(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->SingoukiRoot = CreateDefaultSubobject<USceneComponent>(TEXT("SingoukiRoot"));
     this->MyMesh = CreateDefaultSubobject<UTresStaticMeshComponent>(TEXT("TresGimmickMesh0"));
     this->PoleComp = CreateDefaultSubobject<UTresPoleComponent>(TEXT("PoleComp"));

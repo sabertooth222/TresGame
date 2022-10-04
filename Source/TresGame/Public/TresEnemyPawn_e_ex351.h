@@ -121,7 +121,7 @@ private:
     TArray<USoundBase*> m_AirMaliceWhipVoiceList;
     
 public:
-    ATresEnemyPawn_e_ex351();
+    ATresEnemyPawn_e_ex351(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     static void TimeRushSendEvent(UObject* WorldContextObject, ETresEnemyEx351TimeRushEvent EventType);
     

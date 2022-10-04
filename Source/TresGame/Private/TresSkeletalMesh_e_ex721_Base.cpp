@@ -3,7 +3,7 @@
 #include "TresRootComponent.h"
 #include "TresEffectAttachComponent.h"
 
-ATresSkeletalMesh_e_ex721_Base::ATresSkeletalMesh_e_ex721_Base() {
+ATresSkeletalMesh_e_ex721_Base::ATresSkeletalMesh_e_ex721_Base(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MyRoot = CreateDefaultSubobject<UTresRootComponent>(TEXT("TresRoot"));
     this->MyMesh = CreateDefaultSubobject<UTresSkeletalMeshComponent>(TEXT("TresCharMesh"));
     this->MyEffectAtt = CreateDefaultSubobject<UTresEffectAttachComponent>(TEXT("TresEffectAttach"));

@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable)
 class ATresEditorOnlyGeneratorBase : public ATresGimmickGeneratorBase {
     GENERATED_BODY()
 public:
-    ATresEditorOnlyGeneratorBase();
+    ATresEditorOnlyGeneratorBase(const FObjectInitializer& ObjectInitializer);
 };
 

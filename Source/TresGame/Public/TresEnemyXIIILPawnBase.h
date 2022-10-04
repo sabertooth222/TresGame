@@ -20,7 +20,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FName> m_RevengeChainBaseDataTableIDNameList;
     
-    ATresEnemyXIIILPawnBase();
+    ATresEnemyXIIILPawnBase(const FObjectInitializer& ObjectInitializer);
 private:
     UFUNCTION()
     void OnDtorStateEvent_XIIIL(TEnumAsByte<ETresStateID> inStateID);

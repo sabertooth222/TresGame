@@ -59,6 +59,6 @@ private:
     ATresPawnBase* m_MyParent;
     
 public:
-    ATresEnemy_e_ex781_BeamProjectile();
+    ATresEnemy_e_ex781_BeamProjectile(const FObjectInitializer& ObjectInitializer);
 };
 

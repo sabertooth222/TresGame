@@ -66,7 +66,7 @@ void ATresEnemyPawn_e_ex011::BP_IdleToCarriageAction() {
 void ATresEnemyPawn_e_ex011::BP_ApplyCarriageMode() {
 }
 
-ATresEnemyPawn_e_ex011::ATresEnemyPawn_e_ex011() {
+ATresEnemyPawn_e_ex011::ATresEnemyPawn_e_ex011(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->CoopJumpLocationComponent = CreateDefaultSubobject<USceneComponent>(TEXT("CoopJumpLocationComponent"));
     this->m_MaxConnect = 10;
     this->m_SpawnNumConnect = 2;

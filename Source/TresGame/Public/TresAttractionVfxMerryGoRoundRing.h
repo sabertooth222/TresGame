@@ -21,6 +21,6 @@ protected:
     UParticleSystemComponent* m_EffectRing;
     
 public:
-    ATresAttractionVfxMerryGoRoundRing();
+    ATresAttractionVfxMerryGoRoundRing(const FObjectInitializer& ObjectInitializer);
 };
 

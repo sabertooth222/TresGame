@@ -12,6 +12,6 @@ protected:
     float m_ReflectedBulletSpeed;
     
 public:
-    ATresProjectile_e_ex360_Blizzard();
+    ATresProjectile_e_ex360_Blizzard(const FObjectInitializer& ObjectInitializer);
 };
 

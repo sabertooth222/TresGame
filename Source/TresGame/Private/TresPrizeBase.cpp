@@ -5,7 +5,7 @@
 void ATresPrizeBase::OnProjectileBounce(const FHitResult& ImpactResult, const FVector& ImpactVelocity) {
 }
 
-ATresPrizeBase::ATresPrizeBase() {
+ATresPrizeBase::ATresPrizeBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_SoundBound = NULL;
     this->m_SoundGet = NULL;
     this->MyRoot = CreateDefaultSubobject<UTresRootComponent>(TEXT("TresRoot"));

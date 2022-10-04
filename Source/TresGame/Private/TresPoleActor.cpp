@@ -8,7 +8,7 @@ bool ATresPoleActor::IsEnable() const {
     return false;
 }
 
-ATresPoleActor::ATresPoleActor() {
+ATresPoleActor::ATresPoleActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MyRoot = CreateDefaultSubobject<UTresPoleComponent>(TEXT("TresRoot"));
 }
 

@@ -8,7 +8,7 @@ int32 ATresGimmickSpaceDivisionManager::GetObjectNum() const {
     return 0;
 }
 
-ATresGimmickSpaceDivisionManager::ATresGimmickSpaceDivisionManager() {
+ATresGimmickSpaceDivisionManager::ATresGimmickSpaceDivisionManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->AllAreaSize = 150000.00f;
     this->AreaSize = 2500.00f;
 }

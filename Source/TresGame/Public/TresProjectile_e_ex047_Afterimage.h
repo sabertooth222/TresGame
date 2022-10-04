@@ -21,6 +21,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_AuraEndValue;
     
-    ATresProjectile_e_ex047_Afterimage();
+    ATresProjectile_e_ex047_Afterimage(const FObjectInitializer& ObjectInitializer);
 };
 

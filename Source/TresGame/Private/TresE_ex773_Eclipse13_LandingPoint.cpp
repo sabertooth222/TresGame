@@ -8,7 +8,7 @@ int32 ATresE_ex773_Eclipse13_LandingPoint::GetIndex() {
 
 
 
-ATresE_ex773_Eclipse13_LandingPoint::ATresE_ex773_Eclipse13_LandingPoint() {
+ATresE_ex773_Eclipse13_LandingPoint::ATresE_ex773_Eclipse13_LandingPoint(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MyRoot = CreateDefaultSubobject<USceneComponent>(TEXT("MyRoot"));
     this->GeneratorIndex = -1;
 }

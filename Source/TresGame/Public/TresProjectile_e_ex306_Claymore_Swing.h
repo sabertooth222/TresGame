@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable)
 class ATresProjectile_e_ex306_Claymore_Swing : public ATresProjectile_e_ex306_Claymore_Base {
     GENERATED_BODY()
 public:
-    ATresProjectile_e_ex306_Claymore_Swing();
+    ATresProjectile_e_ex306_Claymore_Swing(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -17,7 +17,7 @@ protected:
     UTresInfluenceEmitterComponent* m_InfluenceEmitterComponent;
     
 public:
-    ATresInfluenceEmitterActor();
+    ATresInfluenceEmitterActor(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetUnlimitedTime(bool bEnabled);
     

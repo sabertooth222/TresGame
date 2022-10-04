@@ -11,6 +11,6 @@ public:
     UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     FEX105_JOINT_INFO m_JointInfo[3];
     
-    ATresProjectile_e_ex105_ChaosShotCubeJoint();
+    ATresProjectile_e_ex105_ChaosShotCubeJoint(const FObjectInitializer& ObjectInitializer);
 };
 

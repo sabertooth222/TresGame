@@ -15,7 +15,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 GeneratorIndex;
     
-    ATresE_ex773_Eclipse13_LandingPoint();
+    ATresE_ex773_Eclipse13_LandingPoint(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetIndex();
     

@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable)
 class ATresProjectile_EnemyShipBase : public ATresProjectileBase {
     GENERATED_BODY()
 public:
-    ATresProjectile_EnemyShipBase();
+    ATresProjectile_EnemyShipBase(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -16,7 +16,7 @@ float ATresEnemyPawnBase_e_he90y::BP_GetAnimOffsetAlpha() const {
     return 0.0f;
 }
 
-ATresEnemyPawnBase_e_he90y::ATresEnemyPawnBase_e_he90y() {
+ATresEnemyPawnBase_e_he90y::ATresEnemyPawnBase_e_he90y(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_AimOffsetYawThreshold = 0.00f;
     this->m_AimOffsetPitchThreshold = 0.00f;
     this->m_fIgnoreAimOffsetRadius = 0.00f;

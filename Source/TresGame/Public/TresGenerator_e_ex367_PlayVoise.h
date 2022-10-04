@@ -24,6 +24,6 @@ private:
     UAudioComponent* m_VoiceAudioComponent;
     
 public:
-    ATresGenerator_e_ex367_PlayVoise();
+    ATresGenerator_e_ex367_PlayVoise(const FObjectInitializer& ObjectInitializer);
 };
 

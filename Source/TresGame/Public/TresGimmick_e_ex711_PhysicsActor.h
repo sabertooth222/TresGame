@@ -32,6 +32,6 @@ private:
     float m_pro_DestinationEffectScale;
     
 public:
-    ATresGimmick_e_ex711_PhysicsActor();
+    ATresGimmick_e_ex711_PhysicsActor(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -12,6 +12,6 @@ ATresCameraForceLockon* ATresCameraForceLockon::BP_SpawnTresCameraForceLockon(UO
 void ATresCameraForceLockon::BP_SetTresCamera2ndTargetParam(AActor* Target2, int32 Index) {
 }
 
-ATresCameraForceLockon::ATresCameraForceLockon() {
+ATresCameraForceLockon::ATresCameraForceLockon(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

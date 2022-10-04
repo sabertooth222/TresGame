@@ -40,7 +40,7 @@ bool ATresEnemyPawn_e_ex305::CanUseArrowRain() {
     return false;
 }
 
-ATresEnemyPawn_e_ex305::ATresEnemyPawn_e_ex305() {
+ATresEnemyPawn_e_ex305::ATresEnemyPawn_e_ex305(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_bFlyMode = false;
     this->m_bAura = false;
     this->e_ex313Pawn = NULL;

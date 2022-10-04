@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class TRESGAME_API ATresSpawnPointDisableVolume : public ATresVolume {
     GENERATED_BODY()
 public:
-    ATresSpawnPointDisableVolume();
+    ATresSpawnPointDisableVolume(const FObjectInitializer& ObjectInitializer);
 };
 

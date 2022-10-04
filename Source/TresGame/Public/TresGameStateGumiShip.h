@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresGameStateGumiShip : public ATresGameState {
     GENERATED_BODY()
 public:
-    ATresGameStateGumiShip();
+    ATresGameStateGumiShip(const FObjectInitializer& ObjectInitializer);
 };
 

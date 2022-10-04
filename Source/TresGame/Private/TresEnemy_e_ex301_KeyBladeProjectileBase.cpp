@@ -1,6 +1,6 @@
 #include "TresEnemy_e_ex301_KeyBladeProjectileBase.h"
 
-ATresEnemy_e_ex301_KeyBladeProjectileBase::ATresEnemy_e_ex301_KeyBladeProjectileBase() {
+ATresEnemy_e_ex301_KeyBladeProjectileBase::ATresEnemy_e_ex301_KeyBladeProjectileBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_ReflectedBulletSpeed = 2000.00f;
     this->m_RotationSpeed = 45.00f;
     this->m_StopTime = 0.50f;

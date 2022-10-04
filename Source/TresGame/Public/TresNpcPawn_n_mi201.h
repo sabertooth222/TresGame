@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresNpcPawn_n_mi201 : public ATresNpcPawnBase {
     GENERATED_BODY()
 public:
-    ATresNpcPawn_n_mi201();
+    ATresNpcPawn_n_mi201(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -15,6 +15,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresEnemy_e_ex773_ExFlareTornadoParam> m_ExFlareTornadoParamArray;
     
-    ATresProjectileGenerator_e_ex773_FlareTornado();
+    ATresProjectileGenerator_e_ex773_FlareTornado(const FObjectInitializer& ObjectInitializer);
 };
 

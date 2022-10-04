@@ -13,7 +13,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float AreaSize;
     
-    ATresGimmickSpaceDivisionManager();
+    ATresGimmickSpaceDivisionManager(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetSpawnedObjectNum() const;
     

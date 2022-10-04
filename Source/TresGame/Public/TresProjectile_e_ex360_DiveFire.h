@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresProjectile_e_ex360_DiveFire : public ATresProjectileBase {
     GENERATED_BODY()
 public:
-    ATresProjectile_e_ex360_DiveFire();
+    ATresProjectile_e_ex360_DiveFire(const FObjectInitializer& ObjectInitializer);
 };
 

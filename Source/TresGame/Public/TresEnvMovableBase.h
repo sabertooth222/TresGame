@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable)
 class ATresEnvMovableBase : public ATresEnvBase {
     GENERATED_BODY()
 public:
-    ATresEnvMovableBase();
+    ATresEnvMovableBase(const FObjectInitializer& ObjectInitializer);
 };
 

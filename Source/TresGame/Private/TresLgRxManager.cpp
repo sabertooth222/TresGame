@@ -50,7 +50,7 @@ bool ATresLgRxManager::BP_CanSpawnRushCamera() const {
     return false;
 }
 
-ATresLgRxManager::ATresLgRxManager() {
+ATresLgRxManager::ATresLgRxManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_AssetsCameraNormal = NULL;
     this->m_AssetsProjGuardCounter = NULL;
     this->m_AssetEffectGuardLoop = NULL;

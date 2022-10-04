@@ -22,6 +22,6 @@ protected:
     float m_DotAngle;
     
 public:
-    ATresProjectile_e_ex352_DarkMine();
+    ATresProjectile_e_ex352_DarkMine(const FObjectInitializer& ObjectInitializer);
 };
 

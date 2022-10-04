@@ -15,7 +15,7 @@ float ATresDisneyMagicPawnAriel::GetFinishTimer() const {
     return 0.0f;
 }
 
-ATresDisneyMagicPawnAriel::ATresDisneyMagicPawnAriel() {
+ATresDisneyMagicPawnAriel::ATresDisneyMagicPawnAriel(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_EffAssetJustMarker = NULL;
     this->m_EffAssetGood = NULL;
     this->m_EffAssetBad = NULL;

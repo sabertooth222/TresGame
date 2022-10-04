@@ -11,7 +11,7 @@ UCLASS(Blueprintable)
 class ATresCameraRotTargetAuto : public ATresCameraRotTarget {
     GENERATED_BODY()
 public:
-    ATresCameraRotTargetAuto();
+    ATresCameraRotTargetAuto(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     static ATresCameraRotTargetAuto* BP_SpawnTresCameraRotTargetAuto(UObject* WorldContextObject, TSubclassOf<ATresCameraRotTargetAuto> CameraClass, const FName CameraName);
     

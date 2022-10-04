@@ -70,7 +70,7 @@ protected:
     UTresGumiShipEnemyGroupManager* m_pEnemyGroupManager;
     
 public:
-    ATresGumiShipEnemyGenerator();
+    ATresGumiShipEnemyGenerator(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintPure)
     ETresGumiShipEnemySpawnConditionType GetSubEnemySpawnConditionType() const;
     

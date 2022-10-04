@@ -1,6 +1,6 @@
 #include "TresProjectile_e_ex361_DarkHand_ShockWave.h"
 
-ATresProjectile_e_ex361_DarkHand_ShockWave::ATresProjectile_e_ex361_DarkHand_ShockWave() {
+ATresProjectile_e_ex361_DarkHand_ShockWave::ATresProjectile_e_ex361_DarkHand_ShockWave(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_pro_ShockWaveEffData = NULL;
     this->m_AkkColLifeTime = 0.60f;
     this->m_AkkColFinLifeTime = 1.00f;

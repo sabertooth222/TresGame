@@ -1,5 +1,5 @@
 #include "TresEventSpecialShipPawn.h"
 
-ATresEventSpecialShipPawn::ATresEventSpecialShipPawn() {
+ATresEventSpecialShipPawn::ATresEventSpecialShipPawn(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

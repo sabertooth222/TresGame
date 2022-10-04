@@ -1,6 +1,6 @@
 #include "TresRestrictActionVolume.h"
 
-ATresRestrictActionVolume::ATresRestrictActionVolume() {
+ATresRestrictActionVolume::ATresRestrictActionVolume(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_TownArea = false;
     this->m_RestrictATTACK = false;
     this->m_RestrictMAGIC = false;

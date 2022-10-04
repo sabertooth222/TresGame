@@ -15,6 +15,6 @@ protected:
     float m_PassDistance;
     
 public:
-    ATresProjectile_e_ex352_DarkGalaxyBlackSphere();
+    ATresProjectile_e_ex352_DarkGalaxyBlackSphere(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -10,6 +10,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_DetectPriority;
     
-    ATresOverridePhysMaterialVolume();
+    ATresOverridePhysMaterialVolume(const FObjectInitializer& ObjectInitializer);
 };
 

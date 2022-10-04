@@ -18,6 +18,6 @@ protected:
     UTresTaskExecuterBase* m_pTaskExecuter;
     
 public:
-    ATresGimmickHeWorkShop();
+    ATresGimmickHeWorkShop(const FObjectInitializer& ObjectInitializer);
 };
 

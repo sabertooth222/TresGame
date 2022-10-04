@@ -1,5 +1,5 @@
 #include "TresCameraPathRSLocationActor.h"
 
-ATresCameraPathRSLocationActor::ATresCameraPathRSLocationActor() {
+ATresCameraPathRSLocationActor::ATresCameraPathRSLocationActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

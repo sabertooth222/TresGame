@@ -20,7 +20,7 @@ bool ATresGumiShipEnemy619Pawn::IsLeftEnable() {
     return false;
 }
 
-ATresGumiShipEnemy619Pawn::ATresGumiShipEnemy619Pawn() {
+ATresGumiShipEnemy619Pawn::ATresGumiShipEnemy619Pawn(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_fGatlingTime = 3.00f;
     this->m_fGatlingSpeed = 50.00f;
     this->m_fGatlingRand = 8.00f;

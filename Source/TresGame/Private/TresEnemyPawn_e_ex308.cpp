@@ -24,7 +24,7 @@ void ATresEnemyPawn_e_ex308::DebugSetNumWarpCut(int32 Num) {
 void ATresEnemyPawn_e_ex308::DebugSetEnableDrawPullCollision(int32 Enable) {
 }
 
-ATresEnemyPawn_e_ex308::ATresEnemyPawn_e_ex308() {
+ATresEnemyPawn_e_ex308::ATresEnemyPawn_e_ex308(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_WarpFadeInterpTime = 0.20f;
     this->m_bEnableRevengeVoice2D = 1;
     this->MyPullCollisionComponent = CreateDefaultSubobject<USphereComponent>(TEXT("PullCollisionComponent0"));

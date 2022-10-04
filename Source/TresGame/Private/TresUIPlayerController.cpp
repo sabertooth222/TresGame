@@ -1,5 +1,5 @@
 #include "TresUIPlayerController.h"
 
-ATresUIPlayerController::ATresUIPlayerController() {
+ATresUIPlayerController::ATresUIPlayerController(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

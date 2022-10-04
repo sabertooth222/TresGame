@@ -44,6 +44,6 @@ protected:
     UParticleSystemComponent* m_pDisappearEffect;
     
 public:
-    ATresGumiShipEnemy617Pawn();
+    ATresGumiShipEnemy617Pawn(const FObjectInitializer& ObjectInitializer);
 };
 

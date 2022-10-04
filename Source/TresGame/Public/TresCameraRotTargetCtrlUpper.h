@@ -11,7 +11,7 @@ UCLASS(Blueprintable)
 class ATresCameraRotTargetCtrlUpper : public ATresCameraRotTargetCtrl {
     GENERATED_BODY()
 public:
-    ATresCameraRotTargetCtrlUpper();
+    ATresCameraRotTargetCtrlUpper(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     static ATresCameraRotTargetCtrlUpper* BP_SpawnTresCameraRotTargetCtrlUpper(UObject* WorldContextObject, TSubclassOf<ATresCameraRotTargetCtrlUpper> CameraClass, const FName CameraName);
     

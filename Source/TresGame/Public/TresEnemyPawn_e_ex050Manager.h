@@ -112,7 +112,7 @@ private:
     int32 m_SpawnMode;
     
 public:
-    ATresEnemyPawn_e_ex050Manager();
+    ATresEnemyPawn_e_ex050Manager(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void UpdateSmallPuddingNum();
     

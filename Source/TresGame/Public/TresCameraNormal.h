@@ -98,7 +98,7 @@ protected:
     float m_LockonTargetOffsetZ;
     
 public:
-    ATresCameraNormal();
+    ATresCameraNormal(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetLimitPitch(float Min, float Max);
     

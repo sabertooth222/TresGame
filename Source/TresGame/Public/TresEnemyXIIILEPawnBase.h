@@ -22,7 +22,7 @@ protected:
     float m_VisibleTime;
     
 public:
-    ATresEnemyXIIILEPawnBase();
+    ATresEnemyXIIILEPawnBase(const FObjectInitializer& ObjectInitializer);
     UFUNCTION()
     void OnDtorStateCallBackXIIIE(TEnumAsByte<ETresStateID> inStateID);
     

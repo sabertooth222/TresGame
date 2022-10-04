@@ -13,6 +13,6 @@ protected:
     FTresProj_MagicReaction m_Reaction[8];
     
 public:
-    ATresProj_MagicBase();
+    ATresProj_MagicBase(const FObjectInitializer& ObjectInitializer);
 };
 

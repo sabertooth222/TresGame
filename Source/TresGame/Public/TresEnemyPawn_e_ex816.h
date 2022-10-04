@@ -61,7 +61,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AActor* m_DebugStampTargetActor;
     
-    ATresEnemyPawn_e_ex816();
+    ATresEnemyPawn_e_ex816(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetPhysicsBodyBlendRate(float InRate, float InterpTime);
     

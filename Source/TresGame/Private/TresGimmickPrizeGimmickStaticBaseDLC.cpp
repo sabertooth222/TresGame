@@ -10,7 +10,7 @@ class AActor;
 void ATresGimmickPrizeGimmickStaticBaseDLC::OnTresDestroyedGimmickCallback(AActor* DamageCauser) {
 }
 
-ATresGimmickPrizeGimmickStaticBaseDLC::ATresGimmickPrizeGimmickStaticBaseDLC() {
+ATresGimmickPrizeGimmickStaticBaseDLC::ATresGimmickPrizeGimmickStaticBaseDLC(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->TresLockonTarget = CreateDefaultSubobject<UTresLockonTargetComponent>(TEXT("TresLockonTarget"));
     this->TresBodyCollPrimitive = CreateDefaultSubobject<UTresBodyCollPrimitive>(TEXT("TresBodyCollPrimitive"));
     this->TresPrizeGen = CreateDefaultSubobject<UTresPrizeGenComponent>(TEXT("TresPrizeGen"));

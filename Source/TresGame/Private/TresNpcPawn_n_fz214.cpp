@@ -18,7 +18,7 @@ float ATresNpcPawn_n_fz214::BP_GetAnimOffsetAlpha() const {
     return 0.0f;
 }
 
-ATresNpcPawn_n_fz214::ATresNpcPawn_n_fz214() {
+ATresNpcPawn_n_fz214::ATresNpcPawn_n_fz214(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_FRGiantSoldierBP = NULL;
     this->m_AppearCurveData = NULL;
     this->m_FinishCurveData = NULL;

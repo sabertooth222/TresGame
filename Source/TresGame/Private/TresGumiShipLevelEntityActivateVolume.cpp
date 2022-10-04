@@ -9,6 +9,6 @@ void ATresGumiShipLevelEntityActivateVolume::_OnLeaveActivateVolume(UPrimitiveCo
 void ATresGumiShipLevelEntityActivateVolume::_OnEnterActivateVolume(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult) {
 }
 
-ATresGumiShipLevelEntityActivateVolume::ATresGumiShipLevelEntityActivateVolume() {
+ATresGumiShipLevelEntityActivateVolume::ATresGumiShipLevelEntityActivateVolume(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

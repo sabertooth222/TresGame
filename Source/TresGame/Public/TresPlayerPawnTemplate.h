@@ -31,7 +31,7 @@ private:
     float m_fAddReactionCoolDownTime;
     
 public:
-    ATresPlayerPawnTemplate();
+    ATresPlayerPawnTemplate(const FObjectInitializer& ObjectInitializer);
 private:
     UFUNCTION()
     void _OnDtorStateForBind(TEnumAsByte<ETresStateID> eStateID);

@@ -15,7 +15,7 @@ protected:
     AActor* TargetDoor;
     
 public:
-    ATresGimmickGeneratorMI_04_EventSingle();
+    ATresGimmickGeneratorMI_04_EventSingle(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, BlueprintPure)
     FTransform BPIE_GetTargetTransform();
     

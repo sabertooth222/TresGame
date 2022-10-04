@@ -1,5 +1,5 @@
 #include "TresNote.h"
 
-ATresNote::ATresNote() {
+ATresNote::ATresNote(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

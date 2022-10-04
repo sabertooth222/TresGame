@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable)
 class ATresProjectile_e_ex305_NormalShot : public ATresProjectileBase {
     GENERATED_BODY()
 public:
-    ATresProjectile_e_ex305_NormalShot();
+    ATresProjectile_e_ex305_NormalShot(const FObjectInitializer& ObjectInitializer);
 };
 

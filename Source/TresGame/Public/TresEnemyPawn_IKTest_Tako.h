@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresEnemyPawn_IKTest_Tako : public ATresEnemyPawnBase {
     GENERATED_BODY()
 public:
-    ATresEnemyPawn_IKTest_Tako();
+    ATresEnemyPawn_IKTest_Tako(const FObjectInitializer& ObjectInitializer);
 };
 

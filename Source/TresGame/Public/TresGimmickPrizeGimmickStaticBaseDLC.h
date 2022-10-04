@@ -43,7 +43,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bDestroyDisableBodyCollition;
     
-    ATresGimmickPrizeGimmickStaticBaseDLC();
+    ATresGimmickPrizeGimmickStaticBaseDLC(const FObjectInitializer& ObjectInitializer);
 protected:
     UFUNCTION(BlueprintCallable)
     void OnTresDestroyedGimmickCallback(AActor* DamageCauser);

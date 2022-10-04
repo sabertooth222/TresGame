@@ -23,7 +23,7 @@ bool ATresMiRxEnemyManager::BP_IsIdleState() const {
     return false;
 }
 
-ATresMiRxEnemyManager::ATresMiRxEnemyManager() {
+ATresMiRxEnemyManager::ATresMiRxEnemyManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_fWaitTimeOfShotLaser = 5.00f;
     this->m_fIntervalOfSingleLaserOmen = 0.10f;
     this->m_fIntervalForWarpAttack = 0.50f;

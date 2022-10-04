@@ -1,5 +1,5 @@
 #include "TresChangeIKTypeVolume.h"
 
-ATresChangeIKTypeVolume::ATresChangeIKTypeVolume() {
+ATresChangeIKTypeVolume::ATresChangeIKTypeVolume(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

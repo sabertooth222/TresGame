@@ -79,7 +79,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_pro_Attack2_AeroStormTurnRate;
     
-    ATresEnemyPawn_e_ex038();
+    ATresEnemyPawn_e_ex038(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     bool IsMagicSquare();
     

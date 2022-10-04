@@ -19,7 +19,7 @@ protected:
     FTresCameraTargetInfo m_TargetInfo2;
     
 public:
-    ATresCameraDistanceAdjust2T();
+    ATresCameraDistanceAdjust2T(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     static ATresCameraDistanceAdjust2T* BP_SpawnTresCameraDistanceAdjust2T(UObject* WorldContextObject, TSubclassOf<ATresCameraDistanceAdjust2T> CameraClass, const FName CameraName);
     

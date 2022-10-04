@@ -43,7 +43,7 @@ FVector ATresEnemyPawn_e_ex042::GetAnchorAttachBoneLocation() {
 }
 
 
-ATresEnemyPawn_e_ex042::ATresEnemyPawn_e_ex042() {
+ATresEnemyPawn_e_ex042::ATresEnemyPawn_e_ex042(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_fSingleChainLength = 0.00f;
     this->m_DamageRotate = true;
     this->m_fMaxDamageRotAngle = 0.00f;

@@ -4,7 +4,7 @@
 #include "TresGimmickObstacleComponent.h"
 #include "Components/InstancedStaticMeshComponent.h"
 
-ATresBxCarActor::ATresBxCarActor() {
+ATresBxCarActor::ATresBxCarActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->CarMesh = CreateDefaultSubobject<UTresStaticMeshComponent>(TEXT("TresGimmickMesh0"));
     this->DriverStaticMesh = CreateDefaultSubobject<UTresStaticMeshComponent>(TEXT("DriverStaticMeshComponent"));
     this->GimmickObstacle = CreateDefaultSubobject<UTresGimmickObstacleComponent>(TEXT("GimmickObstacleComponent"));

@@ -32,7 +32,7 @@ protected:
     UFont* Font;
     
 public:
-    ATresDebugTextRender();
+    ATresDebugTextRender(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetText(const FText& Value);
     

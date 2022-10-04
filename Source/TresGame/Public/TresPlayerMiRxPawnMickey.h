@@ -120,7 +120,7 @@ private:
     float m_fTimeOfUntilCameraReset;
     
 public:
-    ATresPlayerMiRxPawnMickey();
+    ATresPlayerMiRxPawnMickey(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     bool BP_ToPreLastHolyForLevel();
     

@@ -60,7 +60,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UTresInterpGroupInst*> m_InterpGroupInst;
     
-    ATresGumiShipCharaPawnBase();
+    ATresGumiShipCharaPawnBase(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetVisibility(const bool bIn);
     

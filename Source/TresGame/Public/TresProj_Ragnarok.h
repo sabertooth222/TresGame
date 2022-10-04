@@ -27,6 +27,6 @@ protected:
     float m_RollingRadiusMax;
     
 public:
-    ATresProj_Ragnarok();
+    ATresProj_Ragnarok(const FObjectInitializer& ObjectInitializer);
 };
 

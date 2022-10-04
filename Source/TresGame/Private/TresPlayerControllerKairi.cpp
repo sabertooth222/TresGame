@@ -1,5 +1,5 @@
 #include "TresPlayerControllerKairi.h"
 
-ATresPlayerControllerKairi::ATresPlayerControllerKairi() {
+ATresPlayerControllerKairi::ATresPlayerControllerKairi(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

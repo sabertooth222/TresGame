@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable)
 class ATresRemyActorBase : public ATresSharedActor {
     GENERATED_BODY()
 public:
-    ATresRemyActorBase();
+    ATresRemyActorBase(const FObjectInitializer& ObjectInitializer);
 };
 

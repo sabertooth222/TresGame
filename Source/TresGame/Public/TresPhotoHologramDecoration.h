@@ -18,7 +18,7 @@ protected:
     TArray<FTresPhotoHologramEffectData> EffectDataList;
     
 public:
-    ATresPhotoHologramDecoration();
+    ATresPhotoHologramDecoration(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void RequestRemoveHologram();
     

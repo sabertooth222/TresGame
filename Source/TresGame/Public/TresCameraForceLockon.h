@@ -12,7 +12,7 @@ UCLASS(Blueprintable)
 class ATresCameraForceLockon : public ATresCameraNormalLoc {
     GENERATED_BODY()
 public:
-    ATresCameraForceLockon();
+    ATresCameraForceLockon(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     static ATresCameraForceLockon* BP_SpawnTresCameraForceLockon(UObject* WorldContextObject, TSubclassOf<ATresCameraForceLockon> CameraClass, const FName CameraName);
     

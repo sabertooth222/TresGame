@@ -12,6 +12,6 @@ protected:
     float m_ReflectedBulletSpeed;
     
 public:
-    ATresEnemy_e_ex311_BlizzardProjectileBase();
+    ATresEnemy_e_ex311_BlizzardProjectileBase(const FObjectInitializer& ObjectInitializer);
 };
 

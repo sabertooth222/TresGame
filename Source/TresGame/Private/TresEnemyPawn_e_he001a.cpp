@@ -23,7 +23,7 @@ void ATresEnemyPawn_e_he001a::EnableLockon(bool bEnable) {
 void ATresEnemyPawn_e_he001a::CancelHe001DownEvent() {
 }
 
-ATresEnemyPawn_e_he001a::ATresEnemyPawn_e_he001a() {
+ATresEnemyPawn_e_he001a::ATresEnemyPawn_e_he001a(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MyCollMesh = CreateDefaultSubobject<UTresSkeletalMeshComponent>(TEXT("TresCollMesh0"));
     this->m_ChanceSlowRate = 0.20f;
     this->m_ChanceHitMax = 4;

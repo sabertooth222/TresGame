@@ -81,7 +81,7 @@ public:
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresSavePointActivateSignature OnGimmickActivate;
     
-    ATresSavePointActor();
+    ATresSavePointActor(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveGimmickActivate(bool bEnable);
     

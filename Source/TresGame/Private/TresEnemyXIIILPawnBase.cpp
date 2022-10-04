@@ -62,7 +62,7 @@ FVector ATresEnemyXIIILPawnBase::GetCenterLocation() const {
     return FVector{};
 }
 
-ATresEnemyXIIILPawnBase::ATresEnemyXIIILPawnBase() {
+ATresEnemyXIIILPawnBase::ATresEnemyXIIILPawnBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_UniqueEffectDataAsset = NULL;
     this->m_bEnableRevengeChain = false;
 }

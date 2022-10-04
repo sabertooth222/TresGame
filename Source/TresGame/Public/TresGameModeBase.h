@@ -32,7 +32,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresGameModeBaseLastCleanupTickFunction m_LastCleanupTickFunction;
     
-    ATresGameModeBase();
+    ATresGameModeBase(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     static void TresRequestDestroyActor(AActor* Actor);
     

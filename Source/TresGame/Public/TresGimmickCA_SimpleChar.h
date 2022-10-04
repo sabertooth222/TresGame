@@ -19,7 +19,7 @@ protected:
     bool m_DisableSpawnPrizeAuto;
     
 public:
-    ATresGimmickCA_SimpleChar();
+    ATresGimmickCA_SimpleChar(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void RequestSpawnPrize();
     

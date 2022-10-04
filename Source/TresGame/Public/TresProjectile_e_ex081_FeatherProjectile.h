@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable)
 class ATresProjectile_e_ex081_FeatherProjectile : public ATresProjectileBase {
     GENERATED_BODY()
 public:
-    ATresProjectile_e_ex081_FeatherProjectile();
+    ATresProjectile_e_ex081_FeatherProjectile(const FObjectInitializer& ObjectInitializer);
 };
 

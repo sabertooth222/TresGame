@@ -14,7 +14,7 @@ bool ATresEnemyPawn_e_he903::IsFloatingTimeOver() {
     return false;
 }
 
-ATresEnemyPawn_e_he903::ATresEnemyPawn_e_he903() {
+ATresEnemyPawn_e_he903::ATresEnemyPawn_e_he903(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_DebrisComponent = CreateDefaultSubobject<UTresDebrisComponent_e_he903>(TEXT("DebrisComponent"));
     this->m_SplineManager = CreateDefaultSubobject<UTresSplineManager_e_he903>(TEXT("SplineManager"));
     this->m_WaterCurrentCollision = NULL;

@@ -25,6 +25,6 @@ private:
     UParticleSystemComponent* m_DarkLaserCoveringEffectCmp;
     
 public:
-    ATresProjectile_e_ex316_LightBulb();
+    ATresProjectile_e_ex316_LightBulb(const FObjectInitializer& ObjectInitializer);
 };
 

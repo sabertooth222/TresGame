@@ -58,7 +58,7 @@ bool ATresGimmickBxPudding::ChangeBxPuddingType(const ETresBxPuddingType Type) {
     return false;
 }
 
-ATresGimmickBxPudding::ATresGimmickBxPudding() {
+ATresGimmickBxPudding::ATresGimmickBxPudding(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_pEatAttackColl = CreateDefaultSubobject<UTresAtkCollComponent>(TEXT("TresAtkCollComponent"));
     this->m_pEntryTrigger = CreateDefaultSubobject<USphereComponent>(TEXT("EntryTrigger"));
     this->m_pAreaJumpEffect = CreateDefaultSubobject<UParticleSystemComponent>(TEXT("AreaJumpEffectComp"));

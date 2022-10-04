@@ -37,7 +37,7 @@ void ATresGimmickRA_Impression_Bird::ExecFlyAway() {
 void ATresGimmickRA_Impression_Bird::ExecApproach() {
 }
 
-ATresGimmickRA_Impression_Bird::ATresGimmickRA_Impression_Bird() {
+ATresGimmickRA_Impression_Bird::ATresGimmickRA_Impression_Bird(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->RotateSpeed = 0.00f;
     this->RunDistance = 0.00f;
     this->EscapeDistance = 0.00f;

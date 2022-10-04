@@ -25,7 +25,7 @@ void ATresEnemyPawn_e_ex004::ForcingCancelWaterSummon() {
 void ATresEnemyPawn_e_ex004::DebugSetAppearState(TEnumAsByte<ETresEnemySetAppearMode> mode) {
 }
 
-ATresEnemyPawn_e_ex004::ATresEnemyPawn_e_ex004() {
+ATresEnemyPawn_e_ex004::ATresEnemyPawn_e_ex004(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_bWaterSummon = false;
     this->m_bExternalWaterSummon = false;
     this->m_Appear2_MoveSpeed = 2500.00f;

@@ -16,6 +16,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_FallDownDist;
     
-    ATresProjectile_e_ex361_DarkHand_ShockWaveAtkCol();
+    ATresProjectile_e_ex361_DarkHand_ShockWaveAtkCol(const FObjectInitializer& ObjectInitializer);
 };
 

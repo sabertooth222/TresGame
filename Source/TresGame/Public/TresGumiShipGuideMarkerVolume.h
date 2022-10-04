@@ -19,7 +19,7 @@ private:
     USphereComponent* m_pEntryAreaCollision;
     
 public:
-    ATresGumiShipGuideMarkerVolume();
+    ATresGumiShipGuideMarkerVolume(const FObjectInitializer& ObjectInitializer);
 private:
     UFUNCTION(BlueprintCallable)
     void _OnEnterMarkerGuideArea(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);

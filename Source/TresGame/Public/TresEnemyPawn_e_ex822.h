@@ -17,6 +17,6 @@ private:
     UCapsuleComponent* MyBlowOffWindComponent;
     
 public:
-    ATresEnemyPawn_e_ex822();
+    ATresEnemyPawn_e_ex822(const FObjectInitializer& ObjectInitializer);
 };
 

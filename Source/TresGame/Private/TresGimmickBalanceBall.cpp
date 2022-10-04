@@ -71,7 +71,7 @@ void ATresGimmickBalanceBall::BalanceBallRemoveCollisionShape(const FName InTagN
 void ATresGimmickBalanceBall::BalanceBallAppendCollisionShape(const FName InTagName, FVector InSize, FVector InRelativeLocaiton, FRotator InRelativeRotation, bool bUpdate) {
 }
 
-ATresGimmickBalanceBall::ATresGimmickBalanceBall() {
+ATresGimmickBalanceBall::ATresGimmickBalanceBall(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->BallRoot = CreateDefaultSubobject<USceneComponent>(TEXT("BallRootComp"));
     this->SignEffect = CreateDefaultSubobject<UParticleSystemComponent>(TEXT("SignEffectComp"));
     this->TickSensor = CreateDefaultSubobject<USphereComponent>(TEXT("TickSensor"));

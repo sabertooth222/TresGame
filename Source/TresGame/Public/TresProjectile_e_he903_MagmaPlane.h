@@ -20,6 +20,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector m_OffsetCurveScale;
     
-    ATresProjectile_e_he903_MagmaPlane();
+    ATresProjectile_e_he903_MagmaPlane(const FObjectInitializer& ObjectInitializer);
 };
 

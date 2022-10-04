@@ -1,5 +1,5 @@
 #include "TresCameraAthleticFlow.h"
 
-ATresCameraAthleticFlow::ATresCameraAthleticFlow() {
+ATresCameraAthleticFlow::ATresCameraAthleticFlow(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

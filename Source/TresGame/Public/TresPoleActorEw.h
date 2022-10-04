@@ -16,7 +16,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTresPoleComponent* PoleComponentDefault;
     
-    ATresPoleActorEw();
+    ATresPoleActorEw(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetEnable(bool bEnable);
     

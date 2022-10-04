@@ -1,5 +1,5 @@
 #include "TresPrize.h"
 
-ATresPrize::ATresPrize() {
+ATresPrize::ATresPrize(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

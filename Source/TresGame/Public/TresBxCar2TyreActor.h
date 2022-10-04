@@ -12,6 +12,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UInstancedStaticMeshComponent* InstancedStaticMeshEx;
     
-    ATresBxCar2TyreActor();
+    ATresBxCar2TyreActor(const FObjectInitializer& ObjectInitializer);
 };
 

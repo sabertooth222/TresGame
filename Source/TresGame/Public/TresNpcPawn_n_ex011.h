@@ -12,6 +12,6 @@ protected:
     int32 m_AppendCure;
     
 public:
-    ATresNpcPawn_n_ex011();
+    ATresNpcPawn_n_ex011(const FObjectInitializer& ObjectInitializer);
 };
 

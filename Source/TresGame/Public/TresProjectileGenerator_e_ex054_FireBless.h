@@ -12,6 +12,6 @@ public:
     UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     TArray<TWeakObjectPtr<ATresProjectileBase>> m_FireBlessArray;
     
-    ATresProjectileGenerator_e_ex054_FireBless();
+    ATresProjectileGenerator_e_ex054_FireBless(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -12,6 +12,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_AerialHitEff;
     
-    ATresAttractionProjAFSRPaint();
+    ATresAttractionProjAFSRPaint(const FObjectInitializer& ObjectInitializer);
 };
 

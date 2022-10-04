@@ -1,5 +1,5 @@
 #include "TresGumiShipActualProjectile.h"
 
-ATresGumiShipActualProjectile::ATresGumiShipActualProjectile() {
+ATresGumiShipActualProjectile::ATresGumiShipActualProjectile(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

@@ -1,6 +1,6 @@
 #include "TresEnemyPawn_e_ex781_GunShotMarker.h"
 
-ATresEnemyPawn_e_ex781_GunShotMarker::ATresEnemyPawn_e_ex781_GunShotMarker() {
+ATresEnemyPawn_e_ex781_GunShotMarker::ATresEnemyPawn_e_ex781_GunShotMarker(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_MarkerParticleData = NULL;
     this->m_ShotFlashParticleData = NULL;
     this->m_ShotLoopParticleData = NULL;

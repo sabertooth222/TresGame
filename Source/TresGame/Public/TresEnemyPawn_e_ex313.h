@@ -61,7 +61,7 @@ protected:
     ATresEnemyXIIIAManager* m_XIIIAManager;
     
 public:
-    ATresEnemyPawn_e_ex313();
+    ATresEnemyPawn_e_ex313(const FObjectInitializer& ObjectInitializer);
 protected:
     UFUNCTION(BlueprintCallable)
     bool IsThunderGenerator();

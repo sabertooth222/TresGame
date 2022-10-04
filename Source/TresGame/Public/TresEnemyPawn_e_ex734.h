@@ -18,7 +18,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_iRequiredWolfKillNum;
     
-    ATresEnemyPawn_e_ex734();
+    ATresEnemyPawn_e_ex734(const FObjectInitializer& ObjectInitializer);
 protected:
     UFUNCTION(BlueprintCallable)
     void OnChangeGimmickPause(bool bPause);

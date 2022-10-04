@@ -20,6 +20,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresAgentInfoStruct> NavMeshGroups;
     
-    ATresNavMeshAgentSizeValidator();
+    ATresNavMeshAgentSizeValidator(const FObjectInitializer& ObjectInitializer);
 };
 

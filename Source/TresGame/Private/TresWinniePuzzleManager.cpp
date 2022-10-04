@@ -19,7 +19,7 @@ ATresWinniePlayerController* ATresWinniePuzzleManager::GetController() const {
     return NULL;
 }
 
-ATresWinniePuzzleManager::ATresWinniePuzzleManager() {
+ATresWinniePuzzleManager::ATresWinniePuzzleManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->DataRef = NULL;
     this->m_pPuzzle = NULL;
 }

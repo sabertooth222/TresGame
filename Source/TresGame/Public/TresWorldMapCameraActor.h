@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresWorldMapCameraActor : public ACameraActor {
     GENERATED_BODY()
 public:
-    ATresWorldMapCameraActor();
+    ATresWorldMapCameraActor(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -14,6 +14,6 @@ private:
     UTresEnemyManager_e_ex761* m_Manager;
     
 public:
-    ATresEnemyManagerPawn_e_ex761();
+    ATresEnemyManagerPawn_e_ex761(const FObjectInitializer& ObjectInitializer);
 };
 

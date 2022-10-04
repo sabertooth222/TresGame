@@ -12,7 +12,7 @@ ATresCameraRotTargetCtrl* ATresCameraRotTargetCtrl::BP_SpawnTresCameraRotTargetC
 void ATresCameraRotTargetCtrl::BP_SetTresCameraRotTargetCtrlParam(float LimitPitchMin, float LimitPitchMax, float LimitYawMin, float LimitYawMax, bool bRotationCamera, bool bTimerReset, AActor* RotationTarget, bool bLRStick) {
 }
 
-ATresCameraRotTargetCtrl::ATresCameraRotTargetCtrl() {
+ATresCameraRotTargetCtrl::ATresCameraRotTargetCtrl(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_LimitPitchMin = -70.00f;
     this->m_LimitPitchMax = 70.00f;
     this->m_LimitYawMin = -45.00f;

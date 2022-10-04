@@ -54,7 +54,7 @@ protected:
     UTresPlayerStateEventComponent* m_pStateEvent;
     
 public:
-    ATresGumiShipPlayerPawnBase();
+    ATresGumiShipPlayerPawnBase(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetOutsideMaxSpeed(float fSpeed);
     

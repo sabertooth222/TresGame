@@ -21,6 +21,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresActor_e_ex773_Attract> m_pro_BlowClass;
     
-    ATresProjectile_e_ex773_FlareTornadoBlow();
+    ATresProjectile_e_ex773_FlareTornadoBlow(const FObjectInitializer& ObjectInitializer);
 };
 

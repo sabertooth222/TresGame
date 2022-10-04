@@ -7,7 +7,7 @@ UCLASS(Blueprintable)
 class TRESGAME_API ATresPostcardFieldVoiceActor : public AActor {
     GENERATED_BODY()
 public:
-    ATresPostcardFieldVoiceActor();
+    ATresPostcardFieldVoiceActor(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BPE_PlayVoiceLoop();
     

@@ -14,6 +14,6 @@ protected:
     UCurveFloat* m_pro_ShootingRideAddScoreColorRateCurve;
     
 public:
-    ATresDebugProjectileGeneratorPawn();
+    ATresDebugProjectileGeneratorPawn(const FObjectInitializer& ObjectInitializer);
 };
 

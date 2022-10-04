@@ -114,7 +114,7 @@ protected:
     float m_fPropellerEndCurveTimeScale;
     
 public:
-    ATresEnemyPawn_e_ex042();
+    ATresEnemyPawn_e_ex042(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetPhysicalSimulated(bool bSet);
     

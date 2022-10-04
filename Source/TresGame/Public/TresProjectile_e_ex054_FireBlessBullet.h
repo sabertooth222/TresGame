@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable)
 class ATresProjectile_e_ex054_FireBlessBullet : public ATresProjectileBase {
     GENERATED_BODY()
 public:
-    ATresProjectile_e_ex054_FireBlessBullet();
+    ATresProjectile_e_ex054_FireBlessBullet(const FObjectInitializer& ObjectInitializer);
 };
 

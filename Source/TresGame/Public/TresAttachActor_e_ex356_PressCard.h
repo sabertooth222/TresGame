@@ -12,6 +12,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USceneComponent* MyRoot;
     
-    ATresAttachActor_e_ex356_PressCard();
+    ATresAttachActor_e_ex356_PressCard(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -37,7 +37,7 @@ float ATresRemyCookingSprinklePepperV2::GetGameDuration() const {
 void ATresRemyCookingSprinklePepperV2::ChangeState(TEnumAsByte<RemyCookingGameState> State) {
 }
 
-ATresRemyCookingSprinklePepperV2::ATresRemyCookingSprinklePepperV2() {
+ATresRemyCookingSprinklePepperV2::ATresRemyCookingSprinklePepperV2(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->PepperMillPawnRef = NULL;
     this->SaucepanStaticMeshActorRef = NULL;
     this->PanStaticMeshActorRef = NULL;

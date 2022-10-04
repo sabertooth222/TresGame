@@ -12,6 +12,6 @@ protected:
     FName m_DataTableName;
     
 public:
-    ATresGumiShipGimmickDashRing();
+    ATresGumiShipGimmickDashRing(const FObjectInitializer& ObjectInitializer);
 };
 

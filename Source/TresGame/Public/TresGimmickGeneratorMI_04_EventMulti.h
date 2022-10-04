@@ -8,7 +8,7 @@ UCLASS(Abstract, Blueprintable)
 class ATresGimmickGeneratorMI_04_EventMulti : public ATresGimmickGeneratorMI_04_EventBase {
     GENERATED_BODY()
 public:
-    ATresGimmickGeneratorMI_04_EventMulti();
+    ATresGimmickGeneratorMI_04_EventMulti(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     FVector BPEV_GetDoorStart();
     

@@ -18,6 +18,6 @@ protected:
     UParticleSystemComponent* m_pBaseEffect;
     
 public:
-    ATresShopActorMogli();
+    ATresShopActorMogli(const FObjectInitializer& ObjectInitializer);
 };
 

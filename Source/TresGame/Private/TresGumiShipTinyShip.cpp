@@ -14,7 +14,7 @@ void ATresGumiShipTinyShip::OnPressLeftRight(const FTresGMInputResult& rResult, 
 void ATresGumiShipTinyShip::OnInputLStick(const FTresGMInputResult& rResult, const ATresGumiShipPlayerControllerBase* pController) {
 }
 
-ATresGumiShipTinyShip::ATresGumiShipTinyShip() {
+ATresGumiShipTinyShip::ATresGumiShipTinyShip(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->RollSpeedRate = 0.10f;
     this->OptionOffset.AddDefaulted(2);
     this->MaxAccel = 20.00f;

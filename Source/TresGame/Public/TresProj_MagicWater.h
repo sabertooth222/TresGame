@@ -15,6 +15,6 @@ protected:
     uint8 m_bVikingShipSplash: 1;
     
 public:
-    ATresProj_MagicWater();
+    ATresProj_MagicWater(const FObjectInitializer& ObjectInitializer);
 };
 

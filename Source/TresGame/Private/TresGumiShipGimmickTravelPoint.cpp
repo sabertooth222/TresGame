@@ -3,7 +3,7 @@
 void ATresGumiShipGimmickTravelPoint::_SetMeshLoopCall(float LoopTime) {
 }
 
-ATresGumiShipGimmickTravelPoint::ATresGumiShipGimmickTravelPoint() {
+ATresGumiShipGimmickTravelPoint::ATresGumiShipGimmickTravelPoint(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_fPlayerDistance = 10000.00f;
     this->m_ActiveCheck = false;
     this->m_GlowSpeed = 15.00f;

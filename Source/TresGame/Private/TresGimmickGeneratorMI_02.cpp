@@ -23,7 +23,7 @@ float ATresGimmickGeneratorMI_02::GetMoveSpeed() {
 }
 
 
-ATresGimmickGeneratorMI_02::ATresGimmickGeneratorMI_02() {
+ATresGimmickGeneratorMI_02::ATresGimmickGeneratorMI_02(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->SpeedWaterSplineNone = 100.00f;
     this->GeneratorData = NULL;
 }

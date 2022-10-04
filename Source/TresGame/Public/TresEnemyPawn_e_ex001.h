@@ -7,7 +7,7 @@ UCLASS(Blueprintable)
 class ATresEnemyPawn_e_ex001 : public ATresEnemyPawnBase {
     GENERATED_BODY()
 public:
-    ATresEnemyPawn_e_ex001();
+    ATresEnemyPawn_e_ex001(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void StopShadowSpawn();
     

@@ -16,6 +16,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_AnticipateTurnOffsetAngle;
     
-    ATresEnemyPawn_e_ex002();
+    ATresEnemyPawn_e_ex002(const FObjectInitializer& ObjectInitializer);
 };
 

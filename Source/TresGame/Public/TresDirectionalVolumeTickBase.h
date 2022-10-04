@@ -18,7 +18,7 @@ protected:
     UTresDebugArrowComponent* DebugArrowComponent;
     
 public:
-    ATresDirectionalVolumeTickBase();
+    ATresDirectionalVolumeTickBase(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetEnableExecute(bool Enable);
     

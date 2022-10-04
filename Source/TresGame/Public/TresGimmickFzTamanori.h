@@ -31,7 +31,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MoveThicknessMaxScale;
     
-    ATresGimmickFzTamanori();
+    ATresGimmickFzTamanori(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void TriggerOverlapped(ATresTriggerBox* TriggerActor);
     

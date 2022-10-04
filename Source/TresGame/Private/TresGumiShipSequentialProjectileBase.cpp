@@ -1,5 +1,5 @@
 #include "TresGumiShipSequentialProjectileBase.h"
 
-ATresGumiShipSequentialProjectileBase::ATresGumiShipSequentialProjectileBase() {
+ATresGumiShipSequentialProjectileBase::ATresGumiShipSequentialProjectileBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

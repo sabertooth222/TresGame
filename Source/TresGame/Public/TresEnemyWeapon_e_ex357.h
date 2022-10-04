@@ -17,6 +17,6 @@ private:
     float m_PhantomBlitzOffset;
     
 public:
-    ATresEnemyWeapon_e_ex357();
+    ATresEnemyWeapon_e_ex357(const FObjectInitializer& ObjectInitializer);
 };
 

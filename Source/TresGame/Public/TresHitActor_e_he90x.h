@@ -29,7 +29,7 @@ protected:
     bool m_bDebugCollDisabled;
     
 public:
-    ATresHitActor_e_he90x();
+    ATresHitActor_e_he90x(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetCollSize(float InRadius, float inHeight);
     

@@ -1,6 +1,6 @@
 #include "TresProjectile_e_ex360_KeyBlades.h"
 
-ATresProjectile_e_ex360_KeyBlades::ATresProjectile_e_ex360_KeyBlades() {
+ATresProjectile_e_ex360_KeyBlades::ATresProjectile_e_ex360_KeyBlades(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_HitParticleData = NULL;
     this->m_CharHitParticleData = NULL;
     this->m_SpawnTailIntervalTime = 0.10f;

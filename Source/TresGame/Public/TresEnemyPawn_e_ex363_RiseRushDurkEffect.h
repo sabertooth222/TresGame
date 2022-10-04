@@ -38,6 +38,6 @@ private:
     TWeakObjectPtr<AActor> m_Target;
     
 public:
-    ATresEnemyPawn_e_ex363_RiseRushDurkEffect();
+    ATresEnemyPawn_e_ex363_RiseRushDurkEffect(const FObjectInitializer& ObjectInitializer);
 };
 

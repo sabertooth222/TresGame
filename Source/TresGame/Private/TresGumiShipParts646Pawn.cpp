@@ -4,7 +4,7 @@ bool ATresGumiShipParts646Pawn::_StartAttack(FVector _target) {
     return false;
 }
 
-ATresGumiShipParts646Pawn::ATresGumiShipParts646Pawn() {
+ATresGumiShipParts646Pawn::ATresGumiShipParts646Pawn(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_fMaxYaw = 45.00f;
     this->m_AttackTimer = 4.00f;
     this->m_EffectEndTimer = 2.00f;

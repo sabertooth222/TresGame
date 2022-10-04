@@ -86,7 +86,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool TailBlend;
     
-    ATresGumiShipEnemy621Pawn();
+    ATresGumiShipEnemy621Pawn(const FObjectInitializer& ObjectInitializer);
 protected:
     UFUNCTION(BlueprintCallable)
     void ToVisibleBodyMaterial(float fDuration);

@@ -13,7 +13,7 @@ protected:
     FCAPrizeChimneyParam m_Parameter;
     
 public:
-    ATresGimmickCA_PrizeChimneyGroup();
+    ATresGimmickCA_PrizeChimneyGroup(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetHitPoint() const;
     

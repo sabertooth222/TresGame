@@ -7,7 +7,7 @@ UCLASS(Blueprintable)
 class ATresProjectile_e_ex113_Test : public ATresProjectileBase {
     GENERATED_BODY()
 public:
-    ATresProjectile_e_ex113_Test();
+    ATresProjectile_e_ex113_Test(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void BP_DoFire();
     

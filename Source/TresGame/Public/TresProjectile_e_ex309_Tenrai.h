@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable)
 class ATresProjectile_e_ex309_Tenrai : public ATresProjectileBase {
     GENERATED_BODY()
 public:
-    ATresProjectile_e_ex309_Tenrai();
+    ATresProjectile_e_ex309_Tenrai(const FObjectInitializer& ObjectInitializer);
 };
 

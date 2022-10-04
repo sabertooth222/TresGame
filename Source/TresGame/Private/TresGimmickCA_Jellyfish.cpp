@@ -5,7 +5,7 @@
 
 
 
-ATresGimmickCA_Jellyfish::ATresGimmickCA_Jellyfish() {
+ATresGimmickCA_Jellyfish::ATresGimmickCA_Jellyfish(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MyMesh = CreateDefaultSubobject<UTresStaticMeshComponent>(TEXT("TresGimmickCA_Jellyfish_StaticMesh"));
     this->MyAtkColl_Jelly = CreateDefaultSubobject<UTresAtkCollComponent>(TEXT("TresGimmickCA_Jellyfish_MyAtkColl"));
     this->MyCollBase = CreateDefaultSubobject<USceneComponent>(TEXT("TresGimmickCA_Jellyfish_MyCollBase"));

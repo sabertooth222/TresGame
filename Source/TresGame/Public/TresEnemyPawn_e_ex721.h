@@ -95,7 +95,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresProjectileBase> m_CallBombProjectile;
     
-    ATresEnemyPawn_e_ex721();
+    ATresEnemyPawn_e_ex721(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsTowerMode() const;
     

@@ -11,6 +11,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresEnemy_e_ex773_EncloseFlareHvnParam> m_EncloseFlareParamArray;
     
-    ATresProjectileGenerator_e_ex773_EncloseFlareHvn();
+    ATresProjectileGenerator_e_ex773_EncloseFlareHvn(const FObjectInitializer& ObjectInitializer);
 };
 

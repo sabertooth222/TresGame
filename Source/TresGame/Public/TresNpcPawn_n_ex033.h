@@ -25,7 +25,7 @@ protected:
     float m_AttackTime;
     
 public:
-    ATresNpcPawn_n_ex033();
+    ATresNpcPawn_n_ex033(const FObjectInitializer& ObjectInitializer);
 protected:
     UFUNCTION(BlueprintCallable)
     void OnDamageForRoxas(float InDamageAmount, const FDamageEvent& InDamageEvent, AController* InEventInstigator, AActor* InDamageCauser);

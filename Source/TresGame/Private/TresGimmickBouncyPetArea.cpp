@@ -1,5 +1,5 @@
 #include "TresGimmickBouncyPetArea.h"
 
-ATresGimmickBouncyPetArea::ATresGimmickBouncyPetArea() {
+ATresGimmickBouncyPetArea::ATresGimmickBouncyPetArea(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

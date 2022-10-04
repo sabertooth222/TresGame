@@ -16,6 +16,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TWeakObjectPtr<ATresWaypoint> NextWaypoint;
     
-    ATresWaypoint();
+    ATresWaypoint(const FObjectInitializer& ObjectInitializer);
 };
 

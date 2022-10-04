@@ -8,7 +8,7 @@ class ATresCharPawnBase;
 void ATresGimmick_e_ex356_Card::OnBigDealReactorDoCommand(ATresCharPawnBase* InCommandCauser, TEnumAsByte<ETresCommandKind> InCommandID, UTresReactorComponent* InReactorComponent) {
 }
 
-ATresGimmick_e_ex356_Card::ATresGimmick_e_ex356_Card() {
+ATresGimmick_e_ex356_Card::ATresGimmick_e_ex356_Card(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MyTransformControl = CreateDefaultSubobject<USceneComponent>(TEXT("MyTransformControl"));
     this->MyLockonPriorityOverlap = CreateDefaultSubobject<UTresLockonPriorityOverlapComponent_e_ex356>(TEXT("MyLockonPriorityOverlap"));
     this->MyBigDealReactorComponent = CreateDefaultSubobject<UTresReactorComponent>(TEXT("MyBigDealReactorComponent"));

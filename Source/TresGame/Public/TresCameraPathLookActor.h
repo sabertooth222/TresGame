@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresCameraPathLookActor : public ATresCameraPathLocationActor {
     GENERATED_BODY()
 public:
-    ATresCameraPathLookActor();
+    ATresCameraPathLookActor(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -6,7 +6,7 @@
 void ATresDisneyMagicActorRalphBlock::OnChangeGimmickPause(bool bPause) {
 }
 
-ATresDisneyMagicActorRalphBlock::ATresDisneyMagicActorRalphBlock() {
+ATresDisneyMagicActorRalphBlock::ATresDisneyMagicActorRalphBlock(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_BlockKind = RALPH_BLOCK_KIND_ONE;
     this->m_EffAssetExplosion = NULL;
     this->m_EffAssetDisappear = NULL;

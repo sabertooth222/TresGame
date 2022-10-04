@@ -63,7 +63,7 @@ protected:
     TSubclassOf<AEmitterCameraLensEffectBase> m_OutLensEffectClass;
     
 public:
-    ATresOceanEnvSwitchActor();
+    ATresOceanEnvSwitchActor(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void BP_SetOceanMaterialIndex(int32 InOverSeaIndex, int32 InUnderSeaIndex);
     

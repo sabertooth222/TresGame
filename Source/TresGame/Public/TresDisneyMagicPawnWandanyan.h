@@ -102,6 +102,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fJumpGravityRateLv5;
     
-    ATresDisneyMagicPawnWandanyan();
+    ATresDisneyMagicPawnWandanyan(const FObjectInitializer& ObjectInitializer);
 };
 

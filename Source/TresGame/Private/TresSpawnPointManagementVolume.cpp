@@ -7,7 +7,7 @@ bool ATresSpawnPointManagementVolume::GetWeldOuter() const {
     return false;
 }
 
-ATresSpawnPointManagementVolume::ATresSpawnPointManagementVolume() {
+ATresSpawnPointManagementVolume::ATresSpawnPointManagementVolume(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_WeldOuterInitial = false;
 }
 

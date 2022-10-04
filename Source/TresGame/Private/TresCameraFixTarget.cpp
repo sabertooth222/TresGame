@@ -8,6 +8,6 @@ ATresCameraFixTarget* ATresCameraFixTarget::BP_SpawnTresCameraFixTarget(UObject*
     return NULL;
 }
 
-ATresCameraFixTarget::ATresCameraFixTarget() {
+ATresCameraFixTarget::ATresCameraFixTarget(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresGumiShipSandBall625Pawn : public ASkeletalMeshActor {
     GENERATED_BODY()
 public:
-    ATresGumiShipSandBall625Pawn();
+    ATresGumiShipSandBall625Pawn(const FObjectInitializer& ObjectInitializer);
 };
 

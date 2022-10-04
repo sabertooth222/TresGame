@@ -15,6 +15,6 @@ protected:
     float m_LimitPitchMax;
     
 public:
-    ATresCameraSpecialShipHiSpd();
+    ATresCameraSpecialShipHiSpd(const FObjectInitializer& ObjectInitializer);
 };
 

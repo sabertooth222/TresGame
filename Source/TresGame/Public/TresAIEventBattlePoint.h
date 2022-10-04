@@ -15,7 +15,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_UseBattlePlayerEmotionManager;
     
-    ATresAIEventBattlePoint();
+    ATresAIEventBattlePoint(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetPhaseTag(const FGameplayTag& InTag);
     

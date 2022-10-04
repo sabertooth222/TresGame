@@ -4,7 +4,7 @@ bool ATresEnemyPawn_e_ex325::IsFinishAttack() {
     return false;
 }
 
-ATresEnemyPawn_e_ex325::ATresEnemyPawn_e_ex325() {
+ATresEnemyPawn_e_ex325::ATresEnemyPawn_e_ex325(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_EnemyPawn_BuddyData = NULL;
     this->m_ChangeAirIdlePlayRate = 0.00f;
     this->m_ChangeIdlePlayRate = 0.00f;

@@ -11,6 +11,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FNavigationLink PointLink;
     
-    ATresAutoNavLinkTestingActor();
+    ATresAutoNavLinkTestingActor(const FObjectInitializer& ObjectInitializer);
 };
 

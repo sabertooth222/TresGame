@@ -83,6 +83,6 @@ float ATresLSIGameActor::GetGameUnpausedTimeSinceCreation() {
     return 0.0f;
 }
 
-ATresLSIGameActor::ATresLSIGameActor() {
+ATresLSIGameActor::ATresLSIGameActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

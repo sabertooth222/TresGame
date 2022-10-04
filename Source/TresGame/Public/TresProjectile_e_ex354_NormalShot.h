@@ -28,6 +28,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fDisableAdjustTargetAngle;
     
-    ATresProjectile_e_ex354_NormalShot();
+    ATresProjectile_e_ex354_NormalShot(const FObjectInitializer& ObjectInitializer);
 };
 

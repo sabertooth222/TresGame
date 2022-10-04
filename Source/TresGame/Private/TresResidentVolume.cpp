@@ -1,5 +1,5 @@
 #include "TresResidentVolume.h"
 
-ATresResidentVolume::ATresResidentVolume() {
+ATresResidentVolume::ATresResidentVolume(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

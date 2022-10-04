@@ -39,6 +39,6 @@ protected:
     float m_PutDecalFadeOutTime;
     
 public:
-    ATresProj_MagicFire();
+    ATresProj_MagicFire(const FObjectInitializer& ObjectInitializer);
 };
 

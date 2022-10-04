@@ -18,7 +18,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_StartTransitionTime;
     
-    ATresProjectile_e_ex721_CallBomb();
+    ATresProjectile_e_ex721_CallBomb(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void OnProjectileBounce(const FHitResult& ImpactResult, const FVector& ImpactVelocity);
     

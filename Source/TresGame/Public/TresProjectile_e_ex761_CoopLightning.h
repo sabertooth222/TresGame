@@ -17,6 +17,6 @@ private:
     float m_DoFireDelayTime;
     
 public:
-    ATresProjectile_e_ex761_CoopLightning();
+    ATresProjectile_e_ex761_CoopLightning(const FObjectInitializer& ObjectInitializer);
 };
 

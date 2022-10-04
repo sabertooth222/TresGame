@@ -3,7 +3,7 @@
 void ATresOceanEnvSwitchActor::BP_SetOceanMaterialIndex(int32 InOverSeaIndex, int32 InUnderSeaIndex) {
 }
 
-ATresOceanEnvSwitchActor::ATresOceanEnvSwitchActor() {
+ATresOceanEnvSwitchActor::ATresOceanEnvSwitchActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_bChangeOceanMaterialIndex = false;
     this->m_pOceanController = NULL;
     this->m_OceanMaterialOverSea = 0;

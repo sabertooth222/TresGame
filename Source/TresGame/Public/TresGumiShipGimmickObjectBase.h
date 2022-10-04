@@ -32,7 +32,7 @@ protected:
     UTresGumiShipWeaponSequence* m_pWeaponSequence;
     
 public:
-    ATresGumiShipGimmickObjectBase();
+    ATresGumiShipGimmickObjectBase(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetVisibility(const bool bIn);
     

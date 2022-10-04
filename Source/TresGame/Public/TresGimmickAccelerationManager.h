@@ -39,6 +39,6 @@ private:
     float m_CollisionDistanceSq;
     
 public:
-    ATresGimmickAccelerationManager();
+    ATresGimmickAccelerationManager(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -12,6 +12,6 @@ ATresCameraDistanceAdjust2T* ATresCameraDistanceAdjust2T::BP_SpawnTresCameraDist
 void ATresCameraDistanceAdjust2T::BP_SetTresCamera2ndTargetParam(AActor* Target2, FVector TargetOffset, FVector TargetLocalOffset, FName TargetBoneName, float TargetRadius, float Target1Radius) {
 }
 
-ATresCameraDistanceAdjust2T::ATresCameraDistanceAdjust2T() {
+ATresCameraDistanceAdjust2T::ATresCameraDistanceAdjust2T(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

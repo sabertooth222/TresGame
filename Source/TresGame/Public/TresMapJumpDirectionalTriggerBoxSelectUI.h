@@ -14,6 +14,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresLocText> Choices;
     
-    ATresMapJumpDirectionalTriggerBoxSelectUI();
+    ATresMapJumpDirectionalTriggerBoxSelectUI(const FObjectInitializer& ObjectInitializer);
 };
 

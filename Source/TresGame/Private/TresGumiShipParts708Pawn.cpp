@@ -6,7 +6,7 @@ class AActor;
 void ATresGumiShipParts708Pawn::_OnHitTreasure(UPrimitiveComponent* pHitComponent, AActor* pOtherActor, UPrimitiveComponent* pOtherComp, FVector vNormalImpulse, const FHitResult& rHit) {
 }
 
-ATresGumiShipParts708Pawn::ATresGumiShipParts708Pawn() {
+ATresGumiShipParts708Pawn::ATresGumiShipParts708Pawn(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_pDeadAssetVFX = NULL;
     this->m_pBackfire2VFX = NULL;
     this->m_pExplosionVFX = NULL;

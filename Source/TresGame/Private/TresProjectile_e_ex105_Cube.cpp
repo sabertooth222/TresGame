@@ -1,6 +1,6 @@
 #include "TresProjectile_e_ex105_Cube.h"
 
-ATresProjectile_e_ex105_Cube::ATresProjectile_e_ex105_Cube() {
+ATresProjectile_e_ex105_Cube::ATresProjectile_e_ex105_Cube(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_CollRadius = 90.00f;
     this->m_CubeEff = NULL;
     this->m_AtkCubeEff = NULL;

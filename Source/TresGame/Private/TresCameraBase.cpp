@@ -135,7 +135,7 @@ void ATresCameraBase::BP_EnableControllerInput(bool bEnable) {
 void ATresCameraBase::BP_EnableAmbientOcclusion(bool bEnable) {
 }
 
-ATresCameraBase::ATresCameraBase() {
+ATresCameraBase::ATresCameraBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_CameraComponent = CreateDefaultSubobject<UCameraComponent>(TEXT("CameraComponent"));
     this->m_CameraManager = NULL;
     this->m_PlayerController = NULL;

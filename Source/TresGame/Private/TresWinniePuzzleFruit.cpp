@@ -2,7 +2,7 @@
 #include "TresWinniePuzzleUnitVibrationController.h"
 #include "TresWinniePuzzleAutoIncreaseController.h"
 
-ATresWinniePuzzleFruit::ATresWinniePuzzleFruit() {
+ATresWinniePuzzleFruit::ATresWinniePuzzleFruit(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->RabbitPawn = NULL;
     this->LumpyPawn = NULL;
     this->UnitVibrationCtrl = CreateDefaultSubobject<UTresWinniePuzzleUnitVibrationController>(TEXT("UTresWinniePuzzleUnitVibrationController"));

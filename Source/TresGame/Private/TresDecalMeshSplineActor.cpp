@@ -8,7 +8,7 @@ void ATresDecalMeshSplineActor::SetMaterialControlLocation(FVector inWorldLocati
 void ATresDecalMeshSplineActor::AddSplinePoint(const FVector& inWorldLocation, FVector inHitLocation, FVector inWorldNormal, bool inIsEnable, FHitResult in_pHitRes) {
 }
 
-ATresDecalMeshSplineActor::ATresDecalMeshSplineActor() {
+ATresDecalMeshSplineActor::ATresDecalMeshSplineActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->SceneComponent = CreateDefaultSubobject<USceneComponent>(TEXT("Scene"));
     this->SplineComponent = CreateDefaultSubobject<USplineComponent>(TEXT("spline"));
     this->m_LateralDecalActorClass = NULL;

@@ -1,5 +1,5 @@
 #include "TresBattleStartVolume.h"
 
-ATresBattleStartVolume::ATresBattleStartVolume() {
+ATresBattleStartVolume::ATresBattleStartVolume(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

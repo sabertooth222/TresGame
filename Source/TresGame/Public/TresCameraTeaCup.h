@@ -50,6 +50,6 @@ protected:
     TSubclassOf<UCameraShake> m_LandingShake;
     
 public:
-    ATresCameraTeaCup();
+    ATresCameraTeaCup(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -33,7 +33,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fParabolaDamageLimitBrake;
     
-    ATresNpcPawn_n_fz214();
+    ATresNpcPawn_n_fz214(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void BP_StopUserAI(bool Switch);
     

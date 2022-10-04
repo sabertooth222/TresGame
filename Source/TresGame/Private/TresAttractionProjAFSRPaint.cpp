@@ -1,6 +1,6 @@
 #include "TresAttractionProjAFSRPaint.h"
 
-ATresAttractionProjAFSRPaint::ATresAttractionProjAFSRPaint() {
+ATresAttractionProjAFSRPaint::ATresAttractionProjAFSRPaint(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_AerialHitEff = NULL;
 }
 

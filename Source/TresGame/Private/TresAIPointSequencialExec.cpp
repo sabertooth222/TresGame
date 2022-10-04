@@ -1,5 +1,5 @@
 #include "TresAIPointSequencialExec.h"
 
-ATresAIPointSequencialExec::ATresAIPointSequencialExec() {
+ATresAIPointSequencialExec::ATresAIPointSequencialExec(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

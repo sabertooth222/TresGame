@@ -21,6 +21,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USceneComponent* MyRoot;
     
-    ATresActor_e_ex773_Point();
+    ATresActor_e_ex773_Point(const FObjectInitializer& ObjectInitializer);
 };
 

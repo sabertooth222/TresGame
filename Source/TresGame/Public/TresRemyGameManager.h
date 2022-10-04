@@ -112,7 +112,7 @@ private:
     ATresUIActor* m_pMenuRemyActor;
     
 public:
-    ATresRemyGameManager();
+    ATresRemyGameManager(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void ShowGetMilestoneRewardUIMsg();
     

@@ -15,6 +15,6 @@ private:
     uint8 m_bEnableHitBird: 1;
     
 public:
-    ATresProjectile_e_ex701_FlameBulletBase();
+    ATresProjectile_e_ex701_FlameBulletBase(const FObjectInitializer& ObjectInitializer);
 };
 

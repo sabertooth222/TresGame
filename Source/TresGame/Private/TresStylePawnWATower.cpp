@@ -1,5 +1,5 @@
 #include "TresStylePawnWATower.h"
 
-ATresStylePawnWATower::ATresStylePawnWATower() {
+ATresStylePawnWATower::ATresStylePawnWATower(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

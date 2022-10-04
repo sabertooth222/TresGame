@@ -22,6 +22,6 @@ protected:
     TSubclassOf<ATresProj_BadStatDischarge> m_GenerateClass;
     
 public:
-    ATresAdhereDischarge();
+    ATresAdhereDischarge(const FObjectInitializer& ObjectInitializer);
 };
 

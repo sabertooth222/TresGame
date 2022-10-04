@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable)
 class ATresGumiShipSpWeapon010Connection : public ATresGumiShipSpWeaponConnection {
     GENERATED_BODY()
 public:
-    ATresGumiShipSpWeapon010Connection();
+    ATresGumiShipSpWeapon010Connection(const FObjectInitializer& ObjectInitializer);
 };
 

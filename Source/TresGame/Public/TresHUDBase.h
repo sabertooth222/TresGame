@@ -28,7 +28,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<AMatineeActor*> m_MatineeActorArray;
     
-    ATresHUDBase();
+    ATresHUDBase(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, Exec)
     void ShowAreaRect(int32 X, int32 Y, int32 Width, int32 Height);
     

@@ -137,7 +137,7 @@ protected:
     TArray<ATresLgRxPawnBase*> m_ReactPawnListLg;
     
 public:
-    ATresLgRxManager();
+    ATresLgRxManager(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void BP_SpawnLgRingEffect();
     

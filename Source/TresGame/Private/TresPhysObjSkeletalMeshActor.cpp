@@ -23,7 +23,7 @@ void ATresPhysObjSkeletalMeshActor::OnMeshComponentSleep(UPrimitiveComponent* Sl
 void ATresPhysObjSkeletalMeshActor::OnActorTakeAnyDamage(AActor* DamagedActor, float Damage, const UDamageType* DamageType, AController* InstigatedBy, AActor* DamageCauser) {
 }
 
-ATresPhysObjSkeletalMeshActor::ATresPhysObjSkeletalMeshActor() {
+ATresPhysObjSkeletalMeshActor::ATresPhysObjSkeletalMeshActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_bDisappearAfterWake = false;
     this->m_bDisappearLeaveInitLoc = false;
     this->m_bDisappearLeaveInitPhysVolume = false;

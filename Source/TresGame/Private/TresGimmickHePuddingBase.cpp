@@ -25,7 +25,7 @@ void ATresGimmickHePuddingBase::BP_AnimPlayAnimAsset(UAnimationAsset* InAsset, F
 void ATresGimmickHePuddingBase::AddScore() {
 }
 
-ATresGimmickHePuddingBase::ATresGimmickHePuddingBase() {
+ATresGimmickHePuddingBase::ATresGimmickHePuddingBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->BodyCollPrimitiveComp = CreateDefaultSubobject<UTresBodyCollPrimitive>(TEXT("BodyCollPrimitive"));
     this->LockonTargetComp = CreateDefaultSubobject<UTresLockonTargetComponent>(TEXT("LockonTargetComp"));
     this->SphereComponent = CreateDefaultSubobject<USphereComponent>(TEXT("SphereComponent"));

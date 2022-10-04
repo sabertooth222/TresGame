@@ -21,6 +21,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fDownDir;
     
-    ATresProjectile_n_he201_Rock();
+    ATresProjectile_n_he201_Rock(const FObjectInitializer& ObjectInitializer);
 };
 

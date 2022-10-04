@@ -28,7 +28,7 @@ void ATresEnemyPawn_e_ex361::BP_FinishDarkAura() {
 void ATresEnemyPawn_e_ex361::BP_EndMasterLight() {
 }
 
-ATresEnemyPawn_e_ex361::ATresEnemyPawn_e_ex361() {
+ATresEnemyPawn_e_ex361::ATresEnemyPawn_e_ex361(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_bAura = false;
     this->m_pro_DarkMineGeneratorClass = NULL;
     this->m_pro_DarkHand_ThunderGeneratorClass = NULL;

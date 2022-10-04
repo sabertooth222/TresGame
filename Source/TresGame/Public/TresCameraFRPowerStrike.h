@@ -50,6 +50,6 @@ protected:
     TSubclassOf<UCameraShake> m_LandingShake;
     
 public:
-    ATresCameraFRPowerStrike();
+    ATresCameraFRPowerStrike(const FObjectInitializer& ObjectInitializer);
 };
 

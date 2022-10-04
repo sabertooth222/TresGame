@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable)
 class ATresGimmickBxCarManagerActor : public ATresGimmickActor {
     GENERATED_BODY()
 public:
-    ATresGimmickBxCarManagerActor();
+    ATresGimmickBxCarManagerActor(const FObjectInitializer& ObjectInitializer);
 };
 

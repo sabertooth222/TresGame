@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresLgRxPawn_e_ex761 : public ATresLgRxPawnBase {
     GENERATED_BODY()
 public:
-    ATresLgRxPawn_e_ex761();
+    ATresLgRxPawn_e_ex761(const FObjectInitializer& ObjectInitializer);
 };
 

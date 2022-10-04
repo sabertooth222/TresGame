@@ -67,7 +67,7 @@ private:
     UTresReactorComponent* m_pReactor;
     
 public:
-    ATresRaSpecialPerformActor();
+    ATresRaSpecialPerformActor(const FObjectInitializer& ObjectInitializer);
 private:
     UFUNCTION()
     void OnReactorCommand(ATresCharPawnBase* CommandCauser, TEnumAsByte<ETresCommandKind> CommandID, UTresReactorComponent* ReactorComponent);

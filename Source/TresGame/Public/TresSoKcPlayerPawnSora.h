@@ -74,7 +74,7 @@ protected:
     float m_fDotRangeWithMovementDirectionForAimInterp;
     
 public:
-    ATresSoKcPlayerPawnSora();
+    ATresSoKcPlayerPawnSora(const FObjectInitializer& ObjectInitializer);
 private:
     UFUNCTION(BlueprintCallable)
     void _SetUserControllPermission(bool bIsUserControllAccept);

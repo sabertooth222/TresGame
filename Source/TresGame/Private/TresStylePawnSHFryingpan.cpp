@@ -1,5 +1,5 @@
 #include "TresStylePawnSHFryingpan.h"
 
-ATresStylePawnSHFryingpan::ATresStylePawnSHFryingpan() {
+ATresStylePawnSHFryingpan::ATresStylePawnSHFryingpan(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

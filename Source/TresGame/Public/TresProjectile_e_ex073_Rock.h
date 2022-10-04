@@ -30,6 +30,6 @@ protected:
     float m_DigUpHomingOwnerFrontDist;
     
 public:
-    ATresProjectile_e_ex073_Rock();
+    ATresProjectile_e_ex073_Rock(const FObjectInitializer& ObjectInitializer);
 };
 

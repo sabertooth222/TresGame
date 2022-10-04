@@ -12,7 +12,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTresStaticMeshComponent* m_PropellerMesh;
     
-    ATresGimmickBxSitugaiki();
+    ATresGimmickBxSitugaiki(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetDisableLaunch(bool DisableLaunch);
     

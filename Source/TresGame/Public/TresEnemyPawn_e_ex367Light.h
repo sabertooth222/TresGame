@@ -25,6 +25,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_AllLightIntensity;
     
-    ATresEnemyPawn_e_ex367Light();
+    ATresEnemyPawn_e_ex367Light(const FObjectInitializer& ObjectInitializer);
 };
 

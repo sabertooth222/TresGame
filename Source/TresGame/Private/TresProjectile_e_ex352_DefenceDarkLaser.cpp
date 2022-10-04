@@ -1,6 +1,6 @@
 #include "TresProjectile_e_ex352_DefenceDarkLaser.h"
 
-ATresProjectile_e_ex352_DefenceDarkLaser::ATresProjectile_e_ex352_DefenceDarkLaser() {
+ATresProjectile_e_ex352_DefenceDarkLaser::ATresProjectile_e_ex352_DefenceDarkLaser(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_LightBulbEffectData = NULL;
     this->m_DarkLaserEffectData = NULL;
     this->m_DarkLaserCoveringEffectData = NULL;

@@ -12,7 +12,7 @@ void ATresGumiShipClusterGenerator::OnOverlapBegin(UPrimitiveComponent* pOverlap
 void ATresGumiShipClusterGenerator::OnHit(UPrimitiveComponent* pHitComponent, AActor* pOtherActor, UPrimitiveComponent* pOtherComp, FVector vNormalImpulse, const FHitResult& rHit) {
 }
 
-ATresGumiShipClusterGenerator::ATresGumiShipClusterGenerator() {
+ATresGumiShipClusterGenerator::ATresGumiShipClusterGenerator(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->GenShape = ETresGumiShipClusterGeneratorShape::BOX;
     this->Hollow = true;
     this->HollowShape = ETresGumiShipClusterGeneratorShape::BOX;

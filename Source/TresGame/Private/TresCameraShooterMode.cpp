@@ -1,5 +1,5 @@
 #include "TresCameraShooterMode.h"
 
-ATresCameraShooterMode::ATresCameraShooterMode() {
+ATresCameraShooterMode::ATresCameraShooterMode(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

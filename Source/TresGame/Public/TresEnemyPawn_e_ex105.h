@@ -35,6 +35,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<USoundBase*> m_SoundData;
     
-    ATresEnemyPawn_e_ex105();
+    ATresEnemyPawn_e_ex105(const FObjectInitializer& ObjectInitializer);
 };
 

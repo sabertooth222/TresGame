@@ -10,7 +10,7 @@ void ATresGimmickRA_Impression_SplashWater::OnReactorCommand(ATresCharPawnBase* 
 void ATresGimmickRA_Impression_SplashWater::ExecSplashWater() {
 }
 
-ATresGimmickRA_Impression_SplashWater::ATresGimmickRA_Impression_SplashWater() {
+ATresGimmickRA_Impression_SplashWater::ATresGimmickRA_Impression_SplashWater(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_pReactor = NULL;
 }
 

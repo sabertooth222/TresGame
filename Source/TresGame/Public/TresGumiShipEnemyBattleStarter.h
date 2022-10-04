@@ -103,7 +103,7 @@ protected:
     bool m_bForbiddenRetryFirstClear;
     
 public:
-    ATresGumiShipEnemyBattleStarter();
+    ATresGumiShipEnemyBattleStarter(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsEnabled() const;
     

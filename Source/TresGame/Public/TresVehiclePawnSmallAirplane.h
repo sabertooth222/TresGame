@@ -65,7 +65,7 @@ private:
     ATresCameraAirplane* m_Camera;
     
 public:
-    ATresVehiclePawnSmallAirplane();
+    ATresVehiclePawnSmallAirplane(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void OnStartBossDefeatEffect();
     

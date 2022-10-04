@@ -17,7 +17,7 @@ protected:
     AActor* m_TargetActor;
     
 public:
-    ATresCameraRc();
+    ATresCameraRc(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetTresCameraRcLookActor(AActor* LookActor);
     

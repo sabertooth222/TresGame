@@ -27,6 +27,6 @@ protected:
     AActor* m_pTargetActor;
     
 public:
-    ATresProj_MagicCure();
+    ATresProj_MagicCure(const FObjectInitializer& ObjectInitializer);
 };
 

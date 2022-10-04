@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresWinniePlayerController : public ATresSharedPlayerController {
     GENERATED_BODY()
 public:
-    ATresWinniePlayerController();
+    ATresWinniePlayerController(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -20,6 +20,6 @@ protected:
     UParticleSystem* m_PCHitEffData;
     
 public:
-    ATresProjectile_e_dw401_DevilMeteor();
+    ATresProjectile_e_dw401_DevilMeteor(const FObjectInitializer& ObjectInitializer);
 };
 

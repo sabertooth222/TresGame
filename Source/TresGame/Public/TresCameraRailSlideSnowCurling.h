@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresCameraRailSlideSnowCurling : public ATresCameraRailSlide {
     GENERATED_BODY()
 public:
-    ATresCameraRailSlideSnowCurling();
+    ATresCameraRailSlideSnowCurling(const FObjectInitializer& ObjectInitializer);
 };
 

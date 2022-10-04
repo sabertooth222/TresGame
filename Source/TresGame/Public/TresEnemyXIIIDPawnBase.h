@@ -21,6 +21,6 @@ protected:
     TWeakObjectPtr<AActor> m_LastDamageCauser;
     
 public:
-    ATresEnemyXIIIDPawnBase();
+    ATresEnemyXIIIDPawnBase(const FObjectInitializer& ObjectInitializer);
 };
 

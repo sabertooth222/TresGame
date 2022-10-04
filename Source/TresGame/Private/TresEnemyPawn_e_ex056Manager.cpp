@@ -26,7 +26,7 @@ int32 ATresEnemyPawn_e_ex056Manager::GetBonusPuddingNum() const {
 void ATresEnemyPawn_e_ex056Manager::AddWave() {
 }
 
-ATresEnemyPawn_e_ex056Manager::ATresEnemyPawn_e_ex056Manager() {
+ATresEnemyPawn_e_ex056Manager::ATresEnemyPawn_e_ex056Manager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_FlyPuddingClass = NULL;
     this->m_BonusPuddingClass = NULL;
     this->m_SpawnWaitTimeMax = 3.00f;

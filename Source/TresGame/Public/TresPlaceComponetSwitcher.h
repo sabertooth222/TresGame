@@ -24,7 +24,7 @@ protected:
     bool bRegisterSelf_;
     
 public:
-    ATresPlaceComponetSwitcher();
+    ATresPlaceComponetSwitcher(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void AddManageComponent(UActorComponent* comp);
     

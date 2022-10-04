@@ -196,7 +196,7 @@ protected:
     FName m_FoodstuffKeyName;
     
 public:
-    ATresGimmickActor();
+    ATresGimmickActor(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetPowerSavingMode(bool mode, UObject* who);
     

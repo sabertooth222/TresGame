@@ -14,6 +14,6 @@ protected:
     USceneComponent* SceneComponent;
     
 public:
-    ATresLinkActor_e_ex202_Base();
+    ATresLinkActor_e_ex202_Base(const FObjectInitializer& ObjectInitializer);
 };
 

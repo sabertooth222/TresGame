@@ -39,7 +39,7 @@ protected:
     UAnimSequence* m_BrokenAnim;
     
 public:
-    ATresGimmickFrogPerformer();
+    ATresGimmickFrogPerformer(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetSpeedRate(float Rate);
     

@@ -136,7 +136,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UTresFieldVoice*> AvalancheVoicesLong_;
     
-    ATresFriendLinkPawnSnowChase();
+    ATresFriendLinkPawnSnowChase(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     void SnowChaseSetCameraAreaBox(AActor* inActor);
     

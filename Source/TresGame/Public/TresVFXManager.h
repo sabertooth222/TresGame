@@ -11,7 +11,7 @@ UCLASS(Blueprintable)
 class ATresVFXManager : public ASQEX_VFXManager {
     GENERATED_BODY()
 public:
-    ATresVFXManager();
+    ATresVFXManager(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     bool IsSepiaMode();
     

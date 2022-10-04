@@ -1,6 +1,6 @@
 #include "TresCameraEx021.h"
 
-ATresCameraEx021::ATresCameraEx021() {
+ATresCameraEx021::ATresCameraEx021(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_AccDistance = 1500.00f;
     this->m_AccDistanceTime = 0.50f;
     this->m_AccEndDistanceTime = 1.00f;

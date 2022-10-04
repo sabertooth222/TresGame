@@ -27,6 +27,6 @@ protected:
     uint8 m_bLandPut: 1;
     
 public:
-    ATresProjectile_n_ex033_LaserRainCore();
+    ATresProjectile_n_ex033_LaserRainCore(const FObjectInitializer& ObjectInitializer);
 };
 

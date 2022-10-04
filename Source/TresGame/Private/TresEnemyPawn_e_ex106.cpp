@@ -22,7 +22,7 @@ void ATresEnemyPawn_e_ex106::BP_CreatePointer() {
 void ATresEnemyPawn_e_ex106::BP_CreateLazerPointer(FName AttachPointName) {
 }
 
-ATresEnemyPawn_e_ex106::ATresEnemyPawn_e_ex106() {
+ATresEnemyPawn_e_ex106::ATresEnemyPawn_e_ex106(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_LazerPointerEff = NULL;
     this->m_PointerEff = NULL;
     this->m_LazerEffData = NULL;

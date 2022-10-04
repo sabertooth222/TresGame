@@ -1,6 +1,6 @@
 #include "TresCameraDebug.h"
 
-ATresCameraDebug::ATresCameraDebug() {
+ATresCameraDebug::ATresCameraDebug(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->DrawFrustum = NULL;
 }
 

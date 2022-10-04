@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresWinniePuzzleFlowerUnit_Anemone : public ATresWinniePuzzleFlowerUnit {
     GENERATED_BODY()
 public:
-    ATresWinniePuzzleFlowerUnit_Anemone();
+    ATresWinniePuzzleFlowerUnit_Anemone(const FObjectInitializer& ObjectInitializer);
 };
 

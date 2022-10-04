@@ -73,7 +73,7 @@ protected:
     TSubclassOf<UTresGumiShipEnemyStateController> m_UseStateControllerClass;
     
 public:
-    ATresGumiShipEnemyPawnBase();
+    ATresGumiShipEnemyPawnBase(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void TurnToTarget(const AActor* TargetActor, float LimitTurnDegrees, bool ApplyImmediately);
     

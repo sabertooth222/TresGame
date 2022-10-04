@@ -1,5 +1,5 @@
 #include "TresTransientActor.h"
 
-ATresTransientActor::ATresTransientActor() {
+ATresTransientActor::ATresTransientActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

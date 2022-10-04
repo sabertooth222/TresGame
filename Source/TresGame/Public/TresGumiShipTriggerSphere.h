@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresGumiShipTriggerSphere : public ATriggerSphere {
     GENERATED_BODY()
 public:
-    ATresGumiShipTriggerSphere();
+    ATresGumiShipTriggerSphere(const FObjectInitializer& ObjectInitializer);
 };
 

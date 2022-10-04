@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresGumiShipActualRailSlideArrangement : public ATresGumiShipRailSlideBattleArrangement {
     GENERATED_BODY()
 public:
-    ATresGumiShipActualRailSlideArrangement();
+    ATresGumiShipActualRailSlideArrangement(const FObjectInitializer& ObjectInitializer);
 };
 

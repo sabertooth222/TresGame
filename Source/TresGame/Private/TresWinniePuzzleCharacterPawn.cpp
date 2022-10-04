@@ -1,5 +1,5 @@
 #include "TresWinniePuzzleCharacterPawn.h"
 
-ATresWinniePuzzleCharacterPawn::ATresWinniePuzzleCharacterPawn() {
+ATresWinniePuzzleCharacterPawn::ATresWinniePuzzleCharacterPawn(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

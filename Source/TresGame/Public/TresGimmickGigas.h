@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable, Config=Game)
 class ATresGimmickGigas : public ATresGimmickSkeletalBase {
     GENERATED_BODY()
 public:
-    ATresGimmickGigas();
+    ATresGimmickGigas(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -14,6 +14,6 @@ protected:
     UParticleSystem* m_DamageDestroyParticle;
     
 public:
-    ATresProjectile_e_ex021a_ShotgunFire();
+    ATresProjectile_e_ex021a_ShotgunFire(const FObjectInitializer& ObjectInitializer);
 };
 

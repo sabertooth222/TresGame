@@ -1,5 +1,5 @@
 #include "TresGameModeStandardPlayer.h"
 
-ATresGameModeStandardPlayer::ATresGameModeStandardPlayer() {
+ATresGameModeStandardPlayer::ATresGameModeStandardPlayer(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

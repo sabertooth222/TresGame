@@ -58,7 +58,7 @@ protected:
     float m_SuicideTime;
     
 public:
-    ATresEnemyLargeShipPawnBase();
+    ATresEnemyLargeShipPawnBase(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool TestBGOverlap(const FRotator& Rotation) const;
     

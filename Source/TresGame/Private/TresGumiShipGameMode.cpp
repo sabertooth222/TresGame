@@ -48,7 +48,7 @@ ATresGumiShipBattleVolume* ATresGumiShipGameMode::GetActiveBattleVolume() const 
 void ATresGumiShipGameMode::_OnOverlapedGuideVolume() {
 }
 
-ATresGumiShipGameMode::ATresGumiShipGameMode() {
+ATresGumiShipGameMode::ATresGumiShipGameMode(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_pFieldBGM = NULL;
     this->m_pNormalBattleBGM = NULL;
     this->m_pBossBattleBGM = NULL;

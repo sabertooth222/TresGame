@@ -2,7 +2,7 @@
 #include "TresWinniePuzzleHoneypotController.h"
 #include "TresWinniePuzzlePoohController.h"
 
-ATresWinniePuzzleFlower::ATresWinniePuzzleFlower() {
+ATresWinniePuzzleFlower::ATresWinniePuzzleFlower(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->RabbitPawn = NULL;
     this->PoohPawn = NULL;
     this->GopherPawn = NULL;

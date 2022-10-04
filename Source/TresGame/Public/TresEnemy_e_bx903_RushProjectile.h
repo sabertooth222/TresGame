@@ -10,6 +10,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_ImpactedEndTime;
     
-    ATresEnemy_e_bx903_RushProjectile();
+    ATresEnemy_e_bx903_RushProjectile(const FObjectInitializer& ObjectInitializer);
 };
 

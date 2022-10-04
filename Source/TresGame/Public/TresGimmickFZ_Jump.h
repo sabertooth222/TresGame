@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresGimmickFZ_Jump : public ATresGimmickLauncher {
     GENERATED_BODY()
 public:
-    ATresGimmickFZ_Jump();
+    ATresGimmickFZ_Jump(const FObjectInitializer& ObjectInitializer);
 };
 

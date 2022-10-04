@@ -135,7 +135,7 @@ void ATresGimmickActor::BP_ActivateGimmickComponentAll() {
 void ATresGimmickActor::BP_ActivateGimmick() {
 }
 
-ATresGimmickActor::ATresGimmickActor() {
+ATresGimmickActor::ATresGimmickActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_bAutoActivate = true;
     this->m_bGimmickComponentAutoLinkActivate = true;
     this->m_bIsActive = true;

@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresWeaponKeybladeBase : public ATresWeaponBase {
     GENERATED_BODY()
 public:
-    ATresWeaponKeybladeBase();
+    ATresWeaponKeybladeBase(const FObjectInitializer& ObjectInitializer);
 };
 

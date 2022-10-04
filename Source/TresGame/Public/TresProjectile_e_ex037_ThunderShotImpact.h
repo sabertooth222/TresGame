@@ -16,6 +16,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_ImpactEffData;
     
-    ATresProjectile_e_ex037_ThunderShotImpact();
+    ATresProjectile_e_ex037_ThunderShotImpact(const FObjectInitializer& ObjectInitializer);
 };
 

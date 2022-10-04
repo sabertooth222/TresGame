@@ -12,6 +12,6 @@ ATresCameraRotTargetLT* ATresCameraRotTargetLT::BP_SpawnTresCameraRotTargetLT(UO
 void ATresCameraRotTargetLT::BP_SetTresCameraLookOnlyTargetParam(AActor* LookTarget, FVector TargetOffset, FVector TargetLocalOffset, FName TargetBoneName) {
 }
 
-ATresCameraRotTargetLT::ATresCameraRotTargetLT() {
+ATresCameraRotTargetLT::ATresCameraRotTargetLT(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

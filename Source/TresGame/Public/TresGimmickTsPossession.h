@@ -7,6 +7,6 @@ UCLASS(Blueprintable, Config=Game)
 class ATresGimmickTsPossession : public ATresGimmickSkeletalBase {
     GENERATED_BODY()
 public:
-    ATresGimmickTsPossession();
+    ATresGimmickTsPossession(const FObjectInitializer& ObjectInitializer);
 };
 

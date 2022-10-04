@@ -19,7 +19,7 @@ protected:
     TEnumAsByte<ETresEnemyToyKind> m_ToyKind;
     
 public:
-    ATresEnemyToyActor();
+    ATresEnemyToyActor(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool CanUse() const;
     

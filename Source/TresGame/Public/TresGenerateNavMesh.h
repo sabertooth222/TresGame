@@ -14,6 +14,6 @@ private:
     UBoxComponent* m_BoxComponent;
     
 public:
-    ATresGenerateNavMesh();
+    ATresGenerateNavMesh(const FObjectInitializer& ObjectInitializer);
 };
 

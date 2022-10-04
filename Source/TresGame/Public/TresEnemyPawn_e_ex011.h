@@ -105,7 +105,7 @@ protected:
     float m_RepelSpeed;
     
 public:
-    ATresEnemyPawn_e_ex011();
+    ATresEnemyPawn_e_ex011(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void ResetCarriageStartState();
     

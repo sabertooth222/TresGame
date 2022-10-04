@@ -7,6 +7,6 @@ UCLASS(Blueprintable, NotPlaceable, Transient)
 class ATresEmitterPoolChild : public AActor {
     GENERATED_BODY()
 public:
-    ATresEmitterPoolChild();
+    ATresEmitterPoolChild(const FObjectInitializer& ObjectInitializer);
 };
 

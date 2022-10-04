@@ -8,7 +8,7 @@ UCLASS(Blueprintable)
 class ATresGumiShipExternalEnemyGenerator : public ATresGumiShipEnemyGenerator {
     GENERATED_BODY()
 public:
-    ATresGumiShipExternalEnemyGenerator();
+    ATresGumiShipExternalEnemyGenerator(const FObjectInitializer& ObjectInitializer);
 protected:
     UFUNCTION(BlueprintCallable)
     void _OnGeneratedEnemyGroupWipeOut(const FTresGumiShipEnemyGroupWipeOutData& rEnemyGroupWipeOutData);

@@ -21,7 +21,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UClass*> BreakClasses;
     
-    ATresGimmickBxDaruma();
+    ATresGimmickBxDaruma(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool CheckBreakClass(AActor* Actor) const;
     

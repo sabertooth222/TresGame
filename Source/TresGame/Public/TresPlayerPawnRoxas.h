@@ -22,6 +22,6 @@ public:
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresOnDamage OnDamageEvent;
     
-    ATresPlayerPawnRoxas();
+    ATresPlayerPawnRoxas(const FObjectInitializer& ObjectInitializer);
 };
 

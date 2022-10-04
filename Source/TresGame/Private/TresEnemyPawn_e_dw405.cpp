@@ -36,7 +36,7 @@ void ATresEnemyPawn_e_dw405::BP_DebugDisAppear() {
 void ATresEnemyPawn_e_dw405::BP_DebugAppear() {
 }
 
-ATresEnemyPawn_e_dw405::ATresEnemyPawn_e_dw405() {
+ATresEnemyPawn_e_dw405::ATresEnemyPawn_e_dw405(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_BattleCount = TRES_ENEMY_DW405_BATTLECOUNT_ONE;
     this->m_bEnableStartDisappear = true;
     this->m_EffectDataAsset = NULL;

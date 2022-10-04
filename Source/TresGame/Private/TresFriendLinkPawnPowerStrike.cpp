@@ -1,6 +1,6 @@
 #include "TresFriendLinkPawnPowerStrike.h"
 
-ATresFriendLinkPawnPowerStrike::ATresFriendLinkPawnPowerStrike() {
+ATresFriendLinkPawnPowerStrike::ATresFriendLinkPawnPowerStrike(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_SwingSpeed = -1260.00f;
     this->m_SwingUpSpeed = -1800.00f;
     this->m_SwingDownSpeed = 50.00f;

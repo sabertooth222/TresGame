@@ -1,6 +1,6 @@
 #include "TresPlayerPawnRoxas.h"
 
-ATresPlayerPawnRoxas::ATresPlayerPawnRoxas() {
+ATresPlayerPawnRoxas::ATresPlayerPawnRoxas(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_ParticleSystem = NULL;
 }
 

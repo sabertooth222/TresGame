@@ -15,7 +15,7 @@ void ATresGimmickFrogPerformer::SetBroken(bool _Broken) {
 void ATresGimmickFrogPerformer::ChangeSpeedRate_Implementation(float Rate) {
 }
 
-ATresGimmickFrogPerformer::ATresGimmickFrogPerformer() {
+ATresGimmickFrogPerformer::ATresGimmickFrogPerformer(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MyMesh = CreateDefaultSubobject<UTresSkeletalMeshComponent>(TEXT("TresGimmickMesh0"));
     this->Broken = false;
     this->PlaySound = NULL;

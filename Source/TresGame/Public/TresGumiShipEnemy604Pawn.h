@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable)
 class ATresGumiShipEnemy604Pawn : public ATresGumiShipEnemy605Pawn {
     GENERATED_BODY()
 public:
-    ATresGumiShipEnemy604Pawn();
+    ATresGumiShipEnemy604Pawn(const FObjectInitializer& ObjectInitializer);
 };
 

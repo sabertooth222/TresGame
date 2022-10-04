@@ -21,6 +21,6 @@ protected:
     ATresWeaponBase* m_pWeaponClaymore;
     
 public:
-    ATresEnemyPawn_e_ex310();
+    ATresEnemyPawn_e_ex310(const FObjectInitializer& ObjectInitializer);
 };
 

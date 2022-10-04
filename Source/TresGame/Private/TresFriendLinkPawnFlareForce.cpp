@@ -1,6 +1,6 @@
 #include "TresFriendLinkPawnFlareForce.h"
 
-ATresFriendLinkPawnFlareForce::ATresFriendLinkPawnFlareForce() {
+ATresFriendLinkPawnFlareForce::ATresFriendLinkPawnFlareForce(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_bUseHopeRange = true;
     this->m_fFinishHopeRange = 1500.00f;
     this->m_nLockOnMaxNum = 4;

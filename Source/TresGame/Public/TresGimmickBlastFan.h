@@ -29,7 +29,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 FanModeMax;
     
-    ATresGimmickBlastFan();
+    ATresGimmickBlastFan(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void UpdateFanMode(int32 FanMode);
     

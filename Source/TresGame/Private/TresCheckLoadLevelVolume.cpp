@@ -6,6 +6,6 @@ void ATresCheckLoadLevelVolume::SelectLevelFromList() {
 void ATresCheckLoadLevelVolume::AutoSetFromSelect() {
 }
 
-ATresCheckLoadLevelVolume::ATresCheckLoadLevelVolume() {
+ATresCheckLoadLevelVolume::ATresCheckLoadLevelVolume(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

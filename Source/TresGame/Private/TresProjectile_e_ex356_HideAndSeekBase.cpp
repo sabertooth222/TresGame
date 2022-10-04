@@ -1,7 +1,7 @@
 #include "TresProjectile_e_ex356_HideAndSeekBase.h"
 #include "TresSceneComponent_e_ex356_HideAndSeekSpawn.h"
 
-ATresProjectile_e_ex356_HideAndSeekBase::ATresProjectile_e_ex356_HideAndSeekBase() {
+ATresProjectile_e_ex356_HideAndSeekBase::ATresProjectile_e_ex356_HideAndSeekBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MyHideAndSeekSpawnComponent = CreateDefaultSubobject<UTresSceneComponent_e_ex356_HideAndSeekSpawn>(TEXT("MyHideAndSeekSpawn"));
     this->m_GimmickCardAnimInterpTime = 0.20f;
     this->m_bEnableGimmickCardAnimBrake = false;

@@ -18,6 +18,6 @@ protected:
     int32 m_ReserveSize;
     
 public:
-    ATresGimmickCA_TickControlManager();
+    ATresGimmickCA_TickControlManager(const FObjectInitializer& ObjectInitializer);
 };
 

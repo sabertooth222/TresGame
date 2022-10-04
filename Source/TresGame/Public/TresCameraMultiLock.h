@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresCameraMultiLock : public ATresCameraNormal {
     GENERATED_BODY()
 public:
-    ATresCameraMultiLock();
+    ATresCameraMultiLock(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -19,7 +19,7 @@ private:
     UTresChrBaseParam* m_pBaseParam;
     
 public:
-    ATresFzGimmickAttacker();
+    ATresFzGimmickAttacker(const FObjectInitializer& ObjectInitializer);
     
     // Fix for true pure virtual functions not being implemented
 };

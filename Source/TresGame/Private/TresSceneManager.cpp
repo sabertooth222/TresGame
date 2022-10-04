@@ -157,7 +157,7 @@ bool ATresSceneManager::AddSnowRenderDepthPrimitive(UPrimitiveComponent* inPrimi
     return false;
 }
 
-ATresSceneManager::ATresSceneManager() {
+ATresSceneManager::ATresSceneManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_MPCSysCommon = NULL;
 }
 

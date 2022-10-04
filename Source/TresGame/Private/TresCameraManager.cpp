@@ -127,7 +127,7 @@ void ATresCameraManager::BP_EnableCameraDamageBeatDirection(bool bEnable) {
 void ATresCameraManager::BP_CancelCameraInterpolation() {
 }
 
-ATresCameraManager::ATresCameraManager() {
+ATresCameraManager::ATresCameraManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_PlayerController = NULL;
     this->m_LockonCamera = NULL;
     this->m_LockonTarget = NULL;

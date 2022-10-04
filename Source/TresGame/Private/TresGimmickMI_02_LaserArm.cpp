@@ -22,7 +22,7 @@ float ATresGimmickMI_02_LaserArm::BP_GetArmRotationValue() const {
     return 0.0f;
 }
 
-ATresGimmickMI_02_LaserArm::ATresGimmickMI_02_LaserArm() {
+ATresGimmickMI_02_LaserArm::ATresGimmickMI_02_LaserArm(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_EffectLaserComponent = NULL;
     this->m_EffectLaserChargeComponent = NULL;
     this->m_EffectLaserHitComponent = NULL;

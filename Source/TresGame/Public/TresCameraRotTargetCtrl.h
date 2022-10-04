@@ -26,7 +26,7 @@ protected:
     float m_LimitYawMax;
     
 public:
-    ATresCameraRotTargetCtrl();
+    ATresCameraRotTargetCtrl(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     static ATresCameraRotTargetCtrl* BP_SpawnTresCameraRotTargetCtrl(UObject* WorldContextObject, TSubclassOf<ATresCameraRotTargetCtrl> CameraClass, const FName CameraName);
     

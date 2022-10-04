@@ -17,6 +17,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_ScaleSpeedZ;
     
-    ATresEnemy_e_ex367_TailPillarProjectileBase();
+    ATresEnemy_e_ex367_TailPillarProjectileBase(const FObjectInitializer& ObjectInitializer);
 };
 

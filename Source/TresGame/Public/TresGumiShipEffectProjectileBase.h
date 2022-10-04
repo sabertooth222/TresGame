@@ -14,6 +14,6 @@ protected:
     UParticleSystem* m_pAttachEffectType;
     
 public:
-    ATresGumiShipEffectProjectileBase();
+    ATresGumiShipEffectProjectileBase(const FObjectInitializer& ObjectInitializer);
 };
 

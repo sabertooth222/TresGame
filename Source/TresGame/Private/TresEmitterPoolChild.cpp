@@ -1,5 +1,5 @@
 #include "TresEmitterPoolChild.h"
 
-ATresEmitterPoolChild::ATresEmitterPoolChild() {
+ATresEmitterPoolChild::ATresEmitterPoolChild(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

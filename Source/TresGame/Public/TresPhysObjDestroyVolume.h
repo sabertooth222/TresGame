@@ -13,6 +13,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FName> m_DisappearActorTags;
     
-    ATresPhysObjDestroyVolume();
+    ATresPhysObjDestroyVolume(const FObjectInitializer& ObjectInitializer);
 };
 

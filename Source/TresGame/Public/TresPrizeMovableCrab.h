@@ -16,6 +16,6 @@ protected:
     FMovableCrabParam m_Parameter;
     
 public:
-    ATresPrizeMovableCrab();
+    ATresPrizeMovableCrab(const FObjectInitializer& ObjectInitializer);
 };
 

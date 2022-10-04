@@ -16,6 +16,6 @@ protected:
     int32 m_PointNo;
     
 public:
-    ATresActor_e_ex771_Point();
+    ATresActor_e_ex771_Point(const FObjectInitializer& ObjectInitializer);
 };
 

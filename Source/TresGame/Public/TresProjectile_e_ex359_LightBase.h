@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable)
 class ATresProjectile_e_ex359_LightBase : public ATresProjectileBase {
     GENERATED_BODY()
 public:
-    ATresProjectile_e_ex359_LightBase();
+    ATresProjectile_e_ex359_LightBase(const FObjectInitializer& ObjectInitializer);
 };
 

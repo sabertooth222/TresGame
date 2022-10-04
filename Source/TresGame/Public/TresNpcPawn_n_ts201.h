@@ -8,7 +8,7 @@ UCLASS(Blueprintable)
 class ATresNpcPawn_n_ts201 : public ATresNpcPawnBase {
     GENERATED_BODY()
 public:
-    ATresNpcPawn_n_ts201();
+    ATresNpcPawn_n_ts201(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetAimOffsetAlpha() const;
     

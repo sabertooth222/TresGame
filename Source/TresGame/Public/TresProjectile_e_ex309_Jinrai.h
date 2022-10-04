@@ -15,6 +15,6 @@ private:
     FName m_LastAttackIDName;
     
 public:
-    ATresProjectile_e_ex309_Jinrai();
+    ATresProjectile_e_ex309_Jinrai(const FObjectInitializer& ObjectInitializer);
 };
 

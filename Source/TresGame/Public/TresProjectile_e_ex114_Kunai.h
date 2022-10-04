@@ -7,6 +7,6 @@ UCLASS(Blueprintable, HideDropdown)
 class ATresProjectile_e_ex114_Kunai : public ATresProjectileBase {
     GENERATED_BODY()
 public:
-    ATresProjectile_e_ex114_Kunai();
+    ATresProjectile_e_ex114_Kunai(const FObjectInitializer& ObjectInitializer);
 };
 

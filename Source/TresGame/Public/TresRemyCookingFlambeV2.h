@@ -41,7 +41,7 @@ private:
     ATresRemyPawnBase* m_pFoodPawn;
     
 public:
-    ATresRemyCookingFlambeV2();
+    ATresRemyCookingFlambeV2(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void PushState(TEnumAsByte<RemyCookingGameState> State);
     

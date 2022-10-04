@@ -84,7 +84,7 @@ void ATresGumiShipCharaPawnBase::_OnHitComponent(UPrimitiveComponent* pHitCompon
 void ATresGumiShipCharaPawnBase::_OnBeginOverlapComponent(UPrimitiveComponent* pOverlappedComponent, AActor* pOtherActor, UPrimitiveComponent* pOtherComp, int32 dOtherBodyIndex, bool bFromSweep, const FHitResult& rSweepResult) {
 }
 
-ATresGumiShipCharaPawnBase::ATresGumiShipCharaPawnBase() {
+ATresGumiShipCharaPawnBase::ATresGumiShipCharaPawnBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_pCameraBasePoint = CreateDefaultSubobject<USceneComponent>(TEXT("CameraBasePoint"));
     this->m_pMeshBasePoint = CreateDefaultSubobject<USceneComponent>(TEXT("MeshBasePoint"));
     this->m_pSkeletalMesh = CreateDefaultSubobject<UTresSkeletalMeshComponent>(TEXT("SkeletalMesh"));

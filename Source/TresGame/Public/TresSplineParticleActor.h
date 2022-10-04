@@ -24,6 +24,6 @@ protected:
     USplineComponent* m_SplineComponent;
     
 public:
-    ATresSplineParticleActor();
+    ATresSplineParticleActor(const FObjectInitializer& ObjectInitializer);
 };
 

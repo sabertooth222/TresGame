@@ -14,6 +14,6 @@ protected:
     UParticleSystem* m_HitTailEffect;
     
 public:
-    ATresProj_MagicThunder();
+    ATresProj_MagicThunder(const FObjectInitializer& ObjectInitializer);
 };
 

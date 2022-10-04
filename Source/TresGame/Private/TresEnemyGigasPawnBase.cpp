@@ -67,7 +67,7 @@ bool ATresEnemyGigasPawnBase::CanbeUltimaMode() {
     return false;
 }
 
-ATresEnemyGigasPawnBase::ATresEnemyGigasPawnBase() {
+ATresEnemyGigasPawnBase::ATresEnemyGigasPawnBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_VehiclePawnGigasClass = NULL;
     this->m_e_ex015Class = NULL;
     this->m_pro_DisableGigasPC = false;

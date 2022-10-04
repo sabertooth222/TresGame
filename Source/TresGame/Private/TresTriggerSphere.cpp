@@ -1,5 +1,5 @@
 #include "TresTriggerSphere.h"
 
-ATresTriggerSphere::ATresTriggerSphere() {
+ATresTriggerSphere::ATresTriggerSphere(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

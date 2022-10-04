@@ -16,6 +16,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector m_vWeaponGroundHitEffectOffset;
     
-    ATresProjectile_e_ex355_Claymore_SwingBB();
+    ATresProjectile_e_ex355_Claymore_SwingBB(const FObjectInitializer& ObjectInitializer);
 };
 

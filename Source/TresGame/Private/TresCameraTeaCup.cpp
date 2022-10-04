@@ -1,6 +1,6 @@
 #include "TresCameraTeaCup.h"
 
-ATresCameraTeaCup::ATresCameraTeaCup() {
+ATresCameraTeaCup::ATresCameraTeaCup(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_LerpTimeLow = 1.00f;
     this->m_RotYawSpeedLow = -90.00f;
     this->m_DistanceLow = 900.00f;

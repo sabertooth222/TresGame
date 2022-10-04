@@ -8,6 +8,6 @@ ATresCameraFix* ATresCameraFix::BP_SpawnTresCameraFix(UObject* WorldContextObjec
     return NULL;
 }
 
-ATresCameraFix::ATresCameraFix() {
+ATresCameraFix::ATresCameraFix(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

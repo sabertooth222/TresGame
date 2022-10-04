@@ -1,5 +1,5 @@
 #include "TresCameraSpecialShipDive.h"
 
-ATresCameraSpecialShipDive::ATresCameraSpecialShipDive() {
+ATresCameraSpecialShipDive::ATresCameraSpecialShipDive(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

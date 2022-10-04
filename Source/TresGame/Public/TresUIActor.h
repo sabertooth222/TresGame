@@ -36,7 +36,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 effectGroupID;
     
-    ATresUIActor();
+    ATresUIActor(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetLinkMeshComponent(UTresSkeletalMeshComponent* LinkMeshComponent);
     

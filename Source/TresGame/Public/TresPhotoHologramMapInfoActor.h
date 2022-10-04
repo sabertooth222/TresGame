@@ -56,6 +56,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float HologramCameraPitchMin;
     
-    ATresPhotoHologramMapInfoActor();
+    ATresPhotoHologramMapInfoActor(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -7,6 +7,6 @@ UCLASS(Blueprintable, HideDropdown)
 class ATresProjectile_e_ex360_ShotKeyBlade : public ATresProjectileBase {
     GENERATED_BODY()
 public:
-    ATresProjectile_e_ex360_ShotKeyBlade();
+    ATresProjectile_e_ex360_ShotKeyBlade(const FObjectInitializer& ObjectInitializer);
 };
 

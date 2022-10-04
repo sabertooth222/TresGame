@@ -15,6 +15,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fDisappearTime;
     
-    ATresProjectile_e_ex359_KeyBlade();
+    ATresProjectile_e_ex359_KeyBlade(const FObjectInitializer& ObjectInitializer);
 };
 

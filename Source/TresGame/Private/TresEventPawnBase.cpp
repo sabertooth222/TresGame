@@ -11,7 +11,7 @@ void ATresEventPawnBase::BP_CopyPropertyFrom(ATresCharPawnBase* InSrcPawn, bool 
 void ATresEventPawnBase::BP_ApplyChrEquipment(ETresChrUniqueID InChrUniqueID) {
 }
 
-ATresEventPawnBase::ATresEventPawnBase() {
+ATresEventPawnBase::ATresEventPawnBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_bAutoChangeSkeletonUpdate = false;
 }
 

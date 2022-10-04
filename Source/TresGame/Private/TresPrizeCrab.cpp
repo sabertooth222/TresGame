@@ -1,7 +1,7 @@
 #include "TresPrizeCrab.h"
 #include "TresStaticMeshComponent.h"
 
-ATresPrizeCrab::ATresPrizeCrab() {
+ATresPrizeCrab::ATresPrizeCrab(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MyMesh = CreateDefaultSubobject<UTresStaticMeshComponent>(TEXT("TresPrizeCrab_StaticMesh"));
     this->m_GetTime = 0.67f;
     this->m_MinScaleOnGet = 0.30f;

@@ -28,7 +28,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresPatternActor_e_dw407b_Manager* m_PatternData;
     
-    ATresEnemyPawn_e_dw407b();
+    ATresEnemyPawn_e_dw407b(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void NotifyBattleStart();
     

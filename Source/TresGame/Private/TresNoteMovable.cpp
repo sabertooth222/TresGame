@@ -1,5 +1,5 @@
 #include "TresNoteMovable.h"
 
-ATresNoteMovable::ATresNoteMovable() {
+ATresNoteMovable::ATresNoteMovable(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

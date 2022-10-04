@@ -12,7 +12,7 @@ ATresCameraDivingDstTgt* ATresCameraDivingDstTgt::BP_SpawnTresCameraDivingDstTgt
 void ATresCameraDivingDstTgt::BP_SetTresCameraDistanceTarget(AActor* DistanceTarget) {
 }
 
-ATresCameraDivingDstTgt::ATresCameraDivingDstTgt() {
+ATresCameraDivingDstTgt::ATresCameraDivingDstTgt(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_NearTargetDistance = 1000.00f;
     this->m_NearCamDistance = 1000.00f;
     this->m_FarTargetDistance = 4000.00f;

@@ -1,5 +1,5 @@
 #include "TresInstanceActorMapObj.h"
 
-ATresInstanceActorMapObj::ATresInstanceActorMapObj() {
+ATresInstanceActorMapObj::ATresInstanceActorMapObj(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

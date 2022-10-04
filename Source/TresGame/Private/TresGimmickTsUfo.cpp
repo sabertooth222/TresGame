@@ -26,7 +26,7 @@ bool ATresGimmickTsUfo::GetReverse() const {
 }
 
 
-ATresGimmickTsUfo::ATresGimmickTsUfo() {
+ATresGimmickTsUfo::ATresGimmickTsUfo(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->BodyCollComponent = CreateDefaultSubobject<UTresBodyCollComponent>(TEXT("BodyCollComponent"));
     this->SplineMoverComponent = CreateDefaultSubobject<UTresSplineMoverComponent>(TEXT("SplineMoverComponent"));
     this->ConditionCanMoveRate = 0.50f;

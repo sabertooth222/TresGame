@@ -14,7 +14,7 @@ protected:
     UCapsuleComponent* MyBlowOffWindComponent;
     
 public:
-    ATresEnemyAirdroidPawnBase();
+    ATresEnemyAirdroidPawnBase(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetFanRotation() const;
     

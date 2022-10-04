@@ -33,7 +33,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRotator m_RotMin;
     
-    ATresCameraPathRouteActor();
+    ATresCameraPathRouteActor(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void EnableCameraPathRoute(bool bEnable, int32 Priority);
     

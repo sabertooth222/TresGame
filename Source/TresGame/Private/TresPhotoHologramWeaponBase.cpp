@@ -6,6 +6,6 @@ void ATresPhotoHologramWeaponBase::BP_NotifyStartChangeAttachParent(const FName 
 void ATresPhotoHologramWeaponBase::BP_NotifyEndChangeAttachParent() {
 }
 
-ATresPhotoHologramWeaponBase::ATresPhotoHologramWeaponBase() {
+ATresPhotoHologramWeaponBase::ATresPhotoHologramWeaponBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable)
 class ATresProjectile_e_ex773_DebrisBlow : public ATresProjectileBase {
     GENERATED_BODY()
 public:
-    ATresProjectile_e_ex773_DebrisBlow();
+    ATresProjectile_e_ex773_DebrisBlow(const FObjectInitializer& ObjectInitializer);
 };
 

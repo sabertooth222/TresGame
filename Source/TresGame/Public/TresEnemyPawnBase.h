@@ -96,7 +96,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_WallHitIgnorePhysicsObjectMass;
     
-    ATresEnemyPawnBase();
+    ATresEnemyPawnBase(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetStuckCheck(bool bEnable);
     

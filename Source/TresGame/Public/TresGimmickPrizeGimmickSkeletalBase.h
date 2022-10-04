@@ -14,7 +14,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_IsGimmickClipDitherParamInvert;
     
-    ATresGimmickPrizeGimmickSkeletalBase();
+    ATresGimmickPrizeGimmickSkeletalBase(const FObjectInitializer& ObjectInitializer);
     
     // Fix for true pure virtual functions not being implemented
 };

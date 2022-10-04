@@ -1,5 +1,5 @@
 #include "TresGameStateGumiShip.h"
 
-ATresGameStateGumiShip::ATresGameStateGumiShip() {
+ATresGameStateGumiShip::ATresGameStateGumiShip(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

@@ -1,6 +1,6 @@
 #include "TresProjectile_e_ex801_HeatBreath.h"
 
-ATresProjectile_e_ex801_HeatBreath::ATresProjectile_e_ex801_HeatBreath() {
+ATresProjectile_e_ex801_HeatBreath::ATresProjectile_e_ex801_HeatBreath(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_MapHitEffect = NULL;
     this->m_SplineParticleActorClass = NULL;
     this->m_ExtendSpeed = 0.00f;

@@ -12,7 +12,7 @@ protected:
     float m_Distance;
     
 public:
-    ATresCameraDistanceTarget();
+    ATresCameraDistanceTarget(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetDistance(float Distance, float Time);
     

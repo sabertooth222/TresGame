@@ -77,7 +77,7 @@ bool ATresGumiShipEnemy626Pawn::_CallEyeMuzzleEffect(GUMI_SHIP_ENEMY_GM626_EYEMU
     return false;
 }
 
-ATresGumiShipEnemy626Pawn::ATresGumiShipEnemy626Pawn() {
+ATresGumiShipEnemy626Pawn::ATresGumiShipEnemy626Pawn(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_pExplosionVFX = NULL;
     this->m_pSmokeVFX = NULL;
     this->m_pSparkVFX = NULL;

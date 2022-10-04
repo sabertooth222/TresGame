@@ -18,6 +18,6 @@ protected:
     UParticleSystem* m_pro_FireOmenEffData;
     
 public:
-    ATresProjectileGenerator_e_ex771_FlareShotHvn();
+    ATresProjectileGenerator_e_ex771_FlareShotHvn(const FObjectInitializer& ObjectInitializer);
 };
 

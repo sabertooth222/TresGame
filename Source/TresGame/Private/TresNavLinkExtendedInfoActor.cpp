@@ -1,6 +1,6 @@
 #include "TresNavLinkExtendedInfoActor.h"
 
-ATresNavLinkExtendedInfoActor::ATresNavLinkExtendedInfoActor() {
+ATresNavLinkExtendedInfoActor::ATresNavLinkExtendedInfoActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->Version = 65536;
 }
 

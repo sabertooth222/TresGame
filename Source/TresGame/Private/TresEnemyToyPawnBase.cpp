@@ -3,7 +3,7 @@
 void ATresEnemyToyPawnBase::EndToyWaitMode() {
 }
 
-ATresEnemyToyPawnBase::ATresEnemyToyPawnBase() {
+ATresEnemyToyPawnBase::ATresEnemyToyPawnBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_ToyKind = TRES_ENEMY_TOY_KIND_UNKNOWN;
     this->m_bIsEnableStartPossessionMaterial = false;
     this->m_PossessionEffect = NULL;

@@ -19,7 +19,7 @@ protected:
     ATresCameraDebug* m_pCameraDebug;
     
 public:
-    ATresPlayerControllerLowerBase();
+    ATresPlayerControllerLowerBase(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, Exec)
     void ToggleTresCameraDebugStop();
     
