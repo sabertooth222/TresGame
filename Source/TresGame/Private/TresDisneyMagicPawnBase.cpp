@@ -1,5 +1,5 @@
 #include "TresDisneyMagicPawnBase.h"
 
-ATresDisneyMagicPawnBase::ATresDisneyMagicPawnBase() {
+ATresDisneyMagicPawnBase::ATresDisneyMagicPawnBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

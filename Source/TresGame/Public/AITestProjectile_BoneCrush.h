@@ -15,6 +15,6 @@ protected:
     float m_fFollowsVelRate;
     
 public:
-    AAITestProjectile_BoneCrush();
+    AAITestProjectile_BoneCrush(const FObjectInitializer& ObjectInitializer);
 };
 

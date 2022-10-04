@@ -15,6 +15,6 @@ protected:
     float m_MaxDeceleration;
     
 public:
-    ATresGumiShipEnemy625Bullet();
+    ATresGumiShipEnemy625Bullet(const FObjectInitializer& ObjectInitializer);
 };
 

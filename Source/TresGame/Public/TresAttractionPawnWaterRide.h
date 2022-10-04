@@ -111,7 +111,7 @@ private:
     USQEXSEADZeroOneSeComponent* m_LoopSE;
     
 public:
-    ATresAttractionPawnWaterRide();
+    ATresAttractionPawnWaterRide(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     bool IsFinishSlideBlockCollision(float InForwardDistance, float InRadius);
     

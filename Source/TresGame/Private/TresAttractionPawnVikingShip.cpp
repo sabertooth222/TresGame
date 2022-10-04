@@ -1,6 +1,6 @@
 #include "TresAttractionPawnVikingShip.h"
 
-ATresAttractionPawnVikingShip::ATresAttractionPawnVikingShip() {
+ATresAttractionPawnVikingShip::ATresAttractionPawnVikingShip(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_bEnableDecal = false;
     this->m_DecalMaterial = NULL;
     this->m_DecalSize = 640.00f;

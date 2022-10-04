@@ -26,6 +26,6 @@ private:
     UTresUIP_SaveLoad* m_SaveLoad;
     
 public:
-    ATresHUDBattleReport();
+    ATresHUDBattleReport(const FObjectInitializer& ObjectInitializer);
 };
 

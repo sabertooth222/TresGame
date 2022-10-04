@@ -63,7 +63,7 @@ void ATresRemyCookingBase::ChangeState(TEnumAsByte<RemyCookingGameState> State) 
 }
 
 
-ATresRemyCookingBase::ATresRemyCookingBase() {
+ATresRemyCookingBase::ATresRemyCookingBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->FPSModeRef = RemyFPSMode::FPS_Config;
     this->StickControlTypeRef = RemyStickControlType::SoraViewpoint;
     this->InputSuccessParticleRef = NULL;

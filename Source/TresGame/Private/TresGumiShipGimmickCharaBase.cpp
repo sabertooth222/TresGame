@@ -21,7 +21,7 @@ float ATresGumiShipGimmickCharaBase::GetAnimCurrentLength(const FName SlotName) 
     return 0.0f;
 }
 
-ATresGumiShipGimmickCharaBase::ATresGumiShipGimmickCharaBase() {
+ATresGumiShipGimmickCharaBase::ATresGumiShipGimmickCharaBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_pSkeletalMesh = CreateDefaultSubobject<UTresSkeletalMeshComponent>(TEXT("SkeletalMesh"));
 }
 

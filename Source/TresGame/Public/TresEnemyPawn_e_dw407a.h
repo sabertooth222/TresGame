@@ -18,6 +18,6 @@ private:
     UParticleSystemComponent* m_DarkHomingChestEff;
     
 public:
-    ATresEnemyPawn_e_dw407a();
+    ATresEnemyPawn_e_dw407a(const FObjectInitializer& ObjectInitializer);
 };
 

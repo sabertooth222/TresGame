@@ -13,7 +13,7 @@ bool ATresEnemyPawnBase_e_he90x::IsPlayerOnMountain() {
     return false;
 }
 
-ATresEnemyPawnBase_e_he90x::ATresEnemyPawnBase_e_he90x() {
+ATresEnemyPawnBase_e_he90x::ATresEnemyPawnBase_e_he90x(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_bDebugDispCollMesh = false;
     this->m_bForceStrongBodyDamage = false;
     this->m_fMaxTargetMountOffTime = 0.00f;

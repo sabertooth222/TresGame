@@ -32,7 +32,7 @@ protected:
     AActor* m_DistanceTarget;
     
 public:
-    ATresCameraDivingDstTgt();
+    ATresCameraDivingDstTgt(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     static ATresCameraDivingDstTgt* BP_SpawnTresCameraDivingDstTgt(UObject* WorldContextObject, TSubclassOf<ATresCameraDivingDstTgt> CameraClass, const FName CameraName);
     

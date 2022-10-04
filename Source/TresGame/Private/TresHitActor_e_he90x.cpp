@@ -16,7 +16,7 @@ bool ATresHitActor_e_he90x::IsCollisionEnabled() const {
     return false;
 }
 
-ATresHitActor_e_he90x::ATresHitActor_e_he90x() {
+ATresHitActor_e_he90x::ATresHitActor_e_he90x(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_MyCollMesh = NULL;
     this->m_MyOverlapMesh = NULL;
     this->m_bEnablePlayerTickCheck = true;

@@ -38,7 +38,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AActor* m_AimOffsetTestActor;
     
-    ATresEnemyPawnBase_e_he90y();
+    ATresEnemyPawnBase_e_he90y(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsOtherAttacking();
     

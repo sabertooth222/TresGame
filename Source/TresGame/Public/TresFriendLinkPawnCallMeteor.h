@@ -106,6 +106,6 @@ private:
     ATresProjectileBase* m_pProjectileExp;
     
 public:
-    ATresFriendLinkPawnCallMeteor();
+    ATresFriendLinkPawnCallMeteor(const FObjectInitializer& ObjectInitializer);
 };
 

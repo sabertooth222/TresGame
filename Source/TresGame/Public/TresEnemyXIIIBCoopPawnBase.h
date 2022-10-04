@@ -12,7 +12,7 @@ protected:
     float m_BothVanishModeEndTime;
     
 public:
-    ATresEnemyXIIIBCoopPawnBase();
+    ATresEnemyXIIIBCoopPawnBase(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, Exec)
     bool IsEndVanishMarluxiaAndLarxene() const;
     

@@ -20,6 +20,6 @@ private:
     UParticleSystem* m_MapParticleSystem;
     
 public:
-    ATresProjectile_e_ex356_BigDealLuxordSideCardAttack();
+    ATresProjectile_e_ex356_BigDealLuxordSideCardAttack(const FObjectInitializer& ObjectInitializer);
 };
 

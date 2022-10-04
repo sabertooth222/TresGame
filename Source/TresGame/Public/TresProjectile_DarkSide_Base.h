@@ -12,6 +12,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_LandHitEffData;
     
-    ATresProjectile_DarkSide_Base();
+    ATresProjectile_DarkSide_Base(const FObjectInitializer& ObjectInitializer);
 };
 

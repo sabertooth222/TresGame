@@ -13,6 +13,6 @@ protected:
     FVector m_OffsetLocation;
     
 public:
-    ATresMimicryPawnBase();
+    ATresMimicryPawnBase(const FObjectInitializer& ObjectInitializer);
 };
 

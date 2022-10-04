@@ -138,6 +138,6 @@ protected:
     ATresCameraAirplane* m_BaseCamera;
     
 public:
-    ATresFriendLinkPawnWoodyBuzzRocket();
+    ATresFriendLinkPawnWoodyBuzzRocket(const FObjectInitializer& ObjectInitializer);
 };
 

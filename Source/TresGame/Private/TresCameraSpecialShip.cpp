@@ -3,7 +3,7 @@
 void ATresCameraSpecialShip::BP_SetCameraSpecialShipRotation(FRotator Rot, bool bWorld) {
 }
 
-ATresCameraSpecialShip::ATresCameraSpecialShip() {
+ATresCameraSpecialShip::ATresCameraSpecialShip(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_PluralTargetDistance[0] = 1200.00f;
     this->m_PluralTargetDistance[1] = 1200.00f;
     this->m_PluralTargetDistance[2] = 1200.00f;

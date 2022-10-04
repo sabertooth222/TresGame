@@ -4,7 +4,7 @@ bool ATresNpcPawn_n_ex001::IsRideOn() {
     return false;
 }
 
-ATresNpcPawn_n_ex001::ATresNpcPawn_n_ex001() {
+ATresNpcPawn_n_ex001::ATresNpcPawn_n_ex001(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_PawnID = TEXT("n_ex001");
     this->m_MarshmallowRange2D = 2000.00f;
     this->m_FRCallMeteorBP = NULL;

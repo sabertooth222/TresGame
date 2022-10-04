@@ -22,7 +22,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresEnemyPawn_e_ex007* m_PartnerPawn;
     
-    ATresEnemyPawn_e_ex010();
+    ATresEnemyPawn_e_ex010(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetAppearModeAndState(TEnumAsByte<ETresLevelEntityAppearMode> AppearMode);
     

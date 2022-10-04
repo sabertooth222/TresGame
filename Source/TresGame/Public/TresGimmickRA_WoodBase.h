@@ -14,6 +14,6 @@ private:
     UTresPoleComponent* MyPole;
     
 public:
-    ATresGimmickRA_WoodBase();
+    ATresGimmickRA_WoodBase(const FObjectInitializer& ObjectInitializer);
 };
 

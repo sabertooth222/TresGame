@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable)
 class ATresGumiShipEnemy703Bullet : public ATresGumiShipSequentialProjectileBase {
     GENERATED_BODY()
 public:
-    ATresGumiShipEnemy703Bullet();
+    ATresGumiShipEnemy703Bullet(const FObjectInitializer& ObjectInitializer);
 };
 

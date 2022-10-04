@@ -1,5 +1,5 @@
 #include "TresDisappearEnemyVolume.h"
 
-ATresDisappearEnemyVolume::ATresDisappearEnemyVolume() {
+ATresDisappearEnemyVolume::ATresDisappearEnemyVolume(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

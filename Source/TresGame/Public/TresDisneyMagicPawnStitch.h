@@ -91,7 +91,7 @@ private:
     TArray<UParticleSystemComponent*> m_PointAreaDecideEffList;
     
 public:
-    ATresDisneyMagicPawnStitch();
+    ATresDisneyMagicPawnStitch(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     FVector GetNextFinishPoint(int32 InAddNext);
     

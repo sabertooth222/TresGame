@@ -29,7 +29,7 @@ private:
     ATresCharPawnBase* m_pNextActor;
     
 public:
-    ATresStylePawnSHPegasus();
+    ATresStylePawnSHPegasus(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetDeltaYaw() const;
     

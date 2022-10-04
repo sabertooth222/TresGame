@@ -12,7 +12,7 @@ void ATresGimmickBlastFan::NextFanMode(float WaitTime) {
 void ATresGimmickBlastFan::ChangeRotation_Implementation(float SpeedRate) {
 }
 
-ATresGimmickBlastFan::ATresGimmickBlastFan() {
+ATresGimmickBlastFan::ATresGimmickBlastFan(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->RotCurve = NULL;
     this->ActiveRotationSpeed = 1080.00f;
     this->EnableFanCollision = false;

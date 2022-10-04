@@ -568,7 +568,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool DisableInputJump_;
     
-    ATresFriendLinkPawnSnowCurling();
+    ATresFriendLinkPawnSnowCurling(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void UpdateSpeed();
     

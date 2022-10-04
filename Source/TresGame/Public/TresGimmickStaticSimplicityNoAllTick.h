@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable)
 class ATresGimmickStaticSimplicityNoAllTick : public ATresGimmickStaticSimplicity {
     GENERATED_BODY()
 public:
-    ATresGimmickStaticSimplicityNoAllTick();
+    ATresGimmickStaticSimplicityNoAllTick(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -1,7 +1,7 @@
 #include "TresEnemyPawn_e_ex357_Bit.h"
 #include "Components/SceneComponent.h"
 
-ATresEnemyPawn_e_ex357_Bit::ATresEnemyPawn_e_ex357_Bit() {
+ATresEnemyPawn_e_ex357_Bit::ATresEnemyPawn_e_ex357_Bit(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MyMzlLocationComponent = CreateDefaultSubobject<USceneComponent>(TEXT("MyMzlLocationComponent"));
     this->m_SignParticleSystem = NULL;
     this->m_ShotDelayTime = 0.00f;

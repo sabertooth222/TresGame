@@ -33,6 +33,6 @@ protected:
     TArray<FTresEffectUnit> MyLifeOverEffects;
     
 public:
-    ATresProjectileStaticMeshBase();
+    ATresProjectileStaticMeshBase(const FObjectInitializer& ObjectInitializer);
 };
 

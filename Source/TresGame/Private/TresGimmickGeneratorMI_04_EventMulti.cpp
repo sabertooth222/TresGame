@@ -3,6 +3,6 @@
 
 
 
-ATresGimmickGeneratorMI_04_EventMulti::ATresGimmickGeneratorMI_04_EventMulti() {
+ATresGimmickGeneratorMI_04_EventMulti::ATresGimmickGeneratorMI_04_EventMulti(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

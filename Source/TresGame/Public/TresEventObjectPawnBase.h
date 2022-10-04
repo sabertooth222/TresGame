@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable)
 class TRESGAME_API ATresEventObjectPawnBase : public ATresEventPawnBase {
     GENERATED_BODY()
 public:
-    ATresEventObjectPawnBase();
+    ATresEventObjectPawnBase(const FObjectInitializer& ObjectInitializer);
 };
 

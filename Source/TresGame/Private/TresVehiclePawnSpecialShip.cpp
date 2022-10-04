@@ -62,7 +62,7 @@ FRotator ATresVehiclePawnSpecialShip::BP_GetCameraLocalRotation() const {
 void ATresVehiclePawnSpecialShip::BP_BattleEndFocePlay() {
 }
 
-ATresVehiclePawnSpecialShip::ATresVehiclePawnSpecialShip() {
+ATresVehiclePawnSpecialShip::ATresVehiclePawnSpecialShip(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_PlayerCameraSpecialShip = NULL;
     this->m_PlayerCameraSpecialShip2 = NULL;
     this->m_PlayerCameraSpecialShipMaelstrom = NULL;

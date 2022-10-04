@@ -25,6 +25,6 @@ protected:
     ATresCameraFirstPerson* m_FCamera;
     
 public:
-    ATresAttractionPawnBase();
+    ATresAttractionPawnBase(const FObjectInitializer& ObjectInitializer);
 };
 

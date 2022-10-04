@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresPlayerControllerKairi : public ATresPlayerControllerBase {
     GENERATED_BODY()
 public:
-    ATresPlayerControllerKairi();
+    ATresPlayerControllerKairi(const FObjectInitializer& ObjectInitializer);
 };
 

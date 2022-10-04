@@ -93,7 +93,7 @@ protected:
     UParticleSystem* m_pro_BurnOmenEffData;
     
 public:
-    ATresEnemyPawn_e_ex054();
+    ATresEnemyPawn_e_ex054(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void OnChangeGimmickPause(bool bPause);
     

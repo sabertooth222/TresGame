@@ -1,6 +1,6 @@
 #include "TresHUDTitle.h"
 
-ATresHUDTitle::ATresHUDTitle() {
+ATresHUDTitle::ATresHUDTitle(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_TitleBGM = NULL;
     this->m_DemoMovieWaitTime = 30.00f;
     this->m_UIDataAssetTitle = NULL;

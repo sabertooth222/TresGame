@@ -1,5 +1,5 @@
 #include "TresStylePawnGMGate.h"
 
-ATresStylePawnGMGate::ATresStylePawnGMGate() {
+ATresStylePawnGMGate::ATresStylePawnGMGate(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

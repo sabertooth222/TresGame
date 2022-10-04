@@ -12,6 +12,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FColor m_SplineColor;
     
-    ATresRaFestivalDanceSplineActor();
+    ATresRaFestivalDanceSplineActor(const FObjectInitializer& ObjectInitializer);
 };
 

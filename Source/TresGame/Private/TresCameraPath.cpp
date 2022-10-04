@@ -1,5 +1,5 @@
 #include "TresCameraPath.h"
 
-ATresCameraPath::ATresCameraPath() {
+ATresCameraPath::ATresCameraPath(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

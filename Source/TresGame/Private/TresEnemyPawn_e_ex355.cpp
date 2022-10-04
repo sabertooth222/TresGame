@@ -60,7 +60,7 @@ void ATresEnemyPawn_e_ex355::CloseHudSaix() {
 }
 
 
-ATresEnemyPawn_e_ex355::ATresEnemyPawn_e_ex355() {
+ATresEnemyPawn_e_ex355::ATresEnemyPawn_e_ex355(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_bSpawnClaymore = false;
     this->m_bVisibleWeaponOnDamage = false;
     this->m_bDefaultBodyReactionTypeOnDamage = false;

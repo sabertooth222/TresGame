@@ -18,7 +18,7 @@ float ATresGimmickGeneratorMI_02_PositionRateType::GetMoveSpeed() {
 
 
 
-ATresGimmickGeneratorMI_02_PositionRateType::ATresGimmickGeneratorMI_02_PositionRateType() {
+ATresGimmickGeneratorMI_02_PositionRateType::ATresGimmickGeneratorMI_02_PositionRateType(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->CreateNum = 10;
     this->Curve = NULL;
     this->MoveCompleteTime = 2.00f;

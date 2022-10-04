@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresGimmickRA_Enlivening_Bird : public ATresGimmickRA_Impression_Bird {
     GENERATED_BODY()
 public:
-    ATresGimmickRA_Enlivening_Bird();
+    ATresGimmickRA_Enlivening_Bird(const FObjectInitializer& ObjectInitializer);
 };
 

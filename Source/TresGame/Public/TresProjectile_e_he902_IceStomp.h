@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable)
 class ATresProjectile_e_he902_IceStomp : public AActor {
     GENERATED_BODY()
 public:
-    ATresProjectile_e_he902_IceStomp();
+    ATresProjectile_e_he902_IceStomp(const FObjectInitializer& ObjectInitializer);
 };
 

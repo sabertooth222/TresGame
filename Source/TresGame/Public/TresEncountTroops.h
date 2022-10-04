@@ -32,6 +32,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_EnemyRadius;
     
-    ATresEncountTroops();
+    ATresEncountTroops(const FObjectInitializer& ObjectInitializer);
 };
 

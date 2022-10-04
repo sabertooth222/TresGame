@@ -102,7 +102,7 @@ private:
     UAudioComponent* m_BoostSE;
     
 public:
-    ATresAttractionPawnShootingRide();
+    ATresAttractionPawnShootingRide(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetRotPitch() const;
     

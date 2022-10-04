@@ -4,7 +4,7 @@
 void ATresGimmickBxSitugaiki::SetDisableLaunch(bool DisableLaunch) {
 }
 
-ATresGimmickBxSitugaiki::ATresGimmickBxSitugaiki() {
+ATresGimmickBxSitugaiki::ATresGimmickBxSitugaiki(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_PropellerMesh = CreateDefaultSubobject<UTresStaticMeshComponent>(TEXT("TresSitugaikiPropellerMesh"));
 }
 

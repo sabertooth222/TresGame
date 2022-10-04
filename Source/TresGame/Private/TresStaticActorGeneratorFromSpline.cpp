@@ -11,7 +11,7 @@ void ATresStaticActorGeneratorFromSpline::OnGenerateOverlapBegin(UPrimitiveCompo
 
 
 
-ATresStaticActorGeneratorFromSpline::ATresStaticActorGeneratorFromSpline() {
+ATresStaticActorGeneratorFromSpline::ATresStaticActorGeneratorFromSpline(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_GenerateTriggerRadius = 40000.00f;
     this->m_bGenerateLater = false;
     this->m_bHiddenWhenFar = false;

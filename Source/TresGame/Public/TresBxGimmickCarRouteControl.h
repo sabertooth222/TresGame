@@ -19,7 +19,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresBxCarRouteControlGroupData> GroupList;
     
-    ATresBxGimmickCarRouteControl();
+    ATresBxGimmickCarRouteControl(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsOwnedByCar() const;
     

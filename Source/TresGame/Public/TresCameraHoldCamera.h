@@ -153,6 +153,6 @@ private:
     TArray<TWeakObjectPtr<UPrimitiveComponent>> m_IgnoreComponents;
     
 public:
-    ATresCameraHoldCamera();
+    ATresCameraHoldCamera(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -47,7 +47,7 @@ FVector ATresGimmickKG_UnionCrossEnemy::CalcOffsetLocation_Implementation() cons
 void ATresGimmickKG_UnionCrossEnemy::AddDamageData(float WaitTime, float Damage, bool LazerDamage) {
 }
 
-ATresGimmickKG_UnionCrossEnemy::ATresGimmickKG_UnionCrossEnemy() {
+ATresGimmickKG_UnionCrossEnemy::ATresGimmickKG_UnionCrossEnemy(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MyRoot = CreateDefaultSubobject<USceneComponent>(TEXT("MySceneComponent"));
     this->MyParticleSystem = CreateDefaultSubobject<UParticleSystemComponent>(TEXT("MyParticleComponent"));
     this->MoveSpeed = 2500.00f;

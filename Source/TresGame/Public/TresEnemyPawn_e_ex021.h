@@ -75,7 +75,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 m_bDebugEx021: 1;
     
-    ATresEnemyPawn_e_ex021();
+    ATresEnemyPawn_e_ex021(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     bool ValidateBoardedRapidMove();
     

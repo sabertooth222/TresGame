@@ -1,5 +1,5 @@
 #include "TresMiRxEnemyPawnBase.h"
 
-ATresMiRxEnemyPawnBase::ATresMiRxEnemyPawnBase() {
+ATresMiRxEnemyPawnBase::ATresMiRxEnemyPawnBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

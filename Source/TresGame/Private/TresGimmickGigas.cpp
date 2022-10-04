@@ -1,5 +1,5 @@
 #include "TresGimmickGigas.h"
 
-ATresGimmickGigas::ATresGimmickGigas() {
+ATresGimmickGigas::ATresGimmickGigas(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

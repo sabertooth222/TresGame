@@ -27,7 +27,7 @@ protected:
     FCAJellyfishParam m_Parameter;
     
 public:
-    ATresGimmickCA_Jellyfish();
+    ATresGimmickCA_Jellyfish(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveNotifyProjectileAttackHitBpEvent();
     

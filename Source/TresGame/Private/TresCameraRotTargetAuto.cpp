@@ -8,6 +8,6 @@ ATresCameraRotTargetAuto* ATresCameraRotTargetAuto::BP_SpawnTresCameraRotTargetA
     return NULL;
 }
 
-ATresCameraRotTargetAuto::ATresCameraRotTargetAuto() {
+ATresCameraRotTargetAuto::ATresCameraRotTargetAuto(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

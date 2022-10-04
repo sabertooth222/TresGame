@@ -7,7 +7,7 @@ UCLASS(Blueprintable)
 class ATresItemSynthesisChecker : public AActor {
     GENERATED_BODY()
 public:
-    ATresItemSynthesisChecker();
+    ATresItemSynthesisChecker(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
     void TestChargeMaterialsToShop() const;
     

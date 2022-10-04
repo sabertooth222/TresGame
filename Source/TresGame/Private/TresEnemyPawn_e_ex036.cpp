@@ -11,7 +11,7 @@ bool ATresEnemyPawn_e_ex036::IsFinMoveUp() const {
 void ATresEnemyPawn_e_ex036::Debug_ForcingCancelMagicSquare() {
 }
 
-ATresEnemyPawn_e_ex036::ATresEnemyPawn_e_ex036() {
+ATresEnemyPawn_e_ex036::ATresEnemyPawn_e_ex036(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_bMagicSquare = false;
     this->m_pro_WaterBallManagerClass = NULL;
     this->m_WaterBallManager = NULL;

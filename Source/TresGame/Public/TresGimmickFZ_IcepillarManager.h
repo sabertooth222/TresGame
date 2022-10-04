@@ -7,6 +7,6 @@ UCLASS(Blueprintable, Config=Game)
 class ATresGimmickFZ_IcepillarManager : public ATresGimmickActor {
     GENERATED_BODY()
 public:
-    ATresGimmickFZ_IcepillarManager();
+    ATresGimmickFZ_IcepillarManager(const FObjectInitializer& ObjectInitializer);
 };
 

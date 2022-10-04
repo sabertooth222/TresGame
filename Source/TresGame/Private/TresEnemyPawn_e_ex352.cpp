@@ -39,7 +39,7 @@ int32 ATresEnemyPawn_e_ex352::GetDarkMatterNum() const {
     return 0;
 }
 
-ATresEnemyPawn_e_ex352::ATresEnemyPawn_e_ex352() {
+ATresEnemyPawn_e_ex352::ATresEnemyPawn_e_ex352(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MyPullCollisionComponent = CreateDefaultSubobject<USphereComponent>(TEXT("PullCollisionComponent0"));
     this->m_EnvironmentalChangeEffect = NULL;
     this->m_VisibleTime = 0.20f;

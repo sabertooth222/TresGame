@@ -13,7 +13,7 @@ UCLASS(Abstract, Blueprintable)
 class ATresGimmick_Ts03_GigasGameMgr : public AActor {
     GENERATED_BODY()
 public:
-    ATresGimmick_Ts03_GigasGameMgr();
+    ATresGimmick_Ts03_GigasGameMgr(const FObjectInitializer& ObjectInitializer);
 protected:
     UFUNCTION(BlueprintCallable)
     void UnregistGimmickHudMarker(USceneComponent* pComp);

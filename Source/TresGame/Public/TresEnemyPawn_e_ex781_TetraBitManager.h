@@ -77,6 +77,6 @@ private:
     UParticleSystemComponent* m_ShotParticle;
     
 public:
-    ATresEnemyPawn_e_ex781_TetraBitManager();
+    ATresEnemyPawn_e_ex781_TetraBitManager(const FObjectInitializer& ObjectInitializer);
 };
 

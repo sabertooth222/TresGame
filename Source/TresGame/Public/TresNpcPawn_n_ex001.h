@@ -36,7 +36,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_IsLinkMode;
     
-    ATresNpcPawn_n_ex001();
+    ATresNpcPawn_n_ex001(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     bool IsRideOn();
     

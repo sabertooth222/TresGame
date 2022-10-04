@@ -8,7 +8,7 @@ void ATresMapJumpDirectionalTriggerBox::InvokeMapJump() {
 }
 
 
-ATresMapJumpDirectionalTriggerBox::ATresMapJumpDirectionalTriggerBox() {
+ATresMapJumpDirectionalTriggerBox::ATresMapJumpDirectionalTriggerBox(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_FadeType = MAPJUMP_FADE_KIND_WIPEOUT;
     this->m_BlueprintMapJump = false;
     this->m_OverrideMarkerSize = 0.00f;

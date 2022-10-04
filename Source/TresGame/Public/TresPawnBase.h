@@ -76,7 +76,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UTresInterpGroupInst*> m_InterpGroupInst;
     
-    ATresPawnBase();
+    ATresPawnBase(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     bool WarpToTaggedPlayerStart(FName InTag, bool bResetCamera, bool bStateClear);
     

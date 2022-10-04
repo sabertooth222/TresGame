@@ -7,7 +7,7 @@ class AActor;
 void ATresEnemyToyActorRespawnBox::OnBoxEndOverlap(UPrimitiveComponent* OverlappedComponent, AActor* Other, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex) {
 }
 
-ATresEnemyToyActorRespawnBox::ATresEnemyToyActorRespawnBox() {
+ATresEnemyToyActorRespawnBox::ATresEnemyToyActorRespawnBox(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MyBox = CreateDefaultSubobject<UBoxComponent>(TEXT("Box0"));
 }
 

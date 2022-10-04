@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresAdhereSneeze : public ATresAdhereObjBase {
     GENERATED_BODY()
 public:
-    ATresAdhereSneeze();
+    ATresAdhereSneeze(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -15,7 +15,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName RemoteEventName;
     
-    ATresEwEnvRotatorSwitch();
+    ATresEwEnvRotatorSwitch(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetMoving(bool bMoving);
     

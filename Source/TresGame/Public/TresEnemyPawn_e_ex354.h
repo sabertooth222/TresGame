@@ -154,7 +154,7 @@ protected:
     FEX354_RemoteEventID m_RemoteEventIDArray[6];
     
 public:
-    ATresEnemyPawn_e_ex354();
+    ATresEnemyPawn_e_ex354(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetDebugDispFlag(int32 InIndex);
     

@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresEnemy_e_ex363_BlastWaveProjectileBase : public ATresProjectileBase {
     GENERATED_BODY()
 public:
-    ATresEnemy_e_ex363_BlastWaveProjectileBase();
+    ATresEnemy_e_ex363_BlastWaveProjectileBase(const FObjectInitializer& ObjectInitializer);
 };
 

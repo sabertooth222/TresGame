@@ -73,7 +73,7 @@ void ATresEnemyPawn_e_ex351::BP_FinishTimeRush() {
 void ATresEnemyPawn_e_ex351::BP_EnableArmorBreakAfterWarp(bool bEnable) {
 }
 
-ATresEnemyPawn_e_ex351::ATresEnemyPawn_e_ex351() {
+ATresEnemyPawn_e_ex351::ATresEnemyPawn_e_ex351(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_AvatarPawnClass = NULL;
     this->m_bIsAvatarPawn = false;
     this->m_SlowFadeTime = 1.00f;

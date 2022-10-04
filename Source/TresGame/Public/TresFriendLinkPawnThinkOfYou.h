@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresFriendLinkPawnThinkOfYou : public ATresFriendLinkPawnBase {
     GENERATED_BODY()
 public:
-    ATresFriendLinkPawnThinkOfYou();
+    ATresFriendLinkPawnThinkOfYou(const FObjectInitializer& ObjectInitializer);
 };
 

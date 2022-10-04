@@ -143,7 +143,7 @@ protected:
     UTresReactorComponent* MyReactor;
     
 public:
-    ATresNpcPawn_c_npc();
+    ATresNpcPawn_c_npc(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetSubMeshFacePlay(FName inSubMeshName, FName InLipAnimName, FName inEyeAnimName, float in_fBlendTime);
     

@@ -18,6 +18,6 @@ private:
     float m_FirstHitAddSize;
     
 public:
-    ATresProjectile_e_ex358_Jinrai();
+    ATresProjectile_e_ex358_Jinrai(const FObjectInitializer& ObjectInitializer);
 };
 

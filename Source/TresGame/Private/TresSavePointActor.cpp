@@ -35,7 +35,7 @@ void ATresSavePointActor::BP_ActivateGimmickComponentAll() {
 void ATresSavePointActor::BP_ActivateGimmick() {
 }
 
-ATresSavePointActor::ATresSavePointActor() {
+ATresSavePointActor::ATresSavePointActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MyReactor = CreateDefaultSubobject<UTresReactorComponent>(TEXT("TresReactor0"));
     this->MyRecover = CreateDefaultSubobject<UTresSavePointRecoverComponent>(TEXT("TresRecover0"));
     this->MyMapMarker = CreateDefaultSubobject<UTresMapMarkerComponent>(TEXT("TresMapMarker0"));

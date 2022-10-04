@@ -1,5 +1,5 @@
 #include "TresAIPoint.h"
 
-ATresAIPoint::ATresAIPoint() {
+ATresAIPoint::ATresAIPoint(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

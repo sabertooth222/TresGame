@@ -140,6 +140,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UMaterialParameterCollection* m_pOceanMatParamCollection;
     
-    ATresOceanShaderController();
+    ATresOceanShaderController(const FObjectInitializer& ObjectInitializer);
 };
 

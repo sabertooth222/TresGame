@@ -31,7 +31,7 @@ protected:
     FRotator m_rRotateSpeed;
     
 public:
-    ATresGumiShipEnemy621Projectile();
+    ATresGumiShipEnemy621Projectile(const FObjectInitializer& ObjectInitializer);
 protected:
     UFUNCTION(BlueprintCallable)
     void OnActorTakeAnyDamage(AActor* DamagedActor, float Damage, const UDamageType* DamageType, AController* InstigatedBy, AActor* DamageCauser);

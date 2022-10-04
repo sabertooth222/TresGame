@@ -32,7 +32,7 @@ bool ATresGumiShipWorldSymbolActor::CheckLanding() {
     return false;
 }
 
-ATresGumiShipWorldSymbolActor::ATresGumiShipWorldSymbolActor() {
+ATresGumiShipWorldSymbolActor::ATresGumiShipWorldSymbolActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->WorldMapID = ETresGumiShipWorldSymbolID::E_GM01_WS_HE;
     this->WorldCode = TRES_WCID_MAX;
     this->ApproachCollision = CreateDefaultSubobject<USphereComponent>(TEXT("GoalVolumeSphereCollision"));

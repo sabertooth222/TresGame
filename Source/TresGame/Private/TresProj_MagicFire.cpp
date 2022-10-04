@@ -1,6 +1,6 @@
 #include "TresProj_MagicFire.h"
 
-ATresProj_MagicFire::ATresProj_MagicFire() {
+ATresProj_MagicFire::ATresProj_MagicFire(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_PutEffect = NULL;
     this->m_PutEffectLife = 0.00f;
     this->m_PutEffectLifePlus = 0.00f;

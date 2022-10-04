@@ -10,6 +10,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_BulletListSet;
     
-    ATresEnemy_e_ex781_FireProjectile();
+    ATresEnemy_e_ex781_FireProjectile(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -36,6 +36,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_AtkUpdateInterval;
     
-    ATresProjectile_e_ex361_DarkMine();
+    ATresProjectile_e_ex361_DarkMine(const FObjectInitializer& ObjectInitializer);
 };
 

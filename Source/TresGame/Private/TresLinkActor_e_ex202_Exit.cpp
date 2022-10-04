@@ -10,7 +10,7 @@ bool ATresLinkActor_e_ex202_Exit::CanUse() const {
     return false;
 }
 
-ATresLinkActor_e_ex202_Exit::ATresLinkActor_e_ex202_Exit() {
+ATresLinkActor_e_ex202_Exit::ATresLinkActor_e_ex202_Exit(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_Size = TRES_LINKACTOR_EX202_SIZE_25;
     this->m_bEnableCorrection = true;
     this->m_OffsetDistances[0] = 0.00f;

@@ -21,6 +21,6 @@ protected:
     TArray<ATresRailSlideActor*> m_ResidueRailList;
     
 public:
-    ATresProjectileManager();
+    ATresProjectileManager(const FObjectInitializer& ObjectInitializer);
 };
 

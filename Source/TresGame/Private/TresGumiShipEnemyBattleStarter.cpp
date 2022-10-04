@@ -64,7 +64,7 @@ bool ATresGumiShipEnemyBattleStarter::_HideCurrentBattleArenaMeshActor(const UOb
     return false;
 }
 
-ATresGumiShipEnemyBattleStarter::ATresGumiShipEnemyBattleStarter() {
+ATresGumiShipEnemyBattleStarter::ATresGumiShipEnemyBattleStarter(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_eBattleStartType = ETresGumiShipEnemyBattleStartType::ENEMY_SYMBOL_ENCOUNTER;
     this->m_eEnemyTerritoryID = ETresGumiShipEnemyTerritoryID::E_GM01_TE_01;
     this->m_pBoundEnemyTerritoryPoint = NULL;

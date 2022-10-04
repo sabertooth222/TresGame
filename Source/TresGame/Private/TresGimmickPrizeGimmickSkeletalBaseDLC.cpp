@@ -8,7 +8,7 @@
 void ATresGimmickPrizeGimmickSkeletalBaseDLC::ReceiveAnimation_Implementation() {
 }
 
-ATresGimmickPrizeGimmickSkeletalBaseDLC::ATresGimmickPrizeGimmickSkeletalBaseDLC() {
+ATresGimmickPrizeGimmickSkeletalBaseDLC::ATresGimmickPrizeGimmickSkeletalBaseDLC(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->TresLockonTarget = CreateDefaultSubobject<UTresLockonTargetComponent>(TEXT("TresLockonTarget"));
     this->TresBodyCollPrimitive = CreateDefaultSubobject<UTresBodyCollPrimitive>(TEXT("TresBodyCollPrimitive"));
     this->TresPrizeGen = CreateDefaultSubobject<UTresPrizeGenComponent>(TEXT("TresPrizeGen"));

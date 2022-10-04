@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresProjectile_e_ex113_Flare : public ATresProjectileBase {
     GENERATED_BODY()
 public:
-    ATresProjectile_e_ex113_Flare();
+    ATresProjectile_e_ex113_Flare(const FObjectInitializer& ObjectInitializer);
 };
 

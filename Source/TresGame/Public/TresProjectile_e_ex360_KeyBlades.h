@@ -44,6 +44,6 @@ private:
     TWeakObjectPtr<AActor> m_MyTarget;
     
 public:
-    ATresProjectile_e_ex360_KeyBlades();
+    ATresProjectile_e_ex360_KeyBlades(const FObjectInitializer& ObjectInitializer);
 };
 

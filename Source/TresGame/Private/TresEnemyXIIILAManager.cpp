@@ -1,5 +1,5 @@
 #include "TresEnemyXIIILAManager.h"
 
-ATresEnemyXIIILAManager::ATresEnemyXIIILAManager() {
+ATresEnemyXIIILAManager::ATresEnemyXIIILAManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

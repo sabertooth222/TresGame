@@ -15,6 +15,6 @@ UAnimationAsset* ATresVFXManager::GetAnimAssetAndTime(USkeletalMeshComponent* in
     return NULL;
 }
 
-ATresVFXManager::ATresVFXManager() {
+ATresVFXManager::ATresVFXManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

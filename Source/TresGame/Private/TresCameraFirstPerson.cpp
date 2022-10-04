@@ -8,6 +8,6 @@ ATresCameraFirstPerson* ATresCameraFirstPerson::BP_SpawnTresCameraFirstPerson(UO
     return NULL;
 }
 
-ATresCameraFirstPerson::ATresCameraFirstPerson() {
+ATresCameraFirstPerson::ATresCameraFirstPerson(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

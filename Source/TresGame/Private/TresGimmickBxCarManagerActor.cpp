@@ -1,5 +1,5 @@
 #include "TresGimmickBxCarManagerActor.h"
 
-ATresGimmickBxCarManagerActor::ATresGimmickBxCarManagerActor() {
+ATresGimmickBxCarManagerActor::ATresGimmickBxCarManagerActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

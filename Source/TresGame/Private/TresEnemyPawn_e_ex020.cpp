@@ -13,6 +13,6 @@ int32 ATresEnemyPawn_e_ex020::GetNumToyPawn() const {
     return 0;
 }
 
-ATresEnemyPawn_e_ex020::ATresEnemyPawn_e_ex020() {
+ATresEnemyPawn_e_ex020::ATresEnemyPawn_e_ex020(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

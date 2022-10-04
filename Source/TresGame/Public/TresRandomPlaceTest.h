@@ -11,7 +11,7 @@ UCLASS(Abstract, Blueprintable)
 class ATresRandomPlaceTest : public ATresEditorOnlyGeneratorBase {
     GENERATED_BODY()
 public:
-    ATresRandomPlaceTest();
+    ATresRandomPlaceTest(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void UpdateSpline(float Delta, FVector& OutLocation, FRotator& outRotator);
     

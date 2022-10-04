@@ -18,6 +18,6 @@ private:
     USceneComponent* SceneComponent;
     
 public:
-    ATresPatternActor_e_dw407b_Manager();
+    ATresPatternActor_e_dw407b_Manager(const FObjectInitializer& ObjectInitializer);
 };
 

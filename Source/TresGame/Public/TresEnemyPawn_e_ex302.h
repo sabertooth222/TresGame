@@ -20,7 +20,7 @@ private:
     TArray<FTresAfterImageVisibleWorker> m_AfterImageVisibleWorker;
     
 public:
-    ATresEnemyPawn_e_ex302();
+    ATresEnemyPawn_e_ex302(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     bool IsHitWhipComboAttack();
     

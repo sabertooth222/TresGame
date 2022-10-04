@@ -76,7 +76,7 @@ private:
     TArray<FTresEnemyEnvQueryBindParamFloat_ex358> m_FindAttackLocationBindParamFloatList;
     
 public:
-    ATresEnemyPawn_e_ex358();
+    ATresEnemyPawn_e_ex358(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetDebugAvatarWildDanceIndex(int32 Index);
     

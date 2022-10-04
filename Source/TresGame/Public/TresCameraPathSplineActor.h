@@ -13,6 +13,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresCameraPathSplineLinkActor* m_LinkSplineFromActor;
     
-    ATresCameraPathSplineActor();
+    ATresCameraPathSplineActor(const FObjectInitializer& ObjectInitializer);
 };
 

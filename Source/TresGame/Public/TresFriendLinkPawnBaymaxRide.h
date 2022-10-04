@@ -148,7 +148,7 @@ private:
     ATresCameraFix* m_pRailSlideCamera;
     
 public:
-    ATresFriendLinkPawnBaymaxRide();
+    ATresFriendLinkPawnBaymaxRide(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetEffectWindBlur(bool bOn);
     

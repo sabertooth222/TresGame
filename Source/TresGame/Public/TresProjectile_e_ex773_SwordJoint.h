@@ -12,6 +12,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USQEX_ParticleAttachDataAsset* m_UniqueEffectDataAsset;
     
-    ATresProjectile_e_ex773_SwordJoint();
+    ATresProjectile_e_ex773_SwordJoint(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -5,7 +5,7 @@ bool ATresTreasureBox::OpenOptionalOpenedBox() {
     return false;
 }
 
-ATresTreasureBox::ATresTreasureBox() {
+ATresTreasureBox::ATresTreasureBox(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MyReactor = CreateDefaultSubobject<UTresReactorComponent>(TEXT("TresReactor0"));
     this->m_bIsLargeBox = false;
     this->m_bUseKeyitemInfoWnd = false;

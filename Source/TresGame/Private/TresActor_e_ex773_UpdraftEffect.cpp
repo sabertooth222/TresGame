@@ -1,6 +1,6 @@
 #include "TresActor_e_ex773_UpdraftEffect.h"
 
-ATresActor_e_ex773_UpdraftEffect::ATresActor_e_ex773_UpdraftEffect() {
+ATresActor_e_ex773_UpdraftEffect::ATresActor_e_ex773_UpdraftEffect(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_UpdraftEff = NULL;
     this->m_pro_UpdraftEffData = NULL;
     this->m_pro_UpdraftEffParticleNum = 1000;

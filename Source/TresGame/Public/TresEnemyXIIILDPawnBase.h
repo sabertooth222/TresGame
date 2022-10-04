@@ -24,6 +24,6 @@ protected:
     AActor* m_BattleAIPoint;
     
 public:
-    ATresEnemyXIIILDPawnBase();
+    ATresEnemyXIIILDPawnBase(const FObjectInitializer& ObjectInitializer);
 };
 

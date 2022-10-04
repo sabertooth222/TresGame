@@ -13,6 +13,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresAccompanyPawnBase> m_FRBlizzagaBoardBP;
     
-    ATresNpcPawn_n_ex006();
+    ATresNpcPawn_n_ex006(const FObjectInitializer& ObjectInitializer);
 };
 

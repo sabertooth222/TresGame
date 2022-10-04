@@ -34,6 +34,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float RollSpeed;
     
-    ATresWinniePuzzlePlayerPawn();
+    ATresWinniePuzzlePlayerPawn(const FObjectInitializer& ObjectInitializer);
 };
 

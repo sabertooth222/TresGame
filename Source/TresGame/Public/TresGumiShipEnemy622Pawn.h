@@ -28,7 +28,7 @@ protected:
     float m_MoveTimer;
     
 public:
-    ATresGumiShipEnemy622Pawn();
+    ATresGumiShipEnemy622Pawn(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     bool SetPermitFiring(bool Enable);
     

@@ -24,6 +24,6 @@ private:
     float m_OrthoWidthIncrement;
     
 public:
-    ATresCameraDebugOrthoTopView();
+    ATresCameraDebugOrthoTopView(const FObjectInitializer& ObjectInitializer);
 };
 

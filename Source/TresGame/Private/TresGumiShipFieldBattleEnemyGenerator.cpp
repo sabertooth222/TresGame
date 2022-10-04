@@ -1,5 +1,5 @@
 #include "TresGumiShipFieldBattleEnemyGenerator.h"
 
-ATresGumiShipFieldBattleEnemyGenerator::ATresGumiShipFieldBattleEnemyGenerator() {
+ATresGumiShipFieldBattleEnemyGenerator::ATresGumiShipFieldBattleEnemyGenerator(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

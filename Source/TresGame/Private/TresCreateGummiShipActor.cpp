@@ -4,7 +4,7 @@
 void ATresCreateGummiShipActor::ChangeState(TEnumAsByte<CreateGummiShipState> State) {
 }
 
-ATresCreateGummiShipActor::ATresCreateGummiShipActor() {
+ATresCreateGummiShipActor::ATresCreateGummiShipActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_pUseCollisionGummiComponent = NULL;
     this->m_pRootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("GummiShipRootComponent"));
     this->m_pGummiEditorDataTableSet = NULL;

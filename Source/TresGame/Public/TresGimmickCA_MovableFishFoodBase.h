@@ -13,7 +13,7 @@ protected:
     FFloatInterval m_ReactorActiveRange;
     
 public:
-    ATresGimmickCA_MovableFishFoodBase();
+    ATresGimmickCA_MovableFishFoodBase(const FObjectInitializer& ObjectInitializer);
 protected:
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable, BlueprintImplementableEvent)
     void OnFishFoodReactorDeactivate();

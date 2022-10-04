@@ -78,6 +78,6 @@ void ATresCameraTarget::BP_AttachTresCameraTarget(bool bAttach) {
 void ATresCameraTarget::BP_AddCollisionIgnoredActor(AActor* Actor) {
 }
 
-ATresCameraTarget::ATresCameraTarget() {
+ATresCameraTarget::ATresCameraTarget(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

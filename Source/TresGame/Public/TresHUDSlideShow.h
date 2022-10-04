@@ -22,6 +22,6 @@ private:
     USoundBase* m_pSlideBgm;
     
 public:
-    ATresHUDSlideShow();
+    ATresHUDSlideShow(const FObjectInitializer& ObjectInitializer);
 };
 

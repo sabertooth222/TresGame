@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresEnemyJointActor_e_ex027a : public ATresCharPawnBase {
     GENERATED_BODY()
 public:
-    ATresEnemyJointActor_e_ex027a();
+    ATresEnemyJointActor_e_ex027a(const FObjectInitializer& ObjectInitializer);
 };
 

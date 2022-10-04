@@ -18,6 +18,6 @@ private:
     UParticleSystemComponent* m_ImpactPointEffectComponent;
     
 public:
-    ATresProjectile_e_ex048_VerticalDropMissileProjectile();
+    ATresProjectile_e_ex048_VerticalDropMissileProjectile(const FObjectInitializer& ObjectInitializer);
 };
 

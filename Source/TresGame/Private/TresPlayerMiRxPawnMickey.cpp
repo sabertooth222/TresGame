@@ -24,7 +24,7 @@ TEnumAsByte<ETresMiRxHolySealType> ATresPlayerMiRxPawnMickey::BP_GetHolySealType
     return HOLY_SEAL_TYPE_NONE;
 }
 
-ATresPlayerMiRxPawnMickey::ATresPlayerMiRxPawnMickey() {
+ATresPlayerMiRxPawnMickey::ATresPlayerMiRxPawnMickey(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_pStandupCurve = NULL;
     this->m_pDownCurve = NULL;
     this->m_fOffsetForStandupCommand = 0.00f;

@@ -8,7 +8,7 @@ bool ATresAIPoint_e_ca901_WarpDestination::BP_CompareWarpKind(const TEnumAsByte<
     return false;
 }
 
-ATresAIPoint_e_ca901_WarpDestination::ATresAIPoint_e_ca901_WarpDestination() {
+ATresAIPoint_e_ca901_WarpDestination::ATresAIPoint_e_ca901_WarpDestination(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_WarpKind = TRES_ENEMY_CA901_WARP_FIXEDPlACE;
 }
 

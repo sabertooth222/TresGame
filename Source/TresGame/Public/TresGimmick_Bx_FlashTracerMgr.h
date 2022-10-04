@@ -9,7 +9,7 @@ UCLASS(Abstract, Blueprintable)
 class ATresGimmick_Bx_FlashTracerMgr : public AActor {
     GENERATED_BODY()
 public:
-    ATresGimmick_Bx_FlashTracerMgr();
+    ATresGimmick_Bx_FlashTracerMgr(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetHighScore(ETresGimmickBxFlashTracerCourse Course, int32 Score);
     

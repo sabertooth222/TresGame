@@ -17,6 +17,6 @@ float ATresRemyCookingFlambe::GetGameDuration() const {
 void ATresRemyCookingFlambe::ChangeState(TEnumAsByte<RemyCookingGameState> State) {
 }
 
-ATresRemyCookingFlambe::ATresRemyCookingFlambe() {
+ATresRemyCookingFlambe::ATresRemyCookingFlambe(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

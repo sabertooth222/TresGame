@@ -40,7 +40,7 @@ void ATresGimmickGeneratorMI_04::CreateDoor() {
 
 
 
-ATresGimmickGeneratorMI_04::ATresGimmickGeneratorMI_04() {
+ATresGimmickGeneratorMI_04::ATresGimmickGeneratorMI_04(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->BodyCollPrim = CreateDefaultSubobject<UTresBodyCollPrimitive>(TEXT("TresBodyCollPrimitive"));
     this->BodyCollComp = CreateDefaultSubobject<UTresBodyCollComponent>(TEXT("TresBodyCollComponent"));
     this->SplineLength = 0.00f;

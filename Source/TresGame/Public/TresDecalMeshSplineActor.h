@@ -124,7 +124,7 @@ private:
     UPrimitiveComponent* m_PrevHitComponent;
     
 public:
-    ATresDecalMeshSplineActor();
+    ATresDecalMeshSplineActor(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetMaterialControlLocation(FVector inWorldLocation);
     

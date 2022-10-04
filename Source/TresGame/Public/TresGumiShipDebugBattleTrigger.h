@@ -21,7 +21,7 @@ private:
     ATresGumiShipActualRailSlideArrangement* m_pArrangement;
     
 public:
-    ATresGumiShipDebugBattleTrigger();
+    ATresGumiShipDebugBattleTrigger(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void _BeginOverlap(UPrimitiveComponent* pOverlappedComponent, AActor* pOtherActor, UPrimitiveComponent* pOtherComp, int32 dOtherBodyIndex, bool bFromSweep, const FHitResult& rSweepResult);
     

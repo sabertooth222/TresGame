@@ -69,7 +69,7 @@ bool ATresEnemyPawn_e_ex046::CanAttack() const {
 void ATresEnemyPawn_e_ex046::ApplyMissionFinishMode(bool bFinishMode) {
 }
 
-ATresEnemyPawn_e_ex046::ATresEnemyPawn_e_ex046() {
+ATresEnemyPawn_e_ex046::ATresEnemyPawn_e_ex046(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_AppearRiseSpeed = 0.00f;
     this->m_AppearRiseEndHeight = 0.00f;
     this->m_MoveEffectAttachDataAsset = NULL;

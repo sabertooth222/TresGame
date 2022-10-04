@@ -29,7 +29,7 @@ protected:
     float DoorSpan;
     
 public:
-    ATresGimmickGeneratorMI_04_EventBase();
+    ATresGimmickGeneratorMI_04_EventBase(const FObjectInitializer& ObjectInitializer);
 protected:
     UFUNCTION(BlueprintCallable)
     void Setup();

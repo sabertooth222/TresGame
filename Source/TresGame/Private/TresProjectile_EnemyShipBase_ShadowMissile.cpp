@@ -1,6 +1,6 @@
 #include "TresProjectile_EnemyShipBase_ShadowMissile.h"
 
-ATresProjectile_EnemyShipBase_ShadowMissile::ATresProjectile_EnemyShipBase_ShadowMissile() {
+ATresProjectile_EnemyShipBase_ShadowMissile::ATresProjectile_EnemyShipBase_ShadowMissile(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_CenterSpeed = 6000.00f;
     this->m_CenterSpeedMin = 5000.00f;
     this->m_EndSpeed = 6000.00f;

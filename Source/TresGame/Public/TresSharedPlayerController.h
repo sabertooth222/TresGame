@@ -8,7 +8,7 @@ UCLASS(Abstract, Blueprintable)
 class ATresSharedPlayerController : public ATresPlayerControllerLowerBase {
     GENERATED_BODY()
 public:
-    ATresSharedPlayerController();
+    ATresSharedPlayerController(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetRightStickSlopeVectorLength() const;
     

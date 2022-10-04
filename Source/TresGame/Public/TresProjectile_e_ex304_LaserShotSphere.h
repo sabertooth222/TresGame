@@ -11,6 +11,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresProjectileBase> m_LaserShotProjectileClass;
     
-    ATresProjectile_e_ex304_LaserShotSphere();
+    ATresProjectile_e_ex304_LaserShotSphere(const FObjectInitializer& ObjectInitializer);
 };
 

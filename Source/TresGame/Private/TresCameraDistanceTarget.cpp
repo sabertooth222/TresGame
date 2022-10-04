@@ -11,7 +11,7 @@ float ATresCameraDistanceTarget::GetDefaultDistance() const {
     return 0.0f;
 }
 
-ATresCameraDistanceTarget::ATresCameraDistanceTarget() {
+ATresCameraDistanceTarget::ATresCameraDistanceTarget(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_Distance = 400.00f;
 }
 

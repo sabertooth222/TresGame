@@ -1,5 +1,5 @@
 #include "TresLgRxPawnBase.h"
 
-ATresLgRxPawnBase::ATresLgRxPawnBase() {
+ATresLgRxPawnBase::ATresLgRxPawnBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

@@ -35,7 +35,7 @@ void ATresEnemyPawn_e_ex082::DebugSetNumRush(int32 Num) {
 void ATresEnemyPawn_e_ex082::DebugSetMissionDrawDisplay(int32 bEnable) {
 }
 
-ATresEnemyPawn_e_ex082::ATresEnemyPawn_e_ex082() {
+ATresEnemyPawn_e_ex082::ATresEnemyPawn_e_ex082(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_LandSnowEffect = NULL;
     this->m_SnowEffectHitCheckSize = 0.00f;
     this->m_ModeChangeEnvQuery = NULL;

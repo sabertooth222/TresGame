@@ -98,7 +98,7 @@ protected:
     bool m_bDisableRailMove;
     
 public:
-    ATresEnemyPawn_e_ex050();
+    ATresEnemyPawn_e_ex050(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void NotifyDecScore();
     

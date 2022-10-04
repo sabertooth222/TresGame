@@ -16,6 +16,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_TailEffData;
     
-    ATresProjectile_e_ex038_AeroCutter();
+    ATresProjectile_e_ex038_AeroCutter(const FObjectInitializer& ObjectInitializer);
 };
 

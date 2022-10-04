@@ -1,5 +1,5 @@
 #include "TresUIActorLightSet.h"
 
-ATresUIActorLightSet::ATresUIActorLightSet() {
+ATresUIActorLightSet::ATresUIActorLightSet(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

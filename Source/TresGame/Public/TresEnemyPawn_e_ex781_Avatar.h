@@ -19,6 +19,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_VisibleAfterImageTime;
     
-    ATresEnemyPawn_e_ex781_Avatar();
+    ATresEnemyPawn_e_ex781_Avatar(const FObjectInitializer& ObjectInitializer);
 };
 

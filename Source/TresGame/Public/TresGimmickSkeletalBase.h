@@ -53,7 +53,7 @@ protected:
     TArray<UTresAnimSet*> m_AppendAnimSetMap;
     
 public:
-    ATresGimmickSkeletalBase();
+    ATresGimmickSkeletalBase(const FObjectInitializer& ObjectInitializer);
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveNotifyProjectileAttackHitBpEvent();

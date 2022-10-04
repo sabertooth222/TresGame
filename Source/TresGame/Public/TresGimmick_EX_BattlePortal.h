@@ -52,7 +52,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_Effect_Escape;
     
-    ATresGimmick_EX_BattlePortal();
+    ATresGimmick_EX_BattlePortal(const FObjectInitializer& ObjectInitializer);
 protected:
     UFUNCTION(BlueprintCallable)
     void OnChangeBattleMode(bool bIsBattleMode);

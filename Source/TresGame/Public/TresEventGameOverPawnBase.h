@@ -38,6 +38,6 @@ protected:
     ATresKHShaderController* m_pKHS;
     
 public:
-    ATresEventGameOverPawnBase();
+    ATresEventGameOverPawnBase(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -1,5 +1,5 @@
 #include "TresStylePawnBase.h"
 
-ATresStylePawnBase::ATresStylePawnBase() {
+ATresStylePawnBase::ATresStylePawnBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

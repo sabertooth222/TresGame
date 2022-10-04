@@ -28,6 +28,6 @@ private:
     UTresUIManager* m_UIManager;
     
 public:
-    ATresHUDMemoryArchive();
+    ATresHUDMemoryArchive(const FObjectInitializer& ObjectInitializer);
 };
 

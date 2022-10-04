@@ -15,7 +15,7 @@ void ATresStaticActorGeneratorFromSplineSimple::RequestRebuild() {
 
 
 
-ATresStaticActorGeneratorFromSplineSimple::ATresStaticActorGeneratorFromSplineSimple() {
+ATresStaticActorGeneratorFromSplineSimple::ATresStaticActorGeneratorFromSplineSimple(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->SpawnActorManager = CreateDefaultSubobject<UTresSpawnActorManagerComponent>(TEXT("SpawnActorManager"));
     this->bDestroyAfterBeginPlay = true;
 }

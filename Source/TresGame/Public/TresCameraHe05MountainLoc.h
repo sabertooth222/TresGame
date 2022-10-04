@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresCameraHe05MountainLoc : public ATresCameraNormalLoc {
     GENERATED_BODY()
 public:
-    ATresCameraHe05MountainLoc();
+    ATresCameraHe05MountainLoc(const FObjectInitializer& ObjectInitializer);
 };
 

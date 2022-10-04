@@ -1,5 +1,5 @@
 #include "TresCameraWall.h"
 
-ATresCameraWall::ATresCameraWall() {
+ATresCameraWall::ATresCameraWall(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

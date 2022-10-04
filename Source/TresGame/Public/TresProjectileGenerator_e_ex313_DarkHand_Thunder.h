@@ -18,6 +18,6 @@ protected:
     UParticleSystem* m_pro_ThunderEffData;
     
 public:
-    ATresProjectileGenerator_e_ex313_DarkHand_Thunder();
+    ATresProjectileGenerator_e_ex313_DarkHand_Thunder(const FObjectInitializer& ObjectInitializer);
 };
 

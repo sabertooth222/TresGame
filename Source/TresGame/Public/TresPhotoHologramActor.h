@@ -204,7 +204,7 @@ private:
     TArray<FTresHologramActorPoseTableInfo> m_PoseTableList;
     
 public:
-    ATresPhotoHologramActor();
+    ATresPhotoHologramActor(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetPose(int32 Index, bool bInit, int32 PresetFacialIndex, int32 PresetWeaponVisibleFlag);
     

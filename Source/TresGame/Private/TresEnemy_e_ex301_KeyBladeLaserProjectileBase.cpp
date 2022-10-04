@@ -1,6 +1,6 @@
 #include "TresEnemy_e_ex301_KeyBladeLaserProjectileBase.h"
 
-ATresEnemy_e_ex301_KeyBladeLaserProjectileBase::ATresEnemy_e_ex301_KeyBladeLaserProjectileBase() {
+ATresEnemy_e_ex301_KeyBladeLaserProjectileBase::ATresEnemy_e_ex301_KeyBladeLaserProjectileBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_ChangeDist = 1000.00f;
     this->m_DirectChange = false;
     this->m_AttackWaitTime = 0.00f;

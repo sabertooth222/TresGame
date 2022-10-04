@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresEnemyRegionPawn_e_ex046 : public ATresCharPawnBase {
     GENERATED_BODY()
 public:
-    ATresEnemyRegionPawn_e_ex046();
+    ATresEnemyRegionPawn_e_ex046(const FObjectInitializer& ObjectInitializer);
 };
 

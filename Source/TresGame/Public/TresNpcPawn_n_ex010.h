@@ -19,6 +19,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_Param_FriendPointMul;
     
-    ATresNpcPawn_n_ex010();
+    ATresNpcPawn_n_ex010(const FObjectInitializer& ObjectInitializer);
 };
 

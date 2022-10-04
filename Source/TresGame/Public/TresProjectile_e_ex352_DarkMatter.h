@@ -50,6 +50,6 @@ protected:
     UParticleSystemComponent* m_PlanetBlasterEffectCmp;
     
 public:
-    ATresProjectile_e_ex352_DarkMatter();
+    ATresProjectile_e_ex352_DarkMatter(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -90,7 +90,7 @@ protected:
     TArray<AActor*> m_DebrisActorArray;
     
 public:
-    ATresEnemyPawn_e_he903();
+    ATresEnemyPawn_e_he903(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsPlayerFloatingMode() const;
     

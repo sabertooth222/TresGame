@@ -27,7 +27,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_Effect_Body;
     
-    ATresGimmickRailSlideExStartActor();
+    ATresGimmickRailSlideExStartActor(const FObjectInitializer& ObjectInitializer);
 protected:
     UFUNCTION(BlueprintCallable)
     void OnChangeRailSlideExStartActorDispType(ETresSavePointDispType InDispType);

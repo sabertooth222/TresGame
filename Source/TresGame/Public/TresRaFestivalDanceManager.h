@@ -471,7 +471,7 @@ private:
     TWeakObjectPtr<USQEXSEADBGMSlotController> m_pBgmSlot;
     
 public:
-    ATresRaFestivalDanceManager();
+    ATresRaFestivalDanceManager(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void UpdateResult(int32 totalScore, int32 nGauge, int32 nGaugeMax);
     

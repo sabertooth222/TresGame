@@ -1,6 +1,6 @@
 #include "TresFriendLinkPawnCallMeteor.h"
 
-ATresFriendLinkPawnCallMeteor::ATresFriendLinkPawnCallMeteor() {
+ATresFriendLinkPawnCallMeteor::ATresFriendLinkPawnCallMeteor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_fFinishRange = 1500.00f;
     this->m_fBaseSpeed = 1500.00f;
     this->m_fWhiteOutTimer = 1.50f;

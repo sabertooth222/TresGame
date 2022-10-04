@@ -33,7 +33,7 @@ protected:
     AActor* m_pBattleAreaActor;
     
 public:
-    ATresEnemyPawn_e_ex731();
+    ATresEnemyPawn_e_ex731(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, BlueprintPure)
     bool ValidateStep(FVector inRootTransOffset) const;
     

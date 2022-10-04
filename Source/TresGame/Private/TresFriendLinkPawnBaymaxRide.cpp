@@ -25,7 +25,7 @@ AActor* ATresFriendLinkPawnBaymaxRide::GetLockonTargetActor() const {
     return NULL;
 }
 
-ATresFriendLinkPawnBaymaxRide::ATresFriendLinkPawnBaymaxRide() {
+ATresFriendLinkPawnBaymaxRide::ATresFriendLinkPawnBaymaxRide(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_PlayerCameraBaymaxRide = NULL;
     this->m_PlayerCameraBaymaxRideCombo = NULL;
     this->m_ProjShot = NULL;

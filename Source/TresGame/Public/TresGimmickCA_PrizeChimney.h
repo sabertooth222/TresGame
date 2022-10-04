@@ -36,7 +36,7 @@ protected:
     UParticleSystemComponent* m_SmokeParticleComponent;
     
 public:
-    ATresGimmickCA_PrizeChimney();
+    ATresGimmickCA_PrizeChimney(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     bool TryActivateChimneyGimmick(bool bResetHitPoint);
     

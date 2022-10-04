@@ -14,6 +14,6 @@ private:
     UTresSkeletalMeshComponent* MyMesh;
     
 public:
-    ATresNpcPawn_n_ra201_RollHair();
+    ATresNpcPawn_n_ra201_RollHair(const FObjectInitializer& ObjectInitializer);
 };
 

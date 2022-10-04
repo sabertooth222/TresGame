@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresBTInterface_DecoratorNativeRangeCheck : public ATresBTInterface_DecoratorNativeBase {
     GENERATED_BODY()
 public:
-    ATresBTInterface_DecoratorNativeRangeCheck();
+    ATresBTInterface_DecoratorNativeRangeCheck(const FObjectInitializer& ObjectInitializer);
 };
 

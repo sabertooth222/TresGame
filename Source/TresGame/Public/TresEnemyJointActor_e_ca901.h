@@ -13,6 +13,6 @@ private:
     TArray<FTresEnemyPawn_e_ca901_JointParam> m_JointParam;
     
 public:
-    ATresEnemyJointActor_e_ca901();
+    ATresEnemyJointActor_e_ca901(const FObjectInitializer& ObjectInitializer);
 };
 

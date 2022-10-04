@@ -1,5 +1,5 @@
 #include "TresSpawnPointDisableVolume.h"
 
-ATresSpawnPointDisableVolume::ATresSpawnPointDisableVolume() {
+ATresSpawnPointDisableVolume::ATresSpawnPointDisableVolume(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

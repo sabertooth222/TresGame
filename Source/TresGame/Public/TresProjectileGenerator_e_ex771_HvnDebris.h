@@ -23,6 +23,6 @@ protected:
     TSubclassOf<ATresProjectile_e_ex771_DebrisAttract> m_pro_DebrisAttractClass;
     
 public:
-    ATresProjectileGenerator_e_ex771_HvnDebris();
+    ATresProjectileGenerator_e_ex771_HvnDebris(const FObjectInitializer& ObjectInitializer);
 };
 

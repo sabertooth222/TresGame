@@ -31,7 +31,7 @@ protected:
     float m_SwitchNavMapTime;
     
 public:
-    ATresPlayerStart();
+    ATresPlayerStart(const FObjectInitializer& ObjectInitializer);
     
     // Fix for true pure virtual functions not being implemented
 };

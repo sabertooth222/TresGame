@@ -7,6 +7,6 @@ UCLASS(Blueprintable, HideDropdown)
 class ATresProjectile_e_ex304_SparkBomb : public ATresProjectileBase {
     GENERATED_BODY()
 public:
-    ATresProjectile_e_ex304_SparkBomb();
+    ATresProjectile_e_ex304_SparkBomb(const FObjectInitializer& ObjectInitializer);
 };
 

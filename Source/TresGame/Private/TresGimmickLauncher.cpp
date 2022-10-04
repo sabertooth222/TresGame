@@ -58,7 +58,7 @@ void ATresGimmickLauncher::CancelLaunch() {
 void ATresGimmickLauncher::CallTakeDamageForLauncher() {
 }
 
-ATresGimmickLauncher::ATresGimmickLauncher() {
+ATresGimmickLauncher::ATresGimmickLauncher(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->SignEffect = CreateDefaultSubobject<UParticleSystemComponent>(TEXT("SignEffectComp"));
     this->m_LaunchHeight = 2000.00f;
     this->m_DisableIdleAnim = false;

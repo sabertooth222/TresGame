@@ -59,7 +59,7 @@ void ATresCameraNormal::BP_EnableMoveRotation(bool bEnable) {
 void ATresCameraNormal::BP_EnableLockonMoveRotation(bool bEnable) {
 }
 
-ATresCameraNormal::ATresCameraNormal() {
+ATresCameraNormal::ATresCameraNormal(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_LimitPitchMin = -70.00f;
     this->m_LimitPitchMax = 50.00f;
     this->m_LimitYawMax = 0.00f;

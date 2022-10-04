@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresFieldManager_e_ex357_Target : public ATresFieldManager_e_ex357_Base {
     GENERATED_BODY()
 public:
-    ATresFieldManager_e_ex357_Target();
+    ATresFieldManager_e_ex357_Target(const FObjectInitializer& ObjectInitializer);
 };
 

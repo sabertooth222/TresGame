@@ -4,7 +4,7 @@ FRotator ATresFriendLinkPawnBlizzagaBoard::BP_GetRotationToBlizzagaBoardTarget()
     return FRotator{};
 }
 
-ATresFriendLinkPawnBlizzagaBoard::ATresFriendLinkPawnBlizzagaBoard() {
+ATresFriendLinkPawnBlizzagaBoard::ATresFriendLinkPawnBlizzagaBoard(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_ProjExp = NULL;
     this->m_Param_TackleSpeedFirst = 0.00f;
     this->m_Param_TackleSpeedAdd = 20000.00f;

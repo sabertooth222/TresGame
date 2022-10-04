@@ -10,6 +10,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fReduceRatio;
     
-    ATresProjectile_e_ex072_FrillPowder();
+    ATresProjectile_e_ex072_FrillPowder(const FObjectInitializer& ObjectInitializer);
 };
 

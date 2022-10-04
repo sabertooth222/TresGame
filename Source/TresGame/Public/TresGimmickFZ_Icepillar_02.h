@@ -30,7 +30,7 @@ public:
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresGimmickFZ_Icepillar_02_OnNotifyGimmickEscapeSignature OnNotifyGimmickEscape;
     
-    ATresGimmickFZ_Icepillar_02();
+    ATresGimmickFZ_Icepillar_02(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BPEV_OnNotifyGimmickEscape();
     

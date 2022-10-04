@@ -31,6 +31,6 @@ protected:
     ATresRailSlideActor* m_PrevPutRailSlideActor;
     
 public:
-    ATresProj_MagicBlizzard();
+    ATresProj_MagicBlizzard(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -39,7 +39,7 @@ void ATresGumiShipBattleVolume::_OnEnterBattleArea(UPrimitiveComponent* Overlapp
 void ATresGumiShipBattleVolume::_OnEnemyGroupWipeOut(const FTresGumiShipEnemyGroupWipeOutData& rEnemyGroupWipeOutData) {
 }
 
-ATresGumiShipBattleVolume::ATresGumiShipBattleVolume() {
+ATresGumiShipBattleVolume::ATresGumiShipBattleVolume(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_fEnemySpawnAreaRadius = 1000.00f;
     this->m_fEnemyDisappearTriggerRadiusRate = 1.25f;
     this->m_fNeedEnemyDisappearTime = 5.00f;

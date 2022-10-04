@@ -16,6 +16,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AActor* m_ActionPoint;
     
-    ATresTriggerVolumeFriendNpc();
+    ATresTriggerVolumeFriendNpc(const FObjectInitializer& ObjectInitializer);
 };
 

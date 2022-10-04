@@ -15,7 +15,7 @@ float ATresEnemyPawn_e_ex203::GetSlapMotionBlendRate() const {
 void ATresEnemyPawn_e_ex203::DebugSpawnCoopPawn() {
 }
 
-ATresEnemyPawn_e_ex203::ATresEnemyPawn_e_ex203() {
+ATresEnemyPawn_e_ex203::ATresEnemyPawn_e_ex203(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->SuctionAttachComponent = CreateDefaultSubobject<USceneComponent>(TEXT("SuctionAttachComponent"));
     this->EatCheckComponent = CreateDefaultSubobject<USceneComponent>(TEXT("EatCheckComponent"));
     this->CoopTargetComponent = CreateDefaultSubobject<USceneComponent>(TEXT("CoopTargetComponent"));

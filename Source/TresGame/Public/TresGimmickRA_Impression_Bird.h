@@ -137,7 +137,7 @@ private:
     TArray<FTresRaGimmickBird> m_BirdList;
     
 public:
-    ATresGimmickRA_Impression_Bird();
+    ATresGimmickRA_Impression_Bird(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void StartMission();
     

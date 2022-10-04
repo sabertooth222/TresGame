@@ -11,7 +11,7 @@ int32 ATresGumiShipEnemy620_1Pawn::_LaserSaveTime() {
     return 0;
 }
 
-ATresGumiShipEnemy620_1Pawn::ATresGumiShipEnemy620_1Pawn() {
+ATresGumiShipEnemy620_1Pawn::ATresGumiShipEnemy620_1Pawn(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_pMissileVFX = NULL;
     this->m_pDepletionVFX = NULL;
     this->m_pRingVFX = NULL;

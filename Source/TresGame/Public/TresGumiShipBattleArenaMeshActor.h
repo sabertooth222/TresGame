@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresGumiShipBattleArenaMeshActor : public AStaticMeshActor {
     GENERATED_BODY()
 public:
-    ATresGumiShipBattleArenaMeshActor();
+    ATresGumiShipBattleArenaMeshActor(const FObjectInitializer& ObjectInitializer);
 };
 

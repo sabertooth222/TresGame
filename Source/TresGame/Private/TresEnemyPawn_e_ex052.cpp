@@ -65,7 +65,7 @@ int32 ATresEnemyPawn_e_ex052::CreateChildren(const int32 CreateNum) {
     return 0;
 }
 
-ATresEnemyPawn_e_ex052::ATresEnemyPawn_e_ex052() {
+ATresEnemyPawn_e_ex052::ATresEnemyPawn_e_ex052(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_bBigPudding = false;
     this->m_Score = 10;
     this->m_MoveSpeedMax = 600.00f;

@@ -7,7 +7,7 @@ void ATresEnemyPawn_e_ex113::SpawnChild() {
 void ATresEnemyPawn_e_ex113::DebugSetCoopNumProjectile(int32 Num) {
 }
 
-ATresEnemyPawn_e_ex113::ATresEnemyPawn_e_ex113() {
+ATresEnemyPawn_e_ex113::ATresEnemyPawn_e_ex113(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->ThornMesh = CreateDefaultSubobject<UTresSkeletalMeshComponent>(TEXT("ThornMesh"));
     this->m_WarpDitherInterpTime = 0.00f;
 }

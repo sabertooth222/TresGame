@@ -11,7 +11,7 @@ void ATresTreeJumpActor_Common::OnEndOverlap(UPrimitiveComponent* OverlappedComp
 void ATresTreeJumpActor_Common::OnBeginOverlap(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult) {
 }
 
-ATresTreeJumpActor_Common::ATresTreeJumpActor_Common() {
+ATresTreeJumpActor_Common::ATresTreeJumpActor_Common(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->SceneComponent = CreateDefaultSubobject<USceneComponent>(TEXT("SceneComponent0"));
     this->BoxComponent = CreateDefaultSubobject<UBoxComponent>(TEXT("BoxComponent0"));
     this->OverlapBox = CreateDefaultSubobject<UBoxComponent>(TEXT("BoxComponent1"));

@@ -1,6 +1,6 @@
 #include "TresEnemyPawn_e_ex367_Ascension.h"
 
-ATresEnemyPawn_e_ex367_Ascension::ATresEnemyPawn_e_ex367_Ascension() {
+ATresEnemyPawn_e_ex367_Ascension::ATresEnemyPawn_e_ex367_Ascension(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_MagicCircleEffData = NULL;
     this->m_NormalMagicCircleEffData = NULL;
     this->m_RadialParticleData = NULL;

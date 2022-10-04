@@ -12,6 +12,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UStaticMeshComponent* StaticMeshComponent;
     
-    ATresLtBase();
+    ATresLtBase(const FObjectInitializer& ObjectInitializer);
 };
 

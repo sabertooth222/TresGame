@@ -12,6 +12,6 @@ private:
     float m_EnableHomingSpeed;
     
 public:
-    ATresProjectile_e_ex701_FlameBulletHop();
+    ATresProjectile_e_ex701_FlameBulletHop(const FObjectInitializer& ObjectInitializer);
 };
 

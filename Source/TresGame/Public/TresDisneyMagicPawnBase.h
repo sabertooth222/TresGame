@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresDisneyMagicPawnBase : public ATresAccompanyPawnBase {
     GENERATED_BODY()
 public:
-    ATresDisneyMagicPawnBase();
+    ATresDisneyMagicPawnBase(const FObjectInitializer& ObjectInitializer);
 };
 

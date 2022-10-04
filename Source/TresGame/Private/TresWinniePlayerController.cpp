@@ -1,5 +1,5 @@
 #include "TresWinniePlayerController.h"
 
-ATresWinniePlayerController::ATresWinniePlayerController() {
+ATresWinniePlayerController::ATresWinniePlayerController(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

@@ -1,5 +1,5 @@
 #include "TresGumiShipTriggerCapsule.h"
 
-ATresGumiShipTriggerCapsule::ATresGumiShipTriggerCapsule() {
+ATresGumiShipTriggerCapsule::ATresGumiShipTriggerCapsule(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

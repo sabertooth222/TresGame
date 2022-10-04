@@ -12,6 +12,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ASQEX_SplineActor* m_LinkSplineActor;
     
-    ATresCameraPathSplineLinkActor();
+    ATresCameraPathSplineLinkActor(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresGumiShipEnemyTerritoryPoint : public ATargetPoint {
     GENERATED_BODY()
 public:
-    ATresGumiShipEnemyTerritoryPoint();
+    ATresGumiShipEnemyTerritoryPoint(const FObjectInitializer& ObjectInitializer);
 };
 

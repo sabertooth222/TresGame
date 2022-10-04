@@ -18,7 +18,7 @@ private:
     FTresSpawnHandParam_e_ex702 m_ModeChangeHandSpawnParam;
     
 public:
-    ATresEnemyPawn_e_ex702();
+    ATresEnemyPawn_e_ex702(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     int32 GetNumTarHand() const;
     

@@ -12,6 +12,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USpotLightComponent* MySpotLight;
     
-    ATresEventSpotLightPawn();
+    ATresEventSpotLightPawn(const FObjectInitializer& ObjectInitializer);
 };
 

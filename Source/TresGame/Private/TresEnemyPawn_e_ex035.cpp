@@ -39,7 +39,7 @@ ETresBadStatusType ATresEnemyPawn_e_ex035::GetBadStatus_e_ex035() const {
     return ETresBadStatusType::TRES_BADSTAT_NONE;
 }
 
-ATresEnemyPawn_e_ex035::ATresEnemyPawn_e_ex035() {
+ATresEnemyPawn_e_ex035::ATresEnemyPawn_e_ex035(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->AttachObject = NULL;
     this->ReserveActorClass = NULL;
     this->m_fGravityScale = 1.00f;

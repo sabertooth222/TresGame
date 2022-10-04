@@ -23,7 +23,7 @@ protected:
     ATresAccessory_e_ex036_WaterBallManager* m_WaterBallManager;
     
 public:
-    ATresEnemyPawn_e_ex036();
+    ATresEnemyPawn_e_ex036(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     bool IsMagicSquare();
     

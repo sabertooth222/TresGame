@@ -1,5 +1,5 @@
 #include "TresEncountSubEQSVolume.h"
 
-ATresEncountSubEQSVolume::ATresEncountSubEQSVolume() {
+ATresEncountSubEQSVolume::ATresEncountSubEQSVolume(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

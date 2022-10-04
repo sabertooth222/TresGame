@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable)
 class ATres_e_ex773_ReverseFlareShotMan : public AActor {
     GENERATED_BODY()
 public:
-    ATres_e_ex773_ReverseFlareShotMan();
+    ATres_e_ex773_ReverseFlareShotMan(const FObjectInitializer& ObjectInitializer);
 };
 

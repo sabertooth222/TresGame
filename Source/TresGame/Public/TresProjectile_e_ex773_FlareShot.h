@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable)
 class ATresProjectile_e_ex773_FlareShot : public ATresProjectileBase {
     GENERATED_BODY()
 public:
-    ATresProjectile_e_ex773_FlareShot();
+    ATresProjectile_e_ex773_FlareShot(const FObjectInitializer& ObjectInitializer);
 };
 

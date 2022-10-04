@@ -36,6 +36,6 @@ private:
     ATresEnemyPawn_e_ex781_GunShotMarker* m_EndBeam;
     
 public:
-    ATresGenerator_e_ex781_GunShotMarker();
+    ATresGenerator_e_ex781_GunShotMarker(const FObjectInitializer& ObjectInitializer);
 };
 

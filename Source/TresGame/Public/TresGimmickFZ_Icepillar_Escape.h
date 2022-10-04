@@ -11,7 +11,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_PersonalSpaceRadius;
     
-    ATresGimmickFZ_Icepillar_Escape();
+    ATresGimmickFZ_Icepillar_Escape(const FObjectInitializer& ObjectInitializer);
     
     // Fix for true pure virtual functions not being implemented
 };

@@ -23,7 +23,7 @@ protected:
     bool m_bEnableMove;
     
 public:
-    ATresGimmickCA_MovableFishBase();
+    ATresGimmickCA_MovableFishBase(const FObjectInitializer& ObjectInitializer);
 protected:
     UFUNCTION(BlueprintCallable)
     void SetSplineActor(ASQEX_SplineActor* Actor, bool bAutoMoveStart);

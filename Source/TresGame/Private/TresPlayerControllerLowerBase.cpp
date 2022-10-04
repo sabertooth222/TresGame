@@ -54,7 +54,7 @@ void ATresPlayerControllerLowerBase::DebugCameraShutOutFade(bool bEnable) {
 void ATresPlayerControllerLowerBase::DebugCameraCollCheck(uint8 EnableNo) {
 }
 
-ATresPlayerControllerLowerBase::ATresPlayerControllerLowerBase() {
+ATresPlayerControllerLowerBase::ATresPlayerControllerLowerBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_pCameraManager = NULL;
     this->m_pCameraDebug = NULL;
 }

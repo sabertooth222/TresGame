@@ -112,6 +112,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_NextCaptureStartTime;
     
-    ATresEnemyPawn_e_ex725();
+    ATresEnemyPawn_e_ex725(const FObjectInitializer& ObjectInitializer);
 };
 

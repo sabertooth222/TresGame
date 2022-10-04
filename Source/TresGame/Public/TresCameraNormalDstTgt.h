@@ -32,7 +32,7 @@ protected:
     AActor* m_DistanceTarget;
     
 public:
-    ATresCameraNormalDstTgt();
+    ATresCameraNormalDstTgt(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     static ATresCameraNormalDstTgt* BP_SpawnTresCameraNormalDstTgt(UObject* WorldContextObject, TSubclassOf<ATresCameraNormalDstTgt> CameraClass, const FName CameraName);
     

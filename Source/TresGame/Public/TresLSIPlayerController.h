@@ -8,7 +8,7 @@ UCLASS(Blueprintable)
 class ATresLSIPlayerController : public APlayerController, public ITresControllerInterface {
     GENERATED_BODY()
 public:
-    ATresLSIPlayerController();
+    ATresLSIPlayerController(const FObjectInitializer& ObjectInitializer);
     
     // Fix for true pure virtual functions not being implemented
 };

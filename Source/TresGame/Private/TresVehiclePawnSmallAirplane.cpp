@@ -4,7 +4,7 @@
 void ATresVehiclePawnSmallAirplane::OnStartBossDefeatEffect() {
 }
 
-ATresVehiclePawnSmallAirplane::ATresVehiclePawnSmallAirplane() {
+ATresVehiclePawnSmallAirplane::ATresVehiclePawnSmallAirplane(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_ProjVulcan = NULL;
     this->m_ProjMissile = NULL;
     this->m_Param_InputPower = 3.00f;

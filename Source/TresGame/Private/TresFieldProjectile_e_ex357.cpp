@@ -1,7 +1,7 @@
 #include "TresFieldProjectile_e_ex357.h"
 #include "TresBodyCollComponent.h"
 
-ATresFieldProjectile_e_ex357::ATresFieldProjectile_e_ex357() {
+ATresFieldProjectile_e_ex357::ATresFieldProjectile_e_ex357(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MyBodyColl = CreateDefaultSubobject<UTresBodyCollComponent>(TEXT("MyBodyColl"));
     this->m_Radius = 0.00f;
     this->m_EnableSpawnProjectileTurnTarget = true;

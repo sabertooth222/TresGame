@@ -1,5 +1,5 @@
 #include "TresProjectileManager.h"
 
-ATresProjectileManager::ATresProjectileManager() {
+ATresProjectileManager::ATresProjectileManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

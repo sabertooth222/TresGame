@@ -627,7 +627,7 @@ void ATresPlayerControllerBase::BP_EndManualLockon() {
 void ATresPlayerControllerBase::BP_DebugAbilityEnable(bool InEnable) {
 }
 
-ATresPlayerControllerBase::ATresPlayerControllerBase() {
+ATresPlayerControllerBase::ATresPlayerControllerBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_bDebugProjectileInfo = false;
     this->m_bDebugShowPlayerCollisionCheck = false;
     this->m_bDebugPlayerNoCheckAutoRun = false;

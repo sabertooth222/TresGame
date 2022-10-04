@@ -34,7 +34,7 @@ FRotator ATresEnemyPawn_e_ex044::FindRotationBetweenVectors(const FVector& From,
 void ATresEnemyPawn_e_ex044::ActivatePoleComp(bool bActive) {
 }
 
-ATresEnemyPawn_e_ex044::ATresEnemyPawn_e_ex044() {
+ATresEnemyPawn_e_ex044::ATresEnemyPawn_e_ex044(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_fHeight = 0.00f;
     this->m_fYaw = 0.00f;
     this->m_fPitch = 0.00f;

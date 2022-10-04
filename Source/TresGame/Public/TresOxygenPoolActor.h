@@ -18,6 +18,6 @@ private:
     UParticleSystemComponent* MyParticle;
     
 public:
-    ATresOxygenPoolActor();
+    ATresOxygenPoolActor(const FObjectInitializer& ObjectInitializer);
 };
 

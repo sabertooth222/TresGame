@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresAIPoint_e_ex353_ShieldSpawnLocation : public ATresAIPoint {
     GENERATED_BODY()
 public:
-    ATresAIPoint_e_ex353_ShieldSpawnLocation();
+    ATresAIPoint_e_ex353_ShieldSpawnLocation(const FObjectInitializer& ObjectInitializer);
 };
 

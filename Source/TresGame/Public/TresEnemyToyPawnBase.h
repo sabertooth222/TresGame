@@ -36,7 +36,7 @@ protected:
     float m_ShootingRideDamageSideBrake;
     
 public:
-    ATresEnemyToyPawnBase();
+    ATresEnemyToyPawnBase(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void EndToyWaitMode();
     

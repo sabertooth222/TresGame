@@ -10,7 +10,7 @@ void ATresEnemyPawn_e_ex363_DarkRush::OnPullCollisionEndOverlap(UPrimitiveCompon
 void ATresEnemyPawn_e_ex363_DarkRush::OnPullCollisionBeginOverlap(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult) {
 }
 
-ATresEnemyPawn_e_ex363_DarkRush::ATresEnemyPawn_e_ex363_DarkRush() {
+ATresEnemyPawn_e_ex363_DarkRush::ATresEnemyPawn_e_ex363_DarkRush(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_BulletProjectile = NULL;
     this->m_LoopBulletProjectile = NULL;
     this->m_DarkTornadoParticleData = NULL;

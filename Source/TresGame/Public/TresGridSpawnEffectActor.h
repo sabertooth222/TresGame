@@ -38,7 +38,7 @@ public:
     UPROPERTY(EditAnywhere, Export)
     TArray<TWeakObjectPtr<UParticleSystemComponent>> PSCs;
     
-    ATresGridSpawnEffectActor();
+    ATresGridSpawnEffectActor(const FObjectInitializer& ObjectInitializer);
 protected:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetSpawnEffectIndex();

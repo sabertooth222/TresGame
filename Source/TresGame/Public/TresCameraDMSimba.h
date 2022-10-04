@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresCameraDMSimba : public ATresCameraDMBase {
     GENERATED_BODY()
 public:
-    ATresCameraDMSimba();
+    ATresCameraDMSimba(const FObjectInitializer& ObjectInitializer);
 };
 

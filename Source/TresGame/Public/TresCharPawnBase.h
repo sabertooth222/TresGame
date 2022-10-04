@@ -302,7 +302,7 @@ protected:
     USQEXSEADAutoSeComponentCallbackDefault* MyAutoSeCallback;
     
 public:
-    ATresCharPawnBase();
+    ATresCharPawnBase(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetStopAI(bool bStop);
     

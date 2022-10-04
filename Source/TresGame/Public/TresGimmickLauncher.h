@@ -54,7 +54,7 @@ protected:
     bool DisableIK;
     
 public:
-    ATresGimmickLauncher();
+    ATresGimmickLauncher(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetTickEnableBP(bool bTickEnableBP, int32 bit);
     

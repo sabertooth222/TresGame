@@ -12,6 +12,6 @@ protected:
     float m_ReflectedBulletSpeed;
     
 public:
-    ATresProjectile_e_ex325_DarkVolley();
+    ATresProjectile_e_ex325_DarkVolley(const FObjectInitializer& ObjectInitializer);
 };
 

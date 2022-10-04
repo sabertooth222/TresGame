@@ -4,7 +4,7 @@ FRotator ATresFriendLinkPawnPromiseWings::BP_GetRotationToPromiseWingsTarget() c
     return FRotator{};
 }
 
-ATresFriendLinkPawnPromiseWings::ATresFriendLinkPawnPromiseWings() {
+ATresFriendLinkPawnPromiseWings::ATresFriendLinkPawnPromiseWings(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_Param_TackleSpeedFirst = 0.00f;
     this->m_Param_TackleSpeedAdd = 20000.00f;
     this->m_Param_TackleSpeedMax = 3500.00f;

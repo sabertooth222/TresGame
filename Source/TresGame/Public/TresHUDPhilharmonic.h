@@ -28,6 +28,6 @@ private:
     UTresUIManager* m_UIManager;
     
 public:
-    ATresHUDPhilharmonic();
+    ATresHUDPhilharmonic(const FObjectInitializer& ObjectInitializer);
 };
 

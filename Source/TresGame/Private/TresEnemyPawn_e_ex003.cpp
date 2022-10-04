@@ -19,7 +19,7 @@ float ATresEnemyPawn_e_ex003::GetFullBody2BlendRate() const {
     return 0.0f;
 }
 
-ATresEnemyPawn_e_ex003::ATresEnemyPawn_e_ex003() {
+ATresEnemyPawn_e_ex003::ATresEnemyPawn_e_ex003(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_MeteorMoveSpeed = 1600.00f;
     this->m_EffDataAsset = NULL;
     this->m_pro_ChangeFlameMaterialTime = 1.00f;

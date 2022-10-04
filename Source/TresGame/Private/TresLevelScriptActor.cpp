@@ -121,7 +121,7 @@ void ATresLevelScriptActor::ClearAssets(FName AssetTag) {
 void ATresLevelScriptActor::CauseLevelEntityEvent(FName EventName) {
 }
 
-ATresLevelScriptActor::ATresLevelScriptActor() {
+ATresLevelScriptActor::ATresLevelScriptActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->VisibleExecNum = 0;
     this->VisibleCompleteFrame = 30;
     this->m_LevelVisibleType = ETresLevelVisibility::Default;

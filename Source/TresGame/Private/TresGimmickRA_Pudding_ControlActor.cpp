@@ -6,7 +6,7 @@ class UTresReactorComponent;
 void ATresGimmickRA_Pudding_ControlActor::OnReactorCommand(ATresCharPawnBase* CommandCauser, TEnumAsByte<ETresCommandKind> CommandID, UTresReactorComponent* ReactorComponent) {
 }
 
-ATresGimmickRA_Pudding_ControlActor::ATresGimmickRA_Pudding_ControlActor() {
+ATresGimmickRA_Pudding_ControlActor::ATresGimmickRA_Pudding_ControlActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->WanderPudding = false;
     this->WanderRange = 0.00f;
     this->WanderReactRange = 0.00f;

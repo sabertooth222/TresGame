@@ -16,6 +16,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* m_ShotSpawnEffectComp;
     
-    ATresProjectile_e_ex354_ArtemaWarpShot();
+    ATresProjectile_e_ex354_ArtemaWarpShot(const FObjectInitializer& ObjectInitializer);
 };
 

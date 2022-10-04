@@ -24,7 +24,7 @@ public:
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresMapJumpTriggerBoxSignature OnMapJump;
     
-    ATresMapJumpTriggerBox();
+    ATresMapJumpTriggerBox(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void InvokeMapJump();
     

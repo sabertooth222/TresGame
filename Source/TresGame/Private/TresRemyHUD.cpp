@@ -1,6 +1,6 @@
 #include "TresRemyHUD.h"
 
-ATresRemyHUD::ATresRemyHUD() {
+ATresRemyHUD::ATresRemyHUD(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->DebugUMGRef = NULL;
     this->UIAsset = NULL;
     this->m_debugUMG = NULL;

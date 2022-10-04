@@ -12,6 +12,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_WallHitEffData;
     
-    ATresProjectile_e_ex037_Attack1();
+    ATresProjectile_e_ex037_Attack1(const FObjectInitializer& ObjectInitializer);
 };
 

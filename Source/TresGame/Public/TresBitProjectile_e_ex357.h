@@ -17,6 +17,6 @@ private:
     uint8 m_bGroundHitEffectSpawnHitNormal: 1;
     
 public:
-    ATresBitProjectile_e_ex357();
+    ATresBitProjectile_e_ex357(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -119,7 +119,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_Effect_LaserOverHeat;
     
-    ATresGimmickMI_02_LaserArm();
+    ATresGimmickMI_02_LaserArm(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveGimmickReturnArm();
     

@@ -8,7 +8,7 @@ bool ATresEnemyPawn_e_ex360::IsKeyBladeRide() {
     return false;
 }
 
-ATresEnemyPawn_e_ex360::ATresEnemyPawn_e_ex360() {
+ATresEnemyPawn_e_ex360::ATresEnemyPawn_e_ex360(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_KBBoard = NULL;
     this->m_KBBoardTailAttackPawnData = NULL;
     this->m_Avatar = NULL;

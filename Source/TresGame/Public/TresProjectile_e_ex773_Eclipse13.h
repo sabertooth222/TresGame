@@ -26,7 +26,7 @@ protected:
     UTresBodyCollPrimitive* TresBodyCollPrimitive;
     
 public:
-    ATresProjectile_e_ex773_Eclipse13();
+    ATresProjectile_e_ex773_Eclipse13(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     float BPE_ConvertScaleRate(float Rate);
     

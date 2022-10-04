@@ -72,7 +72,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UDataTable* m_RewardsTbl;
     
-    ATresEncountVolume();
+    ATresEncountVolume(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void Stop();
     

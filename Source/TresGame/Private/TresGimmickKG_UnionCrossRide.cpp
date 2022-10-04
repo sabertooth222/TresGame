@@ -93,7 +93,7 @@ bool ATresGimmickKG_UnionCrossRide::AddActionCommandUnionX(TEnumAsByte<ETresComm
     return false;
 }
 
-ATresGimmickKG_UnionCrossRide::ATresGimmickKG_UnionCrossRide() {
+ATresGimmickKG_UnionCrossRide::ATresGimmickKG_UnionCrossRide(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->Sound_Damage = NULL;
     this->Sound_TurnningToAttack = NULL;
     this->Sound_Charge = NULL;

@@ -17,7 +17,7 @@ private:
     USQEX_ParticleAttachDataAsset* m_GroundEffectAttachDataAsset;
     
 public:
-    ATresEnemyPawn_e_ex701();
+    ATresEnemyPawn_e_ex701(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void OnRetrySkip();
     

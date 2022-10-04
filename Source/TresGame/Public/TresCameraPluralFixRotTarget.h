@@ -17,7 +17,7 @@ protected:
     TArray<FRotator> m_Rotations;
     
 public:
-    ATresCameraPluralFixRotTarget();
+    ATresCameraPluralFixRotTarget(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     static ATresCameraPluralFixRotTarget* BP_SpawnTresCameraPluralFixRotTarget(UObject* WorldContextObject, TSubclassOf<ATresCameraPluralFixRotTarget> CameraClass, const FName CameraName);
     

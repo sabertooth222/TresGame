@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresNavMeshAutoSelectionSettingActor : public AActor {
     GENERATED_BODY()
 public:
-    ATresNavMeshAutoSelectionSettingActor();
+    ATresNavMeshAutoSelectionSettingActor(const FObjectInitializer& ObjectInitializer);
 };
 

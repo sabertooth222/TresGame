@@ -15,6 +15,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_HideInterpTime;
     
-    ATresEnemyPawn_e_ex108();
+    ATresEnemyPawn_e_ex108(const FObjectInitializer& ObjectInitializer);
 };
 

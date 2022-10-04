@@ -25,7 +25,7 @@ void ATresBxGimmickCarsManager::OnMovePawnCreate(ATresCharPawnBase* InTargetPawn
 void ATresBxGimmickCarsManager::NotifyChangeGimmickPause(bool bPause) {
 }
 
-ATresBxGimmickCarsManager::ATresBxGimmickCarsManager() {
+ATresBxGimmickCarsManager::ATresBxGimmickCarsManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MyRoot = CreateDefaultSubobject<USceneComponent>(TEXT("MgrRootComponent"));
     this->CarLODIndex = 2;
 }

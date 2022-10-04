@@ -3,7 +3,7 @@
 void ATresCameraMerryGoRound::BP_SetRotationYaw(float Yaw) {
 }
 
-ATresCameraMerryGoRound::ATresCameraMerryGoRound() {
+ATresCameraMerryGoRound::ATresCameraMerryGoRound(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_RotYaw = 30.00f;
     this->m_RotAmplitude = 50.00f;
     this->m_RotFrequency = 0.50f;

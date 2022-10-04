@@ -16,7 +16,7 @@ float ATresEnemyPawn_e_he902::BP_GetLegFixRate_L() const {
     return 0.0f;
 }
 
-ATresEnemyPawn_e_he902::ATresEnemyPawn_e_he902() {
+ATresEnemyPawn_e_he902::ATresEnemyPawn_e_he902(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_LegFixBoneName_L = TEXT("L_ashi");
     this->m_LegFixBoneName_R = TEXT("R_ashi");
 }

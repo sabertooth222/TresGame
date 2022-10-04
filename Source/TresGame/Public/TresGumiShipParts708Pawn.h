@@ -42,7 +42,7 @@ protected:
     float m_fAdvanceDistance;
     
 public:
-    ATresGumiShipParts708Pawn();
+    ATresGumiShipParts708Pawn(const FObjectInitializer& ObjectInitializer);
 protected:
     UFUNCTION(BlueprintCallable)
     void _OnHitTreasure(UPrimitiveComponent* pHitComponent, AActor* pOtherActor, UPrimitiveComponent* pOtherComp, FVector vNormalImpulse, const FHitResult& rHit);

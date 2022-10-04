@@ -50,6 +50,6 @@ public:
     UPROPERTY(AdvancedDisplay, EditAnywhere)
     uint32 Version;
     
-    ATresStaticEQSItemActor();
+    ATresStaticEQSItemActor(const FObjectInitializer& ObjectInitializer);
 };
 

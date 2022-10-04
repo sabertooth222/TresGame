@@ -1,6 +1,6 @@
 #include "TresProjectile_e_bx901_DarkCubeMineJoint.h"
 
-ATresProjectile_e_bx901_DarkCubeMineJoint::ATresProjectile_e_bx901_DarkCubeMineJoint() {
+ATresProjectile_e_bx901_DarkCubeMineJoint::ATresProjectile_e_bx901_DarkCubeMineJoint(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_JointParticleComp = NULL;
     this->m_BoolArray[0] = 0;
     this->m_BoolArray[1] = 0;

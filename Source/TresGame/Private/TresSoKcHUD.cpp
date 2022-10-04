@@ -1,5 +1,5 @@
 #include "TresSoKcHUD.h"
 
-ATresSoKcHUD::ATresSoKcHUD() {
+ATresSoKcHUD::ATresSoKcHUD(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

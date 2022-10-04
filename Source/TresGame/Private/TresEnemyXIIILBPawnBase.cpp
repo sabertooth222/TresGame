@@ -15,7 +15,7 @@ FRotator ATresEnemyXIIILBPawnBase::GetEQSDotRotator() const {
 void ATresEnemyXIIILBPawnBase::DebugSetDefaultBT() {
 }
 
-ATresEnemyXIIILBPawnBase::ATresEnemyXIIILBPawnBase() {
+ATresEnemyXIIILBPawnBase::ATresEnemyXIIILBPawnBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_WarpFadeInterpTime = 0.20f;
     this->m_bEnableRevengeVoice2D = false;
 }

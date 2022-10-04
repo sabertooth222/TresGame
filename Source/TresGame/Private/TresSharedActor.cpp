@@ -21,7 +21,7 @@ FName ATresSharedActor::GetCameraWorkEventName() const {
 void ATresSharedActor::DestroyFixedCamera() {
 }
 
-ATresSharedActor::ATresSharedActor() {
+ATresSharedActor::ATresSharedActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_pFixedCamera = NULL;
 }
 

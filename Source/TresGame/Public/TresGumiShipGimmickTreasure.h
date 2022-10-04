@@ -42,7 +42,7 @@ protected:
     FName m_DataTableName;
     
 public:
-    ATresGumiShipGimmickTreasure();
+    ATresGumiShipGimmickTreasure(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void GumiShip_Debug_ForcedTermination_TreasureSphere();
     

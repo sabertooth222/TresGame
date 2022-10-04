@@ -1,5 +1,5 @@
 #include "TresCameraDMAriel.h"
 
-ATresCameraDMAriel::ATresCameraDMAriel() {
+ATresCameraDMAriel::ATresCameraDMAriel(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

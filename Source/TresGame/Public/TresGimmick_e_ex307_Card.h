@@ -33,6 +33,6 @@ private:
     float m_HintEffectOffsetDistance;
     
 public:
-    ATresGimmick_e_ex307_Card();
+    ATresGimmick_e_ex307_Card(const FObjectInitializer& ObjectInitializer);
 };
 

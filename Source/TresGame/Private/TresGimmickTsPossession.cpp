@@ -1,5 +1,5 @@
 #include "TresGimmickTsPossession.h"
 
-ATresGimmickTsPossession::ATresGimmickTsPossession() {
+ATresGimmickTsPossession::ATresGimmickTsPossession(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

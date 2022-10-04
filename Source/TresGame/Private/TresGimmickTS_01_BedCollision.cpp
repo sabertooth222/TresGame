@@ -10,7 +10,7 @@ void ATresGimmickTS_01_BedCollision::OnChangeBattleMode(bool bIsBattleMode) {
 void ATresGimmickTS_01_BedCollision::BP_ChangeMaterialToMyMesh(int32 Index, UMaterialInterface* Material) {
 }
 
-ATresGimmickTS_01_BedCollision::ATresGimmickTS_01_BedCollision() {
+ATresGimmickTS_01_BedCollision::ATresGimmickTS_01_BedCollision(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MyRoot = CreateDefaultSubobject<USceneComponent>(TEXT("Scene0"));
     this->MyMesh = CreateDefaultSubobject<UTresStaticMeshComponent>(TEXT("Mesh0"));
     this->MyCollBound = CreateDefaultSubobject<UTresStaticMeshComponent>(TEXT("CollBound0"));

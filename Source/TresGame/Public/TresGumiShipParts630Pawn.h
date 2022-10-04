@@ -23,7 +23,7 @@ protected:
     float m_Zoffset;
     
 public:
-    ATresGumiShipParts630Pawn();
+    ATresGumiShipParts630Pawn(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool _StartAttack(FVector _target);
     

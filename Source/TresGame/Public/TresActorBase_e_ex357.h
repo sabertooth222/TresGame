@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable)
 class ATresActorBase_e_ex357 : public AActor {
     GENERATED_BODY()
 public:
-    ATresActorBase_e_ex357();
+    ATresActorBase_e_ex357(const FObjectInitializer& ObjectInitializer);
 };
 

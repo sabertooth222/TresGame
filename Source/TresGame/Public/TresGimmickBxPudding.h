@@ -112,7 +112,7 @@ protected:
     UTresDebugArrowComponent* m_pDebugArrowComponent;
     
 public:
-    ATresGimmickBxPudding();
+    ATresGimmickBxPudding(const FObjectInitializer& ObjectInitializer);
 private:
     UFUNCTION(BlueprintCallable)
     void SetMoveSpeed(const float Speed);

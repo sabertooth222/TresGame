@@ -3,6 +3,6 @@
 void ATresProjectile_e_ex015_TOYBomb::OnProjectileBounce(const FHitResult& ImpactResult, const FVector& ImpactVelocity) {
 }
 
-ATresProjectile_e_ex015_TOYBomb::ATresProjectile_e_ex015_TOYBomb() {
+ATresProjectile_e_ex015_TOYBomb::ATresProjectile_e_ex015_TOYBomb(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

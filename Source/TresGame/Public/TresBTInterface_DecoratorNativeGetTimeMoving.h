@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresBTInterface_DecoratorNativeGetTimeMoving : public ATresBTInterface_DecoratorNativeBase {
     GENERATED_BODY()
 public:
-    ATresBTInterface_DecoratorNativeGetTimeMoving();
+    ATresBTInterface_DecoratorNativeGetTimeMoving(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -1,7 +1,7 @@
 #include "TresGumiShipMeteoroGenerator.h"
 #include "TresGumiShipAtkCollisionSetCompo.h"
 
-ATresGumiShipMeteoroGenerator::ATresGumiShipMeteoroGenerator() {
+ATresGumiShipMeteoroGenerator::ATresGumiShipMeteoroGenerator(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_FixStartPos = false;
     this->m_pAtkComllision = CreateDefaultSubobject<UTresGumiShipAtkCollisionSetCompo>(TEXT("AtkCollision"));
     this->m_fDistance = 700.00f;

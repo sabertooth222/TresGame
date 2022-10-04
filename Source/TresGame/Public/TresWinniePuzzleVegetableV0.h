@@ -26,6 +26,6 @@ protected:
     UTresWinniePuzzleBossController* BossCtrl;
     
 public:
-    ATresWinniePuzzleVegetableV0();
+    ATresWinniePuzzleVegetableV0(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -25,7 +25,7 @@ protected:
     TWeakObjectPtr<ATresEnemyPawn_e_bx901> m_pDarkBaymaxPawn;
     
 public:
-    ATresEnemy_e_bx901_ActionTriggerVolume();
+    ATresEnemy_e_bx901_ActionTriggerVolume(const FObjectInitializer& ObjectInitializer);
 private:
     UFUNCTION(BlueprintCallable)
     void OnEndOverlap(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);

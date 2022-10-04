@@ -1,5 +1,5 @@
 #include "TresVehiclePawnBase.h"
 
-ATresVehiclePawnBase::ATresVehiclePawnBase() {
+ATresVehiclePawnBase::ATresVehiclePawnBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

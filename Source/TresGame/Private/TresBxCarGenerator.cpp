@@ -3,7 +3,7 @@
 void ATresBxCarGenerator::SetEnableCreateCars(bool Enable) {
 }
 
-ATresBxCarGenerator::ATresBxCarGenerator() {
+ATresBxCarGenerator::ATresBxCarGenerator(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->CarDataAsset = NULL;
     this->splineActor = NULL;
     this->CarSpeed = 1500.00f;

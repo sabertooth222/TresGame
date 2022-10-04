@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresStylePawnBase : public ATresAccompanyPawnBase {
     GENERATED_BODY()
 public:
-    ATresStylePawnBase();
+    ATresStylePawnBase(const FObjectInitializer& ObjectInitializer);
 };
 

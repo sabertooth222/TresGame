@@ -26,6 +26,6 @@ private:
     ATresEnemyPawnBase* m_EndGigas;
     
 public:
-    ATresGenerator_e_ex781_CallGigas();
+    ATresGenerator_e_ex781_CallGigas(const FObjectInitializer& ObjectInitializer);
 };
 

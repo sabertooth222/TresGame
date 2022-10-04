@@ -40,7 +40,7 @@ private:
     ATresCameraNormal* m_Camera;
     
 public:
-    ATresEnemyPawn_e_ex362();
+    ATresEnemyPawn_e_ex362(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     bool IsShowCharacter();
     

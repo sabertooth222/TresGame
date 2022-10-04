@@ -32,6 +32,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_WavePeriod;
     
-    ATresBonamikEmissiveVolume();
+    ATresBonamikEmissiveVolume(const FObjectInitializer& ObjectInitializer);
 };
 

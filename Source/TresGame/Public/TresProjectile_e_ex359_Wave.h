@@ -14,6 +14,6 @@ protected:
     AActor* m_Target;
     
 public:
-    ATresProjectile_e_ex359_Wave();
+    ATresProjectile_e_ex359_Wave(const FObjectInitializer& ObjectInitializer);
 };
 

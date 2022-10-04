@@ -3,7 +3,7 @@
 void ATresProjectile_e_ex110_Dice::OnProjectileBounce(const FHitResult& ImpactResult, const FVector& ImpactVelocity) {
 }
 
-ATresProjectile_e_ex110_Dice::ATresProjectile_e_ex110_Dice() {
+ATresProjectile_e_ex110_Dice::ATresProjectile_e_ex110_Dice(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_DiceEff = NULL;
     this->m_DiceEffData = NULL;
 }

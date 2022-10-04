@@ -12,6 +12,6 @@ public:
     UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     TArray<TWeakObjectPtr<ATresProjectileBase>> m_DarkMineArray;
     
-    ATresProjectileGenerator_e_ex313_DarkMine();
+    ATresProjectileGenerator_e_ex313_DarkMine(const FObjectInitializer& ObjectInitializer);
 };
 

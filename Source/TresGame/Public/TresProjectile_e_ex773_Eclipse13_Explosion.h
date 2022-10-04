@@ -11,7 +11,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 SavedFrame;
     
-    ATresProjectile_e_ex773_Eclipse13_Explosion();
+    ATresProjectile_e_ex773_Eclipse13_Explosion(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BPE_ChangeShootIndex(int32 Index);
     

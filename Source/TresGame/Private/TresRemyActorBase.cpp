@@ -1,5 +1,5 @@
 #include "TresRemyActorBase.h"
 
-ATresRemyActorBase::ATresRemyActorBase() {
+ATresRemyActorBase::ATresRemyActorBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

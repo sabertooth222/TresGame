@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable, Config=Game)
 class ATresGimmickFractureStaticBase : public ATresGimmickStaticBase {
     GENERATED_BODY()
 public:
-    ATresGimmickFractureStaticBase();
+    ATresGimmickFractureStaticBase(const FObjectInitializer& ObjectInitializer);
 };
 

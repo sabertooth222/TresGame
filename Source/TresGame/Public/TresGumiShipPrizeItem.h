@@ -10,6 +10,6 @@ class TRESGAME_API ATresGumiShipPrizeItem : public ATresGumiShipActorBase {
 public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FPrizeItemSignature, FVector, PrizeItemVector);
     
-    ATresGumiShipPrizeItem();
+    ATresGumiShipPrizeItem(const FObjectInitializer& ObjectInitializer);
 };
 

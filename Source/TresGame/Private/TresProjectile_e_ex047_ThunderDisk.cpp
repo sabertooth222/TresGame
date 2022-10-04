@@ -1,6 +1,6 @@
 #include "TresProjectile_e_ex047_ThunderDisk.h"
 
-ATresProjectile_e_ex047_ThunderDisk::ATresProjectile_e_ex047_ThunderDisk() {
+ATresProjectile_e_ex047_ThunderDisk::ATresProjectile_e_ex047_ThunderDisk(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_RotationSpeedMin = 600.00f;
     this->m_RotationSpeedMax = 2000.00f;
     this->m_MoveSpeedMin = 0.00f;

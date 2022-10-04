@@ -18,7 +18,7 @@ protected:
     UTresGumiShipPlayerInputWorker* m_pWorker;
     
 public:
-    ATresGumiShipPlayerControllerBase();
+    ATresGumiShipPlayerControllerBase(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, Exec)
     void ToggleDebugSpeedInfoDraw();
     

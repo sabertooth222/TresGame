@@ -1,6 +1,6 @@
 #include "TresEnemyPawn_e_ex363_RiseRushDurkEffect.h"
 
-ATresEnemyPawn_e_ex363_RiseRushDurkEffect::ATresEnemyPawn_e_ex363_RiseRushDurkEffect() {
+ATresEnemyPawn_e_ex363_RiseRushDurkEffect::ATresEnemyPawn_e_ex363_RiseRushDurkEffect(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_ArielComboParticle = NULL;
     this->m_AttackSignParticle = NULL;
     this->m_FloorOffsetZ = 0.00f;

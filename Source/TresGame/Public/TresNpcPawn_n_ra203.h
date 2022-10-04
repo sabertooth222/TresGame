@@ -14,6 +14,6 @@ protected:
     ATresProjectileBase* m_pProjBarrel;
     
 public:
-    ATresNpcPawn_n_ra203();
+    ATresNpcPawn_n_ra203(const FObjectInitializer& ObjectInitializer);
 };
 

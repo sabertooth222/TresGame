@@ -44,7 +44,7 @@ protected:
     float m_fMaxRotateRoll;
     
 public:
-    ATresGumiShipEnemy620_1Pawn();
+    ATresGumiShipEnemy620_1Pawn(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void _SetPetalTakeDamage(int32 petal_no, float _fTakeDamage);
     

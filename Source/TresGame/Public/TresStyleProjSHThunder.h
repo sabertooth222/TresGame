@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable)
 class ATresStyleProjSHThunder : public ATresProjectileBase {
     GENERATED_BODY()
 public:
-    ATresStyleProjSHThunder();
+    ATresStyleProjSHThunder(const FObjectInitializer& ObjectInitializer);
 };
 

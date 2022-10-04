@@ -1,6 +1,6 @@
 #include "TresWinniePuzzleBucket.h"
 
-ATresWinniePuzzleBucket::ATresWinniePuzzleBucket() {
+ATresWinniePuzzleBucket::ATresWinniePuzzleBucket(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->BucketType = WinniePuzzleBucketType::Normal;
 }
 

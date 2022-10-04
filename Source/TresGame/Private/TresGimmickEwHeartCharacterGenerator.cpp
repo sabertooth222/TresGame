@@ -9,7 +9,7 @@ void ATresGimmickEwHeartCharacterGenerator::SetPreviewActorData(AActor* Actor, U
 void ATresGimmickEwHeartCharacterGenerator::GetPreviewTransformArray(TArray<FTransform>& retTransformArray) {
 }
 
-ATresGimmickEwHeartCharacterGenerator::ATresGimmickEwHeartCharacterGenerator() {
+ATresGimmickEwHeartCharacterGenerator::ATresGimmickEwHeartCharacterGenerator(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->CraeteNum = 1;
     this->GeneratedClass = NULL;
     this->splineActor = NULL;

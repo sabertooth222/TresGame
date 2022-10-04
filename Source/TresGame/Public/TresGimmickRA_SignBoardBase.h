@@ -14,7 +14,7 @@ private:
     UTresReactorComponent* MyReactor;
     
 public:
-    ATresGimmickRA_SignBoardBase();
+    ATresGimmickRA_SignBoardBase(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void OnChangeBattleMode(bool bIsBattleMode);
     

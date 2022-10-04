@@ -17,6 +17,6 @@ private:
     ATresRaFestivalDanceManager* m_pDanceMng;
     
 public:
-    ATresCameraFestivalDance();
+    ATresCameraFestivalDance(const FObjectInitializer& ObjectInitializer);
 };
 

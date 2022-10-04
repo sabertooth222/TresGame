@@ -16,7 +16,7 @@ protected:
     UTresBodyCollComponent* BodyCollComponent;
     
 public:
-    ATresGimmick_Ts03_Crane();
+    ATresGimmick_Ts03_Crane(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetSplineActor(ASQEX_SplineActor* spline);
     

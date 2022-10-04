@@ -21,6 +21,6 @@ private:
     UParticleSystemComponent* m_VanishEffectComponent;
     
 public:
-    ATresProjectile_e_ex007_Arrow();
+    ATresProjectile_e_ex007_Arrow(const FObjectInitializer& ObjectInitializer);
 };
 

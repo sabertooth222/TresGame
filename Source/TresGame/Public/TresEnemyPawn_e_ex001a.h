@@ -42,6 +42,6 @@ private:
     UParticleSystemComponent* m_KairiPieceEffectComp;
     
 public:
-    ATresEnemyPawn_e_ex001a();
+    ATresEnemyPawn_e_ex001a(const FObjectInitializer& ObjectInitializer);
 };
 

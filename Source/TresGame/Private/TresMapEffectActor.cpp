@@ -1,5 +1,5 @@
 #include "TresMapEffectActor.h"
 
-ATresMapEffectActor::ATresMapEffectActor() {
+ATresMapEffectActor::ATresMapEffectActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

@@ -6,7 +6,7 @@ void ATresGimmickBxPuddingManager::NotifyStop() {
 void ATresGimmickBxPuddingManager::NotifyEnableLauncher() {
 }
 
-ATresGimmickBxPuddingManager::ATresGimmickBxPuddingManager() {
+ATresGimmickBxPuddingManager::ATresGimmickBxPuddingManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_bEnableLauncher = false;
 }
 

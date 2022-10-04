@@ -1,6 +1,6 @@
 #include "TresProjectile_e_dw407b_PillarLight.h"
 
-ATresProjectile_e_dw407b_PillarLight::ATresProjectile_e_dw407b_PillarLight() {
+ATresProjectile_e_dw407b_PillarLight::ATresProjectile_e_dw407b_PillarLight(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_PillarLightEffData = NULL;
     this->m_LightMarkEffData = NULL;
     this->m_PillarLightEffCmp = NULL;

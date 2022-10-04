@@ -26,6 +26,6 @@ protected:
     FRotator m_RailShootingRouteAttachRotation;
     
 public:
-    ATresGumiShipEnemyMoveRouteSpline();
+    ATresGumiShipEnemyMoveRouteSpline(const FObjectInitializer& ObjectInitializer);
 };
 

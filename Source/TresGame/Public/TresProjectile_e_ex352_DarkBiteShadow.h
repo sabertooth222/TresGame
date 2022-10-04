@@ -15,7 +15,7 @@ protected:
     UParticleSystem* m_ShadowEffDataForAppearDarkMatter;
     
 public:
-    ATresProjectile_e_ex352_DarkBiteShadow();
+    ATresProjectile_e_ex352_DarkBiteShadow(const FObjectInitializer& ObjectInitializer);
     
     // Fix for true pure virtual functions not being implemented
 };

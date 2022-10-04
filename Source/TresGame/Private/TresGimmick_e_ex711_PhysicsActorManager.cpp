@@ -1,6 +1,6 @@
 #include "TresGimmick_e_ex711_PhysicsActorManager.h"
 
-ATresGimmick_e_ex711_PhysicsActorManager::ATresGimmick_e_ex711_PhysicsActorManager() {
+ATresGimmick_e_ex711_PhysicsActorManager::ATresGimmick_e_ex711_PhysicsActorManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_pro_AthleticFlowRootNum = 2;
     this->m_pro_AthleticFlowOneRootNum = 4;
     this->m_pro_AthleticFlowObjectDistXY = 2000.00f;

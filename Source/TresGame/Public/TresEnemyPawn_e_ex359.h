@@ -72,7 +72,7 @@ protected:
     ATresWeaponBase* m_pWeaponClaymore;
     
 public:
-    ATresEnemyPawn_e_ex359();
+    ATresEnemyPawn_e_ex359(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsNowFinalBrake() const;
     

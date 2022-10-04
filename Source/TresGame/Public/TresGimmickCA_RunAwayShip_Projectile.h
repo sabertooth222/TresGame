@@ -12,6 +12,6 @@ protected:
     float m_CheckPlayerRange;
     
 public:
-    ATresGimmickCA_RunAwayShip_Projectile();
+    ATresGimmickCA_RunAwayShip_Projectile(const FObjectInitializer& ObjectInitializer);
 };
 

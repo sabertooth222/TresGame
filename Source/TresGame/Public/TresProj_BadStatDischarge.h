@@ -14,6 +14,6 @@ protected:
     UParticleSystem* m_HitTailEffect;
     
 public:
-    ATresProj_BadStatDischarge();
+    ATresProj_BadStatDischarge(const FObjectInitializer& ObjectInitializer);
 };
 

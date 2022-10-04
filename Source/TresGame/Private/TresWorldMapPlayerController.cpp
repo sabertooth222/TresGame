@@ -1,5 +1,5 @@
 #include "TresWorldMapPlayerController.h"
 
-ATresWorldMapPlayerController::ATresWorldMapPlayerController() {
+ATresWorldMapPlayerController::ATresWorldMapPlayerController(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

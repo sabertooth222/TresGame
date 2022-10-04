@@ -7,6 +7,6 @@ UCLASS(Blueprintable, Config=Game)
 class ATresGimmickCA_FishBase : public AActor {
     GENERATED_BODY()
 public:
-    ATresGimmickCA_FishBase();
+    ATresGimmickCA_FishBase(const FObjectInitializer& ObjectInitializer);
 };
 

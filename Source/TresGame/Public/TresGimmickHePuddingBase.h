@@ -42,7 +42,7 @@ protected:
     int32 RestHitCount;
     
 public:
-    ATresGimmickHePuddingBase();
+    ATresGimmickHePuddingBase(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetDead(bool Set);
     

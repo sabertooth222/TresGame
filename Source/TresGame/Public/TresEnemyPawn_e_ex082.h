@@ -56,7 +56,7 @@ private:
     FSaveInfo_e_ex082 m_SaveInfo;
     
 public:
-    ATresEnemyPawn_e_ex082();
+    ATresEnemyPawn_e_ex082(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetAppearStateSpecial();
     

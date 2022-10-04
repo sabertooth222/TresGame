@@ -34,7 +34,7 @@ protected:
     FSQEX_SplineMoverExecutor SplineMover;
     
 public:
-    ATresGimmickEwHeartCharacter();
+    ATresGimmickEwHeartCharacter(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetSplineActor(ASQEX_SplineActor* splineActor, float positionRate);
     

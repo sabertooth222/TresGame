@@ -1,5 +1,5 @@
 #include "TresPlayerControllerRiku.h"
 
-ATresPlayerControllerRiku::ATresPlayerControllerRiku() {
+ATresPlayerControllerRiku::ATresPlayerControllerRiku(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

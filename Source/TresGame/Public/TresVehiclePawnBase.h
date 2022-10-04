@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresVehiclePawnBase : public ATresAccompanyPawnBase {
     GENERATED_BODY()
 public:
-    ATresVehiclePawnBase();
+    ATresVehiclePawnBase(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -1,5 +1,5 @@
 #include "TresFriendLinkUtilityPawn.h"
 
-ATresFriendLinkUtilityPawn::ATresFriendLinkUtilityPawn() {
+ATresFriendLinkUtilityPawn::ATresFriendLinkUtilityPawn(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

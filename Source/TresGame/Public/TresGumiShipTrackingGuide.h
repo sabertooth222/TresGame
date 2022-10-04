@@ -20,7 +20,7 @@ private:
     UTresGumiShipFSM* m_pFSM;
     
 public:
-    ATresGumiShipTrackingGuide();
+    ATresGumiShipTrackingGuide(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void GenerateRailSlideActor();
     

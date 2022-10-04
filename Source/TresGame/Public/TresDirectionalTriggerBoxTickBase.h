@@ -18,7 +18,7 @@ protected:
     UTresDebugArrowComponent* DebugArrowComponent;
     
 public:
-    ATresDirectionalTriggerBoxTickBase();
+    ATresDirectionalTriggerBoxTickBase(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetEnableExecute(bool Enable);
     

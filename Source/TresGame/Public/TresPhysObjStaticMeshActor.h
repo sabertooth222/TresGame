@@ -62,7 +62,7 @@ protected:
     TArray<ETresEnemyUniqueID> m_ApplyDamageEnemyUniqueID;
     
 public:
-    ATresPhysObjStaticMeshActor();
+    ATresPhysObjStaticMeshActor(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void StartDisappear(bool bImmediate);
     

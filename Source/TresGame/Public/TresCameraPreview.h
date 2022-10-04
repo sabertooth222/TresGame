@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresCameraPreview : public ATresCameraNormal {
     GENERATED_BODY()
 public:
-    ATresCameraPreview();
+    ATresCameraPreview(const FObjectInitializer& ObjectInitializer);
 };
 

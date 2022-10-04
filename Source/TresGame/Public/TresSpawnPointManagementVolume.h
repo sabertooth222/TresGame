@@ -21,7 +21,7 @@ private:
     TArray<ATresSpawnPointManagementVolume*> m_InnerVolumes;
     
 public:
-    ATresSpawnPointManagementVolume();
+    ATresSpawnPointManagementVolume(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetWeldOuter(bool WeldOuter);
     

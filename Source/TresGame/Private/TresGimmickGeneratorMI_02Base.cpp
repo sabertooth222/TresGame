@@ -30,7 +30,7 @@ ASQEX_SplineActor* ATresGimmickGeneratorMI_02Base::GetSplineActor() {
 void ATresGimmickGeneratorMI_02Base::AccessTriggerVolume(bool In) {
 }
 
-ATresGimmickGeneratorMI_02Base::ATresGimmickGeneratorMI_02Base() {
+ATresGimmickGeneratorMI_02Base::ATresGimmickGeneratorMI_02Base(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_pSplineActor = NULL;
     this->SplineComponent = CreateDefaultSubobject<USplineComponent>(TEXT("SplineComponent"));
     this->InterpSpeedRotate = 10.00f;

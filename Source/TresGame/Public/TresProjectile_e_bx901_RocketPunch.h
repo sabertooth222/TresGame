@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable)
 class ATresProjectile_e_bx901_RocketPunch : public ATresProjectileStaticMeshBase {
     GENERATED_BODY()
 public:
-    ATresProjectile_e_bx901_RocketPunch();
+    ATresProjectile_e_bx901_RocketPunch(const FObjectInitializer& ObjectInitializer);
 };
 

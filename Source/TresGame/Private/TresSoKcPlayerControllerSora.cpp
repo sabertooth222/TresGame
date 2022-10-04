@@ -1,5 +1,5 @@
 #include "TresSoKcPlayerControllerSora.h"
 
-ATresSoKcPlayerControllerSora::ATresSoKcPlayerControllerSora() {
+ATresSoKcPlayerControllerSora::ATresSoKcPlayerControllerSora(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

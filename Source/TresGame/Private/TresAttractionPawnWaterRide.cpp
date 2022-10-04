@@ -21,7 +21,7 @@ float ATresAttractionPawnWaterRide::GetFinishLastDisRate() const {
     return 0.0f;
 }
 
-ATresAttractionPawnWaterRide::ATresAttractionPawnWaterRide() {
+ATresAttractionPawnWaterRide::ATresAttractionPawnWaterRide(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_RoadActorClass = NULL;
     this->m_AppearEff = NULL;
     this->m_EffAssetStart = NULL;

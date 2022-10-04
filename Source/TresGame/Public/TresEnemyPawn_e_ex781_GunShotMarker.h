@@ -49,6 +49,6 @@ private:
     TSubclassOf<ATresProjectileBase> m_BulletProjectile;
     
 public:
-    ATresEnemyPawn_e_ex781_GunShotMarker();
+    ATresEnemyPawn_e_ex781_GunShotMarker(const FObjectInitializer& ObjectInitializer);
 };
 

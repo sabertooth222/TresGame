@@ -1,5 +1,5 @@
 #include "TresLSIPlayerController.h"
 
-ATresLSIPlayerController::ATresLSIPlayerController() {
+ATresLSIPlayerController::ATresLSIPlayerController(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

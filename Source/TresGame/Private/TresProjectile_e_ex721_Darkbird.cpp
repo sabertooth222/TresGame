@@ -3,6 +3,6 @@
 void ATresProjectile_e_ex721_Darkbird::OnTickMove(float InDeltaTime) {
 }
 
-ATresProjectile_e_ex721_Darkbird::ATresProjectile_e_ex721_Darkbird() {
+ATresProjectile_e_ex721_Darkbird::ATresProjectile_e_ex721_Darkbird(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

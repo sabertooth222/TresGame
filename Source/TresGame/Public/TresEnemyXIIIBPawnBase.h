@@ -21,7 +21,7 @@ protected:
     UParticleSystem* m_SmokeCardParticleSystem;
     
 public:
-    ATresEnemyXIIIBPawnBase();
+    ATresEnemyXIIIBPawnBase(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, Exec)
     bool IsStun_e_ex307() const;
     

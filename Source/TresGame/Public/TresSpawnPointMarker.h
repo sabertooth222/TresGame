@@ -12,6 +12,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresSpawnPointManagementVolume* m_ManagementVolume;
     
-    ATresSpawnPointMarker();
+    ATresSpawnPointMarker(const FObjectInitializer& ObjectInitializer);
 };
 

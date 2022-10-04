@@ -17,6 +17,6 @@ protected:
     UCurveFloat* m_EatVelCurve;
     
 public:
-    ATresHitPawnsManager_e_he903();
+    ATresHitPawnsManager_e_he903(const FObjectInitializer& ObjectInitializer);
 };
 

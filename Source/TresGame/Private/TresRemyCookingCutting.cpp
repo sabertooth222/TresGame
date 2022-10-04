@@ -49,7 +49,7 @@ int32 ATresRemyCookingCutting::GetCurrentSliceNum() const {
 void ATresRemyCookingCutting::ChangeState(TEnumAsByte<RemyCookingGameState> State) {
 }
 
-ATresRemyCookingCutting::ATresRemyCookingCutting() {
+ATresRemyCookingCutting::ATresRemyCookingCutting(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->ReloadSuccessParticleRef = NULL;
     this->KnifePawnRef = NULL;
     this->BowlStaticMeshActorRef = NULL;

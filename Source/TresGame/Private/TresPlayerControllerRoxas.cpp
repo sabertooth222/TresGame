@@ -1,5 +1,5 @@
 #include "TresPlayerControllerRoxas.h"
 
-ATresPlayerControllerRoxas::ATresPlayerControllerRoxas() {
+ATresPlayerControllerRoxas::ATresPlayerControllerRoxas(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

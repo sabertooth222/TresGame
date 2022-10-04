@@ -52,7 +52,7 @@ void ATresGumiShipGimmickObjectBase::_OnBodyHit(UPrimitiveComponent* pHitCompone
 void ATresGumiShipGimmickObjectBase::_InitializeHP(const int32 dMaxHp) {
 }
 
-ATresGumiShipGimmickObjectBase::ATresGumiShipGimmickObjectBase() {
+ATresGumiShipGimmickObjectBase::ATresGumiShipGimmickObjectBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_pMeshBase = CreateDefaultSubobject<USceneComponent>(TEXT("MeshBase"));
     this->m_pStaticMesh = CreateDefaultSubobject<UTresStaticMeshComponent>(TEXT("StaticMesh"));
     this->m_pBodyCollision = CreateDefaultSubobject<UTresGumiShipBodyCollisionSetCompo>(TEXT("BodyCollision"));

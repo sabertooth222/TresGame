@@ -20,6 +20,6 @@ protected:
     TArray<FEX354_ClusterShotHitActorInfo> m_ClusterShotHitActorInfoArray;
     
 public:
-    ATresProjectile_e_ex354_ClusterShotManager();
+    ATresProjectile_e_ex354_ClusterShotManager(const FObjectInitializer& ObjectInitializer);
 };
 

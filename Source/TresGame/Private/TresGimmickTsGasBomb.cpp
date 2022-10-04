@@ -1,5 +1,5 @@
 #include "TresGimmickTsGasBomb.h"
 
-ATresGimmickTsGasBomb::ATresGimmickTsGasBomb() {
+ATresGimmickTsGasBomb::ATresGimmickTsGasBomb(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

@@ -10,6 +10,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 m_bDisableNegativeVoiceMovementTick: 1;
     
-    ATresEnemyPawn_e_dw405_Avatar();
+    ATresEnemyPawn_e_dw405_Avatar(const FObjectInitializer& ObjectInitializer);
 };
 

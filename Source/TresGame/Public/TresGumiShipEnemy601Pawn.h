@@ -12,6 +12,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTresGumiShipAtkCollisionSetCompo* m_pRushAtkCollision;
     
-    ATresGumiShipEnemy601Pawn();
+    ATresGumiShipEnemy601Pawn(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -1,5 +1,5 @@
 #include "TresRaFestivalDanceSplineActor.h"
 
-ATresRaFestivalDanceSplineActor::ATresRaFestivalDanceSplineActor() {
+ATresRaFestivalDanceSplineActor::ATresRaFestivalDanceSplineActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

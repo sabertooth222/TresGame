@@ -18,6 +18,6 @@ void ATresItemSynthesisChecker::ExcuteItemCollectTest(const FName rowId) const {
 void ATresItemSynthesisChecker::CheckAllDataTableValidation() const {
 }
 
-ATresItemSynthesisChecker::ATresItemSynthesisChecker() {
+ATresItemSynthesisChecker::ATresItemSynthesisChecker(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

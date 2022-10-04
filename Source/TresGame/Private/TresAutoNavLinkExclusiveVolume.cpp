@@ -1,5 +1,5 @@
 #include "TresAutoNavLinkExclusiveVolume.h"
 
-ATresAutoNavLinkExclusiveVolume::ATresAutoNavLinkExclusiveVolume() {
+ATresAutoNavLinkExclusiveVolume::ATresAutoNavLinkExclusiveVolume(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

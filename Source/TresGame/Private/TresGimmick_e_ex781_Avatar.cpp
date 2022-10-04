@@ -1,6 +1,6 @@
 #include "TresGimmick_e_ex781_Avatar.h"
 
-ATresGimmick_e_ex781_Avatar::ATresGimmick_e_ex781_Avatar() {
+ATresGimmick_e_ex781_Avatar::ATresGimmick_e_ex781_Avatar(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_AfterImage = NULL;
     this->m_ActionAvatar = NULL;
     this->m_LastAction = NULL;

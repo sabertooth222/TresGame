@@ -17,6 +17,6 @@ protected:
     UParticleSystem* m_pChargeLongVFX;
     
 public:
-    ATresGumiShipParts703Pawn();
+    ATresGumiShipParts703Pawn(const FObjectInitializer& ObjectInitializer);
 };
 

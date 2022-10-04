@@ -1,5 +1,5 @@
 #include "TresEnemyXIIILBCoopPawnBase.h"
 
-ATresEnemyXIIILBCoopPawnBase::ATresEnemyXIIILBCoopPawnBase() {
+ATresEnemyXIIILBCoopPawnBase::ATresEnemyXIIILBCoopPawnBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

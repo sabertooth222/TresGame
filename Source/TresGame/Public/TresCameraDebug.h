@@ -14,6 +14,6 @@ protected:
     UDrawFrustumComponent* DrawFrustum;
     
 public:
-    ATresCameraDebug();
+    ATresCameraDebug(const FObjectInitializer& ObjectInitializer);
 };
 

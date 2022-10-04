@@ -34,6 +34,6 @@ private:
     AActor* m_BaseTarget;
     
 public:
-    ATresCameraEx021();
+    ATresCameraEx021(const FObjectInitializer& ObjectInitializer);
 };
 

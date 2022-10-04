@@ -17,7 +17,7 @@ bool ATresEnemyPawn_e_ex043::DidAttackHit() {
     return false;
 }
 
-ATresEnemyPawn_e_ex043::ATresEnemyPawn_e_ex043() {
+ATresEnemyPawn_e_ex043::ATresEnemyPawn_e_ex043(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_fPitchResetRate = 0.10f;
     this->m_bWheelShowFade = true;
     this->m_fWheelShowDelaySeconds = 0.20f;

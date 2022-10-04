@@ -24,7 +24,7 @@ protected:
     float m_fCheckAreaRadius;
     
 public:
-    ATresGumiShipGimmickJumpPoint();
+    ATresGumiShipGimmickJumpPoint(const FObjectInitializer& ObjectInitializer);
 protected:
     UFUNCTION(BlueprintCallable)
     void _OnEnterCheckArea(UPrimitiveComponent* pOverlappedComponent, AActor* pOtherActor, UPrimitiveComponent* pOtherComp, int32 dOtherBodyIndex, bool bFromSweep, const FHitResult& rSweepResult);

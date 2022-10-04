@@ -37,6 +37,6 @@ protected:
     FTresDamageInfo m_CauserDamageInfo;
     
 public:
-    ATresAdhereObjBase();
+    ATresAdhereObjBase(const FObjectInitializer& ObjectInitializer);
 };
 

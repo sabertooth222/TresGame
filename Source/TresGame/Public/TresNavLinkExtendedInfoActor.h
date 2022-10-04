@@ -19,6 +19,6 @@ private:
     TArray<FTresNavLinkExtendedInfo> ExtendedDataArray;
     
 public:
-    ATresNavLinkExtendedInfoActor();
+    ATresNavLinkExtendedInfoActor(const FObjectInitializer& ObjectInitializer);
 };
 

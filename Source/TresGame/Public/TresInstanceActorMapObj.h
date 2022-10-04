@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresInstanceActorMapObj : public ATresInstanceActor {
     GENERATED_BODY()
 public:
-    ATresInstanceActorMapObj();
+    ATresInstanceActorMapObj(const FObjectInitializer& ObjectInitializer);
 };
 

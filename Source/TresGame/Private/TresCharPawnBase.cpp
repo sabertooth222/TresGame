@@ -445,7 +445,7 @@ bool ATresCharPawnBase::BP_AbilityAdd(ETresAbilityKind InAbilityKind, bool bEqui
 void ATresCharPawnBase::ApplyKBD(USQEX_DynamicBindAssetUserData* KBDAssetUserData, FName ElementName, bool bIsReset, bool bIsResetPose, int32 PreRoll, bool KeepReferences) {
 }
 
-ATresCharPawnBase::ATresCharPawnBase() {
+ATresCharPawnBase::ATresCharPawnBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MyMovement = CreateDefaultSubobject<UTresAICharMovementComponent>(TEXT("TresCharMovement0"));
     this->MyMesh = CreateDefaultSubobject<UTresSkeletalMeshComponent>(TEXT("TresCharMesh0"));
     MyMesh->SetupAttachment(GetRootComponent());

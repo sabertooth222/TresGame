@@ -12,6 +12,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_FireEffect;
     
-    ATresProjectile_e_ex354_ArtemaShot();
+    ATresProjectile_e_ex354_ArtemaShot(const FObjectInitializer& ObjectInitializer);
 };
 

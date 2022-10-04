@@ -6,7 +6,7 @@ class AActor;
 void ATresGumiShipEnemy623Parts::OnHit(UPrimitiveComponent* pHitComponent, AActor* pOtherActor, UPrimitiveComponent* pOtherComp, FVector vNormalImpulse, const FHitResult& rHit) {
 }
 
-ATresGumiShipEnemy623Parts::ATresGumiShipEnemy623Parts() {
+ATresGumiShipEnemy623Parts::ATresGumiShipEnemy623Parts(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->DockID = -1;
     this->HP = 1000.00f;
     this->TriggerTimer = 1.00f;

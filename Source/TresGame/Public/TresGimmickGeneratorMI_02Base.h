@@ -26,7 +26,7 @@ protected:
     float FarLength;
     
 public:
-    ATresGimmickGeneratorMI_02Base();
+    ATresGimmickGeneratorMI_02Base(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void StopGimmick();
     

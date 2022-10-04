@@ -3,7 +3,7 @@
 void ATresProjectile_e_ex003_Attack2::OnTickMove(float InDeltaTime) {
 }
 
-ATresProjectile_e_ex003_Attack2::ATresProjectile_e_ex003_Attack2() {
+ATresProjectile_e_ex003_Attack2::ATresProjectile_e_ex003_Attack2(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_HomingInitialSpeed = 1200.00f;
 }
 

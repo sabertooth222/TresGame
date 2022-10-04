@@ -55,7 +55,7 @@ protected:
     FVector m_vDir;
     
 public:
-    ATresPrizeBase();
+    ATresPrizeBase(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void OnProjectileBounce(const FHitResult& ImpactResult, const FVector& ImpactVelocity);
     

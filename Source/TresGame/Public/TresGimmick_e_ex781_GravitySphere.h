@@ -145,6 +145,6 @@ protected:
     ATresCameraNormal* m_pCamera;
     
 public:
-    ATresGimmick_e_ex781_GravitySphere();
+    ATresGimmick_e_ex781_GravitySphere(const FObjectInitializer& ObjectInitializer);
 };
 

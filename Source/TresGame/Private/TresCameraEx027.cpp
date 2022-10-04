@@ -8,6 +8,6 @@ ATresCameraEx027* ATresCameraEx027::BP_SpawnTresCameraEx027(UObject* WorldContex
     return NULL;
 }
 
-ATresCameraEx027::ATresCameraEx027() {
+ATresCameraEx027::ATresCameraEx027(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

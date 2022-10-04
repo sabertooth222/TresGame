@@ -210,7 +210,7 @@ protected:
     int32 m_DisableForceFadeOutOnDeadNotifyID;
     
 public:
-    ATresEnemyShipPawnBase();
+    ATresEnemyShipPawnBase(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetShipAttackHitCollisionEnabled(bool bEnable);
     

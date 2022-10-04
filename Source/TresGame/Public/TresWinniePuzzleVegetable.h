@@ -30,6 +30,6 @@ private:
     ATresWinniePuzzleTiggerPawn* m_pTiggerPawn;
     
 public:
-    ATresWinniePuzzleVegetable();
+    ATresWinniePuzzleVegetable(const FObjectInitializer& ObjectInitializer);
 };
 

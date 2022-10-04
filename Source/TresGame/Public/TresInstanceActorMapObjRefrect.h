@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresInstanceActorMapObjRefrect : public ATresInstanceActorMapObj {
     GENERATED_BODY()
 public:
-    ATresInstanceActorMapObjRefrect();
+    ATresInstanceActorMapObjRefrect(const FObjectInitializer& ObjectInitializer);
 };
 

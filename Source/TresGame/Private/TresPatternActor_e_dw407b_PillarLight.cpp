@@ -2,7 +2,7 @@
 #include "Components/SplineComponent.h"
 #include "Components/SceneComponent.h"
 
-ATresPatternActor_e_dw407b_PillarLight::ATresPatternActor_e_dw407b_PillarLight() {
+ATresPatternActor_e_dw407b_PillarLight::ATresPatternActor_e_dw407b_PillarLight(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_bIsAimTarget = false;
     this->m_bHaveVariability = false;
     this->m_VariabilityMinTime = 0.30f;

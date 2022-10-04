@@ -1,7 +1,7 @@
 #include "TresEncountTroops.h"
 #include "Components/SceneComponent.h"
 
-ATresEncountTroops::ATresEncountTroops() {
+ATresEncountTroops::ATresEncountTroops(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->DummyRoot = CreateDefaultSubobject<USceneComponent>(TEXT("TresRoot"));
     this->m_BattleAreaWidth = 75000.00f;
     this->m_BattleAreaWidthExtra = 0.00f;

@@ -1,6 +1,6 @@
 #include "TresGumiShipEffectProjectileBase.h"
 
-ATresGumiShipEffectProjectileBase::ATresGumiShipEffectProjectileBase() {
+ATresGumiShipEffectProjectileBase::ATresGumiShipEffectProjectileBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_pAttachEffectType = NULL;
 }
 

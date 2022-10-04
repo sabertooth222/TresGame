@@ -12,6 +12,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_BarrelEffData;
     
-    ATresProjectile_n_ra203_Barrel();
+    ATresProjectile_n_ra203_Barrel(const FObjectInitializer& ObjectInitializer);
 };
 

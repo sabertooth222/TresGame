@@ -101,7 +101,7 @@ protected:
     TWeakObjectPtr<ATresCharPawnBase> m_XionPawn;
     
 public:
-    ATresEnemyPawn_e_ex306();
+    ATresEnemyPawn_e_ex306(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetMasterLightCoefficientDefault(float InTransitionTime, ETresObjTypeProcChannel InChannel, TEnumAsByte<ETresScreenEffectPriority> InPriority, bool IsEject);
     

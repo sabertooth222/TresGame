@@ -18,6 +18,6 @@ protected:
     UParticleSystemComponent* m_ThornChainEffectCmp;
     
 public:
-    ATresEffectActor_e_ex721_ThornChain();
+    ATresEffectActor_e_ex721_ThornChain(const FObjectInitializer& ObjectInitializer);
 };
 

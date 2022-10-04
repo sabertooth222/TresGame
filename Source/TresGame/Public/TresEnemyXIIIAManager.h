@@ -12,6 +12,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<ATresEnemyXIIIPawnBase*> m_EntryEnemyList;
     
-    ATresEnemyXIIIAManager();
+    ATresEnemyXIIIAManager(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable, Config=Game)
 class ATresGimmickStaticSimplicity : public ATresGimmickStaticBase {
     GENERATED_BODY()
 public:
-    ATresGimmickStaticSimplicity();
+    ATresGimmickStaticSimplicity(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -1,6 +1,6 @@
 #include "TresCameraHoldCamera.h"
 
-ATresCameraHoldCamera::ATresCameraHoldCamera() {
+ATresCameraHoldCamera::ATresCameraHoldCamera(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->DefaultLensType = ECameraLensType::LENS_DOF_OFF;
     this->FisheyeDistortionEdgeSize = 0.00f;
     this->FisheyeDistortionPowerMax = 0.00f;

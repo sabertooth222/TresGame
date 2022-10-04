@@ -45,7 +45,7 @@ protected:
     bool AreaEnableOutside;
     
 public:
-    ATresGimmickTsBouncyPet();
+    ATresGimmickTsBouncyPet(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetBouncyVisible(bool Visible);
     

@@ -1,6 +1,6 @@
 #include "TresEnemyPawn_e_ex311KBBoard.h"
 
-ATresEnemyPawn_e_ex311KBBoard::ATresEnemyPawn_e_ex311KBBoard() {
+ATresEnemyPawn_e_ex311KBBoard::ATresEnemyPawn_e_ex311KBBoard(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_KBBoardPopParticleData = NULL;
     this->m_KBBoardParticleData = NULL;
     this->m_NotChangeDirDistance = 0.00f;

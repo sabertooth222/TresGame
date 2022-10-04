@@ -20,7 +20,7 @@ bool ATresEnemyPawn_e_ex006::IsBeforeReactionGuardReflect() {
     return false;
 }
 
-ATresEnemyPawn_e_ex006::ATresEnemyPawn_e_ex006() {
+ATresEnemyPawn_e_ex006::ATresEnemyPawn_e_ex006(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_NearIdleDistance = 500.00f;
     this->m_CoopScrumManagerAsset = NULL;
     this->m_IgnoreStepHeight = 250.00f;

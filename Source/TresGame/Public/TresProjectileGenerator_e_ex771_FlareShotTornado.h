@@ -22,6 +22,6 @@ protected:
     UParticleSystem* m_pro_FireOmenEffData;
     
 public:
-    ATresProjectileGenerator_e_ex771_FlareShotTornado();
+    ATresProjectileGenerator_e_ex771_FlareShotTornado(const FObjectInitializer& ObjectInitializer);
 };
 

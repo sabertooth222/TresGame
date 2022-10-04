@@ -15,7 +15,7 @@ int32 ATresAttractionPawnTeaCup::GetColorNumber() const {
     return 0;
 }
 
-ATresAttractionPawnTeaCup::ATresAttractionPawnTeaCup() {
+ATresAttractionPawnTeaCup::ATresAttractionPawnTeaCup(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_VfxSpeedRate = 0.00f;
     this->m_bAttackStraight = true;
     this->m_bWallHitReduce = false;

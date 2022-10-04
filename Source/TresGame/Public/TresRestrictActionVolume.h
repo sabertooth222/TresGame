@@ -63,6 +63,6 @@ protected:
     uint8 m_RestrictPhotoMode: 1;
     
 public:
-    ATresRestrictActionVolume();
+    ATresRestrictActionVolume(const FObjectInitializer& ObjectInitializer);
 };
 

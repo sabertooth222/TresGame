@@ -1,5 +1,5 @@
 #include "TresGumiShipGimmickDashRing.h"
 
-ATresGumiShipGimmickDashRing::ATresGumiShipGimmickDashRing() {
+ATresGumiShipGimmickDashRing::ATresGumiShipGimmickDashRing(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

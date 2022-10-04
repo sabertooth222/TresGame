@@ -30,6 +30,6 @@ void ATresEnemyPawn_e_ex301a::BP_SpawnTornado() {
 void ATresEnemyPawn_e_ex301a::BP_EndFirstAnnihilationEvent() {
 }
 
-ATresEnemyPawn_e_ex301a::ATresEnemyPawn_e_ex301a() {
+ATresEnemyPawn_e_ex301a::ATresEnemyPawn_e_ex301a(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

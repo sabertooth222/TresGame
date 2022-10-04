@@ -323,7 +323,7 @@ protected:
     UMaterialParameterCollection* m_pro_ParamCollection;
     
 public:
-    ATresEnemyPawn_e_dw401();
+    ATresEnemyPawn_e_dw401(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetAction_CoreSmallAttackColorTest();
     

@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable)
 class ATresProjectile_e_ex305_ClusterShotExplosion : public ATresProjectileBase {
     GENERATED_BODY()
 public:
-    ATresProjectile_e_ex305_ClusterShotExplosion();
+    ATresProjectile_e_ex305_ClusterShotExplosion(const FObjectInitializer& ObjectInitializer);
 };
 

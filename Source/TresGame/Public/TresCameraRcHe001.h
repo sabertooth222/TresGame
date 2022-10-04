@@ -15,6 +15,6 @@ protected:
     FName m_TargetEntityBoneName;
     
 public:
-    ATresCameraRcHe001();
+    ATresCameraRcHe001(const FObjectInitializer& ObjectInitializer);
 };
 

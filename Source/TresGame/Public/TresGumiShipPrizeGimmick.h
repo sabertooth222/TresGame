@@ -19,6 +19,6 @@ protected:
     float m_fSuctionSpeed;
     
 public:
-    ATresGumiShipPrizeGimmick();
+    ATresGumiShipPrizeGimmick(const FObjectInitializer& ObjectInitializer);
 };
 

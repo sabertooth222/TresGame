@@ -64,6 +64,6 @@ private:
     ATresEnemyPawn_e_ex311* m_MyParent;
     
 public:
-    ATresEnemyPawn_e_ex311KBBoard();
+    ATresEnemyPawn_e_ex311KBBoard(const FObjectInitializer& ObjectInitializer);
 };
 

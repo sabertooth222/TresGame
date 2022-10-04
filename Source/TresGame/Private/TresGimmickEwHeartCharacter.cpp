@@ -14,7 +14,7 @@ void ATresGimmickEwHeartCharacter::SetAbsorbParticle(UParticleSystemComponent* c
 
 
 
-ATresGimmickEwHeartCharacter::ATresGimmickEwHeartCharacter() {
+ATresGimmickEwHeartCharacter::ATresGimmickEwHeartCharacter(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MyRoot = CreateDefaultSubobject<USceneComponent>(TEXT("MyRoot"));
     this->MyMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("MyMesh"));
     this->HitLength = 200.00f;

@@ -3,6 +3,6 @@
 void ATresTsDancingPlantSensor::ChangeRate_Implementation(float Rate) {
 }
 
-ATresTsDancingPlantSensor::ATresTsDancingPlantSensor() {
+ATresTsDancingPlantSensor::ATresTsDancingPlantSensor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

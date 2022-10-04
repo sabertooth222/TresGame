@@ -8,7 +8,7 @@ bool ATresEnemyPawn_e_ex061::IsDisableAttractionFlowMarkerDisp_061() const {
     return false;
 }
 
-ATresEnemyPawn_e_ex061::ATresEnemyPawn_e_ex061() {
+ATresEnemyPawn_e_ex061::ATresEnemyPawn_e_ex061(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_fAppearFadeTime = 0.00f;
 }
 

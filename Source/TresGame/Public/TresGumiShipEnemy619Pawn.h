@@ -77,7 +77,7 @@ protected:
     UTresSkeletalMeshComponent* m_pUFO_SkeletalMesh;
     
 public:
-    ATresGumiShipEnemy619Pawn();
+    ATresGumiShipEnemy619Pawn(const FObjectInitializer& ObjectInitializer);
 private:
     UFUNCTION(BlueprintCallable)
     void SetRocketPunch(int32 NO);

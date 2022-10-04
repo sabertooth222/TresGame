@@ -93,7 +93,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_NextPlayVoiceSpawnShieldTime;
     
-    ATresEnemyPawn_e_ex353();
+    ATresEnemyPawn_e_ex353(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     static void ThornWildDanceSendEvent(UObject* WorldContextObject, ETresEnemyEx353ThornWildDanceEvent EventType);
     

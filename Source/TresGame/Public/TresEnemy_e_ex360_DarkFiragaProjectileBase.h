@@ -25,6 +25,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_ChildrenFiragaPitchMin;
     
-    ATresEnemy_e_ex360_DarkFiragaProjectileBase();
+    ATresEnemy_e_ex360_DarkFiragaProjectileBase(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -10,7 +10,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Delay;
     
-    ATresGumiShipSpWeapon100Actor();
+    ATresGumiShipSpWeapon100Actor(const FObjectInitializer& ObjectInitializer);
 protected:
     UFUNCTION(BlueprintCallable)
     void OnPostShootBullet();

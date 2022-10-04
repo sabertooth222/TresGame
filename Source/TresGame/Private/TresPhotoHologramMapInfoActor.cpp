@@ -1,6 +1,6 @@
 #include "TresPhotoHologramMapInfoActor.h"
 
-ATresPhotoHologramMapInfoActor::ATresPhotoHologramMapInfoActor() {
+ATresPhotoHologramMapInfoActor::ATresPhotoHologramMapInfoActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->SwimSurfaceOffsetAdjust = 0.00f;
     this->OverwriteHoldCameraPitchMax = false;
     this->HoldCameraPitchMax = 0.00f;

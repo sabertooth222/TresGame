@@ -23,6 +23,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_IntervalTime;
     
-    ATresWarpFriendNpcVolume();
+    ATresWarpFriendNpcVolume(const FObjectInitializer& ObjectInitializer);
 };
 

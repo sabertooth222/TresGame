@@ -58,6 +58,6 @@ private:
     TArray<UParticleSystemComponent*> m_HitParticleList;
     
 public:
-    ATresEnemy_e_ex367_KeyBladeLaserProjectileBase();
+    ATresEnemy_e_ex367_KeyBladeLaserProjectileBase(const FObjectInitializer& ObjectInitializer);
 };
 

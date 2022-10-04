@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresWinniePuzzleWallVolume : public ATresVolume {
     GENERATED_BODY()
 public:
-    ATresWinniePuzzleWallVolume();
+    ATresWinniePuzzleWallVolume(const FObjectInitializer& ObjectInitializer);
 };
 

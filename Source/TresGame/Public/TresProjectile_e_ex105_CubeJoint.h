@@ -60,6 +60,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_pro_Cube8RotSpeedNormalRoll;
     
-    ATresProjectile_e_ex105_CubeJoint();
+    ATresProjectile_e_ex105_CubeJoint(const FObjectInitializer& ObjectInitializer);
 };
 

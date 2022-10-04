@@ -18,6 +18,6 @@ private:
     UTresStaticMeshComponent* MyMesh;
     
 public:
-    ATresStaticMesh_e_ex721_Base();
+    ATresStaticMesh_e_ex721_Base(const FObjectInitializer& ObjectInitializer);
 };
 

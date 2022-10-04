@@ -18,7 +18,7 @@ ASQEX_SplineActor* ATresGimmickGeneratorMI_04_EventBase::FindSplineActorByTag(FN
 
 
 
-ATresGimmickGeneratorMI_04_EventBase::ATresGimmickGeneratorMI_04_EventBase() {
+ATresGimmickGeneratorMI_04_EventBase::ATresGimmickGeneratorMI_04_EventBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->DoorAnimSpeedRate = 2.00f;
     this->DoorShakeAngle = 5.00f;
     this->DoorSpan = 0.00f;

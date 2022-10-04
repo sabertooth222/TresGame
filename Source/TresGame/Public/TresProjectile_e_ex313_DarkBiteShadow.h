@@ -16,6 +16,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_pro_ShadowEffData;
     
-    ATresProjectile_e_ex313_DarkBiteShadow();
+    ATresProjectile_e_ex313_DarkBiteShadow(const FObjectInitializer& ObjectInitializer);
 };
 

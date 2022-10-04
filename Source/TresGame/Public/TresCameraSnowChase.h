@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresCameraSnowChase : public ATresCameraRotTarget {
     GENERATED_BODY()
 public:
-    ATresCameraSnowChase();
+    ATresCameraSnowChase(const FObjectInitializer& ObjectInitializer);
 };
 

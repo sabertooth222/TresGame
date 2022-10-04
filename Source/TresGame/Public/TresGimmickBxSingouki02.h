@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresGimmickBxSingouki02 : public ATresGimmickBxSingouki {
     GENERATED_BODY()
 public:
-    ATresGimmickBxSingouki02();
+    ATresGimmickBxSingouki02(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -20,7 +20,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bDestroyAfterBeginPlay;
     
-    ATresStaticActorGeneratorFromSplineSimple();
+    ATresStaticActorGeneratorFromSplineSimple(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetSplineActorNative(ASQEX_SplineActor* splineActor);
     

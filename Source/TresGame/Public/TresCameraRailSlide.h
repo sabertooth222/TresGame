@@ -14,6 +14,6 @@ private:
     AActor* m_RailTargetActor;
     
 public:
-    ATresCameraRailSlide();
+    ATresCameraRailSlide(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresAIPoint : public AActor {
     GENERATED_BODY()
 public:
-    ATresAIPoint();
+    ATresAIPoint(const FObjectInitializer& ObjectInitializer);
 };
 

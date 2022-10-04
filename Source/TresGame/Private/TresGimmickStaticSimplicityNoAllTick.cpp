@@ -1,5 +1,5 @@
 #include "TresGimmickStaticSimplicityNoAllTick.h"
 
-ATresGimmickStaticSimplicityNoAllTick::ATresGimmickStaticSimplicityNoAllTick() {
+ATresGimmickStaticSimplicityNoAllTick::ATresGimmickStaticSimplicityNoAllTick(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

@@ -22,6 +22,6 @@ private:
     UTresUIP_MenuGummiShipBackground* m_pGummiEditorBG;
     
 public:
-    ATresHudGummiMenu();
+    ATresHudGummiMenu(const FObjectInitializer& ObjectInitializer);
 };
 

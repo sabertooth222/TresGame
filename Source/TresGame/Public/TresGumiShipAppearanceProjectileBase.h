@@ -21,6 +21,6 @@ protected:
     bool m_bDestroyWhenEffcetEnd;
     
 public:
-    ATresGumiShipAppearanceProjectileBase();
+    ATresGumiShipAppearanceProjectileBase(const FObjectInitializer& ObjectInitializer);
 };
 

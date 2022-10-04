@@ -7,6 +7,6 @@ UCLASS(Blueprintable, HideDropdown)
 class ATresProjectile_e_bx901_DarkCubeNeedleSpawner : public AActor {
     GENERATED_BODY()
 public:
-    ATresProjectile_e_bx901_DarkCubeNeedleSpawner();
+    ATresProjectile_e_bx901_DarkCubeNeedleSpawner(const FObjectInitializer& ObjectInitializer);
 };
 

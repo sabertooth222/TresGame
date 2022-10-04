@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresActorManager_e_ex725 : public AActor {
     GENERATED_BODY()
 public:
-    ATresActorManager_e_ex725();
+    ATresActorManager_e_ex725(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -12,7 +12,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USceneComponent* MyRoot;
     
-    ATresProjectileGenerator_e_ex773_Eclipse13_Layout();
+    ATresProjectileGenerator_e_ex773_Eclipse13_Layout(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     static void SetHiddenEclipse13Layout(bool bHiddenObject);
     

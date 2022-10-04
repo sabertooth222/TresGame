@@ -29,6 +29,6 @@ private:
     ATresGimmickSkeletalBase* m_pTree;
     
 public:
-    ATresFriendLinkPawnSnowCoverSwing();
+    ATresFriendLinkPawnSnowCoverSwing(const FObjectInitializer& ObjectInitializer);
 };
 

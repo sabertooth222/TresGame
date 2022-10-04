@@ -100,7 +100,7 @@ protected:
     UEnvQuery* GoalRankingQuery;
     
 public:
-    ATresAICoordinator();
+    ATresAICoordinator(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsSelected() const;
     

@@ -1,5 +1,5 @@
 #include "TresTsGigasJump.h"
 
-ATresTsGigasJump::ATresTsGigasJump() {
+ATresTsGigasJump::ATresTsGigasJump(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

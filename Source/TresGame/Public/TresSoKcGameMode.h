@@ -21,6 +21,6 @@ private:
     TSet<int32> m_BgmChangeEventThresholdList;
     
 public:
-    ATresSoKcGameMode();
+    ATresSoKcGameMode(const FObjectInitializer& ObjectInitializer);
 };
 

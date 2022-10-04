@@ -1,5 +1,5 @@
 #include "TresWinniePuzzleVegetableUnit_Tomato.h"
 
-ATresWinniePuzzleVegetableUnit_Tomato::ATresWinniePuzzleVegetableUnit_Tomato() {
+ATresWinniePuzzleVegetableUnit_Tomato::ATresWinniePuzzleVegetableUnit_Tomato(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

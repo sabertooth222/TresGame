@@ -1,6 +1,6 @@
 #include "TresProjectile_e_ex043_PoleFireProjectile.h"
 
-ATresProjectile_e_ex043_PoleFireProjectile::ATresProjectile_e_ex043_PoleFireProjectile() {
+ATresProjectile_e_ex043_PoleFireProjectile::ATresProjectile_e_ex043_PoleFireProjectile(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_ProjectileXDirectionCurve = NULL;
     this->m_ProjectileYDirectionCurve = NULL;
     this->m_ProjectileZDirectionCurve = NULL;

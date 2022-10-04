@@ -12,6 +12,6 @@ private:
     float m_fTakeDamage;
     
 public:
-    ATresGumiShipParts719Pawn();
+    ATresGumiShipParts719Pawn(const FObjectInitializer& ObjectInitializer);
 };
 

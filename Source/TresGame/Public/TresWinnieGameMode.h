@@ -34,7 +34,7 @@ private:
     ATresWinniePuzzlePlayerPawn* m_pPlayerPawn;
     
 public:
-    ATresWinnieGameMode();
+    ATresWinnieGameMode(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintPure)
     ATresWinniePuzzleManager* GetPuzzleManager() const;
     

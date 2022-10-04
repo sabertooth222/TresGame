@@ -1,6 +1,6 @@
 #include "TresHUDBattleReport.h"
 
-ATresHUDBattleReport::ATresHUDBattleReport() {
+ATresHUDBattleReport::ATresHUDBattleReport(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_BGM = NULL;
     this->m_UIDataAssetBattleReport = NULL;
     this->m_BattleReport = NULL;

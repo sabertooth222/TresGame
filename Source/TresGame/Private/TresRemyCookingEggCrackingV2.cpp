@@ -25,7 +25,7 @@ float ATresRemyCookingEggCrackingV2::GetGameDuration() const {
 void ATresRemyCookingEggCrackingV2::ChangeState(TEnumAsByte<RemyCookingGameState> State) {
 }
 
-ATresRemyCookingEggCrackingV2::ATresRemyCookingEggCrackingV2() {
+ATresRemyCookingEggCrackingV2::ATresRemyCookingEggCrackingV2(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->AnimationTypeRef = EggCrackingV2AnimationType::TypeA;
     this->EggUpPawnRef = NULL;
     this->EggDownPawnRef = NULL;

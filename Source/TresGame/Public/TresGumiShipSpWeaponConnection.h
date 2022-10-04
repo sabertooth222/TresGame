@@ -40,7 +40,7 @@ protected:
     UTresGumiShipWeaponSequence* m_pWeaponSequence;
     
 public:
-    ATresGumiShipSpWeaponConnection();
+    ATresGumiShipSpWeaponConnection(const FObjectInitializer& ObjectInitializer);
 private:
     UFUNCTION()
     void _CheckAttackTerm(const TEnumAsByte<ETresGumiShipWeaponSequencePort> ePort, bool& rbCanAttack);

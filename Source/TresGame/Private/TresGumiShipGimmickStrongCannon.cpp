@@ -3,7 +3,7 @@
 void ATresGumiShipGimmickStrongCannon::_PauseCannon(bool Enable) {
 }
 
-ATresGumiShipGimmickStrongCannon::ATresGumiShipGimmickStrongCannon() {
+ATresGumiShipGimmickStrongCannon::ATresGumiShipGimmickStrongCannon(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_PrizeCount = 1;
     this->m_bFrameRenderEnable = false;
     this->m_fMaxYaw = 90.00f;

@@ -4,6 +4,6 @@ int32 ATresGimmickCA_PrizeChimneyGroup::GetHitPoint() const {
     return 0;
 }
 
-ATresGimmickCA_PrizeChimneyGroup::ATresGimmickCA_PrizeChimneyGroup() {
+ATresGimmickCA_PrizeChimneyGroup::ATresGimmickCA_PrizeChimneyGroup(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

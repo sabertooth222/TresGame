@@ -16,7 +16,7 @@ bool ATresGimmickRA_PuddingManager::IsAlbumFreeSpaceEnough() const {
     return false;
 }
 
-ATresGimmickRA_PuddingManager::ATresGimmickRA_PuddingManager() {
+ATresGimmickRA_PuddingManager::ATresGimmickRA_PuddingManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->PhotoCountMax = 0;
     this->HoldCameraWaitTime = 0.00f;
     this->GameEndWaitTime = 0.00f;

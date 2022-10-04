@@ -135,7 +135,7 @@ protected:
     TArray<ULevelStreamingKismet*> m_DepatureKismet;
     
 public:
-    ATresGummiMenuManager();
+    ATresGummiMenuManager(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintPure)
     ATresGumiShipHUD* GetSpaceHUD();
     

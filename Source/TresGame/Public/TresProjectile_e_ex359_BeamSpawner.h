@@ -16,6 +16,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FEX359_BeamOnSplineInfoSet m_BeamOnSplineInfoSet;
     
-    ATresProjectile_e_ex359_BeamSpawner();
+    ATresProjectile_e_ex359_BeamSpawner(const FObjectInitializer& ObjectInitializer);
 };
 

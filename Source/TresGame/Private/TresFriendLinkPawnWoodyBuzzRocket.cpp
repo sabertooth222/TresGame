@@ -1,6 +1,6 @@
 #include "TresFriendLinkPawnWoodyBuzzRocket.h"
 
-ATresFriendLinkPawnWoodyBuzzRocket::ATresFriendLinkPawnWoodyBuzzRocket() {
+ATresFriendLinkPawnWoodyBuzzRocket::ATresFriendLinkPawnWoodyBuzzRocket(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_Camera = NULL;
     this->m_pRocket = NULL;
     this->m_WoodyBuzzRocketProj = NULL;

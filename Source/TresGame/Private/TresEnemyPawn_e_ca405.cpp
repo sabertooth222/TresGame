@@ -26,7 +26,7 @@ int32 ATresEnemyPawn_e_ca405::GetHitPointOfMaelstromMode() const {
     return 0;
 }
 
-ATresEnemyPawn_e_ca405::ATresEnemyPawn_e_ca405() {
+ATresEnemyPawn_e_ca405::ATresEnemyPawn_e_ca405(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_RotCurve = NULL;
     this->m_RotCurveTime = 5.00f;
     this->m_bMaelstromMode = false;

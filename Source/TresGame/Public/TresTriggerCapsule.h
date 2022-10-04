@@ -8,7 +8,7 @@ UCLASS(Abstract, Blueprintable)
 class ATresTriggerCapsule : public ATriggerCapsule, public ITresNotifyInterface {
     GENERATED_BODY()
 public:
-    ATresTriggerCapsule();
+    ATresTriggerCapsule(const FObjectInitializer& ObjectInitializer);
     
     // Fix for true pure virtual functions not being implemented
 };

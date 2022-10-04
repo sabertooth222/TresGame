@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresSoKcPlayerControllerSora : public ATresPlayerControllerBase {
     GENERATED_BODY()
 public:
-    ATresSoKcPlayerControllerSora();
+    ATresSoKcPlayerControllerSora(const FObjectInitializer& ObjectInitializer);
 };
 

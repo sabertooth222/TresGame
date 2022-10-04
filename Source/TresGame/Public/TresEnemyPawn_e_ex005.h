@@ -25,7 +25,7 @@ private:
     UParticleSystemComponent* m_SandSmokeEffectComponent;
     
 public:
-    ATresEnemyPawn_e_ex005();
+    ATresEnemyPawn_e_ex005(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void DebugSetEnableSandMode(int32 bDisable);
     

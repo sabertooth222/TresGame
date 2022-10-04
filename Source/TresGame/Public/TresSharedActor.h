@@ -20,7 +20,7 @@ private:
     ATresCameraFix* m_pFixedCamera;
     
 public:
-    ATresSharedActor();
+    ATresSharedActor(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     ATresCameraFix* UpdateFixedCamera(float FieldOfView, FVector WorldLocation, FRotator WorldRotation);
     

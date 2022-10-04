@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresCharTriggerBox : public ATresTriggerBox {
     GENERATED_BODY()
 public:
-    ATresCharTriggerBox();
+    ATresCharTriggerBox(const FObjectInitializer& ObjectInitializer);
 };
 

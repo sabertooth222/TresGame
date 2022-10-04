@@ -45,7 +45,7 @@ void ATresEnemyPawn_e_fz903::BP_DebugSetBT() {
 void ATresEnemyPawn_e_fz903::BP_AttackEndSnowCoverSwing() {
 }
 
-ATresEnemyPawn_e_fz903::ATresEnemyPawn_e_fz903() {
+ATresEnemyPawn_e_fz903::ATresEnemyPawn_e_fz903(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_ReleaseArmorActionData = NULL;
     this->m_ShakeOffActionData = NULL;
     this->m_SnowCoverSwingActionData = NULL;

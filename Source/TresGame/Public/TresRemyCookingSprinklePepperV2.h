@@ -95,7 +95,7 @@ private:
     AStaticMeshActor* m_pContentsActor;
     
 public:
-    ATresRemyCookingSprinklePepperV2();
+    ATresRemyCookingSprinklePepperV2(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void PushState(TEnumAsByte<RemyCookingGameState> State);
     

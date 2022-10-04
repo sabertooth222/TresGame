@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable)
 class ATresProjectile_e_ex711_ElectromagneticGun : public ATresProjectileBase {
     GENERATED_BODY()
 public:
-    ATresProjectile_e_ex711_ElectromagneticGun();
+    ATresProjectile_e_ex711_ElectromagneticGun(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -85,6 +85,6 @@ protected:
     ATresCameraRotTargetAuto* m_pCamera;
     
 public:
-    ATresAttractionPawnVikingShip();
+    ATresAttractionPawnVikingShip(const FObjectInitializer& ObjectInitializer);
 };
 

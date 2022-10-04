@@ -1,6 +1,6 @@
 #include "TresEnemyPawn_e_ex725.h"
 
-ATresEnemyPawn_e_ex725::ATresEnemyPawn_e_ex725() {
+ATresEnemyPawn_e_ex725::ATresEnemyPawn_e_ex725(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_EffDataAsset = NULL;
     this->m_HitActorData = NULL;
     this->m_HitActorDataForNpc = NULL;

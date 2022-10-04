@@ -8,6 +8,6 @@ ATresCameraFirstPersonPcRot* ATresCameraFirstPersonPcRot::BP_SpawnTresCameraFirs
     return NULL;
 }
 
-ATresCameraFirstPersonPcRot::ATresCameraFirstPersonPcRot() {
+ATresCameraFirstPersonPcRot::ATresCameraFirstPersonPcRot(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

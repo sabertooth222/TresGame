@@ -32,7 +32,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresGimmickTS_01_BedCollisionDMatParam> m_DynamicMaterials;
     
-    ATresGimmickTS_01_BedCollision();
+    ATresGimmickTS_01_BedCollision(const FObjectInitializer& ObjectInitializer);
 protected:
     UFUNCTION(BlueprintCallable)
     void OnChangeBattleMode(bool bIsBattleMode);

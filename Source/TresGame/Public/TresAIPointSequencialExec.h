@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresAIPointSequencialExec : public AActor {
     GENERATED_BODY()
 public:
-    ATresAIPointSequencialExec();
+    ATresAIPointSequencialExec(const FObjectInitializer& ObjectInitializer);
 };
 

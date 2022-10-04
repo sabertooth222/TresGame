@@ -1,5 +1,5 @@
 #include "TresGimmickFallingShelfDamage.h"
 
-ATresGimmickFallingShelfDamage::ATresGimmickFallingShelfDamage() {
+ATresGimmickFallingShelfDamage::ATresGimmickFallingShelfDamage(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

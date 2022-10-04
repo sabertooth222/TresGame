@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable)
 class ATresProjectile_e_ex309_JinraiShot : public ATresProjectileSkeletalMeshBase {
     GENERATED_BODY()
 public:
-    ATresProjectile_e_ex309_JinraiShot();
+    ATresProjectile_e_ex309_JinraiShot(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresBlowAttachActor_e_he903 : public AActor {
     GENERATED_BODY()
 public:
-    ATresBlowAttachActor_e_he903();
+    ATresBlowAttachActor_e_he903(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -6,7 +6,7 @@ ATresWinniePuzzleManager* ATresWinnieGameMode::GetPuzzleManager() const {
     return NULL;
 }
 
-ATresWinnieGameMode::ATresWinnieGameMode() {
+ATresWinnieGameMode::ATresWinnieGameMode(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->PuzzleManagerRef = NULL;
     this->PuzzleGameRef = NULL;
     this->PlayerPawnRef = NULL;

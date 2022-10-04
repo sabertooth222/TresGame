@@ -22,7 +22,7 @@ int32 ATresEnemyPawn_e_ex014::GetDebugStateNo() {
 void ATresEnemyPawn_e_ex014::DebugSetAppearState(TEnumAsByte<ETresEnemySetAppearMode> mode) {
 }
 
-ATresEnemyPawn_e_ex014::ATresEnemyPawn_e_ex014() {
+ATresEnemyPawn_e_ex014::ATresEnemyPawn_e_ex014(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_CoopDummyPawn = NULL;
 }
 

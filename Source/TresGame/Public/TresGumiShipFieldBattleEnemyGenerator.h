@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresGumiShipFieldBattleEnemyGenerator : public ATresGumiShipEnemyGenerator {
     GENERATED_BODY()
 public:
-    ATresGumiShipFieldBattleEnemyGenerator();
+    ATresGumiShipFieldBattleEnemyGenerator(const FObjectInitializer& ObjectInitializer);
 };
 

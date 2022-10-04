@@ -56,7 +56,7 @@ protected:
     uint8 m_bShipAttach: 1;
     
 public:
-    ATresCameraSpecialShip();
+    ATresCameraSpecialShip(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void BP_SetCameraSpecialShipRotation(FRotator Rot, bool bWorld);
     

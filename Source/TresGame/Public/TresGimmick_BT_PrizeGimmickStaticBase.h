@@ -24,6 +24,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_NormalHitCountNoDamage;
     
-    ATresGimmick_BT_PrizeGimmickStaticBase();
+    ATresGimmick_BT_PrizeGimmickStaticBase(const FObjectInitializer& ObjectInitializer);
 };
 

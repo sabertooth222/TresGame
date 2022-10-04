@@ -6,7 +6,7 @@ void ATresEncountVolume::Stop() {
 void ATresEncountVolume::Start() {
 }
 
-ATresEncountVolume::ATresEncountVolume() {
+ATresEncountVolume::ATresEncountVolume(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_VehicleMode = ETresEncountVolumeVehicleMode::DoNotCare;
     this->m_SnapTarget = ETresEncountVolumeSnapTarget::Snap_Nothing;
     this->m_MinMovement = 0.00f;

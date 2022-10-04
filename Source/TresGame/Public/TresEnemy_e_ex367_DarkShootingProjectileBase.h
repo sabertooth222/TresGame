@@ -10,6 +10,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<float> m_DistExpList;
     
-    ATresEnemy_e_ex367_DarkShootingProjectileBase();
+    ATresEnemy_e_ex367_DarkShootingProjectileBase(const FObjectInitializer& ObjectInitializer);
 };
 

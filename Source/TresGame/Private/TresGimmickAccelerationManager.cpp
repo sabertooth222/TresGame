@@ -1,6 +1,6 @@
 #include "TresGimmickAccelerationManager.h"
 
-ATresGimmickAccelerationManager::ATresGimmickAccelerationManager() {
+ATresGimmickAccelerationManager::ATresGimmickAccelerationManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_TickDistance = 0.00f;
     this->m_VisibilityDistance = 0.00f;
     this->m_CollisionDistance = 0.00f;

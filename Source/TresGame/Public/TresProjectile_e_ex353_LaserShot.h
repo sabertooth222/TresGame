@@ -7,6 +7,6 @@ UCLASS(Blueprintable, HideDropdown)
 class ATresProjectile_e_ex353_LaserShot : public ATresProjectile_e_ex353_Base {
     GENERATED_BODY()
 public:
-    ATresProjectile_e_ex353_LaserShot();
+    ATresProjectile_e_ex353_LaserShot(const FObjectInitializer& ObjectInitializer);
 };
 

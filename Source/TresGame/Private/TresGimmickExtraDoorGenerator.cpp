@@ -19,7 +19,7 @@ void ATresGimmickExtraDoorGenerator::ChangeDoor(FVector pos, bool Enable) {
 }
 
 
-ATresGimmickExtraDoorGenerator::ATresGimmickExtraDoorGenerator() {
+ATresGimmickExtraDoorGenerator::ATresGimmickExtraDoorGenerator(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->InstancedStaticMeshComponent = CreateDefaultSubobject<UTresInstancedStaticMeshComponent>(TEXT("InstancedStaticMeshComponent"));
     this->m_SplineComponent = NULL;
     this->m_StaticMesh = NULL;
