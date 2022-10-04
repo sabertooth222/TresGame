@@ -7,7 +7,7 @@
 		{
 			"Name": "TresGameEditor",
 			"Type": "Developer",
-			"LoadingPhase": "Default"
+			"LoadingPhase": "PostConfigInit"
 		},
 		{
 			"Name": "KineDriverEd",

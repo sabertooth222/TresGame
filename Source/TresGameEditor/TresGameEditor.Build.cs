@@ -7,8 +7,10 @@ public class TresGameEditor : ModuleRules {
         PublicDependencyModuleNames.AddRange(new string[] {
             "AIModule",
             "AnimGraphRuntime",
+            "AnimGraph",
             "AnimationCore",
             "BonamikRt",
+            "BlueprintGraph",
             "Core",
             "CoreUObject",
             "CriWareRuntime",
@@ -29,8 +31,12 @@ public class TresGameEditor : ModuleRules {
             "ScaleformUI",
             "Slate",
             "SlateCore",
+            "TresGame",
             "UMG",
 			"UnrealEd",
         });
+		
+		
+		PrivateDependencyModuleNames.AddRange(new string[] { "AnimGraph", "BlueprintGraph", "UnrealEd", "AnimGraphRuntime"});
     }
 }
