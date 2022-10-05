@@ -11,6 +11,6 @@ public:
     UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     FSQEX_BonamikPresetWindSettings m_BonamikPresetWindSettings[10];
     
-    ASQEX_WorldSettings();
+    ASQEX_WorldSettings(const FObjectInitializer& ObjectInitializer);
 };
 
