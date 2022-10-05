@@ -28,7 +28,7 @@ FVector ATresGumiShipPawnBase::GetMovementAmout() const {
     return FVector{};
 }
 
-ATresGumiShipPawnBase::ATresGumiShipPawnBase() {
+ATresGumiShipPawnBase::ATresGumiShipPawnBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_pRootComponent = CreateDefaultSubobject<UTresRootComponent>(TEXT("TresRoot"));
 }
 

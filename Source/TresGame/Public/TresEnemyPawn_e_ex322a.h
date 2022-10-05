@@ -29,6 +29,6 @@ private:
     FName m_MagicShotOverrideAttackDataIDName;
     
 public:
-    ATresEnemyPawn_e_ex322a();
+    ATresEnemyPawn_e_ex322a(const FObjectInitializer& ObjectInitializer);
 };
 

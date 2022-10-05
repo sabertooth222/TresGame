@@ -61,6 +61,6 @@ protected:
     float MyRailSlideMovePrevCurveLength;
     
 public:
-    ATresGimmickMover();
+    ATresGimmickMover(const FObjectInitializer& ObjectInitializer);
 };
 

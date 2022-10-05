@@ -1,6 +1,6 @@
 #include "TresGumiShipParts720Pawn.h"
 
-ATresGumiShipParts720Pawn::ATresGumiShipParts720Pawn() {
+ATresGumiShipParts720Pawn::ATresGumiShipParts720Pawn(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_pAttackAreaVFX = NULL;
     this->m_pInjectionVFX = NULL;
     this->m_pReverseThrustVFX = NULL;

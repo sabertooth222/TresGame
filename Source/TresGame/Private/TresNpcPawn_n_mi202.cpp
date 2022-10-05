@@ -4,7 +4,7 @@ bool ATresNpcPawn_n_mi202::IsMikeAppealOn() {
     return false;
 }
 
-ATresNpcPawn_n_mi202::ATresNpcPawn_n_mi202() {
+ATresNpcPawn_n_mi202::ATresNpcPawn_n_mi202(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_FRMikeBowlingBP = NULL;
     this->m_MikeMoveTime = 20.00f;
     this->m_MikeMoveSpeed = 1200.00f;

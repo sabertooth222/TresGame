@@ -13,7 +13,7 @@ void ATresRaSpecialPerformActor::OnPlayerPerformStart() {
 void ATresRaSpecialPerformActor::OnPlayerPerformEnd() {
 }
 
-ATresRaSpecialPerformActor::ATresRaSpecialPerformActor() {
+ATresRaSpecialPerformActor::ATresRaSpecialPerformActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MyStaticMesh = CreateDefaultSubobject<UTresStaticMeshComponent>(TEXT("MyStaticMesh"));
     this->TensionUpLevel = 0;
     this->ReactionRange = 0.00f;

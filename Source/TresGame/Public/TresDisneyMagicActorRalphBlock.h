@@ -44,7 +44,7 @@ private:
     TArray<ATresDisneyMagicActorRalphBlock*> m_ChainBlockList;
     
 public:
-    ATresDisneyMagicActorRalphBlock();
+    ATresDisneyMagicActorRalphBlock(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void OnChangeGimmickPause(bool bPause);
     

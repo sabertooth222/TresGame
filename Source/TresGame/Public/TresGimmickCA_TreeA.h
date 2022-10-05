@@ -17,6 +17,6 @@ protected:
     TArray<FVector> m_SeedLocations;
     
 public:
-    ATresGimmickCA_TreeA();
+    ATresGimmickCA_TreeA(const FObjectInitializer& ObjectInitializer);
 };
 

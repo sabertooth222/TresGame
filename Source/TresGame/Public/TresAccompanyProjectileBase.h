@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable)
 class ATresAccompanyProjectileBase : public ATresProjectileBase {
     GENERATED_BODY()
 public:
-    ATresAccompanyProjectileBase();
+    ATresAccompanyProjectileBase(const FObjectInitializer& ObjectInitializer);
 };
 

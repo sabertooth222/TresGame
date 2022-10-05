@@ -15,6 +15,6 @@ protected:
     uint8 m_bOnlyCameraSee: 1;
     
 public:
-    ATresCameraEmitterLensEffect();
+    ATresCameraEmitterLensEffect(const FObjectInitializer& ObjectInitializer);
 };
 

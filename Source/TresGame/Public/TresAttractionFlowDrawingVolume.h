@@ -23,7 +23,7 @@ private:
     bool m_ForceDisplay;
     
 public:
-    ATresAttractionFlowDrawingVolume();
+    ATresAttractionFlowDrawingVolume(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void InvokeEndOverlap(bool TestOverlap, AActor* Other, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool ImmediateInvoke);
     

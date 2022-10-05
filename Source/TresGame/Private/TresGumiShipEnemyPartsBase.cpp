@@ -26,7 +26,7 @@ FName ATresGumiShipEnemyPartsBase::GetEnemyPartsID() const {
     return NAME_None;
 }
 
-ATresGumiShipEnemyPartsBase::ATresGumiShipEnemyPartsBase() {
+ATresGumiShipEnemyPartsBase::ATresGumiShipEnemyPartsBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_EnemyPartsID = TEXT("e_gmXXX_0");
     this->m_pEffectAttachDataAsset = NULL;
     this->m_bUsingAutoDestorySystem = false;

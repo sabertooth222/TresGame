@@ -114,7 +114,7 @@ protected:
     UParticleSystemComponent* m_CoreDisplayParticleComp;
     
 public:
-    ATresEnemyPawn_e_bx903();
+    ATresEnemyPawn_e_bx903(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     bool IsBattleAreaOutSide();
     

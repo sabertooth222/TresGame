@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable)
 class ATresProjectile_e_ex305_BindShot : public ATresProjectileBase {
     GENERATED_BODY()
 public:
-    ATresProjectile_e_ex305_BindShot();
+    ATresProjectile_e_ex305_BindShot(const FObjectInitializer& ObjectInitializer);
 };
 

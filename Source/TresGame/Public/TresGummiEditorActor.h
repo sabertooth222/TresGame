@@ -151,6 +151,6 @@ private:
     USceneCaptureComponent2D* m_pCaptureComponent;
     
 public:
-    ATresGummiEditorActor();
+    ATresGummiEditorActor(const FObjectInitializer& ObjectInitializer);
 };
 

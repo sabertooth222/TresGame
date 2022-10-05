@@ -11,6 +11,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_PointID;
     
-    ATresRaPuddingSplineActor();
+    ATresRaPuddingSplineActor(const FObjectInitializer& ObjectInitializer);
 };
 

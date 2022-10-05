@@ -26,7 +26,7 @@ protected:
     ETresGumiShipTravelPointID m_WorldMapID;
     
 public:
-    ATresGumiShipGimmickTravelPoint();
+    ATresGumiShipGimmickTravelPoint(const FObjectInitializer& ObjectInitializer);
 private:
     UFUNCTION(BlueprintCallable)
     void _SetMeshLoopCall(float LoopTime);

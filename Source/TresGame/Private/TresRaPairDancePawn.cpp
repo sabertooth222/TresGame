@@ -1,6 +1,6 @@
 #include "TresRaPairDancePawn.h"
 
-ATresRaPairDancePawn::ATresRaPairDancePawn() {
+ATresRaPairDancePawn::ATresRaPairDancePawn(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_pDanceMng = NULL;
 }
 

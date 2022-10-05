@@ -30,7 +30,7 @@ private:
     uint8 m_bIsMediumSize: 1;
     
 public:
-    ATresEnemyPawn_e_ex203();
+    ATresEnemyPawn_e_ex203(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetEnableIKinema(bool InEnable);
     

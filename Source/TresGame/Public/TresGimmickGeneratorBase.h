@@ -15,7 +15,7 @@ protected:
     UTresRootComponent* MyRoot;
     
 public:
-    ATresGimmickGeneratorBase();
+    ATresGimmickGeneratorBase(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetStaticMeshParameter(UStaticMeshComponent* MeshComponent);
     

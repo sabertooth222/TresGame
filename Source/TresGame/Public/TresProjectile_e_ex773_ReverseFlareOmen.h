@@ -27,6 +27,6 @@ protected:
     float AttractForce;
     
 public:
-    ATresProjectile_e_ex773_ReverseFlareOmen();
+    ATresProjectile_e_ex773_ReverseFlareOmen(const FObjectInitializer& ObjectInitializer);
 };
 

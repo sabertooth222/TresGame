@@ -13,6 +13,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_AtkColEndTime;
     
-    ATresProjectile_e_ex004_WaterUpper();
+    ATresProjectile_e_ex004_WaterUpper(const FObjectInitializer& ObjectInitializer);
 };
 

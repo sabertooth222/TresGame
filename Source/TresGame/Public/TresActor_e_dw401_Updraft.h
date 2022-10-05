@@ -19,6 +19,6 @@ protected:
     TSubclassOf<ATresWaterCurrentSplineActor> m_UpdraftSplineClass;
     
 public:
-    ATresActor_e_dw401_Updraft();
+    ATresActor_e_dw401_Updraft(const FObjectInitializer& ObjectInitializer);
 };
 

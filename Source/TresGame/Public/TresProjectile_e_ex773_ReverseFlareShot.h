@@ -10,7 +10,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName ExplosionName;
     
-    ATresProjectile_e_ex773_ReverseFlareShot();
+    ATresProjectile_e_ex773_ReverseFlareShot(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BPE_SpawnExplosion();
     

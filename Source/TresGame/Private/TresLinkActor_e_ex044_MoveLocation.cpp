@@ -9,6 +9,6 @@ bool ATresLinkActor_e_ex044_MoveLocation::IsAvailable() {
     return false;
 }
 
-ATresLinkActor_e_ex044_MoveLocation::ATresLinkActor_e_ex044_MoveLocation() {
+ATresLinkActor_e_ex044_MoveLocation::ATresLinkActor_e_ex044_MoveLocation(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

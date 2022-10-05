@@ -21,6 +21,6 @@ private:
     UParticleSystemComponent* m_DisappearEffectCmp;
     
 public:
-    ATresSkeletalMesh_e_ex721_WoodsJail();
+    ATresSkeletalMesh_e_ex721_WoodsJail(const FObjectInitializer& ObjectInitializer);
 };
 

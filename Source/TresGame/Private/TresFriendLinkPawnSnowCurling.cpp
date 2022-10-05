@@ -54,7 +54,7 @@ void ATresFriendLinkPawnSnowCurling::BeginShortJump_Implementation() {
 void ATresFriendLinkPawnSnowCurling::BeginJump_Implementation() {
 }
 
-ATresFriendLinkPawnSnowCurling::ATresFriendLinkPawnSnowCurling() {
+ATresFriendLinkPawnSnowCurling::ATresFriendLinkPawnSnowCurling(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->Speed_ = 0.00f;
     this->SpeedRate_ = 0.00f;
     this->FirstSpeed_ = 2000.00f;

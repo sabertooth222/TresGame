@@ -41,7 +41,7 @@ private:
     UCurveFloat* m_DieCurveData;
     
 public:
-    ATresEnemyPawn_e_ex703();
+    ATresEnemyPawn_e_ex703(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     bool IsParentNormalMode() const;
     

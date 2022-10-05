@@ -7,6 +7,6 @@ UCLASS(Blueprintable, NotPlaceable)
 class ATresCameraNormalLoc : public ATresCameraNormal {
     GENERATED_BODY()
 public:
-    ATresCameraNormalLoc();
+    ATresCameraNormalLoc(const FObjectInitializer& ObjectInitializer);
 };
 

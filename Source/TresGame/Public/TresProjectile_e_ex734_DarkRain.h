@@ -14,6 +14,6 @@ protected:
     UParticleSystem* m_PawnHitEffectClass;
     
 public:
-    ATresProjectile_e_ex734_DarkRain();
+    ATresProjectile_e_ex734_DarkRain(const FObjectInitializer& ObjectInitializer);
 };
 

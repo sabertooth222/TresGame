@@ -13,7 +13,7 @@ bool ATresEnemyPawn_e_ex703::IsLifeOver() const {
     return false;
 }
 
-ATresEnemyPawn_e_ex703::ATresEnemyPawn_e_ex703() {
+ATresEnemyPawn_e_ex703::ATresEnemyPawn_e_ex703(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->ProjectileSpawnComponent = CreateDefaultSubobject<USceneComponent>(TEXT("ProjectileSpawnComponent"));
     this->m_SpawnLocationTarParticleSystem = NULL;
     this->m_MoveEffectAttachDataAsset = NULL;

@@ -17,6 +17,6 @@ private:
     ATresCharPawnBase* m_MyTarget;
     
 public:
-    ATresEnemy_e_ex781_WaterProjectile();
+    ATresEnemy_e_ex781_WaterProjectile(const FObjectInitializer& ObjectInitializer);
 };
 

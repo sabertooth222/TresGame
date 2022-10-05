@@ -1,5 +1,5 @@
 #include "TresStylePawnSKChandelier.h"
 
-ATresStylePawnSKChandelier::ATresStylePawnSKChandelier() {
+ATresStylePawnSKChandelier::ATresStylePawnSKChandelier(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

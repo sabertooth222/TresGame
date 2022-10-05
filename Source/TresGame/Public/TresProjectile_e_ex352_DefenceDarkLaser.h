@@ -36,6 +36,6 @@ protected:
     UCurveFloat* m_DarkLaserRotateSpeedCurveData;
     
 public:
-    ATresProjectile_e_ex352_DefenceDarkLaser();
+    ATresProjectile_e_ex352_DefenceDarkLaser(const FObjectInitializer& ObjectInitializer);
 };
 

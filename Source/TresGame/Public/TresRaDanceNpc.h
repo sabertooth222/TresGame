@@ -175,7 +175,7 @@ private:
     ATresPlayerControllerBase* m_pPC;
     
 public:
-    ATresRaDanceNpc();
+    ATresRaDanceNpc(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     bool OnPlayerPerformed(UTresPlayerState_FestivalDance* InPlayerState, EDancePerformType perform, int32 performLevel);
     

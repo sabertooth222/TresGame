@@ -7,7 +7,7 @@ UCLASS(Blueprintable, HideDropdown)
 class ATresCarriageJumpActor_e_ex035 : public AActor {
     GENERATED_BODY()
 public:
-    ATresCarriageJumpActor_e_ex035();
+    ATresCarriageJumpActor_e_ex035(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, BlueprintPure)
     bool IsOccupied() const;
     

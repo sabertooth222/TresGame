@@ -33,6 +33,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_CenterDistShutdown;
     
-    ATresProjectile_e_ex361_DarkHand_ShockWave();
+    ATresProjectile_e_ex361_DarkHand_ShockWave(const FObjectInitializer& ObjectInitializer);
 };
 

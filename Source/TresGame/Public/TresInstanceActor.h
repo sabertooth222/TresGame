@@ -7,6 +7,6 @@ UCLASS(Blueprintable, Config=Game)
 class ATresInstanceActor : public AActor {
     GENERATED_BODY()
 public:
-    ATresInstanceActor();
+    ATresInstanceActor(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -23,7 +23,7 @@ protected:
     bool bBlockLoad;
     
 public:
-    ATresGumiShipMapsetVolume();
+    ATresGumiShipMapsetVolume(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void _OnEnterActivateVolume(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
     

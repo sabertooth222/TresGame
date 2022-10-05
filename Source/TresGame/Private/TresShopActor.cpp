@@ -15,7 +15,7 @@ void ATresShopActor::OnChangeCinematicMode(bool bIsCinematicMode) {
 void ATresShopActor::OnChangeBattleMode(bool bIsBattleMode) {
 }
 
-ATresShopActor::ATresShopActor() {
+ATresShopActor::ATresShopActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MyReactor = CreateDefaultSubobject<UTresReactorComponent>(TEXT("TresReactor0"));
     this->MyMapMarker = CreateDefaultSubobject<UTresMapMarkerComponent>(TEXT("TresMapMarker0"));
     this->MyBodyColl = CreateDefaultSubobject<UTresBodyCollComponent>(TEXT("TresBodyColl0"));

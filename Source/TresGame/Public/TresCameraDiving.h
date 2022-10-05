@@ -16,7 +16,7 @@ protected:
     float m_LerpBehindTime;
     
 public:
-    ATresCameraDiving();
+    ATresCameraDiving(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     static ATresCameraDiving* BP_SpawnTresCameraDiving(UObject* WorldContextObject, TSubclassOf<ATresCameraDiving> CameraClass, const FName CameraName);
     

@@ -14,6 +14,6 @@ private:
     USceneComponent* MyRoot;
     
 public:
-    ATresCardWallControlActor_e_ex356();
+    ATresCardWallControlActor_e_ex356(const FObjectInitializer& ObjectInitializer);
 };
 

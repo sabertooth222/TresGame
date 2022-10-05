@@ -1,5 +1,5 @@
 #include "TresPlayerControllerAqua.h"
 
-ATresPlayerControllerAqua::ATresPlayerControllerAqua() {
+ATresPlayerControllerAqua::ATresPlayerControllerAqua(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

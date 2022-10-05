@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresProjectile_e_ex311_KBTail : public ATresProjectileBase {
     GENERATED_BODY()
 public:
-    ATresProjectile_e_ex311_KBTail();
+    ATresProjectile_e_ex311_KBTail(const FObjectInitializer& ObjectInitializer);
 };
 

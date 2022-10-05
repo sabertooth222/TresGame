@@ -1,6 +1,6 @@
 #include "TresCameraSoKc.h"
 
-ATresCameraSoKc::ATresCameraSoKc() {
+ATresCameraSoKc::ATresCameraSoKc(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_PitchUDMax = 100.00f;
     this->m_YawLRMax = 300.00f;
     this->m_PitchRatio = 2.00f;

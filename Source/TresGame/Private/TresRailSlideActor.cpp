@@ -10,7 +10,7 @@ void ATresRailSlideActor::BP_DeactivateRailGimmick() {
 void ATresRailSlideActor::BP_ActivateRailGimmick() {
 }
 
-ATresRailSlideActor::ATresRailSlideActor() {
+ATresRailSlideActor::ATresRailSlideActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_fCameraRollRate = 1.00f;
     this->m_RailType = ESQEX_RAIL_SLIDE_TYPE::SQEX_RS_TYPE_NORMAL;
     this->m_LinkedActor = NULL;

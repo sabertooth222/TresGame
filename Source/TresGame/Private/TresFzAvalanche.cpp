@@ -1,5 +1,5 @@
 #include "TresFzAvalanche.h"
 
-ATresFzAvalanche::ATresFzAvalanche() {
+ATresFzAvalanche::ATresFzAvalanche(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

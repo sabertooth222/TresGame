@@ -1,6 +1,6 @@
 #include "TresProj_MagicBlizzard.h"
 
-ATresProj_MagicBlizzard::ATresProj_MagicBlizzard() {
+ATresProj_MagicBlizzard::ATresProj_MagicBlizzard(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_GenerateRailHeight = 200.00f;
     this->m_GenerateRailLife = 3.00f;
     this->m_SplineMeshActorClass = NULL;

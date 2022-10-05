@@ -1,5 +1,5 @@
 #include "TresWorldMapCameraActor.h"
 
-ATresWorldMapCameraActor::ATresWorldMapCameraActor() {
+ATresWorldMapCameraActor::ATresWorldMapCameraActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

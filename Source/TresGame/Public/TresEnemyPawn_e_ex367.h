@@ -80,7 +80,7 @@ private:
     UBehaviorTree* m_DefaultBehavior;
     
 public:
-    ATresEnemyPawn_e_ex367();
+    ATresEnemyPawn_e_ex367(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     bool IsXIIIAttackMode();
     

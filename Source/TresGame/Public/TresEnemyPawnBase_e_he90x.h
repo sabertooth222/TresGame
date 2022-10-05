@@ -29,7 +29,7 @@ protected:
     ATresPlayerPawnBase* m_Player;
     
 public:
-    ATresEnemyPawnBase_e_he90x();
+    ATresEnemyPawnBase_e_he90x(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     static void OnReceiveRemoteEvent(FName inEventName);
     

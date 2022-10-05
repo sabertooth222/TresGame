@@ -11,7 +11,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresEnemy_e_ex035_AIPointType> m_AIPointType;
     
-    ATresAIPoint_e_ex035();
+    ATresAIPoint_e_ex035(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     bool IsReserved();
     

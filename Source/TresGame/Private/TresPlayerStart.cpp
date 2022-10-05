@@ -1,6 +1,6 @@
 #include "TresPlayerStart.h"
 
-ATresPlayerStart::ATresPlayerStart() : APlayerStart(FObjectInitializer::Get()) {
+ATresPlayerStart::ATresPlayerStart(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_AutoDispMapName = true;
     this->m_Enabled = true;
     this->m_IsAutoSave = false;

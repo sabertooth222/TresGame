@@ -31,6 +31,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_DataTableName;
     
-    ATresGumiShipPrizeBox();
+    ATresGumiShipPrizeBox(const FObjectInitializer& ObjectInitializer);
 };
 

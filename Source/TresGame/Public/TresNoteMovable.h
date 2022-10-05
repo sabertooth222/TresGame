@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresNoteMovable : public ATresNote {
     GENERATED_BODY()
 public:
-    ATresNoteMovable();
+    ATresNoteMovable(const FObjectInitializer& ObjectInitializer);
 };
 

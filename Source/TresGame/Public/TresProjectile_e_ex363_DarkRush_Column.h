@@ -10,6 +10,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_AtkUpdateInterval;
     
-    ATresProjectile_e_ex363_DarkRush_Column();
+    ATresProjectile_e_ex363_DarkRush_Column(const FObjectInitializer& ObjectInitializer);
 };
 

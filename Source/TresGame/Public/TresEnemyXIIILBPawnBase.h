@@ -21,7 +21,7 @@ protected:
     uint8 m_bEnableRevengeVoice2D: 1;
     
 public:
-    ATresEnemyXIIILBPawnBase();
+    ATresEnemyXIIILBPawnBase(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FRotator GetWarpLocationEQSDotRotator() const;
     

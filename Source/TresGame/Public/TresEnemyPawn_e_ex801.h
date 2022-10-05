@@ -10,7 +10,7 @@ UCLASS(Blueprintable)
 class ATresEnemyPawn_e_ex801 : public ATresEnemyToyPawnBase {
     GENERATED_BODY()
 public:
-    ATresEnemyPawn_e_ex801();
+    ATresEnemyPawn_e_ex801(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void PostAnimUpdate();
     

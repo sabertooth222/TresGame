@@ -13,7 +13,7 @@ private:
     TEnumAsByte<ETresEnemyca901WarpKind> m_WarpKind;
     
 public:
-    ATresAIPoint_e_ca901_WarpDestination();
+    ATresAIPoint_e_ca901_WarpDestination(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     TEnumAsByte<ETresEnemyca901WarpKind> BP_GetWarpKind();
     

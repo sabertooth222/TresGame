@@ -17,7 +17,7 @@ protected:
     UTresRootComponent* m_pRootComponent;
     
 public:
-    ATresGumiShipPawnBase();
+    ATresGumiShipPawnBase(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetRootCollisionEnable(const bool bIn);
     

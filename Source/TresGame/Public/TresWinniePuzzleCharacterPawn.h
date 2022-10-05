@@ -20,6 +20,6 @@ protected:
     FVector StandByLocationRef;
     
 public:
-    ATresWinniePuzzleCharacterPawn();
+    ATresWinniePuzzleCharacterPawn(const FObjectInitializer& ObjectInitializer);
 };
 

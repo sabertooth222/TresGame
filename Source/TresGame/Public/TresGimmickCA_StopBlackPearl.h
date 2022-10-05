@@ -14,6 +14,6 @@ private:
     UTresCAShipComponent* TresCAShipComponent;
     
 public:
-    ATresGimmickCA_StopBlackPearl();
+    ATresGimmickCA_StopBlackPearl(const FObjectInitializer& ObjectInitializer);
 };
 

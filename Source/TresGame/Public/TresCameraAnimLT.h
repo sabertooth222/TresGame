@@ -19,7 +19,7 @@ protected:
     FTresCameraTargetInfo m_LookOnlyTargetInfo;
     
 public:
-    ATresCameraAnimLT();
+    ATresCameraAnimLT(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     static ATresCameraAnimLT* BP_SpawnTresCameraAnimLT(UObject* WorldContextObject, TSubclassOf<ATresCameraAnimLT> CameraClass, const FName CameraName);
     

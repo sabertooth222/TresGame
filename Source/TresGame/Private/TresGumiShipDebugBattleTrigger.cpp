@@ -7,7 +7,7 @@ class AActor;
 void ATresGumiShipDebugBattleTrigger::_BeginOverlap(UPrimitiveComponent* pOverlappedComponent, AActor* pOtherActor, UPrimitiveComponent* pOtherComp, int32 dOtherBodyIndex, bool bFromSweep, const FHitResult& rSweepResult) {
 }
 
-ATresGumiShipDebugBattleTrigger::ATresGumiShipDebugBattleTrigger() {
+ATresGumiShipDebugBattleTrigger::ATresGumiShipDebugBattleTrigger(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_pArea = CreateDefaultSubobject<USphereComponent>(TEXT("AreaVolume"));
     this->m_pArrangement = NULL;
 }

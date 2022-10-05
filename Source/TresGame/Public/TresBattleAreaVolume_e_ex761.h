@@ -45,6 +45,6 @@ protected:
     uint8 m_bEnableAttachHeight: 1;
     
 public:
-    ATresBattleAreaVolume_e_ex761();
+    ATresBattleAreaVolume_e_ex761(const FObjectInitializer& ObjectInitializer);
 };
 

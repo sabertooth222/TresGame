@@ -1,5 +1,5 @@
 #include "TresGameModeReplayPointBase.h"
 
-ATresGameModeReplayPointBase::ATresGameModeReplayPointBase() {
+ATresGameModeReplayPointBase::ATresGameModeReplayPointBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

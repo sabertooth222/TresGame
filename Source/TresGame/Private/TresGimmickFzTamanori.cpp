@@ -24,7 +24,7 @@ UPrimitiveComponent* ATresGimmickFzTamanori::GetBalanceBallMesh_Implementation()
 void ATresGimmickFzTamanori::BreakBalanceBall_Implementation() {
 }
 
-ATresGimmickFzTamanori::ATresGimmickFzTamanori() {
+ATresGimmickFzTamanori::ATresGimmickFzTamanori(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->TriggerSensor = CreateDefaultSubobject<USphereComponent>(TEXT("TriggerSensor"));
     this->BreakItself = true;
     this->BreakSpeed = 0.00f;

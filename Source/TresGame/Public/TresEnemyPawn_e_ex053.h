@@ -61,7 +61,7 @@ protected:
     bool m_bDiveGround;
     
 public:
-    ATresEnemyPawn_e_ex053();
+    ATresEnemyPawn_e_ex053(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void KillEvent(const bool IsFreeze);
     

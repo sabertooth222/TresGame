@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable)
 class ATresShapeLayoutCircleBase : public ATresShapeLayoutObjectBase {
     GENERATED_BODY()
 public:
-    ATresShapeLayoutCircleBase();
+    ATresShapeLayoutCircleBase(const FObjectInitializer& ObjectInitializer);
 };
 

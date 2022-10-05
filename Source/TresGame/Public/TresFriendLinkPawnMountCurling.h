@@ -92,6 +92,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_Param_PuddingAddRate;
     
-    ATresFriendLinkPawnMountCurling();
+    ATresFriendLinkPawnMountCurling(const FObjectInitializer& ObjectInitializer);
 };
 

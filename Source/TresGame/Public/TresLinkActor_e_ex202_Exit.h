@@ -27,7 +27,7 @@ private:
     float m_AddMotionAlpha[3];
     
 public:
-    ATresLinkActor_e_ex202_Exit();
+    ATresLinkActor_e_ex202_Exit(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintPure)
     TArray<ATresLinkActor_e_ex202_Entry*> GetEntryActors() const;
     

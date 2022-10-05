@@ -12,6 +12,6 @@ private:
     float m_HomingEndTime;
     
 public:
-    ATresProjectile_e_dw405_AvatarStyleFinish();
+    ATresProjectile_e_dw405_AvatarStyleFinish(const FObjectInitializer& ObjectInitializer);
 };
 

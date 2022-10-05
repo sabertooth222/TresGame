@@ -44,6 +44,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector MaxScale;
     
-    ATresWinniePuzzleRabbitPawn();
+    ATresWinniePuzzleRabbitPawn(const FObjectInitializer& ObjectInitializer);
 };
 

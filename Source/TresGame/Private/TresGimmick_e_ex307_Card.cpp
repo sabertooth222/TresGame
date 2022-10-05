@@ -2,7 +2,7 @@
 #include "Components/SceneComponent.h"
 #include "TresSkeletalMeshComponent.h"
 
-ATresGimmick_e_ex307_Card::ATresGimmick_e_ex307_Card() {
+ATresGimmick_e_ex307_Card::ATresGimmick_e_ex307_Card(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MyTransformControl = CreateDefaultSubobject<USceneComponent>(TEXT("MyTransformControl"));
     this->MyMesh = CreateDefaultSubobject<UTresSkeletalMeshComponent>(TEXT("MyMesh"));
     this->m_DummySpawnProjectileClass = NULL;

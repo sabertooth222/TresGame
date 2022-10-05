@@ -1,6 +1,6 @@
 #include "TresFriendLinkPawnGiantSoldier.h"
 
-ATresFriendLinkPawnGiantSoldier::ATresFriendLinkPawnGiantSoldier() {
+ATresFriendLinkPawnGiantSoldier::ATresFriendLinkPawnGiantSoldier(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_fMaxWalkSpeed = 700.00f;
     this->m_fJumpPower = 2000.00f;
     this->m_fFallTimer = 0.07f;

@@ -104,7 +104,7 @@ protected:
     UTresClaymoreManager_e_ex355* m_ClaymoreManager;
     
 public:
-    ATresEnemyPawn_e_ex355();
+    ATresEnemyPawn_e_ex355(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetMasterLightCoefficientDefault(float InTransitionTime, ETresObjTypeProcChannel InChannel, TEnumAsByte<ETresScreenEffectPriority> InPriority, bool IsEject);
     

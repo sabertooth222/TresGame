@@ -26,7 +26,7 @@ protected:
     float m_fIntervalTime;
     
 public:
-    ATresNpcPawn_n_bx202();
+    ATresNpcPawn_n_bx202(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetRightArmAlpha() const;
     

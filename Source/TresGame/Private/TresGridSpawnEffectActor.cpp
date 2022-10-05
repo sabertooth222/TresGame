@@ -4,7 +4,7 @@ int32 ATresGridSpawnEffectActor::GetSpawnEffectIndex() {
     return 0;
 }
 
-ATresGridSpawnEffectActor::ATresGridSpawnEffectActor() {
+ATresGridSpawnEffectActor::ATresGridSpawnEffectActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->bIsRingMove = false;
     this->RingMoveRadius = 50.00f;
     this->RingMoveScale = 1.00f;

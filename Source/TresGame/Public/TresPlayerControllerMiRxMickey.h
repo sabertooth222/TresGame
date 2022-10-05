@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresPlayerControllerMiRxMickey : public ATresPlayerControllerTemplate {
     GENERATED_BODY()
 public:
-    ATresPlayerControllerMiRxMickey();
+    ATresPlayerControllerMiRxMickey(const FObjectInitializer& ObjectInitializer);
 };
 

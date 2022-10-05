@@ -9,7 +9,7 @@ bool ATresGimmickBxDaruma::CheckBreakClass(AActor* Actor) const {
 void ATresGimmickBxDaruma::AvoidDaruma() {
 }
 
-ATresGimmickBxDaruma::ATresGimmickBxDaruma() {
+ATresGimmickBxDaruma::ATresGimmickBxDaruma(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_TakeOverCamera = true;
     this->BalanceBallCamera = NULL;
 }

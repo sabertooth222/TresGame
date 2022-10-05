@@ -30,7 +30,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 GeneratorIndex;
     
-    ATresProjectileGenerator_e_ex773_Eclipse13();
+    ATresProjectileGenerator_e_ex773_Eclipse13(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetWaitTime();
     

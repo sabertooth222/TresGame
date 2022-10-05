@@ -15,6 +15,6 @@ protected:
     float m_TargetRotationYawRate;
     
 public:
-    ATresCameraRailSlideMI();
+    ATresCameraRailSlideMI(const FObjectInitializer& ObjectInitializer);
 };
 

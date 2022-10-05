@@ -41,7 +41,7 @@ AActor* ATresEnemyPawn_e_ex202::BP_DebugGetNearLinkActorEntry() const {
     return NULL;
 }
 
-ATresEnemyPawn_e_ex202::ATresEnemyPawn_e_ex202() {
+ATresEnemyPawn_e_ex202::ATresEnemyPawn_e_ex202(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_AppearActionMode = ETresEnemyEx202ActionMode::TRES_ENEMY_EX202_ACTIONMODE_SNAKE;
     this->m_ThresholdAngle = 180.00f;
     this->m_NumIdle = 2;

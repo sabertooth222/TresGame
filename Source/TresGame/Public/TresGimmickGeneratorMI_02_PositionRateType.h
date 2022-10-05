@@ -38,7 +38,7 @@ protected:
     TArray<int32> m_InterventionRuleParamArray;
     
 public:
-    ATresGimmickGeneratorMI_02_PositionRateType();
+    ATresGimmickGeneratorMI_02_PositionRateType(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void spawn();
     

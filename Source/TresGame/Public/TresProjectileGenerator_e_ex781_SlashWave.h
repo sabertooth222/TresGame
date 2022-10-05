@@ -37,6 +37,6 @@ private:
     UParticleSystemComponent* m_SignParticle;
     
 public:
-    ATresProjectileGenerator_e_ex781_SlashWave();
+    ATresProjectileGenerator_e_ex781_SlashWave(const FObjectInitializer& ObjectInitializer);
 };
 

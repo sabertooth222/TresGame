@@ -83,7 +83,7 @@ private:
     TMap<FName, TWeakObjectPtr<UParticleSystem>> m_EffectDic;
     
 public:
-    ATresGimmickRA_Pudding_ControlActor();
+    ATresGimmickRA_Pudding_ControlActor(const FObjectInitializer& ObjectInitializer);
 private:
     UFUNCTION()
     void OnReactorCommand(ATresCharPawnBase* CommandCauser, TEnumAsByte<ETresCommandKind> CommandID, UTresReactorComponent* ReactorComponent);

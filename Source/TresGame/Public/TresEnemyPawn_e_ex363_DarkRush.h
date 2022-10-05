@@ -98,7 +98,7 @@ private:
     ATresCharPawnBase* m_MyTarget;
     
 public:
-    ATresEnemyPawn_e_ex363_DarkRush();
+    ATresEnemyPawn_e_ex363_DarkRush(const FObjectInitializer& ObjectInitializer);
 protected:
     UFUNCTION(BlueprintCallable)
     void OnPullCollisionEndOverlap(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);

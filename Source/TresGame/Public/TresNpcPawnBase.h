@@ -121,7 +121,7 @@ protected:
     UAudioComponent* m_pVoiceCompo;
     
 public:
-    ATresNpcPawnBase();
+    ATresNpcPawnBase(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     bool SetTargetFNPC(ETresChrUniqueID UniqueId, bool InTargetActor, bool InDestination);
     

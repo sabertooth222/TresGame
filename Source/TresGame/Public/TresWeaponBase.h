@@ -158,7 +158,7 @@ protected:
     UParticleSystemComponent* m_pDisappearEffect;
     
 public:
-    ATresWeaponBase();
+    ATresWeaponBase(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintPure)
     ATresPawnBase* GetPawnOwner() const;
     

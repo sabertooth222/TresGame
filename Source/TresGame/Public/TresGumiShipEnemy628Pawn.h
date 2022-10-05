@@ -56,6 +56,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRotator RotC3;
     
-    ATresGumiShipEnemy628Pawn();
+    ATresGumiShipEnemy628Pawn(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -1,6 +1,6 @@
 #include "TresTriggerSphereRockTitan.h"
 
-ATresTriggerSphereRockTitan::ATresTriggerSphereRockTitan() {
+ATresTriggerSphereRockTitan::ATresTriggerSphereRockTitan(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_LinkPawn = NULL;
     this->m_DetectTag = TEXT("AFRC_Marker");
     this->m_TimerInterval = 0.00f;

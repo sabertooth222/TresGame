@@ -109,7 +109,7 @@ public:
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresAreaVolumeSimpleEvent OnHologramModeEnd;
     
-    ATresGimmick_HologramVolumn();
+    ATresGimmick_HologramVolumn(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void StartHologramModeUI();
     

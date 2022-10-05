@@ -10,7 +10,7 @@ int32 ATresGumiShipEnemy623Pawn::GetALSPhase() const {
 void ATresGumiShipEnemy623Pawn::CancelAttack() {
 }
 
-ATresGumiShipEnemy623Pawn::ATresGumiShipEnemy623Pawn() {
+ATresGumiShipEnemy623Pawn::ATresGumiShipEnemy623Pawn(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MotionMode = 0;
     this->Locked = false;
     this->HeadRollSpeedMax = 360.00f;

@@ -1,5 +1,5 @@
 #include "TresLevelEntityDynamic.h"
 
-ATresLevelEntityDynamic::ATresLevelEntityDynamic() {
+ATresLevelEntityDynamic::ATresLevelEntityDynamic(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

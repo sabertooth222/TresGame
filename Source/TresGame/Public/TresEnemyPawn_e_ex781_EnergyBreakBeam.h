@@ -29,7 +29,7 @@ private:
     ATresPlayerPawnBase* m_OverlapCharPawn;
     
 public:
-    ATresEnemyPawn_e_ex781_EnergyBreakBeam();
+    ATresEnemyPawn_e_ex781_EnergyBreakBeam(const FObjectInitializer& ObjectInitializer);
 protected:
     UFUNCTION(BlueprintCallable)
     void OnPullCollisionEndOverlap(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);

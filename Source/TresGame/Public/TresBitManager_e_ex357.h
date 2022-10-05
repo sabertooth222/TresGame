@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresBitManager_e_ex357 : public ATresActorBase_e_ex357 {
     GENERATED_BODY()
 public:
-    ATresBitManager_e_ex357();
+    ATresBitManager_e_ex357(const FObjectInitializer& ObjectInitializer);
 };
 

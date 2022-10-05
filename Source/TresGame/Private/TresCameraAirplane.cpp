@@ -1,5 +1,5 @@
 #include "TresCameraAirplane.h"
 
-ATresCameraAirplane::ATresCameraAirplane() {
+ATresCameraAirplane::ATresCameraAirplane(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

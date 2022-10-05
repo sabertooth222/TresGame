@@ -1,5 +1,5 @@
 #include "TresPlayerPawnAqua.h"
 
-ATresPlayerPawnAqua::ATresPlayerPawnAqua() {
+ATresPlayerPawnAqua::ATresPlayerPawnAqua(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

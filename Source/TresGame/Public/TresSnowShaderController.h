@@ -10,7 +10,7 @@ UCLASS(Blueprintable)
 class ATresSnowShaderController : public AActor {
     GENERATED_BODY()
 public:
-    ATresSnowShaderController();
+    ATresSnowShaderController(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void SetSnowRenderResolutionWidth(int32 inWidth);
     

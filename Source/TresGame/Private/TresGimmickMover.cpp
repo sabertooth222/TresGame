@@ -1,7 +1,7 @@
 #include "TresGimmickMover.h"
 #include "TresRootComponent.h"
 
-ATresGimmickMover::ATresGimmickMover() {
+ATresGimmickMover::ATresGimmickMover(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MyRoot = CreateDefaultSubobject<UTresRootComponent>(TEXT("TresRoot"));
     this->m_bIsRotation = false;
     this->m_bIsRailSlideMove = false;

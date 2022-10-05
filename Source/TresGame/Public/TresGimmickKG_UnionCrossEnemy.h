@@ -72,7 +72,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ShieldHitInterval;
     
-    ATresGimmickKG_UnionCrossEnemy();
+    ATresGimmickKG_UnionCrossEnemy(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetUnionCross(ATresGimmickKG_UnionCrossRide* NewUnionCross);
     

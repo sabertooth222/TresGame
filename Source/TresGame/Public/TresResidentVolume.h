@@ -18,6 +18,6 @@ protected:
     TArray<UObject*> m_AssetObjects;
     
 public:
-    ATresResidentVolume();
+    ATresResidentVolume(const FObjectInitializer& ObjectInitializer);
 };
 

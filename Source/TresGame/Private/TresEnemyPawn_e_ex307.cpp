@@ -10,7 +10,7 @@ bool ATresEnemyPawn_e_ex307::IsCardVanishMode() const {
 void ATresEnemyPawn_e_ex307::DebugSetEnableDrawCardType(int32 bEnable) {
 }
 
-ATresEnemyPawn_e_ex307::ATresEnemyPawn_e_ex307() {
+ATresEnemyPawn_e_ex307::ATresEnemyPawn_e_ex307(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_StunActionClass = NULL;
     this->m_CardManagerClass = NULL;
     this->m_bEnableCorrectCardVoice2D = true;

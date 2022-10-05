@@ -83,7 +83,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<FTCPATH_SPLINEGROUP> m_SplinePathRSLocation;
     
-    ATresCameraManager();
+    ATresCameraManager(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetTresCameraRollOffset(float RollOffset);
     

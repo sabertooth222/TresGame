@@ -13,6 +13,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bAttackCollProcessOnSpawn;
     
-    ATresProjectile_e_ex354_ClusterShotMove();
+    ATresProjectile_e_ex354_ClusterShotMove(const FObjectInitializer& ObjectInitializer);
 };
 

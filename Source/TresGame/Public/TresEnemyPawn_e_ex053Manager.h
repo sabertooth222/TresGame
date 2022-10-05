@@ -70,7 +70,7 @@ private:
     bool m_bNotifyStop;
     
 public:
-    ATresEnemyPawn_e_ex053Manager();
+    ATresEnemyPawn_e_ex053Manager(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SpawnFzPuddingRequest(const int32 SpawnNum, const float SpawnWaitTime, const bool bSpawnModeCluster);
     

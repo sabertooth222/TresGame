@@ -47,7 +47,7 @@ int32 ATresEnemyPawn_e_ca404a::BP_GetCurrentDamageCount() const {
     return 0;
 }
 
-ATresEnemyPawn_e_ca404a::ATresEnemyPawn_e_ca404a() {
+ATresEnemyPawn_e_ca404a::ATresEnemyPawn_e_ca404a(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_VelocityCurve = NULL;
 }
 

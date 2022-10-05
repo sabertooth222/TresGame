@@ -31,7 +31,7 @@ private:
     int32 HopID;
     
 public:
-    ATresHopActor();
+    ATresHopActor(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetEnable(bool bEnable);
     

@@ -10,7 +10,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fAppearFadeTime;
     
-    ATresEnemyPawn_e_ex061();
+    ATresEnemyPawn_e_ex061(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsTsuboWaiting() const;
     

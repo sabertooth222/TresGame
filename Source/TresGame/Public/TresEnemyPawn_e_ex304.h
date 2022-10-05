@@ -19,7 +19,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_BattleEndHitPointPerAreaD;
     
-    ATresEnemyPawn_e_ex304();
+    ATresEnemyPawn_e_ex304(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetEnableDebugFnishBlow(bool bEnable);
     

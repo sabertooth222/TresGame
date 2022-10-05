@@ -42,6 +42,6 @@ protected:
     uint8 m_bDefaultPosR: 1;
     
 public:
-    ATresCameraSoKc();
+    ATresCameraSoKc(const FObjectInitializer& ObjectInitializer);
 };
 

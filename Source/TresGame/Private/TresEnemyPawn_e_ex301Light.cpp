@@ -2,7 +2,7 @@
 #include "Components/DirectionalLightComponent.h"
 #include "Components/PointLightComponent.h"
 
-ATresEnemyPawn_e_ex301Light::ATresEnemyPawn_e_ex301Light() {
+ATresEnemyPawn_e_ex301Light::ATresEnemyPawn_e_ex301Light(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MyDirectionalLight = CreateDefaultSubobject<UDirectionalLightComponent>(TEXT("MyDirectionalLight"));
     this->MyPointLight = CreateDefaultSubobject<UPointLightComponent>(TEXT("MyPointLight"));
     this->m_DirectionalIntensity = 500.00f;

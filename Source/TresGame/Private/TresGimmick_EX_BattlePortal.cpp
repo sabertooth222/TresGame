@@ -10,7 +10,7 @@ void ATresGimmick_EX_BattlePortal::OnChangeBattleMode(bool bIsBattleMode) {
 void ATresGimmick_EX_BattlePortal::BP_BattlePortalMapjump() {
 }
 
-ATresGimmick_EX_BattlePortal::ATresGimmick_EX_BattlePortal() {
+ATresGimmick_EX_BattlePortal::ATresGimmick_EX_BattlePortal(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_EffectBodyComp = NULL;
     this->m_EffectEscapeComp = NULL;
     this->MyRoot = CreateDefaultSubobject<USceneComponent>(TEXT("Scene0"));

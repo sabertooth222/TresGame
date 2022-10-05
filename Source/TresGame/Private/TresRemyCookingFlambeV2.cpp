@@ -17,7 +17,7 @@ float ATresRemyCookingFlambeV2::GetGameDuration() const {
 void ATresRemyCookingFlambeV2::ChangeState(TEnumAsByte<RemyCookingGameState> State) {
 }
 
-ATresRemyCookingFlambeV2::ATresRemyCookingFlambeV2() {
+ATresRemyCookingFlambeV2::ATresRemyCookingFlambeV2(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->PanPawnRef = NULL;
     this->BottlePawnRef = NULL;
     this->BrandyParticleAttachDataRef = NULL;

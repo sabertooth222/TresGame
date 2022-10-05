@@ -34,6 +34,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_Param_JumpPressZ;
     
-    ATresDisneyMagicPawnSimba();
+    ATresDisneyMagicPawnSimba(const FObjectInitializer& ObjectInitializer);
 };
 

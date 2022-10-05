@@ -83,7 +83,7 @@ private:
     AActor* m_pExpBreakNote;
     
 public:
-    ATresDisneyMagicPawnRalph();
+    ATresDisneyMagicPawnRalph(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SpawnFirstRalphBlock();
     

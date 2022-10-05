@@ -77,7 +77,7 @@ ATresRemyPlayerController* ATresRemyGameManager::GetController() const {
 void ATresRemyGameManager::ChangeState(TEnumAsByte<RemyGameState> State) {
 }
 
-ATresRemyGameManager::ATresRemyGameManager() {
+ATresRemyGameManager::ATresRemyGameManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->GameStartWaitFrames = 0;
     this->HourglassPawnRef = NULL;
     this->HourglassSandParticleAttachDataRef = NULL;

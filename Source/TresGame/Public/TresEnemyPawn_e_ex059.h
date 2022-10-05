@@ -52,7 +52,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* m_MaskEyeEffectCmp;
     
-    ATresEnemyPawn_e_ex059();
+    ATresEnemyPawn_e_ex059(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, BlueprintPure)
     bool ValidateRockShotMaskOff(FVector inTargetLocation, float inRollStartYawOffset, float inMaxRootHeightOffset, FText& outReason) const;
     

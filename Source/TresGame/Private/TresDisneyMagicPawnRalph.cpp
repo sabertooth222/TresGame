@@ -17,7 +17,7 @@ AActor* ATresDisneyMagicPawnRalph::GetExpBreakBlockNew() const {
     return NULL;
 }
 
-ATresDisneyMagicPawnRalph::ATresDisneyMagicPawnRalph() {
+ATresDisneyMagicPawnRalph::ATresDisneyMagicPawnRalph(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_RengaMesh = CreateDefaultSubobject<UTresSkeletalMeshComponent>(TEXT("TresDisneyMagicPawnRalphRengaMesh"));
     this->m_EffAssetFinishEnergy = NULL;
     this->m_SEAssetBlockCreateFail = NULL;

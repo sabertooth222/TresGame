@@ -37,7 +37,7 @@ void ATresEnemyPawn_e_ex050Manager::NotifyStop() {
 void ATresEnemyPawn_e_ex050Manager::ChangeSpawnPuddingMode(const int32 mode) {
 }
 
-ATresEnemyPawn_e_ex050Manager::ATresEnemyPawn_e_ex050Manager() {
+ATresEnemyPawn_e_ex050Manager::ATresEnemyPawn_e_ex050Manager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_CheckPlayerDistance = 1000.00f;
     this->m_CheckFlyPuddingDistance = 1000.00f;
     this->m_SmallPuddingClass = NULL;

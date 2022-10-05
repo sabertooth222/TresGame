@@ -1,6 +1,6 @@
 #include "TresMapSetVolumeEx.h"
 
-ATresMapSetVolumeEx::ATresMapSetVolumeEx() {
+ATresMapSetVolumeEx::ATresMapSetVolumeEx(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->EndOverlapMapset = NULL;
 }
 

@@ -20,7 +20,7 @@ protected:
     bool bUseOverlapManager;
     
 public:
-    ATresMapSetVolume();
+    ATresMapSetVolume(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void ChangeMapSetAndCommandName(UTresMapSet* newMapSet, FName newCommandName);
     

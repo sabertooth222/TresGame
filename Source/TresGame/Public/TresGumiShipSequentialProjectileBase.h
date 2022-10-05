@@ -13,6 +13,6 @@ private:
     TArray<FTresGumiShipProjectileSequenceData> m_Sequences;
     
 public:
-    ATresGumiShipSequentialProjectileBase();
+    ATresGumiShipSequentialProjectileBase(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -13,6 +13,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<ATresProjectileBase> m_DarkBombExpProjectile;
     
-    ATresProjectile_EnemyLargeShipBase_DarkBomb();
+    ATresProjectile_EnemyLargeShipBase_DarkBomb(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -1,5 +1,5 @@
 #include "TresInstanceActor.h"
 
-ATresInstanceActor::ATresInstanceActor() {
+ATresInstanceActor::ATresInstanceActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

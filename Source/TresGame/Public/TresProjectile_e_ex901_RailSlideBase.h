@@ -58,7 +58,7 @@ protected:
     bool m_bEndHoming;
     
 public:
-    ATresProjectile_e_ex901_RailSlideBase();
+    ATresProjectile_e_ex901_RailSlideBase(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void RefreshAtkColl();
     

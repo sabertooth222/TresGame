@@ -35,7 +35,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_iSolidMaterialParamNo;
     
-    ATresEnemyPawn_e_he904();
+    ATresEnemyPawn_e_he904(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void DebugSwapMountCollEnabled();
     

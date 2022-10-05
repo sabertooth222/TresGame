@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresStylePawnSHChariot : public ATresStylePawnBase {
     GENERATED_BODY()
 public:
-    ATresStylePawnSHChariot();
+    ATresStylePawnSHChariot(const FObjectInitializer& ObjectInitializer);
 };
 

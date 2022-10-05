@@ -45,7 +45,7 @@ private:
     bool m_IsFlameMode;
     
 public:
-    ATresEnemyPawn_e_ex003();
+    ATresEnemyPawn_e_ex003(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetFlameMode(bool NewIsFlameMode);
     

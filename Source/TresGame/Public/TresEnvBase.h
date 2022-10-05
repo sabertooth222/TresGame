@@ -12,7 +12,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USceneComponent* SceneComponent;
     
-    ATresEnvBase();
+    ATresEnvBase(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void RegistAllTickFunction(bool Enable, bool allComponent);
     

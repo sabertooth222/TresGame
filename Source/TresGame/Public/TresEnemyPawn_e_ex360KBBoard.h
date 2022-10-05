@@ -94,6 +94,6 @@ private:
     UParticleSystemComponent* m_HitParticle;
     
 public:
-    ATresEnemyPawn_e_ex360KBBoard();
+    ATresEnemyPawn_e_ex360KBBoard(const FObjectInitializer& ObjectInitializer);
 };
 

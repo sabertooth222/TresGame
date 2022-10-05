@@ -1,6 +1,6 @@
 #include "TresFriendLinkPawnPoppingHoly.h"
 
-ATresFriendLinkPawnPoppingHoly::ATresFriendLinkPawnPoppingHoly() {
+ATresFriendLinkPawnPoppingHoly::ATresFriendLinkPawnPoppingHoly(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_HolyProjectileClass = NULL;
     this->m_FinishAttackHolyProjectileClass = NULL;
     this->m_pHolyBulletFiringEffectAsset = NULL;

@@ -25,7 +25,7 @@ protected:
     ASQEX_SplineActor* splineActor;
     
 public:
-    ATresGimmickEwHeartCharacterGenerator();
+    ATresGimmickEwHeartCharacterGenerator(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetPreviewActorData(AActor* Actor, USceneComponent* SceneComponent, const FTransform& Transform);
     

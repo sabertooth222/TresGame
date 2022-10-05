@@ -37,7 +37,7 @@ FVector ATresGimmickTsBouncyPet::GetSensorLocation() const {
     return FVector{};
 }
 
-ATresGimmickTsBouncyPet::ATresGimmickTsBouncyPet() {
+ATresGimmickTsBouncyPet::ATresGimmickTsBouncyPet(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->SideCollision = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("SideCollision"));
     this->SphereBlockWorldUnique = CreateDefaultSubobject<USphereComponent>(TEXT("SphereBlockWorldUnique"));
     this->CancelComp = CreateDefaultSubobject<USceneComponent>(TEXT("EntryTrigger"));

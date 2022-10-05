@@ -1,5 +1,5 @@
 #include "TresEventObjectPawnBase.h"
 
-ATresEventObjectPawnBase::ATresEventObjectPawnBase() {
+ATresEventObjectPawnBase::ATresEventObjectPawnBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

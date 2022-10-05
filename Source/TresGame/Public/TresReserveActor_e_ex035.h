@@ -18,6 +18,6 @@ protected:
     ATresEnemyPawn_e_ex035* OwnerPawn;
     
 public:
-    ATresReserveActor_e_ex035();
+    ATresReserveActor_e_ex035(const FObjectInitializer& ObjectInitializer);
 };
 

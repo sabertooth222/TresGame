@@ -21,6 +21,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bHighSpeed;
     
-    ATresBxCarSplineActor();
+    ATresBxCarSplineActor(const FObjectInitializer& ObjectInitializer);
 };
 

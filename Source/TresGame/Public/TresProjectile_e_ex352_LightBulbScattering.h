@@ -17,6 +17,6 @@ protected:
     UParticleSystem* m_HitLandEffectData;
     
 public:
-    ATresProjectile_e_ex352_LightBulbScattering();
+    ATresProjectile_e_ex352_LightBulbScattering(const FObjectInitializer& ObjectInitializer);
 };
 

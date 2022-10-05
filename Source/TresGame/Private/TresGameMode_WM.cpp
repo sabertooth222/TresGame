@@ -16,7 +16,7 @@ ATresGummiEditorManager* ATresGameMode_WM::GetGummiEditorManager() const {
     return NULL;
 }
 
-ATresGameMode_WM::ATresGameMode_WM() {
+ATresGameMode_WM::ATresGameMode_WM(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->WorldMapCameraActorRef = NULL;
     this->GummiMenuManagerRef = NULL;
     this->m_pEditorDataSet = NULL;

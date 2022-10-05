@@ -16,7 +16,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<APointLight*> PlantLights;
     
-    ATresTsDancingPlantSensor();
+    ATresTsDancingPlantSensor(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void ChangeRate(float Rate);
     

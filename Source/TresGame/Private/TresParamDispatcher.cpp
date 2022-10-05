@@ -1,7 +1,7 @@
 #include "TresParamDispatcher.h"
 
 
-ATresParamDispatcher::ATresParamDispatcher() {
+ATresParamDispatcher::ATresParamDispatcher(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_Dirty = false;
 }
 

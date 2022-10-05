@@ -96,6 +96,6 @@ private:
     UParticleSystemComponent* m_TornadoEff;
     
 public:
-    ATresEnemyManager_XIIIE();
+    ATresEnemyManager_XIIIE(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable)
 class ATresCommunicationStation : public AActor {
     GENERATED_BODY()
 public:
-    ATresCommunicationStation();
+    ATresCommunicationStation(const FObjectInitializer& ObjectInitializer);
 };
 

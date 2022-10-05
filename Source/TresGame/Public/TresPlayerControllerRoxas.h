@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresPlayerControllerRoxas : public ATresPlayerControllerTemplate {
     GENERATED_BODY()
 public:
-    ATresPlayerControllerRoxas();
+    ATresPlayerControllerRoxas(const FObjectInitializer& ObjectInitializer);
 };
 

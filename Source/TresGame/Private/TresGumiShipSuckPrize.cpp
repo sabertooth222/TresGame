@@ -1,5 +1,5 @@
 #include "TresGumiShipSuckPrize.h"
 
-ATresGumiShipSuckPrize::ATresGumiShipSuckPrize() {
+ATresGumiShipSuckPrize::ATresGumiShipSuckPrize(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

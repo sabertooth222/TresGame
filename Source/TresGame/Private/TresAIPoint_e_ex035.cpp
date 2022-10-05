@@ -16,7 +16,7 @@ TEnumAsByte<ETresEnemy_e_ex035_AIPointType> ATresAIPoint_e_ex035::GetAIPointType
     return ETresEnemy_e_ex035_AIPointType_Tree;
 }
 
-ATresAIPoint_e_ex035::ATresAIPoint_e_ex035() {
+ATresAIPoint_e_ex035::ATresAIPoint_e_ex035(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_AIPointType = ETresEnemy_e_ex035_AIPointType_Tree;
 }
 

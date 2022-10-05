@@ -1,6 +1,6 @@
 #include "TresGumiShipEnemy628Pawn.h"
 
-ATresGumiShipEnemy628Pawn::ATresGumiShipEnemy628Pawn() {
+ATresGumiShipEnemy628Pawn::ATresGumiShipEnemy628Pawn(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->AppearWaitTime = 2.00f;
     this->AppearOffsetZ = -2000.00f;
     this->Attack2PrepareTime = 1.00f;

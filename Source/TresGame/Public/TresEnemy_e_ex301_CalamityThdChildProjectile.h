@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresEnemy_e_ex301_CalamityThdChildProjectile : public ATresProjectileBase {
     GENERATED_BODY()
 public:
-    ATresEnemy_e_ex301_CalamityThdChildProjectile();
+    ATresEnemy_e_ex301_CalamityThdChildProjectile(const FObjectInitializer& ObjectInitializer);
 };
 

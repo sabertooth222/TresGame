@@ -17,7 +17,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTresSpawnActorManagerComponent* SpawnActorManager;
     
-    ATresGimmickBxDarkCube();
+    ATresGimmickBxDarkCube(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetEnableAttack(bool bEnable, const FName InGroupName, float InAttackInterval);
     

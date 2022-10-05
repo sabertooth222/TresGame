@@ -4,6 +4,6 @@ bool ATresEnemyPawn_e_ex072::IsShotHit() const {
     return false;
 }
 
-ATresEnemyPawn_e_ex072::ATresEnemyPawn_e_ex072() {
+ATresEnemyPawn_e_ex072::ATresEnemyPawn_e_ex072(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

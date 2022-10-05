@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresMissionManager_e_ex021 : public AActor {
     GENERATED_BODY()
 public:
-    ATresMissionManager_e_ex021();
+    ATresMissionManager_e_ex021(const FObjectInitializer& ObjectInitializer);
 };
 

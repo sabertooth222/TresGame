@@ -14,6 +14,6 @@ private:
     UParticleSystem* m_SmokeEffData;
     
 public:
-    ATresProjectile_e_ex026_Missile();
+    ATresProjectile_e_ex026_Missile(const FObjectInitializer& ObjectInitializer);
 };
 

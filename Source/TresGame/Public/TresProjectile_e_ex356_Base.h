@@ -12,6 +12,6 @@ protected:
     float m_TimeGageDamageValue;
     
 public:
-    ATresProjectile_e_ex356_Base();
+    ATresProjectile_e_ex356_Base(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -4,7 +4,7 @@
 void ATresEnvBase::RegistAllTickFunction(bool Enable, bool allComponent) {
 }
 
-ATresEnvBase::ATresEnvBase() {
+ATresEnvBase::ATresEnvBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->SceneComponent = CreateDefaultSubobject<USceneComponent>(TEXT("SceneComponent"));
 }
 

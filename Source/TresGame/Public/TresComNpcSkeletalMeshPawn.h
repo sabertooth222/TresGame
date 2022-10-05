@@ -10,6 +10,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fNearCameraRange;
     
-    ATresComNpcSkeletalMeshPawn();
+    ATresComNpcSkeletalMeshPawn(const FObjectInitializer& ObjectInitializer);
 };
 

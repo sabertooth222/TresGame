@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable)
 class ATresFzAvalanche : public AActor {
     GENERATED_BODY()
 public:
-    ATresFzAvalanche();
+    ATresFzAvalanche(const FObjectInitializer& ObjectInitializer);
 };
 

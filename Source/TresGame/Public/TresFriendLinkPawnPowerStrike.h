@@ -129,6 +129,6 @@ private:
     ATresProjectileBase* m_pProjectileExp;
     
 public:
-    ATresFriendLinkPawnPowerStrike();
+    ATresFriendLinkPawnPowerStrike(const FObjectInitializer& ObjectInitializer);
 };
 

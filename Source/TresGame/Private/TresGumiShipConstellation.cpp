@@ -5,7 +5,7 @@
 void ATresGumiShipConstellation::OnMarkerChanged_Implementation(bool flg) {
 }
 
-ATresGumiShipConstellation::ATresGumiShipConstellation() {
+ATresGumiShipConstellation::ATresGumiShipConstellation(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->Marker = CreateDefaultSubobject<UTresGumiShipConstellationMarkerComponent>(TEXT("Marker"));
     this->OutLinesRoot = CreateDefaultSubobject<USceneComponent>(TEXT("OutLinesRoot"));
     this->StarsRoot = NULL;

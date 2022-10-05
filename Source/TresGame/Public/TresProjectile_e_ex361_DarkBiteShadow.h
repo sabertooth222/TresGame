@@ -17,7 +17,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_pro_ShadowEffData;
     
-    ATresProjectile_e_ex361_DarkBiteShadow();
+    ATresProjectile_e_ex361_DarkBiteShadow(const FObjectInitializer& ObjectInitializer);
     
     // Fix for true pure virtual functions not being implemented
 };

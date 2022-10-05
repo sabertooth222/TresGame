@@ -1,6 +1,6 @@
 #include "TresGummiEditorActor.h"
 
-ATresGummiEditorActor::ATresGummiEditorActor() {
+ATresGummiEditorActor::ATresGummiEditorActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_pStaticMesh_Center = NULL;
     this->m_pStaticMesh_Cursor = NULL;
     this->m_pStaticMesh_StickerCursor = NULL;

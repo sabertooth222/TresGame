@@ -7,6 +7,6 @@ bool ATresActorManager_e_ex006_CoopScrum::IsCoopMode() const {
 void ATresActorManager_e_ex006_CoopScrum::CoopDashEnd() {
 }
 
-ATresActorManager_e_ex006_CoopScrum::ATresActorManager_e_ex006_CoopScrum() {
+ATresActorManager_e_ex006_CoopScrum::ATresActorManager_e_ex006_CoopScrum(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

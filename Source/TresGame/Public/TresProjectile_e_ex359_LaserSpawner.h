@@ -17,6 +17,6 @@ protected:
     FEX359_LaserOnTimeInfoSet m_LaserOnTimeInfoSet;
     
 public:
-    ATresProjectile_e_ex359_LaserSpawner();
+    ATresProjectile_e_ex359_LaserSpawner(const FObjectInitializer& ObjectInitializer);
 };
 

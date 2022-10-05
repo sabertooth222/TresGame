@@ -85,7 +85,7 @@ bool ATresGumiShipEnemy621Pawn::_IsBrokenDustShootMuzzle() {
 void ATresGumiShipEnemy621Pawn::_AttachNewRootSpline(int32 dIndex) {
 }
 
-ATresGumiShipEnemy621Pawn::ATresGumiShipEnemy621Pawn() {
+ATresGumiShipEnemy621Pawn::ATresGumiShipEnemy621Pawn(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_pEatAtkCollision = CreateDefaultSubobject<UTresGumiShipAtkCollisionSetCompo>(TEXT("EatAtkCollision"));
     this->m_pDustWeaponSequence = CreateDefaultSubobject<UTresGumiShipWeaponSequence>(TEXT("GM621WeaponSequence"));
     this->m_pUniqueAttachDataAsset = NULL;

@@ -1,5 +1,5 @@
 #include "TresDamageVolume.h"
 
-ATresDamageVolume::ATresDamageVolume() {
+ATresDamageVolume::ATresDamageVolume(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

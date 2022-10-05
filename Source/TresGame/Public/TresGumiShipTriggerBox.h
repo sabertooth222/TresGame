@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresGumiShipTriggerBox : public ATriggerBox {
     GENERATED_BODY()
 public:
-    ATresGumiShipTriggerBox();
+    ATresGumiShipTriggerBox(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable, Transient)
 class ATresTransientActor : public AActor {
     GENERATED_BODY()
 public:
-    ATresTransientActor();
+    ATresTransientActor(const FObjectInitializer& ObjectInitializer);
 };
 

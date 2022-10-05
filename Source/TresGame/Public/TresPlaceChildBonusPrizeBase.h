@@ -13,7 +13,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTres1dChainActorComponent* DebugTres1dChainActorComponent;
     
-    ATresPlaceChildBonusPrizeBase();
+    ATresPlaceChildBonusPrizeBase(const FObjectInitializer& ObjectInitializer);
     
     // Fix for true pure virtual functions not being implemented
 };

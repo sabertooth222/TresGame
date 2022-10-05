@@ -15,6 +15,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_VanishEffData;
     
-    ATresProjectile_e_dw401_ShadowBullet();
+    ATresProjectile_e_dw401_ShadowBullet(const FObjectInitializer& ObjectInitializer);
 };
 

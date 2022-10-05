@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresStylePawnFLKraken : public ATresStylePawnBase {
     GENERATED_BODY()
 public:
-    ATresStylePawnFLKraken();
+    ATresStylePawnFLKraken(const FObjectInitializer& ObjectInitializer);
 };
 

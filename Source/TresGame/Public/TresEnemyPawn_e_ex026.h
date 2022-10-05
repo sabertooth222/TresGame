@@ -71,7 +71,7 @@ private:
     ATresVehiclePawnSmallAirplane* m_SmallAirplane;
     
 public:
-    ATresEnemyPawn_e_ex026();
+    ATresEnemyPawn_e_ex026(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsRideRailSlideActor() const;
     

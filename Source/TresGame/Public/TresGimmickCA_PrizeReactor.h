@@ -15,7 +15,7 @@ protected:
     UTresReactorComponent* m_ReactorComp;
     
 public:
-    ATresGimmickCA_PrizeReactor();
+    ATresGimmickCA_PrizeReactor(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void GetPrizeItem(ETresDropItemID dropID);
     

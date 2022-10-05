@@ -49,7 +49,7 @@ private:
     UTresEnemyXIIIRetryInheritParam* m_RetryInheritParam;
     
 public:
-    ATresEnemyXIIIPawnBase();
+    ATresEnemyXIIIPawnBase(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void NotifyChangePhase(ETresEnemyXIIIPhaseType InNewPhaseType);
     

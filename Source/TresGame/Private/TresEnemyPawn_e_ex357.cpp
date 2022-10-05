@@ -115,7 +115,7 @@ void ATresEnemyPawn_e_ex357::DebugEnableBloomShield(int32 Enable) {
 void ATresEnemyPawn_e_ex357::DeathSentenceRemoteEventForLevelBP(UObject* WorldContextObject, TEnumAsByte<ETresDeathSentenceRemoteEventType_e_ex357> InRemoteType) {
 }
 
-ATresEnemyPawn_e_ex357::ATresEnemyPawn_e_ex357() {
+ATresEnemyPawn_e_ex357::ATresEnemyPawn_e_ex357(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MyPullCollisionComponent = CreateDefaultSubobject<USphereComponent>(TEXT("PullCollisionComponent0"));
     this->m_AuraParticleSystem = NULL;
     this->m_WeaponAuraParticleSystem = NULL;

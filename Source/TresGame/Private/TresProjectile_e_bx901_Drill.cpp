@@ -8,7 +8,7 @@ UTresStaticMeshComponent* ATresProjectile_e_bx901_Drill::BP_GetMyMesh() {
     return NULL;
 }
 
-ATresProjectile_e_bx901_Drill::ATresProjectile_e_bx901_Drill() {
+ATresProjectile_e_bx901_Drill::ATresProjectile_e_bx901_Drill(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_iDrillNum = 0;
     this->m_fDrillMargin = 0.00f;
     this->m_bSpawnSelf = false;

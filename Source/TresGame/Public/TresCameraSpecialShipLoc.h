@@ -38,6 +38,6 @@ protected:
     float m_SwitchInterpTime;
     
 public:
-    ATresCameraSpecialShipLoc();
+    ATresCameraSpecialShipLoc(const FObjectInitializer& ObjectInitializer);
 };
 

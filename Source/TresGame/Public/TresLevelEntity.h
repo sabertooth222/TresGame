@@ -144,7 +144,7 @@ private:
     bool m_AutoDestroy;
     
 public:
-    ATresLevelEntity();
+    ATresLevelEntity(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void LinkActorPosition();
     

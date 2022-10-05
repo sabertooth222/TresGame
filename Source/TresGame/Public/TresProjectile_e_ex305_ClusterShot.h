@@ -16,6 +16,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_pro_ScrollHitEffData;
     
-    ATresProjectile_e_ex305_ClusterShot();
+    ATresProjectile_e_ex305_ClusterShot(const FObjectInitializer& ObjectInitializer);
 };
 

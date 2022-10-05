@@ -53,6 +53,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresComNpcEntityVoiceData> m_VoiceDatas;
     
-    ATresComNpcEntityActor();
+    ATresComNpcEntityActor(const FObjectInitializer& ObjectInitializer);
 };
 

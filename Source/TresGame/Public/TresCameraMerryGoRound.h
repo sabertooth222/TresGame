@@ -27,7 +27,7 @@ protected:
     float m_RotReturnTime;
     
 public:
-    ATresCameraMerryGoRound();
+    ATresCameraMerryGoRound(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void BP_SetRotationYaw(float Yaw);
     

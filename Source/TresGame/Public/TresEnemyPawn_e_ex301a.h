@@ -17,7 +17,7 @@ private:
     TArray<USoundBase*> m_AnnihilationEndSoundData;
     
 public:
-    ATresEnemyPawn_e_ex301a();
+    ATresEnemyPawn_e_ex301a(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, Exec)
     bool IsRunningAllOtherEnemiesBT() const;
     

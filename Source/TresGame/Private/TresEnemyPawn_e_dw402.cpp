@@ -7,7 +7,7 @@ float ATresEnemyPawn_e_dw402::GetHitTimer() {
     return 0.0f;
 }
 
-ATresEnemyPawn_e_dw402::ATresEnemyPawn_e_dw402() {
+ATresEnemyPawn_e_dw402::ATresEnemyPawn_e_dw402(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_ShadowSpawnEff = NULL;
     this->m_ShadowDiveEff = NULL;
     this->m_HeadEff = NULL;

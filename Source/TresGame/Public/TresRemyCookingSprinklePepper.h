@@ -9,7 +9,7 @@ UCLASS(Blueprintable)
 class ATresRemyCookingSprinklePepper : public ATresRemyCookingBase {
     GENERATED_BODY()
 public:
-    ATresRemyCookingSprinklePepper();
+    ATresRemyCookingSprinklePepper(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void PushState(TEnumAsByte<RemyCookingGameState> State);
     

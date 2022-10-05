@@ -22,7 +22,7 @@ float ATresGimmickCA_MovableFishBase::GetSpeed() {
     return 0.0f;
 }
 
-ATresGimmickCA_MovableFishBase::ATresGimmickCA_MovableFishBase() {
+ATresGimmickCA_MovableFishBase::ATresGimmickCA_MovableFishBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_bEnableMove = false;
 }
 

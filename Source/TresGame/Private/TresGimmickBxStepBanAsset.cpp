@@ -7,7 +7,7 @@ void ATresGimmickBxStepBanAsset::SetStepBanAssetOwnerActor(AActor* GimmickOwner)
 }
 
 
-ATresGimmickBxStepBanAsset::ATresGimmickBxStepBanAsset() {
+ATresGimmickBxStepBanAsset::ATresGimmickBxStepBanAsset(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MyMesh = CreateDefaultSubobject<UTresStaticMeshComponent>(TEXT("TresGimmickMesh0"));
 }
 

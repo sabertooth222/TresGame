@@ -13,7 +13,7 @@ void ATresEffectActor::FadeEffect(bool in_FadeOut, float in_FadeTime, int32 in_G
 void ATresEffectActor::ActivateEffect(bool in_Active, int32 in_GroupID) {
 }
 
-ATresEffectActor::ATresEffectActor() {
+ATresEffectActor::ATresEffectActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MyRoot = CreateDefaultSubobject<UTresRootComponent>(TEXT("TresRoot"));
 }
 

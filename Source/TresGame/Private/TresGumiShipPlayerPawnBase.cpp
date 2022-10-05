@@ -78,7 +78,7 @@ void ATresGumiShipPlayerPawnBase::_ChangeMovementCompo(const ETresGumiShipPlayer
 void ATresGumiShipPlayerPawnBase::_ChangeAccelerationCompo(const ETresGumiShipPlayerAccelerationType eType, const bool bForce) {
 }
 
-ATresGumiShipPlayerPawnBase::ATresGumiShipPlayerPawnBase() {
+ATresGumiShipPlayerPawnBase::ATresGumiShipPlayerPawnBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_pFSM = CreateDefaultSubobject<UTresGumiShipFSM>(TEXT("FSM"));
     this->m_pSoundSet = CreateDefaultSubobject<UTresGumiShipSoundSetComponent>(TEXT("SoundSet"));
     this->m_pMovementCompo = NULL;

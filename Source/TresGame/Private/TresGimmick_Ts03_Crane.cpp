@@ -13,7 +13,7 @@ FVector ATresGimmick_Ts03_Crane::GetSpeedVec() const {
     return FVector{};
 }
 
-ATresGimmick_Ts03_Crane::ATresGimmick_Ts03_Crane() {
+ATresGimmick_Ts03_Crane::ATresGimmick_Ts03_Crane(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->BodyCollComponent = CreateDefaultSubobject<UTresBodyCollComponent>(TEXT("BodyCollComponent"));
 }
 

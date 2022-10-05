@@ -11,7 +11,7 @@ bool ATresEnemyPawn_e_ex358::IsJinraiBeforeAttackHit() const {
 void ATresEnemyPawn_e_ex358::EndWildDanceDarkMode() {
 }
 
-ATresEnemyPawn_e_ex358::ATresEnemyPawn_e_ex358() {
+ATresEnemyPawn_e_ex358::ATresEnemyPawn_e_ex358(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MyProjectileManager = CreateDefaultSubobject<UTresProjectileManagerComponent_e_ex358_Jinrai>(TEXT("MyProjectileManager"));
     this->m_AvatarClass = NULL;
     this->m_bIsAvatar = false;

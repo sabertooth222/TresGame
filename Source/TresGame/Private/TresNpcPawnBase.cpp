@@ -253,7 +253,7 @@ void ATresNpcPawnBase::BP_DelTalkEndReTurnInfo() {
 void ATresNpcPawnBase::BP_ClearStateFNPC(bool CinematicClear) {
 }
 
-ATresNpcPawnBase::ATresNpcPawnBase() {
+ATresNpcPawnBase::ATresNpcPawnBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MyReactor = CreateDefaultSubobject<UTresReactorComponent>(TEXT("TresNpcReactor0"));
     this->MyJumpPowerNormal = 800.00f;
     this->m_JumpRotRate = 1.00f;

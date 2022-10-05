@@ -8,7 +8,7 @@ UCLASS(Blueprintable)
 class ATresDamageVolume : public APainCausingVolume, public ITresNotifyInterface {
     GENERATED_BODY()
 public:
-    ATresDamageVolume();
+    ATresDamageVolume(const FObjectInitializer& ObjectInitializer);
     
     // Fix for true pure virtual functions not being implemented
 };

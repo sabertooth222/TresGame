@@ -91,7 +91,7 @@ private:
     ATresCameraNormal* m_Camera;
     
 public:
-    ATresEnemyPawn_e_ex761();
+    ATresEnemyPawn_e_ex761(const FObjectInitializer& ObjectInitializer);
     UFUNCTION()
     void OnDtorStateEvent(TEnumAsByte<ETresStateID> inStateID);
     

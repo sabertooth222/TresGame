@@ -17,6 +17,6 @@ private:
     TWeakObjectPtr<AActor> m_pSourceHoudiniActor;
     
 public:
-    ATresSoKcKeyHoleGenerator();
+    ATresSoKcKeyHoleGenerator(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -142,7 +142,7 @@ private:
     TArray<FTresTeaCupPuddingData> m_PuddingFallArray;
     
 public:
-    ATresAttractionPawnTeaCup();
+    ATresAttractionPawnTeaCup(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetTeaCupMove(bool InMove);
     

@@ -16,6 +16,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_AtkCollAtkIDName_EnableOnMove;
     
-    ATresProjectile_e_ex354_ClusterShotExplosion();
+    ATresProjectile_e_ex354_ClusterShotExplosion(const FObjectInitializer& ObjectInitializer);
 };
 

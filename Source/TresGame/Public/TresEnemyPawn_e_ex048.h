@@ -31,7 +31,7 @@ private:
     FTresEx048BladeEffectMan m_BladeEffectManager;
     
 public:
-    ATresEnemyPawn_e_ex048();
+    ATresEnemyPawn_e_ex048(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsFlyMode() const;
     

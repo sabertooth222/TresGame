@@ -24,6 +24,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_pro_CutterMaxRotSpeedTime;
     
-    ATresProjectile_e_ex038_AeroStorm();
+    ATresProjectile_e_ex038_AeroStorm(const FObjectInitializer& ObjectInitializer);
 };
 

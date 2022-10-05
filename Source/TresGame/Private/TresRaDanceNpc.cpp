@@ -12,7 +12,7 @@ void ATresRaDanceNpc::OnDanceRhythmBeatNear() {
 void ATresRaDanceNpc::OnDanceRhythmBeat() {
 }
 
-ATresRaDanceNpc::ATresRaDanceNpc() {
+ATresRaDanceNpc::ATresRaDanceNpc(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->ActorType = EDanceActorType::MALE;
     this->StandByGroupID = 0;
     this->IdleLoop_FourBeatCount = 0;

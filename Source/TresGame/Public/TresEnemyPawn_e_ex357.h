@@ -75,7 +75,7 @@ private:
     UParticleSystem* m_DeathSentenceCounterParticleSystem;
     
 public:
-    ATresEnemyPawn_e_ex357();
+    ATresEnemyPawn_e_ex357(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetDisableFieldLifeOver(bool bDisable);
     

@@ -15,6 +15,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_VanishEffData;
     
-    ATresProjectile_e_dw401_DevilAvalancheBullet();
+    ATresProjectile_e_dw401_DevilAvalancheBullet(const FObjectInitializer& ObjectInitializer);
 };
 

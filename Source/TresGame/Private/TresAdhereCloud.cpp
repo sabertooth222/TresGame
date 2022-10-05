@@ -1,6 +1,6 @@
 #include "TresAdhereCloud.h"
 
-ATresAdhereCloud::ATresAdhereCloud() {
+ATresAdhereCloud::ATresAdhereCloud(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_WeatherTimeCloud = 3.00f;
     this->m_WeatherCloudParamCTarget = 0.00f;
     this->m_WeatherTimeLightRain = 4.00f;

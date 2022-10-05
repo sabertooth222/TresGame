@@ -19,7 +19,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USQEX_ParticleAttachDataAsset* m_pro_EffDataAsset;
     
-    ATresEnemyPawn_e_ex017();
+    ATresEnemyPawn_e_ex017(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     bool IsMagicSquare();
     

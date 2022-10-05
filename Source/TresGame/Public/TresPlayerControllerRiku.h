@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresPlayerControllerRiku : public ATresPlayerControllerBase {
     GENERATED_BODY()
 public:
-    ATresPlayerControllerRiku();
+    ATresPlayerControllerRiku(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -8,7 +8,7 @@ ATresCameraDiving* ATresCameraDiving::BP_SpawnTresCameraDiving(UObject* WorldCon
     return NULL;
 }
 
-ATresCameraDiving::ATresCameraDiving() {
+ATresCameraDiving::ATresCameraDiving(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_LerpBehindTime = 0.00f;
 }
 

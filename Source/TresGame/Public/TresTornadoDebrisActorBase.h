@@ -45,7 +45,7 @@ protected:
     UParticleSystemComponent* m_DestinationEffectComp;
     
 public:
-    ATresTornadoDebrisActorBase();
+    ATresTornadoDebrisActorBase(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     bool TraceCheck(FVector Start, FVector End, float Radius, FHitResult& OutHit);
     

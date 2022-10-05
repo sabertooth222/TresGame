@@ -1,6 +1,6 @@
 #include "TresProjectile_e_ex352_DarkMatter.h"
 
-ATresProjectile_e_ex352_DarkMatter::ATresProjectile_e_ex352_DarkMatter() {
+ATresProjectile_e_ex352_DarkMatter::ATresProjectile_e_ex352_DarkMatter(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_DefaultMoveSpeed = 1000.00f;
     this->m_DefaultAcceleration = 1000.00f;
     this->m_DefaultDeceleration = 1000.00f;

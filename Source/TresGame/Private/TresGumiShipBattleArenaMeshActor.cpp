@@ -1,5 +1,5 @@
 #include "TresGumiShipBattleArenaMeshActor.h"
 
-ATresGumiShipBattleArenaMeshActor::ATresGumiShipBattleArenaMeshActor() {
+ATresGumiShipBattleArenaMeshActor::ATresGumiShipBattleArenaMeshActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

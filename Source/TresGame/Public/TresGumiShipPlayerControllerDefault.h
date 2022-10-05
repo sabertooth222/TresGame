@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresGumiShipPlayerControllerDefault : public ATresGumiShipPlayerControllerBase {
     GENERATED_BODY()
 public:
-    ATresGumiShipPlayerControllerDefault();
+    ATresGumiShipPlayerControllerDefault(const FObjectInitializer& ObjectInitializer);
 };
 

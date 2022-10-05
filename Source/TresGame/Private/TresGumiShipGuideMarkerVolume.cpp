@@ -7,7 +7,7 @@ class AActor;
 void ATresGumiShipGuideMarkerVolume::_OnEnterMarkerGuideArea(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult) {
 }
 
-ATresGumiShipGuideMarkerVolume::ATresGumiShipGuideMarkerVolume() {
+ATresGumiShipGuideMarkerVolume::ATresGumiShipGuideMarkerVolume(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_pEntryAreaCollision = CreateDefaultSubobject<USphereComponent>(TEXT("MarkerEntryAreaCollision"));
 }
 

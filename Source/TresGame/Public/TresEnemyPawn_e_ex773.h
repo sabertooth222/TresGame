@@ -159,7 +159,7 @@ protected:
     float m_WarpVoiceDisableTime;
     
 public:
-    ATresEnemyPawn_e_ex773();
+    ATresEnemyPawn_e_ex773(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void StartUpdraftEffect();
     

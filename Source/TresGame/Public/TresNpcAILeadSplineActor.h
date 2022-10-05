@@ -103,7 +103,7 @@ public:
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresNpcAILeadFinishBySplineActor OnLeadFinish;
     
-    ATresNpcAILeadSplineActor();
+    ATresNpcAILeadSplineActor(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsGoalActor() const;
     

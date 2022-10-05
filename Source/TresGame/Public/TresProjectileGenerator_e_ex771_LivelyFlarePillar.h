@@ -15,6 +15,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresEnemy_e_ex771_LivelyFlarePillarPoint> m_LivelyFlarePillarPointArray;
     
-    ATresProjectileGenerator_e_ex771_LivelyFlarePillar();
+    ATresProjectileGenerator_e_ex771_LivelyFlarePillar(const FObjectInitializer& ObjectInitializer);
 };
 

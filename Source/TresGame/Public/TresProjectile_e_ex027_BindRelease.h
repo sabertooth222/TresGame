@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable)
 class ATresProjectile_e_ex027_BindRelease : public ATresProjectileBase {
     GENERATED_BODY()
 public:
-    ATresProjectile_e_ex027_BindRelease();
+    ATresProjectile_e_ex027_BindRelease(const FObjectInitializer& ObjectInitializer);
 };
 

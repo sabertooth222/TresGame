@@ -37,6 +37,6 @@ private:
     TArray<ETresDamageAttribute> m_HitAttributeList;
     
 public:
-    ATresFieldProjectile_e_ex357();
+    ATresFieldProjectile_e_ex357(const FObjectInitializer& ObjectInitializer);
 };
 

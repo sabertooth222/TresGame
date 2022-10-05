@@ -10,7 +10,7 @@ void ATresGumiShipEndOfWorld::_OnEndOverlapComponent(UPrimitiveComponent* pOverl
 void ATresGumiShipEndOfWorld::_OnBeginOverlapComponent(UPrimitiveComponent* pOverlappedComponent, AActor* pOtherActor, UPrimitiveComponent* pOtherComp, int32 dOtherBodyIndex, bool bFromSweep, const FHitResult& rSweepResult) {
 }
 
-ATresGumiShipEndOfWorld::ATresGumiShipEndOfWorld() {
+ATresGumiShipEndOfWorld::ATresGumiShipEndOfWorld(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_pStaticMesh = CreateDefaultSubobject<UTresStaticMeshComponent>(TEXT("StaticMesh"));
 }
 

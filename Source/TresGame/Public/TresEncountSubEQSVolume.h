@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresEncountSubEQSVolume : public ATresVolume {
     GENERATED_BODY()
 public:
-    ATresEncountSubEQSVolume();
+    ATresEncountSubEQSVolume(const FObjectInitializer& ObjectInitializer);
 };
 

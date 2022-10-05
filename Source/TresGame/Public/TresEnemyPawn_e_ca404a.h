@@ -28,7 +28,7 @@ protected:
     Fca404aSplineParam m_SplineParam;
     
 public:
-    ATresEnemyPawn_e_ca404a();
+    ATresEnemyPawn_e_ca404a(const FObjectInitializer& ObjectInitializer);
 protected:
     UFUNCTION(BlueprintCallable)
     void SetSplineActor(ASQEX_SplineActor* Actor);

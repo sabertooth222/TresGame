@@ -16,6 +16,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_pro_DebrisEffData;
     
-    ATresProjectile_e_ex773_DebrisAttract();
+    ATresProjectile_e_ex773_DebrisAttract(const FObjectInitializer& ObjectInitializer);
 };
 

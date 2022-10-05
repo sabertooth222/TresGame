@@ -30,6 +30,6 @@ private:
     USceneComponent* SceneComponent;
     
 public:
-    ATresPatternActor_e_dw407b_PillarLight();
+    ATresPatternActor_e_dw407b_PillarLight(const FObjectInitializer& ObjectInitializer);
 };
 

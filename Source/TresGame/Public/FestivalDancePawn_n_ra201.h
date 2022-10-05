@@ -89,7 +89,7 @@ private:
     ATresRaFestivalDanceManager* m_pDanceMng;
     
 public:
-    AFestivalDancePawn_n_ra201();
+    AFestivalDancePawn_n_ra201(const FObjectInitializer& ObjectInitializer);
 protected:
     UFUNCTION(BlueprintCallable)
     void OnDanceRhythmBeat();

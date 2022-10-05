@@ -14,7 +14,7 @@ float ATresEnemyPawn_e_bx903::GetFriendLinkBodyCollSize() {
     return 0.0f;
 }
 
-ATresEnemyPawn_e_bx903::ATresEnemyPawn_e_bx903() {
+ATresEnemyPawn_e_bx903::ATresEnemyPawn_e_bx903(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_VoxelMeshParticle = CreateDefaultSubobject<UParticleSystemComponent>(TEXT("e_bx903_VoxelMeshParticle"));
     this->m_MyLockonComponent = CreateDefaultSubobject<UTresLockonTargetComponent>(TEXT("e_bx903_LockonComponent"));
     this->m_PunchCoreBodyColl = NULL;

@@ -1,5 +1,5 @@
 #include "TresGimmickBlockadeSkeletalBase.h"
 
-ATresGimmickBlockadeSkeletalBase::ATresGimmickBlockadeSkeletalBase() {
+ATresGimmickBlockadeSkeletalBase::ATresGimmickBlockadeSkeletalBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

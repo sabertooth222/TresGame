@@ -5,7 +5,7 @@ int32 ATresGumiShipEnemy607Pawn::_GetParticleCount() {
     return 0;
 }
 
-ATresGumiShipEnemy607Pawn::ATresGumiShipEnemy607Pawn() {
+ATresGumiShipEnemy607Pawn::ATresGumiShipEnemy607Pawn(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_pDeadVFX = NULL;
     this->m_pWaveVFX = NULL;
     this->m_pApperVFX = NULL;

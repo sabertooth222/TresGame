@@ -10,7 +10,7 @@ void ATresUIActor::SetLinkMeshComponent(UTresSkeletalMeshComponent* LinkMeshComp
 void ATresUIActor::NotifyEventBP(const FName& EventName) {
 }
 
-ATresUIActor::ATresUIActor() {
+ATresUIActor::ATresUIActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_BonamikPreRollNum = 16;
     this->MeshComponent = CreateDefaultSubobject<UTresSkeletalMeshComponent>(TEXT("MeshComponent"));
     this->SceneCaptureComponent2D = CreateDefaultSubobject<USceneCaptureComponent2D>(TEXT("SceneCaptureComponent2D"));

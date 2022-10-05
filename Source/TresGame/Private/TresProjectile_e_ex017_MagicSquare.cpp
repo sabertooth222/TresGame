@@ -12,7 +12,7 @@ float ATresProjectile_e_ex017_MagicSquare::GetHoveringZ() const {
     return 0.0f;
 }
 
-ATresProjectile_e_ex017_MagicSquare::ATresProjectile_e_ex017_MagicSquare() {
+ATresProjectile_e_ex017_MagicSquare::ATresProjectile_e_ex017_MagicSquare(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_JointEff[0] = NULL;
     this->m_JointEff[1] = NULL;
     this->m_JointEff[2] = NULL;

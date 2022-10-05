@@ -14,7 +14,7 @@ UCLASS(Blueprintable)
 class ATresLSIGameActor : public AActor {
     GENERATED_BODY()
 public:
-    ATresLSIGameActor();
+    ATresLSIGameActor(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void OnUpdatedScore_TrafficTroubles(const FTresLSIScoreEntryScores& ScoreEntry);
     

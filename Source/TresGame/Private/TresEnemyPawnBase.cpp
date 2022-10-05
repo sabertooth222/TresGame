@@ -45,7 +45,7 @@ float ATresEnemyPawnBase::GetAppearWait() const {
     return 0.0f;
 }
 
-ATresEnemyPawnBase::ATresEnemyPawnBase() {
+ATresEnemyPawnBase::ATresEnemyPawnBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->EnemyParent = NULL;
     this->m_EnemyUniqueID = ETresEnemyUniqueID::TRES_ENEMY_UID_UNKNOWN;
     this->m_FreeFlowKind = ESQEX_FreeFlowKind::SQEX_FREE_FLOW_KIND_ENEMY;

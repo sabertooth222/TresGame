@@ -45,7 +45,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ResetVelocity;
     
-    ATresGumiShipTinyShip();
+    ATresGumiShipTinyShip(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetFormations(ETresGumiShipTinyShipFormation Up, ETresGumiShipTinyShipFormation Right, ETresGumiShipTinyShipFormation Down, ETresGumiShipTinyShipFormation Left);
     

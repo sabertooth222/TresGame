@@ -19,6 +19,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_DestroyDist;
     
-    ATresEnemyPawn_e_ex781_Gigas();
+    ATresEnemyPawn_e_ex781_Gigas(const FObjectInitializer& ObjectInitializer);
 };
 

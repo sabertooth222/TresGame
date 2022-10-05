@@ -18,6 +18,6 @@ protected:
     UCurveFloat* m_pEffectCurve;
     
 public:
-    ATresGimmickAcceleration();
+    ATresGimmickAcceleration(const FObjectInitializer& ObjectInitializer);
 };
 

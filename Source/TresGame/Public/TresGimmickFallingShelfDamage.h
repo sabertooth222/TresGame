@@ -7,6 +7,6 @@ UCLASS(Blueprintable, Config=Game)
 class ATresGimmickFallingShelfDamage : public ATresGimmickSkeletalBase {
     GENERATED_BODY()
 public:
-    ATresGimmickFallingShelfDamage();
+    ATresGimmickFallingShelfDamage(const FObjectInitializer& ObjectInitializer);
 };
 

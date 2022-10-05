@@ -7,7 +7,7 @@ bool ATresAIEventBattlePoint::IsPhaseTag(const FGameplayTag& InTag) const {
     return false;
 }
 
-ATresAIEventBattlePoint::ATresAIEventBattlePoint() {
+ATresAIEventBattlePoint::ATresAIEventBattlePoint(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_UseBattlePlayerEmotionManager = false;
 }
 

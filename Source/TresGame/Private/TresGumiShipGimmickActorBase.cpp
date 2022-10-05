@@ -10,7 +10,7 @@ void ATresGumiShipGimmickActorBase::EndEffect(int32 InGroupID) {
 void ATresGumiShipGimmickActorBase::DestroyEffects(int32 InGroupID) {
 }
 
-ATresGumiShipGimmickActorBase::ATresGumiShipGimmickActorBase() {
+ATresGumiShipGimmickActorBase::ATresGumiShipGimmickActorBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_pEffectAttach = CreateDefaultSubobject<UTresEffectAttachComponent>(TEXT("EffectAttach"));
     this->m_eGimmickID = ETresGumiShipGimmickID::G_GM_NONE;
 }

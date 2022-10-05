@@ -147,7 +147,7 @@ bool ATresAIPawnBase::DebugAIJump(float JumpPower) {
 }
 
 
-ATresAIPawnBase::ATresAIPawnBase() {
+ATresAIPawnBase::ATresAIPawnBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MyAIBehavior = NULL;
     this->m_DefaultAttackDefinition = NULL;
     this->m_DefaultLocomotionDefinition = NULL;

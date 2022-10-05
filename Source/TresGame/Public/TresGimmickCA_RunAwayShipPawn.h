@@ -23,7 +23,7 @@ protected:
     UTresSkeletalMeshComponent* m_MastMesh;
     
 public:
-    ATresGimmickCA_RunAwayShipPawn();
+    ATresGimmickCA_RunAwayShipPawn(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetTurnRate(float Value);
     

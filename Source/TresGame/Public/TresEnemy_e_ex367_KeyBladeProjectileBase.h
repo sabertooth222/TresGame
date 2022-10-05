@@ -21,6 +21,6 @@ protected:
     float m_ExplosionTime;
     
 public:
-    ATresEnemy_e_ex367_KeyBladeProjectileBase();
+    ATresEnemy_e_ex367_KeyBladeProjectileBase(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -1,6 +1,6 @@
 #include "TresWorldSettings.h"
 
-ATresWorldSettings::ATresWorldSettings() {
+ATresWorldSettings::ATresWorldSettings(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_WorldCode = TRES_WCID_ZZ;
     this->m_WorldAreaCode = TRES_WAID_AREA_00;
     this->m_AttractionFlowDrawingEnable = false;

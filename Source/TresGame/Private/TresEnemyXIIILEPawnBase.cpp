@@ -10,7 +10,7 @@ bool ATresEnemyXIIILEPawnBase::IsDuringWarp() {
     return false;
 }
 
-ATresEnemyXIIILEPawnBase::ATresEnemyXIIILEPawnBase() {
+ATresEnemyXIIILEPawnBase::ATresEnemyXIIILEPawnBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_RevengePlayVoiceKind = ETresEnemyXIIILEPlayVoiceKind::VoiceAtLocation;
     this->m_VisibleTime = 0.20f;
 }

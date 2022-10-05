@@ -77,7 +77,7 @@ private:
     ATresCharPawnBase* m_AttackedChar;
     
 public:
-    ATresEnemyPawn_e_ex311();
+    ATresEnemyPawn_e_ex311(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     bool IsFinishAttack();
     

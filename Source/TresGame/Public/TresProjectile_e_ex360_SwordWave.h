@@ -10,6 +10,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_RollSpeed;
     
-    ATresProjectile_e_ex360_SwordWave();
+    ATresProjectile_e_ex360_SwordWave(const FObjectInitializer& ObjectInitializer);
 };
 

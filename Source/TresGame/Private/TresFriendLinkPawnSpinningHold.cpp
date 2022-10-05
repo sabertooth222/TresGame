@@ -1,6 +1,6 @@
 #include "TresFriendLinkPawnSpinningHold.h"
 
-ATresFriendLinkPawnSpinningHold::ATresFriendLinkPawnSpinningHold() {
+ATresFriendLinkPawnSpinningHold::ATresFriendLinkPawnSpinningHold(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_fFinishHeight = 850.00f;
     this->m_fFinishRange = 520.00f;
     this->m_fFinishMinRange = 250.00f;

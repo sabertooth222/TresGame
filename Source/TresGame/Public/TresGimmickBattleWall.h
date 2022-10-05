@@ -10,7 +10,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_EnableChangeCinematicEvent;
     
-    ATresGimmickBattleWall();
+    ATresGimmickBattleWall(const FObjectInitializer& ObjectInitializer);
 protected:
     UFUNCTION(BlueprintCallable)
     void OnChangeCinematicModeProc(bool bIsCinematicMode);

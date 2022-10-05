@@ -12,6 +12,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_BgHitEffData;
     
-    ATresProjectile_e_ex054_VolcanoBullet();
+    ATresProjectile_e_ex054_VolcanoBullet(const FObjectInitializer& ObjectInitializer);
 };
 

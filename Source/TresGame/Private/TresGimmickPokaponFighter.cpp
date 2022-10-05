@@ -1,5 +1,5 @@
 #include "TresGimmickPokaponFighter.h"
 
-ATresGimmickPokaponFighter::ATresGimmickPokaponFighter() {
+ATresGimmickPokaponFighter::ATresGimmickPokaponFighter(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

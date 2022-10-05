@@ -55,7 +55,7 @@ void ATresEnemyPawn_e_ex306::CloseHudSaix() {
 }
 
 
-ATresEnemyPawn_e_ex306::ATresEnemyPawn_e_ex306() {
+ATresEnemyPawn_e_ex306::ATresEnemyPawn_e_ex306(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_bBlueBurst = false;
     this->m_bSpawnClaymore = false;
     this->m_bForceStrongBodyDamageOnBlue = true;

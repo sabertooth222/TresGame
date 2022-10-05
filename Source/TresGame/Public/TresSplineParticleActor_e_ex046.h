@@ -24,6 +24,6 @@ private:
     USplineComponent* m_SplineComponent;
     
 public:
-    ATresSplineParticleActor_e_ex046();
+    ATresSplineParticleActor_e_ex046(const FObjectInitializer& ObjectInitializer);
 };
 

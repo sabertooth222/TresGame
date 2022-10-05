@@ -23,7 +23,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 CarLODIndex;
     
-    ATresBxGimmickCarsManager();
+    ATresBxGimmickCarsManager(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetStopCars(bool bStop);
     

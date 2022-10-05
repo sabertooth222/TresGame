@@ -31,7 +31,7 @@ protected:
     UParticleSystemComponent* m_PlayerBindReleaseEff;
     
 public:
-    ATresEnemyPawn_e_ex027();
+    ATresEnemyPawn_e_ex027(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetWheelRotAlpha() const;
     

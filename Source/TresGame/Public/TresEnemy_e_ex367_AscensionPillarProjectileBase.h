@@ -64,6 +64,6 @@ private:
     UParticleSystemComponent* m_LightParticle;
     
 public:
-    ATresEnemy_e_ex367_AscensionPillarProjectileBase();
+    ATresEnemy_e_ex367_AscensionPillarProjectileBase(const FObjectInitializer& ObjectInitializer);
 };
 

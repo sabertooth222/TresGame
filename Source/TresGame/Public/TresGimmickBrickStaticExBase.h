@@ -14,6 +14,6 @@ private:
     UTresStaticMeshComponent* MyBreak;
     
 public:
-    ATresGimmickBrickStaticExBase();
+    ATresGimmickBrickStaticExBase(const FObjectInitializer& ObjectInitializer);
 };
 

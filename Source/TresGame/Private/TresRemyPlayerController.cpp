@@ -1,5 +1,5 @@
 #include "TresRemyPlayerController.h"
 
-ATresRemyPlayerController::ATresRemyPlayerController() {
+ATresRemyPlayerController::ATresRemyPlayerController(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

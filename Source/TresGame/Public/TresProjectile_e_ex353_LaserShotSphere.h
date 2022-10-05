@@ -17,6 +17,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_LaserShotFireAsset;
     
-    ATresProjectile_e_ex353_LaserShotSphere();
+    ATresProjectile_e_ex353_LaserShotSphere(const FObjectInitializer& ObjectInitializer);
 };
 

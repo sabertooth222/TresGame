@@ -68,7 +68,7 @@ protected:
     ATresRemyPawnBase* m_pHourglassPawn;
     
 public:
-    ATresRemyCookingBase();
+    ATresRemyCookingBase(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void TT_PrintStringVector(const FString& Name, const FVector& Value);
     

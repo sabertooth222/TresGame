@@ -1,5 +1,5 @@
 #include "TresCameraSnowCurling.h"
 
-ATresCameraSnowCurling::ATresCameraSnowCurling() {
+ATresCameraSnowCurling::ATresCameraSnowCurling(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

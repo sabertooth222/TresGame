@@ -8,7 +8,7 @@ bool ATresGumiShipParts629Pawn::_IsAttackEnable() {
     return false;
 }
 
-ATresGumiShipParts629Pawn::ATresGumiShipParts629Pawn() {
+ATresGumiShipParts629Pawn::ATresGumiShipParts629Pawn(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_pReflectLaser1VFX = NULL;
     this->m_pReflectLaser2VFX = NULL;
     this->m_pReflectLaser3VFX = NULL;

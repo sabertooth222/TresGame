@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable)
 class ATresProjectile_e_ex106_AttackChild : public ATresProjectileBase {
     GENERATED_BODY()
 public:
-    ATresProjectile_e_ex106_AttackChild();
+    ATresProjectile_e_ex106_AttackChild(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -15,7 +15,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bNotMoveToHeightDifference;
     
-    ATresNpcAINpcModeFreeWalkArea();
+    ATresNpcAINpcModeFreeWalkArea(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetAreaRadius(float InRadius);
     

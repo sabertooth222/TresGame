@@ -60,7 +60,7 @@ protected:
     USphereComponent* m_pBattleAreaCollision;
     
 public:
-    ATresGumiShipBattleVolume();
+    ATresGumiShipBattleVolume(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsAttachedMercunaNavVolume() const;
     

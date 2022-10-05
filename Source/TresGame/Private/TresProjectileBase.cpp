@@ -37,7 +37,7 @@ void ATresProjectileBase::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& 
     DOREPLIFETIME(ATresProjectileBase, bExploded);
 }
 
-ATresProjectileBase::ATresProjectileBase() {
+ATresProjectileBase::ATresProjectileBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MyMovement = CreateDefaultSubobject<UTresProjectileMovementComponent>(TEXT("ProjectileComp"));
     this->MyParticle = CreateDefaultSubobject<UParticleSystemComponent>(TEXT("ParticleComp"));
     this->MyAtkColl = CreateDefaultSubobject<UTresAtkCollComponent>(TEXT("TresAtkColl0"));

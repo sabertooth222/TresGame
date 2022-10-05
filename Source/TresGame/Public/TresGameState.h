@@ -39,7 +39,7 @@ protected:
     ATresPhysObjMan* m_PhysObjMan;
     
 public:
-    ATresGameState();
+    ATresGameState(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     ATresVFXManager* GetVFXManager();
     

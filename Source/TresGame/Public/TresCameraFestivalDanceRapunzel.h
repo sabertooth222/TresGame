@@ -21,6 +21,6 @@ private:
     AFestivalDancePawn_n_ra201* m_pRapunzel;
     
 public:
-    ATresCameraFestivalDanceRapunzel();
+    ATresCameraFestivalDanceRapunzel(const FObjectInitializer& ObjectInitializer);
 };
 

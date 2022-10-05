@@ -1,6 +1,6 @@
 #include "TresKHSBlendVolume.h"
 
-ATresKHSBlendVolume::ATresKHSBlendVolume() {
+ATresKHSBlendVolume::ATresKHSBlendVolume(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_IsMatineeControled = false;
     this->m_MatineeWeightValue = 0.00f;
     this->bOverride_KHSChrEmissivMultiCounter = false;

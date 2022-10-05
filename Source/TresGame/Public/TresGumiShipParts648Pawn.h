@@ -19,6 +19,6 @@ protected:
     FRotator m_debug_rotator;
     
 public:
-    ATresGumiShipParts648Pawn();
+    ATresGumiShipParts648Pawn(const FObjectInitializer& ObjectInitializer);
 };
 

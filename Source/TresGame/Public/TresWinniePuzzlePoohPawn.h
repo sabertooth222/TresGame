@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresWinniePuzzlePoohPawn : public ATresWinniePuzzleCharacterPawn {
     GENERATED_BODY()
 public:
-    ATresWinniePuzzlePoohPawn();
+    ATresWinniePuzzlePoohPawn(const FObjectInitializer& ObjectInitializer);
 };
 

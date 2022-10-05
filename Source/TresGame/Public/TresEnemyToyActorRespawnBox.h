@@ -15,7 +15,7 @@ private:
     UBoxComponent* MyBox;
     
 public:
-    ATresEnemyToyActorRespawnBox();
+    ATresEnemyToyActorRespawnBox(const FObjectInitializer& ObjectInitializer);
 private:
     UFUNCTION(BlueprintCallable)
     void OnBoxEndOverlap(UPrimitiveComponent* OverlappedComponent, AActor* Other, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);

@@ -35,7 +35,7 @@ void ATresEnemyPawn_e_ex816::DebugResetBonePhysicsBlendRate() {
 void ATresEnemyPawn_e_ex816::DebugEndDownState() {
 }
 
-ATresEnemyPawn_e_ex816::ATresEnemyPawn_e_ex816() {
+ATresEnemyPawn_e_ex816::ATresEnemyPawn_e_ex816(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_DownActionClass = NULL;
     this->m_OverrideNavAgentHeight = 0.00f;
     this->m_SpawnPointAvoidRadius = 0.00f;

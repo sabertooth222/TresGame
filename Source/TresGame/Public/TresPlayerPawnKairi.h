@@ -14,6 +14,6 @@ private:
     UTresUIDataAsset* m_UIDataShootFlow;
     
 public:
-    ATresPlayerPawnKairi();
+    ATresPlayerPawnKairi(const FObjectInitializer& ObjectInitializer);
 };
 

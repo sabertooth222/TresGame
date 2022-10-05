@@ -13,6 +13,6 @@ private:
     ETresEnemyEx071DeckKind m_Kind;
     
 public:
-    ATresEnemy_e_ex071_ValidateTargetVolume();
+    ATresEnemy_e_ex071_ValidateTargetVolume(const FObjectInitializer& ObjectInitializer);
 };
 

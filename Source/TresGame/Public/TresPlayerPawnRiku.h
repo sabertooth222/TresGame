@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresPlayerPawnRiku : public ATresPlayerPawnBase {
     GENERATED_BODY()
 public:
-    ATresPlayerPawnRiku();
+    ATresPlayerPawnRiku(const FObjectInitializer& ObjectInitializer);
 };
 

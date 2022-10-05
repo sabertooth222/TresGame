@@ -21,7 +21,7 @@ protected:
     bool bDrawCollisionConvexMeshes;
     
 public:
-    ATresNavmapVisibilityTester();
+    ATresNavmapVisibilityTester(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetDisplayHitActors(bool bEnable);
     

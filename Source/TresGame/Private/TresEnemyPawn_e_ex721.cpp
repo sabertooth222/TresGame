@@ -43,7 +43,7 @@ float ATresEnemyPawn_e_ex721::BP_GetAnimOffsetRate() const {
     return 0.0f;
 }
 
-ATresEnemyPawn_e_ex721::ATresEnemyPawn_e_ex721() {
+ATresEnemyPawn_e_ex721::ATresEnemyPawn_e_ex721(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_WoodsJailAsset = NULL;
     this->m_AddTowerYaw = 0.00f;
     this->m_TowerOffsetZ = 5500.00f;

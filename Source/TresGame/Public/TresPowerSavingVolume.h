@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable)
 class ATresPowerSavingVolume : public ATresVolume {
     GENERATED_BODY()
 public:
-    ATresPowerSavingVolume();
+    ATresPowerSavingVolume(const FObjectInitializer& ObjectInitializer);
 };
 

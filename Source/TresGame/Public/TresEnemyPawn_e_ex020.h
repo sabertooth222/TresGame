@@ -15,7 +15,7 @@ private:
     FTresDieParam_e_ex020 m_DieParam;
     
 public:
-    ATresEnemyPawn_e_ex020();
+    ATresEnemyPawn_e_ex020(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintPure)
     void GetToyComponentList(TArray<UTresEnemyToyComponent*>& OutList) const;
     

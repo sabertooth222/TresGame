@@ -4,7 +4,7 @@ void ATresGimmickBattleWall::OnChangeCinematicModeProc(bool bIsCinematicMode) {
 }
 
 
-ATresGimmickBattleWall::ATresGimmickBattleWall() {
+ATresGimmickBattleWall::ATresGimmickBattleWall(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_EnableChangeCinematicEvent = false;
 }
 

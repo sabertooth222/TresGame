@@ -1,7 +1,7 @@
 #include "TresGumiShipGimmickMagmaPool.h"
 #include "TresGumiShipAtkCollisionSetCompo.h"
 
-ATresGumiShipGimmickMagmaPool::ATresGumiShipGimmickMagmaPool() {
+ATresGumiShipGimmickMagmaPool::ATresGumiShipGimmickMagmaPool(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_pAtkComllision = CreateDefaultSubobject<UTresGumiShipAtkCollisionSetCompo>(TEXT("AtkCollision"));
     this->m_fMagmaTime = 4.00f;
     this->m_fEndMagmaTime = 3.00f;

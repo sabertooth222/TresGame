@@ -4,7 +4,7 @@
 void ATresProjectileGenerator_e_ex773_Eclipse13_Layout::SetHiddenEclipse13Layout(bool bHiddenObject) {
 }
 
-ATresProjectileGenerator_e_ex773_Eclipse13_Layout::ATresProjectileGenerator_e_ex773_Eclipse13_Layout() {
+ATresProjectileGenerator_e_ex773_Eclipse13_Layout::ATresProjectileGenerator_e_ex773_Eclipse13_Layout(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MyRoot = CreateDefaultSubobject<USceneComponent>(TEXT("MyRoot"));
 }
 

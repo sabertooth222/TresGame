@@ -2,7 +2,7 @@
 #include "TresGumiShipBodyCollisionSetCompo.h"
 #include "TresGumiShipAtkCollisionSetCompo.h"
 
-ATresGumiShipSpWeapon180Actor::ATresGumiShipSpWeapon180Actor() {
+ATresGumiShipSpWeapon180Actor::ATresGumiShipSpWeapon180Actor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->PrimarySearchDistance = 10000.00f;
     this->Speed = 2000.00f;
     this->InitialHP = 20000;

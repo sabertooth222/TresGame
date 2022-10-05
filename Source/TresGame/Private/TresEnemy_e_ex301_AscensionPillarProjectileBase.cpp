@@ -1,6 +1,6 @@
 #include "TresEnemy_e_ex301_AscensionPillarProjectileBase.h"
 
-ATresEnemy_e_ex301_AscensionPillarProjectileBase::ATresEnemy_e_ex301_AscensionPillarProjectileBase() {
+ATresEnemy_e_ex301_AscensionPillarProjectileBase::ATresEnemy_e_ex301_AscensionPillarProjectileBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_DistanceMax = 2000.00f;
     this->m_IsDestroyBattleArea = false;
     this->m_DistanceSpeed = 10.00f;

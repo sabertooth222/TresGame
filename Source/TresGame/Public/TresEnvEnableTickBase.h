@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable)
 class ATresEnvEnableTickBase : public ATresEnvBase {
     GENERATED_BODY()
 public:
-    ATresEnvEnableTickBase();
+    ATresEnvEnableTickBase(const FObjectInitializer& ObjectInitializer);
 };
 

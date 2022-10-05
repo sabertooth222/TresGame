@@ -13,6 +13,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_KnockUpAdditionalGravity;
     
-    ATresEnemyPawn_e_ex027a();
+    ATresEnemyPawn_e_ex027a(const FObjectInitializer& ObjectInitializer);
 };
 

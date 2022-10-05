@@ -12,6 +12,6 @@ protected:
     float m_WetnessTimeParam;
     
 public:
-    ATresWetVolume();
+    ATresWetVolume(const FObjectInitializer& ObjectInitializer);
 };
 

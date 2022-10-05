@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable)
 class ATresEnemyXIIILBCoopPawnBase : public ATresEnemyXIIILBPawnBase {
     GENERATED_BODY()
 public:
-    ATresEnemyXIIILBCoopPawnBase();
+    ATresEnemyXIIILBCoopPawnBase(const FObjectInitializer& ObjectInitializer);
 };
 

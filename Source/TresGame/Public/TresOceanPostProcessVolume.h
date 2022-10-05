@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresOceanPostProcessVolume : public APostProcessVolume {
     GENERATED_BODY()
 public:
-    ATresOceanPostProcessVolume();
+    ATresOceanPostProcessVolume(const FObjectInitializer& ObjectInitializer);
 };
 

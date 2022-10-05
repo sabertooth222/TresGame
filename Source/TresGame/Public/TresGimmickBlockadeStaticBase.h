@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable, Config=Game)
 class ATresGimmickBlockadeStaticBase : public ATresGimmickStaticBase {
     GENERATED_BODY()
 public:
-    ATresGimmickBlockadeStaticBase();
+    ATresGimmickBlockadeStaticBase(const FObjectInitializer& ObjectInitializer);
 };
 

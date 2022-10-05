@@ -1,6 +1,6 @@
 #include "TresEnemy_e_ex367_SwordWaveProjectileBase.h"
 
-ATresEnemy_e_ex367_SwordWaveProjectileBase::ATresEnemy_e_ex367_SwordWaveProjectileBase() {
+ATresEnemy_e_ex367_SwordWaveProjectileBase::ATresEnemy_e_ex367_SwordWaveProjectileBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_ReflectedLifeTime = 2.00f;
     this->m_ReflectedSpeed = 500.00f;
     this->m_ReflectedDownSpeed = 0.00f;

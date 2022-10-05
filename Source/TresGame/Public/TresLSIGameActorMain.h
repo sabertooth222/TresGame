@@ -7,7 +7,7 @@ UCLASS(Blueprintable)
 class ATresLSIGameActorMain : public AActor {
     GENERATED_BODY()
 public:
-    ATresLSIGameActorMain();
+    ATresLSIGameActorMain(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsLsiPause();
     

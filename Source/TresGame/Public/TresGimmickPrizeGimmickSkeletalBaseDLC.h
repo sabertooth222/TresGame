@@ -43,7 +43,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bDestroyDisableBodyCollition;
     
-    ATresGimmickPrizeGimmickSkeletalBaseDLC();
+    ATresGimmickPrizeGimmickSkeletalBaseDLC(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void ReceiveAnimation();
     

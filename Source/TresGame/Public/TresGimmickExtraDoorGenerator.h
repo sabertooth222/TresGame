@@ -39,7 +39,7 @@ protected:
     ETresMI_04_DoorGeneratorMoveType MoveType;
     
 public:
-    ATresGimmickExtraDoorGenerator();
+    ATresGimmickExtraDoorGenerator(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void Setup(USplineComponent* SplineComponent, UStaticMesh* StaticMesh, int32 Num);
     

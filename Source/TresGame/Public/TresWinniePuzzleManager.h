@@ -43,7 +43,7 @@ private:
     TArray<ATresWinniePuzzleWallVolume*> m_wallVolumes;
     
 public:
-    ATresWinniePuzzleManager();
+    ATresWinniePuzzleManager(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void StoreWallVolume(TArray<ATresWinniePuzzleWallVolume*> volumes);
     

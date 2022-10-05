@@ -17,6 +17,6 @@ private:
     UBoxComponent* m_NavModifierBoxComponent;
     
 public:
-    ATresGenerateWaterSurfaceNavMesh();
+    ATresGenerateWaterSurfaceNavMesh(const FObjectInitializer& ObjectInitializer);
 };
 

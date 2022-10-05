@@ -6,7 +6,7 @@ void ATresEnemyPawn_e_ex107::OnDtorStateEvent(TEnumAsByte<ETresStateID> inStateI
 void ATresEnemyPawn_e_ex107::BP_DebugAppear(TEnumAsByte<ETresEnemySetAppearMode> AppearMode, float AppearTime) {
 }
 
-ATresEnemyPawn_e_ex107::ATresEnemyPawn_e_ex107() {
+ATresEnemyPawn_e_ex107::ATresEnemyPawn_e_ex107(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_DropPawn = NULL;
     this->m_WeaponAppearParticleSystem = NULL;
     this->m_WeaponVisibleInterpTime = 0.20f;

@@ -9,7 +9,7 @@ void ATresLevelEntityControlVolume::InvokeEndOverlap(bool TestOverlap, AActor* O
 void ATresLevelEntityControlVolume::InvokeBeginOverlap(bool TestOverlap, AActor* Other, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool ImmediateInvoke) {
 }
 
-ATresLevelEntityControlVolume::ATresLevelEntityControlVolume() {
+ATresLevelEntityControlVolume::ATresLevelEntityControlVolume(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_EnterSequence = NULL;
     this->m_ExitSequence = NULL;
     this->m_Manager = NULL;

@@ -24,6 +24,6 @@ private:
     ATresCharPawnBase* m_MyTarget;
     
 public:
-    ATresEnemyPawn_e_ex781_TetraBit();
+    ATresEnemyPawn_e_ex781_TetraBit(const FObjectInitializer& ObjectInitializer);
 };
 

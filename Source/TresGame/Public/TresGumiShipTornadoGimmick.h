@@ -12,7 +12,7 @@ protected:
     float RotationSpeed;
     
 public:
-    ATresGumiShipTornadoGimmick();
+    ATresGumiShipTornadoGimmick(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void StopRotation(bool bStop);
     

@@ -29,6 +29,6 @@ protected:
     ATresCharPawnBase* m_pGetter;
     
 public:
-    ATresGimmick_e_ex781_StealPrizeBase();
+    ATresGimmick_e_ex781_StealPrizeBase(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -22,6 +22,6 @@ protected:
     TEnumAsByte<ETresCampPawnAnimTypeID> m_AnimType;
     
 public:
-    ATresCampPawnBase();
+    ATresCampPawnBase(const FObjectInitializer& ObjectInitializer);
 };
 

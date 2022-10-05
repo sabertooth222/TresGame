@@ -20,7 +20,7 @@ private:
     UParticleSystem* m_EffectAsset;
     
 public:
-    ATresProjectile_e_ca901_DarkVortex();
+    ATresProjectile_e_ca901_DarkVortex(const FObjectInitializer& ObjectInitializer);
 protected:
     UFUNCTION(BlueprintCallable)
     void HandleOnImpact(const FHitResult& HitResult);

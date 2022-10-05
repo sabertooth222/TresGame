@@ -7,7 +7,7 @@ UCLASS(Blueprintable)
 class AAITestHumanEnemyPawn : public ATresEnemyPawnBase {
     GENERATED_BODY()
 public:
-    AAITestHumanEnemyPawn();
+    AAITestHumanEnemyPawn(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, Exec)
     void DebugSwitchBT(FName InName);
     

@@ -7,7 +7,7 @@ UCLASS(Abstract, Blueprintable)
 class ATresGumiShipEnemy608Pawn : public ATresGumiShipSplinePathMoveTypeEnemyBase {
     GENERATED_BODY()
 public:
-    ATresGumiShipEnemy608Pawn();
+    ATresGumiShipEnemy608Pawn(const FObjectInitializer& ObjectInitializer);
 private:
     UFUNCTION(BlueprintCallable)
     void SetLaserAttackChargeTimer(float LaserChargeSeconds);

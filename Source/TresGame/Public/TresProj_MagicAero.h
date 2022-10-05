@@ -16,6 +16,6 @@ protected:
     TEnumAsByte<ETresDamageKind> m_AfterDamageKind;
     
 public:
-    ATresProj_MagicAero();
+    ATresProj_MagicAero(const FObjectInitializer& ObjectInitializer);
 };
 

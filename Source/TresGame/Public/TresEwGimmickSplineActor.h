@@ -36,6 +36,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRotator FinalCustomRotator;
     
-    ATresEwGimmickSplineActor();
+    ATresEwGimmickSplineActor(const FObjectInitializer& ObjectInitializer);
 };
 

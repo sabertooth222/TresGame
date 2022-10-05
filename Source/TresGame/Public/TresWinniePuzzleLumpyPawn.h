@@ -25,6 +25,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DecreaseMoveSpeed;
     
-    ATresWinniePuzzleLumpyPawn();
+    ATresWinniePuzzleLumpyPawn(const FObjectInitializer& ObjectInitializer);
 };
 

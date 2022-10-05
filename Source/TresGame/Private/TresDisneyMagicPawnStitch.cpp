@@ -4,7 +4,7 @@ FVector ATresDisneyMagicPawnStitch::GetNextFinishPoint(int32 InAddNext) {
     return FVector{};
 }
 
-ATresDisneyMagicPawnStitch::ATresDisneyMagicPawnStitch() {
+ATresDisneyMagicPawnStitch::ATresDisneyMagicPawnStitch(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_Proj = NULL;
     this->m_EffAssetLineParticle = NULL;
     this->m_EffAssetLineParticleFinish = NULL;

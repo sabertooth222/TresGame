@@ -22,6 +22,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_fWeaponGroundHitOnLandMaxHeight;
     
-    ATresProjectile_e_ex355_Claymore_Swing();
+    ATresProjectile_e_ex355_Claymore_Swing(const FObjectInitializer& ObjectInitializer);
 };
 

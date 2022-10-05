@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresProjectile_e_ex011_Bombardment : public ATresProjectileBase {
     GENERATED_BODY()
 public:
-    ATresProjectile_e_ex011_Bombardment();
+    ATresProjectile_e_ex011_Bombardment(const FObjectInitializer& ObjectInitializer);
 };
 

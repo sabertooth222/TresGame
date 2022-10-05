@@ -28,6 +28,6 @@ protected:
     TWeakObjectPtr<UTresAtkCollPrimitive> m_AtkCollPrim;
     
 public:
-    ATresProjectile_e_bx901_DarkCubeMineJoint();
+    ATresProjectile_e_bx901_DarkCubeMineJoint(const FObjectInitializer& ObjectInitializer);
 };
 

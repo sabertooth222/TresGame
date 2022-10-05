@@ -15,6 +15,6 @@ private:
     TSubclassOf<ATresProjectileBase> m_ProjectileClass;
     
 public:
-    ATresProjectileManager_e_ex358_Naruikazuchi();
+    ATresProjectileManager_e_ex358_Naruikazuchi(const FObjectInitializer& ObjectInitializer);
 };
 

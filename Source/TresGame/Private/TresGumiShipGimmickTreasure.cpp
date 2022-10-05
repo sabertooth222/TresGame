@@ -54,7 +54,7 @@ void ATresGumiShipGimmickTreasure::_ChangeState(GUMI_SHIP_TREASURE_STATE StateID
 void ATresGumiShipGimmickTreasure::_AddCorePartsLoops(const UObject* worldContextObject_, FLatentActionInfo latentInfo_, float Speed, float Time) {
 }
 
-ATresGumiShipGimmickTreasure::ATresGumiShipGimmickTreasure() {
+ATresGumiShipGimmickTreasure::ATresGumiShipGimmickTreasure(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_GimmickTreasureDataTable = NULL;
     this->m_Arrangement = NULL;
     this->m_pTreasureCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("TreasureCamera"));

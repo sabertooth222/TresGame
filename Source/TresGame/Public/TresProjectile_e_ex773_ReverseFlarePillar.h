@@ -17,6 +17,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FLinearColor m_ChangeColor;
     
-    ATresProjectile_e_ex773_ReverseFlarePillar();
+    ATresProjectile_e_ex773_ReverseFlarePillar(const FObjectInitializer& ObjectInitializer);
 };
 

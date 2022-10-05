@@ -18,7 +18,7 @@ protected:
     bool m_bVisibilityPudding;
     
 public:
-    ATresEnemyPawn_e_ex049();
+    ATresEnemyPawn_e_ex049(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void KillEvent();
     

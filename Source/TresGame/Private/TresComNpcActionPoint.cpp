@@ -1,5 +1,5 @@
 #include "TresComNpcActionPoint.h"
 
-ATresComNpcActionPoint::ATresComNpcActionPoint() {
+ATresComNpcActionPoint::ATresComNpcActionPoint(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

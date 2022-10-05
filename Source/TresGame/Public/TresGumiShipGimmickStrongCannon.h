@@ -30,7 +30,7 @@ protected:
     FName m_DataTableName;
     
 public:
-    ATresGumiShipGimmickStrongCannon();
+    ATresGumiShipGimmickStrongCannon(const FObjectInitializer& ObjectInitializer);
 private:
     UFUNCTION(BlueprintCallable)
     void _PauseCannon(bool Enable);

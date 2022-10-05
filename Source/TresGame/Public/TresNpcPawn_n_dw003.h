@@ -36,7 +36,7 @@ private:
     float m_AquaLinkTimer;
     
 public:
-    ATresNpcPawn_n_dw003();
+    ATresNpcPawn_n_dw003(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     bool IsDevilWaveSlowMove() const;
     

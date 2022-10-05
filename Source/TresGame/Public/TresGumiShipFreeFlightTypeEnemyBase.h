@@ -14,6 +14,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool TurnAdvanced;
     
-    ATresGumiShipFreeFlightTypeEnemyBase();
+    ATresGumiShipFreeFlightTypeEnemyBase(const FObjectInitializer& ObjectInitializer);
 };
 

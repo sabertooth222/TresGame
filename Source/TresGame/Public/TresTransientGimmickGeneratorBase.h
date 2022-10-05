@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable, Transient)
 class ATresTransientGimmickGeneratorBase : public ATresGimmickGeneratorBase {
     GENERATED_BODY()
 public:
-    ATresTransientGimmickGeneratorBase();
+    ATresTransientGimmickGeneratorBase(const FObjectInitializer& ObjectInitializer);
 };
 

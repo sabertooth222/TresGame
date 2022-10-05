@@ -51,7 +51,7 @@ protected:
     FName m_DisappearFadeParamName;
     
 public:
-    ATresPhysObjSkeletalMeshActor();
+    ATresPhysObjSkeletalMeshActor(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void StartDisappear(bool bImmediate);
     

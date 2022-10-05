@@ -62,7 +62,7 @@ protected:
     float m_HitTimer;
     
 public:
-    ATresEnemyPawn_e_dw402();
+    ATresEnemyPawn_e_dw402(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void ShiftE3Die();
     

@@ -7,6 +7,6 @@ UCLASS(Blueprintable, Config=Game)
 class ATresGimmickBouncyPetArea : public AActor {
     GENERATED_BODY()
 public:
-    ATresGimmickBouncyPetArea();
+    ATresGimmickBouncyPetArea(const FObjectInitializer& ObjectInitializer);
 };
 

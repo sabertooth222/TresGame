@@ -26,7 +26,7 @@ bool ATresEnemyPawn_e_ex304::IsDebugFnishBlow() {
 void ATresEnemyPawn_e_ex304::BP_EndHandCharging() {
 }
 
-ATresEnemyPawn_e_ex304::ATresEnemyPawn_e_ex304() {
+ATresEnemyPawn_e_ex304::ATresEnemyPawn_e_ex304(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_BattleEndHitPointPerAreaD = 30;
 }
 

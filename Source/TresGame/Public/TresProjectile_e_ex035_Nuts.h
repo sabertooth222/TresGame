@@ -37,6 +37,6 @@ protected:
     bool m_bReflected;
     
 public:
-    ATresProjectile_e_ex035_Nuts();
+    ATresProjectile_e_ex035_Nuts(const FObjectInitializer& ObjectInitializer);
 };
 

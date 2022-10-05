@@ -1,5 +1,5 @@
 #include "TresCameraPathLookActor.h"
 
-ATresCameraPathLookActor::ATresCameraPathLookActor() {
+ATresCameraPathLookActor::ATresCameraPathLookActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

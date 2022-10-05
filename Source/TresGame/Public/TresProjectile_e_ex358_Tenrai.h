@@ -12,6 +12,6 @@ private:
     FName m_FinishAttackIDName;
     
 public:
-    ATresProjectile_e_ex358_Tenrai();
+    ATresProjectile_e_ex358_Tenrai(const FObjectInitializer& ObjectInitializer);
 };
 

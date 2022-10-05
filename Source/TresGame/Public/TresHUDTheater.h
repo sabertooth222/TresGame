@@ -14,6 +14,6 @@ private:
     UTresUIDataAsset* m_UIDataAssetTheater;
     
 public:
-    ATresHUDTheater();
+    ATresHUDTheater(const FObjectInitializer& ObjectInitializer);
 };
 

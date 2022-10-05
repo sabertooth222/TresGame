@@ -19,7 +19,7 @@ protected:
     FRotator m_Rotation;
     
 public:
-    ATresCameraRotTarget();
+    ATresCameraRotTarget(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetTresCameraRotTargetParam(float Distance, FRotator Rotation, FVector TargetOffset, FVector TargetLocalOffset);
     

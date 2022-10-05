@@ -30,7 +30,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_IsGimmickClipDitherParamInvert;
     
-    ATresGimmickSimpleSkeletalBase();
+    ATresGimmickSimpleSkeletalBase(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveAnimationStarted(UAnimationAsset* AnimAsset);
     

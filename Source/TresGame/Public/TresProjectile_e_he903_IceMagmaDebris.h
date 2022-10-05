@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable)
 class ATresProjectile_e_he903_IceMagmaDebris : public ATresProjectileBase {
     GENERATED_BODY()
 public:
-    ATresProjectile_e_he903_IceMagmaDebris();
+    ATresProjectile_e_he903_IceMagmaDebris(const FObjectInitializer& ObjectInitializer);
 };
 

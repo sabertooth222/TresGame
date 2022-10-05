@@ -45,6 +45,6 @@ private:
     ATresWinniePuzzleGopherPawn* m_pGopherPawn;
     
 public:
-    ATresWinniePuzzleFlower();
+    ATresWinniePuzzleFlower(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -1,6 +1,6 @@
 #include "TresWinniePuzzleUnitBase.h"
 
-ATresWinniePuzzleUnitBase::ATresWinniePuzzleUnitBase() {
+ATresWinniePuzzleUnitBase::ATresWinniePuzzleUnitBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->UnitTypeRef = WinniePuzzleUnitType::Carrot;
     this->m_pCollisionUnit = NULL;
 }

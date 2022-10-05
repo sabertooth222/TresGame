@@ -22,6 +22,6 @@ private:
     bool m_bAction;
     
 public:
-    ATresAINote();
+    ATresAINote(const FObjectInitializer& ObjectInitializer);
 };
 

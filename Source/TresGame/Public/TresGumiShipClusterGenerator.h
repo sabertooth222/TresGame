@@ -111,7 +111,7 @@ private:
     TArray<UHierarchicalInstancedStaticMeshComponent*> HISMComponents;
     
 public:
-    ATresGumiShipClusterGenerator();
+    ATresGumiShipClusterGenerator(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void OnOverlapBegin(UPrimitiveComponent* pOverlappedComponent, AActor* pOtherActor, UPrimitiveComponent* pOtherComp, int32 dOtherBodyIndex, bool bFromSweep, const FHitResult& rSweepResult);
     

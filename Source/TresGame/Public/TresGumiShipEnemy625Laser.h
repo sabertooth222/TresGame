@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable)
 class ATresGumiShipEnemy625Laser : public ATresGumiShipActualProjectile {
     GENERATED_BODY()
 public:
-    ATresGumiShipEnemy625Laser();
+    ATresGumiShipEnemy625Laser(const FObjectInitializer& ObjectInitializer);
 };
 

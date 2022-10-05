@@ -1,5 +1,5 @@
 #include "TresPlayerPawnRiku.h"
 
-ATresPlayerPawnRiku::ATresPlayerPawnRiku() {
+ATresPlayerPawnRiku::ATresPlayerPawnRiku(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

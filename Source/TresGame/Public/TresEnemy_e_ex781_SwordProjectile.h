@@ -13,6 +13,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_MoveEndDist;
     
-    ATresEnemy_e_ex781_SwordProjectile();
+    ATresEnemy_e_ex781_SwordProjectile(const FObjectInitializer& ObjectInitializer);
 };
 

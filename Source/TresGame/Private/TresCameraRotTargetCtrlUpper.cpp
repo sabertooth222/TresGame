@@ -8,6 +8,6 @@ ATresCameraRotTargetCtrlUpper* ATresCameraRotTargetCtrlUpper::BP_SpawnTresCamera
     return NULL;
 }
 
-ATresCameraRotTargetCtrlUpper::ATresCameraRotTargetCtrlUpper() {
+ATresCameraRotTargetCtrlUpper::ATresCameraRotTargetCtrlUpper(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

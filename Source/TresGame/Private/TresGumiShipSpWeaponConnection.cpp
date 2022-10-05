@@ -5,7 +5,7 @@
 void ATresGumiShipSpWeaponConnection::_CheckAttackTerm(const TEnumAsByte<ETresGumiShipWeaponSequencePort> ePort, bool& rbCanAttack) {
 }
 
-ATresGumiShipSpWeaponConnection::ATresGumiShipSpWeaponConnection() {
+ATresGumiShipSpWeaponConnection::ATresGumiShipSpWeaponConnection(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_eConsumptionType = ETresGumiShipConsumptionType::CT_CHARGE_TYPE;
     this->m_dConsumptionPoint = 0;
     this->m_fCoolDownTime = 5.00f;

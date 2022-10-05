@@ -31,6 +31,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* m_BladeTornadoTipCmp;
     
-    ATresProjectile_XIIIE_BladeTornadoForTackle();
+    ATresProjectile_XIIIE_BladeTornadoForTackle(const FObjectInitializer& ObjectInitializer);
 };
 

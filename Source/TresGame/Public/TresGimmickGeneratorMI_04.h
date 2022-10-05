@@ -69,7 +69,7 @@ protected:
     TArray<ATriggerBox*> TabooRideVolumeArray;
     
 public:
-    ATresGimmickGeneratorMI_04();
+    ATresGimmickGeneratorMI_04(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void UpdateTransform(float Delta);
     

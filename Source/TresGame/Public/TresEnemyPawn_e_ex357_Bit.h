@@ -53,6 +53,6 @@ private:
     uint8 m_bEnableChangeManualLockonOtherBit: 1;
     
 public:
-    ATresEnemyPawn_e_ex357_Bit();
+    ATresEnemyPawn_e_ex357_Bit(const FObjectInitializer& ObjectInitializer);
 };
 

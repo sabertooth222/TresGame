@@ -81,7 +81,7 @@ void ATresEnemyShipPawnBase::BP_SetFadeIn(float FadeTime) {
 void ATresEnemyShipPawnBase::BP_ForceSetFadeOut() {
 }
 
-ATresEnemyShipPawnBase::ATresEnemyShipPawnBase() {
+ATresEnemyShipPawnBase::ATresEnemyShipPawnBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_ShipSubType = ETresEnemyShipSubType::DEFAULT;
     this->m_ShipSpeedDeclRateOnDestroyedMast = 0.17f;
     this->m_ShipCoreDamageWeight = 1.50f;

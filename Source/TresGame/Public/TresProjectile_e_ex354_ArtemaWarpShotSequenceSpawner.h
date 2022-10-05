@@ -13,6 +13,6 @@ protected:
     FEX354_ArtemaWarpShotSequenceInfoSet m_SequenceInfoSet;
     
 public:
-    ATresProjectile_e_ex354_ArtemaWarpShotSequenceSpawner();
+    ATresProjectile_e_ex354_ArtemaWarpShotSequenceSpawner(const FObjectInitializer& ObjectInitializer);
 };
 

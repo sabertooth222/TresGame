@@ -17,7 +17,7 @@ protected:
     UTresBodyCollComponent* BodyCollComponent;
     
 public:
-    ATresGimmick_Ts03_CraneObject();
+    ATresGimmick_Ts03_CraneObject(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetParentCrane(ATresGimmick_Ts03_Crane* pParent);
     

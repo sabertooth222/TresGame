@@ -30,7 +30,7 @@ protected:
     float m_fPartsMeshHideDelayTime;
     
 public:
-    ATresGumiShipEnemyPartsBase();
+    ATresGumiShipEnemyPartsBase(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetLockOnPermissionAll(bool LockOnEnable);
     

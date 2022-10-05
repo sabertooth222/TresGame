@@ -17,6 +17,6 @@ private:
     UTresStaticMeshComponent* m_Mesh2;
     
 public:
-    ATresTestPawnEnemyShip();
+    ATresTestPawnEnemyShip(const FObjectInitializer& ObjectInitializer);
 };
 

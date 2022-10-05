@@ -11,6 +11,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FEX354_DownShotInfo m_DownShotInfo;
     
-    ATresProjectile_e_ex354_DownShot();
+    ATresProjectile_e_ex354_DownShot(const FObjectInitializer& ObjectInitializer);
 };
 

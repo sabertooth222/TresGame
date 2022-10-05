@@ -152,7 +152,7 @@ float ATresGimmickCA_RunAwayShipPawn::GetCannonRestTimer() const {
     return 0.0f;
 }
 
-ATresGimmickCA_RunAwayShipPawn::ATresGimmickCA_RunAwayShipPawn() {
+ATresGimmickCA_RunAwayShipPawn::ATresGimmickCA_RunAwayShipPawn(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_MastMesh = CreateDefaultSubobject<UTresSkeletalMeshComponent>(TEXT("GimmickCA_RunAwayShipPawn_SkeletalMastMesh"));
 }
 

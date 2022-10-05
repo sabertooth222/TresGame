@@ -33,6 +33,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_IsLinkMode;
     
-    ATresNpcPawn_n_ex002();
+    ATresNpcPawn_n_ex002(const FObjectInitializer& ObjectInitializer);
 };
 

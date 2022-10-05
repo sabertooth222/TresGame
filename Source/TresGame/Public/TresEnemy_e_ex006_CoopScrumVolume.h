@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresEnemy_e_ex006_CoopScrumVolume : public ATresVolume {
     GENERATED_BODY()
 public:
-    ATresEnemy_e_ex006_CoopScrumVolume();
+    ATresEnemy_e_ex006_CoopScrumVolume(const FObjectInitializer& ObjectInitializer);
 };
 

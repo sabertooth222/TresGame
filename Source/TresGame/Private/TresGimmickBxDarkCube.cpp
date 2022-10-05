@@ -22,7 +22,7 @@ FRotator ATresGimmickBxDarkCube::CalcMovementToRot(FRotator BaseRotator, FVector
     return FRotator{};
 }
 
-ATresGimmickBxDarkCube::ATresGimmickBxDarkCube() {
+ATresGimmickBxDarkCube::ATresGimmickBxDarkCube(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_CheckSpawnPoint = false;
     this->SpawnActorManager = CreateDefaultSubobject<UTresSpawnActorManagerComponent>(TEXT("SpawnActorManager"));
 }

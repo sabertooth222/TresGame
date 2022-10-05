@@ -10,6 +10,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_Param_WindFlag;
     
-    ATresVehicleProjSmallAirplane();
+    ATresVehicleProjSmallAirplane(const FObjectInitializer& ObjectInitializer);
 };
 

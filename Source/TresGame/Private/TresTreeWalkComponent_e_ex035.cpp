@@ -11,7 +11,7 @@ void ATresTreeWalkComponent_e_ex035::OnEndOverlap(UPrimitiveComponent* Overlappe
 void ATresTreeWalkComponent_e_ex035::OnBeginOverlap(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult) {
 }
 
-ATresTreeWalkComponent_e_ex035::ATresTreeWalkComponent_e_ex035() {
+ATresTreeWalkComponent_e_ex035::ATresTreeWalkComponent_e_ex035(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->SceneComponent = CreateDefaultSubobject<USceneComponent>(TEXT("SceneComponent0"));
     this->BoxComponent = CreateDefaultSubobject<UBoxComponent>(TEXT("BoxComponent0"));
     this->OverlapBox = CreateDefaultSubobject<UBoxComponent>(TEXT("BoxComponent1"));

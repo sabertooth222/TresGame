@@ -10,6 +10,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 mode;
     
-    ATresGumiShipEnemy615Pawn();
+    ATresGumiShipEnemy615Pawn(const FObjectInitializer& ObjectInitializer);
 };
 

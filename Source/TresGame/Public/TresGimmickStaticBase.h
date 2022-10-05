@@ -22,7 +22,7 @@ private:
     UTresEffectAttachComponent* MyEffectAtt;
     
 public:
-    ATresGimmickStaticBase();
+    ATresGimmickStaticBase(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetCanEverAffectNavigation(bool bRelevant);
     

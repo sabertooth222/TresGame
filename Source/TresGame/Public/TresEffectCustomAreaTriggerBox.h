@@ -11,6 +11,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<ETresEffectCustomAreaCode> m_CostomEffectAreaCode;
     
-    ATresEffectCustomAreaTriggerBox();
+    ATresEffectCustomAreaTriggerBox(const FObjectInitializer& ObjectInitializer);
 };
 

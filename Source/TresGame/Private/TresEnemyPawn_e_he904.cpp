@@ -3,7 +3,7 @@
 void ATresEnemyPawn_e_he904::DebugSwapMountCollEnabled() {
 }
 
-ATresEnemyPawn_e_he904::ATresEnemyPawn_e_he904() {
+ATresEnemyPawn_e_he904::ATresEnemyPawn_e_he904(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_MountCollActorClass = NULL;
     this->m_MountCollActor = NULL;
     this->m_MountCollActorClass_FR = NULL;

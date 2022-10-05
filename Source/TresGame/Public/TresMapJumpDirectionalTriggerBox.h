@@ -34,7 +34,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTresMapMarkerComponent* MapMarkerComponent;
     
-    ATresMapJumpDirectionalTriggerBox();
+    ATresMapJumpDirectionalTriggerBox(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetActiveMapMarker(bool Active);
     

@@ -1,5 +1,5 @@
 #include "TresGimmickHePuddingBigBase.h"
 
-ATresGimmickHePuddingBigBase::ATresGimmickHePuddingBigBase() {
+ATresGimmickHePuddingBigBase::ATresGimmickHePuddingBigBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

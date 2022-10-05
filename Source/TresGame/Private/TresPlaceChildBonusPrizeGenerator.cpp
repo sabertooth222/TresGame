@@ -11,7 +11,7 @@ bool ATresPlaceChildBonusPrizeGenerator::GetRandSnapPos(const FTresSnapData& Dat
     return false;
 }
 
-ATresPlaceChildBonusPrizeGenerator::ATresPlaceChildBonusPrizeGenerator() {
+ATresPlaceChildBonusPrizeGenerator::ATresPlaceChildBonusPrizeGenerator(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->RandomGenerateNum_ = 10;
     this->GenerateRadius = 100.00f;
     this->GenerateOffsetZ = 50.00f;

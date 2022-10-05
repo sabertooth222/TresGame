@@ -9,7 +9,7 @@ class AActor;
 void ATresGumiShipProjectileBase::_OnHitBinding(UPrimitiveComponent* pHitComponent, AActor* pOtherActor, UPrimitiveComponent* pOtherComp, FVector vNormalImpulse, const FHitResult& rHit) {
 }
 
-ATresGumiShipProjectileBase::ATresGumiShipProjectileBase() {
+ATresGumiShipProjectileBase::ATresGumiShipProjectileBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_pCollision = CreateDefaultSubobject<UTresGumiShipAtkCollisionSetCompo>(TEXT("Collision"));
     this->m_fMovementSpeed = 2000.00f;
     this->m_fHomingAngle = 0.00f;

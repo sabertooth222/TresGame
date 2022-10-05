@@ -4,7 +4,7 @@
 void ATresMiRxPawn_e_ex761::_OnLaserShutDown() {
 }
 
-ATresMiRxPawn_e_ex761::ATresMiRxPawn_e_ex761() {
+ATresMiRxPawn_e_ex761::ATresMiRxPawn_e_ex761(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_dCenterIndex = 0;
     this->m_dRightAndLeftIndex = 0;
     this->m_fRateOfDispel = 0.70f;

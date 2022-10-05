@@ -8,7 +8,7 @@ bool ATresEnemyPawn_e_ex010::IsCoopMode() const {
 }
 
 
-ATresEnemyPawn_e_ex010::ATresEnemyPawn_e_ex010() {
+ATresEnemyPawn_e_ex010::ATresEnemyPawn_e_ex010(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_bRailSlidePawn = false;
     this->m_PartnerPawn = NULL;
 }

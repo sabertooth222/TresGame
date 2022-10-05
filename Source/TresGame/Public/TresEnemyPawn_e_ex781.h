@@ -107,7 +107,7 @@ private:
     ATresCameraForceLockon* m_ClimaxSceneCamera;
     
 public:
-    ATresEnemyPawn_e_ex781();
+    ATresEnemyPawn_e_ex781(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SkipPerformance();
     

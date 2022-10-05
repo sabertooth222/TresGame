@@ -93,7 +93,7 @@ private:
     FName m_UseBaseParamRowName;
     
 public:
-    ATresGumiShipPlayer();
+    ATresGumiShipPlayer(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     static void WaitSetupPlayer(UObject* pWorldContextObject, FLatentActionInfo LatentInfo);
     

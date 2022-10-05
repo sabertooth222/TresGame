@@ -31,7 +31,7 @@ protected:
     ASQEX_CameraUpVector* m_CameraUpVector;
     
 public:
-    ATresCameraAnim();
+    ATresCameraAnim(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void WaitPlayEnd(bool bDummy, FLatentActionInfo LatentInfo);
     

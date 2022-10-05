@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class TRESGAME_API ATresNpcBattleAIPoint_XIII : public AActor {
     GENERATED_BODY()
 public:
-    ATresNpcBattleAIPoint_XIII();
+    ATresNpcBattleAIPoint_XIII(const FObjectInitializer& ObjectInitializer);
 };
 

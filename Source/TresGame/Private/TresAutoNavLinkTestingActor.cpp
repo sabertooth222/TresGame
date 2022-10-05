@@ -1,5 +1,5 @@
 #include "TresAutoNavLinkTestingActor.h"
 
-ATresAutoNavLinkTestingActor::ATresAutoNavLinkTestingActor() {
+ATresAutoNavLinkTestingActor::ATresAutoNavLinkTestingActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

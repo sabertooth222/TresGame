@@ -46,7 +46,7 @@ protected:
     ATresEnemyPawn_e_ex012* m_CoopDummyPawn;
     
 public:
-    ATresEnemyPawn_e_ex013();
+    ATresEnemyPawn_e_ex013(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void StartCooperationEvent();
     

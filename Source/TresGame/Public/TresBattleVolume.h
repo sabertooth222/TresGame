@@ -27,7 +27,7 @@ private:
     bool m_BattleStarted;
     
 public:
-    ATresBattleVolume();
+    ATresBattleVolume(const FObjectInitializer& ObjectInitializer);
     
     // Fix for true pure virtual functions not being implemented
 };

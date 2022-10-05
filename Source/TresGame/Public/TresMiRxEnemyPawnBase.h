@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable)
 class ATresMiRxEnemyPawnBase : public ATresMiRxPawn {
     GENERATED_BODY()
 public:
-    ATresMiRxEnemyPawnBase();
+    ATresMiRxEnemyPawnBase(const FObjectInitializer& ObjectInitializer);
 };
 

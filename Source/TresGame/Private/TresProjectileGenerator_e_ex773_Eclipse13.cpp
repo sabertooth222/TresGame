@@ -7,7 +7,7 @@ float ATresProjectileGenerator_e_ex773_Eclipse13::GetWaitTime() {
 }
 
 
-ATresProjectileGenerator_e_ex773_Eclipse13::ATresProjectileGenerator_e_ex773_Eclipse13() {
+ATresProjectileGenerator_e_ex773_Eclipse13::ATresProjectileGenerator_e_ex773_Eclipse13(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MyRoot = CreateDefaultSubobject<USceneComponent>(TEXT("MyRoot"));
     this->MyParticle = CreateDefaultSubobject<UParticleSystemComponent>(TEXT("MyParticle"));
     this->ParameterAsset = NULL;

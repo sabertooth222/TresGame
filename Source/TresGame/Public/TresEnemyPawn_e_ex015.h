@@ -8,7 +8,7 @@ UCLASS(Blueprintable)
 class ATresEnemyPawn_e_ex015 : public ATresEnemyPawnBase {
     GENERATED_BODY()
 public:
-    ATresEnemyPawn_e_ex015();
+    ATresEnemyPawn_e_ex015(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FRotator BP_GetAnimOffsetValue() const;
     

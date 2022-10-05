@@ -106,6 +106,6 @@ protected:
     UParticleSystemComponent* m_AttachEffect2;
     
 public:
-    ATresAttractionPawnRollerCoaster();
+    ATresAttractionPawnRollerCoaster(const FObjectInitializer& ObjectInitializer);
 };
 

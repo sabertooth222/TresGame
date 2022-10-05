@@ -1,5 +1,5 @@
 #include "TresCameraPhotoHologram.h"
 
-ATresCameraPhotoHologram::ATresCameraPhotoHologram() {
+ATresCameraPhotoHologram::ATresCameraPhotoHologram(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

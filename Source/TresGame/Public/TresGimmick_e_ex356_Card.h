@@ -54,7 +54,7 @@ private:
     UParticleSystem* m_BigDealCardAuraParticleSystem;
     
 public:
-    ATresGimmick_e_ex356_Card();
+    ATresGimmick_e_ex356_Card(const FObjectInitializer& ObjectInitializer);
 private:
     UFUNCTION()
     void OnBigDealReactorDoCommand(ATresCharPawnBase* InCommandCauser, TEnumAsByte<ETresCommandKind> InCommandID, UTresReactorComponent* InReactorComponent);

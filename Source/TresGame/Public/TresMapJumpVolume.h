@@ -24,7 +24,7 @@ public:
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresMapJumpVolumeSignature OnMapJump;
     
-    ATresMapJumpVolume();
+    ATresMapJumpVolume(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void InvokeMapJump();
     

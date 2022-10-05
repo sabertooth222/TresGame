@@ -8,7 +8,7 @@ bool ATresDirectionalVolumeTickBase::IsEnableExecute() {
     return false;
 }
 
-ATresDirectionalVolumeTickBase::ATresDirectionalVolumeTickBase() {
+ATresDirectionalVolumeTickBase::ATresDirectionalVolumeTickBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_PermitAngle = 45.00f;
     this->DebugArrowComponent = CreateDefaultSubobject<UTresDebugArrowComponent>(TEXT("DebugArrow"));
 }

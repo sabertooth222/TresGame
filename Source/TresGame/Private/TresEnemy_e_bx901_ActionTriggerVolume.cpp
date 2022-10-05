@@ -9,7 +9,7 @@ void ATresEnemy_e_bx901_ActionTriggerVolume::OnEndOverlap(UPrimitiveComponent* O
 void ATresEnemy_e_bx901_ActionTriggerVolume::OnBeginOverlap(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult) {
 }
 
-ATresEnemy_e_bx901_ActionTriggerVolume::ATresEnemy_e_bx901_ActionTriggerVolume() {
+ATresEnemy_e_bx901_ActionTriggerVolume::ATresEnemy_e_bx901_ActionTriggerVolume(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_TriggerType = EBX901_ActionTriggerType_DarkBaymax;
 }
 

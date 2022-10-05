@@ -25,7 +25,7 @@ void ATresEnemyPawn_e_ex056::ForceSelfKill() {
 void ATresEnemyPawn_e_ex056::DebugRequestDie(const bool bSelfKill) {
 }
 
-ATresEnemyPawn_e_ex056::ATresEnemyPawn_e_ex056() {
+ATresEnemyPawn_e_ex056::ATresEnemyPawn_e_ex056(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_WallHitEffectGroupID = 3510;
     this->m_bEnableWatermelon = false;
     this->m_Score = 10;

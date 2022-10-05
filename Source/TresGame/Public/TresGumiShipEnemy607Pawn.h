@@ -45,7 +45,7 @@ private:
     UParticleSystemComponent* m_pParticleSystem;
     
 public:
-    ATresGumiShipEnemy607Pawn();
+    ATresGumiShipEnemy607Pawn(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     int32 _GetParticleCount();
     

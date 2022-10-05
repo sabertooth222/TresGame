@@ -29,7 +29,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USQEX_ParticleAttachDataAsset* m_pro_EffDataAsset;
     
-    ATresProjectile_e_ex017_MagicSquare();
+    ATresProjectile_e_ex017_MagicSquare(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetRevolverBoneRoll() const;
     

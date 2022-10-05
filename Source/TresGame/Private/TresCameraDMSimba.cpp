@@ -1,5 +1,5 @@
 #include "TresCameraDMSimba.h"
 
-ATresCameraDMSimba::ATresCameraDMSimba() {
+ATresCameraDMSimba::ATresCameraDMSimba(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

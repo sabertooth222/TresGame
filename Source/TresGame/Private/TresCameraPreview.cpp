@@ -1,5 +1,5 @@
 #include "TresCameraPreview.h"
 
-ATresCameraPreview::ATresCameraPreview() {
+ATresCameraPreview::ATresCameraPreview(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

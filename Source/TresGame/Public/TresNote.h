@@ -10,6 +10,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_Id;
     
-    ATresNote();
+    ATresNote(const FObjectInitializer& ObjectInitializer);
 };
 

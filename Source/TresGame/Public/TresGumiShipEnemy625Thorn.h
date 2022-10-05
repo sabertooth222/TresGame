@@ -14,7 +14,7 @@ protected:
     UParticleSystem* m_pExplosionVFX;
     
 public:
-    ATresGumiShipEnemy625Thorn();
+    ATresGumiShipEnemy625Thorn(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void DestructionEffect();
     

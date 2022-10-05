@@ -1,6 +1,6 @@
 #include "TresProjectile_e_ex773_ReverseFlareOmen.h"
 
-ATresProjectile_e_ex773_ReverseFlareOmen::ATresProjectile_e_ex773_ReverseFlareOmen() {
+ATresProjectile_e_ex773_ReverseFlareOmen::ATresProjectile_e_ex773_ReverseFlareOmen(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_pro_AttractClass = NULL;
     this->BombTime = 1.00f;
     this->AttractTime = 1.00f;

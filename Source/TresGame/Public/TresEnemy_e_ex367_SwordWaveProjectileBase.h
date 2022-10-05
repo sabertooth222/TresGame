@@ -44,6 +44,6 @@ private:
     AActor* m_Target;
     
 public:
-    ATresEnemy_e_ex367_SwordWaveProjectileBase();
+    ATresEnemy_e_ex367_SwordWaveProjectileBase(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -1,5 +1,5 @@
 #include "TresInstanceActorMapObjRefrect.h"
 
-ATresInstanceActorMapObjRefrect::ATresInstanceActorMapObjRefrect() {
+ATresInstanceActorMapObjRefrect::ATresInstanceActorMapObjRefrect(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

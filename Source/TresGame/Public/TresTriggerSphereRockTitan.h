@@ -24,6 +24,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_SendParam2;
     
-    ATresTriggerSphereRockTitan();
+    ATresTriggerSphereRockTitan(const FObjectInitializer& ObjectInitializer);
 };
 

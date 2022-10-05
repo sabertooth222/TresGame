@@ -19,6 +19,6 @@ protected:
     TSubclassOf<ATresActor_e_ex771_Attract> m_pro_AttractClass;
     
 public:
-    ATresProjectile_e_ex771_FlareOmen();
+    ATresProjectile_e_ex771_FlareOmen(const FObjectInitializer& ObjectInitializer);
 };
 

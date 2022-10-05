@@ -36,7 +36,7 @@ protected:
     float m_fReAppearDelayTime;
     
 public:
-    ATresGumiShipSpecialWeaponBaseActor();
+    ATresGumiShipSpecialWeaponBaseActor(const FObjectInitializer& ObjectInitializer);
 protected:
     UFUNCTION(BlueprintCallable)
     void _OnRequestPause(const bool bIn);

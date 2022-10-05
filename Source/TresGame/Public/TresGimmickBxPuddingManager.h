@@ -17,7 +17,7 @@ private:
     bool m_bEnableLauncher;
     
 public:
-    ATresGimmickBxPuddingManager();
+    ATresGimmickBxPuddingManager(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void NotifyStop();
     

@@ -21,6 +21,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRotator LimitRotation;
     
-    ATresGumiShipEnemy602Projectile();
+    ATresGumiShipEnemy602Projectile(const FObjectInitializer& ObjectInitializer);
 };
 

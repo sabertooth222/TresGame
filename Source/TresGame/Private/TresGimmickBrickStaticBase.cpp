@@ -8,7 +8,7 @@ class AActor;
 void ATresGimmickBrickStaticBase::OnTresTakeDamageGimmickCallback(const FHitResult& HitInfo, AActor* DamageCauser) {
 }
 
-ATresGimmickBrickStaticBase::ATresGimmickBrickStaticBase() {
+ATresGimmickBrickStaticBase::ATresGimmickBrickStaticBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MyMesh = CreateDefaultSubobject<UTresStaticMeshComponent>(TEXT("TresGimmickMesh0"));
     this->TresGimmickHitCount = CreateDefaultSubobject<UTresGimmickHitCountComponent>(TEXT("TresGimmickHitCount0"));
     this->TresNavModifier = CreateDefaultSubobject<UTresNavModifierComponent>(TEXT("TresNavModifier0"));

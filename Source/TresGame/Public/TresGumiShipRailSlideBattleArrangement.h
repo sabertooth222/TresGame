@@ -12,6 +12,6 @@ private:
     FName m_MissionParamName;
     
 public:
-    ATresGumiShipRailSlideBattleArrangement();
+    ATresGumiShipRailSlideBattleArrangement(const FObjectInitializer& ObjectInitializer);
 };
 

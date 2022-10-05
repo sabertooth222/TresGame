@@ -1,6 +1,6 @@
 #include "TresProjectile_e_bx901_DarkCubeShot.h"
 
-ATresProjectile_e_bx901_DarkCubeShot::ATresProjectile_e_bx901_DarkCubeShot() {
+ATresProjectile_e_bx901_DarkCubeShot::ATresProjectile_e_bx901_DarkCubeShot(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_fPlayerProjGrabMinDist = 0.00f;
     this->m_fPlayerProjGrabMaxAngle = 90.00f;
     this->m_fPlayerProjGrabTurnSpeed = 5000.00f;

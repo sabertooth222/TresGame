@@ -1,5 +1,5 @@
 #include "TresNavMeshAgentSizeValidator.h"
 
-ATresNavMeshAgentSizeValidator::ATresNavMeshAgentSizeValidator() {
+ATresNavMeshAgentSizeValidator::ATresNavMeshAgentSizeValidator(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

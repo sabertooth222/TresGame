@@ -8,7 +8,7 @@ bool ATresDirectionalTriggerBoxTickBase::IsEnableExecute() {
     return false;
 }
 
-ATresDirectionalTriggerBoxTickBase::ATresDirectionalTriggerBoxTickBase() {
+ATresDirectionalTriggerBoxTickBase::ATresDirectionalTriggerBoxTickBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_PermitAngle = 45.00f;
     this->DebugArrowComponent = CreateDefaultSubobject<UTresDebugArrowComponent>(TEXT("DebugArrow"));
 }

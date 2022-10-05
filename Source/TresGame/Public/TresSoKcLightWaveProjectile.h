@@ -19,6 +19,6 @@ protected:
     float m_fLightWaveBeamLoopEndWaitTime;
     
 public:
-    ATresSoKcLightWaveProjectile();
+    ATresSoKcLightWaveProjectile(const FObjectInitializer& ObjectInitializer);
 };
 

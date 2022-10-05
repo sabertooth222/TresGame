@@ -9,7 +9,7 @@ FVector ATresAttractionPawnShootingRide::GetCameraAddLocation() const {
     return FVector{};
 }
 
-ATresAttractionPawnShootingRide::ATresAttractionPawnShootingRide() {
+ATresAttractionPawnShootingRide::ATresAttractionPawnShootingRide(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_EffDataAsset = NULL;
     this->m_ProjSora = NULL;
     this->m_ProjDona = NULL;

@@ -30,7 +30,7 @@ void ATresProjectile_e_ex355_Claymore_Base::BpPostWaveSpawned() {
 void ATresProjectile_e_ex355_Claymore_Base::BpDoDisableAttackColl() {
 }
 
-ATresProjectile_e_ex355_Claymore_Base::ATresProjectile_e_ex355_Claymore_Base() {
+ATresProjectile_e_ex355_Claymore_Base::ATresProjectile_e_ex355_Claymore_Base(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MyRot = CreateDefaultSubobject<USceneComponent>(TEXT("TresProjectileRotCmp0"));
     this->MyMesh = CreateDefaultSubobject<UTresProjectileMeshComponent_e_ex359>(TEXT("TresProjectileMeshCmp0"));
     this->m_NoDestroyOnImpact = false;

@@ -4,7 +4,7 @@ float ATresAttractionPawnMerryGoRound::GetRotYaw() const {
     return 0.0f;
 }
 
-ATresAttractionPawnMerryGoRound::ATresAttractionPawnMerryGoRound() {
+ATresAttractionPawnMerryGoRound::ATresAttractionPawnMerryGoRound(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_ProjExcellent = NULL;
     this->m_ProjGood = NULL;
     this->m_ProjFinish = NULL;

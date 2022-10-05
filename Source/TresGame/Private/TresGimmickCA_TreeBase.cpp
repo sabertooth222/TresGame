@@ -10,7 +10,7 @@ bool ATresGimmickCA_TreeBase::IsStartingPrizeShower() const {
     return false;
 }
 
-ATresGimmickCA_TreeBase::ATresGimmickCA_TreeBase() {
+ATresGimmickCA_TreeBase::ATresGimmickCA_TreeBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_SpawnPrizeNumOnHit = 1;
     this->m_SpawnPrizeIntervalOnHit = 0.00f;
 }

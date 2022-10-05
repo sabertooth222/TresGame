@@ -18,6 +18,6 @@ private:
     float m_SwitchNavMapTime;
     
 public:
-    ATresNavMapVolume();
+    ATresNavMapVolume(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -14,7 +14,7 @@ protected:
     UTresReactorComponent* MyReactor;
     
 public:
-    ATresGimmickPuddingEvent();
+    ATresGimmickPuddingEvent(const FObjectInitializer& ObjectInitializer);
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void DropItem();

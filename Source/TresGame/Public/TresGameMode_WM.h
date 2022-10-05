@@ -105,7 +105,7 @@ private:
     ATresWorldMapCameraActor* m_pWorldMapCameraActor;
     
 public:
-    ATresGameMode_WM();
+    ATresGameMode_WM(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintPure)
     ATresWorldMapCameraActor* GetWorldMapCameraActor() const;
     

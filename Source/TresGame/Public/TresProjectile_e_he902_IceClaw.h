@@ -12,6 +12,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UParticleSystem* m_PredictionParticleClass;
     
-    ATresProjectile_e_he902_IceClaw();
+    ATresProjectile_e_he902_IceClaw(const FObjectInitializer& ObjectInitializer);
 };
 

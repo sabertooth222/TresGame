@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresStylePawnSHFryingpan : public ATresStylePawnBase {
     GENERATED_BODY()
 public:
-    ATresStylePawnSHFryingpan();
+    ATresStylePawnSHFryingpan(const FObjectInitializer& ObjectInitializer);
 };
 

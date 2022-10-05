@@ -26,7 +26,7 @@ void ATresGimmickTsSwing::EndAction_Implementation(bool Broken) {
 void ATresGimmickTsSwing::BeginAction_Implementation() {
 }
 
-ATresGimmickTsSwing::ATresGimmickTsSwing() {
+ATresGimmickTsSwing::ATresGimmickTsSwing(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->ActionNum = 5;
     this->UseNum = 3;
     this->ActionSpeedRate = 1.00f;

@@ -13,7 +13,7 @@ bool ATresGimmickTsGasBombManager::IsPawnEffected(ATresCharPawnBase* Pawn) const
 void ATresGimmickTsGasBombManager::EndVoiceEffectImmediately() {
 }
 
-ATresGimmickTsGasBombManager::ATresGimmickTsGasBombManager() {
+ATresGimmickTsGasBombManager::ATresGimmickTsGasBombManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_VoiceEffectTime = 10.00f;
     this->m_VoiceEffectFadeTime = 1.00f;
     this->m_EffectRange = 0.00f;

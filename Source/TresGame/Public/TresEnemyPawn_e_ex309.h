@@ -24,7 +24,7 @@ private:
     uint32 m_bEnableRevengeVoice2D;
     
 public:
-    ATresEnemyPawn_e_ex309();
+    ATresEnemyPawn_e_ex309(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, Exec)
     bool IsJinraiBeforeAttackHit() const;
     

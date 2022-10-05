@@ -27,6 +27,6 @@ protected:
     ATresCharPawnBase* m_pAttachPawn;
     
 public:
-    ATresItemMognetMedal();
+    ATresItemMognetMedal(const FObjectInitializer& ObjectInitializer);
 };
 

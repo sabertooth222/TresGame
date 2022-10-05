@@ -28,6 +28,6 @@ protected:
     FVector m_vBrakingVelocityScaleWhenFallingStarted;
     
 public:
-    ATresFriendLinkPoppingHolyProjectile();
+    ATresFriendLinkPoppingHolyProjectile(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -3,6 +3,6 @@
 void ATresGumiShipExternalEnemyGenerator::_OnGeneratedEnemyGroupWipeOut(const FTresGumiShipEnemyGroupWipeOutData& rEnemyGroupWipeOutData) {
 }
 
-ATresGumiShipExternalEnemyGenerator::ATresGumiShipExternalEnemyGenerator() {
+ATresGumiShipExternalEnemyGenerator::ATresGumiShipExternalEnemyGenerator(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

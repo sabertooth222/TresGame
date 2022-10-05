@@ -50,6 +50,6 @@ protected:
     bool m_bPreEnableBell;
     
 public:
-    ATresGimmickCannonBell();
+    ATresGimmickCannonBell(const FObjectInitializer& ObjectInitializer);
 };
 

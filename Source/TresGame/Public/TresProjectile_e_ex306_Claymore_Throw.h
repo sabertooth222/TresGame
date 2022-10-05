@@ -25,6 +25,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AActor* m_TargetActor;
     
-    ATresProjectile_e_ex306_Claymore_Throw();
+    ATresProjectile_e_ex306_Claymore_Throw(const FObjectInitializer& ObjectInitializer);
 };
 

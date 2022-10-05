@@ -7,6 +7,6 @@ UCLASS(Blueprintable, HideDropdown)
 class ATresSkeletalMesh_e_ex721_ThornWavingDummyActor : public ATresSkeletalMesh_e_ex721_Base {
     GENERATED_BODY()
 public:
-    ATresSkeletalMesh_e_ex721_ThornWavingDummyActor();
+    ATresSkeletalMesh_e_ex721_ThornWavingDummyActor(const FObjectInitializer& ObjectInitializer);
 };
 

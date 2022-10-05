@@ -18,6 +18,6 @@ private:
     UTresGumiShipDirectSpeedCompo* m_pDirect;
     
 public:
-    ATresGumiShipPlayerRailSlideActorWithCamera();
+    ATresGumiShipPlayerRailSlideActorWithCamera(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -7,6 +7,6 @@ UCLASS(NonTransient)
 class BONAMIKRT_API ASQEX_GameMode : public AGameModeBase {
     GENERATED_BODY()
 public:
-    ASQEX_GameMode();
+    ASQEX_GameMode(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -31,6 +31,6 @@ protected:
     UCurveFloat* m_pro_UpdraftEffAlphaCurve;
     
 public:
-    ATresActor_e_ex773_UpdraftEffect();
+    ATresActor_e_ex773_UpdraftEffect(const FObjectInitializer& ObjectInitializer);
 };
 

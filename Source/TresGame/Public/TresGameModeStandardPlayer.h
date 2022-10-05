@@ -7,6 +7,6 @@ UCLASS(Blueprintable, NonTransient)
 class ATresGameModeStandardPlayer : public ATresGameMode {
     GENERATED_BODY()
 public:
-    ATresGameModeStandardPlayer();
+    ATresGameModeStandardPlayer(const FObjectInitializer& ObjectInitializer);
 };
 

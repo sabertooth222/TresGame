@@ -18,6 +18,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_pro_AtkColTime;
     
-    ATresProjectile_e_ex771_EncloseFlare();
+    ATresProjectile_e_ex771_EncloseFlare(const FObjectInitializer& ObjectInitializer);
 };
 

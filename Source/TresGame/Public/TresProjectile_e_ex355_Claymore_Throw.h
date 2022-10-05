@@ -30,6 +30,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UEnvQuery* m_EQS_ThrowSpawn;
     
-    ATresProjectile_e_ex355_Claymore_Throw();
+    ATresProjectile_e_ex355_Claymore_Throw(const FObjectInitializer& ObjectInitializer);
 };
 

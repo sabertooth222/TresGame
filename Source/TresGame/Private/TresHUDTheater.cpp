@@ -1,6 +1,6 @@
 #include "TresHUDTheater.h"
 
-ATresHUDTheater::ATresHUDTheater() {
+ATresHUDTheater::ATresHUDTheater(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_UIDataAssetTheater = NULL;
 }
 

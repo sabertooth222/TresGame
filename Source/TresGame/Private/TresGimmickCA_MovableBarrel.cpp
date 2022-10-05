@@ -33,7 +33,7 @@ float ATresGimmickCA_MovableBarrel::GetDirectionChangeInterval() const {
     return 0.0f;
 }
 
-ATresGimmickCA_MovableBarrel::ATresGimmickCA_MovableBarrel() {
+ATresGimmickCA_MovableBarrel::ATresGimmickCA_MovableBarrel(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_DestroyEffectAsset = NULL;
     this->m_PushPower = ETresBodyPushPowerLevel::PPL_50;
 }

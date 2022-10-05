@@ -1,6 +1,6 @@
 #include "TresDisneyMagicPawnSimba.h"
 
-ATresDisneyMagicPawnSimba::ATresDisneyMagicPawnSimba() {
+ATresDisneyMagicPawnSimba::ATresDisneyMagicPawnSimba(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_EffAssetJumpAttack = NULL;
     this->m_CameraShakeJumpAttack = NULL;
     this->m_ProjRoar = NULL;

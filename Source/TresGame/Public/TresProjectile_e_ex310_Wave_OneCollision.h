@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable)
 class ATresProjectile_e_ex310_Wave_OneCollision : public ATresProjectileBase {
     GENERATED_BODY()
 public:
-    ATresProjectile_e_ex310_Wave_OneCollision();
+    ATresProjectile_e_ex310_Wave_OneCollision(const FObjectInitializer& ObjectInitializer);
 };
 

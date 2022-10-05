@@ -25,7 +25,7 @@ protected:
     FVector m_vOriginPoint;
     
 public:
-    ATresGumiShipEndOfWorld();
+    ATresGumiShipEndOfWorld(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void _OnEndOverlapComponent(UPrimitiveComponent* pOverlappedComp, AActor* pOtherActor, UPrimitiveComponent* pOtherComp, int32 dOtherBodyIndex);
     

@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresProjectile_e_ex702_SpawnTar : public ATresProjectileBase {
     GENERATED_BODY()
 public:
-    ATresProjectile_e_ex702_SpawnTar();
+    ATresProjectile_e_ex702_SpawnTar(const FObjectInitializer& ObjectInitializer);
 };
 

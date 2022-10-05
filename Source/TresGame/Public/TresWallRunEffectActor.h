@@ -14,6 +14,6 @@ private:
     UTresWallRunEffectComponent* m_Root;
     
 public:
-    ATresWallRunEffectActor();
+    ATresWallRunEffectActor(const FObjectInitializer& ObjectInitializer);
 };
 

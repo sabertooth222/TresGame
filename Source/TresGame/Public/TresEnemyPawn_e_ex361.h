@@ -51,7 +51,7 @@ protected:
     FName m_VoiceSocketName;
     
 public:
-    ATresEnemyPawn_e_ex361();
+    ATresEnemyPawn_e_ex361(const FObjectInitializer& ObjectInitializer);
     UFUNCTION()
     void OnDtorStateCallBack(TEnumAsByte<ETresStateID> inStateID);
     

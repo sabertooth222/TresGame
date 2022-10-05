@@ -51,7 +51,7 @@ private:
     ATresPlayerControllerBase* m_pPC;
     
 public:
-    AFestivalDancePawn_n_ra203();
+    AFestivalDancePawn_n_ra203(const FObjectInitializer& ObjectInitializer);
     
     // Fix for true pure virtual functions not being implemented
 };

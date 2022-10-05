@@ -1,5 +1,5 @@
 #include "TresGumiShipPlayerControllerDefault.h"
 
-ATresGumiShipPlayerControllerDefault::ATresGumiShipPlayerControllerDefault() {
+ATresGumiShipPlayerControllerDefault::ATresGumiShipPlayerControllerDefault(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

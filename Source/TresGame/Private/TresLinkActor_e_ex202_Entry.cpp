@@ -13,7 +13,7 @@ bool ATresLinkActor_e_ex202_Entry::CanUse() const {
     return false;
 }
 
-ATresLinkActor_e_ex202_Entry::ATresLinkActor_e_ex202_Entry() {
+ATresLinkActor_e_ex202_Entry::ATresLinkActor_e_ex202_Entry(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->SplineComponent = CreateDefaultSubobject<USplineComponent>(TEXT("SplineComponent"));
     this->m_Radius = 200.00f;
     this->m_Angle = 360.00f;

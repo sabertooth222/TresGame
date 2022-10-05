@@ -10,6 +10,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ATresEnemyPawnBase* m_TopAttachPawn;
     
-    ATresEnemyPawn_e_ex012();
+    ATresEnemyPawn_e_ex012(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -19,7 +19,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName m_MasicParticleSocketName;
     
-    ATresEnemyPawn_e_ex047();
+    ATresEnemyPawn_e_ex047(const FObjectInitializer& ObjectInitializer);
 protected:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsShotHit() const;

@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresProjectile_e_ex801_Plasma : public ATresProjectileBase {
     GENERATED_BODY()
 public:
-    ATresProjectile_e_ex801_Plasma();
+    ATresProjectile_e_ex801_Plasma(const FObjectInitializer& ObjectInitializer);
 };
 

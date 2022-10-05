@@ -101,7 +101,7 @@ private:
     TArray<TWeakObjectPtr<ATresProjectileBase>> m_ProjFinishList;
     
 public:
-    ATresDisneyMagicPawnAriel();
+    ATresDisneyMagicPawnAriel(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetFinishRainbowParameter(float rbw_main, float rbw_glow, float rbw_flr_01, float rbw_flr_01b, float rbw_flr_01c, float rbw_flr_02);
     

@@ -48,6 +48,6 @@ protected:
     FName m_DataTableName;
     
 public:
-    ATresGumiShipMeteoroGenerator();
+    ATresGumiShipMeteoroGenerator(const FObjectInitializer& ObjectInitializer);
 };
 

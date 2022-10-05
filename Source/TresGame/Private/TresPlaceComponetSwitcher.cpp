@@ -15,7 +15,7 @@ void ATresPlaceComponetSwitcher::AddManageActorClass(const UObject* WorldContext
 void ATresPlaceComponetSwitcher::AddManageActor(AActor* pActor) {
 }
 
-ATresPlaceComponetSwitcher::ATresPlaceComponetSwitcher() {
+ATresPlaceComponetSwitcher::ATresPlaceComponetSwitcher(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MyRoot = CreateDefaultSubobject<UTresRootComponent>(TEXT("TresRoot"));
     this->WorkDistance_ = 30000.00f;
     this->bRegisterSelf_ = false;

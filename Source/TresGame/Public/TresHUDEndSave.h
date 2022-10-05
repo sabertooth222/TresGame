@@ -32,6 +32,6 @@ private:
     UTresUIP_CreditDLC* m_CreditDLC;
     
 public:
-    ATresHUDEndSave();
+    ATresHUDEndSave(const FObjectInitializer& ObjectInitializer);
 };
 

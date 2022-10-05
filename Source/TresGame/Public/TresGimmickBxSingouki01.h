@@ -18,6 +18,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FName> NoLightsFlagName;
     
-    ATresGimmickBxSingouki01();
+    ATresGimmickBxSingouki01(const FObjectInitializer& ObjectInitializer);
 };
 

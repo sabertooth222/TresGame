@@ -7,6 +7,6 @@ UCLASS(Abstract, Blueprintable)
 class ATresProjectile_e_ex355_Claymore_Idle : public ATresProjectile_e_ex355_Claymore_Base {
     GENERATED_BODY()
 public:
-    ATresProjectile_e_ex355_Claymore_Idle();
+    ATresProjectile_e_ex355_Claymore_Idle(const FObjectInitializer& ObjectInitializer);
 };
 

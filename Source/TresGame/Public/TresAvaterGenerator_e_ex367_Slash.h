@@ -23,6 +23,6 @@ private:
     ATresCharPawnBase* m_MyTarget;
     
 public:
-    ATresAvaterGenerator_e_ex367_Slash();
+    ATresAvaterGenerator_e_ex367_Slash(const FObjectInitializer& ObjectInitializer);
 };
 

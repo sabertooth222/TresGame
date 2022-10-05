@@ -10,7 +10,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_HomingInitialSpeed;
     
-    ATresProjectile_e_ex003_Attack2();
+    ATresProjectile_e_ex003_Attack2(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void OnTickMove(float InDeltaTime);
     

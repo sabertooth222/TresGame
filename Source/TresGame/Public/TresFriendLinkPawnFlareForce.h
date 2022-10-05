@@ -97,6 +97,6 @@ private:
     AActor* m_pDummyTarget;
     
 public:
-    ATresFriendLinkPawnFlareForce();
+    ATresFriendLinkPawnFlareForce(const FObjectInitializer& ObjectInitializer);
 };
 

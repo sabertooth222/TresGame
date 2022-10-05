@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresGimmickBxDarumaEventPawnBase : public ATresEventPawnBase {
     GENERATED_BODY()
 public:
-    ATresGimmickBxDarumaEventPawnBase();
+    ATresGimmickBxDarumaEventPawnBase(const FObjectInitializer& ObjectInitializer);
 };
 

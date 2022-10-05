@@ -41,6 +41,6 @@ protected:
     int32 m_BounceMaxNum;
     
 public:
-    ATresPrizeCrab();
+    ATresPrizeCrab(const FObjectInitializer& ObjectInitializer);
 };
 

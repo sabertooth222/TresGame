@@ -15,6 +15,6 @@ protected:
     TSubclassOf<UCameraShake> m_CameraShakeClass;
     
 public:
-    ATresCameraHe02Wall();
+    ATresCameraHe02Wall(const FObjectInitializer& ObjectInitializer);
 };
 

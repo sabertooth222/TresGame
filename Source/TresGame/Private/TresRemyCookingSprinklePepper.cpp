@@ -21,6 +21,6 @@ float ATresRemyCookingSprinklePepper::GetGameDuration() const {
 void ATresRemyCookingSprinklePepper::ChangeState(TEnumAsByte<RemyCookingGameState> State) {
 }
 
-ATresRemyCookingSprinklePepper::ATresRemyCookingSprinklePepper() {
+ATresRemyCookingSprinklePepper::ATresRemyCookingSprinklePepper(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

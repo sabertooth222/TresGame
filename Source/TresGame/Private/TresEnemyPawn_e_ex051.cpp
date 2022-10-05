@@ -1,6 +1,6 @@
 #include "TresEnemyPawn_e_ex051.h"
 
-ATresEnemyPawn_e_ex051::ATresEnemyPawn_e_ex051() {
+ATresEnemyPawn_e_ex051::ATresEnemyPawn_e_ex051(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->VanishTime = 0.00f;
     this->Flag_HideOnInit = false;
     this->Flag_AttackHitOff = false;

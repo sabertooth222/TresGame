@@ -6,6 +6,6 @@ class AActor;
 void ATresGumiShipGimmickMineDebris::_OnOverlapBegin(UPrimitiveComponent* pOverlappedComponent, AActor* pOtherActor, UPrimitiveComponent* pOtherComp, int32 dOtherBodyIndex, bool bFromSweep, const FHitResult& rSweepResult) {
 }
 
-ATresGumiShipGimmickMineDebris::ATresGumiShipGimmickMineDebris() {
+ATresGumiShipGimmickMineDebris::ATresGumiShipGimmickMineDebris(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

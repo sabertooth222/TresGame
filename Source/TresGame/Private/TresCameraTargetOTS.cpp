@@ -18,7 +18,7 @@ void ATresCameraTargetOTS::BP_SetTresCameraTargetOTS_Roll(float Roll, float Time
 void ATresCameraTargetOTS::BP_SetTresCamera2ndTargetParam(AActor* Target2, FVector TargetOffset, FVector TargetLocalOffset, FName TargetBoneName) {
 }
 
-ATresCameraTargetOTS::ATresCameraTargetOTS() {
+ATresCameraTargetOTS::ATresCameraTargetOTS(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_LimitPitchMin = -40.00f;
     this->m_LimitPitchMax = 40.00f;
 }

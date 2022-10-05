@@ -12,6 +12,6 @@ protected:
     float m_fMaxYaw;
     
 public:
-    ATresGumiShipParts647Pawn();
+    ATresGumiShipParts647Pawn(const FObjectInitializer& ObjectInitializer);
 };
 

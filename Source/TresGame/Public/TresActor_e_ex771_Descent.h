@@ -23,6 +23,6 @@ protected:
     TSubclassOf<ATresWaterCurrentSplineActor> m_DescentSplineClass;
     
 public:
-    ATresActor_e_ex771_Descent();
+    ATresActor_e_ex771_Descent(const FObjectInitializer& ObjectInitializer);
 };
 

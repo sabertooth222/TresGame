@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class ATresCameraWallLoc : public ATresCameraNormalLoc {
     GENERATED_BODY()
 public:
-    ATresCameraWallLoc();
+    ATresCameraWallLoc(const FObjectInitializer& ObjectInitializer);
 };
 

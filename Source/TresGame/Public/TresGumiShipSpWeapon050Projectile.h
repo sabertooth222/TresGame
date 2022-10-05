@@ -19,6 +19,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Radius;
     
-    ATresGumiShipSpWeapon050Projectile();
+    ATresGumiShipSpWeapon050Projectile(const FObjectInitializer& ObjectInitializer);
 };
 

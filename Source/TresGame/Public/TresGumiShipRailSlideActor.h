@@ -9,6 +9,6 @@ class ATresGumiShipRailSlideActor : public ATresGumiShipGimmickActorBase {
 public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE(FTresGumiShipFinishedRailSlide);
     
-    ATresGumiShipRailSlideActor();
+    ATresGumiShipRailSlideActor(const FObjectInitializer& ObjectInitializer);
 };
 

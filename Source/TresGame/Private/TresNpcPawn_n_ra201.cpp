@@ -22,7 +22,7 @@ bool ATresNpcPawn_n_ra201::CanSetHairRotationPoint() const {
 void ATresNpcPawn_n_ra201::BP_SetInWaterWarp(FVector WarpLocation, FRotator WarpRotate) {
 }
 
-ATresNpcPawn_n_ra201::ATresNpcPawn_n_ra201() {
+ATresNpcPawn_n_ra201::ATresNpcPawn_n_ra201(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->HairActionReactor = CreateDefaultSubobject<UTresReactorComponent>(TEXT("TresNpcReactorHairAction"));
     this->m_HairMesh1 = CreateDefaultSubobject<UTresSkeletalMeshComponent>(TEXT("TresCharHairMesh1"));
     this->m_HairAtkColl1 = CreateDefaultSubobject<UTresAtkCollComponent>(TEXT("TresAtkColl1"));

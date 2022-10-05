@@ -33,7 +33,7 @@ private:
     UBoxComponent* MyDamageComponent;
     
 public:
-    ATresEnemyPawn_e_ex301_PurgatoryDamageBox();
+    ATresEnemyPawn_e_ex301_PurgatoryDamageBox(const FObjectInitializer& ObjectInitializer);
 private:
     UFUNCTION(BlueprintCallable)
     void OnPullCollisionEndOverlap(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);

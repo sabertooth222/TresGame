@@ -55,7 +55,7 @@ protected:
     bool m_bCinematicIdleMotion;
     
 public:
-    ATresEnemyPawn_e_ex052();
+    ATresEnemyPawn_e_ex052(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetScore(const int32 Score);
     

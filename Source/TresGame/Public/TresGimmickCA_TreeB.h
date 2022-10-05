@@ -8,7 +8,7 @@ UCLASS(Abstract, Blueprintable)
 class ATresGimmickCA_TreeB : public ATresGimmickCA_TreeBase {
     GENERATED_BODY()
 public:
-    ATresGimmickCA_TreeB();
+    ATresGimmickCA_TreeB(const FObjectInitializer& ObjectInitializer);
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void BP_RequestStartDropSeed(FTransform SpawnLocation);

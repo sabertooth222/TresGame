@@ -16,7 +16,7 @@ ATresSceneManager* ATresGameState::GetSceneManager() {
     return NULL;
 }
 
-ATresGameState::ATresGameState() {
+ATresGameState::ATresGameState(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_SceneManager = NULL;
     this->m_VFXManager = NULL;
     this->m_EmitterPool = NULL;

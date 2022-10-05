@@ -3,7 +3,7 @@
 #include "Components/SceneComponent.h"
 #include "TresBodyCollComponent.h"
 
-ATresSoKcKeyHoleGimmickActor::ATresSoKcKeyHoleGimmickActor() {
+ATresSoKcKeyHoleGimmickActor::ATresSoKcKeyHoleGimmickActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->KeyHoleRoot = CreateDefaultSubobject<USceneComponent>(TEXT("KeyHoleRoot"));
     this->KeyHoleBeamAttachPoint = CreateDefaultSubobject<USceneComponent>(TEXT("BeamAttachPoint"));
     this->KeyHoleBodyCollision = CreateDefaultSubobject<UTresBodyCollPrimitive>(TEXT("KeyHoleBodyCollision"));

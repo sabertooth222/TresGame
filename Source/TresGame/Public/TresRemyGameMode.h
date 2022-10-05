@@ -40,7 +40,7 @@ private:
     ATresRemyPawnBase* m_pRemyRatPawn;
     
 public:
-    ATresRemyGameMode();
+    ATresRemyGameMode(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintPure)
     ATresRemyPawnBase* GetRemyRatPawn() const;
     

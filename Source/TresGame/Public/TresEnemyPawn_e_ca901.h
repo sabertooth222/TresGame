@@ -39,7 +39,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundBase* m_RestraintOtherSuccessSoundData;
     
-    ATresEnemyPawn_e_ca901();
+    ATresEnemyPawn_e_ca901(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void KillAllTentacle();
     

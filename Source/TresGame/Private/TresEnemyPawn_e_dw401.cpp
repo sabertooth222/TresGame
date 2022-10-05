@@ -43,7 +43,7 @@ FVector ATresEnemyPawn_e_dw401::GetCoreMeshLoc() const {
     return FVector{};
 }
 
-ATresEnemyPawn_e_dw401::ATresEnemyPawn_e_dw401() {
+ATresEnemyPawn_e_dw401::ATresEnemyPawn_e_dw401(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->m_CoreMoveEff = NULL;
     this->m_CoreStopEff = NULL;
     this->m_CoreEventEff = NULL;
