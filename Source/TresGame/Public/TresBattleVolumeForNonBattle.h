@@ -7,6 +7,6 @@ UCLASS(Blueprintable, Deprecated, NotPlaceable)
 class TRESGAME_API ADEPRECATED_TresBattleVolumeForNonBattle : public ATresBattleVolume {
     GENERATED_BODY()
 public:
-    ADEPRECATED_TresBattleVolumeForNonBattle();
+    ADEPRECATED_TresBattleVolumeForNonBattle(const FObjectInitializer& ObjectInitializer);
 };
 
