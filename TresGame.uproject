@@ -207,7 +207,15 @@
 		},
 		{
 			"Name": "WmfMedia",
-			"Enabled": false
+			"Enabled": true
+		},
+		{
+			"Name": "AvfMedia",
+			"Enabled": true
+		},
+		{
+			"Name": "WindowsMoviePlayer",
+			"Enabled": true
 		}
 	],
 	"TargetPlatforms": [
