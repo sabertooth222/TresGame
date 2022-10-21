@@ -4,13 +4,13 @@
 #include "TresAnimAssetUnit.h"
 #include "TresAnimSet.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS(BlueprintType)
 class TRESGAME_API UTresAnimSet : public UDataAsset {
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTresAnimAssetUnit> Anims;
     
-    UTresAnimSet();
+    /*UTresAnimSet();*/
 };
 

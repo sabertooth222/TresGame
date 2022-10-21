@@ -1,6 +1,6 @@
 #include "TresAnimAssetUnit.h"
 
 FTresAnimAssetUnit::FTresAnimAssetUnit() {
-    this->AnimData = NULL;
+    /*this->AnimData = NULL;*/
 }
 

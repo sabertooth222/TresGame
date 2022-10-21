@@ -55,7 +55,7 @@ protected:
     UBodySetup* m_pBodySetup;
     
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintCallable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresReactorDoCommandSignature OnReactorDoCommand;
     
     UTresReactorComponent();
