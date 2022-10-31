@@ -12,14 +12,14 @@ UCLASS(MinimalAPI)
 class UMercunaClampToNavigableProxy : public UBlueprintAsyncActionBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FMercunaClampToNavigableResult OnSuccess;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FMercunaClampToNavigableResult OnFailure;
     
     UMercunaClampToNavigableProxy();
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta = (WorldContext = "WorldContextObject"), Category = "Mercuna")
     static UMercunaClampToNavigableProxy* MercunaClampToNavigable(UObject* WorldContextObject, FVector Position, float NavigationRadius, float SearchRadius);
     
 };

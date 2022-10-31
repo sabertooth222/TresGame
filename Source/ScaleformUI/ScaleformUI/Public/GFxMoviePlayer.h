@@ -132,22 +132,22 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 SplitscreenLayoutYAdjust;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FFsCommandSignature OnFsCommand;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FOnStartCommandSignature OnStartCommand;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FOnStartCommandSignature OnCloseCommand;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FOnTickCommandSignature OnTickCommand;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FOnFocusCommandSignature OnFocusGainedCommand;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintAssignable, BlueprintCallable)
     FOnFocusCommandSignature OnFocusLostCommand;
     
 private:
@@ -159,7 +159,7 @@ private:
     
 public:
     UGFxMoviePlayer();
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool Start(bool bRefresh);
     
     UFUNCTION(BlueprintCallable)
@@ -243,7 +243,7 @@ public:
     UFUNCTION()
     void OnClose();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     bool LoadAndStart(const FString& InSwfAssetName, bool bRefresh);
     
     UFUNCTION(BlueprintCallable)
