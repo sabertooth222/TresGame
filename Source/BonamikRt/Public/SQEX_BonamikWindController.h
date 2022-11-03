@@ -7,24 +7,24 @@
 class USQEX_BonamikWind;
 class UWorld;
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct BONAMIKRT_API FSQEX_BonamikWindController {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(Transient)
+    UPROPERTY(Transient, EditAnywhere, Category = "SQEX_BonamikWindController", meta = (AllowPrivateAccess = "true"))
     FSQEX_BonamikPresetWindInstance m_PresetWind[10];
     
-    UPROPERTY(Transient)
+    UPROPERTY(Transient, EditAnywhere, Category = "SQEX_BonamikWindController", meta = (AllowPrivateAccess = "true"))
     TArray<TWeakObjectPtr<USQEX_BonamikWind>> m_WindSources;
     
-    UPROPERTY(Transient)
+    UPROPERTY(Transient, BlueprintReadWrite, EditAnywhere, Category = "SQEX_BonamikWindController", meta = (AllowPrivateAccess = "true"))
     FVector m_CurrentGlobalWindForce;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "SQEX_BonamikWindController", meta = (AllowPrivateAccess = "true"))
     float m_GlobalWindScale;
     
-    UPROPERTY(Transient)
+    UPROPERTY(Transient, BlueprintReadWrite, EditAnywhere, Category = "SQEX_BonamikWindController", meta = (AllowPrivateAccess = "true"))
     TWeakObjectPtr<UWorld> RefWorld;
     
 public:
