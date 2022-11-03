@@ -216,10 +216,6 @@
 		{
 			"Name": "WindowsMoviePlayer",
 			"Enabled": true
-		},
-		{
-			"Name": "SwissArmyKnife",
-			"Enabled": true
 		}
 	],
 	"TargetPlatforms": [
