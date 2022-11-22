@@ -216,11 +216,13 @@
 		{
 			"Name": "WindowsMoviePlayer",
 			"Enabled": true
+		},
+		{
+			"Name": "SwissArmyKnife",
+			"Enabled": true
 		}
 	],
 	"TargetPlatforms": [
-		"PS4",
-		"WindowsNoEditor",
-		"XboxOne"
+		"WindowsNoEditor"
 	]
 }
