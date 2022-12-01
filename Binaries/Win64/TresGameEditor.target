@@ -4644,10 +4644,6 @@
 			"Type" : "UFS"
 		},
 		{
-			"Path" : "$(EngineDir)/Plugins/Editor/SwissArmyKnife/SwissArmyKnife.uplugin",
-			"Type" : "UFS"
-		},
-		{
 			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/InstanceTool/InstanceTool.uplugin",
 			"Type" : "UFS"
 		},

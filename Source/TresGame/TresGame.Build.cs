@@ -3,6 +3,7 @@ using UnrealBuildTool;
 public class TresGame : ModuleRules {
     public TresGame(ReadOnlyTargetRules Target) : base(Target) {
         PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
+        bEnableExceptions = true;
         
         PublicDependencyModuleNames.AddRange(new string[] {
             "AIModule",
