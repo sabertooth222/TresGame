@@ -2,7 +2,7 @@
 	"TargetName" : "TresGameEditor",
 	"Platform" : "Win64",
 	"Configuration" : "Development",
-	"BuildId" : "af7b2e67-1477-48de-895a-64b6d330e553",
+	"BuildId" : "ce183080-59db-4535-a45a-b4cc703e63c0",
 	"Version" : 
 	{
 		"MajorVersion" : 4,
@@ -247,21 +247,6 @@
 		{
 			"Path" : "$(EngineDir)/Plugins/Runtime/WindowsMoviePlayer/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-WindowsMoviePlayer.lib",
 			"Type" : "ImportLibrary"
-		},
-		{
-			"Path" : "$(EngineDir)/Plugins/Editor/SwissArmyKnife/Binaries/Win64/UE4Editor-SwissArmyKnife.dll",
-			"Type" : "DynamicLibrary",
-			"IsPrecompiled" : true
-		},
-		{
-			"Path" : "$(EngineDir)/Plugins/Editor/SwissArmyKnife/Binaries/Win64/UE4Editor-SwissArmyKnife.pdb",
-			"Type" : "SymbolFile",
-			"IsPrecompiled" : true
-		},
-		{
-			"Path" : "$(EngineDir)/Plugins/Editor/SwissArmyKnife/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-SwissArmyKnife.lib",
-			"Type" : "ImportLibrary",
-			"IsPrecompiled" : true
 		},
 		{
 			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/Mercuna/Binaries/Win64/UE4Editor-Mercuna.dll",
@@ -4659,6 +4644,10 @@
 			"Type" : "UFS"
 		},
 		{
+			"Path" : "$(EngineDir)/Plugins/Editor/SwissArmyKnife/SwissArmyKnife.uplugin",
+			"Type" : "UFS"
+		},
+		{
 			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/InstanceTool/InstanceTool.uplugin",
 			"Type" : "UFS"
 		},
@@ -4712,10 +4701,6 @@
 		},
 		{
 			"Path" : "$(EngineDir)/Plugins/Runtime/WindowsMoviePlayer/WindowsMoviePlayer.uplugin",
-			"Type" : "UFS"
-		},
-		{
-			"Path" : "$(EngineDir)/Plugins/Editor/SwissArmyKnife/SwissArmyKnife.uplugin",
 			"Type" : "UFS"
 		},
 		{
