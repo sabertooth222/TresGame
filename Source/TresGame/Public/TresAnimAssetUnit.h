@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "Animation/AnimationAsset.h"
 #include "TresAnimAssetUnit.generated.h"
 
-class UAnimationAsset;
 
 USTRUCT(BlueprintType)
 struct FTresAnimAssetUnit {

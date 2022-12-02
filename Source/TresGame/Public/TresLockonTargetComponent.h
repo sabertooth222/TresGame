@@ -52,7 +52,7 @@ protected:
     uint8 m_bPermissionCoverShot: 1;
     
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintCallable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTresLockonTargetDoLockSignature OnTargetLock;
     
     UTresLockonTargetComponent();

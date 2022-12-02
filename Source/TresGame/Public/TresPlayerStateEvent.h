@@ -29,28 +29,28 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveTick(float DeltaSeconds);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceivePlayerSpecificAction(ETresPlayerSpecificActionID ActionID, int32 SubID);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceivePlayerEndCommandAction(ETresCommandKind CommandKind);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceivePlayerDtorState(ETresStateID StateID);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceivePlayerCtorState(ETresStateID StateID);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceivePlayerBeginCommandAction(ETresCommandKind CommandKind);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveAnimNotifyStartBpEvent(ATresCharPawnBase* SendActor, FName AnimSeqName, ETresAnimNotifyBpEventID EventID, int32 Param);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveAnimNotifyEndBpEvent(ATresCharPawnBase* SendActor, FName AnimSeqName, ETresAnimNotifyBpEventID EventID, int32 Param);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ReceiveActorSpecificAction(ETresActorSpecificActionID ActionID, AActor* SendActor, int32 SubID);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
