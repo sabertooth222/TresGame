@@ -144,7 +144,7 @@
 !/Content/Maps/TresGameTitle.umap
 !/Content/Mods/ExampleLogicMod/ModActor.uasset
 !/Content/LogicMods.uasset
-
+!/Content/
 # Ignore intermediate folders
 Intermediate/
 obj/
