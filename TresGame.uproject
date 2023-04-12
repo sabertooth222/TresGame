@@ -138,10 +138,6 @@
 			"Enabled": false
 		},
 		{
-			"Name": "SQEX_SplineEditor",
-			"Enabled": true
-		},
-		{
 			"Name": "AndroidPermission",
 			"Enabled": false
 		},
@@ -216,6 +212,18 @@
 		{
 			"Name": "WindowsMoviePlayer",
 			"Enabled": true
+		},
+		{
+			"Name": "Mercuna",
+			"Enabled": false
+		},
+		{
+			"Name": "CriWare",
+			"Enabled": false
+		},
+		{
+			"Name": "SQEXSEAD",
+			"Enabled": false
 		}
 	],
 	"TargetPlatforms": [
