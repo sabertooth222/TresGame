@@ -1,0 +1,14 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-Mercuna3DMovement.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"I:\mr big narkon\UnrealEngine-CEEnd\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.h.obj"
+"I:\pvpAIEngine\TresGame\Plugins\EnginePlugins\Mercuna\Intermediate\Build\Win64\UE4Editor\Development\Mercuna3DMovement\Module.Mercuna3DMovement.cpp.obj"
+"I:\pvpAIEngine\TresGame\Plugins\EnginePlugins\Mercuna\Intermediate\Build\Win64\UE4Editor\Development\Mercuna3DMovement\Module.Mercuna3DMovement.gen.cpp.obj"
+"I:\mr big narkon\UnrealEngine-CEEnd\Engine\Intermediate\Build\Win64\UE4Editor\Development\PCLaunch.rc.res"
+"I:\mr big narkon\UnrealEngine-CEEnd\Engine\Intermediate\Build\Win64\UE4Editor\Development\ModuleVersionResource.rc.inl.res"
+/OUT:"I:\pvpAIEngine\TresGame\Plugins\EnginePlugins\Mercuna\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Mercuna3DMovement.lib"

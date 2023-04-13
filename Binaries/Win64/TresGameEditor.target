@@ -2,7 +2,7 @@
 	"TargetName" : "TresGameEditor",
 	"Platform" : "Win64",
 	"Configuration" : "Development",
-	"BuildId" : "65b889c9-c30c-45d0-b5a1-8131235041f2",
+	"BuildId" : "68cac204-053f-46c7-92e1-c2603648ee5c",
 	"Version" : 
 	{
 		"MajorVersion" : 4,
@@ -31,18 +31,6 @@
 		{
 			"Path" : "$(EngineDir)/Binaries/Win64/UE4Editor-Cmd.pdb",
 			"Type" : "SymbolFile"
-		},
-		{
-			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/SQEX/SQEX_SplineEdtor/Binaries/Win64/UE4Editor-SQEX_SplineEditor.dll",
-			"Type" : "DynamicLibrary"
-		},
-		{
-			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/SQEX/SQEX_SplineEdtor/Binaries/Win64/UE4Editor-SQEX_SplineEditor.pdb",
-			"Type" : "SymbolFile"
-		},
-		{
-			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/SQEX/SQEX_SplineEdtor/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-SQEX_SplineEditor.lib",
-			"Type" : "ImportLibrary"
 		},
 		{
 			"Path" : "$(EngineDir)/Plugins/Runtime/RuntimePhysXCooking/Binaries/Win64/UE4Editor-RuntimePhysXCooking.dll",
@@ -246,66 +234,6 @@
 		},
 		{
 			"Path" : "$(EngineDir)/Plugins/Runtime/WindowsMoviePlayer/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-WindowsMoviePlayer.lib",
-			"Type" : "ImportLibrary"
-		},
-		{
-			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/Mercuna/Binaries/Win64/UE4Editor-Mercuna.dll",
-			"Type" : "DynamicLibrary"
-		},
-		{
-			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/Mercuna/Binaries/Win64/UE4Editor-Mercuna.pdb",
-			"Type" : "SymbolFile"
-		},
-		{
-			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/Mercuna/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-Mercuna.lib",
-			"Type" : "ImportLibrary"
-		},
-		{
-			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/Mercuna/Binaries/Win64/UE4Editor-Mercuna3DMovement.dll",
-			"Type" : "DynamicLibrary"
-		},
-		{
-			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/Mercuna/Binaries/Win64/UE4Editor-Mercuna3DMovement.pdb",
-			"Type" : "SymbolFile"
-		},
-		{
-			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/Mercuna/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-Mercuna3DMovement.lib",
-			"Type" : "ImportLibrary"
-		},
-		{
-			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/Runtime/CriWare/CriWare/Binaries/Win64/UE4Editor-CriWareRuntime.dll",
-			"Type" : "DynamicLibrary"
-		},
-		{
-			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/Runtime/CriWare/CriWare/Binaries/Win64/UE4Editor-CriWareRuntime.pdb",
-			"Type" : "SymbolFile"
-		},
-		{
-			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/Runtime/CriWare/CriWare/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-CriWareRuntime.lib",
-			"Type" : "ImportLibrary"
-		},
-		{
-			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/SQEX/SQEXSEAD/Binaries/Win64/UE4Editor-SQEXSEAD.dll",
-			"Type" : "DynamicLibrary"
-		},
-		{
-			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/SQEX/SQEXSEAD/Binaries/Win64/UE4Editor-SQEXSEAD.pdb",
-			"Type" : "SymbolFile"
-		},
-		{
-			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/SQEX/SQEXSEAD/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-SQEXSEAD.lib",
-			"Type" : "ImportLibrary"
-		},
-		{
-			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/SQEX/SQEXSEAD/Binaries/Win64/UE4Editor-SQEXSEADEd.dll",
-			"Type" : "DynamicLibrary"
-		},
-		{
-			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/SQEX/SQEXSEAD/Binaries/Win64/UE4Editor-SQEXSEADEd.pdb",
-			"Type" : "SymbolFile"
-		},
-		{
-			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/SQEX/SQEXSEAD/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-SQEXSEADEd.lib",
 			"Type" : "ImportLibrary"
 		},
 		{
@@ -822,6 +750,30 @@
 		},
 		{
 			"Path" : "$(ProjectDir)/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-ScaleformUI.lib",
+			"Type" : "ImportLibrary"
+		},
+		{
+			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/SQEX/SQEXSEAD/Binaries/Win64/UE4Editor-SQEXSEAD.dll",
+			"Type" : "DynamicLibrary"
+		},
+		{
+			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/SQEX/SQEXSEAD/Binaries/Win64/UE4Editor-SQEXSEAD.pdb",
+			"Type" : "SymbolFile"
+		},
+		{
+			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/SQEX/SQEXSEAD/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-SQEXSEAD.lib",
+			"Type" : "ImportLibrary"
+		},
+		{
+			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/SQEX/SQEXSEAD/Binaries/Win64/UE4Editor-SQEXSEADEd.dll",
+			"Type" : "DynamicLibrary"
+		},
+		{
+			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/SQEX/SQEXSEAD/Binaries/Win64/UE4Editor-SQEXSEADEd.pdb",
+			"Type" : "SymbolFile"
+		},
+		{
+			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/SQEX/SQEXSEAD/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-SQEXSEADEd.lib",
 			"Type" : "ImportLibrary"
 		},
 		{
@@ -4461,8 +4413,40 @@
 			"Type" : "ImportLibrary"
 		},
 		{
-			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/SQEX/SQEX_SplineEdtor/Binaries/Win64/UE4Editor.modules",
-			"Type" : "RequiredResource"
+			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/Runtime/CriWare/CriWare/Binaries/Win64/UE4Editor-CriWareRuntime.dll",
+			"Type" : "DynamicLibrary"
+		},
+		{
+			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/Runtime/CriWare/CriWare/Binaries/Win64/UE4Editor-CriWareRuntime.pdb",
+			"Type" : "SymbolFile"
+		},
+		{
+			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/Runtime/CriWare/CriWare/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-CriWareRuntime.lib",
+			"Type" : "ImportLibrary"
+		},
+		{
+			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/Mercuna/Binaries/Win64/UE4Editor-Mercuna.dll",
+			"Type" : "DynamicLibrary"
+		},
+		{
+			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/Mercuna/Binaries/Win64/UE4Editor-Mercuna.pdb",
+			"Type" : "SymbolFile"
+		},
+		{
+			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/Mercuna/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-Mercuna.lib",
+			"Type" : "ImportLibrary"
+		},
+		{
+			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/Mercuna/Binaries/Win64/UE4Editor-Mercuna3DMovement.dll",
+			"Type" : "DynamicLibrary"
+		},
+		{
+			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/Mercuna/Binaries/Win64/UE4Editor-Mercuna3DMovement.pdb",
+			"Type" : "SymbolFile"
+		},
+		{
+			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/Mercuna/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-Mercuna3DMovement.lib",
+			"Type" : "ImportLibrary"
 		},
 		{
 			"Path" : "$(EngineDir)/Plugins/Runtime/RuntimePhysXCooking/Binaries/Win64/UE4Editor.modules",
@@ -4510,18 +4494,6 @@
 		},
 		{
 			"Path" : "$(EngineDir)/Plugins/Runtime/WindowsMoviePlayer/Binaries/Win64/UE4Editor.modules",
-			"Type" : "RequiredResource"
-		},
-		{
-			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/Mercuna/Binaries/Win64/UE4Editor.modules",
-			"Type" : "RequiredResource"
-		},
-		{
-			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/Runtime/CriWare/CriWare/Binaries/Win64/UE4Editor.modules",
-			"Type" : "RequiredResource"
-		},
-		{
-			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/SQEX/SQEXSEAD/Binaries/Win64/UE4Editor.modules",
 			"Type" : "RequiredResource"
 		},
 		{
@@ -4625,6 +4597,10 @@
 			"Type" : "RequiredResource"
 		},
 		{
+			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/SQEX/SQEXSEAD/Binaries/Win64/UE4Editor.modules",
+			"Type" : "RequiredResource"
+		},
+		{
 			"Path" : "$(EngineDir)/Binaries/Win64/Android/UE4Editor.modules",
 			"Type" : "RequiredResource"
 		},
@@ -4634,6 +4610,14 @@
 		},
 		{
 			"Path" : "$(EngineDir)/Binaries/Win64/HTML5/UE4Editor.modules",
+			"Type" : "RequiredResource"
+		},
+		{
+			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/Runtime/CriWare/CriWare/Binaries/Win64/UE4Editor.modules",
+			"Type" : "RequiredResource"
+		},
+		{
+			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/Mercuna/Binaries/Win64/UE4Editor.modules",
 			"Type" : "RequiredResource"
 		}
 	],
@@ -4645,10 +4629,6 @@
 		},
 		{
 			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/InstanceTool/InstanceTool.uplugin",
-			"Type" : "UFS"
-		},
-		{
-			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/SQEX/SQEX_SplineEdtor/SQEX_SplineEditor.uplugin",
 			"Type" : "UFS"
 		},
 		{
@@ -4697,18 +4677,6 @@
 		},
 		{
 			"Path" : "$(EngineDir)/Plugins/Runtime/WindowsMoviePlayer/WindowsMoviePlayer.uplugin",
-			"Type" : "UFS"
-		},
-		{
-			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/Mercuna/Mercuna.uplugin",
-			"Type" : "UFS"
-		},
-		{
-			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/Runtime/CriWare/CriWare/CriWare.uplugin",
-			"Type" : "UFS"
-		},
-		{
-			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/SQEX/SQEXSEAD/SQEXSEAD.uplugin",
 			"Type" : "UFS"
 		},
 		{

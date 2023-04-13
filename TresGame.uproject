@@ -212,18 +212,6 @@
 		{
 			"Name": "WindowsMoviePlayer",
 			"Enabled": true
-		},
-		{
-			"Name": "Mercuna",
-			"Enabled": false
-		},
-		{
-			"Name": "CriWare",
-			"Enabled": false
-		},
-		{
-			"Name": "SQEXSEAD",
-			"Enabled": false
 		}
 	],
 	"TargetPlatforms": [
