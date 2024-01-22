@@ -166,10 +166,6 @@
 			"Enabled": false
 		},
 		{
-			"Name": "LevelSequenceEditor",
-			"Enabled": false
-		},
-		{
 			"Name": "HoudiniEngine",
 			"Enabled": true,
 			"BlacklistPlatforms": [

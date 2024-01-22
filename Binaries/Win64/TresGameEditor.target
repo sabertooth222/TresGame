@@ -585,6 +585,18 @@
 			"Type" : "ImportLibrary"
 		},
 		{
+			"Path" : "$(EngineDir)/Plugins/MovieScene/LevelSequenceEditor/Binaries/Win64/UE4Editor-LevelSequenceEditor.dll",
+			"Type" : "DynamicLibrary"
+		},
+		{
+			"Path" : "$(EngineDir)/Plugins/MovieScene/LevelSequenceEditor/Binaries/Win64/UE4Editor-LevelSequenceEditor.pdb",
+			"Type" : "SymbolFile"
+		},
+		{
+			"Path" : "$(EngineDir)/Plugins/MovieScene/LevelSequenceEditor/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-LevelSequenceEditor.lib",
+			"Type" : "ImportLibrary"
+		},
+		{
 			"Path" : "$(EngineDir)/Plugins/Online/OnlineSubsystemNull/Binaries/Win64/UE4Editor-OnlineSubsystemNull.dll",
 			"Type" : "DynamicLibrary"
 		},
@@ -4589,6 +4601,10 @@
 			"Type" : "RequiredResource"
 		},
 		{
+			"Path" : "$(EngineDir)/Plugins/MovieScene/LevelSequenceEditor/Binaries/Win64/UE4Editor.modules",
+			"Type" : "RequiredResource"
+		},
+		{
 			"Path" : "$(EngineDir)/Plugins/Online/OnlineSubsystemNull/Binaries/Win64/UE4Editor.modules",
 			"Type" : "RequiredResource"
 		},
@@ -4773,6 +4789,10 @@
 		},
 		{
 			"Path" : "$(EngineDir)/Plugins/Messaging/TcpMessaging/TcpMessaging.uplugin",
+			"Type" : "UFS"
+		},
+		{
+			"Path" : "$(EngineDir)/Plugins/MovieScene/LevelSequenceEditor/LevelSequenceEditor.uplugin",
 			"Type" : "UFS"
 		},
 		{
