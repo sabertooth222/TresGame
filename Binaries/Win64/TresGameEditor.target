@@ -2,7 +2,7 @@
 	"TargetName" : "TresGameEditor",
 	"Platform" : "Win64",
 	"Configuration" : "Development",
-	"BuildId" : "c396004f-2f37-4882-a3dc-713af5843f9e",
+	"BuildId" : "c863b25b-bb5e-445e-a4fd-937d0e45acaa",
 	"Version" : 
 	{
 		"MajorVersion" : 4,
@@ -31,18 +31,6 @@
 		{
 			"Path" : "$(EngineDir)/Binaries/Win64/UE4Editor-Cmd.pdb",
 			"Type" : "SymbolFile"
-		},
-		{
-			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/SQEX/SQEX_SplineEdtor/Binaries/Win64/UE4Editor-SQEX_SplineEditor.dll",
-			"Type" : "DynamicLibrary"
-		},
-		{
-			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/SQEX/SQEX_SplineEdtor/Binaries/Win64/UE4Editor-SQEX_SplineEditor.pdb",
-			"Type" : "SymbolFile"
-		},
-		{
-			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/SQEX/SQEX_SplineEdtor/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-SQEX_SplineEditor.lib",
-			"Type" : "ImportLibrary"
 		},
 		{
 			"Path" : "$(EngineDir)/Plugins/Runtime/RuntimePhysXCooking/Binaries/Win64/UE4Editor-RuntimePhysXCooking.dll",
@@ -246,6 +234,18 @@
 		},
 		{
 			"Path" : "$(EngineDir)/Plugins/Runtime/WindowsMoviePlayer/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-WindowsMoviePlayer.lib",
+			"Type" : "ImportLibrary"
+		},
+		{
+			"Path" : "$(EngineDir)/Plugins/MovieScene/ActorSequenceEditor/Binaries/Win64/UE4Editor-ActorSequenceEditor.dll",
+			"Type" : "DynamicLibrary"
+		},
+		{
+			"Path" : "$(EngineDir)/Plugins/MovieScene/ActorSequenceEditor/Binaries/Win64/UE4Editor-ActorSequenceEditor.pdb",
+			"Type" : "SymbolFile"
+		},
+		{
+			"Path" : "$(EngineDir)/Plugins/MovieScene/ActorSequenceEditor/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-ActorSequenceEditor.lib",
 			"Type" : "ImportLibrary"
 		},
 		{
@@ -582,6 +582,18 @@
 		},
 		{
 			"Path" : "$(EngineDir)/Plugins/Messaging/TcpMessaging/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-TcpMessaging.lib",
+			"Type" : "ImportLibrary"
+		},
+		{
+			"Path" : "$(EngineDir)/Plugins/MovieScene/LevelSequenceEditor/Binaries/Win64/UE4Editor-LevelSequenceEditor.dll",
+			"Type" : "DynamicLibrary"
+		},
+		{
+			"Path" : "$(EngineDir)/Plugins/MovieScene/LevelSequenceEditor/Binaries/Win64/UE4Editor-LevelSequenceEditor.pdb",
+			"Type" : "SymbolFile"
+		},
+		{
+			"Path" : "$(EngineDir)/Plugins/MovieScene/LevelSequenceEditor/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-LevelSequenceEditor.lib",
 			"Type" : "ImportLibrary"
 		},
 		{
@@ -4473,10 +4485,6 @@
 			"Type" : "ImportLibrary"
 		},
 		{
-			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/SQEX/SQEX_SplineEdtor/Binaries/Win64/UE4Editor.modules",
-			"Type" : "RequiredResource"
-		},
-		{
 			"Path" : "$(EngineDir)/Plugins/Runtime/RuntimePhysXCooking/Binaries/Win64/UE4Editor.modules",
 			"Type" : "RequiredResource"
 		},
@@ -4522,6 +4530,10 @@
 		},
 		{
 			"Path" : "$(EngineDir)/Plugins/Runtime/WindowsMoviePlayer/Binaries/Win64/UE4Editor.modules",
+			"Type" : "RequiredResource"
+		},
+		{
+			"Path" : "$(EngineDir)/Plugins/MovieScene/ActorSequenceEditor/Binaries/Win64/UE4Editor.modules",
 			"Type" : "RequiredResource"
 		},
 		{
@@ -4601,6 +4613,10 @@
 			"Type" : "RequiredResource"
 		},
 		{
+			"Path" : "$(EngineDir)/Plugins/MovieScene/LevelSequenceEditor/Binaries/Win64/UE4Editor.modules",
+			"Type" : "RequiredResource"
+		},
+		{
 			"Path" : "$(EngineDir)/Plugins/Online/OnlineSubsystemNull/Binaries/Win64/UE4Editor.modules",
 			"Type" : "RequiredResource"
 		},
@@ -4660,10 +4676,6 @@
 			"Type" : "UFS"
 		},
 		{
-			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/SQEX/SQEX_SplineEdtor/SQEX_SplineEditor.uplugin",
-			"Type" : "UFS"
-		},
-		{
 			"Path" : "$(EngineDir)/Plugins/Runtime/RuntimePhysXCooking/RuntimePhysXCooking.uplugin",
 			"Type" : "UFS"
 		},
@@ -4709,6 +4721,10 @@
 		},
 		{
 			"Path" : "$(EngineDir)/Plugins/Runtime/WindowsMoviePlayer/WindowsMoviePlayer.uplugin",
+			"Type" : "UFS"
+		},
+		{
+			"Path" : "$(EngineDir)/Plugins/MovieScene/ActorSequenceEditor/ActorSequenceEditor.uplugin",
 			"Type" : "UFS"
 		},
 		{
@@ -4785,6 +4801,10 @@
 		},
 		{
 			"Path" : "$(EngineDir)/Plugins/Messaging/TcpMessaging/TcpMessaging.uplugin",
+			"Type" : "UFS"
+		},
+		{
+			"Path" : "$(EngineDir)/Plugins/MovieScene/LevelSequenceEditor/LevelSequenceEditor.uplugin",
 			"Type" : "UFS"
 		},
 		{
