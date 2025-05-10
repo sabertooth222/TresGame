@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "EnvironmentQuery/EnvQueryTest.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=AIModule -ObjectName=EnvQueryTest -FallbackName=EnvQueryTest
 #include "TresEnvQueryTest_IsTargetingContext.generated.h"
 
 class UEnvQueryContext;

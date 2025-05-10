@@ -1,6 +1,11 @@
 #include "TresEnvQueryTest_IsContextActor.h"
 
 UTresEnvQueryTest_IsContextActor::UTresEnvQueryTest_IsContextActor() {
-    this->Context = NULL;
+	SetWorkOnFloatValues(false);
+
+	this->FilterType = EEnvTestFilterType::Match;
+	this->ScoringEquation = EEnvTestScoreEquation::Constant;
+	
+	this->Context = NULL;
 }
 
