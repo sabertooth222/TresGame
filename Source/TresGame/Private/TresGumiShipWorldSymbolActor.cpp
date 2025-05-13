@@ -1,10 +1,15 @@
 #include "TresGumiShipWorldSymbolActor.h"
+#include "TresGumiShipSoundSetComponent.h"
+#include "TresEffectAttachComponent.h"
 #include "Components/SphereComponent.h"
 #include "Camera/CameraComponent.h"
 #include "Components/StaticMeshComponent.h"
 
 class UPrimitiveComponent;
 class AActor;
+class UTresEffectAttachComponent;
+//class UTresGumiShipSoundSetComponent;
+
 
 void ATresGumiShipWorldSymbolActor::OnLeaveGoalVolume(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex) {
 }
@@ -23,6 +28,7 @@ void ATresGumiShipWorldSymbolActor::LockWorldByBoss(bool LockEnable) {
 
 void ATresGumiShipWorldSymbolActor::LockWorld(bool Locked) {
 }
+
 
 ETresGumiShipWorldSymbolID ATresGumiShipWorldSymbolActor::GetWorldMapID() {
     return ETresGumiShipWorldSymbolID::E_GM01_WS_HE;
@@ -43,5 +49,10 @@ ATresGumiShipWorldSymbolActor::ATresGumiShipWorldSymbolActor(const FObjectInitia
     this->IsLockedByBoss = false;
     this->WorldIcon = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("WorldIconMesh"));
     this->WorldMist = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("WorldMist"));
+	m_pEffectAttach->DestroyComponent();
+	m_pEffectAttach->SetActive(false);
+	m_pSoundSet->DestroyComponent();
+	m_pSoundSet->SetActive(false);
+
 }
 

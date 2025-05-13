@@ -1,7 +1,14 @@
 #include "TresEnvQueryTest_IsTargetingContext.h"
-#include "EnvironmentQuery/Contexts/EnvQueryContext_Querier.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=AIModule -ObjectName=EnvQueryContext_Querier -FallbackName=EnvQueryContext_Querier
 
 UTresEnvQueryTest_IsTargetingContext::UTresEnvQueryTest_IsTargetingContext() {
-    this->Context = UEnvQueryContext_Querier::StaticClass();
+	
+	SetWorkOnFloatValues(false);
+
+	this->FilterType = EEnvTestFilterType::Match;
+	this->ScoringEquation = EEnvTestScoreEquation::Constant;
+	this->Context = UEnvQueryContext_Querier::StaticClass();
+
+	
 }
 

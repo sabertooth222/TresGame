@@ -1,6 +1,11 @@
 #include "TresEnvQueryTest_MercunaWallDistance.h"
 
 UTresEnvQueryTest_MercunaWallDistance::UTresEnvQueryTest_MercunaWallDistance() {
-    this->m_Dir = ETresEnvQueryTest_MercunaWallDistanceDir::Side;
+	SetWorkOnFloatValues(false);
+
+	this->FilterType = EEnvTestFilterType::Match;
+	this->ScoringEquation = EEnvTestScoreEquation::Constant;
+	
+	this->m_Dir = ETresEnvQueryTest_MercunaWallDistanceDir::Side;
 }
 

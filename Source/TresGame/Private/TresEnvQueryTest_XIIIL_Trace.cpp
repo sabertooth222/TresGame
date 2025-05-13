@@ -2,6 +2,11 @@
 #include "EnvironmentQuery/Contexts/EnvQueryContext_Querier.h"
 
 UTresEnvQueryTest_XIIIL_Trace::UTresEnvQueryTest_XIIIL_Trace() {
-    this->Context = UEnvQueryContext_Querier::StaticClass();
+	SetWorkOnFloatValues(false);
+
+	this->FilterType = EEnvTestFilterType::Match;
+	this->ScoringEquation = EEnvTestScoreEquation::Constant;
+	
+	this->Context = UEnvQueryContext_Querier::StaticClass();
 }
 
