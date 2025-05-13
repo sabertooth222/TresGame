@@ -2,7 +2,7 @@
 	"TargetName" : "TresGameEditor",
 	"Platform" : "Win64",
 	"Configuration" : "Development",
-	"BuildId" : "c863b25b-bb5e-445e-a4fd-937d0e45acaa",
+	"BuildId" : "32ab7d84-b801-41d7-9ad7-b10884f470df",
 	"Version" : 
 	{
 		"MajorVersion" : 4,
@@ -31,18 +31,6 @@
 		{
 			"Path" : "$(EngineDir)/Binaries/Win64/UE4Editor-Cmd.pdb",
 			"Type" : "SymbolFile"
-		},
-		{
-			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/SQEX/SQEX_SplineEdtor/Binaries/Win64/UE4Editor-SQEX_SplineEditor.dll",
-			"Type" : "DynamicLibrary"
-		},
-		{
-			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/SQEX/SQEX_SplineEdtor/Binaries/Win64/UE4Editor-SQEX_SplineEditor.pdb",
-			"Type" : "SymbolFile"
-		},
-		{
-			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/SQEX/SQEX_SplineEdtor/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-SQEX_SplineEditor.lib",
-			"Type" : "ImportLibrary"
 		},
 		{
 			"Path" : "$(EngineDir)/Plugins/Runtime/RuntimePhysXCooking/Binaries/Win64/UE4Editor-RuntimePhysXCooking.dll",
@@ -306,6 +294,18 @@
 		},
 		{
 			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/SQEX/SQEXSEAD/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-SQEXSEADEd.lib",
+			"Type" : "ImportLibrary"
+		},
+		{
+			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/SQEX/SQEX_SplineEdtor/Binaries/Win64/UE4Editor-SQEX_SplineEditor.dll",
+			"Type" : "DynamicLibrary"
+		},
+		{
+			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/SQEX/SQEX_SplineEdtor/Binaries/Win64/UE4Editor-SQEX_SplineEditor.pdb",
+			"Type" : "SymbolFile"
+		},
+		{
+			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/SQEX/SQEX_SplineEdtor/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-SQEX_SplineEditor.lib",
 			"Type" : "ImportLibrary"
 		},
 		{
@@ -4473,10 +4473,6 @@
 			"Type" : "ImportLibrary"
 		},
 		{
-			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/SQEX/SQEX_SplineEdtor/Binaries/Win64/UE4Editor.modules",
-			"Type" : "RequiredResource"
-		},
-		{
 			"Path" : "$(EngineDir)/Plugins/Runtime/RuntimePhysXCooking/Binaries/Win64/UE4Editor.modules",
 			"Type" : "RequiredResource"
 		},
@@ -4534,6 +4530,10 @@
 		},
 		{
 			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/SQEX/SQEXSEAD/Binaries/Win64/UE4Editor.modules",
+			"Type" : "RequiredResource"
+		},
+		{
+			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/SQEX/SQEX_SplineEdtor/Binaries/Win64/UE4Editor.modules",
 			"Type" : "RequiredResource"
 		},
 		{
@@ -4660,10 +4660,6 @@
 			"Type" : "UFS"
 		},
 		{
-			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/SQEX/SQEX_SplineEdtor/SQEX_SplineEditor.uplugin",
-			"Type" : "UFS"
-		},
-		{
 			"Path" : "$(EngineDir)/Plugins/Runtime/RuntimePhysXCooking/RuntimePhysXCooking.uplugin",
 			"Type" : "UFS"
 		},
@@ -4721,6 +4717,10 @@
 		},
 		{
 			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/SQEX/SQEXSEAD/SQEXSEAD.uplugin",
+			"Type" : "UFS"
+		},
+		{
+			"Path" : "$(ProjectDir)/Plugins/EnginePlugins/SQEX/SQEX_SplineEdtor/SQEX_SplineEditor.uplugin",
 			"Type" : "UFS"
 		},
 		{

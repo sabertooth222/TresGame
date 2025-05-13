@@ -1,6 +1,6 @@
 {
 	"FileVersion": 3,
-	"EngineAssociation": "{B004C39C-474E-D5CE-7531-5A870F866477}",
+	"EngineAssociation": "{26A9C996-478E-F3A9-A3DE-44837AA999CA}",
 	"Category": "",
 	"Description": "",
 	"Modules": [
@@ -216,6 +216,22 @@
 		},
 		{
 			"Name": "WindowsMoviePlayer",
+			"Enabled": true
+		},
+		{
+			"Name": "Mercuna",
+			"Enabled": true
+		},
+		{
+			"Name": "CriWare",
+			"Enabled": true
+		},
+		{
+			"Name": "SQEXSEAD",
+			"Enabled": true
+		},
+		{
+			"Name": "SQEX_SplineEditor",
 			"Enabled": true
 		}
 	],

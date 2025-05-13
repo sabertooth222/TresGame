@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "TresAction_e_ex358_Base.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=AIModule -ObjectName=EEnvQueryRunMode -FallbackName=EEnvQueryRunMode
+#include "EnvironmentQuery/EnvQueryTypes.h"
 #include "TresAction2_e_ex358_Warp.generated.h"
 
 class UEnvQuery;
