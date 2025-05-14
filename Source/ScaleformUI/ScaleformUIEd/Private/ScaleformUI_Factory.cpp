@@ -20,18 +20,19 @@ UScaleformUI_Factory::UScaleformUI_Factory(const FObjectInitializer& ObjectIniti
 UObject* UScaleformUI_Factory::FactoryCreateBinary(UClass* Class, UObject* InParent, FName Name, EObjectFlags Flags, UObject* Context, const TCHAR* Type, const uint8*& Buffer, const uint8* BufferEnd, FFeedbackContext* Warn, bool& bOutOperationCanceled)
 {
 	USwfMovie* ImportedAsset = NewObject<USwfMovie>(InParent, Name, Flags);
+	ImportedAsset->bUseGFxExport = true;
 	ImportedAsset->bSetSRGBOnImportedTextures = false;
-	ImportedAsset->TextureRescale = FlashTextureRescale::FlashTextureScale_High;
-	ImportedAsset->bPackTextures = false;
+	ImportedAsset->TextureRescale = FlashTextureRescale::FlashTextureScale_Mult4;
+	ImportedAsset->bPackTextures = true;
 	ImportedAsset->PackTextureSize = 1024;
 	ImportedAsset->TextureFormat = "TGA";
 	FString FilePath = FPaths::GetPath(CurrentFilename);
 	FPaths::MakePathRelativeTo(FilePath, *FPaths::GameDir());
-	ImportedAsset->SourceFile = FilePath + "/" + FPaths::GetCleanFilename(CurrentFilename);
+	//ImportedAsset->SourceFile = FilePath + "/" + FPaths::GetCleanFilename(CurrentFilename);
 	ImportedAsset->SourceFileTimestamp = IFileManager::Get().GetTimeStamp(*UFactory::CurrentFilename).ToString();
 	ImportedAsset->RawData.Empty(BufferEnd - Buffer);
 	ImportedAsset->RawData.AddUninitialized(BufferEnd - Buffer);
-	FMemory::Memcpy(ImportedAsset->RawData.GetData(), Buffer, ImportedAsset->RawData.Num());
+	//FMemory::Memcpy(ImportedAsset->RawData.GetData(), Buffer, ImportedAsset->RawData.Num());
 	return ImportedAsset;
 }
 bool UScaleformUI_Factory::CanReimport(UObject* Obj, TArray<FString>& OutFilenames)

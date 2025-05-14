@@ -154,7 +154,8 @@ obj/
 !/Saved/Logs
 !/Saved/Logs/keep.txt
 
-
+# Ignore .vs folder
+.vs/
 
 
 /Engine/Programs/UnrealBuildTool/**

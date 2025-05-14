@@ -40,10 +40,10 @@ void ATresPlayerControllerBase::DebugWallKick(bool bEnable) {
 void ATresPlayerControllerBase::DebugUseMP0() {
 }
 
-void ATresPlayerControllerBase::DebugTestMode(uint32 InMode) {
+void ATresPlayerControllerBase::DebugTestMode(uint8 InMode) {
 }
 
-void ATresPlayerControllerBase::DebugSuperSlideLv(uint32 InLv) {
+void ATresPlayerControllerBase::DebugSuperSlideLv(uint8 InLv) {
 }
 
 void ATresPlayerControllerBase::DebugSuperJump(bool bEnable) {
@@ -187,7 +187,7 @@ void ATresPlayerControllerBase::DebugSetFocusPoint(int32 InFP) {
 void ATresPlayerControllerBase::DebugSetFinishAutoPopup(bool bEnable) {
 }
 
-void ATresPlayerControllerBase::DebugSetFinish(uint32 InId, bool bEnable) {
+void ATresPlayerControllerBase::DebugSetFinish(uint8 InId, bool bEnable) {
 }
 
 void ATresPlayerControllerBase::DebugSetEnableDiveFall(bool bEnable, float inPitch, float inDist, float inAngle, float InOffset) {
@@ -208,7 +208,7 @@ void ATresPlayerControllerBase::DebugSetDamageEndChancelTime(float InTime) {
 void ATresPlayerControllerBase::DebugSetComboPlus(int32 InGround, int32 InAir) {
 }
 
-void ATresPlayerControllerBase::DebugSetAttraction(uint32 InId, bool bEnable) {
+void ATresPlayerControllerBase::DebugSetAttraction(uint8 InId, bool bEnable) {
 }
 
 void ATresPlayerControllerBase::DebugSetAttackMoveLimit(float fDist) {
@@ -220,7 +220,7 @@ void ATresPlayerControllerBase::DebugSetAttackFirstAirMoveRate(float fRate) {
 void ATresPlayerControllerBase::DebugSetAttackCollType(FName InName) {
 }
 
-void ATresPlayerControllerBase::DebugSetAthleticVersion(uint32 InVersion, float inRootSpeed) {
+void ATresPlayerControllerBase::DebugSetAthleticVersion(uint8 InVersion, float inRootSpeed) {
 }
 
 void ATresPlayerControllerBase::DebugSetAthleticSlideParam(float InTime, float InSpeed, float inKickAnim) {
@@ -301,7 +301,7 @@ void ATresPlayerControllerBase::DebugModePlayerClimbing() {
 void ATresPlayerControllerBase::DebugInfinityJump(bool bEnable) {
 }
 
-void ATresPlayerControllerBase::DebugHighJump(uint32 InLv) {
+void ATresPlayerControllerBase::DebugHighJump(uint8 InLv) {
 }
 
 void ATresPlayerControllerBase::DebugGuardCounter(bool bEnable) {

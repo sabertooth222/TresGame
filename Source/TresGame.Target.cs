@@ -3,7 +3,9 @@
 public class TresGameTarget : TargetRules {
 	public TresGameTarget(TargetInfo Target) : base(Target) {
 		Type = TargetType.Game;
-		ExtraModuleNames.AddRange(new string[] {
+        LinkType = TargetLinkType.Modular;
+        BuildEnvironment = TargetBuildEnvironment.Unique;
+        ExtraModuleNames.AddRange(new string[] {
 			"ActorSequence",
 			"BonamikRt",
 			"ClothingSystemRuntime",
@@ -12,7 +14,7 @@ public class TresGameTarget : TargetRules {
 			"KineDriverRt",
 			"Niagara",
 			"ScaleformUI",
-			"TresGame",
-		});
+			"TresGame"
+        });
 	}
 }

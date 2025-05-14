@@ -11,14 +11,19 @@ void ATresGimmick_EX_BattlePortal::BP_BattlePortalMapjump() {
 }
 
 ATresGimmick_EX_BattlePortal::ATresGimmick_EX_BattlePortal(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("Scene0"));
+    this->Tags.AddDefaulted(1);
+    this->m_bEnableGimmickControl = true;
+    this->m_bBeginPlayDisableTickRegister = true;
     this->m_EffectBodyComp = NULL;
     this->m_EffectEscapeComp = NULL;
-    this->MyRoot = CreateDefaultSubobject<USceneComponent>(TEXT("Scene0"));
+    this->MyRoot = (USceneComponent*)RootComponent;
     this->MyReactor = CreateDefaultSubobject<UTresReactorComponent>(TEXT("TresReactor0"));
     this->NavModifier = CreateDefaultSubobject<UTresNavModifierComponent>(TEXT("TresNavModifier0"));
     this->m_PortalID = 0;
     this->m_AutoSavePlayerStart = NULL;
     this->m_Effect_Body = NULL;
     this->m_Effect_Escape = NULL;
+    this->MyReactor->SetupAttachment(RootComponent);
 }
 

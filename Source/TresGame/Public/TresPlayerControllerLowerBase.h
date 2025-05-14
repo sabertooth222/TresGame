@@ -68,7 +68,7 @@ public:
     UFUNCTION(BlueprintCallable, Exec)
     void DebugCameraShutOutFade(bool bEnable);
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void DebugCameraCollCheck(uint8 EnableNo);
     
     

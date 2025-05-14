@@ -80,10 +80,10 @@ public:
     UFUNCTION(BlueprintCallable)
     void SimulateKeypress(FKey Key, TEnumAsByte<EInputEvent> EventType, float AmountDepressed, bool bGamepad);
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void NotifyStartActionCommand(TEnumAsByte<ETresCommandKind> inCommand);
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void NotifySetSpecialCommand(TEnumAsByte<ETresCommandKind> inCommand);
     
     UFUNCTION(BlueprintCallable, Exec)
@@ -92,16 +92,16 @@ public:
     UFUNCTION(BlueprintCallable, Exec)
     bool NotifySetDiveAttackCommand(UTresLockonTargetComponent* InTarget);
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void NotifySetActionCommand(TEnumAsByte<ETresCommandKind> inCommand, float inTimer, UTresUICommandInfoBase* pUICommandInfo);
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void NotifyResetSpecialCommand(TEnumAsByte<ETresCommandKind> inCommand);
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void NotifyEndActionCommand(TEnumAsByte<ETresCommandKind> inCommand);
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void NotifyDeleteActionCommand(TEnumAsByte<ETresCommandKind> inCommand);
     
     UFUNCTION(BlueprintCallable, Exec)
@@ -110,11 +110,11 @@ public:
     UFUNCTION(BlueprintCallable, Exec)
     void DebugUseMP0();
     
-    UFUNCTION(Exec)
-    void DebugTestMode(uint32 InMode);
+    UFUNCTION(BlueprintCallable, Exec)
+    void DebugTestMode(uint8 InMode);
     
-    UFUNCTION(Exec)
-    void DebugSuperSlideLv(uint32 InLv);
+    UFUNCTION(BlueprintCallable, Exec)
+    void DebugSuperSlideLv(uint8 InLv);
     
     UFUNCTION(BlueprintCallable, Exec)
     void DebugSuperJump(bool bEnable);
@@ -257,8 +257,8 @@ public:
     UFUNCTION(BlueprintCallable, Exec)
     void DebugSetFinishAutoPopup(bool bEnable);
     
-    UFUNCTION(Exec)
-    void DebugSetFinish(uint32 InId, bool bEnable);
+    UFUNCTION(BlueprintCallable, Exec)
+    void DebugSetFinish(uint8 InId, bool bEnable);
     
     UFUNCTION(BlueprintCallable, Exec)
     void DebugSetEnableDiveFall(bool bEnable, float inPitch, float inDist, float inAngle, float InOffset);
@@ -278,8 +278,8 @@ public:
     UFUNCTION(BlueprintCallable, Exec)
     void DebugSetComboPlus(int32 InGround, int32 InAir);
     
-    UFUNCTION(Exec)
-    void DebugSetAttraction(uint32 InId, bool bEnable);
+    UFUNCTION(BlueprintCallable, Exec)
+    void DebugSetAttraction(uint8 InId, bool bEnable);
     
     UFUNCTION(BlueprintCallable, Exec)
     void DebugSetAttackMoveLimit(float fDist);
@@ -290,8 +290,8 @@ public:
     UFUNCTION(BlueprintCallable, Exec)
     void DebugSetAttackCollType(FName InName);
     
-    UFUNCTION(Exec)
-    void DebugSetAthleticVersion(uint32 InVersion, float inRootSpeed);
+    UFUNCTION(BlueprintCallable, Exec)
+    void DebugSetAthleticVersion(uint8 InVersion, float inRootSpeed);
     
     UFUNCTION(BlueprintCallable, Exec)
     void DebugSetAthleticSlideParam(float InTime, float InSpeed, float inKickAnim);
@@ -311,7 +311,7 @@ public:
     UFUNCTION(BlueprintCallable, Exec)
     void DebugSetAllFriendFinish(bool bEnable);
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void DebugSetActionCommand(TEnumAsByte<ETresCommandKind> inCommand, float inTimer);
     
     UFUNCTION(BlueprintCallable, Exec)
@@ -371,8 +371,8 @@ public:
     UFUNCTION(BlueprintCallable, Exec)
     void DebugInfinityJump(bool bEnable);
     
-    UFUNCTION(Exec)
-    void DebugHighJump(uint32 InLv);
+    UFUNCTION(BlueprintCallable, Exec)
+    void DebugHighJump(uint8 InLv);
     
     UFUNCTION(BlueprintCallable, Exec)
     void DebugGuardCounter(bool bEnable);
