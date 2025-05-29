@@ -28,11 +28,11 @@ UObject* UScaleformUI_Factory::FactoryCreateBinary(UClass* Class, UObject* InPar
 	ImportedAsset->TextureFormat = "TGA";
 	FString FilePath = FPaths::GetPath(CurrentFilename);
 	FPaths::MakePathRelativeTo(FilePath, *FPaths::GameDir());
-	//ImportedAsset->SourceFile = FilePath + "/" + FPaths::GetCleanFilename(CurrentFilename);
+	ImportedAsset->SourceFile = FilePath + "/" + FPaths::GetCleanFilename(CurrentFilename);
 	ImportedAsset->SourceFileTimestamp = IFileManager::Get().GetTimeStamp(*UFactory::CurrentFilename).ToString();
 	ImportedAsset->RawData.Empty(BufferEnd - Buffer);
 	ImportedAsset->RawData.AddUninitialized(BufferEnd - Buffer);
-	//FMemory::Memcpy(ImportedAsset->RawData.GetData(), Buffer, ImportedAsset->RawData.Num());
+	FMemory::Memcpy(ImportedAsset->RawData.GetData(), Buffer, ImportedAsset->RawData.Num());
 	return ImportedAsset;
 }
 bool UScaleformUI_Factory::CanReimport(UObject* Obj, TArray<FString>& OutFilenames)
