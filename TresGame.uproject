@@ -1,12 +1,12 @@
 {
 	"FileVersion": 3,
-	"EngineAssociation": "{1D442CFB-4851-4C19-04DA-CE8EE0C171DC}",
+	"EngineAssociation": "{5BCFFB84-4B52-364E-D6A4-95879D786767}",
 	"Category": "",
 	"Description": "",
 	"Modules": [
 		{
 			"Name": "TresGameEditor",
-			"Type": "Developer",
+			"Type": "Editor",
 			"LoadingPhase": "PostConfigInit"
 		},
 		{
@@ -215,15 +215,15 @@
 		},
 		{
 			"Name": "Mercuna",
-			"Enabled": false
+			"Enabled": true
 		},
 		{
 			"Name": "CriWare",
-			"Enabled": false
+			"Enabled": true
 		},
 		{
 			"Name": "SQEXSEAD",
-			"Enabled": false
+			"Enabled": true
 		}
 	],
 	"TargetPlatforms": [
