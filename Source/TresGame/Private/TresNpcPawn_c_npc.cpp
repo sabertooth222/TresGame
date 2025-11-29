@@ -1,4 +1,8 @@
 #include "TresNpcPawn_c_npc.h"
+#include "TresEquipmentComponent.h"
+#include "TresEffectAttachComponent.h"
+#include "TresAtkCollComponent.h"
+#include "MercunaObstacleComponent.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=EAutoPossessAI -FallbackName=EAutoPossessAI
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ESQEX_ObjectType -FallbackName=ESQEX_ObjectType
 
@@ -8,16 +12,30 @@ ATresNpcPawn_c_npc::ATresNpcPawn_c_npc(const FObjectInitializer& ObjectInitializ
     this->m_bPermissionLockOn = false;
     this->AutoPossessAI = EAutoPossessAI::Disabled;
     this->MyLockOnSetBoneName = TEXT("atama");
-    const FProperty* p_MyAtkColl = GetClass()->FindPropertyByName("MyAtkColl");
-    (*p_MyAtkColl->ContainerPtrToValuePtr<UTresAtkCollComponent*>(this)) = NULL;
-    const FProperty* p_MyEquipment = GetClass()->FindPropertyByName("MyEquipment");
-    (*p_MyEquipment->ContainerPtrToValuePtr<UTresEquipmentComponent*>(this)) = NULL;
-    const FProperty* p_MyEffectAtt = GetClass()->FindPropertyByName("MyEffectAtt");
-    (*p_MyEffectAtt->ContainerPtrToValuePtr<UTresEffectAttachComponent*>(this)) = NULL;
+	const UProperty* p_MyAtkColl = GetClass()->FindPropertyByName("MyAtkColl");
+	(*p_MyAtkColl->ContainerPtrToValuePtr<UTresAtkCollComponent*>(this))->DestroyComponent();
+	(*p_MyAtkColl->ContainerPtrToValuePtr<UTresAtkCollComponent*>(this))->SetActive(false);
+    const UProperty* p_MyEquipment = GetClass()->FindPropertyByName("MyEquipment");
+    //(*p_MyEquipment->ContainerPtrToValuePtr<UTresEquipmentComponent*>(this)) = NULL;
+	(*p_MyEquipment->ContainerPtrToValuePtr<UTresEquipmentComponent*>(this))->DestroyComponent();
+	(*p_MyEquipment->ContainerPtrToValuePtr<UTresEquipmentComponent*>(this))->SetActive(false);
+    const UProperty* p_MyEffectAtt = GetClass()->FindPropertyByName("MyEffectAtt");
+	(*p_MyEffectAtt->ContainerPtrToValuePtr<UTresEffectAttachComponent*>(this))->DestroyComponent();
+	(*p_MyEffectAtt->ContainerPtrToValuePtr<UTresEffectAttachComponent*>(this))->SetActive(false);
+	/*MyAtkColl->DestroyComponent();
+	MyAtkColl->SetActive(false);
+	MyEquipment->DestroyComponent();
+	MyEquipment->SetActive(false);
+	MyEffectAtt->DestroyComponent();
+	MyEffectAtt->SetActive(false);*/
     this->MyTeam = ETresTeam::CityNpc;
     this->m_bEnableRegistFootStepEffectGen = false;
-    const FProperty* p_ObstacleComponent = GetClass()->FindPropertyByName("ObstacleComponent");
-    (*p_ObstacleComponent->ContainerPtrToValuePtr<UMercunaObstacleComponent*>(this)) = NULL;
+    const UProperty* p_ObstacleComponent = GetClass()->FindPropertyByName("ObstacleComponent");
+    //(*p_ObstacleComponent->ContainerPtrToValuePtr<UMercunaObstacleComponent*>(this)) = NULL;
+	(*p_ObstacleComponent->ContainerPtrToValuePtr<UMercunaObstacleComponent*>(this))->DestroyComponent();
+	(*p_ObstacleComponent->ContainerPtrToValuePtr<UMercunaObstacleComponent*>(this))->SetActive(false);
+	//p_ObstacleComponent->DestroyComponent();
+	//p_ObstacleComponent->SetActive(false);
     this->m_IdleAnimName = TEXT("idleN");
     this->m_BodyColType = 0;
     this->m_PoseGroupType = 0;
