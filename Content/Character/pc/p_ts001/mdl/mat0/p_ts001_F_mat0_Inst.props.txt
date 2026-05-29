@@ -1,0 +1,188 @@
+Parent = Material3'/Game/Shader/Material_set/SQEX_BaseMaterialSet/SQEX_CHRBaseMat/SQEX_ToyPC_Basemat.SQEX_ToyPC_Basemat'
+ScalarParameterValues[7] =
+{
+    ScalarParameterValues[0] =
+    {
+        ParameterInfo = { Name=None }
+        ParameterValue = 0.5
+        ParameterName = PlasticSSCenterColorMulti
+    }
+    ScalarParameterValues[1] =
+    {
+        ParameterInfo = { Name=None }
+        ParameterValue = 0.95
+        ParameterName = PlasticSSOP
+    }
+    ScalarParameterValues[2] =
+    {
+        ParameterInfo = { Name=None }
+        ParameterValue = 50
+        ParameterName = PrasticTileMulti
+    }
+    ScalarParameterValues[3] =
+    {
+        ParameterInfo = { Name=None }
+        ParameterValue = 0.3
+        ParameterName = AntiFaceDarkOffset
+    }
+    ScalarParameterValues[4] =
+    {
+        ParameterInfo = { Name=None }
+        ParameterValue = 15
+        ParameterName = AntiFaceDarkVolume
+    }
+    ScalarParameterValues[5] =
+    {
+        ParameterInfo = { Name=None }
+        ParameterValue = 1
+        ParameterName = UseAntiFaceDark
+    }
+    ScalarParameterValues[6] =
+    {
+        ParameterInfo = { Name=None }
+        ParameterValue = 0
+        ParameterName = RefractionDepthBias
+    }
+}
+TextureParameterValues[4] =
+{
+    TextureParameterValues[0] =
+    {
+        ParameterInfo = { Name=None }
+        ParameterValue = Texture2D'/Game/Character/pc/p_ts001/mdl/mat0/p_ts001_F_0d00.p_ts001_F_0d00'
+        ParameterName = BaseColorTex
+    }
+    TextureParameterValues[1] =
+    {
+        ParameterInfo = { Name=None }
+        ParameterValue = Texture2D'/Game/Character/pc/p_ts001/mdl/mat0/p_ts001_F_0n00.p_ts001_F_0n00'
+        ParameterName = NormalTexture
+    }
+    TextureParameterValues[2] =
+    {
+        ParameterInfo = { Name=None }
+        ParameterValue = Texture2D'/Game/Character/pc/p_ts001/mdl/mat0/p_ts001_F_0m00.p_ts001_F_0m00'
+        ParameterName = MaskTexture
+    }
+    TextureParameterValues[3] =
+    {
+        ParameterInfo = { Name=None }
+        ParameterValue = Texture2D'/Game/Character/pc/p_ts001/mdl/mat0/p_ts001_0o00.p_ts001_0o00'
+        ParameterName = AOTexture
+    }
+}
+VectorParameterValues[8] =
+{
+    VectorParameterValues[0] =
+    {
+        ParameterInfo = { Name=None }
+        ParameterValue = { R=0, G=0, B=0, A=1 }
+        ParameterName = AOChannel
+    }
+    VectorParameterValues[1] =
+    {
+        ParameterInfo = { Name=None }
+        ParameterValue = { R=0, G=0, B=0, A=0 }
+        ParameterName = MetalMaskChannell
+    }
+    VectorParameterValues[2] =
+    {
+        ParameterInfo = { Name=None }
+        ParameterValue = { R=0, G=0, B=0, A=0 }
+        ParameterName = ClearPrasticMaskChannel
+    }
+    VectorParameterValues[3] =
+    {
+        ParameterInfo = { Name=None }
+        ParameterValue = { R=1, G=0, B=0, A=0 }
+        ParameterName = PlasticMaskChannel
+    }
+    VectorParameterValues[4] =
+    {
+        ParameterInfo = { Name=None }
+        ParameterValue = { R=0.5, G=0.15, B=0, A=1 }
+        ParameterName = PlasticSSColorMulti
+    }
+    VectorParameterValues[5] =
+    {
+        ParameterInfo = { Name=None }
+        ParameterValue = { R=0, G=1, B=0, A=0 }
+        ParameterName = GlossPlasticChannel
+    }
+    VectorParameterValues[6] =
+    {
+        ParameterInfo = { Name=None }
+        ParameterValue = { R=0, G=0.1, B=0.6, A=1 }
+        ParameterName = GlossPlasticMaterialParam
+    }
+    VectorParameterValues[7] =
+    {
+        ParameterInfo = { Name=None }
+        ParameterValue = { R=0, G=0, B=0, A=1 }
+        ParameterName = atama_mtr_x
+    }
+}
+BasePropertyOverrides =
+{
+    bOverride_BlendMode = false
+    BlendMode = BLEND_Opaque (0)
+    bOverride_TwoSided = false
+    TwoSided = false
+    bOverride_OpacityMaskClipValue = false
+    OpacityMaskClipValue = 0
+}
+StaticParameters =
+{
+    StaticSwitchParameters[0] = {}
+    StaticComponentMaskParameters[0] = {}
+    TerrainLayerWeightParameters[0] = {}
+    MaterialLayersParameters[0] = {}
+}
+RuntimeVirtualTextureParameterValues[0] = {}
+FontParameterValues[0] = {}
+FlattenedTexture = None
+MobileBaseTexture = None
+MobileNormalTexture = None
+bUseMobileSpecular = false
+MobileSpecularPower = 16
+MobileSpecularMask = MSM_Constant (0)
+MobileMaskTexture = None
+TextureStreamingData[6] =
+{
+    TextureStreamingData[0] =
+    {
+        SamplingScale = 0.127136
+        UVChannelIndex = 0
+        TextureName = LibraryTiling16a_Mask
+    }
+    TextureStreamingData[1] =
+    {
+        SamplingScale = 0.254883
+        UVChannelIndex = 0
+        TextureName = LibraryTiling16a_normal
+    }
+    TextureStreamingData[2] =
+    {
+        SamplingScale = 1
+        UVChannelIndex = 0
+        TextureName = p_ts001_F_0d00
+    }
+    TextureStreamingData[3] =
+    {
+        SamplingScale = 1
+        UVChannelIndex = 0
+        TextureName = p_ts001_F_0m00
+    }
+    TextureStreamingData[4] =
+    {
+        SamplingScale = 1
+        UVChannelIndex = 0
+        TextureName = p_ts001_F_0n00
+    }
+    TextureStreamingData[5] =
+    {
+        SamplingScale = 1
+        UVChannelIndex = 0
+        TextureName = SampleBaseSkinAOTex
+    }
+}
